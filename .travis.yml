@@ -1,0 +1,28 @@
+# This config file for Travis CI
+sudo: required
+dist: trusty
+services:
+  - docker
+language: cpp
+cache: ccache
+compiler: gcc
+
+notifications:
+  email:
+    recipients:
+      - levi.armstrong@swri.org
+env:
+  global:
+    - ROS_DISTRO=kinetic
+    - UPSTREAM_WORKSPACE=file
+    - ROSINSTALL_FILENAME=dependencies.rosinstall
+    - TEST_BLACKLIST=bullet3_ros,fcl_ros,libccd_ros
+    - MAKEFLAGS="-j 4"
+  matrix:
+    - ROS_DISTRO=kinetic ROS_REPOSITORY_PATH=http://packages.ros.org/ros/ubuntu
+    - ROS_DISTRO=kinetic ROS_REPOSITORY_PATH=http://packages.ros.org/ros-shadow-fixed/ubuntu
+    - ROS_DISTRO=kinetic ROS_REPO=ros TEST=clang-format
+install:
+  - git clone https://github.com/ros-industrial/industrial_ci.git .industrial_ci
+script:
+  - .industrial_ci/travis.sh
