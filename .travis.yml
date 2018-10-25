@@ -1,4 +1,4 @@
-# This config file for Travis CI
+# This config file for Travis CI (TEST)
 sudo: required
 dist: trusty
 services:
