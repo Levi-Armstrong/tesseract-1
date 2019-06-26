@@ -28,6 +28,7 @@
 TESSERACT_SCENE_GRAPH_IGNORE_WARNINGS_PUSH
 #include <boost/graph/dijkstra_shortest_paths.hpp>
 #include <fstream>
+#include <iostream>
 #include <console_bridge/console.h>
 TESSERACT_SCENE_GRAPH_IGNORE_WARNINGS_POP
 
@@ -489,10 +490,10 @@ SceneGraph::Path SceneGraph::getShortestPath(const std::string& root, const std:
 #ifdef NDEBUG
   std::cout << "distances and parents:" << std::endl;
   Graph::vertex_iterator vi, vend;
-  for (boost::tie(vi, vend) = boost::vertices(g); vi != vend; ++vi)
+  for (boost::tie(vi, vend) = boost::vertices(graph); vi != vend; ++vi)
   {
-    std::cout << "distance(" << boost::get(boost::vertex_link, g)[*vi]->getName() << ") = " << d[*vi] << ", ";
-    std::cout << "parent(" << boost::get(boost::vertex_link, g)[*vi]->getName() << ") = " << boost::get(boost::vertex_link, g)[p[*vi]]->getName() << std::endl;
+    std::cout << "distance(" << boost::get(boost::vertex_link, graph)[*vi]->getName() << ") = " << distance_map[*vi] << ", ";
+    std::cout << "parent(" << boost::get(boost::vertex_link, graph)[*vi]->getName() << ") = " << boost::get(boost::vertex_link, graph)[predicessor_map[*vi]]->getName() << std::endl;
   }
   std::cout << std::endl;
 #endif
