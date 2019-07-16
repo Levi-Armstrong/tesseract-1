@@ -98,6 +98,8 @@ void CurrentStateMonitor::addUpdateCallback(const JointStateUpdateCallback& fn)
 void CurrentStateMonitor::clearUpdateCallbacks() { update_callbacks_.clear(); }
 void CurrentStateMonitor::startStateMonitor(const std::string& joint_states_topic)
 {
+  comm_error_check_frequency = 3;
+  comm_count = 0;
   if (!state_monitor_started_ && env_)
   {
     joint_time_.clear();
@@ -108,6 +110,8 @@ void CurrentStateMonitor::startStateMonitor(const std::string& joint_states_topi
     state_monitor_started_ = true;
     monitor_start_time_ = ros::Time::now();
     ROS_DEBUG("Listening to joint states on topic '%s'", nh_.resolveName(joint_states_topic).c_str());
+    check_comm_error_timer_ = CurrentStateMonitor::nh_.createTimer(ros::Duration(comm_error_check_frequency), &CurrentStateMonitor::CheckRobotCommError, this);
+    robot_comm_error_pub_ = nh_.advertise<std_msgs::Bool>("robot_comm_error",20);
   }
 }
 
@@ -305,8 +309,24 @@ bool CurrentStateMonitor::waitForCompleteState(const std::string& manip, double 
   return ok;
 }
 
+void CurrentStateMonitor::CheckRobotCommError(const ros::TimerEvent&)
+{
+  if (comm_count<1)
+  {
+    robot_comm_error.data = true;
+  }
+  else
+  {
+    robot_comm_error.data = false;
+  }
+  comm_count=0;
+  robot_comm_error_pub_.publish(robot_comm_error);
+}
+
+
 void CurrentStateMonitor::jointStateCallback(const sensor_msgs::JointStateConstPtr& joint_state)
 {
+  comm_count = comm_count+1;
   if (joint_state->name.size() != joint_state->position.size())
   {
     ROS_ERROR_THROTTLE(1,

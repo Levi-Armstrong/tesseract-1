@@ -53,6 +53,7 @@ TESSERACT_COMMON_IGNORE_WARNINGS_POP
 #include <tesseract/tesseract.h>
 #include <tesseract_environment/core/environment.h>
 #include <tesseract/forward_kinematics_manager.h>
+#include "std_msgs/Bool.h"
 
 namespace tesseract_monitoring
 {
@@ -85,6 +86,9 @@ public:
   void startStateMonitor(const std::string& joint_states_topic = "joint_states");
 
   /** @brief Stop monitoring the "joint_states" topic
+   *  @param comm_error_check_frequency Determines how often timer is activated and robot communication errors are checked.
+   *  @param comm_count Tracks if communication with joint_states has occurred; increments in jointStateCallback
+   *  @param robot_comm_error The topic name for robot communication error (declared false if there is no error)
    */
   void stopStateMonitor();
 
@@ -170,6 +174,12 @@ public:
    *  this is useful in some but not all applications
    */
   void enableCopyDynamics(bool enabled) { copy_dynamics_ = enabled; }
+
+  void CheckRobotCommError(const ros::TimerEvent&);
+  /** @brief timer callback to check if there is a robot communication error.
+   * Advertises false on robot_comm_error if joint_states is being subscribed at least once per timer period.
+   * Advertises true if joint_states has not been communicated within timer period.
+   */
 private:
   void jointStateCallback(const sensor_msgs::JointStateConstPtr& joint_state);
   bool isPassiveOrMimicDOF(const std::string& dof) const;
@@ -188,6 +198,12 @@ private:
   tf2_ros::TransformBroadcaster tf_broadcaster_;
   ros::Time current_state_time_;
   ros::Time last_tf_update_;
+
+  int comm_error_check_frequency;
+  int comm_count;
+  ros::Publisher robot_comm_error_pub_;
+  ros::Timer check_comm_error_timer_;
+  std_msgs::Bool robot_comm_error;
 
 
   mutable boost::mutex state_update_lock_;
