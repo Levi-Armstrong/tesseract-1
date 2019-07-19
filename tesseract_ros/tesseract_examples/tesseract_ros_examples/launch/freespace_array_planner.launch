@@ -1,0 +1,28 @@
+<launch>
+    <arg name="robot_description" default="robot_description"/>
+    <arg name="plotting" default="true"/>
+    <arg name="rviz" default="true"/>
+    <arg name="testing" default="false"/>
+
+    <!-- Load Robot Model    -->
+    <param name="robot_description"  command="$(find xacro)/xacro --inorder $(find tesseract_ros_examples)/urdf/pick_and_place_plan.xacro"/>
+
+    <!-- Load Robot Semantic -->
+    <param name="robot_description_semantic" textfile="$(find tesseract_ros_examples)/config/pick_and_place_plan.srdf" />
+
+    <!-- Launch GUI to drive joints   -->
+    <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
+
+    <!-- Launch robot state publisher -->
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher" />
+
+    <!-- Launch planner node -->
+    <node name="freespace_array_planner_node" pkg="tesseract_ros_examples" type="tesseract_ros_examples_freespace_array_planner" output="screen">
+        <param name="plotting" value="$(arg plotting)"/>
+    </node>
+
+    <!-- Launch visualization -->
+    <node if="$(arg rviz)" pkg="rviz" type="rviz" name="pick_and_place_viz"
+        args="-d $(find tesseract_ros_examples)/config/examples.rviz" />
+
+</launch>
