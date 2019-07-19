@@ -96,7 +96,7 @@ namespace tesseract_ros_examples
       if (!checkRviz())
         return false;
     }
-
+    sleep(20);
     // Set the initial state of the robot
     std::unordered_map<std::string, double> joint_states;
     joint_states["iiwa_joint_1"] = 0.0;

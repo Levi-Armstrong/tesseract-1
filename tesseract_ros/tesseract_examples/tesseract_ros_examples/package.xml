@@ -24,7 +24,7 @@
   <depend>octomap_ros</depend>
   <depend>pcl_conversions</depend>
 
-  <test>rostest</test>
+  <test_depend>rostest</test_depend>
 
   <export>
   </export>
