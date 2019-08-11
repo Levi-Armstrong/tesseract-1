@@ -205,7 +205,6 @@ private:
   ros::Timer check_comm_error_timer_;
   std_msgs::Bool robot_comm_error;
 
-
   mutable boost::mutex state_update_lock_;
   mutable boost::condition_variable state_update_condition_;
   std::vector<JointStateUpdateCallback> update_callbacks_;

@@ -36,22 +36,25 @@
 
 #include <tesseract_common/macros.h>
 TESSERACT_COMMON_IGNORE_WARNINGS_PUSH
-#include <ros/console.h>
-#include <limits>
 #include <geometry_msgs/TransformStamped.h>
+#include <ros/console.h>
 #include <tf2_eigen/tf2_eigen.h>
+#include <limits>
 TESSERACT_COMMON_IGNORE_WARNINGS_POP
 
 #include <tesseract_monitoring/current_state_monitor.h>
 
 namespace tesseract_monitoring
 {
-CurrentStateMonitor::CurrentStateMonitor(const tesseract_environment::EnvironmentConstPtr& env, const tesseract::ForwardKinematicsManagerConstPtr& kinematics_manager)
+CurrentStateMonitor::CurrentStateMonitor(const tesseract_environment::EnvironmentConstPtr& env,
+                                         const tesseract::ForwardKinematicsManagerConstPtr& kinematics_manager)
   : CurrentStateMonitor(env, kinematics_manager, ros::NodeHandle())
 {
 }
 
-CurrentStateMonitor::CurrentStateMonitor(const tesseract_environment::EnvironmentConstPtr &env, const tesseract::ForwardKinematicsManagerConstPtr& kinematics_manager, ros::NodeHandle nh)
+CurrentStateMonitor::CurrentStateMonitor(const tesseract_environment::EnvironmentConstPtr& env,
+                                         const tesseract::ForwardKinematicsManagerConstPtr& kinematics_manager,
+                                         ros::NodeHandle nh)
   : nh_(nh)
   , env_(env)
   , env_state_(*env->getCurrentState())
@@ -63,7 +66,10 @@ CurrentStateMonitor::CurrentStateMonitor(const tesseract_environment::Environmen
 {
 }
 
-CurrentStateMonitor::~CurrentStateMonitor() { stopStateMonitor(); }
+CurrentStateMonitor::~CurrentStateMonitor()
+{
+  stopStateMonitor();
+}
 tesseract_environment::EnvStatePtr CurrentStateMonitor::getCurrentState() const
 {
   boost::mutex::scoped_lock slock(state_update_lock_);
@@ -95,7 +101,10 @@ void CurrentStateMonitor::addUpdateCallback(const JointStateUpdateCallback& fn)
     update_callbacks_.push_back(fn);
 }
 
-void CurrentStateMonitor::clearUpdateCallbacks() { update_callbacks_.clear(); }
+void CurrentStateMonitor::clearUpdateCallbacks()
+{
+  update_callbacks_.clear();
+}
 void CurrentStateMonitor::startStateMonitor(const std::string& joint_states_topic)
 {
   comm_error_check_frequency = 3;
@@ -110,12 +119,16 @@ void CurrentStateMonitor::startStateMonitor(const std::string& joint_states_topi
     state_monitor_started_ = true;
     monitor_start_time_ = ros::Time::now();
     ROS_DEBUG("Listening to joint states on topic '%s'", nh_.resolveName(joint_states_topic).c_str());
-    check_comm_error_timer_ = CurrentStateMonitor::nh_.createTimer(ros::Duration(comm_error_check_frequency), &CurrentStateMonitor::CheckRobotCommError, this);
-    robot_comm_error_pub_ = nh_.advertise<std_msgs::Bool>("robot_comm_error",20);
+    check_comm_error_timer_ = CurrentStateMonitor::nh_.createTimer(ros::Duration(comm_error_check_frequency),
+                                                                   &CurrentStateMonitor::CheckRobotCommError, this);
+    robot_comm_error_pub_ = nh_.advertise<std_msgs::Bool>("robot_comm_error", 20);
   }
 }
 
-bool CurrentStateMonitor::isActive() const { return state_monitor_started_; }
+bool CurrentStateMonitor::isActive() const
+{
+  return state_monitor_started_;
+}
 void CurrentStateMonitor::stopStateMonitor()
 {
   if (state_monitor_started_)
@@ -210,9 +223,7 @@ bool CurrentStateMonitor::haveCompleteState(const ros::Duration& age) const
     {
       ROS_DEBUG("Joint variable '%s' was last updated %0.3lf seconds ago "
                 "(older than the allowed %0.3lf seconds)",
-                joint.first.c_str(),
-                (now - it->second).toSec(),
-                age.toSec());
+                joint.first.c_str(), (now - it->second).toSec(), age.toSec());
       result = false;
     }
   }
@@ -241,9 +252,7 @@ bool CurrentStateMonitor::haveCompleteState(const ros::Duration& age, std::vecto
     {
       ROS_DEBUG("Joint variable '%s' was last updated %0.3lf seconds ago "
                 "(older than the allowed %0.3lf seconds)",
-                joint.first.c_str(),
-                (now - it->second).toSec(),
-                age.toSec());
+                joint.first.c_str(), (now - it->second).toSec(), age.toSec());
       missing_states.push_back(joint.first);
       result = false;
     }
@@ -311,7 +320,7 @@ bool CurrentStateMonitor::waitForCompleteState(const std::string& manip, double 
 
 void CurrentStateMonitor::CheckRobotCommError(const ros::TimerEvent&)
 {
-  if (comm_count<1)
+  if (comm_count < 1)
   {
     robot_comm_error.data = true;
   }
@@ -319,20 +328,18 @@ void CurrentStateMonitor::CheckRobotCommError(const ros::TimerEvent&)
   {
     robot_comm_error.data = false;
   }
-  comm_count=0;
+  comm_count = 0;
   robot_comm_error_pub_.publish(robot_comm_error);
 }
 
-
 void CurrentStateMonitor::jointStateCallback(const sensor_msgs::JointStateConstPtr& joint_state)
 {
-  comm_count = comm_count+1;
+  comm_count = comm_count + 1;
   if (joint_state->name.size() != joint_state->position.size())
   {
-    ROS_ERROR_THROTTLE(1,
-                       "State monitor received invalid joint state (number "
-                       "of joint names does not match number of "
-                       "positions)");
+    ROS_ERROR_THROTTLE(1, "State monitor received invalid joint state (number "
+                          "of joint names does not match number of "
+                          "positions)");
     return;
   }
   bool update = false;
