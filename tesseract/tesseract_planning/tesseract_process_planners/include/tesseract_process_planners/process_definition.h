@@ -1,29 +1,45 @@
+/**
+ * @file process_definition.h
+ * @brief Tesseract process definition
+ *
+ * @author Levi Armstrong
+ * @date April 18, 2018
+ * @version TODO
+ * @bug No known bugs
+ *
+ * @copyright Copyright (c) 2017, Southwest Research Institute
+ *
+ * @par License
+ * Software License Agreement (Apache License)
+ * @par
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * http://www.apache.org/licenses/LICENSE-2.0
+ * @par
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 #ifndef TESSERACT_PLANNING_PROCESS_DEFINITION_H
 #define TESSERACT_PLANNING_PROCESS_DEFINITION_H
 
-#include <Eigen/Core>
+#include <tesseract_common/macros.h>
+TESSERACT_COMMON_IGNORE_WARNINGS_PUSH
+#include <vector>
+#include <Eigen/Geometry>
+TESSERACT_COMMON_IGNORE_WARNINGS_POP
+
 #include <tesseract_motion_planners/core/waypoint.h>
+#include <tesseract_process_planners/process_definition_config.h>
 #include <tesseract_process_planners/process_segment_definition.h>
+#include <tesseract_process_planners/process_segment_definition_config.h>
+#include <tesseract_process_planners/process_transition_definition.h>
 
 namespace tesseract_process_planners
 {
-
-/**
- * @brief The ProcessTransitionDefinition struct which contains the waypoint data to allow moving between adjacent
- * process segments
- */
-struct ProcessTransitionDefinition
-{
-  std::vector<tesseract_motion_planners::Waypoint::Ptr> transition_from_start; /**< A transition plans from the start of
-                                                                                  segment[i] to the end of segment[i+1],
-                                                                                       this data can be used for finding
-                                                                                  collision free exit moves after
-                                                                                  cancelling an ongoing process */
-
-  std::vector<tesseract_motion_planners::Waypoint::Ptr> transition_from_end; /**< A transition plans from the end of
-                                                                                segment[i] to the start of segment[i+1]
-                                                                              */
-};
 
 /**
  * @class tesseract_process_planners::ProcessDefinition
@@ -41,106 +57,121 @@ struct ProcessTransitionDefinition
  * Given the process described the user is only required to define two objects. The start position of
  * the robot and a vector of Process Segment Definitions.
  */
-struct ProcessDefinition
-{
-  tesseract_motion_planners::Waypoint::Ptr start; /**< The start position of the robot */
-  std::vector<ProcessSegmentDefinition> segments; /**< All of the raster segments with approaches and departures */
-  std::vector<ProcessTransitionDefinition> transitions; /**< All of the transition to/from a given segment. Must be same
-                                                           length as segments */
-};
-
-/**definition
- * @class tesseract_process_planners::ProcessTransitionGenerator
- */
-class ProcessTransitionGenerator
+class ProcessDefinition
 {
 public:
-  using Ptr = std::shared_ptr<ProcessTransitionGenerator>;
-  using ConstPtr = std::shared_ptr<const ProcessTransitionGenerator>;
-
-  virtual ~ProcessTransitionGenerator() = default;
-  virtual std::vector<tesseract_motion_planners::Waypoint::Ptr>
-  generate(const tesseract_motion_planners::Waypoint::Ptr& start_waypoint,
-           const tesseract_motion_planners::Waypoint::Ptr& end_waypoint) const = 0;
-};
-
-/**
- * @class tesseract_process_planners::ProcessDefinitionConfig
- * @details The Process Definition Config
- *
- * This provides the high level process configuration information. It requires the user to provide
- * the start position waypoint (JointWaypoint) and a set of tool paths (strokes) that should be
- * converted into a process results definition leveraging both this configuration information and
- * the ProcessSegmentDefinitions.
- *
- * Also, other operations that are nice to have is the ability to offset the process. Particularly useful
- * when wanting to verify the process without making contact with a surface in the case of sanding.
- */
-struct ProcessDefinitionConfig
-{
-  EIGEN_MAKE_ALIGNED_OPERATOR_NEW
-
+  class Iterator;
+  /**
+   * @brief The start position of the robot
+   */
   tesseract_motion_planners::Waypoint::Ptr start;
-  std::vector<std::vector<tesseract_motion_planners::Waypoint::Ptr>> tool_paths;
 
-  std::vector<ProcessTransitionGenerator::ConstPtr> transition_generator;
+  /**
+   * @brief All of the raster segments with approaches and departures
+   */
+  std::vector<ProcessSegmentDefinition> segments;
 
-  Eigen::Isometry3d local_offset_direction;
-  Eigen::Isometry3d world_offset_direction;
+  /**
+   * @brief All of the transition to/from a given segment. Must be same length as segments
+   */
+  std::vector<ProcessTransitionDefinition> transitions;
 
-  ProcessDefinitionConfig()
+  static ProcessDefinition generate(const ProcessDefinitionConfig& process_config,
+                                    const ProcessSegmentDefinitionConfig& segment_config);
+
+  static ProcessDefinition generate(const ProcessDefinitionConfig& process_config,
+                                    const std::vector<ProcessSegmentDefinitionConfig>& segment_config);
+
+  /**
+   * @brief Get the size = approach.size() + process.size() + departure.size()
+   * @return The size of the process segement definition
+   */
+  std::size_t size() const;
+
+  /**
+   * @brief Get the iterator to the beginning of the process segment definition
+   * @return Iterator
+   */
+  Iterator begin();
+
+  /**
+   * @brief Get the iterator to the end of the process segment definition
+   * @return Iterator
+   */
+  Iterator end();
+
+  /**
+   * @brief Get waypoint by index
+   * @param index The index
+   * @return Waypoint
+   */
+  tesseract_motion_planners::Waypoint::Ptr& operator[](std::size_t index);
+
+  /**
+   * @brief Get const waypoint by index
+   * @param index The index
+   * @return Const Waypoint
+   */
+  const tesseract_motion_planners::Waypoint::Ptr& operator[](std::size_t index) const;
+
+  /**
+   * @brief Erase waypoint given iterator
+   * @param pos The iterator associated with the waypoint to remove
+   * @return The iterator
+   */
+  Iterator erase(Iterator pos);
+
+  /**
+   * @brief Erase waypoints given iterator
+   * @param pos The iterator associated with the waypoint to remove
+   * @return The iterator
+   */
+  Iterator erase(Iterator first, Iterator last);
+
+  /** @brief The Iterator class ProcessSegmentDefinition */
+  class Iterator : public std::iterator<std::random_access_iterator_tag, tesseract_motion_planners::Waypoint::Ptr>
   {
-    local_offset_direction.setIdentity();
-    world_offset_direction.setIdentity();
-  }
+  public:
+
+    Iterator(ProcessDefinition& container, std::size_t pos);
+
+    tesseract_motion_planners::Waypoint::Ptr& operator* ();
+
+    const tesseract_motion_planners::Waypoint::Ptr& operator* () const;
+
+    const Iterator& operator++ ();
+
+    Iterator operator++ (int);
+
+    const Iterator& operator-- ();
+
+    Iterator operator-- (int);
+
+    difference_type operator-(const Iterator& rhs) const;
+
+    Iterator operator+(difference_type rhs) const;
+
+    Iterator operator-(difference_type rhs) const;
+
+    bool operator==(const Iterator& rhs) const;
+
+    bool operator!=(const Iterator& rhs) const;
+
+    bool operator>(const Iterator& rhs) const;
+
+    bool operator<(const Iterator& rhs) const;
+
+    bool operator>=(const Iterator& rhs) const;
+
+    bool operator<=(const Iterator& rhs) const;
+
+  private:
+    //https://stackoverflow.com/questions/1784573/iterator-for-2d-vector
+    std::size_t segment_idx_outer = 0;
+    std::size_t segment_idx_inner = 0; // This will also include transition to not have to add another indx
+    ProcessDefinition* container_;
+  };
 };
-
-/**
- * @class tesseract_process_planners::ProcessStepGenerator
- * @details
- * This is a base class for process step generators. A process step generator takes tool path segments and
- * converts them into process tool path. Currently we assume that each tool path segment has three
- * steps Approach, Process, and Departure. Example case is using raster tool paths on surfaces but these need
- * to be modified based on the process that will be using those tool paths. Custom implementations of this class
- *  could for instance not want to stay normal to the surface but apply an angle of attack instead.
- * Therefore the specialized implementation would take the tool path segments and generate a new segments with
- * modified poses that accommodate the angle of attack. This class aims to bridge the gap between surface rastering
- * libraries and the planners so neither of these library need to know anything about the particular process.
- */
-class ProcessStepGenerator
-{
-public:
-  using Ptr = std::shared_ptr<ProcessStepGenerator>;
-  using ConstPtr = std::shared_ptr<const ProcessStepGenerator>;
-
-  virtual ~ProcessStepGenerator() = default;
-
-  virtual std::vector<tesseract_motion_planners::Waypoint::Ptr>
-  generate(const std::vector<tesseract_motion_planners::Waypoint::Ptr>& waypoints,
-           const ProcessDefinitionConfig& config) const = 0;
-};
-
-/**
- * @brief The Process Segment Definition Configuration
- *
- * In most manufacturing process like (sanding, painting, etc.) it includes a series of process paths (strokes).
- * Each of the process paths may have an approach, departure and transition step.
- *
- * Example: In the case of painting, when approaching the part you may want to take a specific trajectory
- * and the same for when leaving the part.
- */
-struct ProcessSegmentDefinitionConfig
-{
-  ProcessStepGenerator::ConstPtr approach;
-  ProcessStepGenerator::ConstPtr process;
-  ProcessStepGenerator::ConstPtr departure;
-};
-
-ProcessDefinition generateProcessDefinition(const ProcessDefinitionConfig& process_config,
-                                            const ProcessSegmentDefinitionConfig& segment_config);
-
-ProcessDefinition generateProcessDefinition(const ProcessDefinitionConfig& process_config,
-                                            const std::vector<ProcessSegmentDefinitionConfig>& segment_config);
 
 }  // namespace tesseract_process_planners
 

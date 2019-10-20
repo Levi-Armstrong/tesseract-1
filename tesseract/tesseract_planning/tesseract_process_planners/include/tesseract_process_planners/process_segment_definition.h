@@ -68,12 +68,6 @@ public:
   std::vector<tesseract_motion_planners::Waypoint::Ptr> departure;
 
   /**
-   * @brief Get the size = approach.size() + process.size() + departure.size()
-   * @return The size of the process segement definition
-   */
-  std::size_t size() const;
-
-  /**
    * @brief Given an index, check if it is part of the approach
    * @param index The index to check
    * @return True if associated with the approach, otherwise false.
@@ -93,6 +87,12 @@ public:
    * @return True if associated with the departure, otherwise false.
    */
   bool isDeparture(const std::size_t index) const;
+
+  /**
+   * @brief Get the size = approach.size() + process.size() + departure.size()
+   * @return The size of the process segement definition
+   */
+  std::size_t size() const;
 
   /**
    * @brief Get the iterator to the beginning of the process segment definition
