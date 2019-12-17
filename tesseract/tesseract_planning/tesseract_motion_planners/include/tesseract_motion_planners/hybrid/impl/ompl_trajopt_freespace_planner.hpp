@@ -106,7 +106,7 @@ tesseract_common::StatusCode OMPLTrajOptFreespacePlanner<PlannerType>::isConfigu
 
 template <typename PlannerType>
 tesseract_common::StatusCode OMPLTrajOptFreespacePlanner<PlannerType>::solve(PlannerResponse& response,
-                                                                             const bool verbose)
+                                                                             bool verbose)
 {
   tesseract_common::StatusCode config_status = isConfigured();
   if (!config_status)

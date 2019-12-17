@@ -39,7 +39,7 @@ TESSERACT_COMMON_IGNORE_WARNINGS_PUSH
 #include <ros/console.h>
 #include <dynamic_reconfigure/server.h>
 #include <memory>
-#include <tesseract_monitoring/EnvironmentMonitorDynamicReconfigureConfig.h>
+#include <tesseract_monitoring/EnvironmentMonitorDynamicReconfigureConfig.h> // NOLINT
 TESSERACT_COMMON_IGNORE_WARNINGS_POP
 
 #include <tesseract_environment/kdl/kdl_env.h>
