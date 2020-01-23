@@ -14,6 +14,8 @@ find_package(tesseract REQUIRED)
 find_package(tesseract_motion_planners REQUIRED)
 find_package(tesseract_common REQUIRED)
 find_package(PCL REQUIRED COMPONENTS core features filters io segmentation surface)
+add_definitions(${PCL_DEFINITIONS})
+add_compile_options(${PCL_COMPILE_OPTIONS})
 
 catkin_package()
 
