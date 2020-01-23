@@ -90,7 +90,7 @@ public:
    *
    * @return True if valid, otherwise false
    */
-  virtual bool setCoefficients(Eigen::VectorXd coefficients)
+  virtual bool setCoefficients(const Eigen::Ref<const Eigen::VectorXd>& coefficients)
   {
     coeffs_ = std::move(coefficients);
     return true;
@@ -129,7 +129,7 @@ public:
   using Ptr = std::shared_ptr<JointWaypoint>;
   using ConstPtr = std::shared_ptr<const JointWaypoint>;
 
-  JointWaypoint(Eigen::VectorXd joint_positions, std::vector<std::string> joint_names)
+  JointWaypoint(const Eigen::Ref<const Eigen::VectorXd>& joint_positions, std::vector<std::string> joint_names)
     : Waypoint(WaypointType::JOINT_WAYPOINT)
     , joint_positions_(std::move(joint_positions))
     , joint_names_(std::move(joint_names))
@@ -320,8 +320,8 @@ public:
   using Ptr = std::shared_ptr<JointTolerancedWaypoint>;
   using ConstPtr = std::shared_ptr<const JointTolerancedWaypoint>;
 
-  JointTolerancedWaypoint(Eigen::VectorXd joint_positions, std::vector<std::string> joint_names)
-    : JointWaypoint(std::move(joint_positions), std::move(joint_names))
+  JointTolerancedWaypoint(const Eigen::Ref<const Eigen::VectorXd>& joint_positions, std::vector<std::string> joint_names)
+    : JointWaypoint(joint_positions, std::move(joint_names))
   {
     waypoint_type_ = WaypointType::JOINT_TOLERANCED_WAYPOINT;
     setUpperTolerance(Eigen::VectorXd::Zero(joint_positions_.size()));
@@ -344,7 +344,7 @@ public:
    * @param upper_tolerance The upper tolerance in radians.
    * @return True if valid, otherwise false
    */
-  bool setUpperTolerance(Eigen::VectorXd upper_tolerance)
+  bool setUpperTolerance(const Eigen::Ref<const Eigen::VectorXd>& upper_tolerance)
   {
     if (upper_tolerance.size() != joint_positions_.size())
       return false;
@@ -383,7 +383,7 @@ public:
    * @param lower_tolerance The lower tolerance in radians.
    * @return True if valid, otherwise false
    */
-  bool setLowerTolerance(Eigen::VectorXd lower_tolerance)
+  bool setLowerTolerance(const Eigen::Ref<const Eigen::VectorXd>& lower_tolerance)
   {
     if (lower_tolerance.size() != joint_positions_.size())
       return false;
