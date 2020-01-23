@@ -130,9 +130,7 @@ public:
   using ConstPtr = std::shared_ptr<const JointWaypoint>;
 
   JointWaypoint(const Eigen::Ref<const Eigen::VectorXd>& joint_positions, std::vector<std::string> joint_names)
-    : Waypoint(WaypointType::JOINT_WAYPOINT)
-    , joint_positions_(std::move(joint_positions))
-    , joint_names_(std::move(joint_names))
+    : Waypoint(WaypointType::JOINT_WAYPOINT), joint_positions_(std::move(joint_positions)), joint_names_(std::move(joint_names))
   {
     assert(joint_positions_.size() == static_cast<long>(joint_names_.size()));
     for (size_t i = 0; i < joint_names_.size(); ++i)
