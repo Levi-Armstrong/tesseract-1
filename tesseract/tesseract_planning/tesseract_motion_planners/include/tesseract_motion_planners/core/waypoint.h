@@ -210,7 +210,7 @@ public:
    * @brief Operator to add vector of data to current position
    * @param delta Vector to add to current position
    */
-  JointWaypoint& operator+=(const Eigen::VectorXd& delta)
+  JointWaypoint& operator+=(const Eigen::Ref<const Eigen::VectorXd>& delta)
   {
     joint_positions_ += delta;
     return *this;  // return the result by reference
@@ -220,7 +220,7 @@ public:
    * @brief Operator to subtract vector of data from current position
    * @param delta Vector to subtract from current position
    */
-  JointWaypoint& operator-=(const Eigen::VectorXd& delta)
+  JointWaypoint& operator-=(const Eigen::Ref<const Eigen::VectorXd>& delta)
   {
     joint_positions_ -= delta;
     return *this;  // return the result by reference
