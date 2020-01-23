@@ -92,7 +92,7 @@ public:
    */
   virtual bool setCoefficients(const Eigen::Ref<const Eigen::VectorXd>& coefficients)
   {
-    coeffs_ = std::move(coefficients);
+    coeffs_ = coefficients;
     return true;
   }
 
@@ -347,7 +347,7 @@ public:
     if (upper_tolerance.size() != joint_positions_.size())
       return false;
 
-    upper_tolerance_ = std::move(upper_tolerance);
+    upper_tolerance_ = upper_tolerance;
     return true;
   }
 
@@ -386,7 +386,7 @@ public:
     if (lower_tolerance.size() != joint_positions_.size())
       return false;
 
-    lower_tolerance_ = std::move(lower_tolerance);
+    lower_tolerance_ = lower_tolerance;
     return true;
   }
 
