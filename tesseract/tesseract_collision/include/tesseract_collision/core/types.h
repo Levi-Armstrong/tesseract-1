@@ -161,30 +161,31 @@ inline std::size_t flattenResults(ContactResultMap&& m, ContactResultVector& v)
   return flattenMoveResults(std::move(m), v);
 }
 
-/// Contact test data and query results information
+// Contact test data and query results information
 struct ContactTestData
 {
   EIGEN_MAKE_ALIGNED_OPERATOR_NEW
 
+  ContactTestData() = default;
   ContactTestData(const std::vector<std::string>& active,
-                  const double& contact_distance,
-                  const IsContactAllowedFn& fn,
-                  const ContactTestType& type,
+                  double contact_distance,
+                  IsContactAllowedFn fn,
+                  ContactTestType type,
                   ContactResultMap& res)
-    : active(active), contact_distance(contact_distance), fn(fn), type(type), res(res), done(false)
+    : active(&active), contact_distance(contact_distance), fn(std::move(fn)), type(type), res(&res)
   {
   }
 
-  const std::vector<std::string>& active;
-  const double& contact_distance;
-  const IsContactAllowedFn& fn;
-  const ContactTestType& type;
+  const std::vector<std::string>* active{ nullptr };
+  double contact_distance{ 0 };
+  IsContactAllowedFn fn{ nullptr };
+  ContactTestType type{ ContactTestType::ALL };
 
   /// Destance query results information
-  ContactResultMap& res;
+  ContactResultMap* res{ nullptr };
 
   /// Indicate if search is finished
-  bool done;
+  bool done{ false };
 };
 }  // namespace tesseract_collision
 
