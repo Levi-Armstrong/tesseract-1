@@ -59,8 +59,10 @@ inline void addCollisionObjects(DiscreteContactManager& checker)
 }
 }  // namespace detail
 
-inline void
-runTest(DiscreteContactManager& checker, double dist_tol = 0.001, double nearest_tol = 0.001, double normal_tol = 0.001)
+inline void runTest(DiscreteContactManager& checker,
+             double dist_tol = 0.001,
+             double nearest_tol = 0.001,
+             double normal_tol = 0.001)
 {
   // Add collision objects
   detail::addCollisionObjects(checker);
