@@ -202,7 +202,7 @@ struct TesseractCompoundCompoundLeafCallback : btDbvt::ICollide
 
       btSimplePair* pair = m_childCollisionAlgorithmCache->findPair(childIndex0, childIndex1);
       bool removePair = false;
-      btCollisionAlgorithm* colAlgo = 0;
+      btCollisionAlgorithm* colAlgo = nullptr;
       if (m_resultOut->m_closestPointDistanceThreshold > 0)
       {
         colAlgo = m_dispatcher->findAlgorithm(&compoundWrap0, &compoundWrap1, 0, BT_CLOSEST_POINT_ALGORITHMS);
@@ -226,8 +226,8 @@ struct TesseractCompoundCompoundLeafCallback : btDbvt::ICollide
 
       btAssert(colAlgo);
 
-      const btCollisionObjectWrapper* tmpWrap0 = 0;
-      const btCollisionObjectWrapper* tmpWrap1 = 0;
+      const btCollisionObjectWrapper* tmpWrap0 = nullptr;
+      const btCollisionObjectWrapper* tmpWrap1 = nullptr;
 
       tmpWrap0 = m_resultOut->getBody0Wrap();
       tmpWrap1 = m_resultOut->getBody1Wrap();
@@ -256,7 +256,7 @@ static DBVT_INLINE bool
 MyIntersect(const btDbvtAabbMm& a, const btDbvtAabbMm& b, const btTransform& xform, btScalar distanceThreshold)
 {
   btVector3 newmin, newmax;
-  btTransformAabb(b.Mins(), b.Maxs(), 0.f, xform, newmin, newmax);
+  btTransformAabb(b.Mins(), b.Maxs(), btScalar(0), xform, newmin, newmax);
   newmin -= btVector3(distanceThreshold, distanceThreshold, distanceThreshold);
   newmax += btVector3(distanceThreshold, distanceThreshold, distanceThreshold);
   btDbvtAabbMm newb = btDbvtAabbMm::FromMM(newmin, newmax);
@@ -376,7 +376,7 @@ void TesseractCompoundCompoundCollisionAlgorithm::processCollision(const btColli
           {
             resultOut->setPersistentManifold(manifoldArray[m]);
             resultOut->refreshContactPoints();
-            resultOut->setPersistentManifold(0);
+            resultOut->setPersistentManifold(nullptr);
           }
         }
         manifoldArray.resize(0);
@@ -417,7 +417,7 @@ void TesseractCompoundCompoundCollisionAlgorithm::processCollision(const btColli
         btCollisionAlgorithm* algo = (btCollisionAlgorithm*)pairs[i].m_userPointer;
 
         {
-          const btCollisionShape* childShape0 = 0;
+          const btCollisionShape* childShape0 = nullptr;
 
           btTransform newChildWorldTrans0;
           childShape0 = compoundShape0->getChildShape(pairs[i].m_indexA);
@@ -431,7 +431,7 @@ void TesseractCompoundCompoundCollisionAlgorithm::processCollision(const btColli
         aabbMin0 -= thresholdVec;
         aabbMax0 += thresholdVec;
         {
-          const btCollisionShape* childShape1 = 0;
+          const btCollisionShape* childShape1 = nullptr;
           btTransform newChildWorldTrans1;
 
           childShape1 = compoundShape1->getChildShape(pairs[i].m_indexB);
@@ -465,7 +465,7 @@ btScalar TesseractCompoundCompoundCollisionAlgorithm::calculateTimeOfImpact(btCo
                                                                             btManifoldResult* /*resultOut*/)
 {
   btAssert(0);
-  return 0.f;
+  return btScalar(0);
 }
 }  // namespace tesseract_collision_bullet
 }  // namespace tesseract_collision
