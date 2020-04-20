@@ -338,10 +338,10 @@ void BulletCastSimpleManager::setContactDistanceThreshold(double contact_distanc
 double BulletCastSimpleManager::getContactDistanceThreshold() const { return contact_test_data_.contact_distance; }
 void BulletCastSimpleManager::setIsContactAllowedFn(IsContactAllowedFn fn) { contact_test_data_.fn = fn; }
 IsContactAllowedFn BulletCastSimpleManager::getIsContactAllowedFn() const { return contact_test_data_.fn; }
-void BulletCastSimpleManager::contactTest(ContactResultMap& collisions, const ContactTestType& type)
+void BulletCastSimpleManager::contactTest(ContactResultMap& collisions, const ContactRequest &req)
 {
   contact_test_data_.res = &collisions;
-  contact_test_data_.type = type;
+  contact_test_data_.req = req;
   contact_test_data_.done = false;
 
   for (auto cow1_iter = cows_.begin(); cow1_iter != (cows_.end() - 1); cow1_iter++)

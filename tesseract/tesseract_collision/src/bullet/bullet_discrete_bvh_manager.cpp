@@ -234,10 +234,10 @@ void BulletDiscreteBVHManager::setContactDistanceThreshold(double contact_distan
 double BulletDiscreteBVHManager::getContactDistanceThreshold() const { return contact_test_data_.contact_distance; }
 void BulletDiscreteBVHManager::setIsContactAllowedFn(IsContactAllowedFn fn) { contact_test_data_.fn = fn; }
 IsContactAllowedFn BulletDiscreteBVHManager::getIsContactAllowedFn() const { return contact_test_data_.fn; }
-void BulletDiscreteBVHManager::contactTest(ContactResultMap& collisions, const ContactTestType& type)
+void BulletDiscreteBVHManager::contactTest(ContactResultMap& collisions, const ContactRequest &req)
 {
   contact_test_data_.res = &collisions;
-  contact_test_data_.type = type;
+  contact_test_data_.req = req;
   contact_test_data_.done = false;
 
   broadphase_->calculateOverlappingPairs(dispatcher_.get());

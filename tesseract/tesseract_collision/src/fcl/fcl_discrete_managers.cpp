@@ -195,9 +195,9 @@ void FCLDiscreteBVHManager::setContactDistanceThreshold(double contact_distance)
 double FCLDiscreteBVHManager::getContactDistanceThreshold() const { return contact_distance_; }
 void FCLDiscreteBVHManager::setIsContactAllowedFn(IsContactAllowedFn fn) { fn_ = fn; }
 IsContactAllowedFn FCLDiscreteBVHManager::getIsContactAllowedFn() const { return fn_; }
-void FCLDiscreteBVHManager::contactTest(ContactResultMap& collisions, const ContactTestType& type)
+void FCLDiscreteBVHManager::contactTest(ContactResultMap& collisions, const ContactRequest &req)
 {
-  ContactTestData cdata(active_, contact_distance_, fn_, type, collisions);
+  ContactTestData cdata(active_, contact_distance_, fn_, req, collisions);
   if (contact_distance_ > 0)
   {
     manager_->distance(&cdata, &distanceCallback);

@@ -108,7 +108,7 @@ public:
 
   IsContactAllowedFn getIsContactAllowedFn() const override;
 
-  void contactTest(ContactResultMap& collisions, const ContactTestType& type) override;
+  void contactTest(ContactResultMap& collisions, const ContactRequest& req) override;
 
   /**
    * @brief Add a fcl collision object to the manager

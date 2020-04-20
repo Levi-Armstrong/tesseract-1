@@ -400,10 +400,10 @@ void BulletCastBVHManager::setContactDistanceThreshold(double contact_distance)
 double BulletCastBVHManager::getContactDistanceThreshold() const { return contact_test_data_.contact_distance; }
 void BulletCastBVHManager::setIsContactAllowedFn(IsContactAllowedFn fn) { contact_test_data_.fn = fn; }
 IsContactAllowedFn BulletCastBVHManager::getIsContactAllowedFn() const { return contact_test_data_.fn; }
-void BulletCastBVHManager::contactTest(ContactResultMap& collisions, const ContactTestType& type)
+void BulletCastBVHManager::contactTest(ContactResultMap& collisions, const ContactRequest &req)
 {
   contact_test_data_.res = &collisions;
-  contact_test_data_.type = type;
+  contact_test_data_.req = req;
   contact_test_data_.done = false;
 
   broadphase_->calculateOverlappingPairs(dispatcher_.get());

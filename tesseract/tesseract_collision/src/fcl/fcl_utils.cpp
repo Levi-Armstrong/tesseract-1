@@ -222,7 +222,7 @@ bool collisionCallback(fcl::CollisionObjectd* o1, fcl::CollisionObjectd* o2, voi
     return false;
 
   size_t num_contacts = std::numeric_limits<size_t>::max();
-  if (cdata->type == ContactTestType::FIRST)
+  if (cdata->req.type == ContactTestType::FIRST)
     num_contacts = 1;
 
   fcl::CollisionResultd col_result;
