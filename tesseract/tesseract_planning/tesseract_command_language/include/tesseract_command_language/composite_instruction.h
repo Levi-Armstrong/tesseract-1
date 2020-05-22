@@ -25,11 +25,11 @@ public:
 
   CompositeInstructionOrder getOrder() const;
 
-  std::vector<ComponentInfo>& getCompositeCosts();
-  const std::vector<ComponentInfo>& getCompositeCosts() const;
+  void addCost(ComponentInfo component);
+  const std::vector<ComponentInfo>& getCosts() const;
 
-  std::vector<ComponentInfo>& getCompositeConstraints();
-  const std::vector<ComponentInfo>& getCompositeConstraints() const;
+  void addConstraint(ComponentInfo component);
+  const std::vector<ComponentInfo>& getConstraints() const;
 
   int getType() const;
 
@@ -50,9 +50,9 @@ private:
 
   std::string description_;
 
-  std::vector<ComponentInfo> composite_costs_;
+  std::vector<ComponentInfo> costs_;
 
-  std::vector<ComponentInfo> composite_constraints_;
+  std::vector<ComponentInfo> constraints_;
 
   CompositeInstructionOrder order_;
 

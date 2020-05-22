@@ -1,8 +1,8 @@
 #ifndef TESSERACT_COMMAND_LANGUAGE_INSTRUCTION_H
 #define TESSERACT_COMMAND_LANGUAGE_INSTRUCTION_H
 
-#include <tesseract_command_language/waypoint.h>
-#include <tesseract_command_language/component_info.h>
+#include <tesseract_command_language/core/waypoint.h>
+#include <tesseract_command_language/core/component_info.h>
 
 namespace tesseract_planning
 {

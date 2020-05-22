@@ -19,6 +19,8 @@ namespace tesseract_planning
 
     virtual int getType() const = 0;
 
+    virtual bool isCompositeInstructionSupported() const = 0;
+
     // This is not required for user defined implementation
     virtual void* recover() = 0;
 
@@ -45,9 +47,11 @@ namespace tesseract_planning
       return std::make_unique<ComponentInfoInner>(component_info_);
     }
 
-    int getType() const { return component_info_.getType(); }
+    int getType() const override { return component_info_.getType(); }
 
-    void* recover() { return &component_info_; }
+    bool isCompositeInstructionSupported() const override { return component_info_.isCompositeInstructionSupported(); }
+
+    void* recover() override { return &component_info_; }
 
     T component_info_;
   };
@@ -100,6 +104,8 @@ namespace tesseract_planning
     }
 
     int getType() const { return component_info_->getType(); }
+
+    bool isCompositeInstructionSupported() const { return component_info_->isCompositeInstructionSupported(); }
 
     template<typename T>
     T* cast() { return static_cast<T*>(component_info_->recover()); }

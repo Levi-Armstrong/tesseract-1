@@ -4,19 +4,19 @@ namespace tesseract_planning
 {
 MoveInstruction::MoveInstruction(Waypoint waypoint) : waypoint_(std::move(waypoint)) {}
 
-Waypoint& MoveInstruction::getWaypoint() { return waypoint_; }
+void MoveInstruction::setWaypoint(Waypoint waypoint) { waypoint_ = waypoint; }
 const Waypoint& MoveInstruction::getWaypoint() const { return waypoint_; }
 
-std::vector<ComponentInfo>& MoveInstruction::getPointCosts() { return point_costs_; }
-const std::vector<ComponentInfo>& MoveInstruction::getPointCosts() const { return point_costs_; }
+void MoveInstruction::addCost(ComponentInfo component) { costs_.push_back(component); }
+const std::vector<ComponentInfo>& MoveInstruction::getCosts() const { return costs_; }
 
-std::vector<ComponentInfo>& MoveInstruction::getPointConstraints() { return point_constraints_; }
-const std::vector<ComponentInfo>& MoveInstruction::getPointConstraints() const { return point_constraints_; }
+void MoveInstruction::addConstraint(ComponentInfo component) { constraints_.push_back(component); }
+const std::vector<ComponentInfo>& MoveInstruction::getConstraints() const { return constraints_; }
 
-std::vector<ComponentInfo>& MoveInstruction::getPathCosts() { return path_costs_; }
+void MoveInstruction::addPathCost(ComponentInfo component) { path_costs_.push_back(component); }
 const std::vector<ComponentInfo>& MoveInstruction::getPathCosts() const { return path_costs_; }
 
-std::vector<ComponentInfo>& MoveInstruction::getPathConstraints() { return path_constraints_; }
+void MoveInstruction::addPathConstraint(ComponentInfo component) { path_constraints_.push_back(component); }
 const std::vector<ComponentInfo>& MoveInstruction::getPathConstraints() const { return path_constraints_; }
 
 int MoveInstruction::getType() const { return type_; }

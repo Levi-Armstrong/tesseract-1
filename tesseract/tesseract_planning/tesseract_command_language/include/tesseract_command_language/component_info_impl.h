@@ -27,26 +27,28 @@ class FixedComponent
 {
 public:
   int getType() const { return static_cast<int>(ComponentTypes::FIXED); }
-
+  bool isCompositeInstructionSupported() const { return false; }
 };
 
 class LinearComponent
 {
 public:
   int getType() const { return static_cast<int>(ComponentTypes::LINEAR); }
-
+  bool isCompositeInstructionSupported() const { return false; }
 };
 
 class FreespaceComponent
 {
 public:
   int getType() const { return static_cast<int>(ComponentTypes::FREESPACE); }
+  bool isCompositeInstructionSupported() const { return false; }
 };
 
 class CartesianXTolComponent
 {
 public:
   int getType() const { return static_cast<int>(ComponentTypes::CARTESIAN_X_TOL); }
+  bool isCompositeInstructionSupported() const { return false; }
 
   double x_min;
   double x_max;
@@ -57,6 +59,7 @@ class VelocityComponent
 {
 public:
   int getType() const { return static_cast<int>(ComponentTypes::VELOCITY_TOL); }
+  bool isCompositeInstructionSupported() const { return true; }
 
   double target;
   double min;
@@ -67,18 +70,21 @@ class VelocitySmoothingComponent
 {
 public:
   int getType() const { return static_cast<int>(ComponentTypes::VELOCITY_SMOOTHING); }
+  bool isCompositeInstructionSupported() const { return true; }
 };
 
 class AccelerationSmoothingComponent
 {
 public:
   int getType() const { return static_cast<int>(ComponentTypes::ACCELERATION_SMOOTHING); }
+  bool isCompositeInstructionSupported() const { return true; }
 };
 
 class JerkSmoothingComponent
 {
 public:
   int getType() const { return static_cast<int>(ComponentTypes::JERK_SMOOTHING); }
+  bool isCompositeInstructionSupported() const { return true; }
 };
 }
 #endif // TESSERACT_COMMAND_LANGUAGE_COMPONENT_INFO_IMPL_H

@@ -1,4 +1,5 @@
 #include <tesseract_command_language/composite_instruction.h>
+#include <stdexcept>
 
 namespace tesseract_planning
 {
@@ -6,11 +7,24 @@ CompositeInstruction::CompositeInstruction(CompositeInstructionOrder order) : or
 
 CompositeInstructionOrder CompositeInstruction::getOrder() const { return order_; }
 
-std::vector<ComponentInfo>& CompositeInstruction::getCompositeCosts() { return composite_costs_; }
-const std::vector<ComponentInfo>& CompositeInstruction::getCompositeCosts() const { return composite_costs_; }
+void CompositeInstruction::addCost(ComponentInfo component)
+{
+  if (!component.isCompositeInstructionSupported())
+    throw std::runtime_error("Component is not supported for a composite instruction!");
 
-std::vector<ComponentInfo>& CompositeInstruction::getCompositeConstraints() { return composite_constraints_; }
-const std::vector<ComponentInfo>& CompositeInstruction::getCompositeConstraints() const { return composite_constraints_; }
+  costs_.push_back(component);
+}
+const std::vector<ComponentInfo>& CompositeInstruction::getCosts() const { return costs_; }
+
+void CompositeInstruction::addConstraint(ComponentInfo component)
+{
+  if (!component.isCompositeInstructionSupported())
+    throw std::runtime_error("Component is not supported for a composite instruction!");
+
+  constraints_.push_back(component);
+}
+
+const std::vector<ComponentInfo>& CompositeInstruction::getConstraints() const { return constraints_; }
 
 int CompositeInstruction::getType() const { return type_; }
 

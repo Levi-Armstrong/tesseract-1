@@ -17,19 +17,19 @@ public:
 
   MoveInstruction(Waypoint waypoint);
 
-  Waypoint& getWaypoint();
+  void setWaypoint(Waypoint waypoint);
   const Waypoint& getWaypoint() const;
 
-  std::vector<ComponentInfo>& getPointCosts();
-  const std::vector<ComponentInfo>& getPointCosts() const;
+  void addCost(ComponentInfo component);
+  const std::vector<ComponentInfo>& getCosts() const;
 
-  std::vector<ComponentInfo>& getPointConstraints();
-  const std::vector<ComponentInfo>& getPointConstraints() const;
+  void addConstraint(ComponentInfo component);
+  const std::vector<ComponentInfo>& getConstraints() const;
 
-  std::vector<ComponentInfo>& getPathCosts();
+  void addPathCost(ComponentInfo component);
   const std::vector<ComponentInfo>& getPathCosts() const;
 
-  std::vector<ComponentInfo>& getPathConstraints();
+  void addPathConstraint(ComponentInfo component);
   const std::vector<ComponentInfo>& getPathConstraints() const;
 
   int getType() const;
@@ -51,8 +51,8 @@ private:
 
   std::string description_;
 
-  std::vector<ComponentInfo> point_costs_;
-  std::vector<ComponentInfo> point_constraints_;
+  std::vector<ComponentInfo> costs_;
+  std::vector<ComponentInfo> constraints_;
 
   std::vector<ComponentInfo> path_costs_;
   std::vector<ComponentInfo> path_constraints_;
