@@ -33,7 +33,7 @@ target_include_directories(${PROJECT_NAME}_trajopt SYSTEM PUBLIC
         ${EIGEN3_INCLUDE_DIRS})
 
 add_executable(${PROJECT_NAME}_demo src/example_program.cpp)
-target_link_libraries(${PROJECT_NAME}_demo PUBLIC ${PROJECT_NAME})
+target_link_libraries(${PROJECT_NAME}_demo PUBLIC ${PROJECT_NAME} ${PROJECT_NAME}_trajopt)
 tesseract_target_compile_options(${PROJECT_NAME}_demo PUBLIC)
 tesseract_clang_tidy(${PROJECT_NAME}_demo)
 tesseract_code_coverage(${PROJECT_NAME}_demo ALL EXCLUDE ${COVERAGE_EXCLUDE})

@@ -4,7 +4,7 @@
 #include <tesseract_motion_planners/trajopt/config/trajopt_planner_config.h>
 #include <tesseract_motion_planners/trajopt/config/trajopt_collision_config.h>
 
-namespace tesseract_motion_planners
+namespace tesseract_planning
 {
 
 /**
@@ -14,7 +14,7 @@ namespace tesseract_motion_planners
  * problems. These are always required: tesseract_, maninpulator_, link_, tcp_
  *
  */
-struct TrajOptPlannerUniversalConfig : public TrajOptPlannerConfig
+struct TrajOptPlannerUniversalConfig : public tesseract_motion_planners::TrajOptPlannerConfig
 {
   EIGEN_MAKE_ALIGNED_OPERATOR_NEW
 
@@ -53,7 +53,7 @@ struct TrajOptPlannerUniversalConfig : public TrajOptPlannerConfig
    */
   tesseract_common::VectorIsometry3d tcp;
 
-  /** @brief The target tool waypoints */
+  /** @brief The program instruction */
   tesseract_planning::CompositeInstructions instructions;
 
   /** @brief Selects the type of initialization used for raster path. If GIVEN_TRAJ, then the seed_trajectory_ must be
