@@ -21,6 +21,16 @@ target_include_directories(${PROJECT_NAME} PUBLIC
 target_include_directories(${PROJECT_NAME} SYSTEM PUBLIC
  	${EIGEN3_INCLUDE_DIRS})
 
+add_library(${PROJECT_NAME}_trajopt src/trajopt_planner_universal_config.cpp)
+target_link_libraries(${PROJECT_NAME}_trajopt PUBLIC ${PROJECT_NAME})
+tesseract_target_compile_options(${PROJECT_NAME}_trajopt PUBLIC)
+tesseract_clang_tidy(${PROJECT_NAME}_trajopt)
+tesseract_code_coverage(${PROJECT_NAME}_trajopt ALL EXCLUDE ${COVERAGE_EXCLUDE})
+target_include_directories(${PROJECT_NAME}_trajopt PUBLIC
+    "$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>"
+    "$<INSTALL_INTERFACE:include>")
+target_include_directories(${PROJECT_NAME}_trajopt SYSTEM PUBLIC
+        ${EIGEN3_INCLUDE_DIRS})
 
 add_executable(${PROJECT_NAME}_demo src/example_program.cpp)
 target_link_libraries(${PROJECT_NAME}_demo PUBLIC ${PROJECT_NAME})
@@ -31,9 +41,9 @@ target_include_directories(${PROJECT_NAME}_demo PUBLIC
     "$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>"
     "$<INSTALL_INTERFACE:include>")
 target_include_directories(${PROJECT_NAME}_demo SYSTEM PUBLIC
-        ${EIGEN3_INCLUDE_DIRS})
+        ${EIGEN3_INCLUDE_DIRS})  
    
-tesseract_configure_package(${PROJECT_NAME} ${PROJECT_NAME}_demo)
+tesseract_configure_package(${PROJECT_NAME} ${PROJECT_NAME}_demo ${PROJECT_NAME}_trajopt)
 
 # Mark header files for installation
 install(DIRECTORY include/${PROJECT_NAME}
