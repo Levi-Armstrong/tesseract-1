@@ -12,7 +12,7 @@ enum class CompositeInstructionOrder
 {
   ORDERED, // Must go in forward
   UNORDERED, // Any order is allowed
-  ORDERED_AND_INVERTABLE // Can go forward or reverse the order
+  ORDERED_AND_REVERABLE // Can go forward or reverse the order
 };
 
 class CompositeInstruction : public std::vector<Instruction>
