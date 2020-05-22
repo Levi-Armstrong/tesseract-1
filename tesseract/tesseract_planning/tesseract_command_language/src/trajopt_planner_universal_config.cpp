@@ -30,6 +30,27 @@ static const double LONGEST_VALID_SEGMENT_FRACTION_DEFAULT = 0.01;
 
 namespace tesseract_planning
 {
+
+class InstructionResult
+{
+public:
+  using Ptr = std::shared_ptr<InstructionResult>;
+  using ConstPtr = std::shared_ptr<InstructionResult>;
+
+  InstructionResult(const Instruction& instruction) : instruction(instruction) {}
+
+  std::array<int, 2> trajectory_indexs;
+  const Instruction& instruction;
+};
+
+
+/**
+ * @brief If an intruction is not a move instruction or a known move instruction it will be nullptr
+ *
+ * This should be a one to one match withthe provided instructions
+ */
+using InstructionResults = std::vector<InstructionResult::Ptr>;
+
 TrajOptPlannerUniversalConfig::TrajOptPlannerUniversalConfig(tesseract::Tesseract::ConstPtr tesseract_,
                                                              std::string manipulator_,
                                                              std::string link_,
@@ -62,31 +83,31 @@ std::shared_ptr<trajopt::ProblemConstructionInfo> TrajOptPlannerUniversalConfig:
     return nullptr;
 
   std::vector<int> fixed_steps;
-  addWaypoints(pci, fixed_steps);
+  addInstructions(pci, fixed_steps);
 
-  if (collision_constraint_config.enabled)
-    addCollisionConstraint(pci, fixed_steps);
+//  if (collision_constraint_config.enabled)
+//    addCollisionConstraint(pci, fixed_steps);
 
-  if (collision_cost_config.enabled)
-    addCollisionCost(pci, fixed_steps);
+//  if (collision_cost_config.enabled)
+//    addCollisionCost(pci, fixed_steps);
 
-  if (smooth_velocities)
-    addVelocitySmoothing(pci, fixed_steps);
+//  if (smooth_velocities)
+//    addVelocitySmoothing(pci, fixed_steps);
 
-  if (smooth_accelerations)
-    addAccelerationSmoothing(pci, fixed_steps);
+//  if (smooth_accelerations)
+//    addAccelerationSmoothing(pci, fixed_steps);
 
-  if (smooth_jerks)
-    addJerkSmoothing(pci, fixed_steps);
+//  if (smooth_jerks)
+//    addJerkSmoothing(pci, fixed_steps);
 
-  if (configuration != nullptr)
-    addKinematicConfiguration(pci, fixed_steps);
+//  if (configuration != nullptr)
+//    addKinematicConfiguration(pci, fixed_steps);
 
-  if (!constraint_error_functions.empty())
-    addConstraintErrorFunctions(pci, fixed_steps);
+//  if (!constraint_error_functions.empty())
+//    addConstraintErrorFunctions(pci, fixed_steps);
 
-  if (avoid_singularity)
-    addAvoidSingularity(pci, fixed_steps);
+//  if (avoid_singularity)
+//    addAvoidSingularity(pci, fixed_steps);
 
   return std::make_shared<trajopt::ProblemConstructionInfo>(pci);
 }
@@ -142,328 +163,328 @@ bool TrajOptPlannerUniversalConfig::addBasicInfo(trajopt::ProblemConstructionInf
   }
 
   // Populate Basic Info
-  pci.basic_info.n_steps = static_cast<int>(target_waypoints.size());
-  pci.basic_info.manip = manipulator;
-  pci.basic_info.start_fixed = false;
-  pci.basic_info.use_time = false;
-  pci.basic_info.convex_solver = optimizer;
+//  pci.basic_info.n_steps = static_cast<int>(target_waypoints.size());
+//  pci.basic_info.manip = manipulator;
+//  pci.basic_info.start_fixed = false;
+//  pci.basic_info.use_time = false;
+//  pci.basic_info.convex_solver = optimizer;
 
   return true;
 }
 
 bool TrajOptPlannerUniversalConfig::addInitTrajectory(trajopt::ProblemConstructionInfo& pci) const
 {
-  // Populate Init Info
-  pci.init_info.type = init_type;
-  if (init_type == trajopt::InitInfo::GIVEN_TRAJ)
-  {
-    pci.init_info.data = seed_trajectory;
+//  // Populate Init Info
+//  pci.init_info.type = init_type;
+//  if (init_type == trajopt::InitInfo::GIVEN_TRAJ)
+//  {
+//    pci.init_info.data = seed_trajectory;
 
-    // Add check to make sure if starts with joint waypoint that the seed trajectory also starts at this waypoint
-    // If it does not start this causes issues in trajopt and it will never converge.
-    if (isJointWaypointType(target_waypoints.front()->getType()))
-    {
-      const auto jwp = std::static_pointer_cast<JointWaypoint>(target_waypoints.front());
-      const Eigen::VectorXd position = jwp->getPositions(pci.kin->getJointNames());
-      for (int i = 0; i < static_cast<int>(pci.kin->numJoints()); ++i)
-      {
-        if (std::abs(position[i] - seed_trajectory(0, i)) > static_cast<double>(std::numeric_limits<float>::epsilon()))
-        {
-          std::stringstream ss;
-          ss << "Seed trajectory start position does not match starting joint waypoint position!";
-          ss << "    waypoint: " << position.transpose().matrix() << std::endl;
-          ss << "  seed start: " << seed_trajectory.row(0).transpose().matrix() << std::endl;
-          CONSOLE_BRIDGE_logError(ss.str().c_str());
-          return false;
-        }
-      }
-    }
-  }
-  if (init_type == trajopt::InitInfo::JOINT_INTERPOLATED)
-  {
-    if (seed_trajectory.size() != pci.kin->numJoints())
-    {
-      CONSOLE_BRIDGE_logError("Init type is set to JOINT_INTERPOLATED but seed_trajectory.size() != "
-                              "pci.kin->numJoints().");
-      return false;
-    }
-    pci.init_info.data = seed_trajectory;
-  }
+//    // Add check to make sure if starts with joint waypoint that the seed trajectory also starts at this waypoint
+//    // If it does not start this causes issues in trajopt and it will never converge.
+//    if (isJointWaypointType(target_waypoints.front()->getType()))
+//    {
+//      const auto jwp = std::static_pointer_cast<JointWaypoint>(target_waypoints.front());
+//      const Eigen::VectorXd position = jwp->getPositions(pci.kin->getJointNames());
+//      for (int i = 0; i < static_cast<int>(pci.kin->numJoints()); ++i)
+//      {
+//        if (std::abs(position[i] - seed_trajectory(0, i)) > static_cast<double>(std::numeric_limits<float>::epsilon()))
+//        {
+//          std::stringstream ss;
+//          ss << "Seed trajectory start position does not match starting joint waypoint position!";
+//          ss << "    waypoint: " << position.transpose().matrix() << std::endl;
+//          ss << "  seed start: " << seed_trajectory.row(0).transpose().matrix() << std::endl;
+//          CONSOLE_BRIDGE_logError(ss.str().c_str());
+//          return false;
+//        }
+//      }
+//    }
+//  }
+//  if (init_type == trajopt::InitInfo::JOINT_INTERPOLATED)
+//  {
+//    if (seed_trajectory.size() != pci.kin->numJoints())
+//    {
+//      CONSOLE_BRIDGE_logError("Init type is set to JOINT_INTERPOLATED but seed_trajectory.size() != "
+//                              "pci.kin->numJoints().");
+//      return false;
+//    }
+//    pci.init_info.data = seed_trajectory;
+//  }
 
-  return true;
+//  return true;
 }
 
-void TrajOptPlannerUniversalConfig::addWaypoints(trajopt::ProblemConstructionInfo& pci,
-                                               std::vector<int>& fixed_steps) const
+void TrajOptPlannerUniversalConfig::addInstructions(trajopt::ProblemConstructionInfo &pci,
+                                                    std::vector<int> &fixed_steps) const
 {
-  // Get kinematics information
-  tesseract_environment::Environment::ConstPtr env = tesseract->getEnvironmentConst();
-  tesseract_environment::AdjacencyMap map(
-      env->getSceneGraph(), pci.kin->getActiveLinkNames(), env->getCurrentState()->link_transforms);
-  const std::vector<std::string>& adjacency_links = map.getActiveLinkNames();
+//  // Get kinematics information
+//  tesseract_environment::Environment::ConstPtr env = tesseract->getEnvironmentConst();
+//  tesseract_environment::AdjacencyMap map(
+//      env->getSceneGraph(), pci.kin->getActiveLinkNames(), env->getCurrentState()->link_transforms);
+//  const std::vector<std::string>& adjacency_links = map.getActiveLinkNames();
 
-  // Add constraints
-  for (std::size_t ind = 0; ind < target_waypoints.size(); ind++)
-  {
-    WaypointTermInfo term_info;
-    if (tcp.size() == target_waypoints.size())
-    {
-      term_info = createWaypointTermInfo(
-          target_waypoints[ind], static_cast<int>(ind), pci.kin->getJointNames(), adjacency_links, link, tcp[ind]);
-    }
-    else
-    {
-      term_info = createWaypointTermInfo(
-          target_waypoints[ind], static_cast<int>(ind), pci.kin->getJointNames(), adjacency_links, link, tcp.front());
-    }
+//  // Add constraints
+//  for (std::size_t ind = 0; ind < target_waypoints.size(); ind++)
+//  {
+//    WaypointTermInfo term_info;
+//    if (tcp.size() == target_waypoints.size())
+//    {
+//      term_info = createWaypointTermInfo(
+//          target_waypoints[ind], static_cast<int>(ind), pci.kin->getJointNames(), adjacency_links, link, tcp[ind]);
+//    }
+//    else
+//    {
+//      term_info = createWaypointTermInfo(
+//          target_waypoints[ind], static_cast<int>(ind), pci.kin->getJointNames(), adjacency_links, link, tcp.front());
+//    }
 
-    pci.cnt_infos.insert(pci.cnt_infos.end(), term_info.cnt.begin(), term_info.cnt.end());
-    pci.cost_infos.insert(pci.cost_infos.end(), term_info.cost.begin(), term_info.cost.end());
+//    pci.cnt_infos.insert(pci.cnt_infos.end(), term_info.cnt.begin(), term_info.cnt.end());
+//    pci.cost_infos.insert(pci.cost_infos.end(), term_info.cost.begin(), term_info.cost.end());
 
-    /* Update the first and last step for the costs
-     * Certain costs (collision checking and configuration) should not be applied to start and end states
-     * that are incapable of changing (i.e. joint positions). Therefore, the first and last indices of these
-     * costs (which equal 0 and num_steps-1 by default) should be changed to exclude those states
-     */
-    if (target_waypoints[ind]->getType() == WaypointType::JOINT_WAYPOINT && target_waypoints[ind]->isCritical())
-    {
-      fixed_steps.push_back(static_cast<int>(ind));
-    }
-  }
+//    /* Update the first and last step for the costs
+//     * Certain costs (collision checking and configuration) should not be applied to start and end states
+//     * that are incapable of changing (i.e. joint positions). Therefore, the first and last indices of these
+//     * costs (which equal 0 and num_steps-1 by default) should be changed to exclude those states
+//     */
+//    if (target_waypoints[ind]->getType() == WaypointType::JOINT_WAYPOINT && target_waypoints[ind]->isCritical())
+//    {
+//      fixed_steps.push_back(static_cast<int>(ind));
+//    }
+//  }
 }
 
 void TrajOptPlannerUniversalConfig::addKinematicConfiguration(trajopt::ProblemConstructionInfo& pci,
                                                             const std::vector<int>& fixed_steps) const
 {
-  // Update the term info with the (possibly) new start and end state indices for which to apply this cost
-  if (fixed_steps.empty())
-  {
-    trajopt::TermInfo::Ptr ti =
-        createConfigurationTermInfo(configuration, pci.kin->getJointNames(), pci.basic_info.n_steps);
-    std::shared_ptr<trajopt::JointPosTermInfo> jp = std::static_pointer_cast<trajopt::JointPosTermInfo>(ti);
-    pci.cost_infos.push_back(jp);
-  }
-  else if (fixed_steps.size() == 1)
-  {
-    if (fixed_steps[0] == 0)
-    {
-      trajopt::TermInfo::Ptr ti =
-          createConfigurationTermInfo(configuration, pci.kin->getJointNames(), pci.basic_info.n_steps);
-      std::shared_ptr<trajopt::JointPosTermInfo> jp = std::static_pointer_cast<trajopt::JointPosTermInfo>(ti);
-      ++(jp->first_step);
-      pci.cost_infos.push_back(jp);
-    }
-    else if (fixed_steps[0] == (pci.basic_info.n_steps - 1))
-    {
-      trajopt::TermInfo::Ptr ti =
-          createConfigurationTermInfo(configuration, pci.kin->getJointNames(), pci.basic_info.n_steps);
-      std::shared_ptr<trajopt::JointPosTermInfo> jp = std::static_pointer_cast<trajopt::JointPosTermInfo>(ti);
-      --(jp->last_step);
-      pci.cost_infos.push_back(jp);
-    }
-    else
-    {
-      trajopt::TermInfo::Ptr ti1 =
-          createConfigurationTermInfo(configuration, pci.kin->getJointNames(), pci.basic_info.n_steps);
-      std::shared_ptr<trajopt::JointPosTermInfo> jp1 = std::static_pointer_cast<trajopt::JointPosTermInfo>(ti1);
-      jp1->last_step = fixed_steps[0] - 1;
-      pci.cost_infos.push_back(jp1);
+//  // Update the term info with the (possibly) new start and end state indices for which to apply this cost
+//  if (fixed_steps.empty())
+//  {
+//    trajopt::TermInfo::Ptr ti =
+//        createConfigurationTermInfo(configuration, pci.kin->getJointNames(), pci.basic_info.n_steps);
+//    std::shared_ptr<trajopt::JointPosTermInfo> jp = std::static_pointer_cast<trajopt::JointPosTermInfo>(ti);
+//    pci.cost_infos.push_back(jp);
+//  }
+//  else if (fixed_steps.size() == 1)
+//  {
+//    if (fixed_steps[0] == 0)
+//    {
+//      trajopt::TermInfo::Ptr ti =
+//          createConfigurationTermInfo(configuration, pci.kin->getJointNames(), pci.basic_info.n_steps);
+//      std::shared_ptr<trajopt::JointPosTermInfo> jp = std::static_pointer_cast<trajopt::JointPosTermInfo>(ti);
+//      ++(jp->first_step);
+//      pci.cost_infos.push_back(jp);
+//    }
+//    else if (fixed_steps[0] == (pci.basic_info.n_steps - 1))
+//    {
+//      trajopt::TermInfo::Ptr ti =
+//          createConfigurationTermInfo(configuration, pci.kin->getJointNames(), pci.basic_info.n_steps);
+//      std::shared_ptr<trajopt::JointPosTermInfo> jp = std::static_pointer_cast<trajopt::JointPosTermInfo>(ti);
+//      --(jp->last_step);
+//      pci.cost_infos.push_back(jp);
+//    }
+//    else
+//    {
+//      trajopt::TermInfo::Ptr ti1 =
+//          createConfigurationTermInfo(configuration, pci.kin->getJointNames(), pci.basic_info.n_steps);
+//      std::shared_ptr<trajopt::JointPosTermInfo> jp1 = std::static_pointer_cast<trajopt::JointPosTermInfo>(ti1);
+//      jp1->last_step = fixed_steps[0] - 1;
+//      pci.cost_infos.push_back(jp1);
 
-      trajopt::TermInfo::Ptr ti2 =
-          createConfigurationTermInfo(configuration, pci.kin->getJointNames(), pci.basic_info.n_steps);
-      std::shared_ptr<trajopt::JointPosTermInfo> jp2 = std::static_pointer_cast<trajopt::JointPosTermInfo>(ti2);
-      jp2->first_step = fixed_steps[0] + 1;
-      pci.cost_infos.push_back(jp2);
-    }
-  }
-  else
-  {
-    if (fixed_steps.front() != 0)
-    {
-      trajopt::TermInfo::Ptr ti =
-          createConfigurationTermInfo(configuration, pci.kin->getJointNames(), pci.basic_info.n_steps);
-      std::shared_ptr<trajopt::JointPosTermInfo> jp = std::static_pointer_cast<trajopt::JointPosTermInfo>(ti);
-      jp->last_step = fixed_steps.front() - 1;
-      pci.cost_infos.push_back(jp);
-    }
+//      trajopt::TermInfo::Ptr ti2 =
+//          createConfigurationTermInfo(configuration, pci.kin->getJointNames(), pci.basic_info.n_steps);
+//      std::shared_ptr<trajopt::JointPosTermInfo> jp2 = std::static_pointer_cast<trajopt::JointPosTermInfo>(ti2);
+//      jp2->first_step = fixed_steps[0] + 1;
+//      pci.cost_infos.push_back(jp2);
+//    }
+//  }
+//  else
+//  {
+//    if (fixed_steps.front() != 0)
+//    {
+//      trajopt::TermInfo::Ptr ti =
+//          createConfigurationTermInfo(configuration, pci.kin->getJointNames(), pci.basic_info.n_steps);
+//      std::shared_ptr<trajopt::JointPosTermInfo> jp = std::static_pointer_cast<trajopt::JointPosTermInfo>(ti);
+//      jp->last_step = fixed_steps.front() - 1;
+//      pci.cost_infos.push_back(jp);
+//    }
 
-    for (size_t i = 1; i < fixed_steps.size(); ++i)
-    {
-      trajopt::TermInfo::Ptr ti =
-          createConfigurationTermInfo(configuration, pci.kin->getJointNames(), pci.basic_info.n_steps);
-      std::shared_ptr<trajopt::JointPosTermInfo> jp = std::static_pointer_cast<trajopt::JointPosTermInfo>(ti);
-      jp->first_step = fixed_steps[i - 1] + 1;
-      jp->last_step = fixed_steps[i] - 1;
-      pci.cost_infos.push_back(jp);
-    }
+//    for (size_t i = 1; i < fixed_steps.size(); ++i)
+//    {
+//      trajopt::TermInfo::Ptr ti =
+//          createConfigurationTermInfo(configuration, pci.kin->getJointNames(), pci.basic_info.n_steps);
+//      std::shared_ptr<trajopt::JointPosTermInfo> jp = std::static_pointer_cast<trajopt::JointPosTermInfo>(ti);
+//      jp->first_step = fixed_steps[i - 1] + 1;
+//      jp->last_step = fixed_steps[i] - 1;
+//      pci.cost_infos.push_back(jp);
+//    }
 
-    if (fixed_steps.back() != (pci.basic_info.n_steps - 1))
-    {
-      trajopt::TermInfo::Ptr ti =
-          createConfigurationTermInfo(configuration, pci.kin->getJointNames(), pci.basic_info.n_steps);
-      std::shared_ptr<trajopt::JointPosTermInfo> jp = std::static_pointer_cast<trajopt::JointPosTermInfo>(ti);
-      jp->first_step = fixed_steps.back() + 1;
-      pci.cost_infos.push_back(jp);
-    }
-  }
+//    if (fixed_steps.back() != (pci.basic_info.n_steps - 1))
+//    {
+//      trajopt::TermInfo::Ptr ti =
+//          createConfigurationTermInfo(configuration, pci.kin->getJointNames(), pci.basic_info.n_steps);
+//      std::shared_ptr<trajopt::JointPosTermInfo> jp = std::static_pointer_cast<trajopt::JointPosTermInfo>(ti);
+//      jp->first_step = fixed_steps.back() + 1;
+//      pci.cost_infos.push_back(jp);
+//    }
+//  }
 }
 
 void TrajOptPlannerUniversalConfig::addCollisionCost(trajopt::ProblemConstructionInfo& pci,
                                                    const std::vector<int>& fixed_steps) const
 {
-  // Calculate longest valid segment length
-  const Eigen::MatrixX2d& limits = pci.kin->getLimits();
-  double length = 0;
-  double extent = (limits.col(1) - limits.col(0)).norm();
-  if (longest_valid_segment_fraction > 0 && longest_valid_segment_length > 0)
-  {
-    length = std::min(longest_valid_segment_fraction * extent, longest_valid_segment_length);
-  }
-  else if (longest_valid_segment_fraction > 0)
-  {
-    length = longest_valid_segment_fraction * extent;
-  }
-  else if (longest_valid_segment_length > 0)
-  {
-    length = longest_valid_segment_length;
-  }
-  else
-  {
-    length = LONGEST_VALID_SEGMENT_FRACTION_DEFAULT * extent;
-  }
+//  // Calculate longest valid segment length
+//  const Eigen::MatrixX2d& limits = pci.kin->getLimits();
+//  double length = 0;
+//  double extent = (limits.col(1) - limits.col(0)).norm();
+//  if (longest_valid_segment_fraction > 0 && longest_valid_segment_length > 0)
+//  {
+//    length = std::min(longest_valid_segment_fraction * extent, longest_valid_segment_length);
+//  }
+//  else if (longest_valid_segment_fraction > 0)
+//  {
+//    length = longest_valid_segment_fraction * extent;
+//  }
+//  else if (longest_valid_segment_length > 0)
+//  {
+//    length = longest_valid_segment_length;
+//  }
+//  else
+//  {
+//    length = LONGEST_VALID_SEGMENT_FRACTION_DEFAULT * extent;
+//  }
 
-  // Create a default collision term info
-  trajopt::TermInfo::Ptr ti = createCollisionTermInfo(pci.basic_info.n_steps,
-                                                      collision_cost_config.buffer_margin,
-                                                      collision_constraint_config.safety_margin_buffer,
-                                                      collision_cost_config.type,
-                                                      collision_cost_config.use_weighted_sum,
-                                                      collision_cost_config.coeff,
-                                                      contact_test_type,
-                                                      length,
-                                                      "collision_cost",
-                                                      false);
+//  // Create a default collision term info
+//  trajopt::TermInfo::Ptr ti = createCollisionTermInfo(pci.basic_info.n_steps,
+//                                                      collision_cost_config.buffer_margin,
+//                                                      collision_constraint_config.safety_margin_buffer,
+//                                                      collision_cost_config.type,
+//                                                      collision_cost_config.use_weighted_sum,
+//                                                      collision_cost_config.coeff,
+//                                                      contact_test_type,
+//                                                      length,
+//                                                      "collision_cost",
+//                                                      false);
 
-  // Update the term info with the (possibly) new start and end state indices for which to apply this cost
-  std::shared_ptr<trajopt::CollisionTermInfo> ct = std::static_pointer_cast<trajopt::CollisionTermInfo>(ti);
-  if (special_collision_cost)
-  {
-    for (auto& info : ct->info)
-    {
-      info = special_collision_cost;
-    }
-  }
-  ct->fixed_steps = fixed_steps;
+//  // Update the term info with the (possibly) new start and end state indices for which to apply this cost
+//  std::shared_ptr<trajopt::CollisionTermInfo> ct = std::static_pointer_cast<trajopt::CollisionTermInfo>(ti);
+//  if (special_collision_cost)
+//  {
+//    for (auto& info : ct->info)
+//    {
+//      info = special_collision_cost;
+//    }
+//  }
+//  ct->fixed_steps = fixed_steps;
 
-  pci.cost_infos.push_back(ct);
+//  pci.cost_infos.push_back(ct);
 }
 
 void TrajOptPlannerUniversalConfig::addCollisionConstraint(trajopt::ProblemConstructionInfo& pci,
                                                          const std::vector<int>& fixed_steps) const
 {
-  // Calculate longest valid segment length
-  const Eigen::MatrixX2d& limits = pci.kin->getLimits();
-  double length = 0;
-  double extent = (limits.col(1) - limits.col(0)).norm();
-  if (longest_valid_segment_fraction > 0 && longest_valid_segment_length > 0)
-  {
-    length = std::min(longest_valid_segment_fraction * extent, longest_valid_segment_length);
-  }
-  else if (longest_valid_segment_fraction > 0)
-  {
-    length = longest_valid_segment_fraction * extent;
-  }
-  else if (longest_valid_segment_length > 0)
-  {
-    length = longest_valid_segment_length;
-  }
-  else
-  {
-    length = LONGEST_VALID_SEGMENT_FRACTION_DEFAULT * extent;
-  }
+//  // Calculate longest valid segment length
+//  const Eigen::MatrixX2d& limits = pci.kin->getLimits();
+//  double length = 0;
+//  double extent = (limits.col(1) - limits.col(0)).norm();
+//  if (longest_valid_segment_fraction > 0 && longest_valid_segment_length > 0)
+//  {
+//    length = std::min(longest_valid_segment_fraction * extent, longest_valid_segment_length);
+//  }
+//  else if (longest_valid_segment_fraction > 0)
+//  {
+//    length = longest_valid_segment_fraction * extent;
+//  }
+//  else if (longest_valid_segment_length > 0)
+//  {
+//    length = longest_valid_segment_length;
+//  }
+//  else
+//  {
+//    length = LONGEST_VALID_SEGMENT_FRACTION_DEFAULT * extent;
+//  }
 
-  // Create a default collision term info
-  trajopt::TermInfo::Ptr ti = createCollisionTermInfo(pci.basic_info.n_steps,
-                                                      collision_constraint_config.safety_margin,
-                                                      collision_constraint_config.safety_margin_buffer,
-                                                      collision_constraint_config.type,
-                                                      collision_cost_config.use_weighted_sum,
-                                                      collision_constraint_config.coeff,
-                                                      contact_test_type,
-                                                      length,
-                                                      "collision_cnt",
-                                                      true);
+//  // Create a default collision term info
+//  trajopt::TermInfo::Ptr ti = createCollisionTermInfo(pci.basic_info.n_steps,
+//                                                      collision_constraint_config.safety_margin,
+//                                                      collision_constraint_config.safety_margin_buffer,
+//                                                      collision_constraint_config.type,
+//                                                      collision_cost_config.use_weighted_sum,
+//                                                      collision_constraint_config.coeff,
+//                                                      contact_test_type,
+//                                                      length,
+//                                                      "collision_cnt",
+//                                                      true);
 
-  // Update the term info with the (possibly) new start and end state indices for which to apply this cost
-  std::shared_ptr<trajopt::CollisionTermInfo> ct = std::static_pointer_cast<trajopt::CollisionTermInfo>(ti);
-  if (special_collision_constraint)
-  {
-    for (auto& info : ct->info)
-    {
-      info = special_collision_constraint;
-    }
-  }
-  ct->fixed_steps = fixed_steps;
+//  // Update the term info with the (possibly) new start and end state indices for which to apply this cost
+//  std::shared_ptr<trajopt::CollisionTermInfo> ct = std::static_pointer_cast<trajopt::CollisionTermInfo>(ti);
+//  if (special_collision_constraint)
+//  {
+//    for (auto& info : ct->info)
+//    {
+//      info = special_collision_constraint;
+//    }
+//  }
+//  ct->fixed_steps = fixed_steps;
 
-  pci.cnt_infos.push_back(ct);
+//  pci.cnt_infos.push_back(ct);
 }
 
 void TrajOptPlannerUniversalConfig::addVelocitySmoothing(trajopt::ProblemConstructionInfo& pci,
                                                        const std::vector<int>& /*fixed_steps*/) const
 {
-  if (velocity_coeff.size() == 0)
-    pci.cost_infos.push_back(
-        createSmoothVelocityTermInfo(pci.basic_info.n_steps, static_cast<int>(pci.kin->numJoints())));
-  else
-    pci.cost_infos.push_back(createSmoothVelocityTermInfo(pci.basic_info.n_steps, velocity_coeff));
+//  if (velocity_coeff.size() == 0)
+//    pci.cost_infos.push_back(
+//        createSmoothVelocityTermInfo(pci.basic_info.n_steps, static_cast<int>(pci.kin->numJoints())));
+//  else
+//    pci.cost_infos.push_back(createSmoothVelocityTermInfo(pci.basic_info.n_steps, velocity_coeff));
 }
 
 void TrajOptPlannerUniversalConfig::addAccelerationSmoothing(trajopt::ProblemConstructionInfo& pci,
                                                            const std::vector<int>& /*fixed_steps*/) const
 {
-  if (acceleration_coeff.size() == 0)
-    pci.cost_infos.push_back(
-        createSmoothAccelerationTermInfo(pci.basic_info.n_steps, static_cast<int>(pci.kin->numJoints())));
-  else
-    pci.cost_infos.push_back(createSmoothAccelerationTermInfo(pci.basic_info.n_steps, acceleration_coeff));
+//  if (acceleration_coeff.size() == 0)
+//    pci.cost_infos.push_back(
+//        createSmoothAccelerationTermInfo(pci.basic_info.n_steps, static_cast<int>(pci.kin->numJoints())));
+//  else
+//    pci.cost_infos.push_back(createSmoothAccelerationTermInfo(pci.basic_info.n_steps, acceleration_coeff));
 }
 
 void TrajOptPlannerUniversalConfig::addJerkSmoothing(trajopt::ProblemConstructionInfo& pci,
                                                    const std::vector<int>& /*fixed_steps*/) const
 {
-  if (jerk_coeff.size() == 0)
-    pci.cost_infos.push_back(createSmoothJerkTermInfo(pci.basic_info.n_steps, static_cast<int>(pci.kin->numJoints())));
-  else
-    pci.cost_infos.push_back(createSmoothJerkTermInfo(pci.basic_info.n_steps, jerk_coeff));
+//  if (jerk_coeff.size() == 0)
+//    pci.cost_infos.push_back(createSmoothJerkTermInfo(pci.basic_info.n_steps, static_cast<int>(pci.kin->numJoints())));
+//  else
+//    pci.cost_infos.push_back(createSmoothJerkTermInfo(pci.basic_info.n_steps, jerk_coeff));
 }
 
 void TrajOptPlannerUniversalConfig::addConstraintErrorFunctions(trajopt::ProblemConstructionInfo& pci,
                                                               const std::vector<int>& fixed_steps) const
 {
-  for (std::size_t i = 0; i < constraint_error_functions.size(); ++i)
-  {
-    auto& c = constraint_error_functions[i];
-    trajopt::TermInfo::Ptr ti = createUserDefinedTermInfo(
-        pci.basic_info.n_steps, std::get<0>(c), std::get<1>(c), "user_defined_" + std::to_string(i));
+//  for (std::size_t i = 0; i < constraint_error_functions.size(); ++i)
+//  {
+//    auto& c = constraint_error_functions[i];
+//    trajopt::TermInfo::Ptr ti = createUserDefinedTermInfo(
+//        pci.basic_info.n_steps, std::get<0>(c), std::get<1>(c), "user_defined_" + std::to_string(i));
 
-    // Update the term info with the (possibly) new start and end state indices for which to apply this cost
-    std::shared_ptr<trajopt::UserDefinedTermInfo> ef = std::static_pointer_cast<trajopt::UserDefinedTermInfo>(ti);
-    ef->term_type = trajopt::TT_CNT;
-    ef->constraint_type = std::get<2>(c);
-    ef->coeff = std::get<3>(c);
-    ef->first_step = 0;
-    ef->last_step = pci.basic_info.n_steps - 1;
-    ef->fixed_steps = fixed_steps;
+//    // Update the term info with the (possibly) new start and end state indices for which to apply this cost
+//    std::shared_ptr<trajopt::UserDefinedTermInfo> ef = std::static_pointer_cast<trajopt::UserDefinedTermInfo>(ti);
+//    ef->term_type = trajopt::TT_CNT;
+//    ef->constraint_type = std::get<2>(c);
+//    ef->coeff = std::get<3>(c);
+//    ef->first_step = 0;
+//    ef->last_step = pci.basic_info.n_steps - 1;
+//    ef->fixed_steps = fixed_steps;
 
-    pci.cnt_infos.push_back(ef);
-  }
+//    pci.cnt_infos.push_back(ef);
+//  }
 }
 
 void TrajOptPlannerUniversalConfig::addAvoidSingularity(trajopt::ProblemConstructionInfo& pci,
                                                       const std::vector<int>& /*fixed_steps*/) const
 {
-  trajopt::TermInfo::Ptr ti = createAvoidSingularityTermInfo(pci.basic_info.n_steps, link, avoid_singularity_coeff);
-  pci.cost_infos.push_back(ti);
+//  trajopt::TermInfo::Ptr ti = createAvoidSingularityTermInfo(pci.basic_info.n_steps, link, avoid_singularity_coeff);
+//  pci.cost_infos.push_back(ti);
 }
 
 }  // namespace tesseract_motion_planners

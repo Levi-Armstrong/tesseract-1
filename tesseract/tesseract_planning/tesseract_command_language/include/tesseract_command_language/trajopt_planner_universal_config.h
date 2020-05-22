@@ -3,6 +3,7 @@
 
 #include <tesseract_motion_planners/trajopt/config/trajopt_planner_config.h>
 #include <tesseract_motion_planners/trajopt/config/trajopt_collision_config.h>
+#include <tesseract_command_language/composite_instruction.h>
 
 namespace tesseract_planning
 {
@@ -54,7 +55,7 @@ struct TrajOptPlannerUniversalConfig : public tesseract_motion_planners::TrajOpt
   tesseract_common::VectorIsometry3d tcp;
 
   /** @brief The program instruction */
-  tesseract_planning::CompositeInstructions instructions;
+  tesseract_planning::CompositeInstruction instructions;
 
   /** @brief Selects the type of initialization used for raster path. If GIVEN_TRAJ, then the seed_trajectory_ must be
    * set */
@@ -67,7 +68,7 @@ protected:
   bool checkUserInput() const;
   bool addBasicInfo(trajopt::ProblemConstructionInfo& pci) const;
   bool addInitTrajectory(trajopt::ProblemConstructionInfo& pci) const;
-  void addWaypoints(trajopt::ProblemConstructionInfo& pci, std::vector<int>& fixed_steps) const;
+  void addInstructions(trajopt::ProblemConstructionInfo& pci, std::vector<int>& fixed_steps) const;
   void addKinematicConfiguration(trajopt::ProblemConstructionInfo& pci, const std::vector<int>& fixed_steps) const;
   void addCollisionCost(trajopt::ProblemConstructionInfo& pci, const std::vector<int>& fixed_steps) const;
   void addCollisionConstraint(trajopt::ProblemConstructionInfo& pci, const std::vector<int>& fixed_steps) const;
