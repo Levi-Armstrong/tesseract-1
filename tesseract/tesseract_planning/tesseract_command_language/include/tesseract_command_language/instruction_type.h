@@ -1,8 +1,6 @@
 #ifndef TESSERACT_COMMAND_LANGUAGE_INSTRUCTION_TYPE_H
 #define TESSERACT_COMMAND_LANGUAGE_INSTRUCTION_TYPE_H
 
-#include <tesseract_command_language/core/instruction.h>
-
 namespace tesseract_planning
 {
 
@@ -30,34 +28,34 @@ enum class InstructionType : int
   USER_DEFINED = 1000
 };
 
-inline bool isCommentInstruction(const Instruction& instruction)
+inline bool isCommentInstruction(int type)
 {
-  return (instruction.getType() <= static_cast<int>(InstructionType::COMMENT_INSTRUCTION) && instruction.getType() > static_cast<int>(InstructionType::VARIABLE_INSTRUCTION));
+  return (type<= static_cast<int>(InstructionType::COMMENT_INSTRUCTION) && type > static_cast<int>(InstructionType::VARIABLE_INSTRUCTION));
 }
 
-inline bool isVariableInstruction(const Instruction& instruction)
+inline bool isVariableInstruction(int type)
 {
-  return (instruction.getType() <= static_cast<int>(InstructionType::VARIABLE_INSTRUCTION) && instruction.getType() > static_cast<int>(InstructionType::ANALOG_INSTRUCTION));
+  return (type <= static_cast<int>(InstructionType::VARIABLE_INSTRUCTION) && type > static_cast<int>(InstructionType::ANALOG_INSTRUCTION));
 }
 
-inline bool isAnalogInstruction(const Instruction& instruction)
+inline bool isAnalogInstruction(int type)
 {
-  return (instruction.getType() <= static_cast<int>(InstructionType::ANALOG_INSTRUCTION) && instruction.getType() > static_cast<int>(InstructionType::IO_INSTRUCTION));
+  return (type <= static_cast<int>(InstructionType::ANALOG_INSTRUCTION) && type > static_cast<int>(InstructionType::IO_INSTRUCTION));
 }
 
-inline bool isIOInstruction(const Instruction& instruction)
+inline bool isIOInstruction(int type)
 {
-  return (instruction.getType() <= static_cast<int>(InstructionType::IO_INSTRUCTION) && instruction.getType() > static_cast<int>(InstructionType::COMPOSITE_INSTRUCTION));
+  return (type <= static_cast<int>(InstructionType::IO_INSTRUCTION) && type > static_cast<int>(InstructionType::COMPOSITE_INSTRUCTION));
 }
 
-inline bool isCompositeInstruction(const Instruction& instruction)
+inline bool isCompositeInstruction(int type)
 {
-  return (instruction.getType() <= static_cast<int>(InstructionType::COMPOSITE_INSTRUCTION) && instruction.getType() > static_cast<int>(InstructionType::MOVE_INSTRUCTION));
+  return (type <= static_cast<int>(InstructionType::COMPOSITE_INSTRUCTION) && type > static_cast<int>(InstructionType::MOVE_INSTRUCTION));
 }
 
-inline bool isMoveInstruction(const Instruction& instruction)
+inline bool isMoveInstruction(int type)
 {
-  return (instruction.getType() <= static_cast<int>(InstructionType::MOVE_INSTRUCTION));
+  return (type <= static_cast<int>(InstructionType::MOVE_INSTRUCTION));
 }
 
 }

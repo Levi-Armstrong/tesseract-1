@@ -7,6 +7,8 @@ TESSERACT_COMMON_IGNORE_WARNINGS_PUSH
 #include <memory>
 TESSERACT_COMMON_IGNORE_WARNINGS_POP
 
+#include <tesseract_command_language/waypoint_type.h>
+
 namespace tesseract_planning
 {
 class JointWaypoint : public Eigen::VectorXd
@@ -29,7 +31,7 @@ public:
       return *this;
   }
 
-  int getType() const { return 1; }
+  int getType() const { return static_cast<int>(WaypointType::JOINT_WAYPOINT); }
 };
 }
 

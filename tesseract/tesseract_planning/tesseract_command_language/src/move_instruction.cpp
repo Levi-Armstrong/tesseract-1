@@ -7,6 +7,10 @@ MoveInstruction::MoveInstruction(Waypoint waypoint) : waypoint_(std::move(waypoi
 void MoveInstruction::setWaypoint(Waypoint waypoint) { waypoint_ = waypoint; }
 const Waypoint& MoveInstruction::getWaypoint() const { return waypoint_; }
 
+/** @todo Not sure if this belogs here or in the waypoint? */
+//void MoveInstruction::setTCP(Eigen::Isometry3d tcp) { tcp_ = tcp; }
+//const Eigen::Isometry3d& MoveInstruction::getTCP() const { return tcp_; }
+
 void MoveInstruction::addCost(ComponentInfo component) { costs_.push_back(component); }
 const std::vector<ComponentInfo>& MoveInstruction::getCosts() const { return costs_; }
 
@@ -30,4 +34,10 @@ bool MoveInstruction::isComposite() const { return false; }
 bool MoveInstruction::isMove() const { return true; }
 
 void MoveInstruction::print() const { }
+
+bool MoveInstruction::isLinearMove() const { return (move_type_ == MoveInstructionType::LINEAR); }
+
+bool MoveInstruction::isFreespaceMove() const { return (move_type_ == MoveInstructionType::FREESPACE); }
+
+bool MoveInstruction::isCircularMove() const { return (move_type_ == MoveInstructionType::CIRCULAR); }
 }

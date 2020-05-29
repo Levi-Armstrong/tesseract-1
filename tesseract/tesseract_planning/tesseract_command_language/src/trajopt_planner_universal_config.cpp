@@ -24,6 +24,11 @@
  * limitations under the License.
  */
 #include <tesseract_command_language/trajopt_planner_universal_config.h>
+#include <tesseract_command_language/move_instruction.h>
+#include <tesseract_command_language/cartesian_waypoint.h>
+#include <tesseract_command_language/joint_waypoint.h>
+#include <tesseract_command_language/component_info_impl.h>
+
 #include <tesseract_motion_planners/trajopt/config/utils.h>
 
 static const double LONGEST_VALID_SEGMENT_FRACTION_DEFAULT = 0.01;
@@ -134,7 +139,7 @@ bool TrajOptPlannerUniversalConfig::checkUserInput() const
     return false;
   }
 
-  if (instructions.size() < 0)
+  if (instructions.empty())
   {
     CONSOLE_BRIDGE_logError("TrajOpt Planner Config requires at least 2 waypoints");
     return false;
@@ -214,47 +219,335 @@ bool TrajOptPlannerUniversalConfig::addInitTrajectory(trajopt::ProblemConstructi
 //  return true;
 }
 
+trajopt::TermInfo::Ptr createCartesianWaypoint(const CartesianWaypoint* c_wp,
+                                               int index,
+                                               Eigen::Isometry3d tcp,
+                                               std::string link,
+                                               trajopt::TermType type)
+{
+  auto pose_info = std::make_shared<trajopt::CartPoseTermInfo>();
+  pose_info->term_type = type;
+  pose_info->name = "cartesian_waypoint_" + std::to_string(index);
+
+  pose_info->link = link;
+  pose_info->tcp = tcp;
+
+  pose_info->timestep = index;
+  pose_info->xyz = c_wp->translation();
+  pose_info->wxyz = c_wp->linear();
+  pose_info->target = c_wp->getParentLinkName();
+
+//              const Eigen::VectorXd& coeffs = waypoint->getCoefficients();
+  Eigen::VectorXd coeffs = Eigen::VectorXd::Ones(6);
+  assert(coeffs.size() == 6);
+  pose_info->pos_coeffs = coeffs.head<3>();
+  pose_info->rot_coeffs = coeffs.tail<3>();
+
+  return pose_info;
+}
+
+void createCartesianComponents(tesseract_motion_planners::WaypointTermInfo& term_info,
+                               const CartesianWaypoint* c_wp,
+                               int index,
+                               const std::vector<ComponentInfo>& components,
+                               std::string link,
+                               trajopt::TermType type)
+{
+  trajopt::TermInfo::Ptr info;
+  for (const auto& component : components)
+  {
+    switch (component.getType())
+    {
+      case static_cast<int>(ComponentTypes::FIXED):
+      {
+        info = createCartesianWaypoint(c_wp, index, c_wp->getTCP(), link, trajopt::TT_COST);
+        break;
+      }
+      case static_cast<int>(ComponentTypes::CARTESIAN_X_TOL):
+      {
+        info = createCartesianWaypoint(c_wp, index, c_wp->getTCP(), link, trajopt::TT_COST);
+        break;
+      }
+      default:
+      {
+        throw std::runtime_error("Invalid or unsupport component type for cartesian waypoint!");
+      }
+    }
+
+    if (type == trajopt::TT_CNT)
+      term_info.cnt.push_back(info);
+    else if (type == trajopt::TT_COST)
+      term_info.cost.push_back(info);
+    else
+      throw std::runtime_error("Invalid trajopt term type!");
+  }
+}
+
+trajopt::TermInfo::Ptr createJointWaypoint(const JointWaypoint* j_wp,
+                                           int index,
+                                           Eigen::Isometry3d tcp,
+                                           std::string link,
+                                           trajopt::TermType type)
+{
+  auto joint_info = std::make_shared<trajopt::JointPosTermInfo>();
+  Eigen::VectorXd coeffs = Eigen::VectorXd::Ones(j_wp->size());
+  if (coeffs.size() != j_wp->size())
+    joint_info->coeffs = std::vector<double>(static_cast<std::size_t>(j_wp->size()), coeffs(0));  // Default value
+  else
+    joint_info->coeffs = std::vector<double>(coeffs.data(), coeffs.data() + coeffs.rows() * coeffs.cols());
+  joint_info->targets = std::vector<double>(j_wp->data(), j_wp->data() + j_wp->rows() * j_wp->cols());
+  joint_info->first_step = index;
+  joint_info->last_step = index;
+  joint_info->name = "joint_waypoint_" + std::to_string(index);
+  joint_info->term_type = type;
+
+  return joint_info;
+}
+
+
+
+void createJointComponents(tesseract_motion_planners::WaypointTermInfo& term_info,
+                           const JointWaypoint* c_wp,
+                           int index,
+                           const std::vector<ComponentInfo>& components,
+                           std::string link,
+                           trajopt::TermType type)
+{
+  trajopt::TermInfo::Ptr info;
+  for (const auto& component : components)
+  {
+    switch (component.getType())
+    {
+      case static_cast<int>(ComponentTypes::FIXED):
+      {
+        info = createJointWaypoint(c_wp, index, Eigen::Isometry3d::Identity(), link, trajopt::TT_COST);
+        break;
+      }
+      case static_cast<int>(ComponentTypes::CARTESIAN_X_TOL):
+      {
+        info = createJointWaypoint(c_wp, index, Eigen::Isometry3d::Identity(), link, trajopt::TT_COST);
+        break;
+      }
+      default:
+      {
+        throw std::runtime_error("Invalid or unsupport component type for cartesian waypoint!");
+      }
+    }
+
+    if (type == trajopt::TT_CNT)
+      term_info.cnt.push_back(info);
+    else if (type == trajopt::TT_COST)
+      term_info.cost.push_back(info);
+    else
+      throw std::runtime_error("Invalid trajopt term type!");
+  }
+}
+
+void createCompositeComponents(trajopt::ProblemConstructionInfo &pci,
+                               const std::vector<ComponentInfo>& components,
+                               trajopt::TermType type)
+{
+  trajopt::TermInfo::Ptr info;
+  for (const auto& component : components)
+  {
+    switch (component.getType())
+    {
+      case static_cast<int>(ComponentTypes::VELOCITY_SMOOTHING):
+      {
+        const auto* vs = component.cast_const<VelocitySmoothingComponent>();
+        if (vs->coeff.size() == 0)
+          info = tesseract_motion_planners::createSmoothVelocityTermInfo(pci.basic_info.n_steps, static_cast<int>(pci.kin->numJoints()));
+        else if (vs->coeff.size() == 1)
+          info = tesseract_motion_planners::createSmoothVelocityTermInf(pci.basic_info.n_steps, static_cast<int>(pci.kin->numJoints()), vs->coeff(0));
+        else
+          info = tesseract_motion_planners::createSmoothVelocityTermInfo(pci.basic_info.n_steps, vs->coeff);
+        break;
+      }
+      case static_cast<int>(ComponentTypes::ACCELERATION_SMOOTHING):
+      {
+        const auto* vs = component.cast_const<AccelerationSmoothingComponent>();
+        if (vs->coeff.size() == 0)
+          info = tesseract_motion_planners::createSmoothAccelerationTermInfo(pci.basic_info.n_steps, static_cast<int>(pci.kin->numJoints()));
+        else if (vs->coeff.size() == 1)
+          info = tesseract_motion_planners::createSmoothAccelerationTermInfo(pci.basic_info.n_steps, static_cast<int>(pci.kin->numJoints()), vs->coeff(0));
+        else
+          info = tesseract_motion_planners::createSmoothAccelerationTermInfo(pci.basic_info.n_steps, vs->coeff);
+
+        break;
+      }
+      case static_cast<int>(ComponentTypes::JERK_SMOOTHING):
+      {
+        const auto* vs = component.cast_const<AccelerationSmoothingComponent>();
+        if (vs->coeff.size() == 0)
+          info = tesseract_motion_planners::createSmoothJerkTermInfo(pci.basic_info.n_steps, static_cast<int>(pci.kin->numJoints()));
+        else if (vs->coeff.size() == 1)
+          info = tesseract_motion_planners::createSmoothJerkTermInfo(pci.basic_info.n_steps, static_cast<int>(pci.kin->numJoints()), vs->coeff(0));
+        else
+          info = tesseract_motion_planners::createSmoothJerkTermInfo(pci.basic_info.n_steps, vs->coeff);
+
+        break;
+      }
+      default:
+      {
+        throw std::runtime_error("Invalid or unsupport component type for cartesian waypoint!");
+      }
+    }
+
+    info->term_type = type;
+    if (type == trajopt::TT_CNT)
+      pci.cnt_infos.push_back(info);
+    else if (type == trajopt::TT_COST)
+      pci.cost_infos.push_back(info);
+    else
+      throw std::runtime_error("Invalid trajopt term type!");
+  }
+}
+
+
 void TrajOptPlannerUniversalConfig::addInstructions(trajopt::ProblemConstructionInfo &pci,
                                                     std::vector<int> &fixed_steps) const
 {
-//  // Get kinematics information
-//  tesseract_environment::Environment::ConstPtr env = tesseract->getEnvironmentConst();
-//  tesseract_environment::AdjacencyMap map(
-//      env->getSceneGraph(), pci.kin->getActiveLinkNames(), env->getCurrentState()->link_transforms);
-//  const std::vector<std::string>& adjacency_links = map.getActiveLinkNames();
+  // Check and make sure it does not contain any composite instruction
+  const MoveInstruction* start_instruction {nullptr};
+  for (const auto& instruction : instructions)
+  {
+    if (instruction.isComposite())
+      throw std::runtime_error("Trajopt planner does not support child composite instructions.");
 
-//  // Add constraints
-//  for (std::size_t ind = 0; ind < target_waypoints.size(); ind++)
-//  {
-//    WaypointTermInfo term_info;
-//    if (tcp.size() == target_waypoints.size())
-//    {
-//      term_info = createWaypointTermInfo(
-//          target_waypoints[ind], static_cast<int>(ind), pci.kin->getJointNames(), adjacency_links, link, tcp[ind]);
-//    }
-//    else
-//    {
-//      term_info = createWaypointTermInfo(
-//          target_waypoints[ind], static_cast<int>(ind), pci.kin->getJointNames(), adjacency_links, link, tcp.front());
-//    }
+    if (start_instruction == nullptr && instruction.isMove())
+      start_instruction = instruction.cast_const<MoveInstruction>();
+  }
 
-//    pci.cnt_infos.insert(pci.cnt_infos.end(), term_info.cnt.begin(), term_info.cnt.end());
-//    pci.cost_infos.insert(pci.cost_infos.end(), term_info.cost.begin(), term_info.cost.end());
+  // Get kinematics information
+  tesseract_environment::Environment::ConstPtr env = tesseract->getEnvironmentConst();
+  tesseract_environment::AdjacencyMap map(
+      env->getSceneGraph(), pci.kin->getActiveLinkNames(), env->getCurrentState()->link_transforms);
+  const std::vector<std::string>& adjacency_links = map.getActiveLinkNames();
 
-//    /* Update the first and last step for the costs
-//     * Certain costs (collision checking and configuration) should not be applied to start and end states
-//     * that are incapable of changing (i.e. joint positions). Therefore, the first and last indices of these
-//     * costs (which equal 0 and num_steps-1 by default) should be changed to exclude those states
-//     */
-//    if (target_waypoints[ind]->getType() == WaypointType::JOINT_WAYPOINT && target_waypoints[ind]->isCritical())
-//    {
-//      fixed_steps.push_back(static_cast<int>(ind));
-//    }
-//  }
+  // Transform move instructions into trajopt cost and constraints
+  const MoveInstruction* prev_move_instruction {nullptr};
+  int index = 0;
+  for (const auto& instruction : instructions)
+  {
+    if (instruction.isMove())
+    {
+      if (instruction.getType() == static_cast<int>(InstructionType::MOVE_INSTRUCTION))
+      {
+        const auto* move_instruction = instruction.cast_const<MoveInstruction>();
+        const Waypoint& wp = move_instruction->getWaypoint();
+
+        if (wp.getType() == static_cast<int>(WaypointType::CARTESIAN_WAYPOINT))
+        {
+          const CartesianWaypoint* c_wp = wp.cast_const<CartesianWaypoint>();
+
+          // If nullptr this this is the start position
+          if (prev_move_instruction == nullptr)
+          {
+            tesseract_motion_planners::WaypointTermInfo term_info;
+            createCartesianComponents(term_info, c_wp, index, move_instruction->getCosts(), link, trajopt::TT_COST);
+            createCartesianComponents(term_info, c_wp, index, move_instruction->getConstraints(), link, trajopt::TT_CNT);
+
+            /** @todo Add createDynamicCartesianWaypointTermInfo */
+            /* Check if this cartesian waypoint is dynamic
+             * (i.e. defined relative to a frame that will move with the kinematic chain)
+             */
+            auto it = std::find(adjacency_links.begin(), adjacency_links.end(), c_wp->getParentLinkName());
+            if (it != adjacency_links.end())
+              throw std::runtime_error("Dynamic cartesian waypoint is currently not supported!");
+
+            prev_move_instruction = move_instruction;
+          }
+          else
+          {
+            if (move_instruction->isLinearMove())
+            {
+              /** @todo Interpolate cartesian */
+              /** @todo Interpolate seed trajectory if exist */
+            }
+            else if (move_instruction->isFreespaceMove())
+            {
+              /** @todo Interpolate seed trajectory if exist, if not use stationary state. */
+            }
+            else
+            {
+              throw std::runtime_error("Circular Move Instruction Type is not supported!");
+            }
+
+            // Since we are currently not interpolating we will just add the provided waypoint
+            tesseract_motion_planners::WaypointTermInfo term_info;
+            createCartesianComponents(term_info, c_wp, index, move_instruction->getCosts(), link, trajopt::TT_COST);
+            createCartesianComponents(term_info, c_wp, index, move_instruction->getConstraints(), link, trajopt::TT_CNT);
+
+            /** @todo Add createDynamicCartesianWaypointTermInfo */
+            /* Check if this cartesian waypoint is dynamic
+             * (i.e. defined relative to a frame that will move with the kinematic chain)
+             */
+            auto it = std::find(adjacency_links.begin(), adjacency_links.end(), c_wp->getParentLinkName());
+            if (it != adjacency_links.end())
+              throw std::runtime_error("Dynamic cartesian waypoint is currently not supported!");
+          }
+        }
+        else if (wp.getType() == static_cast<int>(WaypointType::JOINT_WAYPOINT))
+        {
+          const JointWaypoint* j_wp = wp.cast_const<JointWaypoint>();
+
+          // If nullptr this this is the start position
+          if (prev_move_instruction == nullptr)
+          {
+            tesseract_motion_planners::WaypointTermInfo term_info;
+            createJointComponents(term_info, j_wp, index, move_instruction->getCosts(), link, trajopt::TT_COST);
+            createJointComponents(term_info, j_wp, index, move_instruction->getConstraints(), link, trajopt::TT_CNT);
+
+            prev_move_instruction = move_instruction;
+          }
+          else
+          {
+            if (move_instruction->isLinearMove())
+            {
+              /** @todo Interpolate cartesian */
+              /** @todo Interpolate seed trajectory if exist */
+            }
+            else if (move_instruction->isFreespaceMove())
+            {
+              /** @todo Interpolate seed trajectory if exist, if not use stationary state. */
+            }
+            else
+            {
+              throw std::runtime_error("Circular Move Instruction Type is not supported!");
+            }
+
+            // Since we are currently not interpolating we will just add the provided waypoint
+            tesseract_motion_planners::WaypointTermInfo term_info;
+            createJointComponents(term_info, j_wp, index, move_instruction->getCosts(), link, trajopt::TT_COST);
+            createJointComponents(term_info, j_wp, index, move_instruction->getConstraints(), link, trajopt::TT_CNT);
+
+            /* Update the first and last step for the costs
+             * Certain costs (collision checking and configuration) should not be applied to start and end states
+             * that are incapable of changing (i.e. joint positions). Therefore, the first and last indices of these
+             * costs (which equal 0 and num_steps-1 by default) should be changed to exclude those states
+             */
+            if (!move_instruction->getConstraints().empty())
+              fixed_steps.push_back(index);
+          }
+        }
+        else
+        {
+          throw std::runtime_error("Trajopt planner does not support waypoint type " + std::to_string(wp.getType()));
+        }
+        prev_move_instruction = move_instruction;
+      }
+      ++index;
+    }
+  }
+
+  pci.basic_info.n_steps = index - 1;
+
+  createCompositeComponents(pci, instructions.getCosts(), trajopt::TT_COST);
+  createCompositeComponents(pci, instructions.getCosts(), trajopt::TT_COST);
 }
 
 void TrajOptPlannerUniversalConfig::addKinematicConfiguration(trajopt::ProblemConstructionInfo& pci,
-                                                            const std::vector<int>& fixed_steps) const
+                                                              const std::vector<int>& fixed_steps) const
 {
 //  // Update the term info with the (possibly) new start and end state indices for which to apply this cost
 //  if (fixed_steps.empty())
@@ -427,35 +720,6 @@ void TrajOptPlannerUniversalConfig::addCollisionConstraint(trajopt::ProblemConst
 //  ct->fixed_steps = fixed_steps;
 
 //  pci.cnt_infos.push_back(ct);
-}
-
-void TrajOptPlannerUniversalConfig::addVelocitySmoothing(trajopt::ProblemConstructionInfo& pci,
-                                                       const std::vector<int>& /*fixed_steps*/) const
-{
-//  if (velocity_coeff.size() == 0)
-//    pci.cost_infos.push_back(
-//        createSmoothVelocityTermInfo(pci.basic_info.n_steps, static_cast<int>(pci.kin->numJoints())));
-//  else
-//    pci.cost_infos.push_back(createSmoothVelocityTermInfo(pci.basic_info.n_steps, velocity_coeff));
-}
-
-void TrajOptPlannerUniversalConfig::addAccelerationSmoothing(trajopt::ProblemConstructionInfo& pci,
-                                                           const std::vector<int>& /*fixed_steps*/) const
-{
-//  if (acceleration_coeff.size() == 0)
-//    pci.cost_infos.push_back(
-//        createSmoothAccelerationTermInfo(pci.basic_info.n_steps, static_cast<int>(pci.kin->numJoints())));
-//  else
-//    pci.cost_infos.push_back(createSmoothAccelerationTermInfo(pci.basic_info.n_steps, acceleration_coeff));
-}
-
-void TrajOptPlannerUniversalConfig::addJerkSmoothing(trajopt::ProblemConstructionInfo& pci,
-                                                   const std::vector<int>& /*fixed_steps*/) const
-{
-//  if (jerk_coeff.size() == 0)
-//    pci.cost_infos.push_back(createSmoothJerkTermInfo(pci.basic_info.n_steps, static_cast<int>(pci.kin->numJoints())));
-//  else
-//    pci.cost_infos.push_back(createSmoothJerkTermInfo(pci.basic_info.n_steps, jerk_coeff));
 }
 
 void TrajOptPlannerUniversalConfig::addConstraintErrorFunctions(trajopt::ProblemConstructionInfo& pci,

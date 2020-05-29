@@ -54,8 +54,20 @@ struct TrajOptPlannerUniversalConfig : public tesseract_motion_planners::TrajOpt
    */
   tesseract_common::VectorIsometry3d tcp;
 
-  /** @brief The program instruction */
+  /**
+   * @brief The program instruction
+   * This must containt a minimum of two move instruction the first move instruction is the start state
+   */
   tesseract_planning::CompositeInstruction instructions;
+
+  /** @brief For a linear move instruction this is used to determine the number of states to be generated */
+  double longest_cartesian_translation_segment {0.05};
+
+  /** @brief For a linear move instruction this is used to determine the number of states to be generated */
+  double longest_cartesian_rotation_segment {0.05};
+
+  /** @brief For a joint move instruction this the number of states used */
+  int joint_move_num_states {20};
 
   /** @brief Selects the type of initialization used for raster path. If GIVEN_TRAJ, then the seed_trajectory_ must be
    * set */
@@ -77,6 +89,8 @@ protected:
   void addJerkSmoothing(trajopt::ProblemConstructionInfo& pci, const std::vector<int>& fixed_steps) const;
   void addConstraintErrorFunctions(trajopt::ProblemConstructionInfo& pci, const std::vector<int>& fixed_steps) const;
   void addAvoidSingularity(trajopt::ProblemConstructionInfo& pci, const std::vector<int>& fixed_steps) const;
+
+  std::vector<std::pair<long, long>> instruction_to_trajectory_map_;
 };
 
 }

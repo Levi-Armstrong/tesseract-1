@@ -5,9 +5,17 @@
 #include <tesseract_command_language/core/waypoint.h>
 #include <tesseract_command_language/instruction_type.h>
 #include <vector>
+#include <Eigen/Geometry>
 
 namespace tesseract_planning
 {
+
+enum class MoveInstructionType : int
+{
+  LINEAR,
+  FREESPACE,
+  CIRCULAR
+}
 
 class MoveInstruction
 {
@@ -15,7 +23,7 @@ public:
   using Ptr = std::shared_ptr<MoveInstruction>;
   using ConstPtr = std::shared_ptr<const MoveInstruction>;
 
-  MoveInstruction(Waypoint waypoint);
+  MoveInstruction(Waypoint waypoint, MoveInstructionType type);
 
   void setWaypoint(Waypoint waypoint);
   const Waypoint& getWaypoint() const;
@@ -44,8 +52,16 @@ public:
 
   void print() const;
 
+  bool isLinearMove() const;
+
+  bool isFreespaceMove() const;
+
+  bool isCircularMove() const;
+
 private:
   int type_ { static_cast<int>(InstructionType::MOVE_INSTRUCTION) };
+
+  MoveInstructionType move_type_;
 
   Waypoint waypoint_;
 

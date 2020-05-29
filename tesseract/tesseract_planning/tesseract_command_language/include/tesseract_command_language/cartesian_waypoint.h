@@ -7,6 +7,8 @@ TESSERACT_COMMON_IGNORE_WARNINGS_PUSH
 #include <Eigen/Geometry>
 TESSERACT_COMMON_IGNORE_WARNINGS_POP
 
+#include <tesseract_command_language/waypoint_type.h>
+
 namespace tesseract_planning
 {
 
@@ -40,7 +42,16 @@ public:
       return *this;
   }
 
-  int getType() const { return 2; }
+  int getType() const { return static_cast<int>(WaypointType::CARTESIAN_WAYPOINT); }
+
+  const std::string& getParentLinkName() const { return parent_link_; }
+  void setParentLinkName(const std::string& link_name) { parent_link_ = link_name; }
+
+  const Eigen::Isometry3d& getTCP() const { return tcp_; }
+  void setTCP(Eigen::Isometry3d tcp) { tcp_ = tcp; }
+private:
+  std::string parent_link_;
+  Eigen::Isometry3d tcp_ { Eigen::Isometry3d::Identity() };
 };
 
 }

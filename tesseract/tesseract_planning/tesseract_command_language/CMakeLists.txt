@@ -42,8 +42,22 @@ target_include_directories(${PROJECT_NAME}_demo PUBLIC
     "$<INSTALL_INTERFACE:include>")
 target_include_directories(${PROJECT_NAME}_demo SYSTEM PUBLIC
         ${EIGEN3_INCLUDE_DIRS})  
+
+
+find_package(tesseract_support REQUIRED)
+find_package(tesseract REQUIRED)
+add_executable(${PROJECT_NAME}_trajopt_demo src/example_trajopt.cpp)
+target_link_libraries(${PROJECT_NAME}_trajopt_demo PUBLIC ${PROJECT_NAME} ${PROJECT_NAME}_trajopt tesseract::tesseract_support tesseract::tesseract)
+tesseract_target_compile_options(${PROJECT_NAME}_trajopt_demo PUBLIC)
+tesseract_clang_tidy(${PROJECT_NAME}_trajopt_demo)
+tesseract_code_coverage(${PROJECT_NAME}_trajopt_demo ALL EXCLUDE ${COVERAGE_EXCLUDE})
+target_include_directories(${PROJECT_NAME}_trajopt_demo PUBLIC
+    "$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>"
+    "$<INSTALL_INTERFACE:include>")
+target_include_directories(${PROJECT_NAME}_trajopt_demo SYSTEM PUBLIC
+        ${EIGEN3_INCLUDE_DIRS})
    
-tesseract_configure_package(${PROJECT_NAME} ${PROJECT_NAME}_demo ${PROJECT_NAME}_trajopt)
+tesseract_configure_package(${PROJECT_NAME} ${PROJECT_NAME}_trajopt ${PROJECT_NAME}_demo ${PROJECT_NAME}_trajopt_demo )
 
 # Mark header files for installation
 install(DIRECTORY include/${PROJECT_NAME}

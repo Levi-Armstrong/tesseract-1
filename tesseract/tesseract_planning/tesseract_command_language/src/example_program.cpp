@@ -27,37 +27,30 @@ int main (int argc, char *argv[])
   const CartesianWaypoint* cast_test2 = wp2.cast_const<CartesianWaypoint>();
 
   // Define raster move instruction
-  MoveInstruction move_c1(wp3);
+  MoveInstruction move_c1(wp3, MoveInstructionType::LINEAR);
   move_c1.addConstraint(FixedComponent());
-  move_c1.addPathConstraint(LinearComponent());
 
-  MoveInstruction move_c2(wp4);
+  MoveInstruction move_c2(wp4, MoveInstructionType::LINEAR);
   move_c2.addConstraint(FixedComponent());
-  move_c2.addPathConstraint(LinearComponent());
 
-  MoveInstruction move_c3(wp5);
+  MoveInstruction move_c3(wp5, MoveInstructionType::LINEAR);
   move_c3.addConstraint(FixedComponent());
-  move_c3.addPathConstraint(LinearComponent());
 
-  MoveInstruction move_c4(wp6);
+  MoveInstruction move_c4(wp6, MoveInstructionType::LINEAR);
   move_c4.addConstraint(FixedComponent());
-  move_c4.addPathConstraint(LinearComponent());
 
-  MoveInstruction move_c5(wp7);
+  MoveInstruction move_c5(wp7, MoveInstructionType::LINEAR);
   move_c5.addConstraint(FixedComponent());
-  move_c5.addPathConstraint(LinearComponent());
 
   // Create a program
   CompositeInstruction program;
 
-  MoveInstruction move_f0(wp1);
+  MoveInstruction move_f0(wp1, MoveInstructionType::FREESPACE);
   move_f0.addConstraint(FixedComponent());
-  move_f0.addPathConstraint(FreespaceComponent());
   program.push_back(move_f0);
 
-  MoveInstruction move_f1(wp2);
+  MoveInstruction move_f1(wp2, MoveInstructionType::FREESPACE);
   move_f1.addConstraint(FixedComponent());
-  move_f1.addPathConstraint(FreespaceComponent());
 
   CompositeInstruction raster1;
   raster1.push_back(move_f1);
@@ -69,9 +62,8 @@ int main (int argc, char *argv[])
   raster1.addCost(VelocitySmoothingComponent());
   program.push_back(raster1);
 
-  MoveInstruction move_f2(wp2);
+  MoveInstruction move_f2(wp2, MoveInstructionType::FREESPACE);
   move_f1.addConstraint(FixedComponent());
-  move_f1.addPathConstraint(FreespaceComponent());
 
   CompositeInstruction raster2;
   raster2.push_back(move_f2);
@@ -83,9 +75,8 @@ int main (int argc, char *argv[])
   raster2.addCost(VelocitySmoothingComponent());
   program.push_back(raster2);
 
-  MoveInstruction move_f3(wp2);
+  MoveInstruction move_f3(wp2, MoveInstructionType::FREESPACE);
   move_f1.addConstraint(FixedComponent());
-  move_f1.addPathConstraint(FreespaceComponent());
 
   CompositeInstruction raster3;
   raster3.push_back(move_f3);
