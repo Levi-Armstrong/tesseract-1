@@ -1,0 +1,293 @@
+\hypertarget{classtesseract__motion__planners_1_1DescartesRobotSampler}{}\doxysection{tesseract\+\_\+motion\+\_\+planners\+::Descartes\+Robot\+Sampler$<$ Float\+Type $>$ Class Template Reference}
+\label{classtesseract__motion__planners_1_1DescartesRobotSampler}\index{tesseract\_motion\_planners::DescartesRobotSampler$<$ FloatType $>$@{tesseract\_motion\_planners::DescartesRobotSampler$<$ FloatType $>$}}
+
+
+{\ttfamily \#include $<$descartes\+\_\+robot\+\_\+sampler.\+h$>$}
+
+Inheritance diagram for tesseract\+\_\+motion\+\_\+planners\+::Descartes\+Robot\+Sampler$<$ Float\+Type $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{dd/d0d/classtesseract__motion__planners_1_1DescartesRobotSampler}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtesseract__motion__planners_1_1DescartesRobotSampler_a1ff7343b80449800fb5a5dc582c19d01}{Descartes\+Robot\+Sampler}} (const Eigen\+::\+Isometry3d \&target\+\_\+pose, \mbox{\hyperlink{namespacetesseract__motion__planners_a7556501ffdf032a87415923b0a1372d4}{tesseract\+\_\+motion\+\_\+planners\+::\+Pose\+Sampler\+Fn}} target\+\_\+pose\+\_\+sampler, \mbox{\hyperlink{classtesseract__kinematics_1_1InverseKinematics_ab8d8c23f62e4298bcc0951f82f3dba27}{tesseract\+\_\+kinematics\+::\+Inverse\+Kinematics\+::\+Const\+Ptr}} robot\+\_\+kinematics, typename descartes\+\_\+light\+::\+Collision\+Interface$<$ Float\+Type $>$\+::Ptr collision, const \mbox{\hyperlink{structtesseract__environment_1_1EnvState_a670d57a48a695feea60020c81320a851}{tesseract\+\_\+environment\+::\+Env\+State\+::\+Const\+Ptr}} \&current\+\_\+state, const Eigen\+::\+Isometry3d \&robot\+\_\+tcp, double robot\+\_\+reach, bool allow\+\_\+collision, \mbox{\hyperlink{namespacetesseract__motion__planners_a4d02cbfe203e253555b7e89c743fe333}{Descartes\+Is\+Valid\+Fn}}$<$ Float\+Type $>$ is\+\_\+valid)
+\begin{DoxyCompactList}\small\item\em This is a descartes sampler for a robot. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classtesseract__motion__planners_1_1DescartesRobotSampler_a42ff4be4d5ad84add50e1f808be3f090}{sample}} (std\+::vector$<$ Float\+Type $>$ \&solution\+\_\+set) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classtesseract__motion__planners_1_1DescartesRobotSampler_ae29054dfeda653130bc4c84731f94ebb}{is\+Collision\+Free}} (const Float\+Type $\ast$vertex)
+\begin{DoxyCompactList}\small\item\em Check if a solution is passes collision test. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classtesseract__motion__planners_1_1DescartesRobotSampler_a4ea08d1b12f71980d377fc271b81063d}{get\+Best\+Solution}} (std\+::vector$<$ Float\+Type $>$ \&solution\+\_\+set, const \mbox{\hyperlink{namespacetesseract__common_a94d9921fc7ed323609ac57d06f939cb6}{tesseract\+\_\+common\+::\+Vector\+Isometry3d}} \&target\+\_\+poses)
+\begin{DoxyCompactList}\small\item\em This will return the best of the worst solution. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classtesseract__motion__planners_1_1DescartesRobotSampler_a6bbb2083797b05112100dd762d80ecdb}{ik\+At}} (std\+::vector$<$ Float\+Type $>$ \&solution\+\_\+set, const Eigen\+::\+Isometry3d \&target\+\_\+pose, bool get\+\_\+best\+\_\+solution, double \&distance)
+\begin{DoxyCompactList}\small\item\em Solve inverse kinematics for the target pose. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Eigen\+::\+Isometry3d \mbox{\hyperlink{classtesseract__motion__planners_1_1DescartesRobotSampler_af9d0811b5b19d93be5c2f2c036a5ae77}{target\+\_\+pose\+\_\+}}
+\begin{DoxyCompactList}\small\item\em The target pose to sample. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacetesseract__motion__planners_a7556501ffdf032a87415923b0a1372d4}{tesseract\+\_\+motion\+\_\+planners\+::\+Pose\+Sampler\+Fn}} \mbox{\hyperlink{classtesseract__motion__planners_1_1DescartesRobotSampler_acafbc40fc3e19b2ccce475ba37424d83}{target\+\_\+pose\+\_\+sampler\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Target pose sampler function. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classtesseract__kinematics_1_1InverseKinematics_ab8d8c23f62e4298bcc0951f82f3dba27}{tesseract\+\_\+kinematics\+::\+Inverse\+Kinematics\+::\+Const\+Ptr}} \mbox{\hyperlink{classtesseract__motion__planners_1_1DescartesRobotSampler_ad5b0a601c956ca4b515e3be6beb6a614}{robot\+\_\+kinematics\+\_\+}}
+\begin{DoxyCompactList}\small\item\em The robot inverse kinematics. \end{DoxyCompactList}\item 
+descartes\+\_\+light\+::\+Collision\+Interface$<$ Float\+Type $>$\+::Ptr \mbox{\hyperlink{classtesseract__motion__planners_1_1DescartesRobotSampler_a7f5b51d3b134a47b62c60ec39deb2fe9}{collision\+\_\+}}
+\begin{DoxyCompactList}\small\item\em The collision interface. \end{DoxyCompactList}\item 
+Eigen\+::\+Isometry3d \mbox{\hyperlink{classtesseract__motion__planners_1_1DescartesRobotSampler_a4f61c6defb63661d78bb8fb44de501a2}{world\+\_\+to\+\_\+robot\+\_\+base\+\_\+}}
+\begin{DoxyCompactList}\small\item\em The transform from world to the base of the robot. \end{DoxyCompactList}\item 
+Eigen\+::\+Isometry3d \mbox{\hyperlink{classtesseract__motion__planners_1_1DescartesRobotSampler_a42bd28411c9fcc0ce74aea125a3cf28f}{robot\+\_\+tcp\+\_\+}}
+\begin{DoxyCompactList}\small\item\em The robot tool center point. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classtesseract__motion__planners_1_1DescartesRobotSampler_a0e191eadcf973246975cf08325afc53a}{robot\+\_\+reach\+\_\+}}
+\begin{DoxyCompactList}\small\item\em The reach of the robot used to quickly filter samples. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classtesseract__motion__planners_1_1DescartesRobotSampler_aec2821e9f33d88663df8fd0daa928a13}{allow\+\_\+collision\+\_\+}}
+\begin{DoxyCompactList}\small\item\em If true and no valid solution was found it will return the best of the worst. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classtesseract__motion__planners_1_1DescartesRobotSampler_a7a4bf6b5c1a3325f0d0c2d629108dc2d}{dof\+\_\+}}
+\begin{DoxyCompactList}\small\item\em The number of joints in the robot. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector\+Xd \mbox{\hyperlink{classtesseract__motion__planners_1_1DescartesRobotSampler_af1444cda51d37b31ca7bb752fabfecf4}{ik\+\_\+seed\+\_\+}}
+\begin{DoxyCompactList}\small\item\em The seed for inverse kinematics which is zeros. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacetesseract__motion__planners_a4d02cbfe203e253555b7e89c743fe333}{Descartes\+Is\+Valid\+Fn}}$<$ Float\+Type $>$ \mbox{\hyperlink{classtesseract__motion__planners_1_1DescartesRobotSampler_a8bea1fd09d1859b017a0541a00c2768c}{is\+\_\+valid\+\_\+}}
+\begin{DoxyCompactList}\small\item\em This is a user defined function to filter out solution. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtesseract__motion__planners_1_1DescartesRobotSampler_a1ff7343b80449800fb5a5dc582c19d01}\label{classtesseract__motion__planners_1_1DescartesRobotSampler_a1ff7343b80449800fb5a5dc582c19d01}} 
+\index{tesseract\_motion\_planners::DescartesRobotSampler$<$ FloatType $>$@{tesseract\_motion\_planners::DescartesRobotSampler$<$ FloatType $>$}!DescartesRobotSampler@{DescartesRobotSampler}}
+\index{DescartesRobotSampler@{DescartesRobotSampler}!tesseract\_motion\_planners::DescartesRobotSampler$<$ FloatType $>$@{tesseract\_motion\_planners::DescartesRobotSampler$<$ FloatType $>$}}
+\doxysubsubsection{\texorpdfstring{DescartesRobotSampler()}{DescartesRobotSampler()}}
+{\footnotesize\ttfamily template$<$typename Float\+Type $>$ \\
+\mbox{\hyperlink{classtesseract__motion__planners_1_1DescartesRobotSampler}{tesseract\+\_\+motion\+\_\+planners\+::\+Descartes\+Robot\+Sampler}}$<$ Float\+Type $>$\+::\mbox{\hyperlink{classtesseract__motion__planners_1_1DescartesRobotSampler}{Descartes\+Robot\+Sampler}} (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Isometry3d \&}]{target\+\_\+pose,  }\item[{\mbox{\hyperlink{namespacetesseract__motion__planners_a7556501ffdf032a87415923b0a1372d4}{tesseract\+\_\+motion\+\_\+planners\+::\+Pose\+Sampler\+Fn}}}]{target\+\_\+pose\+\_\+sampler,  }\item[{\mbox{\hyperlink{classtesseract__kinematics_1_1InverseKinematics_ab8d8c23f62e4298bcc0951f82f3dba27}{tesseract\+\_\+kinematics\+::\+Inverse\+Kinematics\+::\+Const\+Ptr}}}]{robot\+\_\+kinematics,  }\item[{typename descartes\+\_\+light\+::\+Collision\+Interface$<$ Float\+Type $>$\+::Ptr}]{collision,  }\item[{const \mbox{\hyperlink{structtesseract__environment_1_1EnvState_a670d57a48a695feea60020c81320a851}{tesseract\+\_\+environment\+::\+Env\+State\+::\+Const\+Ptr}} \&}]{current\+\_\+state,  }\item[{const Eigen\+::\+Isometry3d \&}]{robot\+\_\+tcp,  }\item[{double}]{robot\+\_\+reach,  }\item[{bool}]{allow\+\_\+collision,  }\item[{\mbox{\hyperlink{namespacetesseract__motion__planners_a4d02cbfe203e253555b7e89c743fe333}{Descartes\+Is\+Valid\+Fn}}$<$ Float\+Type $>$}]{is\+\_\+valid }\end{DoxyParamCaption})}
+
+
+
+This is a descartes sampler for a robot. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target\+\_\+pose} & The target pose in world coordinates applied to robot kinematics \\
+\hline
+{\em target\+\_\+pose\+\_\+sampler} & The target pose sampler function to be used \\
+\hline
+{\em robot\+\_\+kinematics} & The robot inverse kinematics object \\
+\hline
+{\em collision} & The collision interface \\
+\hline
+{\em curret\+\_\+state} & The currect state of the system \\
+\hline
+{\em robot\+\_\+tcp} & The robot tcp to be used. \\
+\hline
+{\em robot\+\_\+reach} & The reach of the robot. Used to filter rail samples. \\
+\hline
+{\em allow\+\_\+collision} & If true and no valid solution was found it will return the best of the worst \\
+\hline
+{\em is\+\_\+valid} & This is a user defined function to filter out solution \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtesseract__motion__planners_1_1DescartesRobotSampler_a4ea08d1b12f71980d377fc271b81063d}\label{classtesseract__motion__planners_1_1DescartesRobotSampler_a4ea08d1b12f71980d377fc271b81063d}} 
+\index{tesseract\_motion\_planners::DescartesRobotSampler$<$ FloatType $>$@{tesseract\_motion\_planners::DescartesRobotSampler$<$ FloatType $>$}!getBestSolution@{getBestSolution}}
+\index{getBestSolution@{getBestSolution}!tesseract\_motion\_planners::DescartesRobotSampler$<$ FloatType $>$@{tesseract\_motion\_planners::DescartesRobotSampler$<$ FloatType $>$}}
+\doxysubsubsection{\texorpdfstring{getBestSolution()}{getBestSolution()}}
+{\footnotesize\ttfamily template$<$typename Float\+Type $>$ \\
+bool \mbox{\hyperlink{classtesseract__motion__planners_1_1DescartesRobotSampler}{tesseract\+\_\+motion\+\_\+planners\+::\+Descartes\+Robot\+Sampler}}$<$ Float\+Type $>$\+::get\+Best\+Solution (\begin{DoxyParamCaption}\item[{std\+::vector$<$ Float\+Type $>$ \&}]{solution\+\_\+set,  }\item[{const \mbox{\hyperlink{namespacetesseract__common_a94d9921fc7ed323609ac57d06f939cb6}{tesseract\+\_\+common\+::\+Vector\+Isometry3d}} \&}]{target\+\_\+poses }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+This will return the best of the worst solution. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em solution\+\_\+set} & The solution to populate \\
+\hline
+{\em target\+\_\+poses} & The target pose to sample \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if a solution was found, otherwise false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtesseract__motion__planners_1_1DescartesRobotSampler_a6bbb2083797b05112100dd762d80ecdb}\label{classtesseract__motion__planners_1_1DescartesRobotSampler_a6bbb2083797b05112100dd762d80ecdb}} 
+\index{tesseract\_motion\_planners::DescartesRobotSampler$<$ FloatType $>$@{tesseract\_motion\_planners::DescartesRobotSampler$<$ FloatType $>$}!ikAt@{ikAt}}
+\index{ikAt@{ikAt}!tesseract\_motion\_planners::DescartesRobotSampler$<$ FloatType $>$@{tesseract\_motion\_planners::DescartesRobotSampler$<$ FloatType $>$}}
+\doxysubsubsection{\texorpdfstring{ikAt()}{ikAt()}}
+{\footnotesize\ttfamily template$<$typename Float\+Type $>$ \\
+bool \mbox{\hyperlink{classtesseract__motion__planners_1_1DescartesRobotSampler}{tesseract\+\_\+motion\+\_\+planners\+::\+Descartes\+Robot\+Sampler}}$<$ Float\+Type $>$\+::ik\+At (\begin{DoxyParamCaption}\item[{std\+::vector$<$ Float\+Type $>$ \&}]{solution\+\_\+set,  }\item[{const Eigen\+::\+Isometry3d \&}]{target\+\_\+pose,  }\item[{bool}]{get\+\_\+best\+\_\+solution,  }\item[{double \&}]{distance }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Solve inverse kinematics for the target pose. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target\+\_\+pose} & The target pose to solve inverse kinematics \\
+\hline
+{\em solution\+\_\+set} & The soltuion to return \\
+\hline
+{\em get\+\_\+best\+\_\+solution} & Enable if best solution should be returned \\
+\hline
+{\em distance} & The current best distance \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if a solution was found, otherwise false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtesseract__motion__planners_1_1DescartesRobotSampler_ae29054dfeda653130bc4c84731f94ebb}\label{classtesseract__motion__planners_1_1DescartesRobotSampler_ae29054dfeda653130bc4c84731f94ebb}} 
+\index{tesseract\_motion\_planners::DescartesRobotSampler$<$ FloatType $>$@{tesseract\_motion\_planners::DescartesRobotSampler$<$ FloatType $>$}!isCollisionFree@{isCollisionFree}}
+\index{isCollisionFree@{isCollisionFree}!tesseract\_motion\_planners::DescartesRobotSampler$<$ FloatType $>$@{tesseract\_motion\_planners::DescartesRobotSampler$<$ FloatType $>$}}
+\doxysubsubsection{\texorpdfstring{isCollisionFree()}{isCollisionFree()}}
+{\footnotesize\ttfamily template$<$typename Float\+Type $>$ \\
+bool \mbox{\hyperlink{classtesseract__motion__planners_1_1DescartesRobotSampler}{tesseract\+\_\+motion\+\_\+planners\+::\+Descartes\+Robot\+Sampler}}$<$ Float\+Type $>$\+::is\+Collision\+Free (\begin{DoxyParamCaption}\item[{const Float\+Type $\ast$}]{vertex }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Check if a solution is passes collision test. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vertex} & The joint solution to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if collision test passed, otherwise false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtesseract__motion__planners_1_1DescartesRobotSampler_a42ff4be4d5ad84add50e1f808be3f090}\label{classtesseract__motion__planners_1_1DescartesRobotSampler_a42ff4be4d5ad84add50e1f808be3f090}} 
+\index{tesseract\_motion\_planners::DescartesRobotSampler$<$ FloatType $>$@{tesseract\_motion\_planners::DescartesRobotSampler$<$ FloatType $>$}!sample@{sample}}
+\index{sample@{sample}!tesseract\_motion\_planners::DescartesRobotSampler$<$ FloatType $>$@{tesseract\_motion\_planners::DescartesRobotSampler$<$ FloatType $>$}}
+\doxysubsubsection{\texorpdfstring{sample()}{sample()}}
+{\footnotesize\ttfamily template$<$typename Float\+Type $>$ \\
+bool \mbox{\hyperlink{classtesseract__motion__planners_1_1DescartesRobotSampler}{tesseract\+\_\+motion\+\_\+planners\+::\+Descartes\+Robot\+Sampler}}$<$ Float\+Type $>$\+::sample (\begin{DoxyParamCaption}\item[{std\+::vector$<$ Float\+Type $>$ \&}]{solution\+\_\+set }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classtesseract__motion__planners_1_1DescartesRobotSampler_aec2821e9f33d88663df8fd0daa928a13}\label{classtesseract__motion__planners_1_1DescartesRobotSampler_aec2821e9f33d88663df8fd0daa928a13}} 
+\index{tesseract\_motion\_planners::DescartesRobotSampler$<$ FloatType $>$@{tesseract\_motion\_planners::DescartesRobotSampler$<$ FloatType $>$}!allow\_collision\_@{allow\_collision\_}}
+\index{allow\_collision\_@{allow\_collision\_}!tesseract\_motion\_planners::DescartesRobotSampler$<$ FloatType $>$@{tesseract\_motion\_planners::DescartesRobotSampler$<$ FloatType $>$}}
+\doxysubsubsection{\texorpdfstring{allow\_collision\_}{allow\_collision\_}}
+{\footnotesize\ttfamily template$<$typename Float\+Type $>$ \\
+bool \mbox{\hyperlink{classtesseract__motion__planners_1_1DescartesRobotSampler}{tesseract\+\_\+motion\+\_\+planners\+::\+Descartes\+Robot\+Sampler}}$<$ Float\+Type $>$\+::allow\+\_\+collision\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+If true and no valid solution was found it will return the best of the worst. 
+
+\mbox{\Hypertarget{classtesseract__motion__planners_1_1DescartesRobotSampler_a7f5b51d3b134a47b62c60ec39deb2fe9}\label{classtesseract__motion__planners_1_1DescartesRobotSampler_a7f5b51d3b134a47b62c60ec39deb2fe9}} 
+\index{tesseract\_motion\_planners::DescartesRobotSampler$<$ FloatType $>$@{tesseract\_motion\_planners::DescartesRobotSampler$<$ FloatType $>$}!collision\_@{collision\_}}
+\index{collision\_@{collision\_}!tesseract\_motion\_planners::DescartesRobotSampler$<$ FloatType $>$@{tesseract\_motion\_planners::DescartesRobotSampler$<$ FloatType $>$}}
+\doxysubsubsection{\texorpdfstring{collision\_}{collision\_}}
+{\footnotesize\ttfamily template$<$typename Float\+Type $>$ \\
+descartes\+\_\+light\+::\+Collision\+Interface$<$Float\+Type$>$\+::Ptr \mbox{\hyperlink{classtesseract__motion__planners_1_1DescartesRobotSampler}{tesseract\+\_\+motion\+\_\+planners\+::\+Descartes\+Robot\+Sampler}}$<$ Float\+Type $>$\+::collision\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The collision interface. 
+
+\mbox{\Hypertarget{classtesseract__motion__planners_1_1DescartesRobotSampler_a7a4bf6b5c1a3325f0d0c2d629108dc2d}\label{classtesseract__motion__planners_1_1DescartesRobotSampler_a7a4bf6b5c1a3325f0d0c2d629108dc2d}} 
+\index{tesseract\_motion\_planners::DescartesRobotSampler$<$ FloatType $>$@{tesseract\_motion\_planners::DescartesRobotSampler$<$ FloatType $>$}!dof\_@{dof\_}}
+\index{dof\_@{dof\_}!tesseract\_motion\_planners::DescartesRobotSampler$<$ FloatType $>$@{tesseract\_motion\_planners::DescartesRobotSampler$<$ FloatType $>$}}
+\doxysubsubsection{\texorpdfstring{dof\_}{dof\_}}
+{\footnotesize\ttfamily template$<$typename Float\+Type $>$ \\
+int \mbox{\hyperlink{classtesseract__motion__planners_1_1DescartesRobotSampler}{tesseract\+\_\+motion\+\_\+planners\+::\+Descartes\+Robot\+Sampler}}$<$ Float\+Type $>$\+::dof\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The number of joints in the robot. 
+
+\mbox{\Hypertarget{classtesseract__motion__planners_1_1DescartesRobotSampler_af1444cda51d37b31ca7bb752fabfecf4}\label{classtesseract__motion__planners_1_1DescartesRobotSampler_af1444cda51d37b31ca7bb752fabfecf4}} 
+\index{tesseract\_motion\_planners::DescartesRobotSampler$<$ FloatType $>$@{tesseract\_motion\_planners::DescartesRobotSampler$<$ FloatType $>$}!ik\_seed\_@{ik\_seed\_}}
+\index{ik\_seed\_@{ik\_seed\_}!tesseract\_motion\_planners::DescartesRobotSampler$<$ FloatType $>$@{tesseract\_motion\_planners::DescartesRobotSampler$<$ FloatType $>$}}
+\doxysubsubsection{\texorpdfstring{ik\_seed\_}{ik\_seed\_}}
+{\footnotesize\ttfamily template$<$typename Float\+Type $>$ \\
+Eigen\+::\+Vector\+Xd \mbox{\hyperlink{classtesseract__motion__planners_1_1DescartesRobotSampler}{tesseract\+\_\+motion\+\_\+planners\+::\+Descartes\+Robot\+Sampler}}$<$ Float\+Type $>$\+::ik\+\_\+seed\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The seed for inverse kinematics which is zeros. 
+
+\mbox{\Hypertarget{classtesseract__motion__planners_1_1DescartesRobotSampler_a8bea1fd09d1859b017a0541a00c2768c}\label{classtesseract__motion__planners_1_1DescartesRobotSampler_a8bea1fd09d1859b017a0541a00c2768c}} 
+\index{tesseract\_motion\_planners::DescartesRobotSampler$<$ FloatType $>$@{tesseract\_motion\_planners::DescartesRobotSampler$<$ FloatType $>$}!is\_valid\_@{is\_valid\_}}
+\index{is\_valid\_@{is\_valid\_}!tesseract\_motion\_planners::DescartesRobotSampler$<$ FloatType $>$@{tesseract\_motion\_planners::DescartesRobotSampler$<$ FloatType $>$}}
+\doxysubsubsection{\texorpdfstring{is\_valid\_}{is\_valid\_}}
+{\footnotesize\ttfamily template$<$typename Float\+Type $>$ \\
+\mbox{\hyperlink{namespacetesseract__motion__planners_a4d02cbfe203e253555b7e89c743fe333}{Descartes\+Is\+Valid\+Fn}}$<$Float\+Type$>$ \mbox{\hyperlink{classtesseract__motion__planners_1_1DescartesRobotSampler}{tesseract\+\_\+motion\+\_\+planners\+::\+Descartes\+Robot\+Sampler}}$<$ Float\+Type $>$\+::is\+\_\+valid\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+This is a user defined function to filter out solution. 
+
+\mbox{\Hypertarget{classtesseract__motion__planners_1_1DescartesRobotSampler_ad5b0a601c956ca4b515e3be6beb6a614}\label{classtesseract__motion__planners_1_1DescartesRobotSampler_ad5b0a601c956ca4b515e3be6beb6a614}} 
+\index{tesseract\_motion\_planners::DescartesRobotSampler$<$ FloatType $>$@{tesseract\_motion\_planners::DescartesRobotSampler$<$ FloatType $>$}!robot\_kinematics\_@{robot\_kinematics\_}}
+\index{robot\_kinematics\_@{robot\_kinematics\_}!tesseract\_motion\_planners::DescartesRobotSampler$<$ FloatType $>$@{tesseract\_motion\_planners::DescartesRobotSampler$<$ FloatType $>$}}
+\doxysubsubsection{\texorpdfstring{robot\_kinematics\_}{robot\_kinematics\_}}
+{\footnotesize\ttfamily template$<$typename Float\+Type $>$ \\
+\mbox{\hyperlink{classtesseract__kinematics_1_1InverseKinematics_ab8d8c23f62e4298bcc0951f82f3dba27}{tesseract\+\_\+kinematics\+::\+Inverse\+Kinematics\+::\+Const\+Ptr}} \mbox{\hyperlink{classtesseract__motion__planners_1_1DescartesRobotSampler}{tesseract\+\_\+motion\+\_\+planners\+::\+Descartes\+Robot\+Sampler}}$<$ Float\+Type $>$\+::robot\+\_\+kinematics\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The robot inverse kinematics. 
+
+\mbox{\Hypertarget{classtesseract__motion__planners_1_1DescartesRobotSampler_a0e191eadcf973246975cf08325afc53a}\label{classtesseract__motion__planners_1_1DescartesRobotSampler_a0e191eadcf973246975cf08325afc53a}} 
+\index{tesseract\_motion\_planners::DescartesRobotSampler$<$ FloatType $>$@{tesseract\_motion\_planners::DescartesRobotSampler$<$ FloatType $>$}!robot\_reach\_@{robot\_reach\_}}
+\index{robot\_reach\_@{robot\_reach\_}!tesseract\_motion\_planners::DescartesRobotSampler$<$ FloatType $>$@{tesseract\_motion\_planners::DescartesRobotSampler$<$ FloatType $>$}}
+\doxysubsubsection{\texorpdfstring{robot\_reach\_}{robot\_reach\_}}
+{\footnotesize\ttfamily template$<$typename Float\+Type $>$ \\
+double \mbox{\hyperlink{classtesseract__motion__planners_1_1DescartesRobotSampler}{tesseract\+\_\+motion\+\_\+planners\+::\+Descartes\+Robot\+Sampler}}$<$ Float\+Type $>$\+::robot\+\_\+reach\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The reach of the robot used to quickly filter samples. 
+
+\mbox{\Hypertarget{classtesseract__motion__planners_1_1DescartesRobotSampler_a42bd28411c9fcc0ce74aea125a3cf28f}\label{classtesseract__motion__planners_1_1DescartesRobotSampler_a42bd28411c9fcc0ce74aea125a3cf28f}} 
+\index{tesseract\_motion\_planners::DescartesRobotSampler$<$ FloatType $>$@{tesseract\_motion\_planners::DescartesRobotSampler$<$ FloatType $>$}!robot\_tcp\_@{robot\_tcp\_}}
+\index{robot\_tcp\_@{robot\_tcp\_}!tesseract\_motion\_planners::DescartesRobotSampler$<$ FloatType $>$@{tesseract\_motion\_planners::DescartesRobotSampler$<$ FloatType $>$}}
+\doxysubsubsection{\texorpdfstring{robot\_tcp\_}{robot\_tcp\_}}
+{\footnotesize\ttfamily template$<$typename Float\+Type $>$ \\
+Eigen\+::\+Isometry3d \mbox{\hyperlink{classtesseract__motion__planners_1_1DescartesRobotSampler}{tesseract\+\_\+motion\+\_\+planners\+::\+Descartes\+Robot\+Sampler}}$<$ Float\+Type $>$\+::robot\+\_\+tcp\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The robot tool center point. 
+
+\mbox{\Hypertarget{classtesseract__motion__planners_1_1DescartesRobotSampler_af9d0811b5b19d93be5c2f2c036a5ae77}\label{classtesseract__motion__planners_1_1DescartesRobotSampler_af9d0811b5b19d93be5c2f2c036a5ae77}} 
+\index{tesseract\_motion\_planners::DescartesRobotSampler$<$ FloatType $>$@{tesseract\_motion\_planners::DescartesRobotSampler$<$ FloatType $>$}!target\_pose\_@{target\_pose\_}}
+\index{target\_pose\_@{target\_pose\_}!tesseract\_motion\_planners::DescartesRobotSampler$<$ FloatType $>$@{tesseract\_motion\_planners::DescartesRobotSampler$<$ FloatType $>$}}
+\doxysubsubsection{\texorpdfstring{target\_pose\_}{target\_pose\_}}
+{\footnotesize\ttfamily template$<$typename Float\+Type $>$ \\
+Eigen\+::\+Isometry3d \mbox{\hyperlink{classtesseract__motion__planners_1_1DescartesRobotSampler}{tesseract\+\_\+motion\+\_\+planners\+::\+Descartes\+Robot\+Sampler}}$<$ Float\+Type $>$\+::target\+\_\+pose\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The target pose to sample. 
+
+\mbox{\Hypertarget{classtesseract__motion__planners_1_1DescartesRobotSampler_acafbc40fc3e19b2ccce475ba37424d83}\label{classtesseract__motion__planners_1_1DescartesRobotSampler_acafbc40fc3e19b2ccce475ba37424d83}} 
+\index{tesseract\_motion\_planners::DescartesRobotSampler$<$ FloatType $>$@{tesseract\_motion\_planners::DescartesRobotSampler$<$ FloatType $>$}!target\_pose\_sampler\_@{target\_pose\_sampler\_}}
+\index{target\_pose\_sampler\_@{target\_pose\_sampler\_}!tesseract\_motion\_planners::DescartesRobotSampler$<$ FloatType $>$@{tesseract\_motion\_planners::DescartesRobotSampler$<$ FloatType $>$}}
+\doxysubsubsection{\texorpdfstring{target\_pose\_sampler\_}{target\_pose\_sampler\_}}
+{\footnotesize\ttfamily template$<$typename Float\+Type $>$ \\
+\mbox{\hyperlink{namespacetesseract__motion__planners_a7556501ffdf032a87415923b0a1372d4}{tesseract\+\_\+motion\+\_\+planners\+::\+Pose\+Sampler\+Fn}} \mbox{\hyperlink{classtesseract__motion__planners_1_1DescartesRobotSampler}{tesseract\+\_\+motion\+\_\+planners\+::\+Descartes\+Robot\+Sampler}}$<$ Float\+Type $>$\+::target\+\_\+pose\+\_\+sampler\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Target pose sampler function. 
+
+\mbox{\Hypertarget{classtesseract__motion__planners_1_1DescartesRobotSampler_a4f61c6defb63661d78bb8fb44de501a2}\label{classtesseract__motion__planners_1_1DescartesRobotSampler_a4f61c6defb63661d78bb8fb44de501a2}} 
+\index{tesseract\_motion\_planners::DescartesRobotSampler$<$ FloatType $>$@{tesseract\_motion\_planners::DescartesRobotSampler$<$ FloatType $>$}!world\_to\_robot\_base\_@{world\_to\_robot\_base\_}}
+\index{world\_to\_robot\_base\_@{world\_to\_robot\_base\_}!tesseract\_motion\_planners::DescartesRobotSampler$<$ FloatType $>$@{tesseract\_motion\_planners::DescartesRobotSampler$<$ FloatType $>$}}
+\doxysubsubsection{\texorpdfstring{world\_to\_robot\_base\_}{world\_to\_robot\_base\_}}
+{\footnotesize\ttfamily template$<$typename Float\+Type $>$ \\
+Eigen\+::\+Isometry3d \mbox{\hyperlink{classtesseract__motion__planners_1_1DescartesRobotSampler}{tesseract\+\_\+motion\+\_\+planners\+::\+Descartes\+Robot\+Sampler}}$<$ Float\+Type $>$\+::world\+\_\+to\+\_\+robot\+\_\+base\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The transform from world to the base of the robot. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+tesseract/tesseract\+\_\+planning/tesseract\+\_\+motion\+\_\+planners/include/tesseract\+\_\+motion\+\_\+planners/descartes/\mbox{\hyperlink{descartes__robot__sampler_8h}{descartes\+\_\+robot\+\_\+sampler.\+h}}\item 
+tesseract/tesseract\+\_\+planning/tesseract\+\_\+motion\+\_\+planners/include/tesseract\+\_\+motion\+\_\+planners/descartes/impl/\mbox{\hyperlink{descartes__robot__sampler_8hpp}{descartes\+\_\+robot\+\_\+sampler.\+hpp}}\end{DoxyCompactItemize}

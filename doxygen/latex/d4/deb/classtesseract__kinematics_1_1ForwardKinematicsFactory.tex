@@ -1,0 +1,222 @@
+\hypertarget{classtesseract__kinematics_1_1ForwardKinematicsFactory}{}\doxysection{tesseract\+\_\+kinematics\+::Forward\+Kinematics\+Factory Class Reference}
+\label{classtesseract__kinematics_1_1ForwardKinematicsFactory}\index{tesseract\_kinematics::ForwardKinematicsFactory@{tesseract\_kinematics::ForwardKinematicsFactory}}
+
+
+{\ttfamily \#include $<$forward\+\_\+kinematics\+\_\+factory.\+h$>$}
+
+Inheritance diagram for tesseract\+\_\+kinematics\+::Forward\+Kinematics\+Factory\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.904762cm]{d4/deb/classtesseract__kinematics_1_1ForwardKinematicsFactory}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classtesseract__kinematics_1_1ForwardKinematicsFactory_a23856fb5482bd9d9bb6b5113a75a3123}{Ptr}} = std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classtesseract__kinematics_1_1ForwardKinematicsFactory}{Forward\+Kinematics\+Factory}} $>$
+\item 
+using \mbox{\hyperlink{classtesseract__kinematics_1_1ForwardKinematicsFactory_a33c7aac804e9ae1dbb4c7b84f611223d}{Const\+Ptr}} = std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{classtesseract__kinematics_1_1ForwardKinematicsFactory}{Forward\+Kinematics\+Factory}} $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtesseract__kinematics_1_1ForwardKinematicsFactory_a5edb4e18439e44e17b1dbcce4912c861}{Forward\+Kinematics\+Factory}} ()=default
+\item 
+virtual \mbox{\hyperlink{classtesseract__kinematics_1_1ForwardKinematicsFactory_a1e3bac25ecf4eb3c63a772399a3b76a6}{$\sim$\+Forward\+Kinematics\+Factory}} ()=default
+\item 
+\mbox{\hyperlink{classtesseract__kinematics_1_1ForwardKinematicsFactory_aa1ab1876c927c7b80443fdcabcaee722}{Forward\+Kinematics\+Factory}} (const \mbox{\hyperlink{classtesseract__kinematics_1_1ForwardKinematicsFactory}{Forward\+Kinematics\+Factory}} \&)=default
+\item 
+\mbox{\hyperlink{classtesseract__kinematics_1_1ForwardKinematicsFactory}{Forward\+Kinematics\+Factory}} \& \mbox{\hyperlink{classtesseract__kinematics_1_1ForwardKinematicsFactory_af875d2fafe46e9e74f865a3b8fc2dffb}{operator=}} (const \mbox{\hyperlink{classtesseract__kinematics_1_1ForwardKinematicsFactory}{Forward\+Kinematics\+Factory}} \&)=default
+\item 
+\mbox{\hyperlink{classtesseract__kinematics_1_1ForwardKinematicsFactory_a1ceba9b3169a72d3ada89296bd3cfe64}{Forward\+Kinematics\+Factory}} (\mbox{\hyperlink{classtesseract__kinematics_1_1ForwardKinematicsFactory}{Forward\+Kinematics\+Factory}} \&\&)=default
+\item 
+\mbox{\hyperlink{classtesseract__kinematics_1_1ForwardKinematicsFactory}{Forward\+Kinematics\+Factory}} \& \mbox{\hyperlink{classtesseract__kinematics_1_1ForwardKinematicsFactory_a112444272057d1acd3890cc6284d3a3d}{operator=}} (\mbox{\hyperlink{classtesseract__kinematics_1_1ForwardKinematicsFactory}{Forward\+Kinematics\+Factory}} \&\&)=default
+\item 
+virtual const std\+::string \& \mbox{\hyperlink{classtesseract__kinematics_1_1ForwardKinematicsFactory_a7f90de7ef1a196581d8506323c648486}{get\+Name}} () const =0
+\begin{DoxyCompactList}\small\item\em Get the name of the factory. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{namespacetesseract__kinematics_a5f1cae9822cd53cafb08d56263485069}{Forward\+Kinematics\+Factory\+Type}} \mbox{\hyperlink{classtesseract__kinematics_1_1ForwardKinematicsFactory_adf3e535f70430a2b426f749ee4eb5718}{get\+Type}} () const =0
+\begin{DoxyCompactList}\small\item\em Get the type of Forward Kinematic factory. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classtesseract__kinematics_1_1ForwardKinematics_abdb52d493e8f0c584be778ddb193ed46}{Forward\+Kinematics\+::\+Ptr}} \mbox{\hyperlink{classtesseract__kinematics_1_1ForwardKinematicsFactory_a3fdb1b929159f0bca3275390c2027996}{create}} (\mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph_a9ee303b2514bfedd8c914d09551b00ff}{tesseract\+\_\+scene\+\_\+graph\+::\+Scene\+Graph\+::\+Const\+Ptr}}, const std\+::string \&, const std\+::string \&, const std\+::string) const
+\begin{DoxyCompactList}\small\item\em Create Forward Kinematics Chain Object This only need to be implemented if of type chain. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classtesseract__kinematics_1_1ForwardKinematics_abdb52d493e8f0c584be778ddb193ed46}{Forward\+Kinematics\+::\+Ptr}} \mbox{\hyperlink{classtesseract__kinematics_1_1ForwardKinematicsFactory_a451974cce73f01682d2c7f3a8a2a79b6}{create}} (\mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph_a9ee303b2514bfedd8c914d09551b00ff}{tesseract\+\_\+scene\+\_\+graph\+::\+Scene\+Graph\+::\+Const\+Ptr}}, const std\+::vector$<$ std\+::pair$<$ std\+::string, std\+::string $>$$>$ \&, const std\+::string) const
+\begin{DoxyCompactList}\small\item\em Create Forward Kinematics Chain Object This only need to be implemented if of type chain. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classtesseract__kinematics_1_1ForwardKinematics_abdb52d493e8f0c584be778ddb193ed46}{Forward\+Kinematics\+::\+Ptr}} \mbox{\hyperlink{classtesseract__kinematics_1_1ForwardKinematicsFactory_ae6da6eadf8e52aad716be0be7a166d1c}{create}} (\mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph_a9ee303b2514bfedd8c914d09551b00ff}{tesseract\+\_\+scene\+\_\+graph\+::\+Scene\+Graph\+::\+Const\+Ptr}}, const std\+::vector$<$ std\+::string $>$ \&, const std\+::string, std\+::unordered\+\_\+map$<$ std\+::string, double $>$=std\+::unordered\+\_\+map$<$ std\+::string, double $>$()) const
+\begin{DoxyCompactList}\small\item\em Create Forward Kinematics Tree Object This only need to be implemented if of type chain. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classtesseract__kinematics_1_1ForwardKinematicsFactory_a33c7aac804e9ae1dbb4c7b84f611223d}\label{classtesseract__kinematics_1_1ForwardKinematicsFactory_a33c7aac804e9ae1dbb4c7b84f611223d}} 
+\index{tesseract\_kinematics::ForwardKinematicsFactory@{tesseract\_kinematics::ForwardKinematicsFactory}!ConstPtr@{ConstPtr}}
+\index{ConstPtr@{ConstPtr}!tesseract\_kinematics::ForwardKinematicsFactory@{tesseract\_kinematics::ForwardKinematicsFactory}}
+\doxysubsubsection{\texorpdfstring{ConstPtr}{ConstPtr}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classtesseract__kinematics_1_1ForwardKinematicsFactory_a33c7aac804e9ae1dbb4c7b84f611223d}{tesseract\+\_\+kinematics\+::\+Forward\+Kinematics\+Factory\+::\+Const\+Ptr}} =  std\+::shared\+\_\+ptr$<$const \mbox{\hyperlink{classtesseract__kinematics_1_1ForwardKinematicsFactory}{Forward\+Kinematics\+Factory}}$>$}
+
+\mbox{\Hypertarget{classtesseract__kinematics_1_1ForwardKinematicsFactory_a23856fb5482bd9d9bb6b5113a75a3123}\label{classtesseract__kinematics_1_1ForwardKinematicsFactory_a23856fb5482bd9d9bb6b5113a75a3123}} 
+\index{tesseract\_kinematics::ForwardKinematicsFactory@{tesseract\_kinematics::ForwardKinematicsFactory}!Ptr@{Ptr}}
+\index{Ptr@{Ptr}!tesseract\_kinematics::ForwardKinematicsFactory@{tesseract\_kinematics::ForwardKinematicsFactory}}
+\doxysubsubsection{\texorpdfstring{Ptr}{Ptr}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classtesseract__kinematics_1_1ForwardKinematicsFactory_a23856fb5482bd9d9bb6b5113a75a3123}{tesseract\+\_\+kinematics\+::\+Forward\+Kinematics\+Factory\+::\+Ptr}} =  std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classtesseract__kinematics_1_1ForwardKinematicsFactory}{Forward\+Kinematics\+Factory}}$>$}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtesseract__kinematics_1_1ForwardKinematicsFactory_a5edb4e18439e44e17b1dbcce4912c861}\label{classtesseract__kinematics_1_1ForwardKinematicsFactory_a5edb4e18439e44e17b1dbcce4912c861}} 
+\index{tesseract\_kinematics::ForwardKinematicsFactory@{tesseract\_kinematics::ForwardKinematicsFactory}!ForwardKinematicsFactory@{ForwardKinematicsFactory}}
+\index{ForwardKinematicsFactory@{ForwardKinematicsFactory}!tesseract\_kinematics::ForwardKinematicsFactory@{tesseract\_kinematics::ForwardKinematicsFactory}}
+\doxysubsubsection{\texorpdfstring{ForwardKinematicsFactory()}{ForwardKinematicsFactory()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily tesseract\+\_\+kinematics\+::\+Forward\+Kinematics\+Factory\+::\+Forward\+Kinematics\+Factory (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classtesseract__kinematics_1_1ForwardKinematicsFactory_a1e3bac25ecf4eb3c63a772399a3b76a6}\label{classtesseract__kinematics_1_1ForwardKinematicsFactory_a1e3bac25ecf4eb3c63a772399a3b76a6}} 
+\index{tesseract\_kinematics::ForwardKinematicsFactory@{tesseract\_kinematics::ForwardKinematicsFactory}!````~ForwardKinematicsFactory@{$\sim$ForwardKinematicsFactory}}
+\index{````~ForwardKinematicsFactory@{$\sim$ForwardKinematicsFactory}!tesseract\_kinematics::ForwardKinematicsFactory@{tesseract\_kinematics::ForwardKinematicsFactory}}
+\doxysubsubsection{\texorpdfstring{$\sim$ForwardKinematicsFactory()}{~ForwardKinematicsFactory()}}
+{\footnotesize\ttfamily virtual tesseract\+\_\+kinematics\+::\+Forward\+Kinematics\+Factory\+::$\sim$\+Forward\+Kinematics\+Factory (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+\mbox{\Hypertarget{classtesseract__kinematics_1_1ForwardKinematicsFactory_aa1ab1876c927c7b80443fdcabcaee722}\label{classtesseract__kinematics_1_1ForwardKinematicsFactory_aa1ab1876c927c7b80443fdcabcaee722}} 
+\index{tesseract\_kinematics::ForwardKinematicsFactory@{tesseract\_kinematics::ForwardKinematicsFactory}!ForwardKinematicsFactory@{ForwardKinematicsFactory}}
+\index{ForwardKinematicsFactory@{ForwardKinematicsFactory}!tesseract\_kinematics::ForwardKinematicsFactory@{tesseract\_kinematics::ForwardKinematicsFactory}}
+\doxysubsubsection{\texorpdfstring{ForwardKinematicsFactory()}{ForwardKinematicsFactory()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily tesseract\+\_\+kinematics\+::\+Forward\+Kinematics\+Factory\+::\+Forward\+Kinematics\+Factory (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtesseract__kinematics_1_1ForwardKinematicsFactory}{Forward\+Kinematics\+Factory}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classtesseract__kinematics_1_1ForwardKinematicsFactory_a1ceba9b3169a72d3ada89296bd3cfe64}\label{classtesseract__kinematics_1_1ForwardKinematicsFactory_a1ceba9b3169a72d3ada89296bd3cfe64}} 
+\index{tesseract\_kinematics::ForwardKinematicsFactory@{tesseract\_kinematics::ForwardKinematicsFactory}!ForwardKinematicsFactory@{ForwardKinematicsFactory}}
+\index{ForwardKinematicsFactory@{ForwardKinematicsFactory}!tesseract\_kinematics::ForwardKinematicsFactory@{tesseract\_kinematics::ForwardKinematicsFactory}}
+\doxysubsubsection{\texorpdfstring{ForwardKinematicsFactory()}{ForwardKinematicsFactory()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily tesseract\+\_\+kinematics\+::\+Forward\+Kinematics\+Factory\+::\+Forward\+Kinematics\+Factory (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtesseract__kinematics_1_1ForwardKinematicsFactory}{Forward\+Kinematics\+Factory}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtesseract__kinematics_1_1ForwardKinematicsFactory_a3fdb1b929159f0bca3275390c2027996}\label{classtesseract__kinematics_1_1ForwardKinematicsFactory_a3fdb1b929159f0bca3275390c2027996}} 
+\index{tesseract\_kinematics::ForwardKinematicsFactory@{tesseract\_kinematics::ForwardKinematicsFactory}!create@{create}}
+\index{create@{create}!tesseract\_kinematics::ForwardKinematicsFactory@{tesseract\_kinematics::ForwardKinematicsFactory}}
+\doxysubsubsection{\texorpdfstring{create()}{create()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classtesseract__kinematics_1_1ForwardKinematics_abdb52d493e8f0c584be778ddb193ed46}{Forward\+Kinematics\+::\+Ptr}} tesseract\+\_\+kinematics\+::\+Forward\+Kinematics\+Factory\+::create (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph_a9ee303b2514bfedd8c914d09551b00ff}{tesseract\+\_\+scene\+\_\+graph\+::\+Scene\+Graph\+::\+Const\+Ptr}}}]{,  }\item[{const std\+::string \&}]{,  }\item[{const std\+::string \&}]{,  }\item[{const std\+::string}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Create Forward Kinematics Chain Object This only need to be implemented if of type chain. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scene\+\_\+graph} & The Tesseract Scene Graph \\
+\hline
+{\em base\+\_\+link} & The name of the base link for the kinematic chain \\
+\hline
+{\em tip\+\_\+link} & The name of the tip link for the kinematic chain \\
+\hline
+{\em name} & The name of the kinematic chain \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+If failed to create, nullptr is returned. 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classtesseract__kinematics_1_1KDLFwdKinChainFactory_ae1327a787f2bcfbd0781dab68920f7e1}{tesseract\+\_\+kinematics\+::\+K\+D\+L\+Fwd\+Kin\+Chain\+Factory}}.
+
+\mbox{\Hypertarget{classtesseract__kinematics_1_1ForwardKinematicsFactory_a451974cce73f01682d2c7f3a8a2a79b6}\label{classtesseract__kinematics_1_1ForwardKinematicsFactory_a451974cce73f01682d2c7f3a8a2a79b6}} 
+\index{tesseract\_kinematics::ForwardKinematicsFactory@{tesseract\_kinematics::ForwardKinematicsFactory}!create@{create}}
+\index{create@{create}!tesseract\_kinematics::ForwardKinematicsFactory@{tesseract\_kinematics::ForwardKinematicsFactory}}
+\doxysubsubsection{\texorpdfstring{create()}{create()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classtesseract__kinematics_1_1ForwardKinematics_abdb52d493e8f0c584be778ddb193ed46}{Forward\+Kinematics\+::\+Ptr}} tesseract\+\_\+kinematics\+::\+Forward\+Kinematics\+Factory\+::create (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph_a9ee303b2514bfedd8c914d09551b00ff}{tesseract\+\_\+scene\+\_\+graph\+::\+Scene\+Graph\+::\+Const\+Ptr}}}]{,  }\item[{const std\+::vector$<$ std\+::pair$<$ std\+::string, std\+::string $>$$>$ \&}]{,  }\item[{const std\+::string}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Create Forward Kinematics Chain Object This only need to be implemented if of type chain. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scene\+\_\+graph} & The Tesseract Scene Graph \\
+\hline
+{\em chains} & The chains that make up the kinematic chain \\
+\hline
+{\em name} & The name of the kinematic chain \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+If failed to create, nullptr is returned. 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classtesseract__kinematics_1_1KDLFwdKinChainFactory_a371d9af3b8e88c54123b380cf1407ab7}{tesseract\+\_\+kinematics\+::\+K\+D\+L\+Fwd\+Kin\+Chain\+Factory}}.
+
+\mbox{\Hypertarget{classtesseract__kinematics_1_1ForwardKinematicsFactory_ae6da6eadf8e52aad716be0be7a166d1c}\label{classtesseract__kinematics_1_1ForwardKinematicsFactory_ae6da6eadf8e52aad716be0be7a166d1c}} 
+\index{tesseract\_kinematics::ForwardKinematicsFactory@{tesseract\_kinematics::ForwardKinematicsFactory}!create@{create}}
+\index{create@{create}!tesseract\_kinematics::ForwardKinematicsFactory@{tesseract\_kinematics::ForwardKinematicsFactory}}
+\doxysubsubsection{\texorpdfstring{create()}{create()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classtesseract__kinematics_1_1ForwardKinematics_abdb52d493e8f0c584be778ddb193ed46}{Forward\+Kinematics\+::\+Ptr}} tesseract\+\_\+kinematics\+::\+Forward\+Kinematics\+Factory\+::create (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph_a9ee303b2514bfedd8c914d09551b00ff}{tesseract\+\_\+scene\+\_\+graph\+::\+Scene\+Graph\+::\+Const\+Ptr}}}]{,  }\item[{const std\+::vector$<$ std\+::string $>$ \&}]{,  }\item[{const std\+::string}]{,  }\item[{std\+::unordered\+\_\+map$<$ std\+::string, double $>$}]{ = {\ttfamily std\+:\+:unordered\+\_\+map$<$std\+:\+:string,~double$>$()} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Create Forward Kinematics Tree Object This only need to be implemented if of type chain. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scene\+\_\+graph} & The tesseract scene graph \\
+\hline
+{\em joint\+\_\+names} & The list of active joints to be considered \\
+\hline
+{\em name} & The name of the kinematic chain \\
+\hline
+{\em start\+\_\+state} & The initial start state for the tree. This should inlclude all joints in the scene graph \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+If failed to create, nullptr is returned. 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classtesseract__kinematics_1_1KDLFwdKinTreeFactory_a737ca713af88f41a9d26fc11d60fd734}{tesseract\+\_\+kinematics\+::\+K\+D\+L\+Fwd\+Kin\+Tree\+Factory}}.
+
+\mbox{\Hypertarget{classtesseract__kinematics_1_1ForwardKinematicsFactory_a7f90de7ef1a196581d8506323c648486}\label{classtesseract__kinematics_1_1ForwardKinematicsFactory_a7f90de7ef1a196581d8506323c648486}} 
+\index{tesseract\_kinematics::ForwardKinematicsFactory@{tesseract\_kinematics::ForwardKinematicsFactory}!getName@{getName}}
+\index{getName@{getName}!tesseract\_kinematics::ForwardKinematicsFactory@{tesseract\_kinematics::ForwardKinematicsFactory}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily virtual const std\+::string\& tesseract\+\_\+kinematics\+::\+Forward\+Kinematics\+Factory\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Get the name of the factory. 
+
+\begin{DoxyReturn}{Returns}
+The name 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classtesseract__kinematics_1_1KDLFwdKinChainFactory_ade21030bac1d6d7d3fbc46e3e581f909}{tesseract\+\_\+kinematics\+::\+K\+D\+L\+Fwd\+Kin\+Chain\+Factory}}, and \mbox{\hyperlink{classtesseract__kinematics_1_1KDLFwdKinTreeFactory_a488c54f5fd6b2c7ec3fc9c77364b927d}{tesseract\+\_\+kinematics\+::\+K\+D\+L\+Fwd\+Kin\+Tree\+Factory}}.
+
+\mbox{\Hypertarget{classtesseract__kinematics_1_1ForwardKinematicsFactory_adf3e535f70430a2b426f749ee4eb5718}\label{classtesseract__kinematics_1_1ForwardKinematicsFactory_adf3e535f70430a2b426f749ee4eb5718}} 
+\index{tesseract\_kinematics::ForwardKinematicsFactory@{tesseract\_kinematics::ForwardKinematicsFactory}!getType@{getType}}
+\index{getType@{getType}!tesseract\_kinematics::ForwardKinematicsFactory@{tesseract\_kinematics::ForwardKinematicsFactory}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{namespacetesseract__kinematics_a5f1cae9822cd53cafb08d56263485069}{Forward\+Kinematics\+Factory\+Type}} tesseract\+\_\+kinematics\+::\+Forward\+Kinematics\+Factory\+::get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Get the type of Forward Kinematic factory. 
+
+\begin{DoxyReturn}{Returns}
+Type \{C\+H\+A\+IN, T\+R\+EE, G\+R\+A\+PH\} 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classtesseract__kinematics_1_1KDLFwdKinChainFactory_ae355082fbf538bc6b9e52e4388ab8f71}{tesseract\+\_\+kinematics\+::\+K\+D\+L\+Fwd\+Kin\+Chain\+Factory}}, and \mbox{\hyperlink{classtesseract__kinematics_1_1KDLFwdKinTreeFactory_a013beca6901605755f338e31d7ddcb56}{tesseract\+\_\+kinematics\+::\+K\+D\+L\+Fwd\+Kin\+Tree\+Factory}}.
+
+\mbox{\Hypertarget{classtesseract__kinematics_1_1ForwardKinematicsFactory_af875d2fafe46e9e74f865a3b8fc2dffb}\label{classtesseract__kinematics_1_1ForwardKinematicsFactory_af875d2fafe46e9e74f865a3b8fc2dffb}} 
+\index{tesseract\_kinematics::ForwardKinematicsFactory@{tesseract\_kinematics::ForwardKinematicsFactory}!operator=@{operator=}}
+\index{operator=@{operator=}!tesseract\_kinematics::ForwardKinematicsFactory@{tesseract\_kinematics::ForwardKinematicsFactory}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__kinematics_1_1ForwardKinematicsFactory}{Forward\+Kinematics\+Factory}}\& tesseract\+\_\+kinematics\+::\+Forward\+Kinematics\+Factory\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtesseract__kinematics_1_1ForwardKinematicsFactory}{Forward\+Kinematics\+Factory}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classtesseract__kinematics_1_1ForwardKinematicsFactory_a112444272057d1acd3890cc6284d3a3d}\label{classtesseract__kinematics_1_1ForwardKinematicsFactory_a112444272057d1acd3890cc6284d3a3d}} 
+\index{tesseract\_kinematics::ForwardKinematicsFactory@{tesseract\_kinematics::ForwardKinematicsFactory}!operator=@{operator=}}
+\index{operator=@{operator=}!tesseract\_kinematics::ForwardKinematicsFactory@{tesseract\_kinematics::ForwardKinematicsFactory}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__kinematics_1_1ForwardKinematicsFactory}{Forward\+Kinematics\+Factory}}\& tesseract\+\_\+kinematics\+::\+Forward\+Kinematics\+Factory\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtesseract__kinematics_1_1ForwardKinematicsFactory}{Forward\+Kinematics\+Factory}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+tesseract/tesseract\+\_\+kinematics/include/tesseract\+\_\+kinematics/core/\mbox{\hyperlink{forward__kinematics__factory_8h}{forward\+\_\+kinematics\+\_\+factory.\+h}}\end{DoxyCompactItemize}

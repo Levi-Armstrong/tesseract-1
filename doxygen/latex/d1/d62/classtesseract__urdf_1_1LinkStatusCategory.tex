@@ -1,0 +1,121 @@
+\hypertarget{classtesseract__urdf_1_1LinkStatusCategory}{}\doxysection{tesseract\+\_\+urdf\+::Link\+Status\+Category Class Reference}
+\label{classtesseract__urdf_1_1LinkStatusCategory}\index{tesseract\_urdf::LinkStatusCategory@{tesseract\_urdf::LinkStatusCategory}}
+
+
+{\ttfamily \#include $<$link.\+h$>$}
+
+Inheritance diagram for tesseract\+\_\+urdf\+::Link\+Status\+Category\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{d1/d62/classtesseract__urdf_1_1LinkStatusCategory}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \newline
+\mbox{\hyperlink{classtesseract__urdf_1_1LinkStatusCategory_ae455a0ad22bc518afdc03f9b5cef0167a50c1a11eb1cf412fa7f2a2608dfd5018}{Success}} = 0, 
+\mbox{\hyperlink{classtesseract__urdf_1_1LinkStatusCategory_ae455a0ad22bc518afdc03f9b5cef0167a5bda9838d619c97c362114e41ac8af71}{Error\+Attribute\+Name}} = -\/1, 
+\mbox{\hyperlink{classtesseract__urdf_1_1LinkStatusCategory_ae455a0ad22bc518afdc03f9b5cef0167a50f25f75ce2cd398b62d96c2f187b5d3}{Error\+Parsing\+Inertial\+Element}} = -\/2, 
+\mbox{\hyperlink{classtesseract__urdf_1_1LinkStatusCategory_ae455a0ad22bc518afdc03f9b5cef0167ad951a802c836c0c94f0b5370cbbb80bc}{Error\+Parsing\+Visual\+Element}} = -\/3, 
+\newline
+\mbox{\hyperlink{classtesseract__urdf_1_1LinkStatusCategory_ae455a0ad22bc518afdc03f9b5cef0167af9ca900c8285389c2c0fb022017adcc4}{Error\+Parsing\+Collision\+Element}} = -\/4
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtesseract__urdf_1_1LinkStatusCategory_ae6108023bce9fd324ca9c724f479e0b1}{Link\+Status\+Category}} (std\+::string link\+\_\+name=\char`\"{}\char`\"{})
+\item 
+const std\+::string \& \mbox{\hyperlink{classtesseract__urdf_1_1LinkStatusCategory_aeaf1ff6fb2f18c310231b0db5b0f2e91}{name}} () const noexcept override
+\item 
+std\+::string \mbox{\hyperlink{classtesseract__urdf_1_1LinkStatusCategory_adab442890c8aab0005fc08468cf3b810}{message}} (int code) const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classtesseract__urdf_1_1LinkStatusCategory_a5a1fbde5f78f1b1c8f567ade0b80285a}{name\+\_\+}}
+\item 
+std\+::string \mbox{\hyperlink{classtesseract__urdf_1_1LinkStatusCategory_a2aa135f074f4f6542f204cc791e451e7}{link\+\_\+name\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classtesseract__urdf_1_1LinkStatusCategory_ae455a0ad22bc518afdc03f9b5cef0167}\label{classtesseract__urdf_1_1LinkStatusCategory_ae455a0ad22bc518afdc03f9b5cef0167}} 
+\doxysubsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily anonymous enum}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Success@{Success}!tesseract\_urdf::LinkStatusCategory@{tesseract\_urdf::LinkStatusCategory}}\index{tesseract\_urdf::LinkStatusCategory@{tesseract\_urdf::LinkStatusCategory}!Success@{Success}}}\mbox{\Hypertarget{classtesseract__urdf_1_1LinkStatusCategory_ae455a0ad22bc518afdc03f9b5cef0167a50c1a11eb1cf412fa7f2a2608dfd5018}\label{classtesseract__urdf_1_1LinkStatusCategory_ae455a0ad22bc518afdc03f9b5cef0167a50c1a11eb1cf412fa7f2a2608dfd5018}} 
+Success&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ErrorAttributeName@{ErrorAttributeName}!tesseract\_urdf::LinkStatusCategory@{tesseract\_urdf::LinkStatusCategory}}\index{tesseract\_urdf::LinkStatusCategory@{tesseract\_urdf::LinkStatusCategory}!ErrorAttributeName@{ErrorAttributeName}}}\mbox{\Hypertarget{classtesseract__urdf_1_1LinkStatusCategory_ae455a0ad22bc518afdc03f9b5cef0167a5bda9838d619c97c362114e41ac8af71}\label{classtesseract__urdf_1_1LinkStatusCategory_ae455a0ad22bc518afdc03f9b5cef0167a5bda9838d619c97c362114e41ac8af71}} 
+Error\+Attribute\+Name&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ErrorParsingInertialElement@{ErrorParsingInertialElement}!tesseract\_urdf::LinkStatusCategory@{tesseract\_urdf::LinkStatusCategory}}\index{tesseract\_urdf::LinkStatusCategory@{tesseract\_urdf::LinkStatusCategory}!ErrorParsingInertialElement@{ErrorParsingInertialElement}}}\mbox{\Hypertarget{classtesseract__urdf_1_1LinkStatusCategory_ae455a0ad22bc518afdc03f9b5cef0167a50f25f75ce2cd398b62d96c2f187b5d3}\label{classtesseract__urdf_1_1LinkStatusCategory_ae455a0ad22bc518afdc03f9b5cef0167a50f25f75ce2cd398b62d96c2f187b5d3}} 
+Error\+Parsing\+Inertial\+Element&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ErrorParsingVisualElement@{ErrorParsingVisualElement}!tesseract\_urdf::LinkStatusCategory@{tesseract\_urdf::LinkStatusCategory}}\index{tesseract\_urdf::LinkStatusCategory@{tesseract\_urdf::LinkStatusCategory}!ErrorParsingVisualElement@{ErrorParsingVisualElement}}}\mbox{\Hypertarget{classtesseract__urdf_1_1LinkStatusCategory_ae455a0ad22bc518afdc03f9b5cef0167ad951a802c836c0c94f0b5370cbbb80bc}\label{classtesseract__urdf_1_1LinkStatusCategory_ae455a0ad22bc518afdc03f9b5cef0167ad951a802c836c0c94f0b5370cbbb80bc}} 
+Error\+Parsing\+Visual\+Element&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ErrorParsingCollisionElement@{ErrorParsingCollisionElement}!tesseract\_urdf::LinkStatusCategory@{tesseract\_urdf::LinkStatusCategory}}\index{tesseract\_urdf::LinkStatusCategory@{tesseract\_urdf::LinkStatusCategory}!ErrorParsingCollisionElement@{ErrorParsingCollisionElement}}}\mbox{\Hypertarget{classtesseract__urdf_1_1LinkStatusCategory_ae455a0ad22bc518afdc03f9b5cef0167af9ca900c8285389c2c0fb022017adcc4}\label{classtesseract__urdf_1_1LinkStatusCategory_ae455a0ad22bc518afdc03f9b5cef0167af9ca900c8285389c2c0fb022017adcc4}} 
+Error\+Parsing\+Collision\+Element&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtesseract__urdf_1_1LinkStatusCategory_ae6108023bce9fd324ca9c724f479e0b1}\label{classtesseract__urdf_1_1LinkStatusCategory_ae6108023bce9fd324ca9c724f479e0b1}} 
+\index{tesseract\_urdf::LinkStatusCategory@{tesseract\_urdf::LinkStatusCategory}!LinkStatusCategory@{LinkStatusCategory}}
+\index{LinkStatusCategory@{LinkStatusCategory}!tesseract\_urdf::LinkStatusCategory@{tesseract\_urdf::LinkStatusCategory}}
+\doxysubsubsection{\texorpdfstring{LinkStatusCategory()}{LinkStatusCategory()}}
+{\footnotesize\ttfamily tesseract\+\_\+urdf\+::\+Link\+Status\+Category\+::\+Link\+Status\+Category (\begin{DoxyParamCaption}\item[{std\+::string}]{link\+\_\+name = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtesseract__urdf_1_1LinkStatusCategory_adab442890c8aab0005fc08468cf3b810}\label{classtesseract__urdf_1_1LinkStatusCategory_adab442890c8aab0005fc08468cf3b810}} 
+\index{tesseract\_urdf::LinkStatusCategory@{tesseract\_urdf::LinkStatusCategory}!message@{message}}
+\index{message@{message}!tesseract\_urdf::LinkStatusCategory@{tesseract\_urdf::LinkStatusCategory}}
+\doxysubsubsection{\texorpdfstring{message()}{message()}}
+{\footnotesize\ttfamily std\+::string tesseract\+\_\+urdf\+::\+Link\+Status\+Category\+::message (\begin{DoxyParamCaption}\item[{int}]{code }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classtesseract__common_1_1StatusCategory_a1b243ec0e046910ceac90403190b45ac}{tesseract\+\_\+common\+::\+Status\+Category}}.
+
+\mbox{\Hypertarget{classtesseract__urdf_1_1LinkStatusCategory_aeaf1ff6fb2f18c310231b0db5b0f2e91}\label{classtesseract__urdf_1_1LinkStatusCategory_aeaf1ff6fb2f18c310231b0db5b0f2e91}} 
+\index{tesseract\_urdf::LinkStatusCategory@{tesseract\_urdf::LinkStatusCategory}!name@{name}}
+\index{name@{name}!tesseract\_urdf::LinkStatusCategory@{tesseract\_urdf::LinkStatusCategory}}
+\doxysubsubsection{\texorpdfstring{name()}{name()}}
+{\footnotesize\ttfamily const std\+::string\& tesseract\+\_\+urdf\+::\+Link\+Status\+Category\+::name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}, {\ttfamily [noexcept]}}
+
+
+
+Implements \mbox{\hyperlink{classtesseract__common_1_1StatusCategory_ae08466c99a1e92f904141e5a070382e5}{tesseract\+\_\+common\+::\+Status\+Category}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classtesseract__urdf_1_1LinkStatusCategory_a2aa135f074f4f6542f204cc791e451e7}\label{classtesseract__urdf_1_1LinkStatusCategory_a2aa135f074f4f6542f204cc791e451e7}} 
+\index{tesseract\_urdf::LinkStatusCategory@{tesseract\_urdf::LinkStatusCategory}!link\_name\_@{link\_name\_}}
+\index{link\_name\_@{link\_name\_}!tesseract\_urdf::LinkStatusCategory@{tesseract\_urdf::LinkStatusCategory}}
+\doxysubsubsection{\texorpdfstring{link\_name\_}{link\_name\_}}
+{\footnotesize\ttfamily std\+::string tesseract\+\_\+urdf\+::\+Link\+Status\+Category\+::link\+\_\+name\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classtesseract__urdf_1_1LinkStatusCategory_a5a1fbde5f78f1b1c8f567ade0b80285a}\label{classtesseract__urdf_1_1LinkStatusCategory_a5a1fbde5f78f1b1c8f567ade0b80285a}} 
+\index{tesseract\_urdf::LinkStatusCategory@{tesseract\_urdf::LinkStatusCategory}!name\_@{name\_}}
+\index{name\_@{name\_}!tesseract\_urdf::LinkStatusCategory@{tesseract\_urdf::LinkStatusCategory}}
+\doxysubsubsection{\texorpdfstring{name\_}{name\_}}
+{\footnotesize\ttfamily std\+::string tesseract\+\_\+urdf\+::\+Link\+Status\+Category\+::name\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+tesseract/tesseract\+\_\+urdf/include/tesseract\+\_\+urdf/\mbox{\hyperlink{tesseract__urdf_2include_2tesseract__urdf_2link_8h}{link.\+h}}\end{DoxyCompactItemize}

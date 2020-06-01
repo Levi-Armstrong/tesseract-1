@@ -1,0 +1,118 @@
+\hypertarget{classtesseract__urdf_1_1DynamicsStatusCategory}{}\doxysection{tesseract\+\_\+urdf\+::Dynamics\+Status\+Category Class Reference}
+\label{classtesseract__urdf_1_1DynamicsStatusCategory}\index{tesseract\_urdf::DynamicsStatusCategory@{tesseract\_urdf::DynamicsStatusCategory}}
+
+
+{\ttfamily \#include $<$dynamics.\+h$>$}
+
+Inheritance diagram for tesseract\+\_\+urdf\+::Dynamics\+Status\+Category\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{de/d65/classtesseract__urdf_1_1DynamicsStatusCategory}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \newline
+\mbox{\hyperlink{classtesseract__urdf_1_1DynamicsStatusCategory_a05f49c7e2546faf8f12a0d0e99bc7276a2e009624b243cbb06cd699cd878a1b95}{Missing\+Attribute\+Damping}} = 2, 
+\mbox{\hyperlink{classtesseract__urdf_1_1DynamicsStatusCategory_a05f49c7e2546faf8f12a0d0e99bc7276a356c5321994a3cd256d0987eab55686d}{Missing\+Attribute\+Friction}} = 1, 
+\mbox{\hyperlink{classtesseract__urdf_1_1DynamicsStatusCategory_a05f49c7e2546faf8f12a0d0e99bc7276a759f6224a3d5a12937ab25ecc2c253b3}{Success}} = 0, 
+\mbox{\hyperlink{classtesseract__urdf_1_1DynamicsStatusCategory_a05f49c7e2546faf8f12a0d0e99bc7276a9065de383de92022a1380b892520f797}{Error\+Missing\+Attribute\+Damping\+And\+Friction}} = -\/1, 
+\newline
+\mbox{\hyperlink{classtesseract__urdf_1_1DynamicsStatusCategory_a05f49c7e2546faf8f12a0d0e99bc7276a83366305a4a45c2b5ad15252f1273e8e}{Error\+Parsing\+Attribute\+Damping}} = -\/2, 
+\mbox{\hyperlink{classtesseract__urdf_1_1DynamicsStatusCategory_a05f49c7e2546faf8f12a0d0e99bc7276a013d61e59d63442dc4873c6ddbb8c560}{Error\+Parsing\+Attribute\+Friction}} = -\/3
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtesseract__urdf_1_1DynamicsStatusCategory_a79dec7d56e087078bcbc6d9b0d9917fa}{Dynamics\+Status\+Category}} ()
+\item 
+const std\+::string \& \mbox{\hyperlink{classtesseract__urdf_1_1DynamicsStatusCategory_a3b5e6a9dc9316db902cdcd029d9f87c0}{name}} () const noexcept override
+\item 
+std\+::string \mbox{\hyperlink{classtesseract__urdf_1_1DynamicsStatusCategory_aa6ee530b971cd54cbe12c2fb8601563e}{message}} (int code) const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classtesseract__urdf_1_1DynamicsStatusCategory_af8432fcc8fe9b07689697a82998468eb}{name\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classtesseract__urdf_1_1DynamicsStatusCategory_a05f49c7e2546faf8f12a0d0e99bc7276}\label{classtesseract__urdf_1_1DynamicsStatusCategory_a05f49c7e2546faf8f12a0d0e99bc7276}} 
+\doxysubsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily anonymous enum}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MissingAttributeDamping@{MissingAttributeDamping}!tesseract\_urdf::DynamicsStatusCategory@{tesseract\_urdf::DynamicsStatusCategory}}\index{tesseract\_urdf::DynamicsStatusCategory@{tesseract\_urdf::DynamicsStatusCategory}!MissingAttributeDamping@{MissingAttributeDamping}}}\mbox{\Hypertarget{classtesseract__urdf_1_1DynamicsStatusCategory_a05f49c7e2546faf8f12a0d0e99bc7276a2e009624b243cbb06cd699cd878a1b95}\label{classtesseract__urdf_1_1DynamicsStatusCategory_a05f49c7e2546faf8f12a0d0e99bc7276a2e009624b243cbb06cd699cd878a1b95}} 
+Missing\+Attribute\+Damping&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MissingAttributeFriction@{MissingAttributeFriction}!tesseract\_urdf::DynamicsStatusCategory@{tesseract\_urdf::DynamicsStatusCategory}}\index{tesseract\_urdf::DynamicsStatusCategory@{tesseract\_urdf::DynamicsStatusCategory}!MissingAttributeFriction@{MissingAttributeFriction}}}\mbox{\Hypertarget{classtesseract__urdf_1_1DynamicsStatusCategory_a05f49c7e2546faf8f12a0d0e99bc7276a356c5321994a3cd256d0987eab55686d}\label{classtesseract__urdf_1_1DynamicsStatusCategory_a05f49c7e2546faf8f12a0d0e99bc7276a356c5321994a3cd256d0987eab55686d}} 
+Missing\+Attribute\+Friction&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Success@{Success}!tesseract\_urdf::DynamicsStatusCategory@{tesseract\_urdf::DynamicsStatusCategory}}\index{tesseract\_urdf::DynamicsStatusCategory@{tesseract\_urdf::DynamicsStatusCategory}!Success@{Success}}}\mbox{\Hypertarget{classtesseract__urdf_1_1DynamicsStatusCategory_a05f49c7e2546faf8f12a0d0e99bc7276a759f6224a3d5a12937ab25ecc2c253b3}\label{classtesseract__urdf_1_1DynamicsStatusCategory_a05f49c7e2546faf8f12a0d0e99bc7276a759f6224a3d5a12937ab25ecc2c253b3}} 
+Success&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ErrorMissingAttributeDampingAndFriction@{ErrorMissingAttributeDampingAndFriction}!tesseract\_urdf::DynamicsStatusCategory@{tesseract\_urdf::DynamicsStatusCategory}}\index{tesseract\_urdf::DynamicsStatusCategory@{tesseract\_urdf::DynamicsStatusCategory}!ErrorMissingAttributeDampingAndFriction@{ErrorMissingAttributeDampingAndFriction}}}\mbox{\Hypertarget{classtesseract__urdf_1_1DynamicsStatusCategory_a05f49c7e2546faf8f12a0d0e99bc7276a9065de383de92022a1380b892520f797}\label{classtesseract__urdf_1_1DynamicsStatusCategory_a05f49c7e2546faf8f12a0d0e99bc7276a9065de383de92022a1380b892520f797}} 
+Error\+Missing\+Attribute\+Damping\+And\+Friction&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ErrorParsingAttributeDamping@{ErrorParsingAttributeDamping}!tesseract\_urdf::DynamicsStatusCategory@{tesseract\_urdf::DynamicsStatusCategory}}\index{tesseract\_urdf::DynamicsStatusCategory@{tesseract\_urdf::DynamicsStatusCategory}!ErrorParsingAttributeDamping@{ErrorParsingAttributeDamping}}}\mbox{\Hypertarget{classtesseract__urdf_1_1DynamicsStatusCategory_a05f49c7e2546faf8f12a0d0e99bc7276a83366305a4a45c2b5ad15252f1273e8e}\label{classtesseract__urdf_1_1DynamicsStatusCategory_a05f49c7e2546faf8f12a0d0e99bc7276a83366305a4a45c2b5ad15252f1273e8e}} 
+Error\+Parsing\+Attribute\+Damping&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ErrorParsingAttributeFriction@{ErrorParsingAttributeFriction}!tesseract\_urdf::DynamicsStatusCategory@{tesseract\_urdf::DynamicsStatusCategory}}\index{tesseract\_urdf::DynamicsStatusCategory@{tesseract\_urdf::DynamicsStatusCategory}!ErrorParsingAttributeFriction@{ErrorParsingAttributeFriction}}}\mbox{\Hypertarget{classtesseract__urdf_1_1DynamicsStatusCategory_a05f49c7e2546faf8f12a0d0e99bc7276a013d61e59d63442dc4873c6ddbb8c560}\label{classtesseract__urdf_1_1DynamicsStatusCategory_a05f49c7e2546faf8f12a0d0e99bc7276a013d61e59d63442dc4873c6ddbb8c560}} 
+Error\+Parsing\+Attribute\+Friction&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtesseract__urdf_1_1DynamicsStatusCategory_a79dec7d56e087078bcbc6d9b0d9917fa}\label{classtesseract__urdf_1_1DynamicsStatusCategory_a79dec7d56e087078bcbc6d9b0d9917fa}} 
+\index{tesseract\_urdf::DynamicsStatusCategory@{tesseract\_urdf::DynamicsStatusCategory}!DynamicsStatusCategory@{DynamicsStatusCategory}}
+\index{DynamicsStatusCategory@{DynamicsStatusCategory}!tesseract\_urdf::DynamicsStatusCategory@{tesseract\_urdf::DynamicsStatusCategory}}
+\doxysubsubsection{\texorpdfstring{DynamicsStatusCategory()}{DynamicsStatusCategory()}}
+{\footnotesize\ttfamily tesseract\+\_\+urdf\+::\+Dynamics\+Status\+Category\+::\+Dynamics\+Status\+Category (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtesseract__urdf_1_1DynamicsStatusCategory_aa6ee530b971cd54cbe12c2fb8601563e}\label{classtesseract__urdf_1_1DynamicsStatusCategory_aa6ee530b971cd54cbe12c2fb8601563e}} 
+\index{tesseract\_urdf::DynamicsStatusCategory@{tesseract\_urdf::DynamicsStatusCategory}!message@{message}}
+\index{message@{message}!tesseract\_urdf::DynamicsStatusCategory@{tesseract\_urdf::DynamicsStatusCategory}}
+\doxysubsubsection{\texorpdfstring{message()}{message()}}
+{\footnotesize\ttfamily std\+::string tesseract\+\_\+urdf\+::\+Dynamics\+Status\+Category\+::message (\begin{DoxyParamCaption}\item[{int}]{code }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classtesseract__common_1_1StatusCategory_a1b243ec0e046910ceac90403190b45ac}{tesseract\+\_\+common\+::\+Status\+Category}}.
+
+\mbox{\Hypertarget{classtesseract__urdf_1_1DynamicsStatusCategory_a3b5e6a9dc9316db902cdcd029d9f87c0}\label{classtesseract__urdf_1_1DynamicsStatusCategory_a3b5e6a9dc9316db902cdcd029d9f87c0}} 
+\index{tesseract\_urdf::DynamicsStatusCategory@{tesseract\_urdf::DynamicsStatusCategory}!name@{name}}
+\index{name@{name}!tesseract\_urdf::DynamicsStatusCategory@{tesseract\_urdf::DynamicsStatusCategory}}
+\doxysubsubsection{\texorpdfstring{name()}{name()}}
+{\footnotesize\ttfamily const std\+::string\& tesseract\+\_\+urdf\+::\+Dynamics\+Status\+Category\+::name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}, {\ttfamily [noexcept]}}
+
+
+
+Implements \mbox{\hyperlink{classtesseract__common_1_1StatusCategory_ae08466c99a1e92f904141e5a070382e5}{tesseract\+\_\+common\+::\+Status\+Category}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classtesseract__urdf_1_1DynamicsStatusCategory_af8432fcc8fe9b07689697a82998468eb}\label{classtesseract__urdf_1_1DynamicsStatusCategory_af8432fcc8fe9b07689697a82998468eb}} 
+\index{tesseract\_urdf::DynamicsStatusCategory@{tesseract\_urdf::DynamicsStatusCategory}!name\_@{name\_}}
+\index{name\_@{name\_}!tesseract\_urdf::DynamicsStatusCategory@{tesseract\_urdf::DynamicsStatusCategory}}
+\doxysubsubsection{\texorpdfstring{name\_}{name\_}}
+{\footnotesize\ttfamily std\+::string tesseract\+\_\+urdf\+::\+Dynamics\+Status\+Category\+::name\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+tesseract/tesseract\+\_\+urdf/include/tesseract\+\_\+urdf/\mbox{\hyperlink{dynamics_8h}{dynamics.\+h}}\end{DoxyCompactItemize}

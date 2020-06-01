@@ -1,0 +1,224 @@
+\hypertarget{structtesseract__motion__planners_1_1TrajOptPlannerConfig}{}\doxysection{tesseract\+\_\+motion\+\_\+planners\+::Traj\+Opt\+Planner\+Config Struct Reference}
+\label{structtesseract__motion__planners_1_1TrajOptPlannerConfig}\index{tesseract\_motion\_planners::TrajOptPlannerConfig@{tesseract\_motion\_planners::TrajOptPlannerConfig}}
+
+
+The Traj\+Opt\+Planner\+Config\+Base struct.  
+
+
+
+
+{\ttfamily \#include $<$trajopt\+\_\+planner\+\_\+config.\+h$>$}
+
+Inheritance diagram for tesseract\+\_\+motion\+\_\+planners\+::Traj\+Opt\+Planner\+Config\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{d4/db2/structtesseract__motion__planners_1_1TrajOptPlannerConfig}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{structtesseract__motion__planners_1_1TrajOptPlannerConfig_a4af8ad8c88159ba67a6cfdab4af195a6}{Ptr}} = std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structtesseract__motion__planners_1_1TrajOptPlannerConfig}{Traj\+Opt\+Planner\+Config}} $>$
+\item 
+using \mbox{\hyperlink{structtesseract__motion__planners_1_1TrajOptPlannerConfig_aac7002b625993d6ba960a7f425b5131e}{Const\+Ptr}} = std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{structtesseract__motion__planners_1_1TrajOptPlannerConfig}{Traj\+Opt\+Planner\+Config}} $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structtesseract__motion__planners_1_1TrajOptPlannerConfig_a76d6e4d16d2059dc27c5af2037dc22a7}{Traj\+Opt\+Planner\+Config}} ()=default
+\item 
+\mbox{\hyperlink{structtesseract__motion__planners_1_1TrajOptPlannerConfig_a976ad428bb5d87508cccfeb7122451f6}{Traj\+Opt\+Planner\+Config}} (trajopt\+::\+Traj\+Opt\+Prob\+::\+Ptr problem)
+\item 
+virtual \mbox{\hyperlink{structtesseract__motion__planners_1_1TrajOptPlannerConfig_a0a21f5b6b5734415c07bfa82284315aa}{$\sim$\+Traj\+Opt\+Planner\+Config}} ()=default
+\item 
+\mbox{\hyperlink{structtesseract__motion__planners_1_1TrajOptPlannerConfig_a9fa5c5f74302cba5bb85c6bd276d0910}{Traj\+Opt\+Planner\+Config}} (const \mbox{\hyperlink{structtesseract__motion__planners_1_1TrajOptPlannerConfig}{Traj\+Opt\+Planner\+Config}} \&)=default
+\item 
+\mbox{\hyperlink{structtesseract__motion__planners_1_1TrajOptPlannerConfig}{Traj\+Opt\+Planner\+Config}} \& \mbox{\hyperlink{structtesseract__motion__planners_1_1TrajOptPlannerConfig_ab46b623b6e098bdd157b83e2eb380991}{operator=}} (const \mbox{\hyperlink{structtesseract__motion__planners_1_1TrajOptPlannerConfig}{Traj\+Opt\+Planner\+Config}} \&)=default
+\item 
+\mbox{\hyperlink{structtesseract__motion__planners_1_1TrajOptPlannerConfig_a61da69288749dda46d93677579f42ca2}{Traj\+Opt\+Planner\+Config}} (\mbox{\hyperlink{structtesseract__motion__planners_1_1TrajOptPlannerConfig}{Traj\+Opt\+Planner\+Config}} \&\&)=default
+\item 
+\mbox{\hyperlink{structtesseract__motion__planners_1_1TrajOptPlannerConfig}{Traj\+Opt\+Planner\+Config}} \& \mbox{\hyperlink{structtesseract__motion__planners_1_1TrajOptPlannerConfig_a88c244cb3fd97befe9f17230928fcc6f}{operator=}} (\mbox{\hyperlink{structtesseract__motion__planners_1_1TrajOptPlannerConfig}{Traj\+Opt\+Planner\+Config}} \&\&)=default
+\item 
+virtual bool \mbox{\hyperlink{structtesseract__motion__planners_1_1TrajOptPlannerConfig_a3f39f7293575b4b82278aeee7866d988}{generate}} ()
+\begin{DoxyCompactList}\small\item\em Generates the Traj\+Opt problem and saves the result internally. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+sco\+::\+Basic\+Trust\+Region\+S\+Q\+P\+Parameters \mbox{\hyperlink{structtesseract__motion__planners_1_1TrajOptPlannerConfig_a9273c439d5e9fedc9c2cafbb541af198}{params}}
+\begin{DoxyCompactList}\small\item\em Optimization parameters to be used (Optional) \end{DoxyCompactList}\item 
+std\+::vector$<$ sco\+::\+Optimizer\+::\+Callback $>$ \mbox{\hyperlink{structtesseract__motion__planners_1_1TrajOptPlannerConfig_a98f92ef1c3af30597c6b9151d151a02f}{callbacks}}
+\begin{DoxyCompactList}\small\item\em Callback functions called on each iteration of the optimization (Optional) \end{DoxyCompactList}\item 
+trajopt\+::\+Traj\+Opt\+Prob\+::\+Ptr \mbox{\hyperlink{structtesseract__motion__planners_1_1TrajOptPlannerConfig_ad42a01e5019b0e552ebe9a9943476006}{prob}}
+\begin{DoxyCompactList}\small\item\em Trajopt problem to be solved (Required) \end{DoxyCompactList}\item 
+trajopt\+::\+Safety\+Margin\+Data\+::\+Ptr \mbox{\hyperlink{structtesseract__motion__planners_1_1TrajOptPlannerConfig_a0fe67d9da3a930a557ea7309cda8b70b}{special\+\_\+collision\+\_\+cost}} \{ nullptr \}
+\begin{DoxyCompactList}\small\item\em Special link collision cost distances. \end{DoxyCompactList}\item 
+trajopt\+::\+Safety\+Margin\+Data\+::\+Ptr \mbox{\hyperlink{structtesseract__motion__planners_1_1TrajOptPlannerConfig_a316491fb38c79005fcf72212a9edc6d0}{special\+\_\+collision\+\_\+constraint}} \{ nullptr \}
+\begin{DoxyCompactList}\small\item\em Special link collision constraint distances. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{structtesseract__motion__planners_1_1TrajOptPlannerConfig_a61ecf3645393527ad3676d184f601deb}{longest\+\_\+valid\+\_\+segment\+\_\+fraction}} = 0.\+01
+\begin{DoxyCompactList}\small\item\em Set the resolution at which state validity needs to be verified in order for a motion between two states to be considered valid in post checking of trajectory returned by trajopt. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{structtesseract__motion__planners_1_1TrajOptPlannerConfig_a616918c07482de401348635365c9f5ce}{longest\+\_\+valid\+\_\+segment\+\_\+length}} = 0.\+5
+\begin{DoxyCompactList}\small\item\em Set the resolution at which state validity needs to be verified in order for a motion between two states to be considered valid. If norm(state1 -\/ state0) $>$ longest\+\_\+valid\+\_\+segment\+\_\+length. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The Traj\+Opt\+Planner\+Config\+Base struct. 
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{structtesseract__motion__planners_1_1TrajOptPlannerConfig_aac7002b625993d6ba960a7f425b5131e}\label{structtesseract__motion__planners_1_1TrajOptPlannerConfig_aac7002b625993d6ba960a7f425b5131e}} 
+\index{tesseract\_motion\_planners::TrajOptPlannerConfig@{tesseract\_motion\_planners::TrajOptPlannerConfig}!ConstPtr@{ConstPtr}}
+\index{ConstPtr@{ConstPtr}!tesseract\_motion\_planners::TrajOptPlannerConfig@{tesseract\_motion\_planners::TrajOptPlannerConfig}}
+\doxysubsubsection{\texorpdfstring{ConstPtr}{ConstPtr}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{structtesseract__motion__planners_1_1TrajOptPlannerConfig_aac7002b625993d6ba960a7f425b5131e}{tesseract\+\_\+motion\+\_\+planners\+::\+Traj\+Opt\+Planner\+Config\+::\+Const\+Ptr}} =  std\+::shared\+\_\+ptr$<$const \mbox{\hyperlink{structtesseract__motion__planners_1_1TrajOptPlannerConfig}{Traj\+Opt\+Planner\+Config}}$>$}
+
+\mbox{\Hypertarget{structtesseract__motion__planners_1_1TrajOptPlannerConfig_a4af8ad8c88159ba67a6cfdab4af195a6}\label{structtesseract__motion__planners_1_1TrajOptPlannerConfig_a4af8ad8c88159ba67a6cfdab4af195a6}} 
+\index{tesseract\_motion\_planners::TrajOptPlannerConfig@{tesseract\_motion\_planners::TrajOptPlannerConfig}!Ptr@{Ptr}}
+\index{Ptr@{Ptr}!tesseract\_motion\_planners::TrajOptPlannerConfig@{tesseract\_motion\_planners::TrajOptPlannerConfig}}
+\doxysubsubsection{\texorpdfstring{Ptr}{Ptr}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{structtesseract__motion__planners_1_1TrajOptPlannerConfig_a4af8ad8c88159ba67a6cfdab4af195a6}{tesseract\+\_\+motion\+\_\+planners\+::\+Traj\+Opt\+Planner\+Config\+::\+Ptr}} =  std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{structtesseract__motion__planners_1_1TrajOptPlannerConfig}{Traj\+Opt\+Planner\+Config}}$>$}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structtesseract__motion__planners_1_1TrajOptPlannerConfig_a76d6e4d16d2059dc27c5af2037dc22a7}\label{structtesseract__motion__planners_1_1TrajOptPlannerConfig_a76d6e4d16d2059dc27c5af2037dc22a7}} 
+\index{tesseract\_motion\_planners::TrajOptPlannerConfig@{tesseract\_motion\_planners::TrajOptPlannerConfig}!TrajOptPlannerConfig@{TrajOptPlannerConfig}}
+\index{TrajOptPlannerConfig@{TrajOptPlannerConfig}!tesseract\_motion\_planners::TrajOptPlannerConfig@{tesseract\_motion\_planners::TrajOptPlannerConfig}}
+\doxysubsubsection{\texorpdfstring{TrajOptPlannerConfig()}{TrajOptPlannerConfig()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily tesseract\+\_\+motion\+\_\+planners\+::\+Traj\+Opt\+Planner\+Config\+::\+Traj\+Opt\+Planner\+Config (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}, {\ttfamily [default]}}
+
+\mbox{\Hypertarget{structtesseract__motion__planners_1_1TrajOptPlannerConfig_a976ad428bb5d87508cccfeb7122451f6}\label{structtesseract__motion__planners_1_1TrajOptPlannerConfig_a976ad428bb5d87508cccfeb7122451f6}} 
+\index{tesseract\_motion\_planners::TrajOptPlannerConfig@{tesseract\_motion\_planners::TrajOptPlannerConfig}!TrajOptPlannerConfig@{TrajOptPlannerConfig}}
+\index{TrajOptPlannerConfig@{TrajOptPlannerConfig}!tesseract\_motion\_planners::TrajOptPlannerConfig@{tesseract\_motion\_planners::TrajOptPlannerConfig}}
+\doxysubsubsection{\texorpdfstring{TrajOptPlannerConfig()}{TrajOptPlannerConfig()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily tesseract\+\_\+motion\+\_\+planners\+::\+Traj\+Opt\+Planner\+Config\+::\+Traj\+Opt\+Planner\+Config (\begin{DoxyParamCaption}\item[{trajopt\+::\+Traj\+Opt\+Prob\+::\+Ptr}]{problem }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{structtesseract__motion__planners_1_1TrajOptPlannerConfig_a0a21f5b6b5734415c07bfa82284315aa}\label{structtesseract__motion__planners_1_1TrajOptPlannerConfig_a0a21f5b6b5734415c07bfa82284315aa}} 
+\index{tesseract\_motion\_planners::TrajOptPlannerConfig@{tesseract\_motion\_planners::TrajOptPlannerConfig}!````~TrajOptPlannerConfig@{$\sim$TrajOptPlannerConfig}}
+\index{````~TrajOptPlannerConfig@{$\sim$TrajOptPlannerConfig}!tesseract\_motion\_planners::TrajOptPlannerConfig@{tesseract\_motion\_planners::TrajOptPlannerConfig}}
+\doxysubsubsection{\texorpdfstring{$\sim$TrajOptPlannerConfig()}{~TrajOptPlannerConfig()}}
+{\footnotesize\ttfamily virtual tesseract\+\_\+motion\+\_\+planners\+::\+Traj\+Opt\+Planner\+Config\+::$\sim$\+Traj\+Opt\+Planner\+Config (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+\mbox{\Hypertarget{structtesseract__motion__planners_1_1TrajOptPlannerConfig_a9fa5c5f74302cba5bb85c6bd276d0910}\label{structtesseract__motion__planners_1_1TrajOptPlannerConfig_a9fa5c5f74302cba5bb85c6bd276d0910}} 
+\index{tesseract\_motion\_planners::TrajOptPlannerConfig@{tesseract\_motion\_planners::TrajOptPlannerConfig}!TrajOptPlannerConfig@{TrajOptPlannerConfig}}
+\index{TrajOptPlannerConfig@{TrajOptPlannerConfig}!tesseract\_motion\_planners::TrajOptPlannerConfig@{tesseract\_motion\_planners::TrajOptPlannerConfig}}
+\doxysubsubsection{\texorpdfstring{TrajOptPlannerConfig()}{TrajOptPlannerConfig()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily tesseract\+\_\+motion\+\_\+planners\+::\+Traj\+Opt\+Planner\+Config\+::\+Traj\+Opt\+Planner\+Config (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structtesseract__motion__planners_1_1TrajOptPlannerConfig}{Traj\+Opt\+Planner\+Config}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{structtesseract__motion__planners_1_1TrajOptPlannerConfig_a61da69288749dda46d93677579f42ca2}\label{structtesseract__motion__planners_1_1TrajOptPlannerConfig_a61da69288749dda46d93677579f42ca2}} 
+\index{tesseract\_motion\_planners::TrajOptPlannerConfig@{tesseract\_motion\_planners::TrajOptPlannerConfig}!TrajOptPlannerConfig@{TrajOptPlannerConfig}}
+\index{TrajOptPlannerConfig@{TrajOptPlannerConfig}!tesseract\_motion\_planners::TrajOptPlannerConfig@{tesseract\_motion\_planners::TrajOptPlannerConfig}}
+\doxysubsubsection{\texorpdfstring{TrajOptPlannerConfig()}{TrajOptPlannerConfig()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily tesseract\+\_\+motion\+\_\+planners\+::\+Traj\+Opt\+Planner\+Config\+::\+Traj\+Opt\+Planner\+Config (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtesseract__motion__planners_1_1TrajOptPlannerConfig}{Traj\+Opt\+Planner\+Config}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structtesseract__motion__planners_1_1TrajOptPlannerConfig_a3f39f7293575b4b82278aeee7866d988}\label{structtesseract__motion__planners_1_1TrajOptPlannerConfig_a3f39f7293575b4b82278aeee7866d988}} 
+\index{tesseract\_motion\_planners::TrajOptPlannerConfig@{tesseract\_motion\_planners::TrajOptPlannerConfig}!generate@{generate}}
+\index{generate@{generate}!tesseract\_motion\_planners::TrajOptPlannerConfig@{tesseract\_motion\_planners::TrajOptPlannerConfig}}
+\doxysubsubsection{\texorpdfstring{generate()}{generate()}}
+{\footnotesize\ttfamily bool tesseract\+\_\+motion\+\_\+planners\+::\+Traj\+Opt\+Planner\+Config\+::generate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Generates the Traj\+Opt problem and saves the result internally. 
+
+\begin{DoxyReturn}{Returns}
+True on success, false on failure 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{structtesseract__motion__planners_1_1TrajOptPlannerDefaultConfig_a1bb9a25e38404714f92a234d6e4ed02c}{tesseract\+\_\+motion\+\_\+planners\+::\+Traj\+Opt\+Planner\+Default\+Config}}.
+
+\mbox{\Hypertarget{structtesseract__motion__planners_1_1TrajOptPlannerConfig_ab46b623b6e098bdd157b83e2eb380991}\label{structtesseract__motion__planners_1_1TrajOptPlannerConfig_ab46b623b6e098bdd157b83e2eb380991}} 
+\index{tesseract\_motion\_planners::TrajOptPlannerConfig@{tesseract\_motion\_planners::TrajOptPlannerConfig}!operator=@{operator=}}
+\index{operator=@{operator=}!tesseract\_motion\_planners::TrajOptPlannerConfig@{tesseract\_motion\_planners::TrajOptPlannerConfig}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structtesseract__motion__planners_1_1TrajOptPlannerConfig}{Traj\+Opt\+Planner\+Config}}\& tesseract\+\_\+motion\+\_\+planners\+::\+Traj\+Opt\+Planner\+Config\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structtesseract__motion__planners_1_1TrajOptPlannerConfig}{Traj\+Opt\+Planner\+Config}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{structtesseract__motion__planners_1_1TrajOptPlannerConfig_a88c244cb3fd97befe9f17230928fcc6f}\label{structtesseract__motion__planners_1_1TrajOptPlannerConfig_a88c244cb3fd97befe9f17230928fcc6f}} 
+\index{tesseract\_motion\_planners::TrajOptPlannerConfig@{tesseract\_motion\_planners::TrajOptPlannerConfig}!operator=@{operator=}}
+\index{operator=@{operator=}!tesseract\_motion\_planners::TrajOptPlannerConfig@{tesseract\_motion\_planners::TrajOptPlannerConfig}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structtesseract__motion__planners_1_1TrajOptPlannerConfig}{Traj\+Opt\+Planner\+Config}}\& tesseract\+\_\+motion\+\_\+planners\+::\+Traj\+Opt\+Planner\+Config\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtesseract__motion__planners_1_1TrajOptPlannerConfig}{Traj\+Opt\+Planner\+Config}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structtesseract__motion__planners_1_1TrajOptPlannerConfig_a98f92ef1c3af30597c6b9151d151a02f}\label{structtesseract__motion__planners_1_1TrajOptPlannerConfig_a98f92ef1c3af30597c6b9151d151a02f}} 
+\index{tesseract\_motion\_planners::TrajOptPlannerConfig@{tesseract\_motion\_planners::TrajOptPlannerConfig}!callbacks@{callbacks}}
+\index{callbacks@{callbacks}!tesseract\_motion\_planners::TrajOptPlannerConfig@{tesseract\_motion\_planners::TrajOptPlannerConfig}}
+\doxysubsubsection{\texorpdfstring{callbacks}{callbacks}}
+{\footnotesize\ttfamily std\+::vector$<$sco\+::\+Optimizer\+::\+Callback$>$ tesseract\+\_\+motion\+\_\+planners\+::\+Traj\+Opt\+Planner\+Config\+::callbacks}
+
+
+
+Callback functions called on each iteration of the optimization (Optional) 
+
+\mbox{\Hypertarget{structtesseract__motion__planners_1_1TrajOptPlannerConfig_a61ecf3645393527ad3676d184f601deb}\label{structtesseract__motion__planners_1_1TrajOptPlannerConfig_a61ecf3645393527ad3676d184f601deb}} 
+\index{tesseract\_motion\_planners::TrajOptPlannerConfig@{tesseract\_motion\_planners::TrajOptPlannerConfig}!longest\_valid\_segment\_fraction@{longest\_valid\_segment\_fraction}}
+\index{longest\_valid\_segment\_fraction@{longest\_valid\_segment\_fraction}!tesseract\_motion\_planners::TrajOptPlannerConfig@{tesseract\_motion\_planners::TrajOptPlannerConfig}}
+\doxysubsubsection{\texorpdfstring{longest\_valid\_segment\_fraction}{longest\_valid\_segment\_fraction}}
+{\footnotesize\ttfamily double tesseract\+\_\+motion\+\_\+planners\+::\+Traj\+Opt\+Planner\+Config\+::longest\+\_\+valid\+\_\+segment\+\_\+fraction = 0.\+01}
+
+
+
+Set the resolution at which state validity needs to be verified in order for a motion between two states to be considered valid in post checking of trajectory returned by trajopt. 
+
+The resolution is equal to longest\+\_\+valid\+\_\+segment\+\_\+fraction $\ast$ state\+\_\+space.\+get\+Maximum\+Extent()
+
+Note\+: The planner takes the conservative of either longest\+\_\+valid\+\_\+segment\+\_\+fraction or longest\+\_\+valid\+\_\+segment\+\_\+length. \mbox{\Hypertarget{structtesseract__motion__planners_1_1TrajOptPlannerConfig_a616918c07482de401348635365c9f5ce}\label{structtesseract__motion__planners_1_1TrajOptPlannerConfig_a616918c07482de401348635365c9f5ce}} 
+\index{tesseract\_motion\_planners::TrajOptPlannerConfig@{tesseract\_motion\_planners::TrajOptPlannerConfig}!longest\_valid\_segment\_length@{longest\_valid\_segment\_length}}
+\index{longest\_valid\_segment\_length@{longest\_valid\_segment\_length}!tesseract\_motion\_planners::TrajOptPlannerConfig@{tesseract\_motion\_planners::TrajOptPlannerConfig}}
+\doxysubsubsection{\texorpdfstring{longest\_valid\_segment\_length}{longest\_valid\_segment\_length}}
+{\footnotesize\ttfamily double tesseract\+\_\+motion\+\_\+planners\+::\+Traj\+Opt\+Planner\+Config\+::longest\+\_\+valid\+\_\+segment\+\_\+length = 0.\+5}
+
+
+
+Set the resolution at which state validity needs to be verified in order for a motion between two states to be considered valid. If norm(state1 -\/ state0) $>$ longest\+\_\+valid\+\_\+segment\+\_\+length. 
+
+Note\+: This gets converted to longest\+\_\+valid\+\_\+segment\+\_\+fraction. longest\+\_\+valid\+\_\+segment\+\_\+fraction = longest\+\_\+valid\+\_\+segment\+\_\+length / state\+\_\+space.\+get\+Maximum\+Extent() \mbox{\Hypertarget{structtesseract__motion__planners_1_1TrajOptPlannerConfig_a9273c439d5e9fedc9c2cafbb541af198}\label{structtesseract__motion__planners_1_1TrajOptPlannerConfig_a9273c439d5e9fedc9c2cafbb541af198}} 
+\index{tesseract\_motion\_planners::TrajOptPlannerConfig@{tesseract\_motion\_planners::TrajOptPlannerConfig}!params@{params}}
+\index{params@{params}!tesseract\_motion\_planners::TrajOptPlannerConfig@{tesseract\_motion\_planners::TrajOptPlannerConfig}}
+\doxysubsubsection{\texorpdfstring{params}{params}}
+{\footnotesize\ttfamily sco\+::\+Basic\+Trust\+Region\+S\+Q\+P\+Parameters tesseract\+\_\+motion\+\_\+planners\+::\+Traj\+Opt\+Planner\+Config\+::params}
+
+
+
+Optimization parameters to be used (Optional) 
+
+\mbox{\Hypertarget{structtesseract__motion__planners_1_1TrajOptPlannerConfig_ad42a01e5019b0e552ebe9a9943476006}\label{structtesseract__motion__planners_1_1TrajOptPlannerConfig_ad42a01e5019b0e552ebe9a9943476006}} 
+\index{tesseract\_motion\_planners::TrajOptPlannerConfig@{tesseract\_motion\_planners::TrajOptPlannerConfig}!prob@{prob}}
+\index{prob@{prob}!tesseract\_motion\_planners::TrajOptPlannerConfig@{tesseract\_motion\_planners::TrajOptPlannerConfig}}
+\doxysubsubsection{\texorpdfstring{prob}{prob}}
+{\footnotesize\ttfamily trajopt\+::\+Traj\+Opt\+Prob\+::\+Ptr tesseract\+\_\+motion\+\_\+planners\+::\+Traj\+Opt\+Planner\+Config\+::prob}
+
+
+
+Trajopt problem to be solved (Required) 
+
+\mbox{\Hypertarget{structtesseract__motion__planners_1_1TrajOptPlannerConfig_a316491fb38c79005fcf72212a9edc6d0}\label{structtesseract__motion__planners_1_1TrajOptPlannerConfig_a316491fb38c79005fcf72212a9edc6d0}} 
+\index{tesseract\_motion\_planners::TrajOptPlannerConfig@{tesseract\_motion\_planners::TrajOptPlannerConfig}!special\_collision\_constraint@{special\_collision\_constraint}}
+\index{special\_collision\_constraint@{special\_collision\_constraint}!tesseract\_motion\_planners::TrajOptPlannerConfig@{tesseract\_motion\_planners::TrajOptPlannerConfig}}
+\doxysubsubsection{\texorpdfstring{special\_collision\_constraint}{special\_collision\_constraint}}
+{\footnotesize\ttfamily trajopt\+::\+Safety\+Margin\+Data\+::\+Ptr tesseract\+\_\+motion\+\_\+planners\+::\+Traj\+Opt\+Planner\+Config\+::special\+\_\+collision\+\_\+constraint \{ nullptr \}}
+
+
+
+Special link collision constraint distances. 
+
+\mbox{\Hypertarget{structtesseract__motion__planners_1_1TrajOptPlannerConfig_a0fe67d9da3a930a557ea7309cda8b70b}\label{structtesseract__motion__planners_1_1TrajOptPlannerConfig_a0fe67d9da3a930a557ea7309cda8b70b}} 
+\index{tesseract\_motion\_planners::TrajOptPlannerConfig@{tesseract\_motion\_planners::TrajOptPlannerConfig}!special\_collision\_cost@{special\_collision\_cost}}
+\index{special\_collision\_cost@{special\_collision\_cost}!tesseract\_motion\_planners::TrajOptPlannerConfig@{tesseract\_motion\_planners::TrajOptPlannerConfig}}
+\doxysubsubsection{\texorpdfstring{special\_collision\_cost}{special\_collision\_cost}}
+{\footnotesize\ttfamily trajopt\+::\+Safety\+Margin\+Data\+::\+Ptr tesseract\+\_\+motion\+\_\+planners\+::\+Traj\+Opt\+Planner\+Config\+::special\+\_\+collision\+\_\+cost \{ nullptr \}}
+
+
+
+Special link collision cost distances. 
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+tesseract/tesseract\+\_\+planning/tesseract\+\_\+motion\+\_\+planners/include/tesseract\+\_\+motion\+\_\+planners/trajopt/config/\mbox{\hyperlink{trajopt__planner__config_8h}{trajopt\+\_\+planner\+\_\+config.\+h}}\item 
+tesseract/tesseract\+\_\+planning/tesseract\+\_\+motion\+\_\+planners/src/trajopt/config/\mbox{\hyperlink{trajopt__planner__config_8cpp}{trajopt\+\_\+planner\+\_\+config.\+cpp}}\end{DoxyCompactItemize}

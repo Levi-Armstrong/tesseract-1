@@ -1,0 +1,119 @@
+\hypertarget{structtesseract__motion__planners_1_1TRRTConfigurator}{}\doxysection{tesseract\+\_\+motion\+\_\+planners\+::T\+R\+R\+T\+Configurator Struct Reference}
+\label{structtesseract__motion__planners_1_1TRRTConfigurator}\index{tesseract\_motion\_planners::TRRTConfigurator@{tesseract\_motion\_planners::TRRTConfigurator}}
+
+
+{\ttfamily \#include $<$ompl\+\_\+planner\+\_\+configurator.\+h$>$}
+
+Inheritance diagram for tesseract\+\_\+motion\+\_\+planners\+::T\+R\+R\+T\+Configurator\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{dc/ded/structtesseract__motion__planners_1_1TRRTConfigurator}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+ompl\+::base\+::\+Planner\+Ptr \mbox{\hyperlink{structtesseract__motion__planners_1_1TRRTConfigurator_a7763960a4e9451ec57cb6a21e5a6c18e}{create}} (ompl\+::base\+::\+Space\+Information\+Ptr si) const override
+\begin{DoxyCompactList}\small\item\em Create the planner. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{structtesseract__motion__planners_1_1TRRTConfigurator_ae782b2eb0960b62e24a075545a1b631f}{range}} = 0
+\begin{DoxyCompactList}\small\item\em Max motion added to tree. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{structtesseract__motion__planners_1_1TRRTConfigurator_ae047fa14c70c865422f8155da64b6062}{goal\+\_\+bias}} = 0.\+05
+\begin{DoxyCompactList}\small\item\em When close to goal select goal, with this probability. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{structtesseract__motion__planners_1_1TRRTConfigurator_abf95d46cb7dec661485707e7431c2bb4}{temp\+\_\+change\+\_\+factor}} = 2.\+0
+\begin{DoxyCompactList}\small\item\em How much to increase or decrease temp. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{structtesseract__motion__planners_1_1TRRTConfigurator_ab038048755aad3cc8c9ed60049b8f35b}{init\+\_\+temperature}} = 10e-\/6
+\begin{DoxyCompactList}\small\item\em Initial temperature. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{structtesseract__motion__planners_1_1TRRTConfigurator_aa466b1a6aefbe184ed75de8682cac749}{frontier\+\_\+threshold}} = 0.\+0
+\begin{DoxyCompactList}\small\item\em Dist new state to nearest neighbor to disqualify as frontier. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{structtesseract__motion__planners_1_1TRRTConfigurator_a6db6b7863196114301b10e5f95d8717f}{frontier\+\_\+node\+\_\+ratio}} = 0.\+1
+\begin{DoxyCompactList}\small\item\em 1/10, or 1 nonfrontier for every 10 frontier. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structtesseract__motion__planners_1_1TRRTConfigurator_a7763960a4e9451ec57cb6a21e5a6c18e}\label{structtesseract__motion__planners_1_1TRRTConfigurator_a7763960a4e9451ec57cb6a21e5a6c18e}} 
+\index{tesseract\_motion\_planners::TRRTConfigurator@{tesseract\_motion\_planners::TRRTConfigurator}!create@{create}}
+\index{create@{create}!tesseract\_motion\_planners::TRRTConfigurator@{tesseract\_motion\_planners::TRRTConfigurator}}
+\doxysubsubsection{\texorpdfstring{create()}{create()}}
+{\footnotesize\ttfamily ompl\+::base\+::\+Planner\+Ptr tesseract\+\_\+motion\+\_\+planners\+::\+T\+R\+R\+T\+Configurator\+::create (\begin{DoxyParamCaption}\item[{ompl\+::base\+::\+Space\+Information\+Ptr}]{si }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Create the planner. 
+
+
+
+Implements \mbox{\hyperlink{structtesseract__motion__planners_1_1OMPLPlannerConfigurator_a8f1cf1e97d6b3c43ffa0cc46564d550b}{tesseract\+\_\+motion\+\_\+planners\+::\+O\+M\+P\+L\+Planner\+Configurator}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structtesseract__motion__planners_1_1TRRTConfigurator_a6db6b7863196114301b10e5f95d8717f}\label{structtesseract__motion__planners_1_1TRRTConfigurator_a6db6b7863196114301b10e5f95d8717f}} 
+\index{tesseract\_motion\_planners::TRRTConfigurator@{tesseract\_motion\_planners::TRRTConfigurator}!frontier\_node\_ratio@{frontier\_node\_ratio}}
+\index{frontier\_node\_ratio@{frontier\_node\_ratio}!tesseract\_motion\_planners::TRRTConfigurator@{tesseract\_motion\_planners::TRRTConfigurator}}
+\doxysubsubsection{\texorpdfstring{frontier\_node\_ratio}{frontier\_node\_ratio}}
+{\footnotesize\ttfamily double tesseract\+\_\+motion\+\_\+planners\+::\+T\+R\+R\+T\+Configurator\+::frontier\+\_\+node\+\_\+ratio = 0.\+1}
+
+
+
+1/10, or 1 nonfrontier for every 10 frontier. 
+
+\mbox{\Hypertarget{structtesseract__motion__planners_1_1TRRTConfigurator_aa466b1a6aefbe184ed75de8682cac749}\label{structtesseract__motion__planners_1_1TRRTConfigurator_aa466b1a6aefbe184ed75de8682cac749}} 
+\index{tesseract\_motion\_planners::TRRTConfigurator@{tesseract\_motion\_planners::TRRTConfigurator}!frontier\_threshold@{frontier\_threshold}}
+\index{frontier\_threshold@{frontier\_threshold}!tesseract\_motion\_planners::TRRTConfigurator@{tesseract\_motion\_planners::TRRTConfigurator}}
+\doxysubsubsection{\texorpdfstring{frontier\_threshold}{frontier\_threshold}}
+{\footnotesize\ttfamily double tesseract\+\_\+motion\+\_\+planners\+::\+T\+R\+R\+T\+Configurator\+::frontier\+\_\+threshold = 0.\+0}
+
+
+
+Dist new state to nearest neighbor to disqualify as frontier. 
+
+\mbox{\Hypertarget{structtesseract__motion__planners_1_1TRRTConfigurator_ae047fa14c70c865422f8155da64b6062}\label{structtesseract__motion__planners_1_1TRRTConfigurator_ae047fa14c70c865422f8155da64b6062}} 
+\index{tesseract\_motion\_planners::TRRTConfigurator@{tesseract\_motion\_planners::TRRTConfigurator}!goal\_bias@{goal\_bias}}
+\index{goal\_bias@{goal\_bias}!tesseract\_motion\_planners::TRRTConfigurator@{tesseract\_motion\_planners::TRRTConfigurator}}
+\doxysubsubsection{\texorpdfstring{goal\_bias}{goal\_bias}}
+{\footnotesize\ttfamily double tesseract\+\_\+motion\+\_\+planners\+::\+T\+R\+R\+T\+Configurator\+::goal\+\_\+bias = 0.\+05}
+
+
+
+When close to goal select goal, with this probability. 
+
+\mbox{\Hypertarget{structtesseract__motion__planners_1_1TRRTConfigurator_ab038048755aad3cc8c9ed60049b8f35b}\label{structtesseract__motion__planners_1_1TRRTConfigurator_ab038048755aad3cc8c9ed60049b8f35b}} 
+\index{tesseract\_motion\_planners::TRRTConfigurator@{tesseract\_motion\_planners::TRRTConfigurator}!init\_temperature@{init\_temperature}}
+\index{init\_temperature@{init\_temperature}!tesseract\_motion\_planners::TRRTConfigurator@{tesseract\_motion\_planners::TRRTConfigurator}}
+\doxysubsubsection{\texorpdfstring{init\_temperature}{init\_temperature}}
+{\footnotesize\ttfamily double tesseract\+\_\+motion\+\_\+planners\+::\+T\+R\+R\+T\+Configurator\+::init\+\_\+temperature = 10e-\/6}
+
+
+
+Initial temperature. 
+
+\mbox{\Hypertarget{structtesseract__motion__planners_1_1TRRTConfigurator_ae782b2eb0960b62e24a075545a1b631f}\label{structtesseract__motion__planners_1_1TRRTConfigurator_ae782b2eb0960b62e24a075545a1b631f}} 
+\index{tesseract\_motion\_planners::TRRTConfigurator@{tesseract\_motion\_planners::TRRTConfigurator}!range@{range}}
+\index{range@{range}!tesseract\_motion\_planners::TRRTConfigurator@{tesseract\_motion\_planners::TRRTConfigurator}}
+\doxysubsubsection{\texorpdfstring{range}{range}}
+{\footnotesize\ttfamily double tesseract\+\_\+motion\+\_\+planners\+::\+T\+R\+R\+T\+Configurator\+::range = 0}
+
+
+
+Max motion added to tree. 
+
+\mbox{\Hypertarget{structtesseract__motion__planners_1_1TRRTConfigurator_abf95d46cb7dec661485707e7431c2bb4}\label{structtesseract__motion__planners_1_1TRRTConfigurator_abf95d46cb7dec661485707e7431c2bb4}} 
+\index{tesseract\_motion\_planners::TRRTConfigurator@{tesseract\_motion\_planners::TRRTConfigurator}!temp\_change\_factor@{temp\_change\_factor}}
+\index{temp\_change\_factor@{temp\_change\_factor}!tesseract\_motion\_planners::TRRTConfigurator@{tesseract\_motion\_planners::TRRTConfigurator}}
+\doxysubsubsection{\texorpdfstring{temp\_change\_factor}{temp\_change\_factor}}
+{\footnotesize\ttfamily double tesseract\+\_\+motion\+\_\+planners\+::\+T\+R\+R\+T\+Configurator\+::temp\+\_\+change\+\_\+factor = 2.\+0}
+
+
+
+How much to increase or decrease temp. 
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+tesseract/tesseract\+\_\+planning/tesseract\+\_\+motion\+\_\+planners/include/tesseract\+\_\+motion\+\_\+planners/ompl/\mbox{\hyperlink{ompl__planner__configurator_8h}{ompl\+\_\+planner\+\_\+configurator.\+h}}\item 
+tesseract/tesseract\+\_\+planning/tesseract\+\_\+motion\+\_\+planners/src/ompl/\mbox{\hyperlink{ompl__planner__configurator_8cpp}{ompl\+\_\+planner\+\_\+configurator.\+cpp}}\end{DoxyCompactItemize}

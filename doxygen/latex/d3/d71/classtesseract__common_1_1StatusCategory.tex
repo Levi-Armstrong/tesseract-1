@@ -1,0 +1,136 @@
+\hypertarget{classtesseract__common_1_1StatusCategory}{}\doxysection{tesseract\+\_\+common\+::Status\+Category Class Reference}
+\label{classtesseract__common_1_1StatusCategory}\index{tesseract\_common::StatusCategory@{tesseract\_common::StatusCategory}}
+
+
+{\ttfamily \#include $<$status\+\_\+code.\+h$>$}
+
+Inheritance diagram for tesseract\+\_\+common\+::Status\+Category\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=12.000000cm]{d3/d71/classtesseract__common_1_1StatusCategory}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classtesseract__common_1_1StatusCategory_a72aa66302752aba796bf0c10c579c2f4}{Ptr}} = std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classtesseract__common_1_1StatusCategory}{Status\+Category}} $>$
+\item 
+using \mbox{\hyperlink{classtesseract__common_1_1StatusCategory_a78a59d8af48194ec283b74237025e992}{Const\+Ptr}} = std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{classtesseract__common_1_1StatusCategory}{Status\+Category}} $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+constexpr \mbox{\hyperlink{classtesseract__common_1_1StatusCategory_a14699da8fe65261307f563eaf99f8bfc}{Status\+Category}} () noexcept=default
+\item 
+virtual \mbox{\hyperlink{classtesseract__common_1_1StatusCategory_a337cc95def49d49f52c4a6b14ece476e}{$\sim$\+Status\+Category}} ()=default
+\item 
+\mbox{\hyperlink{classtesseract__common_1_1StatusCategory_a2c5a7c271a7456370d716797f31c2ab9}{Status\+Category}} (const \mbox{\hyperlink{classtesseract__common_1_1StatusCategory}{Status\+Category}} \&)=delete
+\item 
+\mbox{\hyperlink{classtesseract__common_1_1StatusCategory}{Status\+Category}} \& \mbox{\hyperlink{classtesseract__common_1_1StatusCategory_a0aa35233766a34b6b05bbe0c51dd1845}{operator=}} (const \mbox{\hyperlink{classtesseract__common_1_1StatusCategory}{Status\+Category}} \&)=delete
+\item 
+\mbox{\hyperlink{classtesseract__common_1_1StatusCategory_a7abd780d8926b785744c94fb7b051a45}{Status\+Category}} (\mbox{\hyperlink{classtesseract__common_1_1StatusCategory}{Status\+Category}} \&\&)=delete
+\item 
+\mbox{\hyperlink{classtesseract__common_1_1StatusCategory}{Status\+Category}} \& \mbox{\hyperlink{classtesseract__common_1_1StatusCategory_ab236ad5fb595abb8a5437447afcf479d}{operator=}} (\mbox{\hyperlink{classtesseract__common_1_1StatusCategory}{Status\+Category}} \&\&)=delete
+\item 
+virtual const std\+::string \& \mbox{\hyperlink{classtesseract__common_1_1StatusCategory_ae08466c99a1e92f904141e5a070382e5}{name}} () const noexcept=0
+\item 
+virtual std\+::string \mbox{\hyperlink{classtesseract__common_1_1StatusCategory_a1b243ec0e046910ceac90403190b45ac}{message}} (int code) const =0
+\item 
+bool \mbox{\hyperlink{classtesseract__common_1_1StatusCategory_a8e6e8615382182d43c9a70626d7daf76}{operator==}} (const \mbox{\hyperlink{classtesseract__common_1_1StatusCategory}{Status\+Category}} \&rhs) const noexcept
+\item 
+bool \mbox{\hyperlink{classtesseract__common_1_1StatusCategory_a25dba1a749dc683a33b47975b37036bc}{operator!=}} (const \mbox{\hyperlink{classtesseract__common_1_1StatusCategory}{Status\+Category}} \&rhs) const noexcept
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classtesseract__common_1_1StatusCategory_a78a59d8af48194ec283b74237025e992}\label{classtesseract__common_1_1StatusCategory_a78a59d8af48194ec283b74237025e992}} 
+\index{tesseract\_common::StatusCategory@{tesseract\_common::StatusCategory}!ConstPtr@{ConstPtr}}
+\index{ConstPtr@{ConstPtr}!tesseract\_common::StatusCategory@{tesseract\_common::StatusCategory}}
+\doxysubsubsection{\texorpdfstring{ConstPtr}{ConstPtr}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classtesseract__common_1_1StatusCategory_a78a59d8af48194ec283b74237025e992}{tesseract\+\_\+common\+::\+Status\+Category\+::\+Const\+Ptr}} =  std\+::shared\+\_\+ptr$<$const \mbox{\hyperlink{classtesseract__common_1_1StatusCategory}{Status\+Category}}$>$}
+
+\mbox{\Hypertarget{classtesseract__common_1_1StatusCategory_a72aa66302752aba796bf0c10c579c2f4}\label{classtesseract__common_1_1StatusCategory_a72aa66302752aba796bf0c10c579c2f4}} 
+\index{tesseract\_common::StatusCategory@{tesseract\_common::StatusCategory}!Ptr@{Ptr}}
+\index{Ptr@{Ptr}!tesseract\_common::StatusCategory@{tesseract\_common::StatusCategory}}
+\doxysubsubsection{\texorpdfstring{Ptr}{Ptr}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classtesseract__common_1_1StatusCategory_a72aa66302752aba796bf0c10c579c2f4}{tesseract\+\_\+common\+::\+Status\+Category\+::\+Ptr}} =  std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classtesseract__common_1_1StatusCategory}{Status\+Category}}$>$}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtesseract__common_1_1StatusCategory_a14699da8fe65261307f563eaf99f8bfc}\label{classtesseract__common_1_1StatusCategory_a14699da8fe65261307f563eaf99f8bfc}} 
+\index{tesseract\_common::StatusCategory@{tesseract\_common::StatusCategory}!StatusCategory@{StatusCategory}}
+\index{StatusCategory@{StatusCategory}!tesseract\_common::StatusCategory@{tesseract\_common::StatusCategory}}
+\doxysubsubsection{\texorpdfstring{StatusCategory()}{StatusCategory()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily constexpr tesseract\+\_\+common\+::\+Status\+Category\+::\+Status\+Category (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}, {\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classtesseract__common_1_1StatusCategory_a337cc95def49d49f52c4a6b14ece476e}\label{classtesseract__common_1_1StatusCategory_a337cc95def49d49f52c4a6b14ece476e}} 
+\index{tesseract\_common::StatusCategory@{tesseract\_common::StatusCategory}!````~StatusCategory@{$\sim$StatusCategory}}
+\index{````~StatusCategory@{$\sim$StatusCategory}!tesseract\_common::StatusCategory@{tesseract\_common::StatusCategory}}
+\doxysubsubsection{\texorpdfstring{$\sim$StatusCategory()}{~StatusCategory()}}
+{\footnotesize\ttfamily virtual tesseract\+\_\+common\+::\+Status\+Category\+::$\sim$\+Status\+Category (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+\mbox{\Hypertarget{classtesseract__common_1_1StatusCategory_a2c5a7c271a7456370d716797f31c2ab9}\label{classtesseract__common_1_1StatusCategory_a2c5a7c271a7456370d716797f31c2ab9}} 
+\index{tesseract\_common::StatusCategory@{tesseract\_common::StatusCategory}!StatusCategory@{StatusCategory}}
+\index{StatusCategory@{StatusCategory}!tesseract\_common::StatusCategory@{tesseract\_common::StatusCategory}}
+\doxysubsubsection{\texorpdfstring{StatusCategory()}{StatusCategory()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily tesseract\+\_\+common\+::\+Status\+Category\+::\+Status\+Category (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtesseract__common_1_1StatusCategory}{Status\+Category}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classtesseract__common_1_1StatusCategory_a7abd780d8926b785744c94fb7b051a45}\label{classtesseract__common_1_1StatusCategory_a7abd780d8926b785744c94fb7b051a45}} 
+\index{tesseract\_common::StatusCategory@{tesseract\_common::StatusCategory}!StatusCategory@{StatusCategory}}
+\index{StatusCategory@{StatusCategory}!tesseract\_common::StatusCategory@{tesseract\_common::StatusCategory}}
+\doxysubsubsection{\texorpdfstring{StatusCategory()}{StatusCategory()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily tesseract\+\_\+common\+::\+Status\+Category\+::\+Status\+Category (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtesseract__common_1_1StatusCategory}{Status\+Category}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtesseract__common_1_1StatusCategory_a1b243ec0e046910ceac90403190b45ac}\label{classtesseract__common_1_1StatusCategory_a1b243ec0e046910ceac90403190b45ac}} 
+\index{tesseract\_common::StatusCategory@{tesseract\_common::StatusCategory}!message@{message}}
+\index{message@{message}!tesseract\_common::StatusCategory@{tesseract\_common::StatusCategory}}
+\doxysubsubsection{\texorpdfstring{message()}{message()}}
+{\footnotesize\ttfamily virtual std\+::string tesseract\+\_\+common\+::\+Status\+Category\+::message (\begin{DoxyParamCaption}\item[{int}]{code }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classtesseract__motion__planners_1_1TrajOptMotionPlannerStatusCategory_a1f6558572959d4d2f4afc8f38555e549}{tesseract\+\_\+motion\+\_\+planners\+::\+Traj\+Opt\+Motion\+Planner\+Status\+Category}}, \mbox{\hyperlink{classtesseract__common_1_1GeneralStatusCategory_a017fd002ab04ef8199a3579dede3a44b}{tesseract\+\_\+common\+::\+General\+Status\+Category}}, \mbox{\hyperlink{classtesseract__urdf_1_1GeometryStatusCategory_a5b6ed9b3bd1bb07bd82869b1d02e6e02}{tesseract\+\_\+urdf\+::\+Geometry\+Status\+Category}}, \mbox{\hyperlink{classtesseract__urdf_1_1JointStatusCategory_a385309fe2a9cae0b6b2fb85e9b49c051}{tesseract\+\_\+urdf\+::\+Joint\+Status\+Category}}, \mbox{\hyperlink{classtesseract__urdf_1_1OctomapStatusCategory_a479979b2890a217cffeef57112b39f74}{tesseract\+\_\+urdf\+::\+Octomap\+Status\+Category}}, \mbox{\hyperlink{classtesseract__urdf_1_1ConvexMeshStatusCategory_a69790fcef9c25b8855d9891cbdcd0608}{tesseract\+\_\+urdf\+::\+Convex\+Mesh\+Status\+Category}}, \mbox{\hyperlink{classtesseract__urdf_1_1MeshStatusCategory_a4fa8a34990b395aa2690ef533e4a32f2}{tesseract\+\_\+urdf\+::\+Mesh\+Status\+Category}}, \mbox{\hyperlink{classtesseract__urdf_1_1SDFMeshStatusCategory_a4fe25b1538ae73093f46caef840af4f4}{tesseract\+\_\+urdf\+::\+S\+D\+F\+Mesh\+Status\+Category}}, \mbox{\hyperlink{classtesseract__urdf_1_1URDFStatusCategory_a50d37263cc5ec3dbb585b626557d2498}{tesseract\+\_\+urdf\+::\+U\+R\+D\+F\+Status\+Category}}, \mbox{\hyperlink{classtesseract__urdf_1_1VisualStatusCategory_a081771a4b4eac4825fc196e46b70f23b}{tesseract\+\_\+urdf\+::\+Visual\+Status\+Category}}, \mbox{\hyperlink{classtesseract__urdf_1_1LinkStatusCategory_adab442890c8aab0005fc08468cf3b810}{tesseract\+\_\+urdf\+::\+Link\+Status\+Category}}, \mbox{\hyperlink{classtesseract__urdf_1_1OctreeStatusCategory_ad9a873043cc04a063760f45c432ba171}{tesseract\+\_\+urdf\+::\+Octree\+Status\+Category}}, \mbox{\hyperlink{classtesseract__motion__planners_1_1DescartesMotionPlannerStatusCategory_a4c3dd911d4c80544cf309a7f7295c79c}{tesseract\+\_\+motion\+\_\+planners\+::\+Descartes\+Motion\+Planner\+Status\+Category}}, \mbox{\hyperlink{classtesseract__urdf_1_1CollisionStatusCategory_acfc092ae8bb0a82d66c5c969af4a1228}{tesseract\+\_\+urdf\+::\+Collision\+Status\+Category}}, \mbox{\hyperlink{classtesseract__urdf_1_1PointCloudStatusCategory_a04d9409c65d0a5856934cea73138d92c}{tesseract\+\_\+urdf\+::\+Point\+Cloud\+Status\+Category}}, \mbox{\hyperlink{classtesseract__urdf_1_1MaterialStatusCategory_a6a5141f71ef2c4e16e1ea714ded78080}{tesseract\+\_\+urdf\+::\+Material\+Status\+Category}}, \mbox{\hyperlink{classtesseract__urdf_1_1BoxStatusCategory_a2959e7bd35b01c6f9dd398c92524dfa3}{tesseract\+\_\+urdf\+::\+Box\+Status\+Category}}, \mbox{\hyperlink{classtesseract__urdf_1_1InertialStatusCategory_acbabfa943cc7e8ae5e70873b54e4e9d2}{tesseract\+\_\+urdf\+::\+Inertial\+Status\+Category}}, \mbox{\hyperlink{classtesseract__urdf_1_1MimicStatusCategory_afa812dec5ab55fe027cadcc9ea01dc1c}{tesseract\+\_\+urdf\+::\+Mimic\+Status\+Category}}, \mbox{\hyperlink{classtesseract__urdf_1_1OriginStatusCategory_a57f99df6755eb142355f60209d232797}{tesseract\+\_\+urdf\+::\+Origin\+Status\+Category}}, \mbox{\hyperlink{classtesseract__urdf_1_1CalibrationStatusCategory_ac323e5a5885ebc0ef2649f87a24b6602}{tesseract\+\_\+urdf\+::\+Calibration\+Status\+Category}}, \mbox{\hyperlink{classtesseract__urdf_1_1ConeStatusCategory_a8fe164a5ecc299df65ef381712ceae80}{tesseract\+\_\+urdf\+::\+Cone\+Status\+Category}}, \mbox{\hyperlink{classtesseract__urdf_1_1CylinderStatusCategory_a211074174ba2b921d040d20598b114cb}{tesseract\+\_\+urdf\+::\+Cylinder\+Status\+Category}}, \mbox{\hyperlink{classtesseract__urdf_1_1DynamicsStatusCategory_aa6ee530b971cd54cbe12c2fb8601563e}{tesseract\+\_\+urdf\+::\+Dynamics\+Status\+Category}}, \mbox{\hyperlink{classtesseract__urdf_1_1LimitsStatusCategory_ad7359835e75e8efb77811accb66dc0bd}{tesseract\+\_\+urdf\+::\+Limits\+Status\+Category}}, \mbox{\hyperlink{classtesseract__urdf_1_1SafetyStatusCategory_a2cb55ee067e070e1f68278accd1362b5}{tesseract\+\_\+urdf\+::\+Safety\+Status\+Category}}, \mbox{\hyperlink{classtesseract__urdf_1_1SphereStatusCategory_acc5c985d8f26928d3f579cd81927cebd}{tesseract\+\_\+urdf\+::\+Sphere\+Status\+Category}}, \mbox{\hyperlink{classtesseract__urdf_1_1CapsuleStatusCategory_ad002bbba712c2bb29e8b685f5daf9b5d}{tesseract\+\_\+urdf\+::\+Capsule\+Status\+Category}}, and \mbox{\hyperlink{classtesseract__motion__planners_1_1OMPLMotionPlannerStatusCategory_a51608cb762befc63123f168af62e870b}{tesseract\+\_\+motion\+\_\+planners\+::\+O\+M\+P\+L\+Motion\+Planner\+Status\+Category}}.
+
+\mbox{\Hypertarget{classtesseract__common_1_1StatusCategory_ae08466c99a1e92f904141e5a070382e5}\label{classtesseract__common_1_1StatusCategory_ae08466c99a1e92f904141e5a070382e5}} 
+\index{tesseract\_common::StatusCategory@{tesseract\_common::StatusCategory}!name@{name}}
+\index{name@{name}!tesseract\_common::StatusCategory@{tesseract\_common::StatusCategory}}
+\doxysubsubsection{\texorpdfstring{name()}{name()}}
+{\footnotesize\ttfamily virtual const std\+::string\& tesseract\+\_\+common\+::\+Status\+Category\+::name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}, {\ttfamily [noexcept]}}
+
+
+
+Implemented in \mbox{\hyperlink{classtesseract__motion__planners_1_1TrajOptMotionPlannerStatusCategory_a68d99a593f2b1cded4335a2839b2d9c8}{tesseract\+\_\+motion\+\_\+planners\+::\+Traj\+Opt\+Motion\+Planner\+Status\+Category}}, \mbox{\hyperlink{classtesseract__common_1_1GeneralStatusCategory_aa0de9ca076995369fade25fc309fd417}{tesseract\+\_\+common\+::\+General\+Status\+Category}}, \mbox{\hyperlink{classtesseract__urdf_1_1GeometryStatusCategory_ae787f7e057367982f9d3f5c58b248550}{tesseract\+\_\+urdf\+::\+Geometry\+Status\+Category}}, \mbox{\hyperlink{classtesseract__urdf_1_1JointStatusCategory_a1076e9ea1b4c4eb587957ca0a0064fbd}{tesseract\+\_\+urdf\+::\+Joint\+Status\+Category}}, \mbox{\hyperlink{classtesseract__urdf_1_1OctomapStatusCategory_ad726689bf73a7972e91e3f490aa8da9a}{tesseract\+\_\+urdf\+::\+Octomap\+Status\+Category}}, \mbox{\hyperlink{classtesseract__urdf_1_1ConvexMeshStatusCategory_a44301218a1b8ca53943d752d7c644c2d}{tesseract\+\_\+urdf\+::\+Convex\+Mesh\+Status\+Category}}, \mbox{\hyperlink{classtesseract__urdf_1_1MeshStatusCategory_a379392b29039c56781f089a9050a682d}{tesseract\+\_\+urdf\+::\+Mesh\+Status\+Category}}, \mbox{\hyperlink{classtesseract__urdf_1_1SDFMeshStatusCategory_a197f819bc54482e7abfaceeb5c9a3db7}{tesseract\+\_\+urdf\+::\+S\+D\+F\+Mesh\+Status\+Category}}, \mbox{\hyperlink{classtesseract__urdf_1_1URDFStatusCategory_a8a5a6de1a4171ce93390003e83c4e92b}{tesseract\+\_\+urdf\+::\+U\+R\+D\+F\+Status\+Category}}, \mbox{\hyperlink{classtesseract__urdf_1_1VisualStatusCategory_a53a3d2f810c31b8bcd510ee4f5fc1a59}{tesseract\+\_\+urdf\+::\+Visual\+Status\+Category}}, \mbox{\hyperlink{classtesseract__urdf_1_1LinkStatusCategory_aeaf1ff6fb2f18c310231b0db5b0f2e91}{tesseract\+\_\+urdf\+::\+Link\+Status\+Category}}, \mbox{\hyperlink{classtesseract__urdf_1_1OctreeStatusCategory_a5779053c72926067d7c85b3894767cd7}{tesseract\+\_\+urdf\+::\+Octree\+Status\+Category}}, \mbox{\hyperlink{classtesseract__motion__planners_1_1DescartesMotionPlannerStatusCategory_af76228315741041a50dcc68fede53f49}{tesseract\+\_\+motion\+\_\+planners\+::\+Descartes\+Motion\+Planner\+Status\+Category}}, \mbox{\hyperlink{classtesseract__urdf_1_1CollisionStatusCategory_ab4301487373895e8277c41e8e235f23f}{tesseract\+\_\+urdf\+::\+Collision\+Status\+Category}}, \mbox{\hyperlink{classtesseract__urdf_1_1PointCloudStatusCategory_a021d1a06613fbd789b5947558b8e549c}{tesseract\+\_\+urdf\+::\+Point\+Cloud\+Status\+Category}}, \mbox{\hyperlink{classtesseract__urdf_1_1MaterialStatusCategory_a3d2a93d81c173818d80f89b24cec3e42}{tesseract\+\_\+urdf\+::\+Material\+Status\+Category}}, \mbox{\hyperlink{classtesseract__urdf_1_1BoxStatusCategory_adeebe115d87bbacc361271d2ca3e2aec}{tesseract\+\_\+urdf\+::\+Box\+Status\+Category}}, \mbox{\hyperlink{classtesseract__urdf_1_1InertialStatusCategory_ac41eca49427a6e7d66d083030bd1d476}{tesseract\+\_\+urdf\+::\+Inertial\+Status\+Category}}, \mbox{\hyperlink{classtesseract__urdf_1_1MimicStatusCategory_ad20dd6d00d503d3bca101d11f4e0c06d}{tesseract\+\_\+urdf\+::\+Mimic\+Status\+Category}}, \mbox{\hyperlink{classtesseract__urdf_1_1OriginStatusCategory_ae0187dd36ec76fe6d22267c7b7553bb9}{tesseract\+\_\+urdf\+::\+Origin\+Status\+Category}}, \mbox{\hyperlink{classtesseract__urdf_1_1CalibrationStatusCategory_ab1d2694b7f76ac5eafe0d8b1cad6ac81}{tesseract\+\_\+urdf\+::\+Calibration\+Status\+Category}}, \mbox{\hyperlink{classtesseract__urdf_1_1ConeStatusCategory_a8aeb7a9a9c1a2d3e52515e774f6ef31b}{tesseract\+\_\+urdf\+::\+Cone\+Status\+Category}}, \mbox{\hyperlink{classtesseract__urdf_1_1CylinderStatusCategory_ae0786db6072251f6ea2357c96b3f85ee}{tesseract\+\_\+urdf\+::\+Cylinder\+Status\+Category}}, \mbox{\hyperlink{classtesseract__urdf_1_1DynamicsStatusCategory_a3b5e6a9dc9316db902cdcd029d9f87c0}{tesseract\+\_\+urdf\+::\+Dynamics\+Status\+Category}}, \mbox{\hyperlink{classtesseract__urdf_1_1LimitsStatusCategory_a886b5e686e433c64ce49b3062071f7a2}{tesseract\+\_\+urdf\+::\+Limits\+Status\+Category}}, \mbox{\hyperlink{classtesseract__urdf_1_1SafetyStatusCategory_a77929027d7077802584886bd2ce53661}{tesseract\+\_\+urdf\+::\+Safety\+Status\+Category}}, \mbox{\hyperlink{classtesseract__urdf_1_1SphereStatusCategory_a61e47aaf06ced3f618e70d1b4d3d0092}{tesseract\+\_\+urdf\+::\+Sphere\+Status\+Category}}, \mbox{\hyperlink{classtesseract__urdf_1_1CapsuleStatusCategory_ae9a1bd6a40f1432ef2db26c4ce045835}{tesseract\+\_\+urdf\+::\+Capsule\+Status\+Category}}, and \mbox{\hyperlink{classtesseract__motion__planners_1_1OMPLMotionPlannerStatusCategory_adb4485a603f8456648513405fd66e5b5}{tesseract\+\_\+motion\+\_\+planners\+::\+O\+M\+P\+L\+Motion\+Planner\+Status\+Category}}.
+
+\mbox{\Hypertarget{classtesseract__common_1_1StatusCategory_a25dba1a749dc683a33b47975b37036bc}\label{classtesseract__common_1_1StatusCategory_a25dba1a749dc683a33b47975b37036bc}} 
+\index{tesseract\_common::StatusCategory@{tesseract\_common::StatusCategory}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!tesseract\_common::StatusCategory@{tesseract\_common::StatusCategory}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily bool tesseract\+\_\+common\+::\+Status\+Category\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtesseract__common_1_1StatusCategory}{Status\+Category}} \&}]{rhs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classtesseract__common_1_1StatusCategory_a0aa35233766a34b6b05bbe0c51dd1845}\label{classtesseract__common_1_1StatusCategory_a0aa35233766a34b6b05bbe0c51dd1845}} 
+\index{tesseract\_common::StatusCategory@{tesseract\_common::StatusCategory}!operator=@{operator=}}
+\index{operator=@{operator=}!tesseract\_common::StatusCategory@{tesseract\_common::StatusCategory}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__common_1_1StatusCategory}{Status\+Category}}\& tesseract\+\_\+common\+::\+Status\+Category\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtesseract__common_1_1StatusCategory}{Status\+Category}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classtesseract__common_1_1StatusCategory_ab236ad5fb595abb8a5437447afcf479d}\label{classtesseract__common_1_1StatusCategory_ab236ad5fb595abb8a5437447afcf479d}} 
+\index{tesseract\_common::StatusCategory@{tesseract\_common::StatusCategory}!operator=@{operator=}}
+\index{operator=@{operator=}!tesseract\_common::StatusCategory@{tesseract\_common::StatusCategory}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__common_1_1StatusCategory}{Status\+Category}}\& tesseract\+\_\+common\+::\+Status\+Category\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtesseract__common_1_1StatusCategory}{Status\+Category}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classtesseract__common_1_1StatusCategory_a8e6e8615382182d43c9a70626d7daf76}\label{classtesseract__common_1_1StatusCategory_a8e6e8615382182d43c9a70626d7daf76}} 
+\index{tesseract\_common::StatusCategory@{tesseract\_common::StatusCategory}!operator==@{operator==}}
+\index{operator==@{operator==}!tesseract\_common::StatusCategory@{tesseract\_common::StatusCategory}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool tesseract\+\_\+common\+::\+Status\+Category\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtesseract__common_1_1StatusCategory}{Status\+Category}} \&}]{rhs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+tesseract/tesseract\+\_\+common/include/tesseract\+\_\+common/\mbox{\hyperlink{status__code_8h}{status\+\_\+code.\+h}}\end{DoxyCompactItemize}

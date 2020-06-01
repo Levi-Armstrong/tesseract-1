@@ -1,0 +1,118 @@
+\hypertarget{classtesseract__urdf_1_1CalibrationStatusCategory}{}\doxysection{tesseract\+\_\+urdf\+::Calibration\+Status\+Category Class Reference}
+\label{classtesseract__urdf_1_1CalibrationStatusCategory}\index{tesseract\_urdf::CalibrationStatusCategory@{tesseract\_urdf::CalibrationStatusCategory}}
+
+
+{\ttfamily \#include $<$calibration.\+h$>$}
+
+Inheritance diagram for tesseract\+\_\+urdf\+::Calibration\+Status\+Category\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{d6/d1b/classtesseract__urdf_1_1CalibrationStatusCategory}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \newline
+\mbox{\hyperlink{classtesseract__urdf_1_1CalibrationStatusCategory_af4dff578366d516abf4148bb71552fbda72125d58a6a204aee5c6ed794bbcbe36}{Missing\+Attribute\+Rising}} = 2, 
+\mbox{\hyperlink{classtesseract__urdf_1_1CalibrationStatusCategory_af4dff578366d516abf4148bb71552fbdac701fb5df2e08ea37574e2383c036566}{Missing\+Attribute\+Falling}} = 1, 
+\mbox{\hyperlink{classtesseract__urdf_1_1CalibrationStatusCategory_af4dff578366d516abf4148bb71552fbda6ccdc8b0065dd9fb60a772e3d1d58596}{Success}} = 0, 
+\mbox{\hyperlink{classtesseract__urdf_1_1CalibrationStatusCategory_af4dff578366d516abf4148bb71552fbdac2ac04e7f12a39c33af3f907a6d9633c}{Error\+Missing\+Attribute\+Rising\+And\+Falling}} = -\/1, 
+\newline
+\mbox{\hyperlink{classtesseract__urdf_1_1CalibrationStatusCategory_af4dff578366d516abf4148bb71552fbda0905b1f146de9291a6f822aa1bebce1f}{Error\+Parsing\+Attribute\+Rising}} = -\/2, 
+\mbox{\hyperlink{classtesseract__urdf_1_1CalibrationStatusCategory_af4dff578366d516abf4148bb71552fbdabb7b870fb158b0d541962763b6d64a13}{Error\+Parsing\+Attribute\+Falling}} = -\/3
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtesseract__urdf_1_1CalibrationStatusCategory_ad9eeaf0e6008c5f9d761d52ed705e7e9}{Calibration\+Status\+Category}} ()
+\item 
+const std\+::string \& \mbox{\hyperlink{classtesseract__urdf_1_1CalibrationStatusCategory_ab1d2694b7f76ac5eafe0d8b1cad6ac81}{name}} () const noexcept override
+\item 
+std\+::string \mbox{\hyperlink{classtesseract__urdf_1_1CalibrationStatusCategory_ac323e5a5885ebc0ef2649f87a24b6602}{message}} (int code) const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classtesseract__urdf_1_1CalibrationStatusCategory_aecb262c7f07f3307444715db41bae2bd}{name\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classtesseract__urdf_1_1CalibrationStatusCategory_af4dff578366d516abf4148bb71552fbd}\label{classtesseract__urdf_1_1CalibrationStatusCategory_af4dff578366d516abf4148bb71552fbd}} 
+\doxysubsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily anonymous enum}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MissingAttributeRising@{MissingAttributeRising}!tesseract\_urdf::CalibrationStatusCategory@{tesseract\_urdf::CalibrationStatusCategory}}\index{tesseract\_urdf::CalibrationStatusCategory@{tesseract\_urdf::CalibrationStatusCategory}!MissingAttributeRising@{MissingAttributeRising}}}\mbox{\Hypertarget{classtesseract__urdf_1_1CalibrationStatusCategory_af4dff578366d516abf4148bb71552fbda72125d58a6a204aee5c6ed794bbcbe36}\label{classtesseract__urdf_1_1CalibrationStatusCategory_af4dff578366d516abf4148bb71552fbda72125d58a6a204aee5c6ed794bbcbe36}} 
+Missing\+Attribute\+Rising&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MissingAttributeFalling@{MissingAttributeFalling}!tesseract\_urdf::CalibrationStatusCategory@{tesseract\_urdf::CalibrationStatusCategory}}\index{tesseract\_urdf::CalibrationStatusCategory@{tesseract\_urdf::CalibrationStatusCategory}!MissingAttributeFalling@{MissingAttributeFalling}}}\mbox{\Hypertarget{classtesseract__urdf_1_1CalibrationStatusCategory_af4dff578366d516abf4148bb71552fbdac701fb5df2e08ea37574e2383c036566}\label{classtesseract__urdf_1_1CalibrationStatusCategory_af4dff578366d516abf4148bb71552fbdac701fb5df2e08ea37574e2383c036566}} 
+Missing\+Attribute\+Falling&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Success@{Success}!tesseract\_urdf::CalibrationStatusCategory@{tesseract\_urdf::CalibrationStatusCategory}}\index{tesseract\_urdf::CalibrationStatusCategory@{tesseract\_urdf::CalibrationStatusCategory}!Success@{Success}}}\mbox{\Hypertarget{classtesseract__urdf_1_1CalibrationStatusCategory_af4dff578366d516abf4148bb71552fbda6ccdc8b0065dd9fb60a772e3d1d58596}\label{classtesseract__urdf_1_1CalibrationStatusCategory_af4dff578366d516abf4148bb71552fbda6ccdc8b0065dd9fb60a772e3d1d58596}} 
+Success&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ErrorMissingAttributeRisingAndFalling@{ErrorMissingAttributeRisingAndFalling}!tesseract\_urdf::CalibrationStatusCategory@{tesseract\_urdf::CalibrationStatusCategory}}\index{tesseract\_urdf::CalibrationStatusCategory@{tesseract\_urdf::CalibrationStatusCategory}!ErrorMissingAttributeRisingAndFalling@{ErrorMissingAttributeRisingAndFalling}}}\mbox{\Hypertarget{classtesseract__urdf_1_1CalibrationStatusCategory_af4dff578366d516abf4148bb71552fbdac2ac04e7f12a39c33af3f907a6d9633c}\label{classtesseract__urdf_1_1CalibrationStatusCategory_af4dff578366d516abf4148bb71552fbdac2ac04e7f12a39c33af3f907a6d9633c}} 
+Error\+Missing\+Attribute\+Rising\+And\+Falling&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ErrorParsingAttributeRising@{ErrorParsingAttributeRising}!tesseract\_urdf::CalibrationStatusCategory@{tesseract\_urdf::CalibrationStatusCategory}}\index{tesseract\_urdf::CalibrationStatusCategory@{tesseract\_urdf::CalibrationStatusCategory}!ErrorParsingAttributeRising@{ErrorParsingAttributeRising}}}\mbox{\Hypertarget{classtesseract__urdf_1_1CalibrationStatusCategory_af4dff578366d516abf4148bb71552fbda0905b1f146de9291a6f822aa1bebce1f}\label{classtesseract__urdf_1_1CalibrationStatusCategory_af4dff578366d516abf4148bb71552fbda0905b1f146de9291a6f822aa1bebce1f}} 
+Error\+Parsing\+Attribute\+Rising&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ErrorParsingAttributeFalling@{ErrorParsingAttributeFalling}!tesseract\_urdf::CalibrationStatusCategory@{tesseract\_urdf::CalibrationStatusCategory}}\index{tesseract\_urdf::CalibrationStatusCategory@{tesseract\_urdf::CalibrationStatusCategory}!ErrorParsingAttributeFalling@{ErrorParsingAttributeFalling}}}\mbox{\Hypertarget{classtesseract__urdf_1_1CalibrationStatusCategory_af4dff578366d516abf4148bb71552fbdabb7b870fb158b0d541962763b6d64a13}\label{classtesseract__urdf_1_1CalibrationStatusCategory_af4dff578366d516abf4148bb71552fbdabb7b870fb158b0d541962763b6d64a13}} 
+Error\+Parsing\+Attribute\+Falling&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtesseract__urdf_1_1CalibrationStatusCategory_ad9eeaf0e6008c5f9d761d52ed705e7e9}\label{classtesseract__urdf_1_1CalibrationStatusCategory_ad9eeaf0e6008c5f9d761d52ed705e7e9}} 
+\index{tesseract\_urdf::CalibrationStatusCategory@{tesseract\_urdf::CalibrationStatusCategory}!CalibrationStatusCategory@{CalibrationStatusCategory}}
+\index{CalibrationStatusCategory@{CalibrationStatusCategory}!tesseract\_urdf::CalibrationStatusCategory@{tesseract\_urdf::CalibrationStatusCategory}}
+\doxysubsubsection{\texorpdfstring{CalibrationStatusCategory()}{CalibrationStatusCategory()}}
+{\footnotesize\ttfamily tesseract\+\_\+urdf\+::\+Calibration\+Status\+Category\+::\+Calibration\+Status\+Category (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtesseract__urdf_1_1CalibrationStatusCategory_ac323e5a5885ebc0ef2649f87a24b6602}\label{classtesseract__urdf_1_1CalibrationStatusCategory_ac323e5a5885ebc0ef2649f87a24b6602}} 
+\index{tesseract\_urdf::CalibrationStatusCategory@{tesseract\_urdf::CalibrationStatusCategory}!message@{message}}
+\index{message@{message}!tesseract\_urdf::CalibrationStatusCategory@{tesseract\_urdf::CalibrationStatusCategory}}
+\doxysubsubsection{\texorpdfstring{message()}{message()}}
+{\footnotesize\ttfamily std\+::string tesseract\+\_\+urdf\+::\+Calibration\+Status\+Category\+::message (\begin{DoxyParamCaption}\item[{int}]{code }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classtesseract__common_1_1StatusCategory_a1b243ec0e046910ceac90403190b45ac}{tesseract\+\_\+common\+::\+Status\+Category}}.
+
+\mbox{\Hypertarget{classtesseract__urdf_1_1CalibrationStatusCategory_ab1d2694b7f76ac5eafe0d8b1cad6ac81}\label{classtesseract__urdf_1_1CalibrationStatusCategory_ab1d2694b7f76ac5eafe0d8b1cad6ac81}} 
+\index{tesseract\_urdf::CalibrationStatusCategory@{tesseract\_urdf::CalibrationStatusCategory}!name@{name}}
+\index{name@{name}!tesseract\_urdf::CalibrationStatusCategory@{tesseract\_urdf::CalibrationStatusCategory}}
+\doxysubsubsection{\texorpdfstring{name()}{name()}}
+{\footnotesize\ttfamily const std\+::string\& tesseract\+\_\+urdf\+::\+Calibration\+Status\+Category\+::name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}, {\ttfamily [noexcept]}}
+
+
+
+Implements \mbox{\hyperlink{classtesseract__common_1_1StatusCategory_ae08466c99a1e92f904141e5a070382e5}{tesseract\+\_\+common\+::\+Status\+Category}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classtesseract__urdf_1_1CalibrationStatusCategory_aecb262c7f07f3307444715db41bae2bd}\label{classtesseract__urdf_1_1CalibrationStatusCategory_aecb262c7f07f3307444715db41bae2bd}} 
+\index{tesseract\_urdf::CalibrationStatusCategory@{tesseract\_urdf::CalibrationStatusCategory}!name\_@{name\_}}
+\index{name\_@{name\_}!tesseract\_urdf::CalibrationStatusCategory@{tesseract\_urdf::CalibrationStatusCategory}}
+\doxysubsubsection{\texorpdfstring{name\_}{name\_}}
+{\footnotesize\ttfamily std\+::string tesseract\+\_\+urdf\+::\+Calibration\+Status\+Category\+::name\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+tesseract/tesseract\+\_\+urdf/include/tesseract\+\_\+urdf/\mbox{\hyperlink{calibration_8h}{calibration.\+h}}\end{DoxyCompactItemize}

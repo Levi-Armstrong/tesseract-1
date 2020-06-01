@@ -1,0 +1,204 @@
+\hypertarget{classtesseract__motion__planners_1_1ContinuousMotionValidator}{}\doxysection{tesseract\+\_\+motion\+\_\+planners\+::Continuous\+Motion\+Validator Class Reference}
+\label{classtesseract__motion__planners_1_1ContinuousMotionValidator}\index{tesseract\_motion\_planners::ContinuousMotionValidator@{tesseract\_motion\_planners::ContinuousMotionValidator}}
+
+
+Continuous collision check between two states.  
+
+
+
+
+{\ttfamily \#include $<$continuous\+\_\+motion\+\_\+validator.\+h$>$}
+
+Inheritance diagram for tesseract\+\_\+motion\+\_\+planners\+::Continuous\+Motion\+Validator\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{d0/da0/classtesseract__motion__planners_1_1ContinuousMotionValidator}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtesseract__motion__planners_1_1ContinuousMotionValidator_ae4278714a663fcb7f955e3aee76571b7}{Continuous\+Motion\+Validator}} (const ompl\+::base\+::\+Space\+Information\+Ptr \&space\+\_\+info, ompl\+::base\+::\+State\+Validity\+Checker\+Ptr state\+\_\+validator, const \mbox{\hyperlink{classtesseract__environment_1_1Environment_a9d9ecedaebeea1d7ba45be7670fbcd77}{tesseract\+\_\+environment\+::\+Environment\+::\+Const\+Ptr}} \&env, \mbox{\hyperlink{classtesseract__kinematics_1_1ForwardKinematics_a2c99fff4d4596e15bfdc4f72ec3b7406}{tesseract\+\_\+kinematics\+::\+Forward\+Kinematics\+::\+Const\+Ptr}} kin, double collision\+\_\+safety\+\_\+margin, \mbox{\hyperlink{namespacetesseract__motion__planners_a1b48c5f604b5f40e9d1be2e78185e0af}{O\+M\+P\+L\+State\+Extractor}} extractor)
+\item 
+bool \mbox{\hyperlink{classtesseract__motion__planners_1_1ContinuousMotionValidator_a9939a51c343b46133a66b4a43dd163cc}{check\+Motion}} (const ompl\+::base\+::\+State $\ast$s1, const ompl\+::base\+::\+State $\ast$s2) const override
+\item 
+bool \mbox{\hyperlink{classtesseract__motion__planners_1_1ContinuousMotionValidator_ac5d0dcbe461ce24dd5b1a3f3ae2f74e0}{check\+Motion}} (const ompl\+::base\+::\+State $\ast$s1, const ompl\+::base\+::\+State $\ast$s2, std\+::pair$<$ ompl\+::base\+::\+State $\ast$, double $>$ \&last\+Valid) const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classtesseract__motion__planners_1_1ContinuousMotionValidator_ade8bc931b8012810798bbe074d3e2c39}{continuous\+Collision\+Check}} (const ompl\+::base\+::\+State $\ast$s1, const ompl\+::base\+::\+State $\ast$s2) const
+\begin{DoxyCompactList}\small\item\em Perform a continuous collision check between two ompl states. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+ompl\+::base\+::\+State\+Validity\+Checker\+Ptr \mbox{\hyperlink{classtesseract__motion__planners_1_1ContinuousMotionValidator_a72429fca8529d56fc554c3291623b9f4}{state\+\_\+validator\+\_\+}}
+\begin{DoxyCompactList}\small\item\em The state validator without collision checking. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classtesseract__environment_1_1StateSolver_a6163ed24e6847a8952e46c58620ea18f}{tesseract\+\_\+environment\+::\+State\+Solver\+::\+Const\+Ptr}} \mbox{\hyperlink{classtesseract__motion__planners_1_1ContinuousMotionValidator_af5c4eb24d39736e997be9b0fa78a58c4}{state\+\_\+solver\+\_\+}}
+\item 
+\mbox{\hyperlink{classtesseract__kinematics_1_1ForwardKinematics_a2c99fff4d4596e15bfdc4f72ec3b7406}{tesseract\+\_\+kinematics\+::\+Forward\+Kinematics\+::\+Const\+Ptr}} \mbox{\hyperlink{classtesseract__motion__planners_1_1ContinuousMotionValidator_a991e8066020bd9f456b56d2a0624c279}{kin\+\_\+}}
+\begin{DoxyCompactList}\small\item\em The Tesseract Forward Kinematics. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classtesseract__collision_1_1ContinuousContactManager_a60778058b979eafd448a6a9bec7ff02b}{tesseract\+\_\+collision\+::\+Continuous\+Contact\+Manager\+::\+Ptr}} \mbox{\hyperlink{classtesseract__motion__planners_1_1ContinuousMotionValidator_a5ed2a055f9b572cd61a469b895490ba8}{continuous\+\_\+contact\+\_\+manager\+\_\+}}
+\begin{DoxyCompactList}\small\item\em The continuous contact manager used for creating cached continuous contact managers. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classtesseract__motion__planners_1_1ContinuousMotionValidator_a19cceb93a719d8d50cd54d7ba8226989}{links\+\_\+}}
+\begin{DoxyCompactList}\small\item\em A list of active links. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classtesseract__motion__planners_1_1ContinuousMotionValidator_aff796c8bdab3a254e2f1c30b38f3316f}{joints\+\_\+}}
+\begin{DoxyCompactList}\small\item\em A list of active joints. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacetesseract__motion__planners_a1b48c5f604b5f40e9d1be2e78185e0af}{O\+M\+P\+L\+State\+Extractor}} \mbox{\hyperlink{classtesseract__motion__planners_1_1ContinuousMotionValidator_a2db6025b16e00e5f3fd2a7b607c27d35}{extractor\+\_\+}}
+\item 
+std\+::mutex \mbox{\hyperlink{classtesseract__motion__planners_1_1ContinuousMotionValidator_a180de069cace5a050bbdfe53b83dd2cb}{mutex\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Contact manager caching mutex. \end{DoxyCompactList}\item 
+std\+::map$<$ unsigned long int, \mbox{\hyperlink{classtesseract__collision_1_1ContinuousContactManager_a60778058b979eafd448a6a9bec7ff02b}{tesseract\+\_\+collision\+::\+Continuous\+Contact\+Manager\+::\+Ptr}} $>$ \mbox{\hyperlink{classtesseract__motion__planners_1_1ContinuousMotionValidator_a9f1ab5f62b82d6b9eb551845e557506b}{continuous\+\_\+contact\+\_\+managers\+\_\+}}
+\begin{DoxyCompactList}\small\item\em The continuous contact manager cache. \end{DoxyCompactList}\item 
+std\+::map$<$ unsigned long int, \mbox{\hyperlink{classtesseract__environment_1_1StateSolver_aa3ff331ff46017f494dfeccf22ca80b6}{tesseract\+\_\+environment\+::\+State\+Solver\+::\+Ptr}} $>$ \mbox{\hyperlink{classtesseract__motion__planners_1_1ContinuousMotionValidator_a1e2a8c40969f257da706deed3e3c4596}{state\+\_\+solver\+\_\+managers\+\_\+}}
+\begin{DoxyCompactList}\small\item\em The state solver manager cache. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Continuous collision check between two states. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtesseract__motion__planners_1_1ContinuousMotionValidator_ae4278714a663fcb7f955e3aee76571b7}\label{classtesseract__motion__planners_1_1ContinuousMotionValidator_ae4278714a663fcb7f955e3aee76571b7}} 
+\index{tesseract\_motion\_planners::ContinuousMotionValidator@{tesseract\_motion\_planners::ContinuousMotionValidator}!ContinuousMotionValidator@{ContinuousMotionValidator}}
+\index{ContinuousMotionValidator@{ContinuousMotionValidator}!tesseract\_motion\_planners::ContinuousMotionValidator@{tesseract\_motion\_planners::ContinuousMotionValidator}}
+\doxysubsubsection{\texorpdfstring{ContinuousMotionValidator()}{ContinuousMotionValidator()}}
+{\footnotesize\ttfamily tesseract\+\_\+motion\+\_\+planners\+::\+Continuous\+Motion\+Validator\+::\+Continuous\+Motion\+Validator (\begin{DoxyParamCaption}\item[{const ompl\+::base\+::\+Space\+Information\+Ptr \&}]{space\+\_\+info,  }\item[{ompl\+::base\+::\+State\+Validity\+Checker\+Ptr}]{state\+\_\+validator,  }\item[{const \mbox{\hyperlink{classtesseract__environment_1_1Environment_a9d9ecedaebeea1d7ba45be7670fbcd77}{tesseract\+\_\+environment\+::\+Environment\+::\+Const\+Ptr}} \&}]{env,  }\item[{\mbox{\hyperlink{classtesseract__kinematics_1_1ForwardKinematics_a2c99fff4d4596e15bfdc4f72ec3b7406}{tesseract\+\_\+kinematics\+::\+Forward\+Kinematics\+::\+Const\+Ptr}}}]{kin,  }\item[{double}]{collision\+\_\+safety\+\_\+margin,  }\item[{\mbox{\hyperlink{namespacetesseract__motion__planners_a1b48c5f604b5f40e9d1be2e78185e0af}{O\+M\+P\+L\+State\+Extractor}}}]{extractor }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtesseract__motion__planners_1_1ContinuousMotionValidator_a9939a51c343b46133a66b4a43dd163cc}\label{classtesseract__motion__planners_1_1ContinuousMotionValidator_a9939a51c343b46133a66b4a43dd163cc}} 
+\index{tesseract\_motion\_planners::ContinuousMotionValidator@{tesseract\_motion\_planners::ContinuousMotionValidator}!checkMotion@{checkMotion}}
+\index{checkMotion@{checkMotion}!tesseract\_motion\_planners::ContinuousMotionValidator@{tesseract\_motion\_planners::ContinuousMotionValidator}}
+\doxysubsubsection{\texorpdfstring{checkMotion()}{checkMotion()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool tesseract\+\_\+motion\+\_\+planners\+::\+Continuous\+Motion\+Validator\+::check\+Motion (\begin{DoxyParamCaption}\item[{const ompl\+::base\+::\+State $\ast$}]{s1,  }\item[{const ompl\+::base\+::\+State $\ast$}]{s2 }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}}
+
+\mbox{\Hypertarget{classtesseract__motion__planners_1_1ContinuousMotionValidator_ac5d0dcbe461ce24dd5b1a3f3ae2f74e0}\label{classtesseract__motion__planners_1_1ContinuousMotionValidator_ac5d0dcbe461ce24dd5b1a3f3ae2f74e0}} 
+\index{tesseract\_motion\_planners::ContinuousMotionValidator@{tesseract\_motion\_planners::ContinuousMotionValidator}!checkMotion@{checkMotion}}
+\index{checkMotion@{checkMotion}!tesseract\_motion\_planners::ContinuousMotionValidator@{tesseract\_motion\_planners::ContinuousMotionValidator}}
+\doxysubsubsection{\texorpdfstring{checkMotion()}{checkMotion()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool tesseract\+\_\+motion\+\_\+planners\+::\+Continuous\+Motion\+Validator\+::check\+Motion (\begin{DoxyParamCaption}\item[{const ompl\+::base\+::\+State $\ast$}]{s1,  }\item[{const ompl\+::base\+::\+State $\ast$}]{s2,  }\item[{std\+::pair$<$ ompl\+::base\+::\+State $\ast$, double $>$ \&}]{last\+Valid }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}}
+
+\mbox{\Hypertarget{classtesseract__motion__planners_1_1ContinuousMotionValidator_ade8bc931b8012810798bbe074d3e2c39}\label{classtesseract__motion__planners_1_1ContinuousMotionValidator_ade8bc931b8012810798bbe074d3e2c39}} 
+\index{tesseract\_motion\_planners::ContinuousMotionValidator@{tesseract\_motion\_planners::ContinuousMotionValidator}!continuousCollisionCheck@{continuousCollisionCheck}}
+\index{continuousCollisionCheck@{continuousCollisionCheck}!tesseract\_motion\_planners::ContinuousMotionValidator@{tesseract\_motion\_planners::ContinuousMotionValidator}}
+\doxysubsubsection{\texorpdfstring{continuousCollisionCheck()}{continuousCollisionCheck()}}
+{\footnotesize\ttfamily bool tesseract\+\_\+motion\+\_\+planners\+::\+Continuous\+Motion\+Validator\+::continuous\+Collision\+Check (\begin{DoxyParamCaption}\item[{const ompl\+::base\+::\+State $\ast$}]{s1,  }\item[{const ompl\+::base\+::\+State $\ast$}]{s2 }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Perform a continuous collision check between two ompl states. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s1} & First O\+M\+PL State \\
+\hline
+{\em s2} & Second O\+M\+PL State \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if not in collision, otherwise false. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classtesseract__motion__planners_1_1ContinuousMotionValidator_a5ed2a055f9b572cd61a469b895490ba8}\label{classtesseract__motion__planners_1_1ContinuousMotionValidator_a5ed2a055f9b572cd61a469b895490ba8}} 
+\index{tesseract\_motion\_planners::ContinuousMotionValidator@{tesseract\_motion\_planners::ContinuousMotionValidator}!continuous\_contact\_manager\_@{continuous\_contact\_manager\_}}
+\index{continuous\_contact\_manager\_@{continuous\_contact\_manager\_}!tesseract\_motion\_planners::ContinuousMotionValidator@{tesseract\_motion\_planners::ContinuousMotionValidator}}
+\doxysubsubsection{\texorpdfstring{continuous\_contact\_manager\_}{continuous\_contact\_manager\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__collision_1_1ContinuousContactManager_a60778058b979eafd448a6a9bec7ff02b}{tesseract\+\_\+collision\+::\+Continuous\+Contact\+Manager\+::\+Ptr}} tesseract\+\_\+motion\+\_\+planners\+::\+Continuous\+Motion\+Validator\+::continuous\+\_\+contact\+\_\+manager\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The continuous contact manager used for creating cached continuous contact managers. 
+
+\mbox{\Hypertarget{classtesseract__motion__planners_1_1ContinuousMotionValidator_a9f1ab5f62b82d6b9eb551845e557506b}\label{classtesseract__motion__planners_1_1ContinuousMotionValidator_a9f1ab5f62b82d6b9eb551845e557506b}} 
+\index{tesseract\_motion\_planners::ContinuousMotionValidator@{tesseract\_motion\_planners::ContinuousMotionValidator}!continuous\_contact\_managers\_@{continuous\_contact\_managers\_}}
+\index{continuous\_contact\_managers\_@{continuous\_contact\_managers\_}!tesseract\_motion\_planners::ContinuousMotionValidator@{tesseract\_motion\_planners::ContinuousMotionValidator}}
+\doxysubsubsection{\texorpdfstring{continuous\_contact\_managers\_}{continuous\_contact\_managers\_}}
+{\footnotesize\ttfamily std\+::map$<$unsigned long int, \mbox{\hyperlink{classtesseract__collision_1_1ContinuousContactManager_a60778058b979eafd448a6a9bec7ff02b}{tesseract\+\_\+collision\+::\+Continuous\+Contact\+Manager\+::\+Ptr}}$>$ tesseract\+\_\+motion\+\_\+planners\+::\+Continuous\+Motion\+Validator\+::continuous\+\_\+contact\+\_\+managers\+\_\+\hspace{0.3cm}{\ttfamily [mutable]}, {\ttfamily [private]}}
+
+
+
+The continuous contact manager cache. 
+
+\mbox{\Hypertarget{classtesseract__motion__planners_1_1ContinuousMotionValidator_a2db6025b16e00e5f3fd2a7b607c27d35}\label{classtesseract__motion__planners_1_1ContinuousMotionValidator_a2db6025b16e00e5f3fd2a7b607c27d35}} 
+\index{tesseract\_motion\_planners::ContinuousMotionValidator@{tesseract\_motion\_planners::ContinuousMotionValidator}!extractor\_@{extractor\_}}
+\index{extractor\_@{extractor\_}!tesseract\_motion\_planners::ContinuousMotionValidator@{tesseract\_motion\_planners::ContinuousMotionValidator}}
+\doxysubsubsection{\texorpdfstring{extractor\_}{extractor\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacetesseract__motion__planners_a1b48c5f604b5f40e9d1be2e78185e0af}{O\+M\+P\+L\+State\+Extractor}} tesseract\+\_\+motion\+\_\+planners\+::\+Continuous\+Motion\+Validator\+::extractor\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+@bried This will extract an Eigen\+::\+Vector\+Xd from the O\+M\+PL State \mbox{\Hypertarget{classtesseract__motion__planners_1_1ContinuousMotionValidator_aff796c8bdab3a254e2f1c30b38f3316f}\label{classtesseract__motion__planners_1_1ContinuousMotionValidator_aff796c8bdab3a254e2f1c30b38f3316f}} 
+\index{tesseract\_motion\_planners::ContinuousMotionValidator@{tesseract\_motion\_planners::ContinuousMotionValidator}!joints\_@{joints\_}}
+\index{joints\_@{joints\_}!tesseract\_motion\_planners::ContinuousMotionValidator@{tesseract\_motion\_planners::ContinuousMotionValidator}}
+\doxysubsubsection{\texorpdfstring{joints\_}{joints\_}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::string$>$ tesseract\+\_\+motion\+\_\+planners\+::\+Continuous\+Motion\+Validator\+::joints\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+A list of active joints. 
+
+\mbox{\Hypertarget{classtesseract__motion__planners_1_1ContinuousMotionValidator_a991e8066020bd9f456b56d2a0624c279}\label{classtesseract__motion__planners_1_1ContinuousMotionValidator_a991e8066020bd9f456b56d2a0624c279}} 
+\index{tesseract\_motion\_planners::ContinuousMotionValidator@{tesseract\_motion\_planners::ContinuousMotionValidator}!kin\_@{kin\_}}
+\index{kin\_@{kin\_}!tesseract\_motion\_planners::ContinuousMotionValidator@{tesseract\_motion\_planners::ContinuousMotionValidator}}
+\doxysubsubsection{\texorpdfstring{kin\_}{kin\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__kinematics_1_1ForwardKinematics_a2c99fff4d4596e15bfdc4f72ec3b7406}{tesseract\+\_\+kinematics\+::\+Forward\+Kinematics\+::\+Const\+Ptr}} tesseract\+\_\+motion\+\_\+planners\+::\+Continuous\+Motion\+Validator\+::kin\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The Tesseract Forward Kinematics. 
+
+\mbox{\Hypertarget{classtesseract__motion__planners_1_1ContinuousMotionValidator_a19cceb93a719d8d50cd54d7ba8226989}\label{classtesseract__motion__planners_1_1ContinuousMotionValidator_a19cceb93a719d8d50cd54d7ba8226989}} 
+\index{tesseract\_motion\_planners::ContinuousMotionValidator@{tesseract\_motion\_planners::ContinuousMotionValidator}!links\_@{links\_}}
+\index{links\_@{links\_}!tesseract\_motion\_planners::ContinuousMotionValidator@{tesseract\_motion\_planners::ContinuousMotionValidator}}
+\doxysubsubsection{\texorpdfstring{links\_}{links\_}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::string$>$ tesseract\+\_\+motion\+\_\+planners\+::\+Continuous\+Motion\+Validator\+::links\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+A list of active links. 
+
+\mbox{\Hypertarget{classtesseract__motion__planners_1_1ContinuousMotionValidator_a180de069cace5a050bbdfe53b83dd2cb}\label{classtesseract__motion__planners_1_1ContinuousMotionValidator_a180de069cace5a050bbdfe53b83dd2cb}} 
+\index{tesseract\_motion\_planners::ContinuousMotionValidator@{tesseract\_motion\_planners::ContinuousMotionValidator}!mutex\_@{mutex\_}}
+\index{mutex\_@{mutex\_}!tesseract\_motion\_planners::ContinuousMotionValidator@{tesseract\_motion\_planners::ContinuousMotionValidator}}
+\doxysubsubsection{\texorpdfstring{mutex\_}{mutex\_}}
+{\footnotesize\ttfamily std\+::mutex tesseract\+\_\+motion\+\_\+planners\+::\+Continuous\+Motion\+Validator\+::mutex\+\_\+\hspace{0.3cm}{\ttfamily [mutable]}, {\ttfamily [private]}}
+
+
+
+Contact manager caching mutex. 
+
+\mbox{\Hypertarget{classtesseract__motion__planners_1_1ContinuousMotionValidator_af5c4eb24d39736e997be9b0fa78a58c4}\label{classtesseract__motion__planners_1_1ContinuousMotionValidator_af5c4eb24d39736e997be9b0fa78a58c4}} 
+\index{tesseract\_motion\_planners::ContinuousMotionValidator@{tesseract\_motion\_planners::ContinuousMotionValidator}!state\_solver\_@{state\_solver\_}}
+\index{state\_solver\_@{state\_solver\_}!tesseract\_motion\_planners::ContinuousMotionValidator@{tesseract\_motion\_planners::ContinuousMotionValidator}}
+\doxysubsubsection{\texorpdfstring{state\_solver\_}{state\_solver\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__environment_1_1StateSolver_a6163ed24e6847a8952e46c58620ea18f}{tesseract\+\_\+environment\+::\+State\+Solver\+::\+Const\+Ptr}} tesseract\+\_\+motion\+\_\+planners\+::\+Continuous\+Motion\+Validator\+::state\+\_\+solver\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classtesseract__motion__planners_1_1ContinuousMotionValidator_a1e2a8c40969f257da706deed3e3c4596}\label{classtesseract__motion__planners_1_1ContinuousMotionValidator_a1e2a8c40969f257da706deed3e3c4596}} 
+\index{tesseract\_motion\_planners::ContinuousMotionValidator@{tesseract\_motion\_planners::ContinuousMotionValidator}!state\_solver\_managers\_@{state\_solver\_managers\_}}
+\index{state\_solver\_managers\_@{state\_solver\_managers\_}!tesseract\_motion\_planners::ContinuousMotionValidator@{tesseract\_motion\_planners::ContinuousMotionValidator}}
+\doxysubsubsection{\texorpdfstring{state\_solver\_managers\_}{state\_solver\_managers\_}}
+{\footnotesize\ttfamily std\+::map$<$unsigned long int, \mbox{\hyperlink{classtesseract__environment_1_1StateSolver_aa3ff331ff46017f494dfeccf22ca80b6}{tesseract\+\_\+environment\+::\+State\+Solver\+::\+Ptr}}$>$ tesseract\+\_\+motion\+\_\+planners\+::\+Continuous\+Motion\+Validator\+::state\+\_\+solver\+\_\+managers\+\_\+\hspace{0.3cm}{\ttfamily [mutable]}, {\ttfamily [private]}}
+
+
+
+The state solver manager cache. 
+
+\mbox{\Hypertarget{classtesseract__motion__planners_1_1ContinuousMotionValidator_a72429fca8529d56fc554c3291623b9f4}\label{classtesseract__motion__planners_1_1ContinuousMotionValidator_a72429fca8529d56fc554c3291623b9f4}} 
+\index{tesseract\_motion\_planners::ContinuousMotionValidator@{tesseract\_motion\_planners::ContinuousMotionValidator}!state\_validator\_@{state\_validator\_}}
+\index{state\_validator\_@{state\_validator\_}!tesseract\_motion\_planners::ContinuousMotionValidator@{tesseract\_motion\_planners::ContinuousMotionValidator}}
+\doxysubsubsection{\texorpdfstring{state\_validator\_}{state\_validator\_}}
+{\footnotesize\ttfamily ompl\+::base\+::\+State\+Validity\+Checker\+Ptr tesseract\+\_\+motion\+\_\+planners\+::\+Continuous\+Motion\+Validator\+::state\+\_\+validator\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The state validator without collision checking. 
+
+Since this performs collision checking we only want to use state validator without collision checking.
+
+The tesseract state solver 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+tesseract/tesseract\+\_\+planning/tesseract\+\_\+motion\+\_\+planners/include/tesseract\+\_\+motion\+\_\+planners/ompl/\mbox{\hyperlink{continuous__motion__validator_8h}{continuous\+\_\+motion\+\_\+validator.\+h}}\item 
+tesseract/tesseract\+\_\+planning/tesseract\+\_\+motion\+\_\+planners/src/ompl/\mbox{\hyperlink{continuous__motion__validator_8cpp}{continuous\+\_\+motion\+\_\+validator.\+cpp}}\end{DoxyCompactItemize}

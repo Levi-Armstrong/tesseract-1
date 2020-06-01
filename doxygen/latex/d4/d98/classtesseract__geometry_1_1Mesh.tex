@@ -1,0 +1,298 @@
+\hypertarget{classtesseract__geometry_1_1Mesh}{}\doxysection{tesseract\+\_\+geometry\+::Mesh Class Reference}
+\label{classtesseract__geometry_1_1Mesh}\index{tesseract\_geometry::Mesh@{tesseract\_geometry::Mesh}}
+
+
+{\ttfamily \#include $<$mesh.\+h$>$}
+
+Inheritance diagram for tesseract\+\_\+geometry\+::Mesh\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{d4/d98/classtesseract__geometry_1_1Mesh}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classtesseract__geometry_1_1Mesh_afc301af0c59b2d87d45f046859de431f}{Ptr}} = std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classtesseract__geometry_1_1Mesh}{Mesh}} $>$
+\item 
+using \mbox{\hyperlink{classtesseract__geometry_1_1Mesh_af9e7b416df5d635267f64b4604f969e2}{Const\+Ptr}} = std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{classtesseract__geometry_1_1Mesh}{Mesh}} $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtesseract__geometry_1_1Mesh_a861dd73a5591c777a23b8fb7ad27655d}{Mesh}} (std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{namespacetesseract__common_af89ed6517f4c84bdb2b037bb40f7d9d9}{tesseract\+\_\+common\+::\+Vector\+Vector3d}} $>$ vertices, std\+::shared\+\_\+ptr$<$ const Eigen\+::\+Vector\+Xi $>$ triangles, \mbox{\hyperlink{classtesseract__common_1_1Resource_acdba916fa227bef4391c469581844dc6}{tesseract\+\_\+common\+::\+Resource\+::\+Ptr}} resource=nullptr, Eigen\+::\+Vector3d scale=Eigen\+::\+Vector3d(1, 1, 1))
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classtesseract__geometry_1_1Mesh}{Mesh}} geometry. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classtesseract__geometry_1_1Mesh_add7c9268a9ad9b164e90653716fe2a8c}{Mesh}} (std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{namespacetesseract__common_af89ed6517f4c84bdb2b037bb40f7d9d9}{tesseract\+\_\+common\+::\+Vector\+Vector3d}} $>$ vertices, std\+::shared\+\_\+ptr$<$ const Eigen\+::\+Vector\+Xi $>$ triangles, int triangle\+\_\+count, \mbox{\hyperlink{classtesseract__common_1_1Resource_acdba916fa227bef4391c469581844dc6}{tesseract\+\_\+common\+::\+Resource\+::\+Ptr}} resource=nullptr, Eigen\+::\+Vector3d scale=Eigen\+::\+Vector3d(1, 1, 1))
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classtesseract__geometry_1_1Mesh}{Mesh}} geometry. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classtesseract__geometry_1_1Mesh_a806c5da25e3f12eee160e8adcca10a05}{$\sim$\+Mesh}} () override=default
+\item 
+\mbox{\hyperlink{classtesseract__geometry_1_1Mesh_a4f612e67e7e84f4178a68061f8dbf003}{Mesh}} (const \mbox{\hyperlink{classtesseract__geometry_1_1Mesh}{Mesh}} \&)=delete
+\item 
+\mbox{\hyperlink{classtesseract__geometry_1_1Mesh}{Mesh}} \& \mbox{\hyperlink{classtesseract__geometry_1_1Mesh_abf717b05db27332e7297d1f62db60d4a}{operator=}} (const \mbox{\hyperlink{classtesseract__geometry_1_1Mesh}{Mesh}} \&)=delete
+\item 
+\mbox{\hyperlink{classtesseract__geometry_1_1Mesh_afcfd6ea990139828a49fd463ca6f6e98}{Mesh}} (\mbox{\hyperlink{classtesseract__geometry_1_1Mesh}{Mesh}} \&\&)=delete
+\item 
+\mbox{\hyperlink{classtesseract__geometry_1_1Mesh}{Mesh}} \& \mbox{\hyperlink{classtesseract__geometry_1_1Mesh_ac0891aa4c3d237d57e143d26df256289}{operator=}} (\mbox{\hyperlink{classtesseract__geometry_1_1Mesh}{Mesh}} \&\&)=delete
+\item 
+const std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{namespacetesseract__common_af89ed6517f4c84bdb2b037bb40f7d9d9}{tesseract\+\_\+common\+::\+Vector\+Vector3d}} $>$ \& \mbox{\hyperlink{classtesseract__geometry_1_1Mesh_a0bb502ab74a9e4d2d706b92d757b37c8}{get\+Vertices}} () const
+\begin{DoxyCompactList}\small\item\em Get mesh vertices. \end{DoxyCompactList}\item 
+const std\+::shared\+\_\+ptr$<$ const Eigen\+::\+Vector\+Xi $>$ \& \mbox{\hyperlink{classtesseract__geometry_1_1Mesh_a5595741a6c4c785869915bc0621c84ca}{get\+Triangles}} () const
+\begin{DoxyCompactList}\small\item\em Get mesh Triangles. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classtesseract__geometry_1_1Mesh_a6132d90c641617937649463baefc8db6}{get\+Vertice\+Count}} () const
+\begin{DoxyCompactList}\small\item\em Get vertice count. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classtesseract__geometry_1_1Mesh_af1ca305cf46ce61f63ff821e1339e060}{get\+Triangle\+Count}} () const
+\begin{DoxyCompactList}\small\item\em Get triangle count. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classtesseract__common_1_1Resource_acdba916fa227bef4391c469581844dc6}{tesseract\+\_\+common\+::\+Resource\+::\+Ptr}} \mbox{\hyperlink{classtesseract__geometry_1_1Mesh_a5d238ad24b3e61f6594c0142abea090b}{get\+Resource}} () const
+\begin{DoxyCompactList}\small\item\em Get the path to file used to generate the mesh. \end{DoxyCompactList}\item 
+const Eigen\+::\+Vector3d \& \mbox{\hyperlink{classtesseract__geometry_1_1Mesh_a3799d07ef3fa525a12078f47ceba8150}{get\+Scale}} () const
+\begin{DoxyCompactList}\small\item\em Get the scale applied to file used to generate the mesh. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classtesseract__geometry_1_1Geometry_acd91c55fb9604ed374446c029b6f2d08}{Geometry\+::\+Ptr}} \mbox{\hyperlink{classtesseract__geometry_1_1Mesh_a2c2705c190dc5c64ab5b474752766203}{clone}} () const override
+\begin{DoxyCompactList}\small\item\em Create a copy of this shape. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{namespacetesseract__common_af89ed6517f4c84bdb2b037bb40f7d9d9}{tesseract\+\_\+common\+::\+Vector\+Vector3d}} $>$ \mbox{\hyperlink{classtesseract__geometry_1_1Mesh_a8494db31ffbaeebcf8ef019c91bf64e7}{vertices\+\_\+}}
+\item 
+std\+::shared\+\_\+ptr$<$ const Eigen\+::\+Vector\+Xi $>$ \mbox{\hyperlink{classtesseract__geometry_1_1Mesh_ab24be362d306812205da18c0ca4daa35}{triangles\+\_\+}}
+\item 
+int \mbox{\hyperlink{classtesseract__geometry_1_1Mesh_a84b9b0965ac89b59ae3b94b27cd0dd4e}{vertice\+\_\+count\+\_\+}}
+\item 
+int \mbox{\hyperlink{classtesseract__geometry_1_1Mesh_a208add3374db4f73c5422d2177d08061}{triangle\+\_\+count\+\_\+}}
+\item 
+\mbox{\hyperlink{classtesseract__common_1_1Resource_acdba916fa227bef4391c469581844dc6}{tesseract\+\_\+common\+::\+Resource\+::\+Ptr}} \mbox{\hyperlink{classtesseract__geometry_1_1Mesh_ab481de2d53b4cd6e2e5decc310bd85a6}{resource\+\_\+}}
+\item 
+Eigen\+::\+Vector3d \mbox{\hyperlink{classtesseract__geometry_1_1Mesh_af47861e261a8f384feb35ebeea223f16}{scale\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classtesseract__geometry_1_1Mesh_af9e7b416df5d635267f64b4604f969e2}\label{classtesseract__geometry_1_1Mesh_af9e7b416df5d635267f64b4604f969e2}} 
+\index{tesseract\_geometry::Mesh@{tesseract\_geometry::Mesh}!ConstPtr@{ConstPtr}}
+\index{ConstPtr@{ConstPtr}!tesseract\_geometry::Mesh@{tesseract\_geometry::Mesh}}
+\doxysubsubsection{\texorpdfstring{ConstPtr}{ConstPtr}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classtesseract__geometry_1_1Mesh_af9e7b416df5d635267f64b4604f969e2}{tesseract\+\_\+geometry\+::\+Mesh\+::\+Const\+Ptr}} =  std\+::shared\+\_\+ptr$<$const \mbox{\hyperlink{classtesseract__geometry_1_1Mesh}{Mesh}}$>$}
+
+\mbox{\Hypertarget{classtesseract__geometry_1_1Mesh_afc301af0c59b2d87d45f046859de431f}\label{classtesseract__geometry_1_1Mesh_afc301af0c59b2d87d45f046859de431f}} 
+\index{tesseract\_geometry::Mesh@{tesseract\_geometry::Mesh}!Ptr@{Ptr}}
+\index{Ptr@{Ptr}!tesseract\_geometry::Mesh@{tesseract\_geometry::Mesh}}
+\doxysubsubsection{\texorpdfstring{Ptr}{Ptr}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classtesseract__geometry_1_1Mesh_afc301af0c59b2d87d45f046859de431f}{tesseract\+\_\+geometry\+::\+Mesh\+::\+Ptr}} =  std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classtesseract__geometry_1_1Mesh}{Mesh}}$>$}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtesseract__geometry_1_1Mesh_a861dd73a5591c777a23b8fb7ad27655d}\label{classtesseract__geometry_1_1Mesh_a861dd73a5591c777a23b8fb7ad27655d}} 
+\index{tesseract\_geometry::Mesh@{tesseract\_geometry::Mesh}!Mesh@{Mesh}}
+\index{Mesh@{Mesh}!tesseract\_geometry::Mesh@{tesseract\_geometry::Mesh}}
+\doxysubsubsection{\texorpdfstring{Mesh()}{Mesh()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily tesseract\+\_\+geometry\+::\+Mesh\+::\+Mesh (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{namespacetesseract__common_af89ed6517f4c84bdb2b037bb40f7d9d9}{tesseract\+\_\+common\+::\+Vector\+Vector3d}} $>$}]{vertices,  }\item[{std\+::shared\+\_\+ptr$<$ const Eigen\+::\+Vector\+Xi $>$}]{triangles,  }\item[{\mbox{\hyperlink{classtesseract__common_1_1Resource_acdba916fa227bef4391c469581844dc6}{tesseract\+\_\+common\+::\+Resource\+::\+Ptr}}}]{resource = {\ttfamily nullptr},  }\item[{Eigen\+::\+Vector3d}]{scale = {\ttfamily Eigen\+:\+:Vector3d(1,~1,~1)} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\mbox{\hyperlink{classtesseract__geometry_1_1Mesh}{Mesh}} geometry. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vertices} & A vector of vertices associated with the mesh \\
+\hline
+{\em triangles} & A vector of face indices where the first indice indicates the number of vertices associated with the face followed by the vertice index in parameter vertices. For example a triangle has three vertices so there should be four inputs where the first should be 3 indicating there are three vertices that define this face followed by three indices. \\
+\hline
+{\em resource} & A resource locator for locating resource \\
+\hline
+{\em scale} & Scale the mesh \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classtesseract__geometry_1_1Mesh_add7c9268a9ad9b164e90653716fe2a8c}\label{classtesseract__geometry_1_1Mesh_add7c9268a9ad9b164e90653716fe2a8c}} 
+\index{tesseract\_geometry::Mesh@{tesseract\_geometry::Mesh}!Mesh@{Mesh}}
+\index{Mesh@{Mesh}!tesseract\_geometry::Mesh@{tesseract\_geometry::Mesh}}
+\doxysubsubsection{\texorpdfstring{Mesh()}{Mesh()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily tesseract\+\_\+geometry\+::\+Mesh\+::\+Mesh (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{namespacetesseract__common_af89ed6517f4c84bdb2b037bb40f7d9d9}{tesseract\+\_\+common\+::\+Vector\+Vector3d}} $>$}]{vertices,  }\item[{std\+::shared\+\_\+ptr$<$ const Eigen\+::\+Vector\+Xi $>$}]{triangles,  }\item[{int}]{triangle\+\_\+count,  }\item[{\mbox{\hyperlink{classtesseract__common_1_1Resource_acdba916fa227bef4391c469581844dc6}{tesseract\+\_\+common\+::\+Resource\+::\+Ptr}}}]{resource = {\ttfamily nullptr},  }\item[{Eigen\+::\+Vector3d}]{scale = {\ttfamily Eigen\+:\+:Vector3d(1,~1,~1)} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\mbox{\hyperlink{classtesseract__geometry_1_1Mesh}{Mesh}} geometry. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vertices} & A vector of vertices associated with the mesh \\
+\hline
+{\em triangles} & A vector of face indices where the first indice indicates the number of vertices associated with the face followed by the vertice index in parameter vertices. For example a triangle has three vertices so there should be four inputs where the first should be 3 indicating there are three vertices that define this face followed by three indices. \\
+\hline
+{\em triangle\+\_\+count} & Provide the number of faces. This is faster because it does not need to loop over triangles. \\
+\hline
+{\em resource} & A resource locator for locating resource \\
+\hline
+{\em scale} & Scale the mesh \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classtesseract__geometry_1_1Mesh_a806c5da25e3f12eee160e8adcca10a05}\label{classtesseract__geometry_1_1Mesh_a806c5da25e3f12eee160e8adcca10a05}} 
+\index{tesseract\_geometry::Mesh@{tesseract\_geometry::Mesh}!````~Mesh@{$\sim$Mesh}}
+\index{````~Mesh@{$\sim$Mesh}!tesseract\_geometry::Mesh@{tesseract\_geometry::Mesh}}
+\doxysubsubsection{\texorpdfstring{$\sim$Mesh()}{~Mesh()}}
+{\footnotesize\ttfamily tesseract\+\_\+geometry\+::\+Mesh\+::$\sim$\+Mesh (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [default]}}
+
+\mbox{\Hypertarget{classtesseract__geometry_1_1Mesh_a4f612e67e7e84f4178a68061f8dbf003}\label{classtesseract__geometry_1_1Mesh_a4f612e67e7e84f4178a68061f8dbf003}} 
+\index{tesseract\_geometry::Mesh@{tesseract\_geometry::Mesh}!Mesh@{Mesh}}
+\index{Mesh@{Mesh}!tesseract\_geometry::Mesh@{tesseract\_geometry::Mesh}}
+\doxysubsubsection{\texorpdfstring{Mesh()}{Mesh()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily tesseract\+\_\+geometry\+::\+Mesh\+::\+Mesh (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtesseract__geometry_1_1Mesh}{Mesh}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classtesseract__geometry_1_1Mesh_afcfd6ea990139828a49fd463ca6f6e98}\label{classtesseract__geometry_1_1Mesh_afcfd6ea990139828a49fd463ca6f6e98}} 
+\index{tesseract\_geometry::Mesh@{tesseract\_geometry::Mesh}!Mesh@{Mesh}}
+\index{Mesh@{Mesh}!tesseract\_geometry::Mesh@{tesseract\_geometry::Mesh}}
+\doxysubsubsection{\texorpdfstring{Mesh()}{Mesh()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily tesseract\+\_\+geometry\+::\+Mesh\+::\+Mesh (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtesseract__geometry_1_1Mesh}{Mesh}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtesseract__geometry_1_1Mesh_a2c2705c190dc5c64ab5b474752766203}\label{classtesseract__geometry_1_1Mesh_a2c2705c190dc5c64ab5b474752766203}} 
+\index{tesseract\_geometry::Mesh@{tesseract\_geometry::Mesh}!clone@{clone}}
+\index{clone@{clone}!tesseract\_geometry::Mesh@{tesseract\_geometry::Mesh}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__geometry_1_1Geometry_acd91c55fb9604ed374446c029b6f2d08}{Geometry\+::\+Ptr}} tesseract\+\_\+geometry\+::\+Mesh\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Create a copy of this shape. 
+
+
+
+Implements \mbox{\hyperlink{classtesseract__geometry_1_1Geometry_ae8e12b3ae80b55eff558ce4feea1efcd}{tesseract\+\_\+geometry\+::\+Geometry}}.
+
+\mbox{\Hypertarget{classtesseract__geometry_1_1Mesh_a5d238ad24b3e61f6594c0142abea090b}\label{classtesseract__geometry_1_1Mesh_a5d238ad24b3e61f6594c0142abea090b}} 
+\index{tesseract\_geometry::Mesh@{tesseract\_geometry::Mesh}!getResource@{getResource}}
+\index{getResource@{getResource}!tesseract\_geometry::Mesh@{tesseract\_geometry::Mesh}}
+\doxysubsubsection{\texorpdfstring{getResource()}{getResource()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classtesseract__common_1_1Resource_acdba916fa227bef4391c469581844dc6}{tesseract\+\_\+common\+::\+Resource\+::\+Ptr}} tesseract\+\_\+geometry\+::\+Mesh\+::get\+Resource (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the path to file used to generate the mesh. 
+
+Note\+: If empty, assume it was manually generated.
+
+\begin{DoxyReturn}{Returns}
+Absolute path to the mesh file 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtesseract__geometry_1_1Mesh_a3799d07ef3fa525a12078f47ceba8150}\label{classtesseract__geometry_1_1Mesh_a3799d07ef3fa525a12078f47ceba8150}} 
+\index{tesseract\_geometry::Mesh@{tesseract\_geometry::Mesh}!getScale@{getScale}}
+\index{getScale@{getScale}!tesseract\_geometry::Mesh@{tesseract\_geometry::Mesh}}
+\doxysubsubsection{\texorpdfstring{getScale()}{getScale()}}
+{\footnotesize\ttfamily const Eigen\+::\+Vector3d\& tesseract\+\_\+geometry\+::\+Mesh\+::get\+Scale (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the scale applied to file used to generate the mesh. 
+
+\begin{DoxyReturn}{Returns}
+The scale x, y, z 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtesseract__geometry_1_1Mesh_af1ca305cf46ce61f63ff821e1339e060}\label{classtesseract__geometry_1_1Mesh_af1ca305cf46ce61f63ff821e1339e060}} 
+\index{tesseract\_geometry::Mesh@{tesseract\_geometry::Mesh}!getTriangleCount@{getTriangleCount}}
+\index{getTriangleCount@{getTriangleCount}!tesseract\_geometry::Mesh@{tesseract\_geometry::Mesh}}
+\doxysubsubsection{\texorpdfstring{getTriangleCount()}{getTriangleCount()}}
+{\footnotesize\ttfamily int tesseract\+\_\+geometry\+::\+Mesh\+::get\+Triangle\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get triangle count. 
+
+\begin{DoxyReturn}{Returns}
+Number of triangles 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtesseract__geometry_1_1Mesh_a5595741a6c4c785869915bc0621c84ca}\label{classtesseract__geometry_1_1Mesh_a5595741a6c4c785869915bc0621c84ca}} 
+\index{tesseract\_geometry::Mesh@{tesseract\_geometry::Mesh}!getTriangles@{getTriangles}}
+\index{getTriangles@{getTriangles}!tesseract\_geometry::Mesh@{tesseract\_geometry::Mesh}}
+\doxysubsubsection{\texorpdfstring{getTriangles()}{getTriangles()}}
+{\footnotesize\ttfamily const std\+::shared\+\_\+ptr$<$const Eigen\+::\+Vector\+Xi$>$\& tesseract\+\_\+geometry\+::\+Mesh\+::get\+Triangles (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get mesh Triangles. 
+
+\begin{DoxyReturn}{Returns}
+A vector of triangle indices 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtesseract__geometry_1_1Mesh_a6132d90c641617937649463baefc8db6}\label{classtesseract__geometry_1_1Mesh_a6132d90c641617937649463baefc8db6}} 
+\index{tesseract\_geometry::Mesh@{tesseract\_geometry::Mesh}!getVerticeCount@{getVerticeCount}}
+\index{getVerticeCount@{getVerticeCount}!tesseract\_geometry::Mesh@{tesseract\_geometry::Mesh}}
+\doxysubsubsection{\texorpdfstring{getVerticeCount()}{getVerticeCount()}}
+{\footnotesize\ttfamily int tesseract\+\_\+geometry\+::\+Mesh\+::get\+Vertice\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get vertice count. 
+
+\begin{DoxyReturn}{Returns}
+Number of vertices 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtesseract__geometry_1_1Mesh_a0bb502ab74a9e4d2d706b92d757b37c8}\label{classtesseract__geometry_1_1Mesh_a0bb502ab74a9e4d2d706b92d757b37c8}} 
+\index{tesseract\_geometry::Mesh@{tesseract\_geometry::Mesh}!getVertices@{getVertices}}
+\index{getVertices@{getVertices}!tesseract\_geometry::Mesh@{tesseract\_geometry::Mesh}}
+\doxysubsubsection{\texorpdfstring{getVertices()}{getVertices()}}
+{\footnotesize\ttfamily const std\+::shared\+\_\+ptr$<$const \mbox{\hyperlink{namespacetesseract__common_af89ed6517f4c84bdb2b037bb40f7d9d9}{tesseract\+\_\+common\+::\+Vector\+Vector3d}}$>$\& tesseract\+\_\+geometry\+::\+Mesh\+::get\+Vertices (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get mesh vertices. 
+
+\begin{DoxyReturn}{Returns}
+A vector of vertices 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtesseract__geometry_1_1Mesh_abf717b05db27332e7297d1f62db60d4a}\label{classtesseract__geometry_1_1Mesh_abf717b05db27332e7297d1f62db60d4a}} 
+\index{tesseract\_geometry::Mesh@{tesseract\_geometry::Mesh}!operator=@{operator=}}
+\index{operator=@{operator=}!tesseract\_geometry::Mesh@{tesseract\_geometry::Mesh}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__geometry_1_1Mesh}{Mesh}}\& tesseract\+\_\+geometry\+::\+Mesh\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtesseract__geometry_1_1Mesh}{Mesh}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classtesseract__geometry_1_1Mesh_ac0891aa4c3d237d57e143d26df256289}\label{classtesseract__geometry_1_1Mesh_ac0891aa4c3d237d57e143d26df256289}} 
+\index{tesseract\_geometry::Mesh@{tesseract\_geometry::Mesh}!operator=@{operator=}}
+\index{operator=@{operator=}!tesseract\_geometry::Mesh@{tesseract\_geometry::Mesh}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__geometry_1_1Mesh}{Mesh}}\& tesseract\+\_\+geometry\+::\+Mesh\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtesseract__geometry_1_1Mesh}{Mesh}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classtesseract__geometry_1_1Mesh_ab481de2d53b4cd6e2e5decc310bd85a6}\label{classtesseract__geometry_1_1Mesh_ab481de2d53b4cd6e2e5decc310bd85a6}} 
+\index{tesseract\_geometry::Mesh@{tesseract\_geometry::Mesh}!resource\_@{resource\_}}
+\index{resource\_@{resource\_}!tesseract\_geometry::Mesh@{tesseract\_geometry::Mesh}}
+\doxysubsubsection{\texorpdfstring{resource\_}{resource\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__common_1_1Resource_acdba916fa227bef4391c469581844dc6}{tesseract\+\_\+common\+::\+Resource\+::\+Ptr}} tesseract\+\_\+geometry\+::\+Mesh\+::resource\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classtesseract__geometry_1_1Mesh_af47861e261a8f384feb35ebeea223f16}\label{classtesseract__geometry_1_1Mesh_af47861e261a8f384feb35ebeea223f16}} 
+\index{tesseract\_geometry::Mesh@{tesseract\_geometry::Mesh}!scale\_@{scale\_}}
+\index{scale\_@{scale\_}!tesseract\_geometry::Mesh@{tesseract\_geometry::Mesh}}
+\doxysubsubsection{\texorpdfstring{scale\_}{scale\_}}
+{\footnotesize\ttfamily Eigen\+::\+Vector3d tesseract\+\_\+geometry\+::\+Mesh\+::scale\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classtesseract__geometry_1_1Mesh_a208add3374db4f73c5422d2177d08061}\label{classtesseract__geometry_1_1Mesh_a208add3374db4f73c5422d2177d08061}} 
+\index{tesseract\_geometry::Mesh@{tesseract\_geometry::Mesh}!triangle\_count\_@{triangle\_count\_}}
+\index{triangle\_count\_@{triangle\_count\_}!tesseract\_geometry::Mesh@{tesseract\_geometry::Mesh}}
+\doxysubsubsection{\texorpdfstring{triangle\_count\_}{triangle\_count\_}}
+{\footnotesize\ttfamily int tesseract\+\_\+geometry\+::\+Mesh\+::triangle\+\_\+count\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classtesseract__geometry_1_1Mesh_ab24be362d306812205da18c0ca4daa35}\label{classtesseract__geometry_1_1Mesh_ab24be362d306812205da18c0ca4daa35}} 
+\index{tesseract\_geometry::Mesh@{tesseract\_geometry::Mesh}!triangles\_@{triangles\_}}
+\index{triangles\_@{triangles\_}!tesseract\_geometry::Mesh@{tesseract\_geometry::Mesh}}
+\doxysubsubsection{\texorpdfstring{triangles\_}{triangles\_}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$const Eigen\+::\+Vector\+Xi$>$ tesseract\+\_\+geometry\+::\+Mesh\+::triangles\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classtesseract__geometry_1_1Mesh_a84b9b0965ac89b59ae3b94b27cd0dd4e}\label{classtesseract__geometry_1_1Mesh_a84b9b0965ac89b59ae3b94b27cd0dd4e}} 
+\index{tesseract\_geometry::Mesh@{tesseract\_geometry::Mesh}!vertice\_count\_@{vertice\_count\_}}
+\index{vertice\_count\_@{vertice\_count\_}!tesseract\_geometry::Mesh@{tesseract\_geometry::Mesh}}
+\doxysubsubsection{\texorpdfstring{vertice\_count\_}{vertice\_count\_}}
+{\footnotesize\ttfamily int tesseract\+\_\+geometry\+::\+Mesh\+::vertice\+\_\+count\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classtesseract__geometry_1_1Mesh_a8494db31ffbaeebcf8ef019c91bf64e7}\label{classtesseract__geometry_1_1Mesh_a8494db31ffbaeebcf8ef019c91bf64e7}} 
+\index{tesseract\_geometry::Mesh@{tesseract\_geometry::Mesh}!vertices\_@{vertices\_}}
+\index{vertices\_@{vertices\_}!tesseract\_geometry::Mesh@{tesseract\_geometry::Mesh}}
+\doxysubsubsection{\texorpdfstring{vertices\_}{vertices\_}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$const \mbox{\hyperlink{namespacetesseract__common_af89ed6517f4c84bdb2b037bb40f7d9d9}{tesseract\+\_\+common\+::\+Vector\+Vector3d}}$>$ tesseract\+\_\+geometry\+::\+Mesh\+::vertices\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+tesseract/tesseract\+\_\+geometry/include/tesseract\+\_\+geometry/impl/\mbox{\hyperlink{tesseract__geometry_2include_2tesseract__geometry_2impl_2mesh_8h}{mesh.\+h}}\end{DoxyCompactItemize}

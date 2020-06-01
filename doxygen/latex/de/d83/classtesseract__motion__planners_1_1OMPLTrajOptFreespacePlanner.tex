@@ -1,0 +1,183 @@
+\hypertarget{classtesseract__motion__planners_1_1OMPLTrajOptFreespacePlanner}{}\doxysection{tesseract\+\_\+motion\+\_\+planners\+::O\+M\+P\+L\+Traj\+Opt\+Freespace\+Planner Class Reference}
+\label{classtesseract__motion__planners_1_1OMPLTrajOptFreespacePlanner}\index{tesseract\_motion\_planners::OMPLTrajOptFreespacePlanner@{tesseract\_motion\_planners::OMPLTrajOptFreespacePlanner}}
+
+
+{\ttfamily \#include $<$ompl\+\_\+trajopt\+\_\+freespace\+\_\+planner.\+h$>$}
+
+Inheritance diagram for tesseract\+\_\+motion\+\_\+planners\+::O\+M\+P\+L\+Traj\+Opt\+Freespace\+Planner\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{de/d83/classtesseract__motion__planners_1_1OMPLTrajOptFreespacePlanner}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtesseract__motion__planners_1_1OMPLTrajOptFreespacePlanner_a18b3f1ddeb371b593f513a324967d55d}{O\+M\+P\+L\+Traj\+Opt\+Freespace\+Planner}} (std\+::string name=\char`\"{}O\+M\+P\+L\+\_\+\+T\+R\+A\+J\+O\+P\+T\+\_\+\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+P\+L\+A\+N\+N\+ER\char`\"{})
+\item 
+bool \mbox{\hyperlink{classtesseract__motion__planners_1_1OMPLTrajOptFreespacePlanner_adce158efc1defaab0cc1378922136a19}{set\+Configuration}} (\mbox{\hyperlink{structtesseract__motion__planners_1_1OMPLPlannerConfig_aae2d26c1bc44c1a7b5190fd596997e32}{O\+M\+P\+L\+Planner\+Config\+::\+Ptr}} ompl\+\_\+config, \mbox{\hyperlink{structtesseract__motion__planners_1_1TrajOptPlannerFreespaceConfig_a09fde2bdd1affa60573735bf3eda7559}{Traj\+Opt\+Planner\+Freespace\+Config\+::\+Ptr}} trajopt\+\_\+config)
+\begin{DoxyCompactList}\small\item\em Set the configuration for the planner. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classtesseract__common_1_1StatusCode}{tesseract\+\_\+common\+::\+Status\+Code}} \mbox{\hyperlink{classtesseract__motion__planners_1_1OMPLTrajOptFreespacePlanner_aeff5a2ec9191ff6516a599388f8117e2}{solve}} (\mbox{\hyperlink{structtesseract__motion__planners_1_1PlannerResponse}{Planner\+Response}} \&response, \mbox{\hyperlink{namespacetesseract__motion__planners_af35aeb2eaf87be9fb4063029a20968bc}{Post\+Plan\+Check\+Type}} check\+\_\+type=\mbox{\hyperlink{namespacetesseract__motion__planners_af35aeb2eaf87be9fb4063029a20968bca75d71be8578a76e5d8919dfb11db07f4}{Post\+Plan\+Check\+Type\+::\+D\+I\+S\+C\+R\+E\+T\+E\+\_\+\+C\+O\+N\+T\+I\+N\+U\+O\+U\+S\+\_\+\+C\+O\+L\+L\+I\+S\+I\+ON}}, bool verbose=false) override
+\begin{DoxyCompactList}\small\item\em Sets up the opimizer and solves a S\+QP problem read from json with no callbacks and dafault parameterss. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classtesseract__motion__planners_1_1OMPLTrajOptFreespacePlanner_ac331a6018bac4ff1ceca9fb16e2618a0}{terminate}} () override
+\begin{DoxyCompactList}\small\item\em If \mbox{\hyperlink{classtesseract__motion__planners_1_1OMPLTrajOptFreespacePlanner_aeff5a2ec9191ff6516a599388f8117e2}{solve()}} is running, terminate the computation. Return false if termination not possible. No-\/op if \mbox{\hyperlink{classtesseract__motion__planners_1_1OMPLTrajOptFreespacePlanner_aeff5a2ec9191ff6516a599388f8117e2}{solve()}} is not running (returns true). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classtesseract__motion__planners_1_1OMPLTrajOptFreespacePlanner_a87f3ef68b77f3e2fdaeab8f49a43980d}{clear}} () override
+\begin{DoxyCompactList}\small\item\em Clear the data structures used by the planner. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classtesseract__common_1_1StatusCode}{tesseract\+\_\+common\+::\+Status\+Code}} \mbox{\hyperlink{classtesseract__motion__planners_1_1OMPLTrajOptFreespacePlanner_aa95aa57e8fbfd2023a2b6426a4ec6d98}{is\+Configured}} () const override
+\begin{DoxyCompactList}\small\item\em checks whether the planner is properly configure for solving a motion plan \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structtesseract__motion__planners_1_1TrajOptPlannerFreespaceConfig_a09fde2bdd1affa60573735bf3eda7559}{Traj\+Opt\+Planner\+Freespace\+Config\+::\+Ptr}} \mbox{\hyperlink{classtesseract__motion__planners_1_1OMPLTrajOptFreespacePlanner_a0c1bc9ac2d42920116b8aa4ac481d45b}{trajopt\+\_\+config\+\_\+}}
+\item 
+\mbox{\hyperlink{classtesseract__motion__planners_1_1TrajOptMotionPlanner}{Traj\+Opt\+Motion\+Planner}} \mbox{\hyperlink{classtesseract__motion__planners_1_1OMPLTrajOptFreespacePlanner_a39cdd76479f49aa61a41462c66ed3ac8}{trajopt\+\_\+planner\+\_\+}}
+\item 
+\mbox{\hyperlink{structtesseract__motion__planners_1_1OMPLPlannerConfig_aae2d26c1bc44c1a7b5190fd596997e32}{O\+M\+P\+L\+Planner\+Config\+::\+Ptr}} \mbox{\hyperlink{classtesseract__motion__planners_1_1OMPLTrajOptFreespacePlanner_a8a4b941a53f18708a74a41b5df45ef94}{ompl\+\_\+config\+\_\+}}
+\item 
+\mbox{\hyperlink{classtesseract__motion__planners_1_1OMPLMotionPlanner}{O\+M\+P\+L\+Motion\+Planner}} \mbox{\hyperlink{classtesseract__motion__planners_1_1OMPLTrajOptFreespacePlanner_a1be8969a8e553a737dfdf76fd9b2fbcb}{ompl\+\_\+planner\+\_\+}}
+\item 
+std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{classtesseract__common_1_1GeneralStatusCategory}{tesseract\+\_\+common\+::\+General\+Status\+Category}} $>$ \mbox{\hyperlink{classtesseract__motion__planners_1_1OMPLTrajOptFreespacePlanner_a23a4cab96bad46c67d24b3a069fff7b6}{status\+\_\+category\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtesseract__motion__planners_1_1OMPLTrajOptFreespacePlanner_a18b3f1ddeb371b593f513a324967d55d}\label{classtesseract__motion__planners_1_1OMPLTrajOptFreespacePlanner_a18b3f1ddeb371b593f513a324967d55d}} 
+\index{tesseract\_motion\_planners::OMPLTrajOptFreespacePlanner@{tesseract\_motion\_planners::OMPLTrajOptFreespacePlanner}!OMPLTrajOptFreespacePlanner@{OMPLTrajOptFreespacePlanner}}
+\index{OMPLTrajOptFreespacePlanner@{OMPLTrajOptFreespacePlanner}!tesseract\_motion\_planners::OMPLTrajOptFreespacePlanner@{tesseract\_motion\_planners::OMPLTrajOptFreespacePlanner}}
+\doxysubsubsection{\texorpdfstring{OMPLTrajOptFreespacePlanner()}{OMPLTrajOptFreespacePlanner()}}
+{\footnotesize\ttfamily tesseract\+\_\+motion\+\_\+planners\+::\+O\+M\+P\+L\+Traj\+Opt\+Freespace\+Planner\+::\+O\+M\+P\+L\+Traj\+Opt\+Freespace\+Planner (\begin{DoxyParamCaption}\item[{std\+::string}]{name = {\ttfamily \char`\"{}OMPL\+\_\+TRAJOPT\+\_\+FREESPACE\+\_\+PLANNER\char`\"{}} }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtesseract__motion__planners_1_1OMPLTrajOptFreespacePlanner_a87f3ef68b77f3e2fdaeab8f49a43980d}\label{classtesseract__motion__planners_1_1OMPLTrajOptFreespacePlanner_a87f3ef68b77f3e2fdaeab8f49a43980d}} 
+\index{tesseract\_motion\_planners::OMPLTrajOptFreespacePlanner@{tesseract\_motion\_planners::OMPLTrajOptFreespacePlanner}!clear@{clear}}
+\index{clear@{clear}!tesseract\_motion\_planners::OMPLTrajOptFreespacePlanner@{tesseract\_motion\_planners::OMPLTrajOptFreespacePlanner}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily void tesseract\+\_\+motion\+\_\+planners\+::\+O\+M\+P\+L\+Traj\+Opt\+Freespace\+Planner\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Clear the data structures used by the planner. 
+
+
+
+Implements \mbox{\hyperlink{classtesseract__motion__planners_1_1MotionPlanner_af613573b11be632493ccbc461ab6341f}{tesseract\+\_\+motion\+\_\+planners\+::\+Motion\+Planner}}.
+
+\mbox{\Hypertarget{classtesseract__motion__planners_1_1OMPLTrajOptFreespacePlanner_aa95aa57e8fbfd2023a2b6426a4ec6d98}\label{classtesseract__motion__planners_1_1OMPLTrajOptFreespacePlanner_aa95aa57e8fbfd2023a2b6426a4ec6d98}} 
+\index{tesseract\_motion\_planners::OMPLTrajOptFreespacePlanner@{tesseract\_motion\_planners::OMPLTrajOptFreespacePlanner}!isConfigured@{isConfigured}}
+\index{isConfigured@{isConfigured}!tesseract\_motion\_planners::OMPLTrajOptFreespacePlanner@{tesseract\_motion\_planners::OMPLTrajOptFreespacePlanner}}
+\doxysubsubsection{\texorpdfstring{isConfigured()}{isConfigured()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__common_1_1StatusCode}{tesseract\+\_\+common\+::\+Status\+Code}} tesseract\+\_\+motion\+\_\+planners\+::\+O\+M\+P\+L\+Traj\+Opt\+Freespace\+Planner\+::is\+Configured (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+checks whether the planner is properly configure for solving a motion plan 
+
+\begin{DoxyReturn}{Returns}
+True when it is configured correctly, false otherwise 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classtesseract__motion__planners_1_1MotionPlanner_a45de2a78e744082a63dcb314f309418b}{tesseract\+\_\+motion\+\_\+planners\+::\+Motion\+Planner}}.
+
+\mbox{\Hypertarget{classtesseract__motion__planners_1_1OMPLTrajOptFreespacePlanner_adce158efc1defaab0cc1378922136a19}\label{classtesseract__motion__planners_1_1OMPLTrajOptFreespacePlanner_adce158efc1defaab0cc1378922136a19}} 
+\index{tesseract\_motion\_planners::OMPLTrajOptFreespacePlanner@{tesseract\_motion\_planners::OMPLTrajOptFreespacePlanner}!setConfiguration@{setConfiguration}}
+\index{setConfiguration@{setConfiguration}!tesseract\_motion\_planners::OMPLTrajOptFreespacePlanner@{tesseract\_motion\_planners::OMPLTrajOptFreespacePlanner}}
+\doxysubsubsection{\texorpdfstring{setConfiguration()}{setConfiguration()}}
+{\footnotesize\ttfamily bool tesseract\+\_\+motion\+\_\+planners\+::\+O\+M\+P\+L\+Traj\+Opt\+Freespace\+Planner\+::set\+Configuration (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtesseract__motion__planners_1_1OMPLPlannerConfig_aae2d26c1bc44c1a7b5190fd596997e32}{O\+M\+P\+L\+Planner\+Config\+::\+Ptr}}}]{ompl\+\_\+config,  }\item[{\mbox{\hyperlink{structtesseract__motion__planners_1_1TrajOptPlannerFreespaceConfig_a09fde2bdd1affa60573735bf3eda7559}{Traj\+Opt\+Planner\+Freespace\+Config\+::\+Ptr}}}]{trajopt\+\_\+config }\end{DoxyParamCaption})}
+
+
+
+Set the configuration for the planner. 
+
+This must be called prior to calling solve.
+
+
+\begin{DoxyParams}{Parameters}
+{\em config} & The planners configuration \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if successful otherwise false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtesseract__motion__planners_1_1OMPLTrajOptFreespacePlanner_aeff5a2ec9191ff6516a599388f8117e2}\label{classtesseract__motion__planners_1_1OMPLTrajOptFreespacePlanner_aeff5a2ec9191ff6516a599388f8117e2}} 
+\index{tesseract\_motion\_planners::OMPLTrajOptFreespacePlanner@{tesseract\_motion\_planners::OMPLTrajOptFreespacePlanner}!solve@{solve}}
+\index{solve@{solve}!tesseract\_motion\_planners::OMPLTrajOptFreespacePlanner@{tesseract\_motion\_planners::OMPLTrajOptFreespacePlanner}}
+\doxysubsubsection{\texorpdfstring{solve()}{solve()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__common_1_1StatusCode}{tesseract\+\_\+common\+::\+Status\+Code}} tesseract\+\_\+motion\+\_\+planners\+::\+O\+M\+P\+L\+Traj\+Opt\+Freespace\+Planner\+::solve (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtesseract__motion__planners_1_1PlannerResponse}{Planner\+Response}} \&}]{response,  }\item[{\mbox{\hyperlink{namespacetesseract__motion__planners_af35aeb2eaf87be9fb4063029a20968bc}{Post\+Plan\+Check\+Type}}}]{check\+\_\+type = {\ttfamily \mbox{\hyperlink{namespacetesseract__motion__planners_af35aeb2eaf87be9fb4063029a20968bca75d71be8578a76e5d8919dfb11db07f4}{Post\+Plan\+Check\+Type\+::\+D\+I\+S\+C\+R\+E\+T\+E\+\_\+\+C\+O\+N\+T\+I\+N\+U\+O\+U\+S\+\_\+\+C\+O\+L\+L\+I\+S\+I\+ON}}},  }\item[{bool}]{verbose = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Sets up the opimizer and solves a S\+QP problem read from json with no callbacks and dafault parameterss. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em response} & The results of the optimization. Primary output is the optimized joint trajectory \\
+\hline
+{\em check\+\_\+type} & The type of validation check to be performed on the planned trajectory \\
+\hline
+{\em verbose} & Boolean indicating whether logging information about the motion planning solution should be printed to console \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if optimization complete 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classtesseract__motion__planners_1_1MotionPlanner_a5041c3fda53986b7c58df4c18711d1ae}{tesseract\+\_\+motion\+\_\+planners\+::\+Motion\+Planner}}.
+
+\mbox{\Hypertarget{classtesseract__motion__planners_1_1OMPLTrajOptFreespacePlanner_ac331a6018bac4ff1ceca9fb16e2618a0}\label{classtesseract__motion__planners_1_1OMPLTrajOptFreespacePlanner_ac331a6018bac4ff1ceca9fb16e2618a0}} 
+\index{tesseract\_motion\_planners::OMPLTrajOptFreespacePlanner@{tesseract\_motion\_planners::OMPLTrajOptFreespacePlanner}!terminate@{terminate}}
+\index{terminate@{terminate}!tesseract\_motion\_planners::OMPLTrajOptFreespacePlanner@{tesseract\_motion\_planners::OMPLTrajOptFreespacePlanner}}
+\doxysubsubsection{\texorpdfstring{terminate()}{terminate()}}
+{\footnotesize\ttfamily bool tesseract\+\_\+motion\+\_\+planners\+::\+O\+M\+P\+L\+Traj\+Opt\+Freespace\+Planner\+::terminate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+If \mbox{\hyperlink{classtesseract__motion__planners_1_1OMPLTrajOptFreespacePlanner_aeff5a2ec9191ff6516a599388f8117e2}{solve()}} is running, terminate the computation. Return false if termination not possible. No-\/op if \mbox{\hyperlink{classtesseract__motion__planners_1_1OMPLTrajOptFreespacePlanner_aeff5a2ec9191ff6516a599388f8117e2}{solve()}} is not running (returns true). 
+
+
+
+Implements \mbox{\hyperlink{classtesseract__motion__planners_1_1MotionPlanner_a6f80f93f9ec748ae97f1971b752a7ad5}{tesseract\+\_\+motion\+\_\+planners\+::\+Motion\+Planner}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classtesseract__motion__planners_1_1OMPLTrajOptFreespacePlanner_a8a4b941a53f18708a74a41b5df45ef94}\label{classtesseract__motion__planners_1_1OMPLTrajOptFreespacePlanner_a8a4b941a53f18708a74a41b5df45ef94}} 
+\index{tesseract\_motion\_planners::OMPLTrajOptFreespacePlanner@{tesseract\_motion\_planners::OMPLTrajOptFreespacePlanner}!ompl\_config\_@{ompl\_config\_}}
+\index{ompl\_config\_@{ompl\_config\_}!tesseract\_motion\_planners::OMPLTrajOptFreespacePlanner@{tesseract\_motion\_planners::OMPLTrajOptFreespacePlanner}}
+\doxysubsubsection{\texorpdfstring{ompl\_config\_}{ompl\_config\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structtesseract__motion__planners_1_1OMPLPlannerConfig_aae2d26c1bc44c1a7b5190fd596997e32}{O\+M\+P\+L\+Planner\+Config\+::\+Ptr}} tesseract\+\_\+motion\+\_\+planners\+::\+O\+M\+P\+L\+Traj\+Opt\+Freespace\+Planner\+::ompl\+\_\+config\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classtesseract__motion__planners_1_1OMPLTrajOptFreespacePlanner_a1be8969a8e553a737dfdf76fd9b2fbcb}\label{classtesseract__motion__planners_1_1OMPLTrajOptFreespacePlanner_a1be8969a8e553a737dfdf76fd9b2fbcb}} 
+\index{tesseract\_motion\_planners::OMPLTrajOptFreespacePlanner@{tesseract\_motion\_planners::OMPLTrajOptFreespacePlanner}!ompl\_planner\_@{ompl\_planner\_}}
+\index{ompl\_planner\_@{ompl\_planner\_}!tesseract\_motion\_planners::OMPLTrajOptFreespacePlanner@{tesseract\_motion\_planners::OMPLTrajOptFreespacePlanner}}
+\doxysubsubsection{\texorpdfstring{ompl\_planner\_}{ompl\_planner\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__motion__planners_1_1OMPLMotionPlanner}{O\+M\+P\+L\+Motion\+Planner}} tesseract\+\_\+motion\+\_\+planners\+::\+O\+M\+P\+L\+Traj\+Opt\+Freespace\+Planner\+::ompl\+\_\+planner\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classtesseract__motion__planners_1_1OMPLTrajOptFreespacePlanner_a23a4cab96bad46c67d24b3a069fff7b6}\label{classtesseract__motion__planners_1_1OMPLTrajOptFreespacePlanner_a23a4cab96bad46c67d24b3a069fff7b6}} 
+\index{tesseract\_motion\_planners::OMPLTrajOptFreespacePlanner@{tesseract\_motion\_planners::OMPLTrajOptFreespacePlanner}!status\_category\_@{status\_category\_}}
+\index{status\_category\_@{status\_category\_}!tesseract\_motion\_planners::OMPLTrajOptFreespacePlanner@{tesseract\_motion\_planners::OMPLTrajOptFreespacePlanner}}
+\doxysubsubsection{\texorpdfstring{status\_category\_}{status\_category\_}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$const \mbox{\hyperlink{classtesseract__common_1_1GeneralStatusCategory}{tesseract\+\_\+common\+::\+General\+Status\+Category}}$>$ tesseract\+\_\+motion\+\_\+planners\+::\+O\+M\+P\+L\+Traj\+Opt\+Freespace\+Planner\+::status\+\_\+category\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classtesseract__motion__planners_1_1OMPLTrajOptFreespacePlanner_a0c1bc9ac2d42920116b8aa4ac481d45b}\label{classtesseract__motion__planners_1_1OMPLTrajOptFreespacePlanner_a0c1bc9ac2d42920116b8aa4ac481d45b}} 
+\index{tesseract\_motion\_planners::OMPLTrajOptFreespacePlanner@{tesseract\_motion\_planners::OMPLTrajOptFreespacePlanner}!trajopt\_config\_@{trajopt\_config\_}}
+\index{trajopt\_config\_@{trajopt\_config\_}!tesseract\_motion\_planners::OMPLTrajOptFreespacePlanner@{tesseract\_motion\_planners::OMPLTrajOptFreespacePlanner}}
+\doxysubsubsection{\texorpdfstring{trajopt\_config\_}{trajopt\_config\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structtesseract__motion__planners_1_1TrajOptPlannerFreespaceConfig_a09fde2bdd1affa60573735bf3eda7559}{Traj\+Opt\+Planner\+Freespace\+Config\+::\+Ptr}} tesseract\+\_\+motion\+\_\+planners\+::\+O\+M\+P\+L\+Traj\+Opt\+Freespace\+Planner\+::trajopt\+\_\+config\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classtesseract__motion__planners_1_1OMPLTrajOptFreespacePlanner_a39cdd76479f49aa61a41462c66ed3ac8}\label{classtesseract__motion__planners_1_1OMPLTrajOptFreespacePlanner_a39cdd76479f49aa61a41462c66ed3ac8}} 
+\index{tesseract\_motion\_planners::OMPLTrajOptFreespacePlanner@{tesseract\_motion\_planners::OMPLTrajOptFreespacePlanner}!trajopt\_planner\_@{trajopt\_planner\_}}
+\index{trajopt\_planner\_@{trajopt\_planner\_}!tesseract\_motion\_planners::OMPLTrajOptFreespacePlanner@{tesseract\_motion\_planners::OMPLTrajOptFreespacePlanner}}
+\doxysubsubsection{\texorpdfstring{trajopt\_planner\_}{trajopt\_planner\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__motion__planners_1_1TrajOptMotionPlanner}{Traj\+Opt\+Motion\+Planner}} tesseract\+\_\+motion\+\_\+planners\+::\+O\+M\+P\+L\+Traj\+Opt\+Freespace\+Planner\+::trajopt\+\_\+planner\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+tesseract/tesseract\+\_\+planning/tesseract\+\_\+motion\+\_\+planners/include/tesseract\+\_\+motion\+\_\+planners/hybrid/\mbox{\hyperlink{ompl__trajopt__freespace__planner_8h}{ompl\+\_\+trajopt\+\_\+freespace\+\_\+planner.\+h}}\item 
+tesseract/tesseract\+\_\+planning/tesseract\+\_\+motion\+\_\+planners/src/hybrid/\mbox{\hyperlink{ompl__trajopt__freespace__planner_8cpp}{ompl\+\_\+trajopt\+\_\+freespace\+\_\+planner.\+cpp}}\end{DoxyCompactItemize}

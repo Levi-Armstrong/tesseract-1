@@ -1,0 +1,263 @@
+\hypertarget{classtesseract__motion__planners_1_1JointWaypoint}{}\doxysection{tesseract\+\_\+motion\+\_\+planners\+::Joint\+Waypoint Class Reference}
+\label{classtesseract__motion__planners_1_1JointWaypoint}\index{tesseract\_motion\_planners::JointWaypoint@{tesseract\_motion\_planners::JointWaypoint}}
+
+
+Defines a joint position waypoint for use with Tesseract Planners.  
+
+
+
+
+{\ttfamily \#include $<$waypoint.\+h$>$}
+
+Inheritance diagram for tesseract\+\_\+motion\+\_\+planners\+::Joint\+Waypoint\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{d0/de1/classtesseract__motion__planners_1_1JointWaypoint}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classtesseract__motion__planners_1_1JointWaypoint_a54dc1f7d938f258df0b39ce5e5144ca5}{Ptr}} = std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classtesseract__motion__planners_1_1JointWaypoint}{Joint\+Waypoint}} $>$
+\item 
+using \mbox{\hyperlink{classtesseract__motion__planners_1_1JointWaypoint_a84344e80c86044aa678a2cd4402e375d}{Const\+Ptr}} = std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{classtesseract__motion__planners_1_1JointWaypoint}{Joint\+Waypoint}} $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtesseract__motion__planners_1_1JointWaypoint_ac3f7a047e6ca5b5e152ef8acf4f68234}{Joint\+Waypoint}} (const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector\+Xd $>$ \&joint\+\_\+positions, std\+::vector$<$ std\+::string $>$ joint\+\_\+names)
+\item 
+\mbox{\hyperlink{classtesseract__motion__planners_1_1JointWaypoint_a6e132785499d80a3b8ea791c54063237}{Joint\+Waypoint}} (std\+::vector$<$ double $>$ joint\+\_\+positions, std\+::vector$<$ std\+::string $>$ joint\+\_\+names)
+\item 
+\mbox{\hyperlink{classtesseract__motion__planners_1_1JointWaypoint_a984c784232610e66fc792d3dda99bbc3}{Joint\+Waypoint}} (const std\+::unordered\+\_\+map$<$ std\+::string, double $>$ \&joint\+\_\+map)
+\item 
+const Eigen\+::\+Vector\+Xd \& \mbox{\hyperlink{classtesseract__motion__planners_1_1JointWaypoint_acbdb3ca7c67c32d27abb0d441f098950}{get\+Positions}} () const
+\begin{DoxyCompactList}\small\item\em Get the joint positions in radians. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector\+Xd \mbox{\hyperlink{classtesseract__motion__planners_1_1JointWaypoint_a02a09412726b7f78385ccb41507c9881}{get\+Positions}} (const std\+::vector$<$ std\+::string $>$ \&joint\+\_\+names) const
+\begin{DoxyCompactList}\small\item\em Get the joint position in the order of the provided joint names. \end{DoxyCompactList}\item 
+const Eigen\+::\+Vector\+Xd \& \mbox{\hyperlink{classtesseract__motion__planners_1_1JointWaypoint_ab8b41b142e6aa2e3d661b94adcfc91bc}{get\+Coefficients}} () const override
+\begin{DoxyCompactList}\small\item\em Get coefficients used to weight different terms in the waypoints. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector\+Xd \mbox{\hyperlink{classtesseract__motion__planners_1_1JointWaypoint_ae588037ec365ee8480eb1d455da20966}{get\+Coefficients}} (const std\+::vector$<$ std\+::string $>$ \&joint\+\_\+names) const
+\begin{DoxyCompactList}\small\item\em Get coefficients in the order of the provided joint names. \end{DoxyCompactList}\item 
+const std\+::vector$<$ std\+::string $>$ \& \mbox{\hyperlink{classtesseract__motion__planners_1_1JointWaypoint_a272a8b1806772f48c1fa451b2e0c1947}{get\+Names}} () const
+\begin{DoxyCompactList}\small\item\em Get the joint names. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classtesseract__motion__planners_1_1JointWaypoint}{Joint\+Waypoint}} \& \mbox{\hyperlink{classtesseract__motion__planners_1_1JointWaypoint_adfcc6a8dc38cdaf7fe819f3c0e733e29}{operator+=}} (const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector\+Xd $>$ \&delta)
+\begin{DoxyCompactList}\small\item\em Operator to add vector of data to current position. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classtesseract__motion__planners_1_1JointWaypoint}{Joint\+Waypoint}} \& \mbox{\hyperlink{classtesseract__motion__planners_1_1JointWaypoint_a1e09fad27923888a2e222660e61b8a54}{operator-\/=}} (const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector\+Xd $>$ \&delta)
+\begin{DoxyCompactList}\small\item\em Operator to subtract vector of data from current position. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classtesseract__motion__planners_1_1JointWaypoint_a8199b53b2e075242c3967371b87806f2}{compare}} (const std\+::vector$<$ std\+::string $>$ \&joint\+\_\+names) const
+\begin{DoxyCompactList}\small\item\em Compare vector of joint names, order does not matter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Eigen\+::\+Vector\+Xd \mbox{\hyperlink{classtesseract__motion__planners_1_1JointWaypoint_a0b5769605f2b979e3c2db9f32470a05c}{joint\+\_\+positions\+\_\+}}
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classtesseract__motion__planners_1_1JointWaypoint_af64db96285b81f257087af6ad0aa4549}{joint\+\_\+names\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Joint position in radians. \end{DoxyCompactList}\item 
+std\+::unordered\+\_\+map$<$ std\+::string, int $>$ \mbox{\hyperlink{classtesseract__motion__planners_1_1JointWaypoint_aa654573c0151d4c03de2944328e7ab4a}{lookup\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Joint names. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Defines a joint position waypoint for use with Tesseract Planners. 
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classtesseract__motion__planners_1_1JointWaypoint_a84344e80c86044aa678a2cd4402e375d}\label{classtesseract__motion__planners_1_1JointWaypoint_a84344e80c86044aa678a2cd4402e375d}} 
+\index{tesseract\_motion\_planners::JointWaypoint@{tesseract\_motion\_planners::JointWaypoint}!ConstPtr@{ConstPtr}}
+\index{ConstPtr@{ConstPtr}!tesseract\_motion\_planners::JointWaypoint@{tesseract\_motion\_planners::JointWaypoint}}
+\doxysubsubsection{\texorpdfstring{ConstPtr}{ConstPtr}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classtesseract__motion__planners_1_1JointWaypoint_a84344e80c86044aa678a2cd4402e375d}{tesseract\+\_\+motion\+\_\+planners\+::\+Joint\+Waypoint\+::\+Const\+Ptr}} =  std\+::shared\+\_\+ptr$<$const \mbox{\hyperlink{classtesseract__motion__planners_1_1JointWaypoint}{Joint\+Waypoint}}$>$}
+
+\mbox{\Hypertarget{classtesseract__motion__planners_1_1JointWaypoint_a54dc1f7d938f258df0b39ce5e5144ca5}\label{classtesseract__motion__planners_1_1JointWaypoint_a54dc1f7d938f258df0b39ce5e5144ca5}} 
+\index{tesseract\_motion\_planners::JointWaypoint@{tesseract\_motion\_planners::JointWaypoint}!Ptr@{Ptr}}
+\index{Ptr@{Ptr}!tesseract\_motion\_planners::JointWaypoint@{tesseract\_motion\_planners::JointWaypoint}}
+\doxysubsubsection{\texorpdfstring{Ptr}{Ptr}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classtesseract__motion__planners_1_1JointWaypoint_a54dc1f7d938f258df0b39ce5e5144ca5}{tesseract\+\_\+motion\+\_\+planners\+::\+Joint\+Waypoint\+::\+Ptr}} =  std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classtesseract__motion__planners_1_1JointWaypoint}{Joint\+Waypoint}}$>$}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtesseract__motion__planners_1_1JointWaypoint_ac3f7a047e6ca5b5e152ef8acf4f68234}\label{classtesseract__motion__planners_1_1JointWaypoint_ac3f7a047e6ca5b5e152ef8acf4f68234}} 
+\index{tesseract\_motion\_planners::JointWaypoint@{tesseract\_motion\_planners::JointWaypoint}!JointWaypoint@{JointWaypoint}}
+\index{JointWaypoint@{JointWaypoint}!tesseract\_motion\_planners::JointWaypoint@{tesseract\_motion\_planners::JointWaypoint}}
+\doxysubsubsection{\texorpdfstring{JointWaypoint()}{JointWaypoint()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily tesseract\+\_\+motion\+\_\+planners\+::\+Joint\+Waypoint\+::\+Joint\+Waypoint (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector\+Xd $>$ \&}]{joint\+\_\+positions,  }\item[{std\+::vector$<$ std\+::string $>$}]{joint\+\_\+names }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classtesseract__motion__planners_1_1JointWaypoint_a6e132785499d80a3b8ea791c54063237}\label{classtesseract__motion__planners_1_1JointWaypoint_a6e132785499d80a3b8ea791c54063237}} 
+\index{tesseract\_motion\_planners::JointWaypoint@{tesseract\_motion\_planners::JointWaypoint}!JointWaypoint@{JointWaypoint}}
+\index{JointWaypoint@{JointWaypoint}!tesseract\_motion\_planners::JointWaypoint@{tesseract\_motion\_planners::JointWaypoint}}
+\doxysubsubsection{\texorpdfstring{JointWaypoint()}{JointWaypoint()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily tesseract\+\_\+motion\+\_\+planners\+::\+Joint\+Waypoint\+::\+Joint\+Waypoint (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$}]{joint\+\_\+positions,  }\item[{std\+::vector$<$ std\+::string $>$}]{joint\+\_\+names }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classtesseract__motion__planners_1_1JointWaypoint_a984c784232610e66fc792d3dda99bbc3}\label{classtesseract__motion__planners_1_1JointWaypoint_a984c784232610e66fc792d3dda99bbc3}} 
+\index{tesseract\_motion\_planners::JointWaypoint@{tesseract\_motion\_planners::JointWaypoint}!JointWaypoint@{JointWaypoint}}
+\index{JointWaypoint@{JointWaypoint}!tesseract\_motion\_planners::JointWaypoint@{tesseract\_motion\_planners::JointWaypoint}}
+\doxysubsubsection{\texorpdfstring{JointWaypoint()}{JointWaypoint()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily tesseract\+\_\+motion\+\_\+planners\+::\+Joint\+Waypoint\+::\+Joint\+Waypoint (\begin{DoxyParamCaption}\item[{const std\+::unordered\+\_\+map$<$ std\+::string, double $>$ \&}]{joint\+\_\+map }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtesseract__motion__planners_1_1JointWaypoint_a8199b53b2e075242c3967371b87806f2}\label{classtesseract__motion__planners_1_1JointWaypoint_a8199b53b2e075242c3967371b87806f2}} 
+\index{tesseract\_motion\_planners::JointWaypoint@{tesseract\_motion\_planners::JointWaypoint}!compare@{compare}}
+\index{compare@{compare}!tesseract\_motion\_planners::JointWaypoint@{tesseract\_motion\_planners::JointWaypoint}}
+\doxysubsubsection{\texorpdfstring{compare()}{compare()}}
+{\footnotesize\ttfamily bool tesseract\+\_\+motion\+\_\+planners\+::\+Joint\+Waypoint\+::compare (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::string $>$ \&}]{joint\+\_\+names }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Compare vector of joint names, order does not matter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em j1} & Vector of joint names \\
+\hline
+{\em j2} & Vector of joint names \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if joint names are present in both vectors 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtesseract__motion__planners_1_1JointWaypoint_ab8b41b142e6aa2e3d661b94adcfc91bc}\label{classtesseract__motion__planners_1_1JointWaypoint_ab8b41b142e6aa2e3d661b94adcfc91bc}} 
+\index{tesseract\_motion\_planners::JointWaypoint@{tesseract\_motion\_planners::JointWaypoint}!getCoefficients@{getCoefficients}}
+\index{getCoefficients@{getCoefficients}!tesseract\_motion\_planners::JointWaypoint@{tesseract\_motion\_planners::JointWaypoint}}
+\doxysubsubsection{\texorpdfstring{getCoefficients()}{getCoefficients()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily const Eigen\+::\+Vector\+Xd\& tesseract\+\_\+motion\+\_\+planners\+::\+Joint\+Waypoint\+::get\+Coefficients (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get coefficients used to weight different terms in the waypoints. 
+
+\begin{DoxyReturn}{Returns}
+A vector of coefficients 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classtesseract__motion__planners_1_1Waypoint_a61dd7a8bfcf87729c9d4f5608fe9c803}{tesseract\+\_\+motion\+\_\+planners\+::\+Waypoint}}.
+
+\mbox{\Hypertarget{classtesseract__motion__planners_1_1JointWaypoint_ae588037ec365ee8480eb1d455da20966}\label{classtesseract__motion__planners_1_1JointWaypoint_ae588037ec365ee8480eb1d455da20966}} 
+\index{tesseract\_motion\_planners::JointWaypoint@{tesseract\_motion\_planners::JointWaypoint}!getCoefficients@{getCoefficients}}
+\index{getCoefficients@{getCoefficients}!tesseract\_motion\_planners::JointWaypoint@{tesseract\_motion\_planners::JointWaypoint}}
+\doxysubsubsection{\texorpdfstring{getCoefficients()}{getCoefficients()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Eigen\+::\+Vector\+Xd tesseract\+\_\+motion\+\_\+planners\+::\+Joint\+Waypoint\+::get\+Coefficients (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::string $>$ \&}]{joint\+\_\+names }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get coefficients in the order of the provided joint names. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em joint\+\_\+names} & The joint names defining the order of the return positions \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A vector of coefficients 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtesseract__motion__planners_1_1JointWaypoint_a272a8b1806772f48c1fa451b2e0c1947}\label{classtesseract__motion__planners_1_1JointWaypoint_a272a8b1806772f48c1fa451b2e0c1947}} 
+\index{tesseract\_motion\_planners::JointWaypoint@{tesseract\_motion\_planners::JointWaypoint}!getNames@{getNames}}
+\index{getNames@{getNames}!tesseract\_motion\_planners::JointWaypoint@{tesseract\_motion\_planners::JointWaypoint}}
+\doxysubsubsection{\texorpdfstring{getNames()}{getNames()}}
+{\footnotesize\ttfamily const std\+::vector$<$std\+::string$>$\& tesseract\+\_\+motion\+\_\+planners\+::\+Joint\+Waypoint\+::get\+Names (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the joint names. 
+
+\begin{DoxyReturn}{Returns}
+A vector of joint names 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtesseract__motion__planners_1_1JointWaypoint_acbdb3ca7c67c32d27abb0d441f098950}\label{classtesseract__motion__planners_1_1JointWaypoint_acbdb3ca7c67c32d27abb0d441f098950}} 
+\index{tesseract\_motion\_planners::JointWaypoint@{tesseract\_motion\_planners::JointWaypoint}!getPositions@{getPositions}}
+\index{getPositions@{getPositions}!tesseract\_motion\_planners::JointWaypoint@{tesseract\_motion\_planners::JointWaypoint}}
+\doxysubsubsection{\texorpdfstring{getPositions()}{getPositions()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily const Eigen\+::\+Vector\+Xd\& tesseract\+\_\+motion\+\_\+planners\+::\+Joint\+Waypoint\+::get\+Positions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the joint positions in radians. 
+
+\begin{DoxyReturn}{Returns}
+A vector of joint positions 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtesseract__motion__planners_1_1JointWaypoint_a02a09412726b7f78385ccb41507c9881}\label{classtesseract__motion__planners_1_1JointWaypoint_a02a09412726b7f78385ccb41507c9881}} 
+\index{tesseract\_motion\_planners::JointWaypoint@{tesseract\_motion\_planners::JointWaypoint}!getPositions@{getPositions}}
+\index{getPositions@{getPositions}!tesseract\_motion\_planners::JointWaypoint@{tesseract\_motion\_planners::JointWaypoint}}
+\doxysubsubsection{\texorpdfstring{getPositions()}{getPositions()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Eigen\+::\+Vector\+Xd tesseract\+\_\+motion\+\_\+planners\+::\+Joint\+Waypoint\+::get\+Positions (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::string $>$ \&}]{joint\+\_\+names }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the joint position in the order of the provided joint names. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em joint\+\_\+names} & The joint names defining the order of the return positions \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A vector of joint positions 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtesseract__motion__planners_1_1JointWaypoint_adfcc6a8dc38cdaf7fe819f3c0e733e29}\label{classtesseract__motion__planners_1_1JointWaypoint_adfcc6a8dc38cdaf7fe819f3c0e733e29}} 
+\index{tesseract\_motion\_planners::JointWaypoint@{tesseract\_motion\_planners::JointWaypoint}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!tesseract\_motion\_planners::JointWaypoint@{tesseract\_motion\_planners::JointWaypoint}}
+\doxysubsubsection{\texorpdfstring{operator+=()}{operator+=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__motion__planners_1_1JointWaypoint}{Joint\+Waypoint}}\& tesseract\+\_\+motion\+\_\+planners\+::\+Joint\+Waypoint\+::operator+= (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector\+Xd $>$ \&}]{delta }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Operator to add vector of data to current position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em delta} & Vector to add to current position \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classtesseract__motion__planners_1_1JointWaypoint_a1e09fad27923888a2e222660e61b8a54}\label{classtesseract__motion__planners_1_1JointWaypoint_a1e09fad27923888a2e222660e61b8a54}} 
+\index{tesseract\_motion\_planners::JointWaypoint@{tesseract\_motion\_planners::JointWaypoint}!operator-\/=@{operator-\/=}}
+\index{operator-\/=@{operator-\/=}!tesseract\_motion\_planners::JointWaypoint@{tesseract\_motion\_planners::JointWaypoint}}
+\doxysubsubsection{\texorpdfstring{operator-\/=()}{operator-=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__motion__planners_1_1JointWaypoint}{Joint\+Waypoint}}\& tesseract\+\_\+motion\+\_\+planners\+::\+Joint\+Waypoint\+::operator-\/= (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector\+Xd $>$ \&}]{delta }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Operator to subtract vector of data from current position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em delta} & Vector to subtract from current position \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classtesseract__motion__planners_1_1JointWaypoint_af64db96285b81f257087af6ad0aa4549}\label{classtesseract__motion__planners_1_1JointWaypoint_af64db96285b81f257087af6ad0aa4549}} 
+\index{tesseract\_motion\_planners::JointWaypoint@{tesseract\_motion\_planners::JointWaypoint}!joint\_names\_@{joint\_names\_}}
+\index{joint\_names\_@{joint\_names\_}!tesseract\_motion\_planners::JointWaypoint@{tesseract\_motion\_planners::JointWaypoint}}
+\doxysubsubsection{\texorpdfstring{joint\_names\_}{joint\_names\_}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::string$>$ tesseract\+\_\+motion\+\_\+planners\+::\+Joint\+Waypoint\+::joint\+\_\+names\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Joint position in radians. 
+
+\mbox{\Hypertarget{classtesseract__motion__planners_1_1JointWaypoint_a0b5769605f2b979e3c2db9f32470a05c}\label{classtesseract__motion__planners_1_1JointWaypoint_a0b5769605f2b979e3c2db9f32470a05c}} 
+\index{tesseract\_motion\_planners::JointWaypoint@{tesseract\_motion\_planners::JointWaypoint}!joint\_positions\_@{joint\_positions\_}}
+\index{joint\_positions\_@{joint\_positions\_}!tesseract\_motion\_planners::JointWaypoint@{tesseract\_motion\_planners::JointWaypoint}}
+\doxysubsubsection{\texorpdfstring{joint\_positions\_}{joint\_positions\_}}
+{\footnotesize\ttfamily Eigen\+::\+Vector\+Xd tesseract\+\_\+motion\+\_\+planners\+::\+Joint\+Waypoint\+::joint\+\_\+positions\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classtesseract__motion__planners_1_1JointWaypoint_aa654573c0151d4c03de2944328e7ab4a}\label{classtesseract__motion__planners_1_1JointWaypoint_aa654573c0151d4c03de2944328e7ab4a}} 
+\index{tesseract\_motion\_planners::JointWaypoint@{tesseract\_motion\_planners::JointWaypoint}!lookup\_@{lookup\_}}
+\index{lookup\_@{lookup\_}!tesseract\_motion\_planners::JointWaypoint@{tesseract\_motion\_planners::JointWaypoint}}
+\doxysubsubsection{\texorpdfstring{lookup\_}{lookup\_}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$std\+::string, int$>$ tesseract\+\_\+motion\+\_\+planners\+::\+Joint\+Waypoint\+::lookup\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Joint names. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+tesseract/tesseract\+\_\+planning/tesseract\+\_\+motion\+\_\+planners/include/tesseract\+\_\+motion\+\_\+planners/core/\mbox{\hyperlink{waypoint_8h}{waypoint.\+h}}\end{DoxyCompactItemize}
