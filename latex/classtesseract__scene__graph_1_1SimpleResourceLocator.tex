@@ -1,0 +1,122 @@
+\hypertarget{classtesseract__scene__graph_1_1SimpleResourceLocator}{}\doxysection{tesseract\+\_\+scene\+\_\+graph\+::Simple\+Resource\+Locator Class Reference}
+\label{classtesseract__scene__graph_1_1SimpleResourceLocator}\index{tesseract\_scene\_graph::SimpleResourceLocator@{tesseract\_scene\_graph::SimpleResourceLocator}}
+
+
+Resource locator implementation using a provided function to locate file resources.  
+
+
+
+
+{\ttfamily \#include $<$resource\+\_\+locator.\+h$>$}
+
+Inheritance diagram for tesseract\+\_\+scene\+\_\+graph\+::Simple\+Resource\+Locator\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classtesseract__scene__graph_1_1SimpleResourceLocator}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classtesseract__scene__graph_1_1SimpleResourceLocator_ad89a6ee53f07507d8d8cbd386dcc5e3f}{Ptr}} = std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classtesseract__scene__graph_1_1SimpleResourceLocator}{Simple\+Resource\+Locator}} $>$
+\item 
+using \mbox{\hyperlink{classtesseract__scene__graph_1_1SimpleResourceLocator_a8cf0243edb080dc0774b8ae11a4114e1}{Const\+Ptr}} = std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{classtesseract__scene__graph_1_1SimpleResourceLocator}{Simple\+Resource\+Locator}} $>$
+\item 
+using \mbox{\hyperlink{classtesseract__scene__graph_1_1SimpleResourceLocator_ad429d11dc86978f0c99d21e7a13de8e4}{Resource\+Locator\+Fn}} = std\+::function$<$ std\+::string(const std\+::string \&)$>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtesseract__scene__graph_1_1SimpleResourceLocator_a5df14c956c1cdfcaeb1fb56508780a42}{Simple\+Resource\+Locator}} (\mbox{\hyperlink{classtesseract__scene__graph_1_1SimpleResourceLocator_ad429d11dc86978f0c99d21e7a13de8e4}{Resource\+Locator\+Fn}} locator\+\_\+function)
+\begin{DoxyCompactList}\small\item\em Construct a new Simple Resource Locator object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classtesseract__common_1_1Resource_acdba916fa227bef4391c469581844dc6}{tesseract\+\_\+common\+::\+Resource\+::\+Ptr}} \mbox{\hyperlink{classtesseract__scene__graph_1_1SimpleResourceLocator_ad093747b96d03aa5e4a886ebf434606a}{locate\+Resource}} (const std\+::string \&url) override
+\begin{DoxyCompactList}\small\item\em Locate a resource based on a U\+RL. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtesseract__scene__graph_1_1SimpleResourceLocator_ad429d11dc86978f0c99d21e7a13de8e4}{Resource\+Locator\+Fn}} \mbox{\hyperlink{classtesseract__scene__graph_1_1SimpleResourceLocator_adc6d1c574dd665fdc1d4977c76c95d8e}{locator\+\_\+function\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Resource locator implementation using a provided function to locate file resources. 
+
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classtesseract__scene__graph_1_1SimpleResourceLocator_a8cf0243edb080dc0774b8ae11a4114e1}\label{classtesseract__scene__graph_1_1SimpleResourceLocator_a8cf0243edb080dc0774b8ae11a4114e1}} 
+\index{tesseract\_scene\_graph::SimpleResourceLocator@{tesseract\_scene\_graph::SimpleResourceLocator}!ConstPtr@{ConstPtr}}
+\index{ConstPtr@{ConstPtr}!tesseract\_scene\_graph::SimpleResourceLocator@{tesseract\_scene\_graph::SimpleResourceLocator}}
+\doxysubsubsection{\texorpdfstring{ConstPtr}{ConstPtr}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classtesseract__scene__graph_1_1SimpleResourceLocator_a8cf0243edb080dc0774b8ae11a4114e1}{tesseract\+\_\+scene\+\_\+graph\+::\+Simple\+Resource\+Locator\+::\+Const\+Ptr}} =  std\+::shared\+\_\+ptr$<$const \mbox{\hyperlink{classtesseract__scene__graph_1_1SimpleResourceLocator}{Simple\+Resource\+Locator}}$>$}
+
+\mbox{\Hypertarget{classtesseract__scene__graph_1_1SimpleResourceLocator_ad89a6ee53f07507d8d8cbd386dcc5e3f}\label{classtesseract__scene__graph_1_1SimpleResourceLocator_ad89a6ee53f07507d8d8cbd386dcc5e3f}} 
+\index{tesseract\_scene\_graph::SimpleResourceLocator@{tesseract\_scene\_graph::SimpleResourceLocator}!Ptr@{Ptr}}
+\index{Ptr@{Ptr}!tesseract\_scene\_graph::SimpleResourceLocator@{tesseract\_scene\_graph::SimpleResourceLocator}}
+\doxysubsubsection{\texorpdfstring{Ptr}{Ptr}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classtesseract__scene__graph_1_1SimpleResourceLocator_ad89a6ee53f07507d8d8cbd386dcc5e3f}{tesseract\+\_\+scene\+\_\+graph\+::\+Simple\+Resource\+Locator\+::\+Ptr}} =  std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classtesseract__scene__graph_1_1SimpleResourceLocator}{Simple\+Resource\+Locator}}$>$}
+
+\mbox{\Hypertarget{classtesseract__scene__graph_1_1SimpleResourceLocator_ad429d11dc86978f0c99d21e7a13de8e4}\label{classtesseract__scene__graph_1_1SimpleResourceLocator_ad429d11dc86978f0c99d21e7a13de8e4}} 
+\index{tesseract\_scene\_graph::SimpleResourceLocator@{tesseract\_scene\_graph::SimpleResourceLocator}!ResourceLocatorFn@{ResourceLocatorFn}}
+\index{ResourceLocatorFn@{ResourceLocatorFn}!tesseract\_scene\_graph::SimpleResourceLocator@{tesseract\_scene\_graph::SimpleResourceLocator}}
+\doxysubsubsection{\texorpdfstring{ResourceLocatorFn}{ResourceLocatorFn}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classtesseract__scene__graph_1_1SimpleResourceLocator_ad429d11dc86978f0c99d21e7a13de8e4}{tesseract\+\_\+scene\+\_\+graph\+::\+Simple\+Resource\+Locator\+::\+Resource\+Locator\+Fn}} =  std\+::function$<$std\+::string(const std\+::string\&)$>$}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtesseract__scene__graph_1_1SimpleResourceLocator_a5df14c956c1cdfcaeb1fb56508780a42}\label{classtesseract__scene__graph_1_1SimpleResourceLocator_a5df14c956c1cdfcaeb1fb56508780a42}} 
+\index{tesseract\_scene\_graph::SimpleResourceLocator@{tesseract\_scene\_graph::SimpleResourceLocator}!SimpleResourceLocator@{SimpleResourceLocator}}
+\index{SimpleResourceLocator@{SimpleResourceLocator}!tesseract\_scene\_graph::SimpleResourceLocator@{tesseract\_scene\_graph::SimpleResourceLocator}}
+\doxysubsubsection{\texorpdfstring{SimpleResourceLocator()}{SimpleResourceLocator()}}
+{\footnotesize\ttfamily tesseract\+\_\+scene\+\_\+graph\+::\+Simple\+Resource\+Locator\+::\+Simple\+Resource\+Locator (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtesseract__scene__graph_1_1SimpleResourceLocator_ad429d11dc86978f0c99d21e7a13de8e4}{Simple\+Resource\+Locator\+::\+Resource\+Locator\+Fn}}}]{locator\+\_\+function }\end{DoxyParamCaption})}
+
+
+
+Construct a new Simple Resource Locator object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em locator\+\_\+function} & Function to use to resolve resource file paths from U\+R\+Ls \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtesseract__scene__graph_1_1SimpleResourceLocator_ad093747b96d03aa5e4a886ebf434606a}\label{classtesseract__scene__graph_1_1SimpleResourceLocator_ad093747b96d03aa5e4a886ebf434606a}} 
+\index{tesseract\_scene\_graph::SimpleResourceLocator@{tesseract\_scene\_graph::SimpleResourceLocator}!locateResource@{locateResource}}
+\index{locateResource@{locateResource}!tesseract\_scene\_graph::SimpleResourceLocator@{tesseract\_scene\_graph::SimpleResourceLocator}}
+\doxysubsubsection{\texorpdfstring{locateResource()}{locateResource()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__common_1_1Resource_acdba916fa227bef4391c469581844dc6}{tesseract\+\_\+common\+::\+Resource\+::\+Ptr}} tesseract\+\_\+scene\+\_\+graph\+::\+Simple\+Resource\+Locator\+::locate\+Resource (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{url }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Locate a resource based on a U\+RL. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em url} & The U\+RL of the resource \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A shared pointer to a Resource instance, or nullptr if not found 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classtesseract__scene__graph_1_1ResourceLocator_a085d5f8f90bdf5bd9e715a704849df4f}{tesseract\+\_\+scene\+\_\+graph\+::\+Resource\+Locator}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classtesseract__scene__graph_1_1SimpleResourceLocator_adc6d1c574dd665fdc1d4977c76c95d8e}\label{classtesseract__scene__graph_1_1SimpleResourceLocator_adc6d1c574dd665fdc1d4977c76c95d8e}} 
+\index{tesseract\_scene\_graph::SimpleResourceLocator@{tesseract\_scene\_graph::SimpleResourceLocator}!locator\_function\_@{locator\_function\_}}
+\index{locator\_function\_@{locator\_function\_}!tesseract\_scene\_graph::SimpleResourceLocator@{tesseract\_scene\_graph::SimpleResourceLocator}}
+\doxysubsubsection{\texorpdfstring{locator\_function\_}{locator\_function\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__scene__graph_1_1SimpleResourceLocator_ad429d11dc86978f0c99d21e7a13de8e4}{Resource\+Locator\+Fn}} tesseract\+\_\+scene\+\_\+graph\+::\+Simple\+Resource\+Locator\+::locator\+\_\+function\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+tesseract/tesseract\+\_\+scene\+\_\+graph/include/tesseract\+\_\+scene\+\_\+graph/\mbox{\hyperlink{resource__locator_8h}{resource\+\_\+locator.\+h}}\item 
+tesseract/tesseract\+\_\+scene\+\_\+graph/src/\mbox{\hyperlink{resource__locator_8cpp}{resource\+\_\+locator.\+cpp}}\end{DoxyCompactItemize}

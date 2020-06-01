@@ -1,0 +1,166 @@
+\hypertarget{classtesseract__environment_1_1AdjacencyMap}{}\doxysection{tesseract\+\_\+environment\+::Adjacency\+Map Class Reference}
+\label{classtesseract__environment_1_1AdjacencyMap}\index{tesseract\_environment::AdjacencyMap@{tesseract\_environment::AdjacencyMap}}
+
+
+{\ttfamily \#include $<$types.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classtesseract__environment_1_1AdjacencyMap_a9c7db0883c182b82dca243b230514c90}{Ptr}} = std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classtesseract__environment_1_1AdjacencyMap}{Adjacency\+Map}} $>$
+\item 
+using \mbox{\hyperlink{classtesseract__environment_1_1AdjacencyMap_ae00a26bfba6444f0aa2c8fda7691b999}{Const\+Ptr}} = std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{classtesseract__environment_1_1AdjacencyMap}{Adjacency\+Map}} $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtesseract__environment_1_1AdjacencyMap_a564967a9d1410794c4893f8e79afb0b0}{Adjacency\+Map}} (const \mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph_a9ee303b2514bfedd8c914d09551b00ff}{tesseract\+\_\+scene\+\_\+graph\+::\+Scene\+Graph\+::\+Const\+Ptr}} \&scene\+\_\+graph, const std\+::vector$<$ std\+::string $>$ \&active\+\_\+links, const \mbox{\hyperlink{namespacetesseract__common_a67bde3cb7bb235f0f61c370ef8bc74d8}{tesseract\+\_\+common\+::\+Transform\+Map}} \&state)
+\begin{DoxyCompactList}\small\item\em Create a adjacency map provided state(map\+\_\+links) and nearst parent in the active\+\_\+links. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classtesseract__environment_1_1AdjacencyMap_a67eb65e9adf43cf7087ac6ecacf813a1}{$\sim$\+Adjacency\+Map}} ()=default
+\item 
+\mbox{\hyperlink{classtesseract__environment_1_1AdjacencyMap_a6d1d25e56fb1e7f7fa4e1db11fadf9e3}{Adjacency\+Map}} (const \mbox{\hyperlink{classtesseract__environment_1_1AdjacencyMap}{Adjacency\+Map}} \&)=default
+\item 
+\mbox{\hyperlink{classtesseract__environment_1_1AdjacencyMap}{Adjacency\+Map}} \& \mbox{\hyperlink{classtesseract__environment_1_1AdjacencyMap_a17f7814723ce423c171ca7f0bf08da1f}{operator=}} (const \mbox{\hyperlink{classtesseract__environment_1_1AdjacencyMap}{Adjacency\+Map}} \&)=default
+\item 
+\mbox{\hyperlink{classtesseract__environment_1_1AdjacencyMap_a4ea72a29a90beb06333326d588160e29}{Adjacency\+Map}} (\mbox{\hyperlink{classtesseract__environment_1_1AdjacencyMap}{Adjacency\+Map}} \&\&)=default
+\item 
+\mbox{\hyperlink{classtesseract__environment_1_1AdjacencyMap}{Adjacency\+Map}} \& \mbox{\hyperlink{classtesseract__environment_1_1AdjacencyMap_a070860d13618e70a2109725131c3c3ec}{operator=}} (\mbox{\hyperlink{classtesseract__environment_1_1AdjacencyMap}{Adjacency\+Map}} \&\&)=default
+\item 
+const std\+::vector$<$ std\+::string $>$ \& \mbox{\hyperlink{classtesseract__environment_1_1AdjacencyMap_a8a840fe2a1a46b0f3db2be46f783ec43}{get\+Active\+Link\+Names}} () const
+\begin{DoxyCompactList}\small\item\em This is a list of all active links associated with the constructor data. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structtesseract__environment_1_1AdjacencyMapPair_a78156b20b72ddf648b756ae2608fd1bd}{Adjacency\+Map\+Pair\+::\+Const\+Ptr}} \mbox{\hyperlink{classtesseract__environment_1_1AdjacencyMap_ab9f1504b251bf28292a3ccc0af4d13c4}{get\+Link\+Mapping}} (const std\+::string \&link\+\_\+name) const
+\begin{DoxyCompactList}\small\item\em A link mapping to the associated kinematics link name if it exists. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classtesseract__environment_1_1AdjacencyMap_a6aa82abf405463f49fc6dcce48c564ae}{active\+\_\+link\+\_\+names\+\_\+}}
+\item 
+std\+::unordered\+\_\+map$<$ std\+::string, \mbox{\hyperlink{structtesseract__environment_1_1AdjacencyMapPair_a78156b20b72ddf648b756ae2608fd1bd}{Adjacency\+Map\+Pair\+::\+Const\+Ptr}} $>$ \mbox{\hyperlink{classtesseract__environment_1_1AdjacencyMap_a97f92bd929cfed449d25dd1185e6f0e1}{adjacency\+\_\+map\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classtesseract__environment_1_1AdjacencyMap_ae00a26bfba6444f0aa2c8fda7691b999}\label{classtesseract__environment_1_1AdjacencyMap_ae00a26bfba6444f0aa2c8fda7691b999}} 
+\index{tesseract\_environment::AdjacencyMap@{tesseract\_environment::AdjacencyMap}!ConstPtr@{ConstPtr}}
+\index{ConstPtr@{ConstPtr}!tesseract\_environment::AdjacencyMap@{tesseract\_environment::AdjacencyMap}}
+\doxysubsubsection{\texorpdfstring{ConstPtr}{ConstPtr}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classtesseract__environment_1_1AdjacencyMap_ae00a26bfba6444f0aa2c8fda7691b999}{tesseract\+\_\+environment\+::\+Adjacency\+Map\+::\+Const\+Ptr}} =  std\+::shared\+\_\+ptr$<$const \mbox{\hyperlink{classtesseract__environment_1_1AdjacencyMap}{Adjacency\+Map}}$>$}
+
+\mbox{\Hypertarget{classtesseract__environment_1_1AdjacencyMap_a9c7db0883c182b82dca243b230514c90}\label{classtesseract__environment_1_1AdjacencyMap_a9c7db0883c182b82dca243b230514c90}} 
+\index{tesseract\_environment::AdjacencyMap@{tesseract\_environment::AdjacencyMap}!Ptr@{Ptr}}
+\index{Ptr@{Ptr}!tesseract\_environment::AdjacencyMap@{tesseract\_environment::AdjacencyMap}}
+\doxysubsubsection{\texorpdfstring{Ptr}{Ptr}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classtesseract__environment_1_1AdjacencyMap_a9c7db0883c182b82dca243b230514c90}{tesseract\+\_\+environment\+::\+Adjacency\+Map\+::\+Ptr}} =  std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classtesseract__environment_1_1AdjacencyMap}{Adjacency\+Map}}$>$}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtesseract__environment_1_1AdjacencyMap_a564967a9d1410794c4893f8e79afb0b0}\label{classtesseract__environment_1_1AdjacencyMap_a564967a9d1410794c4893f8e79afb0b0}} 
+\index{tesseract\_environment::AdjacencyMap@{tesseract\_environment::AdjacencyMap}!AdjacencyMap@{AdjacencyMap}}
+\index{AdjacencyMap@{AdjacencyMap}!tesseract\_environment::AdjacencyMap@{tesseract\_environment::AdjacencyMap}}
+\doxysubsubsection{\texorpdfstring{AdjacencyMap()}{AdjacencyMap()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily tesseract\+\_\+environment\+::\+Adjacency\+Map\+::\+Adjacency\+Map (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph_a9ee303b2514bfedd8c914d09551b00ff}{tesseract\+\_\+scene\+\_\+graph\+::\+Scene\+Graph\+::\+Const\+Ptr}} \&}]{scene\+\_\+graph,  }\item[{const std\+::vector$<$ std\+::string $>$ \&}]{active\+\_\+links,  }\item[{const \mbox{\hyperlink{namespacetesseract__common_a67bde3cb7bb235f0f61c370ef8bc74d8}{tesseract\+\_\+common\+::\+Transform\+Map}} \&}]{state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Create a adjacency map provided state(map\+\_\+links) and nearst parent in the active\+\_\+links. 
+
+\begin{DoxyVerb}   If a map_link does not have a parent in the list of active links it is not added the map
+   Note: This currently only support tree structures.
+   TODO: Need to update to use graph->getLinkChildren
+\end{DoxyVerb}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em scene\+\_\+graph} & \\
+\hline
+{\em active\+\_\+links} & \\
+\hline
+{\em state} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classtesseract__environment_1_1AdjacencyMap_a67eb65e9adf43cf7087ac6ecacf813a1}\label{classtesseract__environment_1_1AdjacencyMap_a67eb65e9adf43cf7087ac6ecacf813a1}} 
+\index{tesseract\_environment::AdjacencyMap@{tesseract\_environment::AdjacencyMap}!````~AdjacencyMap@{$\sim$AdjacencyMap}}
+\index{````~AdjacencyMap@{$\sim$AdjacencyMap}!tesseract\_environment::AdjacencyMap@{tesseract\_environment::AdjacencyMap}}
+\doxysubsubsection{\texorpdfstring{$\sim$AdjacencyMap()}{~AdjacencyMap()}}
+{\footnotesize\ttfamily virtual tesseract\+\_\+environment\+::\+Adjacency\+Map\+::$\sim$\+Adjacency\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+\mbox{\Hypertarget{classtesseract__environment_1_1AdjacencyMap_a6d1d25e56fb1e7f7fa4e1db11fadf9e3}\label{classtesseract__environment_1_1AdjacencyMap_a6d1d25e56fb1e7f7fa4e1db11fadf9e3}} 
+\index{tesseract\_environment::AdjacencyMap@{tesseract\_environment::AdjacencyMap}!AdjacencyMap@{AdjacencyMap}}
+\index{AdjacencyMap@{AdjacencyMap}!tesseract\_environment::AdjacencyMap@{tesseract\_environment::AdjacencyMap}}
+\doxysubsubsection{\texorpdfstring{AdjacencyMap()}{AdjacencyMap()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily tesseract\+\_\+environment\+::\+Adjacency\+Map\+::\+Adjacency\+Map (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtesseract__environment_1_1AdjacencyMap}{Adjacency\+Map}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classtesseract__environment_1_1AdjacencyMap_a4ea72a29a90beb06333326d588160e29}\label{classtesseract__environment_1_1AdjacencyMap_a4ea72a29a90beb06333326d588160e29}} 
+\index{tesseract\_environment::AdjacencyMap@{tesseract\_environment::AdjacencyMap}!AdjacencyMap@{AdjacencyMap}}
+\index{AdjacencyMap@{AdjacencyMap}!tesseract\_environment::AdjacencyMap@{tesseract\_environment::AdjacencyMap}}
+\doxysubsubsection{\texorpdfstring{AdjacencyMap()}{AdjacencyMap()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily tesseract\+\_\+environment\+::\+Adjacency\+Map\+::\+Adjacency\+Map (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtesseract__environment_1_1AdjacencyMap}{Adjacency\+Map}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtesseract__environment_1_1AdjacencyMap_a8a840fe2a1a46b0f3db2be46f783ec43}\label{classtesseract__environment_1_1AdjacencyMap_a8a840fe2a1a46b0f3db2be46f783ec43}} 
+\index{tesseract\_environment::AdjacencyMap@{tesseract\_environment::AdjacencyMap}!getActiveLinkNames@{getActiveLinkNames}}
+\index{getActiveLinkNames@{getActiveLinkNames}!tesseract\_environment::AdjacencyMap@{tesseract\_environment::AdjacencyMap}}
+\doxysubsubsection{\texorpdfstring{getActiveLinkNames()}{getActiveLinkNames()}}
+{\footnotesize\ttfamily const std\+::vector$<$std\+::string$>$\& tesseract\+\_\+environment\+::\+Adjacency\+Map\+::get\+Active\+Link\+Names (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+This is a list of all active links associated with the constructor data. 
+
+\begin{DoxyReturn}{Returns}
+vector of link names 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtesseract__environment_1_1AdjacencyMap_ab9f1504b251bf28292a3ccc0af4d13c4}\label{classtesseract__environment_1_1AdjacencyMap_ab9f1504b251bf28292a3ccc0af4d13c4}} 
+\index{tesseract\_environment::AdjacencyMap@{tesseract\_environment::AdjacencyMap}!getLinkMapping@{getLinkMapping}}
+\index{getLinkMapping@{getLinkMapping}!tesseract\_environment::AdjacencyMap@{tesseract\_environment::AdjacencyMap}}
+\doxysubsubsection{\texorpdfstring{getLinkMapping()}{getLinkMapping()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structtesseract__environment_1_1AdjacencyMapPair_a78156b20b72ddf648b756ae2608fd1bd}{Adjacency\+Map\+Pair\+::\+Const\+Ptr}} tesseract\+\_\+environment\+::\+Adjacency\+Map\+::get\+Link\+Mapping (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{link\+\_\+name }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+A link mapping to the associated kinematics link name if it exists. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em link\+\_\+name} & Name of link \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+If the link does not have a associated kinematics link it return nullptr, otherwise return the pair. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtesseract__environment_1_1AdjacencyMap_a070860d13618e70a2109725131c3c3ec}\label{classtesseract__environment_1_1AdjacencyMap_a070860d13618e70a2109725131c3c3ec}} 
+\index{tesseract\_environment::AdjacencyMap@{tesseract\_environment::AdjacencyMap}!operator=@{operator=}}
+\index{operator=@{operator=}!tesseract\_environment::AdjacencyMap@{tesseract\_environment::AdjacencyMap}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__environment_1_1AdjacencyMap}{Adjacency\+Map}}\& tesseract\+\_\+environment\+::\+Adjacency\+Map\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtesseract__environment_1_1AdjacencyMap}{Adjacency\+Map}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classtesseract__environment_1_1AdjacencyMap_a17f7814723ce423c171ca7f0bf08da1f}\label{classtesseract__environment_1_1AdjacencyMap_a17f7814723ce423c171ca7f0bf08da1f}} 
+\index{tesseract\_environment::AdjacencyMap@{tesseract\_environment::AdjacencyMap}!operator=@{operator=}}
+\index{operator=@{operator=}!tesseract\_environment::AdjacencyMap@{tesseract\_environment::AdjacencyMap}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__environment_1_1AdjacencyMap}{Adjacency\+Map}}\& tesseract\+\_\+environment\+::\+Adjacency\+Map\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtesseract__environment_1_1AdjacencyMap}{Adjacency\+Map}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classtesseract__environment_1_1AdjacencyMap_a6aa82abf405463f49fc6dcce48c564ae}\label{classtesseract__environment_1_1AdjacencyMap_a6aa82abf405463f49fc6dcce48c564ae}} 
+\index{tesseract\_environment::AdjacencyMap@{tesseract\_environment::AdjacencyMap}!active\_link\_names\_@{active\_link\_names\_}}
+\index{active\_link\_names\_@{active\_link\_names\_}!tesseract\_environment::AdjacencyMap@{tesseract\_environment::AdjacencyMap}}
+\doxysubsubsection{\texorpdfstring{active\_link\_names\_}{active\_link\_names\_}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::string$>$ tesseract\+\_\+environment\+::\+Adjacency\+Map\+::active\+\_\+link\+\_\+names\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classtesseract__environment_1_1AdjacencyMap_a97f92bd929cfed449d25dd1185e6f0e1}\label{classtesseract__environment_1_1AdjacencyMap_a97f92bd929cfed449d25dd1185e6f0e1}} 
+\index{tesseract\_environment::AdjacencyMap@{tesseract\_environment::AdjacencyMap}!adjacency\_map\_@{adjacency\_map\_}}
+\index{adjacency\_map\_@{adjacency\_map\_}!tesseract\_environment::AdjacencyMap@{tesseract\_environment::AdjacencyMap}}
+\doxysubsubsection{\texorpdfstring{adjacency\_map\_}{adjacency\_map\_}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$std\+::string, \mbox{\hyperlink{structtesseract__environment_1_1AdjacencyMapPair_a78156b20b72ddf648b756ae2608fd1bd}{Adjacency\+Map\+Pair\+::\+Const\+Ptr}}$>$ tesseract\+\_\+environment\+::\+Adjacency\+Map\+::adjacency\+\_\+map\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+tesseract/tesseract\+\_\+environment/include/tesseract\+\_\+environment/core/\mbox{\hyperlink{tesseract__environment_2include_2tesseract__environment_2core_2types_8h}{types.\+h}}\end{DoxyCompactItemize}

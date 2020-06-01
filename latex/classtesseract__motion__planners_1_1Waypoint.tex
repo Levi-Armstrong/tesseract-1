@@ -1,0 +1,227 @@
+\hypertarget{classtesseract__motion__planners_1_1Waypoint}{}\doxysection{tesseract\+\_\+motion\+\_\+planners\+::Waypoint Class Reference}
+\label{classtesseract__motion__planners_1_1Waypoint}\index{tesseract\_motion\_planners::Waypoint@{tesseract\_motion\_planners::Waypoint}}
+
+
+Defines a generic way of sending waypoints to a Tesseract Planner.  
+
+
+
+
+{\ttfamily \#include $<$waypoint.\+h$>$}
+
+Inheritance diagram for tesseract\+\_\+motion\+\_\+planners\+::Waypoint\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.633229cm]{classtesseract__motion__planners_1_1Waypoint}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classtesseract__motion__planners_1_1Waypoint_a6a3eae473f2bb3bd94684561aae0bd3e}{Ptr}} = std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classtesseract__motion__planners_1_1Waypoint}{Waypoint}} $>$
+\item 
+using \mbox{\hyperlink{classtesseract__motion__planners_1_1Waypoint_a29451e07e89a6a6695dd6c1b557b0905}{Const\+Ptr}} = std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{classtesseract__motion__planners_1_1Waypoint}{Waypoint}} $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtesseract__motion__planners_1_1Waypoint_aa72c8473ce052244bc810fc7a8591873}{Waypoint}} (\mbox{\hyperlink{namespacetesseract__motion__planners_a2728817d18262a01963b2e860643ad99}{Waypoint\+Type}} type)
+\item 
+virtual \mbox{\hyperlink{classtesseract__motion__planners_1_1Waypoint_abe8e0958728b534c4f398787eed5c7e5}{$\sim$\+Waypoint}} ()=default
+\item 
+\mbox{\hyperlink{classtesseract__motion__planners_1_1Waypoint_acc1fa08c6aacaad9c5c4daf481c7d873}{Waypoint}} (const \mbox{\hyperlink{classtesseract__motion__planners_1_1Waypoint}{Waypoint}} \&)=default
+\item 
+\mbox{\hyperlink{classtesseract__motion__planners_1_1Waypoint}{Waypoint}} \& \mbox{\hyperlink{classtesseract__motion__planners_1_1Waypoint_a7a7482a1d17772cf1ffdb94fab6f7727}{operator=}} (const \mbox{\hyperlink{classtesseract__motion__planners_1_1Waypoint}{Waypoint}} \&)=default
+\item 
+\mbox{\hyperlink{classtesseract__motion__planners_1_1Waypoint_ac8056790f9c7965a755066ef8dbb6272}{Waypoint}} (\mbox{\hyperlink{classtesseract__motion__planners_1_1Waypoint}{Waypoint}} \&\&)=default
+\item 
+\mbox{\hyperlink{classtesseract__motion__planners_1_1Waypoint}{Waypoint}} \& \mbox{\hyperlink{classtesseract__motion__planners_1_1Waypoint_a71d19085f4b9707095c2780916c4ce8d}{operator=}} (\mbox{\hyperlink{classtesseract__motion__planners_1_1Waypoint}{Waypoint}} \&\&)=default
+\item 
+\mbox{\hyperlink{namespacetesseract__motion__planners_a2728817d18262a01963b2e860643ad99}{Waypoint\+Type}} \mbox{\hyperlink{classtesseract__motion__planners_1_1Waypoint_a9d66f38c8a0a1d11906249b302972259}{get\+Type}} () const
+\begin{DoxyCompactList}\small\item\em Returns the type of waypoint so that it may be cast back to the derived type. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classtesseract__motion__planners_1_1Waypoint_a97f71af7e6bf09927cfff05f6847bff2}{is\+Critical}} () const
+\begin{DoxyCompactList}\small\item\em If false, this value is used as a guide rather than a rigid waypoint (Default=true) Example\+: In Trajopt, is\+\_\+critical=true =$>$ constraint, is\+\_\+critical=false =$>$ cost. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classtesseract__motion__planners_1_1Waypoint_a414765ab618af2c3aeeebedbfe413dfd}{set\+Is\+Critical}} (bool is\+\_\+critical)
+\begin{DoxyCompactList}\small\item\em Set if this waypoint is a critical waypoint. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classtesseract__motion__planners_1_1Waypoint_a484b14f9a7937360d23760cf0fff5a52}{set\+Coefficients}} (const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector\+Xd $>$ \&coefficients)
+\begin{DoxyCompactList}\small\item\em Set coefficients used to weight different terms in the waypoints. \end{DoxyCompactList}\item 
+virtual const Eigen\+::\+Vector\+Xd \& \mbox{\hyperlink{classtesseract__motion__planners_1_1Waypoint_a61dd7a8bfcf87729c9d4f5608fe9c803}{get\+Coefficients}} () const
+\begin{DoxyCompactList}\small\item\em Get coefficients used to weight different terms in the waypoints. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacetesseract__motion__planners_a2728817d18262a01963b2e860643ad99}{Waypoint\+Type}} \mbox{\hyperlink{classtesseract__motion__planners_1_1Waypoint_a5c7a0f77e15079bb072ff33ae5cb32eb}{waypoint\+\_\+type\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Should be set by the derived class for casting \mbox{\hyperlink{classtesseract__motion__planners_1_1Waypoint}{Waypoint}} back to appropriate derived class type. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector\+Xd \mbox{\hyperlink{classtesseract__motion__planners_1_1Waypoint_a1f6703a90e71859d0569e21065b06c17}{coeffs\+\_\+}}
+\begin{DoxyCompactList}\small\item\em coefficients used to weight different terms in the waypoints \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classtesseract__motion__planners_1_1Waypoint_a4932447860a9b7c5cbc4d5958b1add7c}{is\+\_\+critical\+\_\+}} = true
+\begin{DoxyCompactList}\small\item\em If false, this value is used as a guide rather than a rigid waypoint (Default=true) Example\+: In Trajopt, is\+\_\+critical=true =$>$ constraint, is\+\_\+critical=false =$>$ cost. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Defines a generic way of sending waypoints to a Tesseract Planner. 
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classtesseract__motion__planners_1_1Waypoint_a29451e07e89a6a6695dd6c1b557b0905}\label{classtesseract__motion__planners_1_1Waypoint_a29451e07e89a6a6695dd6c1b557b0905}} 
+\index{tesseract\_motion\_planners::Waypoint@{tesseract\_motion\_planners::Waypoint}!ConstPtr@{ConstPtr}}
+\index{ConstPtr@{ConstPtr}!tesseract\_motion\_planners::Waypoint@{tesseract\_motion\_planners::Waypoint}}
+\doxysubsubsection{\texorpdfstring{ConstPtr}{ConstPtr}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classtesseract__motion__planners_1_1Waypoint_a29451e07e89a6a6695dd6c1b557b0905}{tesseract\+\_\+motion\+\_\+planners\+::\+Waypoint\+::\+Const\+Ptr}} =  std\+::shared\+\_\+ptr$<$const \mbox{\hyperlink{classtesseract__motion__planners_1_1Waypoint}{Waypoint}}$>$}
+
+\mbox{\Hypertarget{classtesseract__motion__planners_1_1Waypoint_a6a3eae473f2bb3bd94684561aae0bd3e}\label{classtesseract__motion__planners_1_1Waypoint_a6a3eae473f2bb3bd94684561aae0bd3e}} 
+\index{tesseract\_motion\_planners::Waypoint@{tesseract\_motion\_planners::Waypoint}!Ptr@{Ptr}}
+\index{Ptr@{Ptr}!tesseract\_motion\_planners::Waypoint@{tesseract\_motion\_planners::Waypoint}}
+\doxysubsubsection{\texorpdfstring{Ptr}{Ptr}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classtesseract__motion__planners_1_1Waypoint_a6a3eae473f2bb3bd94684561aae0bd3e}{tesseract\+\_\+motion\+\_\+planners\+::\+Waypoint\+::\+Ptr}} =  std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classtesseract__motion__planners_1_1Waypoint}{Waypoint}}$>$}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtesseract__motion__planners_1_1Waypoint_aa72c8473ce052244bc810fc7a8591873}\label{classtesseract__motion__planners_1_1Waypoint_aa72c8473ce052244bc810fc7a8591873}} 
+\index{tesseract\_motion\_planners::Waypoint@{tesseract\_motion\_planners::Waypoint}!Waypoint@{Waypoint}}
+\index{Waypoint@{Waypoint}!tesseract\_motion\_planners::Waypoint@{tesseract\_motion\_planners::Waypoint}}
+\doxysubsubsection{\texorpdfstring{Waypoint()}{Waypoint()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily tesseract\+\_\+motion\+\_\+planners\+::\+Waypoint\+::\+Waypoint (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacetesseract__motion__planners_a2728817d18262a01963b2e860643ad99}{Waypoint\+Type}}}]{type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classtesseract__motion__planners_1_1Waypoint_abe8e0958728b534c4f398787eed5c7e5}\label{classtesseract__motion__planners_1_1Waypoint_abe8e0958728b534c4f398787eed5c7e5}} 
+\index{tesseract\_motion\_planners::Waypoint@{tesseract\_motion\_planners::Waypoint}!````~Waypoint@{$\sim$Waypoint}}
+\index{````~Waypoint@{$\sim$Waypoint}!tesseract\_motion\_planners::Waypoint@{tesseract\_motion\_planners::Waypoint}}
+\doxysubsubsection{\texorpdfstring{$\sim$Waypoint()}{~Waypoint()}}
+{\footnotesize\ttfamily virtual tesseract\+\_\+motion\+\_\+planners\+::\+Waypoint\+::$\sim$\+Waypoint (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+\mbox{\Hypertarget{classtesseract__motion__planners_1_1Waypoint_acc1fa08c6aacaad9c5c4daf481c7d873}\label{classtesseract__motion__planners_1_1Waypoint_acc1fa08c6aacaad9c5c4daf481c7d873}} 
+\index{tesseract\_motion\_planners::Waypoint@{tesseract\_motion\_planners::Waypoint}!Waypoint@{Waypoint}}
+\index{Waypoint@{Waypoint}!tesseract\_motion\_planners::Waypoint@{tesseract\_motion\_planners::Waypoint}}
+\doxysubsubsection{\texorpdfstring{Waypoint()}{Waypoint()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily tesseract\+\_\+motion\+\_\+planners\+::\+Waypoint\+::\+Waypoint (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtesseract__motion__planners_1_1Waypoint}{Waypoint}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classtesseract__motion__planners_1_1Waypoint_ac8056790f9c7965a755066ef8dbb6272}\label{classtesseract__motion__planners_1_1Waypoint_ac8056790f9c7965a755066ef8dbb6272}} 
+\index{tesseract\_motion\_planners::Waypoint@{tesseract\_motion\_planners::Waypoint}!Waypoint@{Waypoint}}
+\index{Waypoint@{Waypoint}!tesseract\_motion\_planners::Waypoint@{tesseract\_motion\_planners::Waypoint}}
+\doxysubsubsection{\texorpdfstring{Waypoint()}{Waypoint()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily tesseract\+\_\+motion\+\_\+planners\+::\+Waypoint\+::\+Waypoint (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtesseract__motion__planners_1_1Waypoint}{Waypoint}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtesseract__motion__planners_1_1Waypoint_a61dd7a8bfcf87729c9d4f5608fe9c803}\label{classtesseract__motion__planners_1_1Waypoint_a61dd7a8bfcf87729c9d4f5608fe9c803}} 
+\index{tesseract\_motion\_planners::Waypoint@{tesseract\_motion\_planners::Waypoint}!getCoefficients@{getCoefficients}}
+\index{getCoefficients@{getCoefficients}!tesseract\_motion\_planners::Waypoint@{tesseract\_motion\_planners::Waypoint}}
+\doxysubsubsection{\texorpdfstring{getCoefficients()}{getCoefficients()}}
+{\footnotesize\ttfamily virtual const Eigen\+::\+Vector\+Xd\& tesseract\+\_\+motion\+\_\+planners\+::\+Waypoint\+::get\+Coefficients (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Get coefficients used to weight different terms in the waypoints. 
+
+For example\+: joint 1 vs joint 2 of the same waypoint or waypoint 1 vs waypoint 2 Note\+: Each planner should define defaults for this when they are not set.
+
+\begin{DoxyReturn}{Returns}
+A vector of coefficients 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classtesseract__motion__planners_1_1JointWaypoint_ab8b41b142e6aa2e3d661b94adcfc91bc}{tesseract\+\_\+motion\+\_\+planners\+::\+Joint\+Waypoint}}.
+
+\mbox{\Hypertarget{classtesseract__motion__planners_1_1Waypoint_a9d66f38c8a0a1d11906249b302972259}\label{classtesseract__motion__planners_1_1Waypoint_a9d66f38c8a0a1d11906249b302972259}} 
+\index{tesseract\_motion\_planners::Waypoint@{tesseract\_motion\_planners::Waypoint}!getType@{getType}}
+\index{getType@{getType}!tesseract\_motion\_planners::Waypoint@{tesseract\_motion\_planners::Waypoint}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacetesseract__motion__planners_a2728817d18262a01963b2e860643ad99}{Waypoint\+Type}} tesseract\+\_\+motion\+\_\+planners\+::\+Waypoint\+::get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the type of waypoint so that it may be cast back to the derived type. 
+
+\mbox{\Hypertarget{classtesseract__motion__planners_1_1Waypoint_a97f71af7e6bf09927cfff05f6847bff2}\label{classtesseract__motion__planners_1_1Waypoint_a97f71af7e6bf09927cfff05f6847bff2}} 
+\index{tesseract\_motion\_planners::Waypoint@{tesseract\_motion\_planners::Waypoint}!isCritical@{isCritical}}
+\index{isCritical@{isCritical}!tesseract\_motion\_planners::Waypoint@{tesseract\_motion\_planners::Waypoint}}
+\doxysubsubsection{\texorpdfstring{isCritical()}{isCritical()}}
+{\footnotesize\ttfamily virtual bool tesseract\+\_\+motion\+\_\+planners\+::\+Waypoint\+::is\+Critical (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+If false, this value is used as a guide rather than a rigid waypoint (Default=true) Example\+: In Trajopt, is\+\_\+critical=true =$>$ constraint, is\+\_\+critical=false =$>$ cost. 
+
+\mbox{\Hypertarget{classtesseract__motion__planners_1_1Waypoint_a7a7482a1d17772cf1ffdb94fab6f7727}\label{classtesseract__motion__planners_1_1Waypoint_a7a7482a1d17772cf1ffdb94fab6f7727}} 
+\index{tesseract\_motion\_planners::Waypoint@{tesseract\_motion\_planners::Waypoint}!operator=@{operator=}}
+\index{operator=@{operator=}!tesseract\_motion\_planners::Waypoint@{tesseract\_motion\_planners::Waypoint}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__motion__planners_1_1Waypoint}{Waypoint}}\& tesseract\+\_\+motion\+\_\+planners\+::\+Waypoint\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtesseract__motion__planners_1_1Waypoint}{Waypoint}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classtesseract__motion__planners_1_1Waypoint_a71d19085f4b9707095c2780916c4ce8d}\label{classtesseract__motion__planners_1_1Waypoint_a71d19085f4b9707095c2780916c4ce8d}} 
+\index{tesseract\_motion\_planners::Waypoint@{tesseract\_motion\_planners::Waypoint}!operator=@{operator=}}
+\index{operator=@{operator=}!tesseract\_motion\_planners::Waypoint@{tesseract\_motion\_planners::Waypoint}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__motion__planners_1_1Waypoint}{Waypoint}}\& tesseract\+\_\+motion\+\_\+planners\+::\+Waypoint\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtesseract__motion__planners_1_1Waypoint}{Waypoint}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classtesseract__motion__planners_1_1Waypoint_a484b14f9a7937360d23760cf0fff5a52}\label{classtesseract__motion__planners_1_1Waypoint_a484b14f9a7937360d23760cf0fff5a52}} 
+\index{tesseract\_motion\_planners::Waypoint@{tesseract\_motion\_planners::Waypoint}!setCoefficients@{setCoefficients}}
+\index{setCoefficients@{setCoefficients}!tesseract\_motion\_planners::Waypoint@{tesseract\_motion\_planners::Waypoint}}
+\doxysubsubsection{\texorpdfstring{setCoefficients()}{setCoefficients()}}
+{\footnotesize\ttfamily virtual bool tesseract\+\_\+motion\+\_\+planners\+::\+Waypoint\+::set\+Coefficients (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector\+Xd $>$ \&}]{coefficients }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Set coefficients used to weight different terms in the waypoints. 
+
+For example\+: joint 1 vs joint 2 of the same waypoint or waypoint 1 vs waypoint 2 Note\+: Each planner should define defaults for this when they are not set.
+
+\begin{DoxyReturn}{Returns}
+True if valid, otherwise false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtesseract__motion__planners_1_1Waypoint_a414765ab618af2c3aeeebedbfe413dfd}\label{classtesseract__motion__planners_1_1Waypoint_a414765ab618af2c3aeeebedbfe413dfd}} 
+\index{tesseract\_motion\_planners::Waypoint@{tesseract\_motion\_planners::Waypoint}!setIsCritical@{setIsCritical}}
+\index{setIsCritical@{setIsCritical}!tesseract\_motion\_planners::Waypoint@{tesseract\_motion\_planners::Waypoint}}
+\doxysubsubsection{\texorpdfstring{setIsCritical()}{setIsCritical()}}
+{\footnotesize\ttfamily virtual void tesseract\+\_\+motion\+\_\+planners\+::\+Waypoint\+::set\+Is\+Critical (\begin{DoxyParamCaption}\item[{bool}]{is\+\_\+critical }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Set if this waypoint is a critical waypoint. 
+
+If false, this value is used as a guide rather than a rigid waypoint (Default=true)
+
+
+\begin{DoxyParams}{Parameters}
+{\em is\+\_\+critical} & In Trajopt, is\+\_\+critical=true =$>$ constraint, is\+\_\+critical=false =$>$ cost \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classtesseract__motion__planners_1_1Waypoint_a1f6703a90e71859d0569e21065b06c17}\label{classtesseract__motion__planners_1_1Waypoint_a1f6703a90e71859d0569e21065b06c17}} 
+\index{tesseract\_motion\_planners::Waypoint@{tesseract\_motion\_planners::Waypoint}!coeffs\_@{coeffs\_}}
+\index{coeffs\_@{coeffs\_}!tesseract\_motion\_planners::Waypoint@{tesseract\_motion\_planners::Waypoint}}
+\doxysubsubsection{\texorpdfstring{coeffs\_}{coeffs\_}}
+{\footnotesize\ttfamily Eigen\+::\+Vector\+Xd tesseract\+\_\+motion\+\_\+planners\+::\+Waypoint\+::coeffs\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+coefficients used to weight different terms in the waypoints 
+
+\mbox{\Hypertarget{classtesseract__motion__planners_1_1Waypoint_a4932447860a9b7c5cbc4d5958b1add7c}\label{classtesseract__motion__planners_1_1Waypoint_a4932447860a9b7c5cbc4d5958b1add7c}} 
+\index{tesseract\_motion\_planners::Waypoint@{tesseract\_motion\_planners::Waypoint}!is\_critical\_@{is\_critical\_}}
+\index{is\_critical\_@{is\_critical\_}!tesseract\_motion\_planners::Waypoint@{tesseract\_motion\_planners::Waypoint}}
+\doxysubsubsection{\texorpdfstring{is\_critical\_}{is\_critical\_}}
+{\footnotesize\ttfamily bool tesseract\+\_\+motion\+\_\+planners\+::\+Waypoint\+::is\+\_\+critical\+\_\+ = true\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+If false, this value is used as a guide rather than a rigid waypoint (Default=true) Example\+: In Trajopt, is\+\_\+critical=true =$>$ constraint, is\+\_\+critical=false =$>$ cost. 
+
+\mbox{\Hypertarget{classtesseract__motion__planners_1_1Waypoint_a5c7a0f77e15079bb072ff33ae5cb32eb}\label{classtesseract__motion__planners_1_1Waypoint_a5c7a0f77e15079bb072ff33ae5cb32eb}} 
+\index{tesseract\_motion\_planners::Waypoint@{tesseract\_motion\_planners::Waypoint}!waypoint\_type\_@{waypoint\_type\_}}
+\index{waypoint\_type\_@{waypoint\_type\_}!tesseract\_motion\_planners::Waypoint@{tesseract\_motion\_planners::Waypoint}}
+\doxysubsubsection{\texorpdfstring{waypoint\_type\_}{waypoint\_type\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacetesseract__motion__planners_a2728817d18262a01963b2e860643ad99}{Waypoint\+Type}} tesseract\+\_\+motion\+\_\+planners\+::\+Waypoint\+::waypoint\+\_\+type\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Should be set by the derived class for casting \mbox{\hyperlink{classtesseract__motion__planners_1_1Waypoint}{Waypoint}} back to appropriate derived class type. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+tesseract/tesseract\+\_\+planning/tesseract\+\_\+motion\+\_\+planners/include/tesseract\+\_\+motion\+\_\+planners/core/\mbox{\hyperlink{waypoint_8h}{waypoint.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,41 @@
+\hypertarget{weighted__real__vector__state__sampler_8cpp}{}\doxysection{tesseract/tesseract\+\_\+planning/tesseract\+\_\+motion\+\_\+planners/src/ompl/weighted\+\_\+real\+\_\+vector\+\_\+state\+\_\+sampler.cpp File Reference}
+\label{weighted__real__vector__state__sampler_8cpp}\index{tesseract/tesseract\_planning/tesseract\_motion\_planners/src/ompl/weighted\_real\_vector\_state\_sampler.cpp@{tesseract/tesseract\_planning/tesseract\_motion\_planners/src/ompl/weighted\_real\_vector\_state\_sampler.cpp}}
+
+
+Tesseract O\+M\+PL Weighted State Sampler.  
+
+
+{\ttfamily \#include $<$tesseract\+\_\+common/macros.\+h$>$}\newline
+{\ttfamily \#include $<$ompl/base/\+State\+Space.\+h$>$}\newline
+{\ttfamily \#include $<$ompl/base/spaces/\+Real\+Vector\+State\+Space.\+h$>$}\newline
+{\ttfamily \#include $<$ompl/base/\+Scoped\+State.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+motion\+\_\+planners/ompl/weighted\+\_\+real\+\_\+vector\+\_\+state\+\_\+sampler.\+h$>$}\newline
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacetesseract__motion__planners}{tesseract\+\_\+motion\+\_\+planners}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Tesseract O\+M\+PL Weighted State Sampler. 
+
+This allows you to provided a weight factor different joint when sampling. This is useful when you have a gantry with two linear axis with a robot attached. When sampling near you may want to scale down the rail sampling.
+
+\begin{DoxyAuthor}{Author}
+Ioan Sucan, Levi Armstrong
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2010, Rice University 
+
+Copyright (c) 2019, Southwest Research Institute
+\end{DoxyCopyright}
+\begin{DoxyParagraph}{License}
+Software License Agreement (Apache License) 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+Licensed under the Apache License, Version 2.\+0 (the \char`\"{}\+License\char`\"{}); you may not use this file except in compliance with the License. You may obtain a copy of the License at \href{http://www.apache.org/licenses/LICENSE-2.0}{\texttt{ http\+://www.\+apache.\+org/licenses/\+L\+I\+C\+E\+N\+S\+E-\/2.\+0}} 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \char`\"{}\+A\+S I\+S\char`\"{} B\+A\+S\+IS, W\+I\+T\+H\+O\+UT W\+A\+R\+R\+A\+N\+T\+I\+ES OR C\+O\+N\+D\+I\+T\+I\+O\+NS OF A\+NY K\+I\+ND, either express or implied. See the License for the specific language governing permissions and limitations under the License. 
+\end{DoxyParagraph}

@@ -1,0 +1,62 @@
+\hypertarget{custom__iterator__unit_8cpp}{}\doxysection{tesseract/tesseract\+\_\+planning/tesseract\+\_\+process\+\_\+planners/test/custom\+\_\+iterator\+\_\+unit.cpp File Reference}
+\label{custom__iterator__unit_8cpp}\index{tesseract/tesseract\_planning/tesseract\_process\_planners/test/custom\_iterator\_unit.cpp@{tesseract/tesseract\_planning/tesseract\_process\_planners/test/custom\_iterator\_unit.cpp}}
+
+
+tests for a custom iterator over the process definitions  
+
+
+{\ttfamily \#include $<$tesseract\+\_\+common/macros.\+h$>$}\newline
+{\ttfamily \#include $<$gtest/gtest.\+h$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include $<$Eigen/\+Geometry$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+process\+\_\+planners/process\+\_\+segment\+\_\+definition.\+h$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{macros_8h_a8cc0e3c6a3382c5c0b19eb9e676fc2db}{T\+E\+S\+S\+E\+R\+A\+C\+T\+\_\+\+C\+O\+M\+M\+O\+N\+\_\+\+I\+G\+N\+O\+R\+E\+\_\+\+W\+A\+R\+N\+I\+N\+G\+S\+\_\+\+P\+U\+SH}} \mbox{\hyperlink{macros_8h_a7af8561cf52519e9896b0697095c1b8b}{T\+E\+S\+S\+E\+R\+A\+C\+T\+\_\+\+C\+O\+M\+M\+O\+N\+\_\+\+I\+G\+N\+O\+R\+E\+\_\+\+W\+A\+R\+N\+I\+N\+G\+S\+\_\+\+P\+OP}} \mbox{\hyperlink{custom__iterator__unit_8cpp_a7b9169594f7dc524b13c55821bfbd241}{T\+E\+ST}} (Custom\+Iterator\+Unit, Process\+Segement\+Definition\+Iterator)
+\item 
+int \mbox{\hyperlink{custom__iterator__unit_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+tests for a custom iterator over the process definitions 
+
+\begin{DoxyAuthor}{Author}
+Levi Armstrong 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+T\+O\+DO 
+\end{DoxyVersion}
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000167}{Bug}}]No known bugs\end{DoxyRefDesc}
+
+
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2020, Southwest Research Institute
+\end{DoxyCopyright}
+\begin{DoxyParagraph}{License}
+Software License Agreement (Apache License) 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+Licensed under the Apache License, Version 2.\+0 (the \char`\"{}\+License\char`\"{}); you may not use this file except in compliance with the License. You may obtain a copy of the License at \href{http://www.apache.org/licenses/LICENSE-2.0}{\texttt{ http\+://www.\+apache.\+org/licenses/\+L\+I\+C\+E\+N\+S\+E-\/2.\+0}} 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \char`\"{}\+A\+S I\+S\char`\"{} B\+A\+S\+IS, W\+I\+T\+H\+O\+UT W\+A\+R\+R\+A\+N\+T\+I\+ES OR C\+O\+N\+D\+I\+T\+I\+O\+NS OF A\+NY K\+I\+ND, either express or implied. See the License for the specific language governing permissions and limitations under the License. 
+\end{DoxyParagraph}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{custom__iterator__unit_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}\label{custom__iterator__unit_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}} 
+\index{custom\_iterator\_unit.cpp@{custom\_iterator\_unit.cpp}!main@{main}}
+\index{main@{main}!custom\_iterator\_unit.cpp@{custom\_iterator\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{custom__iterator__unit_8cpp_a7b9169594f7dc524b13c55821bfbd241}\label{custom__iterator__unit_8cpp_a7b9169594f7dc524b13c55821bfbd241}} 
+\index{custom\_iterator\_unit.cpp@{custom\_iterator\_unit.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!custom\_iterator\_unit.cpp@{custom\_iterator\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{macros_8h_a8cc0e3c6a3382c5c0b19eb9e676fc2db}{T\+E\+S\+S\+E\+R\+A\+C\+T\+\_\+\+C\+O\+M\+M\+O\+N\+\_\+\+I\+G\+N\+O\+R\+E\+\_\+\+W\+A\+R\+N\+I\+N\+G\+S\+\_\+\+P\+U\+SH}} \mbox{\hyperlink{macros_8h_a7af8561cf52519e9896b0697095c1b8b}{T\+E\+S\+S\+E\+R\+A\+C\+T\+\_\+\+C\+O\+M\+M\+O\+N\+\_\+\+I\+G\+N\+O\+R\+E\+\_\+\+W\+A\+R\+N\+I\+N\+G\+S\+\_\+\+P\+OP}} T\+E\+ST (\begin{DoxyParamCaption}\item[{Custom\+Iterator\+Unit}]{,  }\item[{Process\+Segement\+Definition\+Iterator}]{ }\end{DoxyParamCaption})}
+

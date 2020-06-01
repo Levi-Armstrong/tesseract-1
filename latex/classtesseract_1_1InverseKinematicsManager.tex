@@ -1,0 +1,351 @@
+\hypertarget{classtesseract_1_1InverseKinematicsManager}{}\doxysection{tesseract\+::Inverse\+Kinematics\+Manager Class Reference}
+\label{classtesseract_1_1InverseKinematicsManager}\index{tesseract::InverseKinematicsManager@{tesseract::InverseKinematicsManager}}
+
+
+{\ttfamily \#include $<$inverse\+\_\+kinematics\+\_\+manager.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classtesseract_1_1InverseKinematicsManager_a1ac2d73ed4153f5e942cc1e138e98082}{Ptr}} = std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classtesseract_1_1InverseKinematicsManager}{Inverse\+Kinematics\+Manager}} $>$
+\item 
+using \mbox{\hyperlink{classtesseract_1_1InverseKinematicsManager_a1d1b1e38bc7a19f0395d3260d583d57d}{Const\+Ptr}} = std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{classtesseract_1_1InverseKinematicsManager}{Inverse\+Kinematics\+Manager}} $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtesseract_1_1InverseKinematicsManager_a9e83011eba85ed393bfb6214cec993ec}{Inverse\+Kinematics\+Manager}} ()=default
+\item 
+virtual \mbox{\hyperlink{classtesseract_1_1InverseKinematicsManager_a75e47f3fa6db34f8f660c73c12572f55}{$\sim$\+Inverse\+Kinematics\+Manager}} ()=default
+\item 
+\mbox{\hyperlink{classtesseract_1_1InverseKinematicsManager_aa846e387d92f716fec40cec2cd2f3429}{Inverse\+Kinematics\+Manager}} (const \mbox{\hyperlink{classtesseract_1_1InverseKinematicsManager}{Inverse\+Kinematics\+Manager}} \&)=default
+\item 
+\mbox{\hyperlink{classtesseract_1_1InverseKinematicsManager}{Inverse\+Kinematics\+Manager}} \& \mbox{\hyperlink{classtesseract_1_1InverseKinematicsManager_a3df45ebf9fa6976d5cfdad82510f65d6}{operator=}} (const \mbox{\hyperlink{classtesseract_1_1InverseKinematicsManager}{Inverse\+Kinematics\+Manager}} \&)=default
+\item 
+\mbox{\hyperlink{classtesseract_1_1InverseKinematicsManager_af9f5da369b780068895c91011c6cedb8}{Inverse\+Kinematics\+Manager}} (\mbox{\hyperlink{classtesseract_1_1InverseKinematicsManager}{Inverse\+Kinematics\+Manager}} \&\&)=default
+\item 
+\mbox{\hyperlink{classtesseract_1_1InverseKinematicsManager}{Inverse\+Kinematics\+Manager}} \& \mbox{\hyperlink{classtesseract_1_1InverseKinematicsManager_a4f6c25ad33713e07831b4f217e10c6cb}{operator=}} (\mbox{\hyperlink{classtesseract_1_1InverseKinematicsManager}{Inverse\+Kinematics\+Manager}} \&\&)=default
+\item 
+bool \mbox{\hyperlink{classtesseract_1_1InverseKinematicsManager_adbc40539d7bbcfe355448c8573eccd69}{register\+Inv\+Kinematics\+Factory}} (\mbox{\hyperlink{classtesseract__kinematics_1_1InverseKinematicsFactory_a8aed32534eaa237c6d6d990ab293051d}{tesseract\+\_\+kinematics\+::\+Inverse\+Kinematics\+Factory\+::\+Ptr}} factory)
+\begin{DoxyCompactList}\small\item\em Register a inverse kinematics factory. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classtesseract_1_1InverseKinematicsManager_a65939bfab8aa898d6c3280c36e545dce}{remove\+Inv\+Kinematics\+Factory}} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Removes a registered inverse kinematics factory. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classtesseract_1_1InverseKinematicsManager_a1ff1a363e524bb8a2a41308c30aa489b}{get\+Available\+Inv\+Kinematics\+Solvers}} () const
+\begin{DoxyCompactList}\small\item\em Get a list of all available inverse kinematics solvers. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classtesseract_1_1InverseKinematicsManager_ac9118e5c17d475e3c556be71667ea5a8}{get\+Available\+Inv\+Kinematics\+Solvers}} (\mbox{\hyperlink{namespacetesseract__kinematics_a2ff85855971411dd8a4477bb31cee835}{tesseract\+\_\+kinematics\+::\+Inverse\+Kinematics\+Factory\+Type}} type) const
+\begin{DoxyCompactList}\small\item\em Get a list of inverse kinematics solver for a specific type \{C\+H\+A\+IN, T\+R\+EE, G\+R\+A\+PH\}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classtesseract__kinematics_1_1InverseKinematicsFactory_a6a18196824dd2d01dd4effb426fe0d4a}{tesseract\+\_\+kinematics\+::\+Inverse\+Kinematics\+Factory\+::\+Const\+Ptr}} \mbox{\hyperlink{classtesseract_1_1InverseKinematicsManager_a21dcd6a2f63ba011ed7d2939f71eb90c}{get\+Inv\+Kinematic\+Factory}} (const std\+::string \&name) const
+\begin{DoxyCompactList}\small\item\em This will return the inverse kinematics solver factory. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classtesseract_1_1InverseKinematicsManager_afad42125caa5d9b2fcc2aaa464ec47ca}{add\+Inv\+Kinematic\+Solver}} (const \mbox{\hyperlink{classtesseract__kinematics_1_1InverseKinematics_ab8d8c23f62e4298bcc0951f82f3dba27}{tesseract\+\_\+kinematics\+::\+Inverse\+Kinematics\+::\+Const\+Ptr}} \&solver)
+\begin{DoxyCompactList}\small\item\em Add a manipulator inverse kinematics solver. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classtesseract_1_1InverseKinematicsManager_aad91bdd4781353a1b0a7f33ea9e4ec89}{remove\+Inv\+Kinematic\+Solver}} (const std\+::string \&manipulator, const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Remove a inverse kinematic solver for a given manipulator. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classtesseract_1_1InverseKinematicsManager_a8017704f06816a7ffea5db60aac02724}{remove\+Inv\+Kinematic\+Solver}} (const std\+::string \&manipulator)
+\begin{DoxyCompactList}\small\item\em Remove all forward kinematic solver for a given manipulator. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classtesseract_1_1InverseKinematicsManager_a4ae6bf8a4eb67e7585ffff3e40525b5f}{get\+Available\+Inv\+Kinematics\+Manipulators}} () const
+\begin{DoxyCompactList}\small\item\em Get a list of all available forward kinematics manipulators. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classtesseract_1_1InverseKinematicsManager_a30dcea27babc52ed4006dc1c9de3bd08}{set\+Default\+Inv\+Kinematic\+Solver}} (const std\+::string \&manipulator, const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Set default inverse kinematic solver for manipulator. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classtesseract__kinematics_1_1InverseKinematics_a189ebd423f38f83720d58a922d049688}{tesseract\+\_\+kinematics\+::\+Inverse\+Kinematics\+::\+Ptr}} \mbox{\hyperlink{classtesseract_1_1InverseKinematicsManager_a0bfebf74f00596bab382d25b059bc4b1}{get\+Inv\+Kinematic\+Solver}} (const std\+::string \&manipulator, const std\+::string \&name) const
+\begin{DoxyCompactList}\small\item\em Get inverse kinematic solver for manipulator. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classtesseract__kinematics_1_1InverseKinematics_a189ebd423f38f83720d58a922d049688}{tesseract\+\_\+kinematics\+::\+Inverse\+Kinematics\+::\+Ptr}} \mbox{\hyperlink{classtesseract_1_1InverseKinematicsManager_a96b97cefa1f7c030e01377b2891a5cfd}{get\+Inv\+Kinematic\+Solver}} (const std\+::string \&manipulator) const
+\begin{DoxyCompactList}\small\item\em Get default inverse kinematic solver for manipulator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::unordered\+\_\+map$<$ std\+::string, \mbox{\hyperlink{classtesseract__kinematics_1_1InverseKinematicsFactory_a6a18196824dd2d01dd4effb426fe0d4a}{tesseract\+\_\+kinematics\+::\+Inverse\+Kinematics\+Factory\+::\+Const\+Ptr}} $>$ \mbox{\hyperlink{classtesseract_1_1InverseKinematicsManager_a86bfec6f87a0e9d413ce1c762b391067}{inv\+\_\+kin\+\_\+factories\+\_\+}}
+\item 
+std\+::map$<$ std\+::pair$<$ std\+::string, std\+::string $>$, \mbox{\hyperlink{classtesseract__kinematics_1_1InverseKinematics_ab8d8c23f62e4298bcc0951f82f3dba27}{tesseract\+\_\+kinematics\+::\+Inverse\+Kinematics\+::\+Const\+Ptr}} $>$ \mbox{\hyperlink{classtesseract_1_1InverseKinematicsManager_aae6756f46f040dc8d211f64d6ce52e39}{inv\+\_\+kin\+\_\+manipulators\+\_\+}}
+\item 
+std\+::unordered\+\_\+map$<$ std\+::string, \mbox{\hyperlink{classtesseract__kinematics_1_1InverseKinematics_ab8d8c23f62e4298bcc0951f82f3dba27}{tesseract\+\_\+kinematics\+::\+Inverse\+Kinematics\+::\+Const\+Ptr}} $>$ \mbox{\hyperlink{classtesseract_1_1InverseKinematicsManager_abca7cd6a9429a398da2c4cdb5f1d183f}{inv\+\_\+kin\+\_\+manipulators\+\_\+default\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classtesseract_1_1InverseKinematicsManager_a1d1b1e38bc7a19f0395d3260d583d57d}\label{classtesseract_1_1InverseKinematicsManager_a1d1b1e38bc7a19f0395d3260d583d57d}} 
+\index{tesseract::InverseKinematicsManager@{tesseract::InverseKinematicsManager}!ConstPtr@{ConstPtr}}
+\index{ConstPtr@{ConstPtr}!tesseract::InverseKinematicsManager@{tesseract::InverseKinematicsManager}}
+\doxysubsubsection{\texorpdfstring{ConstPtr}{ConstPtr}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classtesseract_1_1InverseKinematicsManager_a1d1b1e38bc7a19f0395d3260d583d57d}{tesseract\+::\+Inverse\+Kinematics\+Manager\+::\+Const\+Ptr}} =  std\+::shared\+\_\+ptr$<$const \mbox{\hyperlink{classtesseract_1_1InverseKinematicsManager}{Inverse\+Kinematics\+Manager}}$>$}
+
+\mbox{\Hypertarget{classtesseract_1_1InverseKinematicsManager_a1ac2d73ed4153f5e942cc1e138e98082}\label{classtesseract_1_1InverseKinematicsManager_a1ac2d73ed4153f5e942cc1e138e98082}} 
+\index{tesseract::InverseKinematicsManager@{tesseract::InverseKinematicsManager}!Ptr@{Ptr}}
+\index{Ptr@{Ptr}!tesseract::InverseKinematicsManager@{tesseract::InverseKinematicsManager}}
+\doxysubsubsection{\texorpdfstring{Ptr}{Ptr}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classtesseract_1_1InverseKinematicsManager_a1ac2d73ed4153f5e942cc1e138e98082}{tesseract\+::\+Inverse\+Kinematics\+Manager\+::\+Ptr}} =  std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classtesseract_1_1InverseKinematicsManager}{Inverse\+Kinematics\+Manager}}$>$}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtesseract_1_1InverseKinematicsManager_a9e83011eba85ed393bfb6214cec993ec}\label{classtesseract_1_1InverseKinematicsManager_a9e83011eba85ed393bfb6214cec993ec}} 
+\index{tesseract::InverseKinematicsManager@{tesseract::InverseKinematicsManager}!InverseKinematicsManager@{InverseKinematicsManager}}
+\index{InverseKinematicsManager@{InverseKinematicsManager}!tesseract::InverseKinematicsManager@{tesseract::InverseKinematicsManager}}
+\doxysubsubsection{\texorpdfstring{InverseKinematicsManager()}{InverseKinematicsManager()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily tesseract\+::\+Inverse\+Kinematics\+Manager\+::\+Inverse\+Kinematics\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classtesseract_1_1InverseKinematicsManager_a75e47f3fa6db34f8f660c73c12572f55}\label{classtesseract_1_1InverseKinematicsManager_a75e47f3fa6db34f8f660c73c12572f55}} 
+\index{tesseract::InverseKinematicsManager@{tesseract::InverseKinematicsManager}!````~InverseKinematicsManager@{$\sim$InverseKinematicsManager}}
+\index{````~InverseKinematicsManager@{$\sim$InverseKinematicsManager}!tesseract::InverseKinematicsManager@{tesseract::InverseKinematicsManager}}
+\doxysubsubsection{\texorpdfstring{$\sim$InverseKinematicsManager()}{~InverseKinematicsManager()}}
+{\footnotesize\ttfamily virtual tesseract\+::\+Inverse\+Kinematics\+Manager\+::$\sim$\+Inverse\+Kinematics\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+\mbox{\Hypertarget{classtesseract_1_1InverseKinematicsManager_aa846e387d92f716fec40cec2cd2f3429}\label{classtesseract_1_1InverseKinematicsManager_aa846e387d92f716fec40cec2cd2f3429}} 
+\index{tesseract::InverseKinematicsManager@{tesseract::InverseKinematicsManager}!InverseKinematicsManager@{InverseKinematicsManager}}
+\index{InverseKinematicsManager@{InverseKinematicsManager}!tesseract::InverseKinematicsManager@{tesseract::InverseKinematicsManager}}
+\doxysubsubsection{\texorpdfstring{InverseKinematicsManager()}{InverseKinematicsManager()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily tesseract\+::\+Inverse\+Kinematics\+Manager\+::\+Inverse\+Kinematics\+Manager (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtesseract_1_1InverseKinematicsManager}{Inverse\+Kinematics\+Manager}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classtesseract_1_1InverseKinematicsManager_af9f5da369b780068895c91011c6cedb8}\label{classtesseract_1_1InverseKinematicsManager_af9f5da369b780068895c91011c6cedb8}} 
+\index{tesseract::InverseKinematicsManager@{tesseract::InverseKinematicsManager}!InverseKinematicsManager@{InverseKinematicsManager}}
+\index{InverseKinematicsManager@{InverseKinematicsManager}!tesseract::InverseKinematicsManager@{tesseract::InverseKinematicsManager}}
+\doxysubsubsection{\texorpdfstring{InverseKinematicsManager()}{InverseKinematicsManager()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily tesseract\+::\+Inverse\+Kinematics\+Manager\+::\+Inverse\+Kinematics\+Manager (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtesseract_1_1InverseKinematicsManager}{Inverse\+Kinematics\+Manager}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtesseract_1_1InverseKinematicsManager_afad42125caa5d9b2fcc2aaa464ec47ca}\label{classtesseract_1_1InverseKinematicsManager_afad42125caa5d9b2fcc2aaa464ec47ca}} 
+\index{tesseract::InverseKinematicsManager@{tesseract::InverseKinematicsManager}!addInvKinematicSolver@{addInvKinematicSolver}}
+\index{addInvKinematicSolver@{addInvKinematicSolver}!tesseract::InverseKinematicsManager@{tesseract::InverseKinematicsManager}}
+\doxysubsubsection{\texorpdfstring{addInvKinematicSolver()}{addInvKinematicSolver()}}
+{\footnotesize\ttfamily bool tesseract\+::\+Inverse\+Kinematics\+Manager\+::add\+Inv\+Kinematic\+Solver (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtesseract__kinematics_1_1InverseKinematics_ab8d8c23f62e4298bcc0951f82f3dba27}{tesseract\+\_\+kinematics\+::\+Inverse\+Kinematics\+::\+Const\+Ptr}} \&}]{solver }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Add a manipulator inverse kinematics solver. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em manipulator} & The manipulator name \\
+\hline
+{\em solver} & The solver \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtesseract_1_1InverseKinematicsManager_a4ae6bf8a4eb67e7585ffff3e40525b5f}\label{classtesseract_1_1InverseKinematicsManager_a4ae6bf8a4eb67e7585ffff3e40525b5f}} 
+\index{tesseract::InverseKinematicsManager@{tesseract::InverseKinematicsManager}!getAvailableInvKinematicsManipulators@{getAvailableInvKinematicsManipulators}}
+\index{getAvailableInvKinematicsManipulators@{getAvailableInvKinematicsManipulators}!tesseract::InverseKinematicsManager@{tesseract::InverseKinematicsManager}}
+\doxysubsubsection{\texorpdfstring{getAvailableInvKinematicsManipulators()}{getAvailableInvKinematicsManipulators()}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::string$>$ tesseract\+::\+Inverse\+Kinematics\+Manager\+::get\+Available\+Inv\+Kinematics\+Manipulators (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get a list of all available forward kinematics manipulators. 
+
+\begin{DoxyReturn}{Returns}
+Vector of names 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtesseract_1_1InverseKinematicsManager_a1ff1a363e524bb8a2a41308c30aa489b}\label{classtesseract_1_1InverseKinematicsManager_a1ff1a363e524bb8a2a41308c30aa489b}} 
+\index{tesseract::InverseKinematicsManager@{tesseract::InverseKinematicsManager}!getAvailableInvKinematicsSolvers@{getAvailableInvKinematicsSolvers}}
+\index{getAvailableInvKinematicsSolvers@{getAvailableInvKinematicsSolvers}!tesseract::InverseKinematicsManager@{tesseract::InverseKinematicsManager}}
+\doxysubsubsection{\texorpdfstring{getAvailableInvKinematicsSolvers()}{getAvailableInvKinematicsSolvers()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::string$>$ tesseract\+::\+Inverse\+Kinematics\+Manager\+::get\+Available\+Inv\+Kinematics\+Solvers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get a list of all available inverse kinematics solvers. 
+
+\begin{DoxyReturn}{Returns}
+Vector of names 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtesseract_1_1InverseKinematicsManager_ac9118e5c17d475e3c556be71667ea5a8}\label{classtesseract_1_1InverseKinematicsManager_ac9118e5c17d475e3c556be71667ea5a8}} 
+\index{tesseract::InverseKinematicsManager@{tesseract::InverseKinematicsManager}!getAvailableInvKinematicsSolvers@{getAvailableInvKinematicsSolvers}}
+\index{getAvailableInvKinematicsSolvers@{getAvailableInvKinematicsSolvers}!tesseract::InverseKinematicsManager@{tesseract::InverseKinematicsManager}}
+\doxysubsubsection{\texorpdfstring{getAvailableInvKinematicsSolvers()}{getAvailableInvKinematicsSolvers()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::string$>$ tesseract\+::\+Inverse\+Kinematics\+Manager\+::get\+Available\+Inv\+Kinematics\+Solvers (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacetesseract__kinematics_a2ff85855971411dd8a4477bb31cee835}{tesseract\+\_\+kinematics\+::\+Inverse\+Kinematics\+Factory\+Type}}}]{type }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get a list of inverse kinematics solver for a specific type \{C\+H\+A\+IN, T\+R\+EE, G\+R\+A\+PH\}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & The type of solver \{C\+H\+A\+IN, T\+R\+EE, G\+R\+A\+PH\} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vector of names 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtesseract_1_1InverseKinematicsManager_a21dcd6a2f63ba011ed7d2939f71eb90c}\label{classtesseract_1_1InverseKinematicsManager_a21dcd6a2f63ba011ed7d2939f71eb90c}} 
+\index{tesseract::InverseKinematicsManager@{tesseract::InverseKinematicsManager}!getInvKinematicFactory@{getInvKinematicFactory}}
+\index{getInvKinematicFactory@{getInvKinematicFactory}!tesseract::InverseKinematicsManager@{tesseract::InverseKinematicsManager}}
+\doxysubsubsection{\texorpdfstring{getInvKinematicFactory()}{getInvKinematicFactory()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__kinematics_1_1InverseKinematicsFactory_a6a18196824dd2d01dd4effb426fe0d4a}{tesseract\+\_\+kinematics\+::\+Inverse\+Kinematics\+Factory\+::\+Const\+Ptr}} tesseract\+::\+Inverse\+Kinematics\+Manager\+::get\+Inv\+Kinematic\+Factory (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+This will return the inverse kinematics solver factory. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the solver \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+If not found it returns a nullptr, otherwise a new instance of the solver. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtesseract_1_1InverseKinematicsManager_a96b97cefa1f7c030e01377b2891a5cfd}\label{classtesseract_1_1InverseKinematicsManager_a96b97cefa1f7c030e01377b2891a5cfd}} 
+\index{tesseract::InverseKinematicsManager@{tesseract::InverseKinematicsManager}!getInvKinematicSolver@{getInvKinematicSolver}}
+\index{getInvKinematicSolver@{getInvKinematicSolver}!tesseract::InverseKinematicsManager@{tesseract::InverseKinematicsManager}}
+\doxysubsubsection{\texorpdfstring{getInvKinematicSolver()}{getInvKinematicSolver()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__kinematics_1_1InverseKinematics_a189ebd423f38f83720d58a922d049688}{tesseract\+\_\+kinematics\+::\+Inverse\+Kinematics\+::\+Ptr}} tesseract\+::\+Inverse\+Kinematics\+Manager\+::get\+Inv\+Kinematic\+Solver (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{manipulator }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get default inverse kinematic solver for manipulator. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em manipulator} & The name of the manipulator \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+If not found returns a nullptr, otherwise a instance of the solver. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtesseract_1_1InverseKinematicsManager_a0bfebf74f00596bab382d25b059bc4b1}\label{classtesseract_1_1InverseKinematicsManager_a0bfebf74f00596bab382d25b059bc4b1}} 
+\index{tesseract::InverseKinematicsManager@{tesseract::InverseKinematicsManager}!getInvKinematicSolver@{getInvKinematicSolver}}
+\index{getInvKinematicSolver@{getInvKinematicSolver}!tesseract::InverseKinematicsManager@{tesseract::InverseKinematicsManager}}
+\doxysubsubsection{\texorpdfstring{getInvKinematicSolver()}{getInvKinematicSolver()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__kinematics_1_1InverseKinematics_a189ebd423f38f83720d58a922d049688}{tesseract\+\_\+kinematics\+::\+Inverse\+Kinematics\+::\+Ptr}} tesseract\+::\+Inverse\+Kinematics\+Manager\+::get\+Inv\+Kinematic\+Solver (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{manipulator,  }\item[{const std\+::string \&}]{name }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get inverse kinematic solver for manipulator. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em manipulator} & The name of the manipulator \\
+\hline
+{\em name} & The name of the solver \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+If not found returns a nullptr, otherwise a instance of the solver. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtesseract_1_1InverseKinematicsManager_a3df45ebf9fa6976d5cfdad82510f65d6}\label{classtesseract_1_1InverseKinematicsManager_a3df45ebf9fa6976d5cfdad82510f65d6}} 
+\index{tesseract::InverseKinematicsManager@{tesseract::InverseKinematicsManager}!operator=@{operator=}}
+\index{operator=@{operator=}!tesseract::InverseKinematicsManager@{tesseract::InverseKinematicsManager}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract_1_1InverseKinematicsManager}{Inverse\+Kinematics\+Manager}}\& tesseract\+::\+Inverse\+Kinematics\+Manager\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtesseract_1_1InverseKinematicsManager}{Inverse\+Kinematics\+Manager}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classtesseract_1_1InverseKinematicsManager_a4f6c25ad33713e07831b4f217e10c6cb}\label{classtesseract_1_1InverseKinematicsManager_a4f6c25ad33713e07831b4f217e10c6cb}} 
+\index{tesseract::InverseKinematicsManager@{tesseract::InverseKinematicsManager}!operator=@{operator=}}
+\index{operator=@{operator=}!tesseract::InverseKinematicsManager@{tesseract::InverseKinematicsManager}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract_1_1InverseKinematicsManager}{Inverse\+Kinematics\+Manager}}\& tesseract\+::\+Inverse\+Kinematics\+Manager\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtesseract_1_1InverseKinematicsManager}{Inverse\+Kinematics\+Manager}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classtesseract_1_1InverseKinematicsManager_adbc40539d7bbcfe355448c8573eccd69}\label{classtesseract_1_1InverseKinematicsManager_adbc40539d7bbcfe355448c8573eccd69}} 
+\index{tesseract::InverseKinematicsManager@{tesseract::InverseKinematicsManager}!registerInvKinematicsFactory@{registerInvKinematicsFactory}}
+\index{registerInvKinematicsFactory@{registerInvKinematicsFactory}!tesseract::InverseKinematicsManager@{tesseract::InverseKinematicsManager}}
+\doxysubsubsection{\texorpdfstring{registerInvKinematicsFactory()}{registerInvKinematicsFactory()}}
+{\footnotesize\ttfamily bool tesseract\+::\+Inverse\+Kinematics\+Manager\+::register\+Inv\+Kinematics\+Factory (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtesseract__kinematics_1_1InverseKinematicsFactory_a8aed32534eaa237c6d6d990ab293051d}{tesseract\+\_\+kinematics\+::\+Inverse\+Kinematics\+Factory\+::\+Ptr}}}]{factory }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Register a inverse kinematics factory. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em factory} & The factory to register \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+False if factory already exists, otherwise true. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtesseract_1_1InverseKinematicsManager_a65939bfab8aa898d6c3280c36e545dce}\label{classtesseract_1_1InverseKinematicsManager_a65939bfab8aa898d6c3280c36e545dce}} 
+\index{tesseract::InverseKinematicsManager@{tesseract::InverseKinematicsManager}!removeInvKinematicsFactory@{removeInvKinematicsFactory}}
+\index{removeInvKinematicsFactory@{removeInvKinematicsFactory}!tesseract::InverseKinematicsManager@{tesseract::InverseKinematicsManager}}
+\doxysubsubsection{\texorpdfstring{removeInvKinematicsFactory()}{removeInvKinematicsFactory()}}
+{\footnotesize\ttfamily void tesseract\+::\+Inverse\+Kinematics\+Manager\+::remove\+Inv\+Kinematics\+Factory (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Removes a registered inverse kinematics factory. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the factory to remove \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classtesseract_1_1InverseKinematicsManager_a8017704f06816a7ffea5db60aac02724}\label{classtesseract_1_1InverseKinematicsManager_a8017704f06816a7ffea5db60aac02724}} 
+\index{tesseract::InverseKinematicsManager@{tesseract::InverseKinematicsManager}!removeInvKinematicSolver@{removeInvKinematicSolver}}
+\index{removeInvKinematicSolver@{removeInvKinematicSolver}!tesseract::InverseKinematicsManager@{tesseract::InverseKinematicsManager}}
+\doxysubsubsection{\texorpdfstring{removeInvKinematicSolver()}{removeInvKinematicSolver()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void tesseract\+::\+Inverse\+Kinematics\+Manager\+::remove\+Inv\+Kinematic\+Solver (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{manipulator }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Remove all forward kinematic solver for a given manipulator. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em manipulator} & The name of the manipulator \\
+\hline
+{\em name} & The name of the solver \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classtesseract_1_1InverseKinematicsManager_aad91bdd4781353a1b0a7f33ea9e4ec89}\label{classtesseract_1_1InverseKinematicsManager_aad91bdd4781353a1b0a7f33ea9e4ec89}} 
+\index{tesseract::InverseKinematicsManager@{tesseract::InverseKinematicsManager}!removeInvKinematicSolver@{removeInvKinematicSolver}}
+\index{removeInvKinematicSolver@{removeInvKinematicSolver}!tesseract::InverseKinematicsManager@{tesseract::InverseKinematicsManager}}
+\doxysubsubsection{\texorpdfstring{removeInvKinematicSolver()}{removeInvKinematicSolver()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void tesseract\+::\+Inverse\+Kinematics\+Manager\+::remove\+Inv\+Kinematic\+Solver (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{manipulator,  }\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Remove a inverse kinematic solver for a given manipulator. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em manipulator} & The name of the manipulator \\
+\hline
+{\em name} & The name of the solver \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classtesseract_1_1InverseKinematicsManager_a30dcea27babc52ed4006dc1c9de3bd08}\label{classtesseract_1_1InverseKinematicsManager_a30dcea27babc52ed4006dc1c9de3bd08}} 
+\index{tesseract::InverseKinematicsManager@{tesseract::InverseKinematicsManager}!setDefaultInvKinematicSolver@{setDefaultInvKinematicSolver}}
+\index{setDefaultInvKinematicSolver@{setDefaultInvKinematicSolver}!tesseract::InverseKinematicsManager@{tesseract::InverseKinematicsManager}}
+\doxysubsubsection{\texorpdfstring{setDefaultInvKinematicSolver()}{setDefaultInvKinematicSolver()}}
+{\footnotesize\ttfamily bool tesseract\+::\+Inverse\+Kinematics\+Manager\+::set\+Default\+Inv\+Kinematic\+Solver (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{manipulator,  }\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set default inverse kinematic solver for manipulator. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em manipulator} & The name of the manipulator \\
+\hline
+{\em name} & The name of the solver \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if manipulator solver pair exist, otherwise false 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classtesseract_1_1InverseKinematicsManager_a86bfec6f87a0e9d413ce1c762b391067}\label{classtesseract_1_1InverseKinematicsManager_a86bfec6f87a0e9d413ce1c762b391067}} 
+\index{tesseract::InverseKinematicsManager@{tesseract::InverseKinematicsManager}!inv\_kin\_factories\_@{inv\_kin\_factories\_}}
+\index{inv\_kin\_factories\_@{inv\_kin\_factories\_}!tesseract::InverseKinematicsManager@{tesseract::InverseKinematicsManager}}
+\doxysubsubsection{\texorpdfstring{inv\_kin\_factories\_}{inv\_kin\_factories\_}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$std\+::string, \mbox{\hyperlink{classtesseract__kinematics_1_1InverseKinematicsFactory_a6a18196824dd2d01dd4effb426fe0d4a}{tesseract\+\_\+kinematics\+::\+Inverse\+Kinematics\+Factory\+::\+Const\+Ptr}}$>$ tesseract\+::\+Inverse\+Kinematics\+Manager\+::inv\+\_\+kin\+\_\+factories\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classtesseract_1_1InverseKinematicsManager_aae6756f46f040dc8d211f64d6ce52e39}\label{classtesseract_1_1InverseKinematicsManager_aae6756f46f040dc8d211f64d6ce52e39}} 
+\index{tesseract::InverseKinematicsManager@{tesseract::InverseKinematicsManager}!inv\_kin\_manipulators\_@{inv\_kin\_manipulators\_}}
+\index{inv\_kin\_manipulators\_@{inv\_kin\_manipulators\_}!tesseract::InverseKinematicsManager@{tesseract::InverseKinematicsManager}}
+\doxysubsubsection{\texorpdfstring{inv\_kin\_manipulators\_}{inv\_kin\_manipulators\_}}
+{\footnotesize\ttfamily std\+::map$<$std\+::pair$<$std\+::string, std\+::string$>$, \mbox{\hyperlink{classtesseract__kinematics_1_1InverseKinematics_ab8d8c23f62e4298bcc0951f82f3dba27}{tesseract\+\_\+kinematics\+::\+Inverse\+Kinematics\+::\+Const\+Ptr}}$>$ tesseract\+::\+Inverse\+Kinematics\+Manager\+::inv\+\_\+kin\+\_\+manipulators\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classtesseract_1_1InverseKinematicsManager_abca7cd6a9429a398da2c4cdb5f1d183f}\label{classtesseract_1_1InverseKinematicsManager_abca7cd6a9429a398da2c4cdb5f1d183f}} 
+\index{tesseract::InverseKinematicsManager@{tesseract::InverseKinematicsManager}!inv\_kin\_manipulators\_default\_@{inv\_kin\_manipulators\_default\_}}
+\index{inv\_kin\_manipulators\_default\_@{inv\_kin\_manipulators\_default\_}!tesseract::InverseKinematicsManager@{tesseract::InverseKinematicsManager}}
+\doxysubsubsection{\texorpdfstring{inv\_kin\_manipulators\_default\_}{inv\_kin\_manipulators\_default\_}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$std\+::string, \mbox{\hyperlink{classtesseract__kinematics_1_1InverseKinematics_ab8d8c23f62e4298bcc0951f82f3dba27}{tesseract\+\_\+kinematics\+::\+Inverse\+Kinematics\+::\+Const\+Ptr}}$>$ tesseract\+::\+Inverse\+Kinematics\+Manager\+::inv\+\_\+kin\+\_\+manipulators\+\_\+default\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+tesseract/tesseract/include/tesseract/\mbox{\hyperlink{inverse__kinematics__manager_8h}{inverse\+\_\+kinematics\+\_\+manager.\+h}}\end{DoxyCompactItemize}

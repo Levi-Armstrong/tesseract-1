@@ -1,0 +1,138 @@
+\hypertarget{classtesseract__motion__planners_1_1DescartesMotionPlannerStatusCategory}{}\doxysection{tesseract\+\_\+motion\+\_\+planners\+::Descartes\+Motion\+Planner\+Status\+Category Class Reference}
+\label{classtesseract__motion__planners_1_1DescartesMotionPlannerStatusCategory}\index{tesseract\_motion\_planners::DescartesMotionPlannerStatusCategory@{tesseract\_motion\_planners::DescartesMotionPlannerStatusCategory}}
+
+
+The Descartes motion planner status category.  
+
+
+
+
+{\ttfamily \#include $<$descartes\+\_\+motion\+\_\+planner\+\_\+status\+\_\+category.\+h$>$}
+
+Inheritance diagram for tesseract\+\_\+motion\+\_\+planners\+::Descartes\+Motion\+Planner\+Status\+Category\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classtesseract__motion__planners_1_1DescartesMotionPlannerStatusCategory}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \newline
+\mbox{\hyperlink{classtesseract__motion__planners_1_1DescartesMotionPlannerStatusCategory_a2bcc1e496a3d03b126298866f29ad3c8a1a38fc3d985f13a50046a84176dacaff}{Is\+Configured}} = 1, 
+\mbox{\hyperlink{classtesseract__motion__planners_1_1DescartesMotionPlannerStatusCategory_a2bcc1e496a3d03b126298866f29ad3c8a6249e8be5539995cfa577a498e133275}{Solution\+Found}} = 0, 
+\mbox{\hyperlink{classtesseract__motion__planners_1_1DescartesMotionPlannerStatusCategory_a2bcc1e496a3d03b126298866f29ad3c8aeb1d0a1bfc891a2b1cc6edfca594bb5e}{Error\+Is\+Not\+Configured}} = -\/1, 
+\mbox{\hyperlink{classtesseract__motion__planners_1_1DescartesMotionPlannerStatusCategory_a2bcc1e496a3d03b126298866f29ad3c8ac4c14c25d07bee80614b1b276c01926d}{Error\+Failed\+To\+Parse\+Config}} = -\/2, 
+\newline
+\mbox{\hyperlink{classtesseract__motion__planners_1_1DescartesMotionPlannerStatusCategory_a2bcc1e496a3d03b126298866f29ad3c8a080de0f50e8426528519984590478cc1}{Error\+Failed\+To\+Build\+Graph}} = -\/3, 
+\mbox{\hyperlink{classtesseract__motion__planners_1_1DescartesMotionPlannerStatusCategory_a2bcc1e496a3d03b126298866f29ad3c8abb9c72c966a7f6eb7f869e1388b490b4}{Error\+Failed\+To\+Find\+Valid\+Solution}} = -\/4, 
+\mbox{\hyperlink{classtesseract__motion__planners_1_1DescartesMotionPlannerStatusCategory_a2bcc1e496a3d03b126298866f29ad3c8a14139bf52e67e07d9bfb4ab1d696007a}{Error\+Found\+Valid\+Solution\+In\+Collision}} = -\/5
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtesseract__motion__planners_1_1DescartesMotionPlannerStatusCategory_a9a46e9700e66ce8c4c9f614fa64044cb}{Descartes\+Motion\+Planner\+Status\+Category}} (std\+::string \mbox{\hyperlink{classtesseract__motion__planners_1_1DescartesMotionPlannerStatusCategory_af76228315741041a50dcc68fede53f49}{name}})
+\item 
+const std\+::string \& \mbox{\hyperlink{classtesseract__motion__planners_1_1DescartesMotionPlannerStatusCategory_af76228315741041a50dcc68fede53f49}{name}} () const noexcept override
+\item 
+std\+::string \mbox{\hyperlink{classtesseract__motion__planners_1_1DescartesMotionPlannerStatusCategory_a4c3dd911d4c80544cf309a7f7295c79c}{message}} (int code) const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classtesseract__motion__planners_1_1DescartesMotionPlannerStatusCategory_ab5a89f8149606f7894bbf3c1a2b0bffc}{name\+\_\+}}
+\begin{DoxyCompactList}\small\item\em The name of the status category. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The Descartes motion planner status category. 
+
+It contains both successfull and error status codes. 
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classtesseract__motion__planners_1_1DescartesMotionPlannerStatusCategory_a2bcc1e496a3d03b126298866f29ad3c8}\label{classtesseract__motion__planners_1_1DescartesMotionPlannerStatusCategory_a2bcc1e496a3d03b126298866f29ad3c8}} 
+\doxysubsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily anonymous enum}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{IsConfigured@{IsConfigured}!tesseract\_motion\_planners::DescartesMotionPlannerStatusCategory@{tesseract\_motion\_planners::DescartesMotionPlannerStatusCategory}}\index{tesseract\_motion\_planners::DescartesMotionPlannerStatusCategory@{tesseract\_motion\_planners::DescartesMotionPlannerStatusCategory}!IsConfigured@{IsConfigured}}}\mbox{\Hypertarget{classtesseract__motion__planners_1_1DescartesMotionPlannerStatusCategory_a2bcc1e496a3d03b126298866f29ad3c8a1a38fc3d985f13a50046a84176dacaff}\label{classtesseract__motion__planners_1_1DescartesMotionPlannerStatusCategory_a2bcc1e496a3d03b126298866f29ad3c8a1a38fc3d985f13a50046a84176dacaff}} 
+Is\+Configured&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SolutionFound@{SolutionFound}!tesseract\_motion\_planners::DescartesMotionPlannerStatusCategory@{tesseract\_motion\_planners::DescartesMotionPlannerStatusCategory}}\index{tesseract\_motion\_planners::DescartesMotionPlannerStatusCategory@{tesseract\_motion\_planners::DescartesMotionPlannerStatusCategory}!SolutionFound@{SolutionFound}}}\mbox{\Hypertarget{classtesseract__motion__planners_1_1DescartesMotionPlannerStatusCategory_a2bcc1e496a3d03b126298866f29ad3c8a6249e8be5539995cfa577a498e133275}\label{classtesseract__motion__planners_1_1DescartesMotionPlannerStatusCategory_a2bcc1e496a3d03b126298866f29ad3c8a6249e8be5539995cfa577a498e133275}} 
+Solution\+Found&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ErrorIsNotConfigured@{ErrorIsNotConfigured}!tesseract\_motion\_planners::DescartesMotionPlannerStatusCategory@{tesseract\_motion\_planners::DescartesMotionPlannerStatusCategory}}\index{tesseract\_motion\_planners::DescartesMotionPlannerStatusCategory@{tesseract\_motion\_planners::DescartesMotionPlannerStatusCategory}!ErrorIsNotConfigured@{ErrorIsNotConfigured}}}\mbox{\Hypertarget{classtesseract__motion__planners_1_1DescartesMotionPlannerStatusCategory_a2bcc1e496a3d03b126298866f29ad3c8aeb1d0a1bfc891a2b1cc6edfca594bb5e}\label{classtesseract__motion__planners_1_1DescartesMotionPlannerStatusCategory_a2bcc1e496a3d03b126298866f29ad3c8aeb1d0a1bfc891a2b1cc6edfca594bb5e}} 
+Error\+Is\+Not\+Configured&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ErrorFailedToParseConfig@{ErrorFailedToParseConfig}!tesseract\_motion\_planners::DescartesMotionPlannerStatusCategory@{tesseract\_motion\_planners::DescartesMotionPlannerStatusCategory}}\index{tesseract\_motion\_planners::DescartesMotionPlannerStatusCategory@{tesseract\_motion\_planners::DescartesMotionPlannerStatusCategory}!ErrorFailedToParseConfig@{ErrorFailedToParseConfig}}}\mbox{\Hypertarget{classtesseract__motion__planners_1_1DescartesMotionPlannerStatusCategory_a2bcc1e496a3d03b126298866f29ad3c8ac4c14c25d07bee80614b1b276c01926d}\label{classtesseract__motion__planners_1_1DescartesMotionPlannerStatusCategory_a2bcc1e496a3d03b126298866f29ad3c8ac4c14c25d07bee80614b1b276c01926d}} 
+Error\+Failed\+To\+Parse\+Config&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ErrorFailedToBuildGraph@{ErrorFailedToBuildGraph}!tesseract\_motion\_planners::DescartesMotionPlannerStatusCategory@{tesseract\_motion\_planners::DescartesMotionPlannerStatusCategory}}\index{tesseract\_motion\_planners::DescartesMotionPlannerStatusCategory@{tesseract\_motion\_planners::DescartesMotionPlannerStatusCategory}!ErrorFailedToBuildGraph@{ErrorFailedToBuildGraph}}}\mbox{\Hypertarget{classtesseract__motion__planners_1_1DescartesMotionPlannerStatusCategory_a2bcc1e496a3d03b126298866f29ad3c8a080de0f50e8426528519984590478cc1}\label{classtesseract__motion__planners_1_1DescartesMotionPlannerStatusCategory_a2bcc1e496a3d03b126298866f29ad3c8a080de0f50e8426528519984590478cc1}} 
+Error\+Failed\+To\+Build\+Graph&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ErrorFailedToFindValidSolution@{ErrorFailedToFindValidSolution}!tesseract\_motion\_planners::DescartesMotionPlannerStatusCategory@{tesseract\_motion\_planners::DescartesMotionPlannerStatusCategory}}\index{tesseract\_motion\_planners::DescartesMotionPlannerStatusCategory@{tesseract\_motion\_planners::DescartesMotionPlannerStatusCategory}!ErrorFailedToFindValidSolution@{ErrorFailedToFindValidSolution}}}\mbox{\Hypertarget{classtesseract__motion__planners_1_1DescartesMotionPlannerStatusCategory_a2bcc1e496a3d03b126298866f29ad3c8abb9c72c966a7f6eb7f869e1388b490b4}\label{classtesseract__motion__planners_1_1DescartesMotionPlannerStatusCategory_a2bcc1e496a3d03b126298866f29ad3c8abb9c72c966a7f6eb7f869e1388b490b4}} 
+Error\+Failed\+To\+Find\+Valid\+Solution&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ErrorFoundValidSolutionInCollision@{ErrorFoundValidSolutionInCollision}!tesseract\_motion\_planners::DescartesMotionPlannerStatusCategory@{tesseract\_motion\_planners::DescartesMotionPlannerStatusCategory}}\index{tesseract\_motion\_planners::DescartesMotionPlannerStatusCategory@{tesseract\_motion\_planners::DescartesMotionPlannerStatusCategory}!ErrorFoundValidSolutionInCollision@{ErrorFoundValidSolutionInCollision}}}\mbox{\Hypertarget{classtesseract__motion__planners_1_1DescartesMotionPlannerStatusCategory_a2bcc1e496a3d03b126298866f29ad3c8a14139bf52e67e07d9bfb4ab1d696007a}\label{classtesseract__motion__planners_1_1DescartesMotionPlannerStatusCategory_a2bcc1e496a3d03b126298866f29ad3c8a14139bf52e67e07d9bfb4ab1d696007a}} 
+Error\+Found\+Valid\+Solution\+In\+Collision&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtesseract__motion__planners_1_1DescartesMotionPlannerStatusCategory_a9a46e9700e66ce8c4c9f614fa64044cb}\label{classtesseract__motion__planners_1_1DescartesMotionPlannerStatusCategory_a9a46e9700e66ce8c4c9f614fa64044cb}} 
+\index{tesseract\_motion\_planners::DescartesMotionPlannerStatusCategory@{tesseract\_motion\_planners::DescartesMotionPlannerStatusCategory}!DescartesMotionPlannerStatusCategory@{DescartesMotionPlannerStatusCategory}}
+\index{DescartesMotionPlannerStatusCategory@{DescartesMotionPlannerStatusCategory}!tesseract\_motion\_planners::DescartesMotionPlannerStatusCategory@{tesseract\_motion\_planners::DescartesMotionPlannerStatusCategory}}
+\doxysubsubsection{\texorpdfstring{DescartesMotionPlannerStatusCategory()}{DescartesMotionPlannerStatusCategory()}}
+{\footnotesize\ttfamily tesseract\+\_\+motion\+\_\+planners\+::\+Descartes\+Motion\+Planner\+Status\+Category\+::\+Descartes\+Motion\+Planner\+Status\+Category (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtesseract__motion__planners_1_1DescartesMotionPlannerStatusCategory_a4c3dd911d4c80544cf309a7f7295c79c}\label{classtesseract__motion__planners_1_1DescartesMotionPlannerStatusCategory_a4c3dd911d4c80544cf309a7f7295c79c}} 
+\index{tesseract\_motion\_planners::DescartesMotionPlannerStatusCategory@{tesseract\_motion\_planners::DescartesMotionPlannerStatusCategory}!message@{message}}
+\index{message@{message}!tesseract\_motion\_planners::DescartesMotionPlannerStatusCategory@{tesseract\_motion\_planners::DescartesMotionPlannerStatusCategory}}
+\doxysubsubsection{\texorpdfstring{message()}{message()}}
+{\footnotesize\ttfamily std\+::string tesseract\+\_\+motion\+\_\+planners\+::\+Descartes\+Motion\+Planner\+Status\+Category\+::message (\begin{DoxyParamCaption}\item[{int}]{code }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classtesseract__common_1_1StatusCategory_a1b243ec0e046910ceac90403190b45ac}{tesseract\+\_\+common\+::\+Status\+Category}}.
+
+\mbox{\Hypertarget{classtesseract__motion__planners_1_1DescartesMotionPlannerStatusCategory_af76228315741041a50dcc68fede53f49}\label{classtesseract__motion__planners_1_1DescartesMotionPlannerStatusCategory_af76228315741041a50dcc68fede53f49}} 
+\index{tesseract\_motion\_planners::DescartesMotionPlannerStatusCategory@{tesseract\_motion\_planners::DescartesMotionPlannerStatusCategory}!name@{name}}
+\index{name@{name}!tesseract\_motion\_planners::DescartesMotionPlannerStatusCategory@{tesseract\_motion\_planners::DescartesMotionPlannerStatusCategory}}
+\doxysubsubsection{\texorpdfstring{name()}{name()}}
+{\footnotesize\ttfamily const std\+::string \& tesseract\+\_\+motion\+\_\+planners\+::\+Descartes\+Motion\+Planner\+Status\+Category\+::name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}, {\ttfamily [noexcept]}}
+
+
+
+Implements \mbox{\hyperlink{classtesseract__common_1_1StatusCategory_ae08466c99a1e92f904141e5a070382e5}{tesseract\+\_\+common\+::\+Status\+Category}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classtesseract__motion__planners_1_1DescartesMotionPlannerStatusCategory_ab5a89f8149606f7894bbf3c1a2b0bffc}\label{classtesseract__motion__planners_1_1DescartesMotionPlannerStatusCategory_ab5a89f8149606f7894bbf3c1a2b0bffc}} 
+\index{tesseract\_motion\_planners::DescartesMotionPlannerStatusCategory@{tesseract\_motion\_planners::DescartesMotionPlannerStatusCategory}!name\_@{name\_}}
+\index{name\_@{name\_}!tesseract\_motion\_planners::DescartesMotionPlannerStatusCategory@{tesseract\_motion\_planners::DescartesMotionPlannerStatusCategory}}
+\doxysubsubsection{\texorpdfstring{name\_}{name\_}}
+{\footnotesize\ttfamily std\+::string tesseract\+\_\+motion\+\_\+planners\+::\+Descartes\+Motion\+Planner\+Status\+Category\+::name\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The name of the status category. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+tesseract/tesseract\+\_\+planning/tesseract\+\_\+motion\+\_\+planners/include/tesseract\+\_\+motion\+\_\+planners/descartes/\mbox{\hyperlink{descartes__motion__planner__status__category_8h}{descartes\+\_\+motion\+\_\+planner\+\_\+status\+\_\+category.\+h}}\item 
+tesseract/tesseract\+\_\+planning/tesseract\+\_\+motion\+\_\+planners/src/descartes/\mbox{\hyperlink{descartes__motion__planner__status__category_8cpp}{descartes\+\_\+motion\+\_\+planner\+\_\+status\+\_\+category.\+cpp}}\end{DoxyCompactItemize}

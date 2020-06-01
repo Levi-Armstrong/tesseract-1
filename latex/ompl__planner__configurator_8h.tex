@@ -1,0 +1,78 @@
+\hypertarget{ompl__planner__configurator_8h}{}\doxysection{tesseract/tesseract\+\_\+planning/tesseract\+\_\+motion\+\_\+planners/include/tesseract\+\_\+motion\+\_\+planners/ompl/ompl\+\_\+planner\+\_\+configurator.h File Reference}
+\label{ompl__planner__configurator_8h}\index{tesseract/tesseract\_planning/tesseract\_motion\_planners/include/tesseract\_motion\_planners/ompl/ompl\_planner\_configurator.h@{tesseract/tesseract\_planning/tesseract\_motion\_planners/include/tesseract\_motion\_planners/ompl/ompl\_planner\_configurator.h}}
+
+
+Tesseract O\+M\+PL planner configurator.  
+
+
+{\ttfamily \#include $<$tesseract\+\_\+common/macros.\+h$>$}\newline
+{\ttfamily \#include $<$ompl/base/\+Space\+Information.\+h$>$}\newline
+{\ttfamily \#include $<$ompl/base/\+Planner.\+h$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structtesseract__motion__planners_1_1OMPLPlannerConfigurator}{tesseract\+\_\+motion\+\_\+planners\+::\+O\+M\+P\+L\+Planner\+Configurator}}
+\item 
+struct \mbox{\hyperlink{structtesseract__motion__planners_1_1SBLConfigurator}{tesseract\+\_\+motion\+\_\+planners\+::\+S\+B\+L\+Configurator}}
+\item 
+struct \mbox{\hyperlink{structtesseract__motion__planners_1_1ESTConfigurator}{tesseract\+\_\+motion\+\_\+planners\+::\+E\+S\+T\+Configurator}}
+\item 
+struct \mbox{\hyperlink{structtesseract__motion__planners_1_1LBKPIECE1Configurator}{tesseract\+\_\+motion\+\_\+planners\+::\+L\+B\+K\+P\+I\+E\+C\+E1\+Configurator}}
+\item 
+struct \mbox{\hyperlink{structtesseract__motion__planners_1_1BKPIECE1Configurator}{tesseract\+\_\+motion\+\_\+planners\+::\+B\+K\+P\+I\+E\+C\+E1\+Configurator}}
+\item 
+struct \mbox{\hyperlink{structtesseract__motion__planners_1_1KPIECE1Configurator}{tesseract\+\_\+motion\+\_\+planners\+::\+K\+P\+I\+E\+C\+E1\+Configurator}}
+\item 
+struct \mbox{\hyperlink{structtesseract__motion__planners_1_1RRTConfigurator}{tesseract\+\_\+motion\+\_\+planners\+::\+R\+R\+T\+Configurator}}
+\item 
+struct \mbox{\hyperlink{structtesseract__motion__planners_1_1RRTConnectConfigurator}{tesseract\+\_\+motion\+\_\+planners\+::\+R\+R\+T\+Connect\+Configurator}}
+\item 
+struct \mbox{\hyperlink{structtesseract__motion__planners_1_1RRTstarConfigurator}{tesseract\+\_\+motion\+\_\+planners\+::\+R\+R\+Tstar\+Configurator}}
+\item 
+struct \mbox{\hyperlink{structtesseract__motion__planners_1_1TRRTConfigurator}{tesseract\+\_\+motion\+\_\+planners\+::\+T\+R\+R\+T\+Configurator}}
+\item 
+struct \mbox{\hyperlink{structtesseract__motion__planners_1_1PRMConfigurator}{tesseract\+\_\+motion\+\_\+planners\+::\+P\+R\+M\+Configurator}}
+\item 
+struct \mbox{\hyperlink{structtesseract__motion__planners_1_1PRMstarConfigurator}{tesseract\+\_\+motion\+\_\+planners\+::\+P\+R\+Mstar\+Configurator}}
+\item 
+struct \mbox{\hyperlink{structtesseract__motion__planners_1_1LazyPRMstarConfigurator}{tesseract\+\_\+motion\+\_\+planners\+::\+Lazy\+P\+R\+Mstar\+Configurator}}
+\item 
+struct \mbox{\hyperlink{structtesseract__motion__planners_1_1SPARSConfigurator}{tesseract\+\_\+motion\+\_\+planners\+::\+S\+P\+A\+R\+S\+Configurator}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacetesseract__motion__planners}{tesseract\+\_\+motion\+\_\+planners}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Tesseract O\+M\+PL planner configurator. 
+
+If a settings class does not exist for a planner available in ompl you may simply create your own that has an apply method that takes the specific planner you would like to use and construct the O\+M\+P\+L\+Freespace\+Planner with the desired planner and newly created config class and everything should work.
+
+\begin{DoxyAuthor}{Author}
+Levi Armstrong 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+February 1, 2020 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+T\+O\+DO 
+\end{DoxyVersion}
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000116}{Bug}}]No known bugs\end{DoxyRefDesc}
+
+
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2020, Southwest Research Institute
+\end{DoxyCopyright}
+\begin{DoxyParagraph}{License}
+Software License Agreement (Apache License) 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+Licensed under the Apache License, Version 2.\+0 (the \char`\"{}\+License\char`\"{}); you may not use this file except in compliance with the License. You may obtain a copy of the License at \href{http://www.apache.org/licenses/LICENSE-2.0}{\texttt{ http\+://www.\+apache.\+org/licenses/\+L\+I\+C\+E\+N\+S\+E-\/2.\+0}} 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \char`\"{}\+A\+S I\+S\char`\"{} B\+A\+S\+IS, W\+I\+T\+H\+O\+UT W\+A\+R\+R\+A\+N\+T\+I\+ES OR C\+O\+N\+D\+I\+T\+I\+O\+NS OF A\+NY K\+I\+ND, either express or implied. See the License for the specific language governing permissions and limitations under the License. 
+\end{DoxyParagraph}

@@ -1,0 +1,380 @@
+\hypertarget{namespacetesseract__common}{}\doxysection{tesseract\+\_\+common Namespace Reference}
+\label{namespacetesseract__common}\index{tesseract\_common@{tesseract\_common}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classtesseract__common_1_1BytesResource}{Bytes\+Resource}}
+\item 
+class \mbox{\hyperlink{classtesseract__common_1_1GeneralStatusCategory}{General\+Status\+Category}}
+\item 
+struct \mbox{\hyperlink{structtesseract__common_1_1JointTrajectory}{Joint\+Trajectory}}
+\begin{DoxyCompactList}\small\item\em Represents a joint trajectory. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classtesseract__common_1_1Resource}{Resource}}
+\begin{DoxyCompactList}\small\item\em Represents resource data available from a file or url. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classtesseract__common_1_1StatusCategory}{Status\+Category}}
+\item 
+class \mbox{\hyperlink{classtesseract__common_1_1StatusCode}{Status\+Code}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\using \mbox{\hyperlink{namespacetesseract__common_a000d15c3ab8d8ba4ebdaae64153b053a}{Aligned\+Vector}} = std\+::vector$<$ T, Eigen\+::aligned\+\_\+allocator$<$ T $>$ $>$
+\item 
+{\footnotesize template$<$typename Key , typename Value $>$ }\\using \mbox{\hyperlink{namespacetesseract__common_a2c5a4b6149060671cf8c3f9d15ef58c4}{Aligned\+Map}} = std\+::map$<$ Key, Value, std\+::less$<$ Key $>$, Eigen\+::aligned\+\_\+allocator$<$ std\+::pair$<$ const Key, Value $>$ $>$$>$
+\item 
+{\footnotesize template$<$typename Key , typename Value $>$ }\\using \mbox{\hyperlink{namespacetesseract__common_a85a5c73ede3e67335c3e09f9f3bc33a3}{Aligned\+Unordered\+Map}} = std\+::unordered\+\_\+map$<$ Key, Value, std\+::hash$<$ Key $>$, std\+::equal\+\_\+to$<$ Key $>$, Eigen\+::aligned\+\_\+allocator$<$ std\+::pair$<$ const Key, Value $>$ $>$$>$
+\item 
+using \mbox{\hyperlink{namespacetesseract__common_a94d9921fc7ed323609ac57d06f939cb6}{Vector\+Isometry3d}} = \mbox{\hyperlink{namespacetesseract__common_a000d15c3ab8d8ba4ebdaae64153b053a}{Aligned\+Vector}}$<$ Eigen\+::\+Isometry3d $>$
+\item 
+using \mbox{\hyperlink{namespacetesseract__common_a7f208ea8b9c62f41c593647319d56f37}{Vector\+Vector4d}} = \mbox{\hyperlink{namespacetesseract__common_a000d15c3ab8d8ba4ebdaae64153b053a}{Aligned\+Vector}}$<$ Eigen\+::\+Vector4d $>$
+\item 
+using \mbox{\hyperlink{namespacetesseract__common_af89ed6517f4c84bdb2b037bb40f7d9d9}{Vector\+Vector3d}} = std\+::vector$<$ Eigen\+::\+Vector3d $>$
+\item 
+using \mbox{\hyperlink{namespacetesseract__common_a67bde3cb7bb235f0f61c370ef8bc74d8}{Transform\+Map}} = \mbox{\hyperlink{namespacetesseract__common_a2c5a4b6149060671cf8c3f9d15ef58c4}{Aligned\+Map}}$<$ std\+::string, Eigen\+::\+Isometry3d $>$
+\item 
+using \mbox{\hyperlink{namespacetesseract__common_a431ff65777ee0bed71e7671390638244}{Traj\+Array}} = Eigen\+::\+Matrix$<$ double, Eigen\+::\+Dynamic, Eigen\+::\+Dynamic, Eigen\+::\+Row\+Major $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{namespacetesseract__common_a1dc3a9525efbe582991edd4eedc26079}{is\+Numeric}} (const std\+::string \&s)
+\begin{DoxyCompactList}\small\item\em Determine if a string is a number. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespacetesseract__common_a0db40f06dba7e6be18a2c4f098ad7a00}{is\+Numeric}} (const std\+::vector$<$ std\+::string $>$ \&sv)
+\item 
+{\footnotesize template$<$typename Float\+Type $>$ }\\bool \mbox{\hyperlink{namespacetesseract__common_a00bc131acfeba0eba8fe7ff7cd944860}{to\+Numeric}} (const std\+::string \&s, Float\+Type \&value)
+\begin{DoxyCompactList}\small\item\em Convert a string to a numeric value type. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector\+Xd \mbox{\hyperlink{namespacetesseract__common_a34ad923beec11899b02c5b3e7a5eb16e}{generate\+Random\+Number}} (Eigen\+::\+Matrix\+X2d limits)
+\begin{DoxyCompactList}\small\item\em Given a set of limits it will generate a vector of randon numbers between the limit. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespacetesseract__common_af46edf9701e45b20e95a5abfac500b8f}{ltrim}} (std\+::string \&s)
+\begin{DoxyCompactList}\small\item\em Left trim string. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespacetesseract__common_aa86a4f0e5ca9d2b1f5abc3f34735d85b}{rtrim}} (std\+::string \&s)
+\begin{DoxyCompactList}\small\item\em Right trim string. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespacetesseract__common_aeacd629bcf585286917aafa7b8e603bb}{trim}} (std\+::string \&s)
+\begin{DoxyCompactList}\small\item\em Trim left and right of string. \end{DoxyCompactList}\item 
+tinyxml2\+::\+X\+M\+L\+Error \mbox{\hyperlink{namespacetesseract__common_ae1a3ebd3610dce6d24cc7569606fd9ab}{Query\+String\+Value}} (const tinyxml2\+::\+X\+M\+L\+Element $\ast$xml\+\_\+element, std\+::string \&value)
+\begin{DoxyCompactList}\small\item\em Query a string value from xml element. \end{DoxyCompactList}\item 
+tinyxml2\+::\+X\+M\+L\+Error \mbox{\hyperlink{namespacetesseract__common_ad3e6914a612484e89bf86c60198b6cdc}{Query\+String\+Value}} (const tinyxml2\+::\+X\+M\+L\+Attribute $\ast$xml\+\_\+attribute, std\+::string \&value)
+\begin{DoxyCompactList}\small\item\em Query a string value from xml attribute. \end{DoxyCompactList}\item 
+tinyxml2\+::\+X\+M\+L\+Error \mbox{\hyperlink{namespacetesseract__common_a22a4a1b896230ca84cce7aae2e21673a}{Query\+String\+Attribute}} (const tinyxml2\+::\+X\+M\+L\+Element $\ast$xml\+\_\+element, const char $\ast$name, std\+::string \&value)
+\begin{DoxyCompactList}\small\item\em Query a string attribute from an xml element. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{namespacetesseract__common_aadfa4845aecc119ae62b37e59c6ee168}{String\+Attribute}} (const tinyxml2\+::\+X\+M\+L\+Element $\ast$xml\+\_\+element, const char $\ast$name, std\+::string default\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Get string attribute if exist. If it does not exist it returns the default value. \end{DoxyCompactList}\item 
+tinyxml2\+::\+X\+M\+L\+Error \mbox{\hyperlink{namespacetesseract__common_a609734264f8b63f5c7815871c40b231f}{Query\+String\+Attribute\+Required}} (const tinyxml2\+::\+X\+M\+L\+Element $\ast$xml\+\_\+element, const char $\ast$name, std\+::string \&value)
+\begin{DoxyCompactList}\small\item\em Query a string attribute from an xml element and print error log. \end{DoxyCompactList}\item 
+tinyxml2\+::\+X\+M\+L\+Error \mbox{\hyperlink{namespacetesseract__common_ab5ec94b62bea51b6e40598e0f8e7a6c3}{Query\+Double\+Attribute\+Required}} (const tinyxml2\+::\+X\+M\+L\+Element $\ast$xml\+\_\+element, const char $\ast$name, double \&value)
+\begin{DoxyCompactList}\small\item\em Query a double attribute from an xml element and print error log. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::mt19937 \mbox{\hyperlink{namespacetesseract__common_aef65970d6ccc97d88621f27e7c35b32a}{mersenne}} \{ static\+\_\+cast$<$std\+::mt19937\+::result\+\_\+type$>$(std\+::time(nullptr)) \}
+\begin{DoxyCompactList}\small\item\em Random number generator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{namespacetesseract__common_a2c5a4b6149060671cf8c3f9d15ef58c4}\label{namespacetesseract__common_a2c5a4b6149060671cf8c3f9d15ef58c4}} 
+\index{tesseract\_common@{tesseract\_common}!AlignedMap@{AlignedMap}}
+\index{AlignedMap@{AlignedMap}!tesseract\_common@{tesseract\_common}}
+\doxysubsubsection{\texorpdfstring{AlignedMap}{AlignedMap}}
+{\footnotesize\ttfamily template$<$typename Key , typename Value $>$ \\
+using \mbox{\hyperlink{namespacetesseract__common_a2c5a4b6149060671cf8c3f9d15ef58c4}{tesseract\+\_\+common\+::\+Aligned\+Map}} = typedef std\+::map$<$Key, Value, std\+::less$<$Key$>$, Eigen\+::aligned\+\_\+allocator$<$std\+::pair$<$const Key, Value$>$ $>$$>$}
+
+\mbox{\Hypertarget{namespacetesseract__common_a85a5c73ede3e67335c3e09f9f3bc33a3}\label{namespacetesseract__common_a85a5c73ede3e67335c3e09f9f3bc33a3}} 
+\index{tesseract\_common@{tesseract\_common}!AlignedUnorderedMap@{AlignedUnorderedMap}}
+\index{AlignedUnorderedMap@{AlignedUnorderedMap}!tesseract\_common@{tesseract\_common}}
+\doxysubsubsection{\texorpdfstring{AlignedUnorderedMap}{AlignedUnorderedMap}}
+{\footnotesize\ttfamily template$<$typename Key , typename Value $>$ \\
+using \mbox{\hyperlink{namespacetesseract__common_a85a5c73ede3e67335c3e09f9f3bc33a3}{tesseract\+\_\+common\+::\+Aligned\+Unordered\+Map}} = typedef std\+::unordered\+\_\+map$<$Key, Value, std\+::hash$<$Key$>$, std\+::equal\+\_\+to$<$Key$>$, Eigen\+::aligned\+\_\+allocator$<$std\+::pair$<$const Key, Value$>$ $>$$>$}
+
+\mbox{\Hypertarget{namespacetesseract__common_a000d15c3ab8d8ba4ebdaae64153b053a}\label{namespacetesseract__common_a000d15c3ab8d8ba4ebdaae64153b053a}} 
+\index{tesseract\_common@{tesseract\_common}!AlignedVector@{AlignedVector}}
+\index{AlignedVector@{AlignedVector}!tesseract\_common@{tesseract\_common}}
+\doxysubsubsection{\texorpdfstring{AlignedVector}{AlignedVector}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+using \mbox{\hyperlink{namespacetesseract__common_a000d15c3ab8d8ba4ebdaae64153b053a}{tesseract\+\_\+common\+::\+Aligned\+Vector}} = typedef std\+::vector$<$T, Eigen\+::aligned\+\_\+allocator$<$T$>$ $>$}
+
+\mbox{\Hypertarget{namespacetesseract__common_a431ff65777ee0bed71e7671390638244}\label{namespacetesseract__common_a431ff65777ee0bed71e7671390638244}} 
+\index{tesseract\_common@{tesseract\_common}!TrajArray@{TrajArray}}
+\index{TrajArray@{TrajArray}!tesseract\_common@{tesseract\_common}}
+\doxysubsubsection{\texorpdfstring{TrajArray}{TrajArray}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{namespacetesseract__common_a431ff65777ee0bed71e7671390638244}{tesseract\+\_\+common\+::\+Traj\+Array}} = typedef Eigen\+::\+Matrix$<$double, Eigen\+::\+Dynamic, Eigen\+::\+Dynamic, Eigen\+::\+Row\+Major$>$}
+
+\mbox{\Hypertarget{namespacetesseract__common_a67bde3cb7bb235f0f61c370ef8bc74d8}\label{namespacetesseract__common_a67bde3cb7bb235f0f61c370ef8bc74d8}} 
+\index{tesseract\_common@{tesseract\_common}!TransformMap@{TransformMap}}
+\index{TransformMap@{TransformMap}!tesseract\_common@{tesseract\_common}}
+\doxysubsubsection{\texorpdfstring{TransformMap}{TransformMap}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{namespacetesseract__common_a67bde3cb7bb235f0f61c370ef8bc74d8}{tesseract\+\_\+common\+::\+Transform\+Map}} = typedef \mbox{\hyperlink{namespacetesseract__common_a2c5a4b6149060671cf8c3f9d15ef58c4}{Aligned\+Map}}$<$std\+::string, Eigen\+::\+Isometry3d$>$}
+
+\mbox{\Hypertarget{namespacetesseract__common_a94d9921fc7ed323609ac57d06f939cb6}\label{namespacetesseract__common_a94d9921fc7ed323609ac57d06f939cb6}} 
+\index{tesseract\_common@{tesseract\_common}!VectorIsometry3d@{VectorIsometry3d}}
+\index{VectorIsometry3d@{VectorIsometry3d}!tesseract\_common@{tesseract\_common}}
+\doxysubsubsection{\texorpdfstring{VectorIsometry3d}{VectorIsometry3d}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{namespacetesseract__common_a94d9921fc7ed323609ac57d06f939cb6}{tesseract\+\_\+common\+::\+Vector\+Isometry3d}} = typedef \mbox{\hyperlink{namespacetesseract__common_a000d15c3ab8d8ba4ebdaae64153b053a}{Aligned\+Vector}}$<$Eigen\+::\+Isometry3d$>$}
+
+\mbox{\Hypertarget{namespacetesseract__common_af89ed6517f4c84bdb2b037bb40f7d9d9}\label{namespacetesseract__common_af89ed6517f4c84bdb2b037bb40f7d9d9}} 
+\index{tesseract\_common@{tesseract\_common}!VectorVector3d@{VectorVector3d}}
+\index{VectorVector3d@{VectorVector3d}!tesseract\_common@{tesseract\_common}}
+\doxysubsubsection{\texorpdfstring{VectorVector3d}{VectorVector3d}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{namespacetesseract__common_af89ed6517f4c84bdb2b037bb40f7d9d9}{tesseract\+\_\+common\+::\+Vector\+Vector3d}} = typedef std\+::vector$<$Eigen\+::\+Vector3d$>$}
+
+\mbox{\Hypertarget{namespacetesseract__common_a7f208ea8b9c62f41c593647319d56f37}\label{namespacetesseract__common_a7f208ea8b9c62f41c593647319d56f37}} 
+\index{tesseract\_common@{tesseract\_common}!VectorVector4d@{VectorVector4d}}
+\index{VectorVector4d@{VectorVector4d}!tesseract\_common@{tesseract\_common}}
+\doxysubsubsection{\texorpdfstring{VectorVector4d}{VectorVector4d}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{namespacetesseract__common_a7f208ea8b9c62f41c593647319d56f37}{tesseract\+\_\+common\+::\+Vector\+Vector4d}} = typedef \mbox{\hyperlink{namespacetesseract__common_a000d15c3ab8d8ba4ebdaae64153b053a}{Aligned\+Vector}}$<$Eigen\+::\+Vector4d$>$}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacetesseract__common_a34ad923beec11899b02c5b3e7a5eb16e}\label{namespacetesseract__common_a34ad923beec11899b02c5b3e7a5eb16e}} 
+\index{tesseract\_common@{tesseract\_common}!generateRandomNumber@{generateRandomNumber}}
+\index{generateRandomNumber@{generateRandomNumber}!tesseract\_common@{tesseract\_common}}
+\doxysubsubsection{\texorpdfstring{generateRandomNumber()}{generateRandomNumber()}}
+{\footnotesize\ttfamily Eigen\+::\+Vector\+Xd tesseract\+\_\+common\+::generate\+Random\+Number (\begin{DoxyParamCaption}\item[{Eigen\+::\+Matrix\+X2d}]{limits }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Given a set of limits it will generate a vector of randon numbers between the limit. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em limits} & The limits to generated numbers based on. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A vector of random numbers between the provided limits. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacetesseract__common_a1dc3a9525efbe582991edd4eedc26079}\label{namespacetesseract__common_a1dc3a9525efbe582991edd4eedc26079}} 
+\index{tesseract\_common@{tesseract\_common}!isNumeric@{isNumeric}}
+\index{isNumeric@{isNumeric}!tesseract\_common@{tesseract\_common}}
+\doxysubsubsection{\texorpdfstring{isNumeric()}{isNumeric()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool tesseract\+\_\+common\+::is\+Numeric (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Determine if a string is a number. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & The string to evaluate \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if numeric, otherwise false. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacetesseract__common_a0db40f06dba7e6be18a2c4f098ad7a00}\label{namespacetesseract__common_a0db40f06dba7e6be18a2c4f098ad7a00}} 
+\index{tesseract\_common@{tesseract\_common}!isNumeric@{isNumeric}}
+\index{isNumeric@{isNumeric}!tesseract\_common@{tesseract\_common}}
+\doxysubsubsection{\texorpdfstring{isNumeric()}{isNumeric()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool tesseract\+\_\+common\+::is\+Numeric (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::string $>$ \&}]{sv }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{namespacetesseract__common_af46edf9701e45b20e95a5abfac500b8f}\label{namespacetesseract__common_af46edf9701e45b20e95a5abfac500b8f}} 
+\index{tesseract\_common@{tesseract\_common}!ltrim@{ltrim}}
+\index{ltrim@{ltrim}!tesseract\_common@{tesseract\_common}}
+\doxysubsubsection{\texorpdfstring{ltrim()}{ltrim()}}
+{\footnotesize\ttfamily void tesseract\+\_\+common\+::ltrim (\begin{DoxyParamCaption}\item[{std\+::string \&}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Left trim string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & The string to left trim \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{namespacetesseract__common_ab5ec94b62bea51b6e40598e0f8e7a6c3}\label{namespacetesseract__common_ab5ec94b62bea51b6e40598e0f8e7a6c3}} 
+\index{tesseract\_common@{tesseract\_common}!QueryDoubleAttributeRequired@{QueryDoubleAttributeRequired}}
+\index{QueryDoubleAttributeRequired@{QueryDoubleAttributeRequired}!tesseract\_common@{tesseract\_common}}
+\doxysubsubsection{\texorpdfstring{QueryDoubleAttributeRequired()}{QueryDoubleAttributeRequired()}}
+{\footnotesize\ttfamily tinyxml2\+::\+X\+M\+L\+Error tesseract\+\_\+common\+::\+Query\+Double\+Attribute\+Required (\begin{DoxyParamCaption}\item[{const tinyxml2\+::\+X\+M\+L\+Element $\ast$}]{xml\+\_\+element,  }\item[{const char $\ast$}]{name,  }\item[{double \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Query a double attribute from an xml element and print error log. 
+
+This is the same Query\+Double\+Attribute but it will print out error messages for the failure conditions so the user only needs to check for the tinyxml2\+::\+X\+M\+L\+\_\+\+S\+U\+C\+C\+E\+SS since it is a required attribute.
+
+
+\begin{DoxyParams}{Parameters}
+{\em xml\+\_\+element} & The xml attribute to query attribute \\
+\hline
+{\em name} & The name of the attribute to query \\
+\hline
+{\em value} & The value to update from the xml attribute \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+tinyxml2\+::\+X\+M\+L\+\_\+\+S\+U\+C\+C\+E\+SS if successful, otherwise returns tinyxml2\+::\+X\+M\+L\+\_\+\+N\+O\+\_\+\+A\+T\+T\+R\+I\+B\+U\+TE or tinyxml2\+::\+X\+M\+L\+\_\+\+W\+R\+O\+N\+G\+\_\+\+A\+T\+T\+R\+I\+B\+U\+T\+E\+\_\+\+T\+Y\+PE 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacetesseract__common_a22a4a1b896230ca84cce7aae2e21673a}\label{namespacetesseract__common_a22a4a1b896230ca84cce7aae2e21673a}} 
+\index{tesseract\_common@{tesseract\_common}!QueryStringAttribute@{QueryStringAttribute}}
+\index{QueryStringAttribute@{QueryStringAttribute}!tesseract\_common@{tesseract\_common}}
+\doxysubsubsection{\texorpdfstring{QueryStringAttribute()}{QueryStringAttribute()}}
+{\footnotesize\ttfamily tinyxml2\+::\+X\+M\+L\+Error tesseract\+\_\+common\+::\+Query\+String\+Attribute (\begin{DoxyParamCaption}\item[{const tinyxml2\+::\+X\+M\+L\+Element $\ast$}]{xml\+\_\+element,  }\item[{const char $\ast$}]{name,  }\item[{std\+::string \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Query a string attribute from an xml element. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em xml\+\_\+element} & The xml attribute to query attribute \\
+\hline
+{\em name} & The name of the attribute to query \\
+\hline
+{\em value} & The value to update from the xml attribute \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+tinyxml2\+::\+X\+M\+L\+\_\+\+S\+U\+C\+C\+E\+SS if successful, otherwise returns tinyxml2\+::\+X\+M\+L\+\_\+\+N\+O\+\_\+\+A\+T\+T\+R\+I\+B\+U\+TE or tinyxml2\+::\+X\+M\+L\+\_\+\+W\+R\+O\+N\+G\+\_\+\+A\+T\+T\+R\+I\+B\+U\+T\+E\+\_\+\+T\+Y\+PE 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacetesseract__common_a609734264f8b63f5c7815871c40b231f}\label{namespacetesseract__common_a609734264f8b63f5c7815871c40b231f}} 
+\index{tesseract\_common@{tesseract\_common}!QueryStringAttributeRequired@{QueryStringAttributeRequired}}
+\index{QueryStringAttributeRequired@{QueryStringAttributeRequired}!tesseract\_common@{tesseract\_common}}
+\doxysubsubsection{\texorpdfstring{QueryStringAttributeRequired()}{QueryStringAttributeRequired()}}
+{\footnotesize\ttfamily tinyxml2\+::\+X\+M\+L\+Error tesseract\+\_\+common\+::\+Query\+String\+Attribute\+Required (\begin{DoxyParamCaption}\item[{const tinyxml2\+::\+X\+M\+L\+Element $\ast$}]{xml\+\_\+element,  }\item[{const char $\ast$}]{name,  }\item[{std\+::string \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Query a string attribute from an xml element and print error log. 
+
+This is the same Query\+String\+Attribute but it will print out error messages for the failure conditions so the user only needs to check for the tinyxml2\+::\+X\+M\+L\+\_\+\+S\+U\+C\+C\+E\+SS since it is a required attribute.
+
+
+\begin{DoxyParams}{Parameters}
+{\em xml\+\_\+element} & The xml attribute to query attribute \\
+\hline
+{\em name} & The name of the attribute to query \\
+\hline
+{\em value} & The value to update from the xml attribute \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+tinyxml2\+::\+X\+M\+L\+\_\+\+S\+U\+C\+C\+E\+SS if successful, otherwise returns tinyxml2\+::\+X\+M\+L\+\_\+\+N\+O\+\_\+\+A\+T\+T\+R\+I\+B\+U\+TE or tinyxml2\+::\+X\+M\+L\+\_\+\+W\+R\+O\+N\+G\+\_\+\+A\+T\+T\+R\+I\+B\+U\+T\+E\+\_\+\+T\+Y\+PE 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacetesseract__common_ad3e6914a612484e89bf86c60198b6cdc}\label{namespacetesseract__common_ad3e6914a612484e89bf86c60198b6cdc}} 
+\index{tesseract\_common@{tesseract\_common}!QueryStringValue@{QueryStringValue}}
+\index{QueryStringValue@{QueryStringValue}!tesseract\_common@{tesseract\_common}}
+\doxysubsubsection{\texorpdfstring{QueryStringValue()}{QueryStringValue()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily tinyxml2\+::\+X\+M\+L\+Error tesseract\+\_\+common\+::\+Query\+String\+Value (\begin{DoxyParamCaption}\item[{const tinyxml2\+::\+X\+M\+L\+Attribute $\ast$}]{xml\+\_\+attribute,  }\item[{std\+::string \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Query a string value from xml attribute. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em xml\+\_\+attribute} & The xml attribute to query string from \\
+\hline
+{\em value} & The value to update from the xml attribute \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+tinyxml2\+::\+X\+M\+L\+\_\+\+S\+U\+C\+C\+E\+SS if successful, otherwise returns tinyxml2\+::\+X\+M\+L\+\_\+\+W\+R\+O\+N\+G\+\_\+\+A\+T\+T\+R\+I\+B\+U\+T\+E\+\_\+\+T\+Y\+PE 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacetesseract__common_ae1a3ebd3610dce6d24cc7569606fd9ab}\label{namespacetesseract__common_ae1a3ebd3610dce6d24cc7569606fd9ab}} 
+\index{tesseract\_common@{tesseract\_common}!QueryStringValue@{QueryStringValue}}
+\index{QueryStringValue@{QueryStringValue}!tesseract\_common@{tesseract\_common}}
+\doxysubsubsection{\texorpdfstring{QueryStringValue()}{QueryStringValue()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily tinyxml2\+::\+X\+M\+L\+Error tesseract\+\_\+common\+::\+Query\+String\+Value (\begin{DoxyParamCaption}\item[{const tinyxml2\+::\+X\+M\+L\+Element $\ast$}]{xml\+\_\+element,  }\item[{std\+::string \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Query a string value from xml element. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em xml\+\_\+element} & The xml element to query string from \\
+\hline
+{\em value} & The value to update from the xml element \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+tinyxml2\+::\+X\+M\+L\+\_\+\+S\+U\+C\+C\+E\+SS if successful, otherwise returns tinyxml2\+::\+X\+M\+L\+\_\+\+N\+O\+\_\+\+A\+T\+T\+R\+I\+B\+U\+TE 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacetesseract__common_aa86a4f0e5ca9d2b1f5abc3f34735d85b}\label{namespacetesseract__common_aa86a4f0e5ca9d2b1f5abc3f34735d85b}} 
+\index{tesseract\_common@{tesseract\_common}!rtrim@{rtrim}}
+\index{rtrim@{rtrim}!tesseract\_common@{tesseract\_common}}
+\doxysubsubsection{\texorpdfstring{rtrim()}{rtrim()}}
+{\footnotesize\ttfamily void tesseract\+\_\+common\+::rtrim (\begin{DoxyParamCaption}\item[{std\+::string \&}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Right trim string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & The string to right trim \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{namespacetesseract__common_aadfa4845aecc119ae62b37e59c6ee168}\label{namespacetesseract__common_aadfa4845aecc119ae62b37e59c6ee168}} 
+\index{tesseract\_common@{tesseract\_common}!StringAttribute@{StringAttribute}}
+\index{StringAttribute@{StringAttribute}!tesseract\_common@{tesseract\_common}}
+\doxysubsubsection{\texorpdfstring{StringAttribute()}{StringAttribute()}}
+{\footnotesize\ttfamily std\+::string tesseract\+\_\+common\+::\+String\+Attribute (\begin{DoxyParamCaption}\item[{const tinyxml2\+::\+X\+M\+L\+Element $\ast$}]{xml\+\_\+element,  }\item[{const char $\ast$}]{name,  }\item[{std\+::string}]{default\+\_\+value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get string attribute if exist. If it does not exist it returns the default value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em xml\+\_\+element} & The xml element to attempt to parse attribute \\
+\hline
+{\em name} & The name of the attribute \\
+\hline
+{\em default\+\_\+value} & The default value to return if attribute does not exist \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Parsed string attribute or default value if attribute does not exist. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacetesseract__common_a00bc131acfeba0eba8fe7ff7cd944860}\label{namespacetesseract__common_a00bc131acfeba0eba8fe7ff7cd944860}} 
+\index{tesseract\_common@{tesseract\_common}!toNumeric@{toNumeric}}
+\index{toNumeric@{toNumeric}!tesseract\_common@{tesseract\_common}}
+\doxysubsubsection{\texorpdfstring{toNumeric()}{toNumeric()}}
+{\footnotesize\ttfamily template$<$typename Float\+Type $>$ \\
+bool tesseract\+\_\+common\+::to\+Numeric (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{s,  }\item[{Float\+Type \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Convert a string to a numeric value type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & The string to be converted \\
+\hline
+{\em value} & The value to be loaded with coverted string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if successful, otherwise false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacetesseract__common_aeacd629bcf585286917aafa7b8e603bb}\label{namespacetesseract__common_aeacd629bcf585286917aafa7b8e603bb}} 
+\index{tesseract\_common@{tesseract\_common}!trim@{trim}}
+\index{trim@{trim}!tesseract\_common@{tesseract\_common}}
+\doxysubsubsection{\texorpdfstring{trim()}{trim()}}
+{\footnotesize\ttfamily void tesseract\+\_\+common\+::trim (\begin{DoxyParamCaption}\item[{std\+::string \&}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Trim left and right of string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & The string to trim \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespacetesseract__common_aef65970d6ccc97d88621f27e7c35b32a}\label{namespacetesseract__common_aef65970d6ccc97d88621f27e7c35b32a}} 
+\index{tesseract\_common@{tesseract\_common}!mersenne@{mersenne}}
+\index{mersenne@{mersenne}!tesseract\_common@{tesseract\_common}}
+\doxysubsubsection{\texorpdfstring{mersenne}{mersenne}}
+{\footnotesize\ttfamily std\+::mt19937 tesseract\+\_\+common\+::mersenne \{ static\+\_\+cast$<$std\+::mt19937\+::result\+\_\+type$>$(std\+::time(nullptr)) \}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Random number generator. 
+

@@ -1,0 +1,134 @@
+\hypertarget{classtesseract__urdf_1_1MaterialStatusCategory}{}\doxysection{tesseract\+\_\+urdf\+::Material\+Status\+Category Class Reference}
+\label{classtesseract__urdf_1_1MaterialStatusCategory}\index{tesseract\_urdf::MaterialStatusCategory@{tesseract\_urdf::MaterialStatusCategory}}
+
+
+{\ttfamily \#include $<$material.\+h$>$}
+
+Inheritance diagram for tesseract\+\_\+urdf\+::Material\+Status\+Category\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classtesseract__urdf_1_1MaterialStatusCategory}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \newline
+\mbox{\hyperlink{classtesseract__urdf_1_1MaterialStatusCategory_a7aa053a7fce3c3c1763a7cb1b240fb01ac9044faefdd63279702cac03a81e79d2}{Multiple\+Materials\+With\+Same\+Name}} = 1, 
+\mbox{\hyperlink{classtesseract__urdf_1_1MaterialStatusCategory_a7aa053a7fce3c3c1763a7cb1b240fb01a3d290d2422572d8ac3a8b0864d610d89}{Success}} = 0, 
+\mbox{\hyperlink{classtesseract__urdf_1_1MaterialStatusCategory_a7aa053a7fce3c3c1763a7cb1b240fb01a4986f31f31a70973770fc39ab64cf045}{Error\+Attribute\+Name}} = -\/1, 
+\mbox{\hyperlink{classtesseract__urdf_1_1MaterialStatusCategory_a7aa053a7fce3c3c1763a7cb1b240fb01aca857839654e9516d79b150c816c0385}{Error\+Texture\+Attribute\+Filename}} = -\/2, 
+\newline
+\mbox{\hyperlink{classtesseract__urdf_1_1MaterialStatusCategory_a7aa053a7fce3c3c1763a7cb1b240fb01acdc8ff16b91b46ded69f94a8b6d9ce23}{Error\+Color\+Attribute\+R\+G\+BA}} = -\/3, 
+\mbox{\hyperlink{classtesseract__urdf_1_1MaterialStatusCategory_a7aa053a7fce3c3c1763a7cb1b240fb01a491b88663397b762330ce7cba00c4f07}{Error\+Parsing\+Color\+Attribute\+R\+G\+BA}} = -\/4, 
+\mbox{\hyperlink{classtesseract__urdf_1_1MaterialStatusCategory_a7aa053a7fce3c3c1763a7cb1b240fb01ab9651128a3524ecf5b8963a49aa44bfd}{Error\+Name\+Only\+Is\+Not\+Allowed}} = -\/5, 
+\mbox{\hyperlink{classtesseract__urdf_1_1MaterialStatusCategory_a7aa053a7fce3c3c1763a7cb1b240fb01a7d99845329297efb9dd4e5653973a93b}{Error\+Locating\+Material\+By\+Name}} = -\/6, 
+\newline
+\mbox{\hyperlink{classtesseract__urdf_1_1MaterialStatusCategory_a7aa053a7fce3c3c1763a7cb1b240fb01a74fb3e24d5ebc4f29b0f7ccce9a37187}{Error\+Anonymous\+Material\+Names\+Not\+Allowed}} = -\/7
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtesseract__urdf_1_1MaterialStatusCategory_a7843925fb986112163ccc0466aa371c2}{Material\+Status\+Category}} ()
+\item 
+const std\+::string \& \mbox{\hyperlink{classtesseract__urdf_1_1MaterialStatusCategory_a3d2a93d81c173818d80f89b24cec3e42}{name}} () const noexcept override
+\item 
+std\+::string \mbox{\hyperlink{classtesseract__urdf_1_1MaterialStatusCategory_a6a5141f71ef2c4e16e1ea714ded78080}{message}} (int code) const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classtesseract__urdf_1_1MaterialStatusCategory_a1a95b0a74f198cddb43153dbbad5b81c}{name\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classtesseract__urdf_1_1MaterialStatusCategory_a7aa053a7fce3c3c1763a7cb1b240fb01}\label{classtesseract__urdf_1_1MaterialStatusCategory_a7aa053a7fce3c3c1763a7cb1b240fb01}} 
+\doxysubsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily anonymous enum}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MultipleMaterialsWithSameName@{MultipleMaterialsWithSameName}!tesseract\_urdf::MaterialStatusCategory@{tesseract\_urdf::MaterialStatusCategory}}\index{tesseract\_urdf::MaterialStatusCategory@{tesseract\_urdf::MaterialStatusCategory}!MultipleMaterialsWithSameName@{MultipleMaterialsWithSameName}}}\mbox{\Hypertarget{classtesseract__urdf_1_1MaterialStatusCategory_a7aa053a7fce3c3c1763a7cb1b240fb01ac9044faefdd63279702cac03a81e79d2}\label{classtesseract__urdf_1_1MaterialStatusCategory_a7aa053a7fce3c3c1763a7cb1b240fb01ac9044faefdd63279702cac03a81e79d2}} 
+Multiple\+Materials\+With\+Same\+Name&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Success@{Success}!tesseract\_urdf::MaterialStatusCategory@{tesseract\_urdf::MaterialStatusCategory}}\index{tesseract\_urdf::MaterialStatusCategory@{tesseract\_urdf::MaterialStatusCategory}!Success@{Success}}}\mbox{\Hypertarget{classtesseract__urdf_1_1MaterialStatusCategory_a7aa053a7fce3c3c1763a7cb1b240fb01a3d290d2422572d8ac3a8b0864d610d89}\label{classtesseract__urdf_1_1MaterialStatusCategory_a7aa053a7fce3c3c1763a7cb1b240fb01a3d290d2422572d8ac3a8b0864d610d89}} 
+Success&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ErrorAttributeName@{ErrorAttributeName}!tesseract\_urdf::MaterialStatusCategory@{tesseract\_urdf::MaterialStatusCategory}}\index{tesseract\_urdf::MaterialStatusCategory@{tesseract\_urdf::MaterialStatusCategory}!ErrorAttributeName@{ErrorAttributeName}}}\mbox{\Hypertarget{classtesseract__urdf_1_1MaterialStatusCategory_a7aa053a7fce3c3c1763a7cb1b240fb01a4986f31f31a70973770fc39ab64cf045}\label{classtesseract__urdf_1_1MaterialStatusCategory_a7aa053a7fce3c3c1763a7cb1b240fb01a4986f31f31a70973770fc39ab64cf045}} 
+Error\+Attribute\+Name&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ErrorTextureAttributeFilename@{ErrorTextureAttributeFilename}!tesseract\_urdf::MaterialStatusCategory@{tesseract\_urdf::MaterialStatusCategory}}\index{tesseract\_urdf::MaterialStatusCategory@{tesseract\_urdf::MaterialStatusCategory}!ErrorTextureAttributeFilename@{ErrorTextureAttributeFilename}}}\mbox{\Hypertarget{classtesseract__urdf_1_1MaterialStatusCategory_a7aa053a7fce3c3c1763a7cb1b240fb01aca857839654e9516d79b150c816c0385}\label{classtesseract__urdf_1_1MaterialStatusCategory_a7aa053a7fce3c3c1763a7cb1b240fb01aca857839654e9516d79b150c816c0385}} 
+Error\+Texture\+Attribute\+Filename&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ErrorColorAttributeRGBA@{ErrorColorAttributeRGBA}!tesseract\_urdf::MaterialStatusCategory@{tesseract\_urdf::MaterialStatusCategory}}\index{tesseract\_urdf::MaterialStatusCategory@{tesseract\_urdf::MaterialStatusCategory}!ErrorColorAttributeRGBA@{ErrorColorAttributeRGBA}}}\mbox{\Hypertarget{classtesseract__urdf_1_1MaterialStatusCategory_a7aa053a7fce3c3c1763a7cb1b240fb01acdc8ff16b91b46ded69f94a8b6d9ce23}\label{classtesseract__urdf_1_1MaterialStatusCategory_a7aa053a7fce3c3c1763a7cb1b240fb01acdc8ff16b91b46ded69f94a8b6d9ce23}} 
+Error\+Color\+Attribute\+R\+G\+BA&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ErrorParsingColorAttributeRGBA@{ErrorParsingColorAttributeRGBA}!tesseract\_urdf::MaterialStatusCategory@{tesseract\_urdf::MaterialStatusCategory}}\index{tesseract\_urdf::MaterialStatusCategory@{tesseract\_urdf::MaterialStatusCategory}!ErrorParsingColorAttributeRGBA@{ErrorParsingColorAttributeRGBA}}}\mbox{\Hypertarget{classtesseract__urdf_1_1MaterialStatusCategory_a7aa053a7fce3c3c1763a7cb1b240fb01a491b88663397b762330ce7cba00c4f07}\label{classtesseract__urdf_1_1MaterialStatusCategory_a7aa053a7fce3c3c1763a7cb1b240fb01a491b88663397b762330ce7cba00c4f07}} 
+Error\+Parsing\+Color\+Attribute\+R\+G\+BA&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ErrorNameOnlyIsNotAllowed@{ErrorNameOnlyIsNotAllowed}!tesseract\_urdf::MaterialStatusCategory@{tesseract\_urdf::MaterialStatusCategory}}\index{tesseract\_urdf::MaterialStatusCategory@{tesseract\_urdf::MaterialStatusCategory}!ErrorNameOnlyIsNotAllowed@{ErrorNameOnlyIsNotAllowed}}}\mbox{\Hypertarget{classtesseract__urdf_1_1MaterialStatusCategory_a7aa053a7fce3c3c1763a7cb1b240fb01ab9651128a3524ecf5b8963a49aa44bfd}\label{classtesseract__urdf_1_1MaterialStatusCategory_a7aa053a7fce3c3c1763a7cb1b240fb01ab9651128a3524ecf5b8963a49aa44bfd}} 
+Error\+Name\+Only\+Is\+Not\+Allowed&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ErrorLocatingMaterialByName@{ErrorLocatingMaterialByName}!tesseract\_urdf::MaterialStatusCategory@{tesseract\_urdf::MaterialStatusCategory}}\index{tesseract\_urdf::MaterialStatusCategory@{tesseract\_urdf::MaterialStatusCategory}!ErrorLocatingMaterialByName@{ErrorLocatingMaterialByName}}}\mbox{\Hypertarget{classtesseract__urdf_1_1MaterialStatusCategory_a7aa053a7fce3c3c1763a7cb1b240fb01a7d99845329297efb9dd4e5653973a93b}\label{classtesseract__urdf_1_1MaterialStatusCategory_a7aa053a7fce3c3c1763a7cb1b240fb01a7d99845329297efb9dd4e5653973a93b}} 
+Error\+Locating\+Material\+By\+Name&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ErrorAnonymousMaterialNamesNotAllowed@{ErrorAnonymousMaterialNamesNotAllowed}!tesseract\_urdf::MaterialStatusCategory@{tesseract\_urdf::MaterialStatusCategory}}\index{tesseract\_urdf::MaterialStatusCategory@{tesseract\_urdf::MaterialStatusCategory}!ErrorAnonymousMaterialNamesNotAllowed@{ErrorAnonymousMaterialNamesNotAllowed}}}\mbox{\Hypertarget{classtesseract__urdf_1_1MaterialStatusCategory_a7aa053a7fce3c3c1763a7cb1b240fb01a74fb3e24d5ebc4f29b0f7ccce9a37187}\label{classtesseract__urdf_1_1MaterialStatusCategory_a7aa053a7fce3c3c1763a7cb1b240fb01a74fb3e24d5ebc4f29b0f7ccce9a37187}} 
+Error\+Anonymous\+Material\+Names\+Not\+Allowed&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtesseract__urdf_1_1MaterialStatusCategory_a7843925fb986112163ccc0466aa371c2}\label{classtesseract__urdf_1_1MaterialStatusCategory_a7843925fb986112163ccc0466aa371c2}} 
+\index{tesseract\_urdf::MaterialStatusCategory@{tesseract\_urdf::MaterialStatusCategory}!MaterialStatusCategory@{MaterialStatusCategory}}
+\index{MaterialStatusCategory@{MaterialStatusCategory}!tesseract\_urdf::MaterialStatusCategory@{tesseract\_urdf::MaterialStatusCategory}}
+\doxysubsubsection{\texorpdfstring{MaterialStatusCategory()}{MaterialStatusCategory()}}
+{\footnotesize\ttfamily tesseract\+\_\+urdf\+::\+Material\+Status\+Category\+::\+Material\+Status\+Category (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtesseract__urdf_1_1MaterialStatusCategory_a6a5141f71ef2c4e16e1ea714ded78080}\label{classtesseract__urdf_1_1MaterialStatusCategory_a6a5141f71ef2c4e16e1ea714ded78080}} 
+\index{tesseract\_urdf::MaterialStatusCategory@{tesseract\_urdf::MaterialStatusCategory}!message@{message}}
+\index{message@{message}!tesseract\_urdf::MaterialStatusCategory@{tesseract\_urdf::MaterialStatusCategory}}
+\doxysubsubsection{\texorpdfstring{message()}{message()}}
+{\footnotesize\ttfamily std\+::string tesseract\+\_\+urdf\+::\+Material\+Status\+Category\+::message (\begin{DoxyParamCaption}\item[{int}]{code }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classtesseract__common_1_1StatusCategory_a1b243ec0e046910ceac90403190b45ac}{tesseract\+\_\+common\+::\+Status\+Category}}.
+
+\mbox{\Hypertarget{classtesseract__urdf_1_1MaterialStatusCategory_a3d2a93d81c173818d80f89b24cec3e42}\label{classtesseract__urdf_1_1MaterialStatusCategory_a3d2a93d81c173818d80f89b24cec3e42}} 
+\index{tesseract\_urdf::MaterialStatusCategory@{tesseract\_urdf::MaterialStatusCategory}!name@{name}}
+\index{name@{name}!tesseract\_urdf::MaterialStatusCategory@{tesseract\_urdf::MaterialStatusCategory}}
+\doxysubsubsection{\texorpdfstring{name()}{name()}}
+{\footnotesize\ttfamily const std\+::string\& tesseract\+\_\+urdf\+::\+Material\+Status\+Category\+::name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}, {\ttfamily [noexcept]}}
+
+
+
+Implements \mbox{\hyperlink{classtesseract__common_1_1StatusCategory_ae08466c99a1e92f904141e5a070382e5}{tesseract\+\_\+common\+::\+Status\+Category}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classtesseract__urdf_1_1MaterialStatusCategory_a1a95b0a74f198cddb43153dbbad5b81c}\label{classtesseract__urdf_1_1MaterialStatusCategory_a1a95b0a74f198cddb43153dbbad5b81c}} 
+\index{tesseract\_urdf::MaterialStatusCategory@{tesseract\_urdf::MaterialStatusCategory}!name\_@{name\_}}
+\index{name\_@{name\_}!tesseract\_urdf::MaterialStatusCategory@{tesseract\_urdf::MaterialStatusCategory}}
+\doxysubsubsection{\texorpdfstring{name\_}{name\_}}
+{\footnotesize\ttfamily std\+::string tesseract\+\_\+urdf\+::\+Material\+Status\+Category\+::name\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+tesseract/tesseract\+\_\+urdf/include/tesseract\+\_\+urdf/\mbox{\hyperlink{material_8h}{material.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,298 @@
+\hypertarget{classtesseract__geometry_1_1ConvexMesh}{}\doxysection{tesseract\+\_\+geometry\+::Convex\+Mesh Class Reference}
+\label{classtesseract__geometry_1_1ConvexMesh}\index{tesseract\_geometry::ConvexMesh@{tesseract\_geometry::ConvexMesh}}
+
+
+{\ttfamily \#include $<$convex\+\_\+mesh.\+h$>$}
+
+Inheritance diagram for tesseract\+\_\+geometry\+::Convex\+Mesh\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classtesseract__geometry_1_1ConvexMesh}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classtesseract__geometry_1_1ConvexMesh_aecd145c5f75117ff7a3bab1fb921e4c0}{Ptr}} = std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classtesseract__geometry_1_1ConvexMesh}{Convex\+Mesh}} $>$
+\item 
+using \mbox{\hyperlink{classtesseract__geometry_1_1ConvexMesh_a891ee4bcb9a02f4d57f1400bc32f561a}{Const\+Ptr}} = std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{classtesseract__geometry_1_1ConvexMesh}{Convex\+Mesh}} $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtesseract__geometry_1_1ConvexMesh_a3d9bc9d4988a3d90e3de397d073cc316}{Convex\+Mesh}} (std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{namespacetesseract__common_af89ed6517f4c84bdb2b037bb40f7d9d9}{tesseract\+\_\+common\+::\+Vector\+Vector3d}} $>$ vertices, std\+::shared\+\_\+ptr$<$ const Eigen\+::\+Vector\+Xi $>$ faces, \mbox{\hyperlink{classtesseract__common_1_1Resource_acdba916fa227bef4391c469581844dc6}{tesseract\+\_\+common\+::\+Resource\+::\+Ptr}} resource=nullptr, Eigen\+::\+Vector3d scale=Eigen\+::\+Vector3d(1, 1, 1))
+\begin{DoxyCompactList}\small\item\em Convex \mbox{\hyperlink{classtesseract__geometry_1_1Mesh}{Mesh}} geometry. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classtesseract__geometry_1_1ConvexMesh_afa1ae16ed7a028167b6712e68fee672b}{Convex\+Mesh}} (std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{namespacetesseract__common_af89ed6517f4c84bdb2b037bb40f7d9d9}{tesseract\+\_\+common\+::\+Vector\+Vector3d}} $>$ vertices, std\+::shared\+\_\+ptr$<$ const Eigen\+::\+Vector\+Xi $>$ faces, int face\+\_\+count, \mbox{\hyperlink{classtesseract__common_1_1Resource_acdba916fa227bef4391c469581844dc6}{tesseract\+\_\+common\+::\+Resource\+::\+Ptr}} resource=nullptr, Eigen\+::\+Vector3d scale=Eigen\+::\+Vector3d(1, 1, 1))
+\begin{DoxyCompactList}\small\item\em Convex \mbox{\hyperlink{classtesseract__geometry_1_1Mesh}{Mesh}} geometry. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classtesseract__geometry_1_1ConvexMesh_a6c5eb5001c48daa27b1d82b4db160053}{$\sim$\+Convex\+Mesh}} () override=default
+\item 
+\mbox{\hyperlink{classtesseract__geometry_1_1ConvexMesh_aa7f7ff910511e6cf34f3b5955be53e0f}{Convex\+Mesh}} (const \mbox{\hyperlink{classtesseract__geometry_1_1ConvexMesh}{Convex\+Mesh}} \&)=delete
+\item 
+\mbox{\hyperlink{classtesseract__geometry_1_1ConvexMesh}{Convex\+Mesh}} \& \mbox{\hyperlink{classtesseract__geometry_1_1ConvexMesh_acbb57d884d35cf0f1d94cd3109f7dec2}{operator=}} (const \mbox{\hyperlink{classtesseract__geometry_1_1ConvexMesh}{Convex\+Mesh}} \&)=delete
+\item 
+\mbox{\hyperlink{classtesseract__geometry_1_1ConvexMesh_acf678f29fa7ceb105256581f1ff716ba}{Convex\+Mesh}} (\mbox{\hyperlink{classtesseract__geometry_1_1ConvexMesh}{Convex\+Mesh}} \&\&)=delete
+\item 
+\mbox{\hyperlink{classtesseract__geometry_1_1ConvexMesh}{Convex\+Mesh}} \& \mbox{\hyperlink{classtesseract__geometry_1_1ConvexMesh_af66ac89ddeb0a2818a6e6ccf8ef665c6}{operator=}} (\mbox{\hyperlink{classtesseract__geometry_1_1ConvexMesh}{Convex\+Mesh}} \&\&)=delete
+\item 
+const std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{namespacetesseract__common_af89ed6517f4c84bdb2b037bb40f7d9d9}{tesseract\+\_\+common\+::\+Vector\+Vector3d}} $>$ \& \mbox{\hyperlink{classtesseract__geometry_1_1ConvexMesh_a1e6c5580235cc0775cfb9e0a9dbc30ec}{get\+Vertices}} () const
+\begin{DoxyCompactList}\small\item\em Get convex mesh vertices. \end{DoxyCompactList}\item 
+const std\+::shared\+\_\+ptr$<$ const Eigen\+::\+Vector\+Xi $>$ \& \mbox{\hyperlink{classtesseract__geometry_1_1ConvexMesh_ad6210455f0459607a8101da45b3402e1}{get\+Faces}} () const
+\begin{DoxyCompactList}\small\item\em Get convex mesh faces. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classtesseract__geometry_1_1ConvexMesh_ac0f721f2693946eb4be727d1136256a7}{get\+Vertice\+Count}} () const
+\begin{DoxyCompactList}\small\item\em Get vertice count. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classtesseract__geometry_1_1ConvexMesh_a2d8946314da96ff03a48cad0a81d033b}{get\+Face\+Count}} () const
+\begin{DoxyCompactList}\small\item\em Get face count. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classtesseract__common_1_1Resource_acdba916fa227bef4391c469581844dc6}{tesseract\+\_\+common\+::\+Resource\+::\+Ptr}} \mbox{\hyperlink{classtesseract__geometry_1_1ConvexMesh_a488f91264afabe17bf986b301064eb9d}{get\+Resource}} () const
+\begin{DoxyCompactList}\small\item\em Get the path to file used to generate the mesh. \end{DoxyCompactList}\item 
+const Eigen\+::\+Vector3d \& \mbox{\hyperlink{classtesseract__geometry_1_1ConvexMesh_a1991bf86bbf045c13904e8caeeaa08f3}{get\+Scale}} () const
+\begin{DoxyCompactList}\small\item\em Get the scale applied to file used to generate the mesh. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classtesseract__geometry_1_1Geometry_acd91c55fb9604ed374446c029b6f2d08}{Geometry\+::\+Ptr}} \mbox{\hyperlink{classtesseract__geometry_1_1ConvexMesh_a7e1398fbaf4c54744e38484e30df98f1}{clone}} () const override
+\begin{DoxyCompactList}\small\item\em Create a copy of this shape. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{namespacetesseract__common_af89ed6517f4c84bdb2b037bb40f7d9d9}{tesseract\+\_\+common\+::\+Vector\+Vector3d}} $>$ \mbox{\hyperlink{classtesseract__geometry_1_1ConvexMesh_a066eac511b4796a23e1c76f4c41fa862}{vertices\+\_\+}}
+\item 
+std\+::shared\+\_\+ptr$<$ const Eigen\+::\+Vector\+Xi $>$ \mbox{\hyperlink{classtesseract__geometry_1_1ConvexMesh_ae9f9ef491128baeac7b1da28a87a721b}{faces\+\_\+}}
+\item 
+int \mbox{\hyperlink{classtesseract__geometry_1_1ConvexMesh_a5406916c23c14ae6c60ce42c1a877bfa}{vertice\+\_\+count\+\_\+}}
+\item 
+int \mbox{\hyperlink{classtesseract__geometry_1_1ConvexMesh_a93b4f4365fe979735d0146b8492525d8}{face\+\_\+count\+\_\+}}
+\item 
+\mbox{\hyperlink{classtesseract__common_1_1Resource_acdba916fa227bef4391c469581844dc6}{tesseract\+\_\+common\+::\+Resource\+::\+Ptr}} \mbox{\hyperlink{classtesseract__geometry_1_1ConvexMesh_a084c99e5bac1d6089ae78f541b50dc1e}{resource\+\_\+}}
+\item 
+Eigen\+::\+Vector3d \mbox{\hyperlink{classtesseract__geometry_1_1ConvexMesh_a922c213610669f2cc917ddfa620b1442}{scale\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classtesseract__geometry_1_1ConvexMesh_a891ee4bcb9a02f4d57f1400bc32f561a}\label{classtesseract__geometry_1_1ConvexMesh_a891ee4bcb9a02f4d57f1400bc32f561a}} 
+\index{tesseract\_geometry::ConvexMesh@{tesseract\_geometry::ConvexMesh}!ConstPtr@{ConstPtr}}
+\index{ConstPtr@{ConstPtr}!tesseract\_geometry::ConvexMesh@{tesseract\_geometry::ConvexMesh}}
+\doxysubsubsection{\texorpdfstring{ConstPtr}{ConstPtr}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classtesseract__geometry_1_1ConvexMesh_a891ee4bcb9a02f4d57f1400bc32f561a}{tesseract\+\_\+geometry\+::\+Convex\+Mesh\+::\+Const\+Ptr}} =  std\+::shared\+\_\+ptr$<$const \mbox{\hyperlink{classtesseract__geometry_1_1ConvexMesh}{Convex\+Mesh}}$>$}
+
+\mbox{\Hypertarget{classtesseract__geometry_1_1ConvexMesh_aecd145c5f75117ff7a3bab1fb921e4c0}\label{classtesseract__geometry_1_1ConvexMesh_aecd145c5f75117ff7a3bab1fb921e4c0}} 
+\index{tesseract\_geometry::ConvexMesh@{tesseract\_geometry::ConvexMesh}!Ptr@{Ptr}}
+\index{Ptr@{Ptr}!tesseract\_geometry::ConvexMesh@{tesseract\_geometry::ConvexMesh}}
+\doxysubsubsection{\texorpdfstring{Ptr}{Ptr}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classtesseract__geometry_1_1ConvexMesh_aecd145c5f75117ff7a3bab1fb921e4c0}{tesseract\+\_\+geometry\+::\+Convex\+Mesh\+::\+Ptr}} =  std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classtesseract__geometry_1_1ConvexMesh}{Convex\+Mesh}}$>$}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtesseract__geometry_1_1ConvexMesh_a3d9bc9d4988a3d90e3de397d073cc316}\label{classtesseract__geometry_1_1ConvexMesh_a3d9bc9d4988a3d90e3de397d073cc316}} 
+\index{tesseract\_geometry::ConvexMesh@{tesseract\_geometry::ConvexMesh}!ConvexMesh@{ConvexMesh}}
+\index{ConvexMesh@{ConvexMesh}!tesseract\_geometry::ConvexMesh@{tesseract\_geometry::ConvexMesh}}
+\doxysubsubsection{\texorpdfstring{ConvexMesh()}{ConvexMesh()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily tesseract\+\_\+geometry\+::\+Convex\+Mesh\+::\+Convex\+Mesh (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{namespacetesseract__common_af89ed6517f4c84bdb2b037bb40f7d9d9}{tesseract\+\_\+common\+::\+Vector\+Vector3d}} $>$}]{vertices,  }\item[{std\+::shared\+\_\+ptr$<$ const Eigen\+::\+Vector\+Xi $>$}]{faces,  }\item[{\mbox{\hyperlink{classtesseract__common_1_1Resource_acdba916fa227bef4391c469581844dc6}{tesseract\+\_\+common\+::\+Resource\+::\+Ptr}}}]{resource = {\ttfamily nullptr},  }\item[{Eigen\+::\+Vector3d}]{scale = {\ttfamily Eigen\+:\+:Vector3d(1,~1,~1)} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Convex \mbox{\hyperlink{classtesseract__geometry_1_1Mesh}{Mesh}} geometry. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vertices} & A vector of vertices associated with the mesh \\
+\hline
+{\em faces} & A vector of face indices where the first indice indicates the number of vertices associated with the face followed by the vertice index in parameter vertices. For example a triangle has three vertices so there should be four inputs where the first should be 3 indicating there are three vertices that define this face followed by three indices. \\
+\hline
+{\em resource} & A resource locator for locating resource \\
+\hline
+{\em scale} & Scale the mesh \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classtesseract__geometry_1_1ConvexMesh_afa1ae16ed7a028167b6712e68fee672b}\label{classtesseract__geometry_1_1ConvexMesh_afa1ae16ed7a028167b6712e68fee672b}} 
+\index{tesseract\_geometry::ConvexMesh@{tesseract\_geometry::ConvexMesh}!ConvexMesh@{ConvexMesh}}
+\index{ConvexMesh@{ConvexMesh}!tesseract\_geometry::ConvexMesh@{tesseract\_geometry::ConvexMesh}}
+\doxysubsubsection{\texorpdfstring{ConvexMesh()}{ConvexMesh()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily tesseract\+\_\+geometry\+::\+Convex\+Mesh\+::\+Convex\+Mesh (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{namespacetesseract__common_af89ed6517f4c84bdb2b037bb40f7d9d9}{tesseract\+\_\+common\+::\+Vector\+Vector3d}} $>$}]{vertices,  }\item[{std\+::shared\+\_\+ptr$<$ const Eigen\+::\+Vector\+Xi $>$}]{faces,  }\item[{int}]{face\+\_\+count,  }\item[{\mbox{\hyperlink{classtesseract__common_1_1Resource_acdba916fa227bef4391c469581844dc6}{tesseract\+\_\+common\+::\+Resource\+::\+Ptr}}}]{resource = {\ttfamily nullptr},  }\item[{Eigen\+::\+Vector3d}]{scale = {\ttfamily Eigen\+:\+:Vector3d(1,~1,~1)} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Convex \mbox{\hyperlink{classtesseract__geometry_1_1Mesh}{Mesh}} geometry. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vertices} & A vector of vertices associated with the mesh \\
+\hline
+{\em faces} & A vector of face indices where the first indice indicates the number of vertices associated with the face followed by the vertice index in parameter vertices. For example a triangle has three vertices so there should be four inputs where the first should be 3 indicating there are three vertices that define this face followed by three indices. \\
+\hline
+{\em face\+\_\+count} & Provide the number of faces. This is faster because it does not need to loop over triangles. \\
+\hline
+{\em resource} & A resource locator for locating resource \\
+\hline
+{\em scale} & Scale the mesh \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classtesseract__geometry_1_1ConvexMesh_a6c5eb5001c48daa27b1d82b4db160053}\label{classtesseract__geometry_1_1ConvexMesh_a6c5eb5001c48daa27b1d82b4db160053}} 
+\index{tesseract\_geometry::ConvexMesh@{tesseract\_geometry::ConvexMesh}!````~ConvexMesh@{$\sim$ConvexMesh}}
+\index{````~ConvexMesh@{$\sim$ConvexMesh}!tesseract\_geometry::ConvexMesh@{tesseract\_geometry::ConvexMesh}}
+\doxysubsubsection{\texorpdfstring{$\sim$ConvexMesh()}{~ConvexMesh()}}
+{\footnotesize\ttfamily tesseract\+\_\+geometry\+::\+Convex\+Mesh\+::$\sim$\+Convex\+Mesh (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [default]}}
+
+\mbox{\Hypertarget{classtesseract__geometry_1_1ConvexMesh_aa7f7ff910511e6cf34f3b5955be53e0f}\label{classtesseract__geometry_1_1ConvexMesh_aa7f7ff910511e6cf34f3b5955be53e0f}} 
+\index{tesseract\_geometry::ConvexMesh@{tesseract\_geometry::ConvexMesh}!ConvexMesh@{ConvexMesh}}
+\index{ConvexMesh@{ConvexMesh}!tesseract\_geometry::ConvexMesh@{tesseract\_geometry::ConvexMesh}}
+\doxysubsubsection{\texorpdfstring{ConvexMesh()}{ConvexMesh()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily tesseract\+\_\+geometry\+::\+Convex\+Mesh\+::\+Convex\+Mesh (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtesseract__geometry_1_1ConvexMesh}{Convex\+Mesh}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classtesseract__geometry_1_1ConvexMesh_acf678f29fa7ceb105256581f1ff716ba}\label{classtesseract__geometry_1_1ConvexMesh_acf678f29fa7ceb105256581f1ff716ba}} 
+\index{tesseract\_geometry::ConvexMesh@{tesseract\_geometry::ConvexMesh}!ConvexMesh@{ConvexMesh}}
+\index{ConvexMesh@{ConvexMesh}!tesseract\_geometry::ConvexMesh@{tesseract\_geometry::ConvexMesh}}
+\doxysubsubsection{\texorpdfstring{ConvexMesh()}{ConvexMesh()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily tesseract\+\_\+geometry\+::\+Convex\+Mesh\+::\+Convex\+Mesh (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtesseract__geometry_1_1ConvexMesh}{Convex\+Mesh}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtesseract__geometry_1_1ConvexMesh_a7e1398fbaf4c54744e38484e30df98f1}\label{classtesseract__geometry_1_1ConvexMesh_a7e1398fbaf4c54744e38484e30df98f1}} 
+\index{tesseract\_geometry::ConvexMesh@{tesseract\_geometry::ConvexMesh}!clone@{clone}}
+\index{clone@{clone}!tesseract\_geometry::ConvexMesh@{tesseract\_geometry::ConvexMesh}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__geometry_1_1Geometry_acd91c55fb9604ed374446c029b6f2d08}{Geometry\+::\+Ptr}} tesseract\+\_\+geometry\+::\+Convex\+Mesh\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Create a copy of this shape. 
+
+
+
+Implements \mbox{\hyperlink{classtesseract__geometry_1_1Geometry_ae8e12b3ae80b55eff558ce4feea1efcd}{tesseract\+\_\+geometry\+::\+Geometry}}.
+
+\mbox{\Hypertarget{classtesseract__geometry_1_1ConvexMesh_a2d8946314da96ff03a48cad0a81d033b}\label{classtesseract__geometry_1_1ConvexMesh_a2d8946314da96ff03a48cad0a81d033b}} 
+\index{tesseract\_geometry::ConvexMesh@{tesseract\_geometry::ConvexMesh}!getFaceCount@{getFaceCount}}
+\index{getFaceCount@{getFaceCount}!tesseract\_geometry::ConvexMesh@{tesseract\_geometry::ConvexMesh}}
+\doxysubsubsection{\texorpdfstring{getFaceCount()}{getFaceCount()}}
+{\footnotesize\ttfamily int tesseract\+\_\+geometry\+::\+Convex\+Mesh\+::get\+Face\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get face count. 
+
+\begin{DoxyReturn}{Returns}
+Number of triangles 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtesseract__geometry_1_1ConvexMesh_ad6210455f0459607a8101da45b3402e1}\label{classtesseract__geometry_1_1ConvexMesh_ad6210455f0459607a8101da45b3402e1}} 
+\index{tesseract\_geometry::ConvexMesh@{tesseract\_geometry::ConvexMesh}!getFaces@{getFaces}}
+\index{getFaces@{getFaces}!tesseract\_geometry::ConvexMesh@{tesseract\_geometry::ConvexMesh}}
+\doxysubsubsection{\texorpdfstring{getFaces()}{getFaces()}}
+{\footnotesize\ttfamily const std\+::shared\+\_\+ptr$<$const Eigen\+::\+Vector\+Xi$>$\& tesseract\+\_\+geometry\+::\+Convex\+Mesh\+::get\+Faces (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get convex mesh faces. 
+
+\begin{DoxyReturn}{Returns}
+A vector of face indices 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtesseract__geometry_1_1ConvexMesh_a488f91264afabe17bf986b301064eb9d}\label{classtesseract__geometry_1_1ConvexMesh_a488f91264afabe17bf986b301064eb9d}} 
+\index{tesseract\_geometry::ConvexMesh@{tesseract\_geometry::ConvexMesh}!getResource@{getResource}}
+\index{getResource@{getResource}!tesseract\_geometry::ConvexMesh@{tesseract\_geometry::ConvexMesh}}
+\doxysubsubsection{\texorpdfstring{getResource()}{getResource()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classtesseract__common_1_1Resource_acdba916fa227bef4391c469581844dc6}{tesseract\+\_\+common\+::\+Resource\+::\+Ptr}} tesseract\+\_\+geometry\+::\+Convex\+Mesh\+::get\+Resource (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the path to file used to generate the mesh. 
+
+Note\+: If empty, assume it was manually generated.
+
+\begin{DoxyReturn}{Returns}
+Absolute path to the mesh file 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtesseract__geometry_1_1ConvexMesh_a1991bf86bbf045c13904e8caeeaa08f3}\label{classtesseract__geometry_1_1ConvexMesh_a1991bf86bbf045c13904e8caeeaa08f3}} 
+\index{tesseract\_geometry::ConvexMesh@{tesseract\_geometry::ConvexMesh}!getScale@{getScale}}
+\index{getScale@{getScale}!tesseract\_geometry::ConvexMesh@{tesseract\_geometry::ConvexMesh}}
+\doxysubsubsection{\texorpdfstring{getScale()}{getScale()}}
+{\footnotesize\ttfamily const Eigen\+::\+Vector3d\& tesseract\+\_\+geometry\+::\+Convex\+Mesh\+::get\+Scale (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the scale applied to file used to generate the mesh. 
+
+\begin{DoxyReturn}{Returns}
+The scale x, y, z 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtesseract__geometry_1_1ConvexMesh_ac0f721f2693946eb4be727d1136256a7}\label{classtesseract__geometry_1_1ConvexMesh_ac0f721f2693946eb4be727d1136256a7}} 
+\index{tesseract\_geometry::ConvexMesh@{tesseract\_geometry::ConvexMesh}!getVerticeCount@{getVerticeCount}}
+\index{getVerticeCount@{getVerticeCount}!tesseract\_geometry::ConvexMesh@{tesseract\_geometry::ConvexMesh}}
+\doxysubsubsection{\texorpdfstring{getVerticeCount()}{getVerticeCount()}}
+{\footnotesize\ttfamily int tesseract\+\_\+geometry\+::\+Convex\+Mesh\+::get\+Vertice\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get vertice count. 
+
+\begin{DoxyReturn}{Returns}
+Number of vertices 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtesseract__geometry_1_1ConvexMesh_a1e6c5580235cc0775cfb9e0a9dbc30ec}\label{classtesseract__geometry_1_1ConvexMesh_a1e6c5580235cc0775cfb9e0a9dbc30ec}} 
+\index{tesseract\_geometry::ConvexMesh@{tesseract\_geometry::ConvexMesh}!getVertices@{getVertices}}
+\index{getVertices@{getVertices}!tesseract\_geometry::ConvexMesh@{tesseract\_geometry::ConvexMesh}}
+\doxysubsubsection{\texorpdfstring{getVertices()}{getVertices()}}
+{\footnotesize\ttfamily const std\+::shared\+\_\+ptr$<$const \mbox{\hyperlink{namespacetesseract__common_af89ed6517f4c84bdb2b037bb40f7d9d9}{tesseract\+\_\+common\+::\+Vector\+Vector3d}}$>$\& tesseract\+\_\+geometry\+::\+Convex\+Mesh\+::get\+Vertices (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get convex mesh vertices. 
+
+\begin{DoxyReturn}{Returns}
+A vector of vertices 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtesseract__geometry_1_1ConvexMesh_acbb57d884d35cf0f1d94cd3109f7dec2}\label{classtesseract__geometry_1_1ConvexMesh_acbb57d884d35cf0f1d94cd3109f7dec2}} 
+\index{tesseract\_geometry::ConvexMesh@{tesseract\_geometry::ConvexMesh}!operator=@{operator=}}
+\index{operator=@{operator=}!tesseract\_geometry::ConvexMesh@{tesseract\_geometry::ConvexMesh}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__geometry_1_1ConvexMesh}{Convex\+Mesh}}\& tesseract\+\_\+geometry\+::\+Convex\+Mesh\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtesseract__geometry_1_1ConvexMesh}{Convex\+Mesh}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classtesseract__geometry_1_1ConvexMesh_af66ac89ddeb0a2818a6e6ccf8ef665c6}\label{classtesseract__geometry_1_1ConvexMesh_af66ac89ddeb0a2818a6e6ccf8ef665c6}} 
+\index{tesseract\_geometry::ConvexMesh@{tesseract\_geometry::ConvexMesh}!operator=@{operator=}}
+\index{operator=@{operator=}!tesseract\_geometry::ConvexMesh@{tesseract\_geometry::ConvexMesh}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__geometry_1_1ConvexMesh}{Convex\+Mesh}}\& tesseract\+\_\+geometry\+::\+Convex\+Mesh\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtesseract__geometry_1_1ConvexMesh}{Convex\+Mesh}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classtesseract__geometry_1_1ConvexMesh_a93b4f4365fe979735d0146b8492525d8}\label{classtesseract__geometry_1_1ConvexMesh_a93b4f4365fe979735d0146b8492525d8}} 
+\index{tesseract\_geometry::ConvexMesh@{tesseract\_geometry::ConvexMesh}!face\_count\_@{face\_count\_}}
+\index{face\_count\_@{face\_count\_}!tesseract\_geometry::ConvexMesh@{tesseract\_geometry::ConvexMesh}}
+\doxysubsubsection{\texorpdfstring{face\_count\_}{face\_count\_}}
+{\footnotesize\ttfamily int tesseract\+\_\+geometry\+::\+Convex\+Mesh\+::face\+\_\+count\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classtesseract__geometry_1_1ConvexMesh_ae9f9ef491128baeac7b1da28a87a721b}\label{classtesseract__geometry_1_1ConvexMesh_ae9f9ef491128baeac7b1da28a87a721b}} 
+\index{tesseract\_geometry::ConvexMesh@{tesseract\_geometry::ConvexMesh}!faces\_@{faces\_}}
+\index{faces\_@{faces\_}!tesseract\_geometry::ConvexMesh@{tesseract\_geometry::ConvexMesh}}
+\doxysubsubsection{\texorpdfstring{faces\_}{faces\_}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$const Eigen\+::\+Vector\+Xi$>$ tesseract\+\_\+geometry\+::\+Convex\+Mesh\+::faces\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classtesseract__geometry_1_1ConvexMesh_a084c99e5bac1d6089ae78f541b50dc1e}\label{classtesseract__geometry_1_1ConvexMesh_a084c99e5bac1d6089ae78f541b50dc1e}} 
+\index{tesseract\_geometry::ConvexMesh@{tesseract\_geometry::ConvexMesh}!resource\_@{resource\_}}
+\index{resource\_@{resource\_}!tesseract\_geometry::ConvexMesh@{tesseract\_geometry::ConvexMesh}}
+\doxysubsubsection{\texorpdfstring{resource\_}{resource\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__common_1_1Resource_acdba916fa227bef4391c469581844dc6}{tesseract\+\_\+common\+::\+Resource\+::\+Ptr}} tesseract\+\_\+geometry\+::\+Convex\+Mesh\+::resource\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classtesseract__geometry_1_1ConvexMesh_a922c213610669f2cc917ddfa620b1442}\label{classtesseract__geometry_1_1ConvexMesh_a922c213610669f2cc917ddfa620b1442}} 
+\index{tesseract\_geometry::ConvexMesh@{tesseract\_geometry::ConvexMesh}!scale\_@{scale\_}}
+\index{scale\_@{scale\_}!tesseract\_geometry::ConvexMesh@{tesseract\_geometry::ConvexMesh}}
+\doxysubsubsection{\texorpdfstring{scale\_}{scale\_}}
+{\footnotesize\ttfamily Eigen\+::\+Vector3d tesseract\+\_\+geometry\+::\+Convex\+Mesh\+::scale\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classtesseract__geometry_1_1ConvexMesh_a5406916c23c14ae6c60ce42c1a877bfa}\label{classtesseract__geometry_1_1ConvexMesh_a5406916c23c14ae6c60ce42c1a877bfa}} 
+\index{tesseract\_geometry::ConvexMesh@{tesseract\_geometry::ConvexMesh}!vertice\_count\_@{vertice\_count\_}}
+\index{vertice\_count\_@{vertice\_count\_}!tesseract\_geometry::ConvexMesh@{tesseract\_geometry::ConvexMesh}}
+\doxysubsubsection{\texorpdfstring{vertice\_count\_}{vertice\_count\_}}
+{\footnotesize\ttfamily int tesseract\+\_\+geometry\+::\+Convex\+Mesh\+::vertice\+\_\+count\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classtesseract__geometry_1_1ConvexMesh_a066eac511b4796a23e1c76f4c41fa862}\label{classtesseract__geometry_1_1ConvexMesh_a066eac511b4796a23e1c76f4c41fa862}} 
+\index{tesseract\_geometry::ConvexMesh@{tesseract\_geometry::ConvexMesh}!vertices\_@{vertices\_}}
+\index{vertices\_@{vertices\_}!tesseract\_geometry::ConvexMesh@{tesseract\_geometry::ConvexMesh}}
+\doxysubsubsection{\texorpdfstring{vertices\_}{vertices\_}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$const \mbox{\hyperlink{namespacetesseract__common_af89ed6517f4c84bdb2b037bb40f7d9d9}{tesseract\+\_\+common\+::\+Vector\+Vector3d}}$>$ tesseract\+\_\+geometry\+::\+Convex\+Mesh\+::vertices\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+tesseract/tesseract\+\_\+geometry/include/tesseract\+\_\+geometry/impl/\mbox{\hyperlink{tesseract__geometry_2include_2tesseract__geometry_2impl_2convex__mesh_8h}{convex\+\_\+mesh.\+h}}\end{DoxyCompactItemize}

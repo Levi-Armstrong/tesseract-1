@@ -1,0 +1,108 @@
+\hypertarget{tesseract__collision_2include_2tesseract__collision_2core_2types_8h}{}\doxysection{tesseract/tesseract\+\_\+collision/include/tesseract\+\_\+collision/core/types.h File Reference}
+\label{tesseract__collision_2include_2tesseract__collision_2core_2types_8h}\index{tesseract/tesseract\_collision/include/tesseract\_collision/core/types.h@{tesseract/tesseract\_collision/include/tesseract\_collision/core/types.h}}
+
+
+Tesseracts Collision Common Types.  
+
+
+{\ttfamily \#include $<$tesseract\+\_\+common/macros.\+h$>$}\newline
+{\ttfamily \#include $<$Eigen/\+Core$>$}\newline
+{\ttfamily \#include $<$Eigen/\+Geometry$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include $<$map$>$}\newline
+{\ttfamily \#include $<$unordered\+\_\+map$>$}\newline
+{\ttfamily \#include $<$functional$>$}\newline
+{\ttfamily \#include $<$boost/bind.\+hpp$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+geometry/geometries.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+common/types.\+h$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structtesseract__collision_1_1ContactResult}{tesseract\+\_\+collision\+::\+Contact\+Result}}
+\item 
+struct \mbox{\hyperlink{structtesseract__collision_1_1ContactRequest}{tesseract\+\_\+collision\+::\+Contact\+Request}}
+\begin{DoxyCompactList}\small\item\em The \mbox{\hyperlink{structtesseract__collision_1_1ContactRequest}{Contact\+Request}} struct. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structtesseract__collision_1_1ContactTestData}{tesseract\+\_\+collision\+::\+Contact\+Test\+Data}}
+\begin{DoxyCompactList}\small\item\em This data is intended only to be used internal to the collision checkers as a container and should not be externally used by other libraries or packages. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacetesseract__collision}{tesseract\+\_\+collision}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{namespacetesseract__collision_a2472107aae8174a30873bb0a955c3cb4}{tesseract\+\_\+collision\+::\+Collision\+Shapes\+Const}} = std\+::vector$<$ \mbox{\hyperlink{classtesseract__geometry_1_1Geometry_a755a973394d2ccb45ad53a5e11ff03c7}{tesseract\+\_\+geometry\+::\+Geometry\+::\+Const\+Ptr}} $>$
+\item 
+using \mbox{\hyperlink{namespacetesseract__collision_a0ba6c3df4805b8c865cb45f6571486c0}{tesseract\+\_\+collision\+::\+Collision\+Shape\+Const\+Ptr}} = \mbox{\hyperlink{classtesseract__geometry_1_1Geometry_a755a973394d2ccb45ad53a5e11ff03c7}{tesseract\+\_\+geometry\+::\+Geometry\+::\+Const\+Ptr}}
+\item 
+using \mbox{\hyperlink{namespacetesseract__collision_a0aa5b9a264467e92cd1b9f0cd0c38ee8}{tesseract\+\_\+collision\+::\+Collision\+Shape\+Ptr}} = \mbox{\hyperlink{classtesseract__geometry_1_1Geometry_acd91c55fb9604ed374446c029b6f2d08}{tesseract\+\_\+geometry\+::\+Geometry\+::\+Ptr}}
+\item 
+using \mbox{\hyperlink{namespacetesseract__collision_abe7752ce161fbd1139533ac566fec1cb}{tesseract\+\_\+collision\+::\+Is\+Contact\+Allowed\+Fn}} = std\+::function$<$ bool(const std\+::string \&, const std\+::string \&)$>$
+\begin{DoxyCompactList}\small\item\em Should return true if contact allowed, otherwise false. \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{namespacetesseract__collision_a96d77f62b7c26962d1090f0a2f00419b}{tesseract\+\_\+collision\+::\+Contact\+Result\+Vector}} = \mbox{\hyperlink{namespacetesseract__common_a000d15c3ab8d8ba4ebdaae64153b053a}{tesseract\+\_\+common\+::\+Aligned\+Vector}}$<$ Contact\+Result $>$
+\item 
+using \mbox{\hyperlink{namespacetesseract__collision_a1eeace4cc41027dbde8e7dbeb77ca7cf}{tesseract\+\_\+collision\+::\+Contact\+Result\+Map}} = \mbox{\hyperlink{namespacetesseract__common_a2c5a4b6149060671cf8c3f9d15ef58c4}{tesseract\+\_\+common\+::\+Aligned\+Map}}$<$ std\+::pair$<$ std\+::string, std\+::string $>$, Contact\+Result\+Vector $>$
+\item 
+using \mbox{\hyperlink{namespacetesseract__collision_a66fd355f5026f0f64424a756a3788c38}{tesseract\+\_\+collision\+::\+Is\+Contact\+Result\+Valid\+Fn}} = std\+::function$<$ bool(const Contact\+Result \&)$>$
+\begin{DoxyCompactList}\small\item\em Should return true if contact results are valid, otherwise false. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespacetesseract__collision_a267c740fd3b446222ba19cbaa56dab5e}{tesseract\+\_\+collision\+::\+Continuous\+Collision\+Type}} \{ \mbox{\hyperlink{namespacetesseract__collision_a267c740fd3b446222ba19cbaa56dab5ea79e497b3f5d3d8b23ea29c9370354bb6}{tesseract\+\_\+collision\+::\+Continuous\+Collision\+Type\+::\+C\+C\+Type\+\_\+\+None}}, 
+\mbox{\hyperlink{namespacetesseract__collision_a267c740fd3b446222ba19cbaa56dab5eaf8c51e6d7c61aa31897c3dd7b0719093}{tesseract\+\_\+collision\+::\+Continuous\+Collision\+Type\+::\+C\+C\+Type\+\_\+\+Time0}}, 
+\mbox{\hyperlink{namespacetesseract__collision_a267c740fd3b446222ba19cbaa56dab5ea333ec902092c850b7f23cf437d0fac01}{tesseract\+\_\+collision\+::\+Continuous\+Collision\+Type\+::\+C\+C\+Type\+\_\+\+Time1}}, 
+\mbox{\hyperlink{namespacetesseract__collision_a267c740fd3b446222ba19cbaa56dab5ea1101988a82b0cd8a2e2c5ee5fda455eb}{tesseract\+\_\+collision\+::\+Continuous\+Collision\+Type\+::\+C\+C\+Type\+\_\+\+Between}}
+ \}
+\item 
+enum \mbox{\hyperlink{namespacetesseract__collision_ac3da4f46ae16e86ba4f1dfd2935eb80c}{tesseract\+\_\+collision\+::\+Contact\+Test\+Type}} \{ \mbox{\hyperlink{namespacetesseract__collision_ac3da4f46ae16e86ba4f1dfd2935eb80ca2c2624a5059934a947d6e25fe8332ade}{tesseract\+\_\+collision\+::\+Contact\+Test\+Type\+::\+F\+I\+R\+ST}} = 0, 
+\mbox{\hyperlink{namespacetesseract__collision_ac3da4f46ae16e86ba4f1dfd2935eb80cae9c32f09a44ae1ae34e42d53502fab77}{tesseract\+\_\+collision\+::\+Contact\+Test\+Type\+::\+C\+L\+O\+S\+E\+ST}} = 1, 
+\mbox{\hyperlink{namespacetesseract__collision_ac3da4f46ae16e86ba4f1dfd2935eb80ca5fb1f955b45e38e31789286a1790398d}{tesseract\+\_\+collision\+::\+Contact\+Test\+Type\+::\+A\+LL}} = 2, 
+\mbox{\hyperlink{namespacetesseract__collision_ac3da4f46ae16e86ba4f1dfd2935eb80cad9e0d83abd8b9bb4c1998be68831922c}{tesseract\+\_\+collision\+::\+Contact\+Test\+Type\+::\+L\+I\+M\+I\+T\+ED}} = 3
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::size\+\_\+t \mbox{\hyperlink{namespacetesseract__collision_a1e54919ee87e54445b7926d0b2880882}{tesseract\+\_\+collision\+::flatten\+Move\+Results}} (Contact\+Result\+Map \&\&m, Contact\+Result\+Vector \&v)
+\item 
+std\+::size\+\_\+t \mbox{\hyperlink{namespacetesseract__collision_a0249bb2994ca5e8258ea55309467ae4a}{tesseract\+\_\+collision\+::flatten\+Copy\+Results}} (const Contact\+Result\+Map \&m, Contact\+Result\+Vector \&v)
+\item 
+std\+::size\+\_\+t \mbox{\hyperlink{namespacetesseract__collision_a3d63942ad37df10958b434c860782fbb}{tesseract\+\_\+collision\+::flatten\+Results}} (Contact\+Result\+Map \&\&m, Contact\+Result\+Vector \&v)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static const std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{namespacetesseract__collision_a7b23767d95cb11ee74a0001502f930a5}{tesseract\+\_\+collision\+::\+Contact\+Test\+Type\+Strings}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Tesseracts Collision Common Types. 
+
+\begin{DoxyAuthor}{Author}
+Levi Armstrong 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+January 18, 2018 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+T\+O\+DO 
+\end{DoxyVersion}
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000017}{Bug}}]No known bugs\end{DoxyRefDesc}
+
+
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2017, Southwest Research Institute
+\end{DoxyCopyright}
+\begin{DoxyParagraph}{License}
+Software License Agreement (Apache License) 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+Licensed under the Apache License, Version 2.\+0 (the \char`\"{}\+License\char`\"{}); you may not use this file except in compliance with the License. You may obtain a copy of the License at \href{http://www.apache.org/licenses/LICENSE-2.0}{\texttt{ http\+://www.\+apache.\+org/licenses/\+L\+I\+C\+E\+N\+S\+E-\/2.\+0}} 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \char`\"{}\+A\+S I\+S\char`\"{} B\+A\+S\+IS, W\+I\+T\+H\+O\+UT W\+A\+R\+R\+A\+N\+T\+I\+ES OR C\+O\+N\+D\+I\+T\+I\+O\+NS OF A\+NY K\+I\+ND, either express or implied. See the License for the specific language governing permissions and limitations under the License. 
+\end{DoxyParagraph}

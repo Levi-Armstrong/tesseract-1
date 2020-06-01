@@ -1,0 +1,70 @@
+\hypertarget{descartes__motion__planner_8h}{}\doxysection{tesseract/tesseract\+\_\+planning/tesseract\+\_\+motion\+\_\+planners/include/tesseract\+\_\+motion\+\_\+planners/descartes/descartes\+\_\+motion\+\_\+planner.h File Reference}
+\label{descartes__motion__planner_8h}\index{tesseract/tesseract\_planning/tesseract\_motion\_planners/include/tesseract\_motion\_planners/descartes/descartes\_motion\_planner.h@{tesseract/tesseract\_planning/tesseract\_motion\_planners/include/tesseract\_motion\_planners/descartes/descartes\_motion\_planner.h}}
+
+
+Tesseract R\+OS Descartes planner.  
+
+
+{\ttfamily \#include $<$tesseract/tesseract.\+h$>$}\newline
+{\ttfamily \#include $<$descartes\+\_\+light/interface/collision\+\_\+interface.\+h$>$}\newline
+{\ttfamily \#include $<$descartes\+\_\+light/interface/kinematics\+\_\+interface.\+h$>$}\newline
+{\ttfamily \#include $<$descartes\+\_\+light/interface/edge\+\_\+evaluator.\+h$>$}\newline
+{\ttfamily \#include $<$descartes\+\_\+light/interface/position\+\_\+sampler.\+h$>$}\newline
+{\ttfamily \#include $<$descartes\+\_\+light/descartes\+\_\+light.\+h$>$}\newline
+{\ttfamily \#include $<$Eigen/\+Geometry$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+motion\+\_\+planners/core/planner.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+motion\+\_\+planners/core/waypoint.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+motion\+\_\+planners/descartes/descartes\+\_\+motion\+\_\+planner\+\_\+status\+\_\+category.\+h$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structtesseract__motion__planners_1_1DescartesMotionPlannerConfig}{tesseract\+\_\+motion\+\_\+planners\+::\+Descartes\+Motion\+Planner\+Config$<$ Float\+Type $>$}}
+\item 
+class \mbox{\hyperlink{classtesseract__motion__planners_1_1DescartesMotionPlanner}{tesseract\+\_\+motion\+\_\+planners\+::\+Descartes\+Motion\+Planner$<$ Float\+Type $>$}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacetesseract__motion__planners}{tesseract\+\_\+motion\+\_\+planners}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{namespacetesseract__motion__planners_a3fe786e0a60d863b1b46448678c48b8c}{tesseract\+\_\+motion\+\_\+planners\+::\+Descartes\+Motion\+Planner\+ConfigD}} = Descartes\+Motion\+Planner\+Config$<$ double $>$
+\item 
+using \mbox{\hyperlink{namespacetesseract__motion__planners_a89ba4ad219f9ea211a79a325438881e4}{tesseract\+\_\+motion\+\_\+planners\+::\+Descartes\+Motion\+Planner\+ConfigF}} = Descartes\+Motion\+Planner\+Config$<$ float $>$
+\item 
+using \mbox{\hyperlink{namespacetesseract__motion__planners_a5194a71e4668fb23932927266d00efbf}{tesseract\+\_\+motion\+\_\+planners\+::\+Descartes\+Motion\+PlannerD}} = Descartes\+Motion\+Planner$<$ double $>$
+\item 
+using \mbox{\hyperlink{namespacetesseract__motion__planners_ab8da68c7125b8c2e044ede047e717524}{tesseract\+\_\+motion\+\_\+planners\+::\+Descartes\+Motion\+PlannerF}} = Descartes\+Motion\+Planner$<$ float $>$
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Tesseract R\+OS Descartes planner. 
+
+\begin{DoxyAuthor}{Author}
+Levi Armstrong 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+April 18, 2018 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+T\+O\+DO 
+\end{DoxyVersion}
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000091}{Bug}}]No known bugs\end{DoxyRefDesc}
+
+
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2017, Southwest Research Institute
+\end{DoxyCopyright}
+\begin{DoxyParagraph}{License}
+Software License Agreement (Apache License) 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+Licensed under the Apache License, Version 2.\+0 (the \char`\"{}\+License\char`\"{}); you may not use this file except in compliance with the License. You may obtain a copy of the License at \href{http://www.apache.org/licenses/LICENSE-2.0}{\texttt{ http\+://www.\+apache.\+org/licenses/\+L\+I\+C\+E\+N\+S\+E-\/2.\+0}} 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \char`\"{}\+A\+S I\+S\char`\"{} B\+A\+S\+IS, W\+I\+T\+H\+O\+UT W\+A\+R\+R\+A\+N\+T\+I\+ES OR C\+O\+N\+D\+I\+T\+I\+O\+NS OF A\+NY K\+I\+ND, either express or implied. See the License for the specific language governing permissions and limitations under the License. 
+\end{DoxyParagraph}

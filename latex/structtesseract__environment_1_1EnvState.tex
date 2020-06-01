@@ -1,0 +1,85 @@
+\hypertarget{structtesseract__environment_1_1EnvState}{}\doxysection{tesseract\+\_\+environment\+::Env\+State Struct Reference}
+\label{structtesseract__environment_1_1EnvState}\index{tesseract\_environment::EnvState@{tesseract\_environment::EnvState}}
+
+
+This holds a state of the environment.  
+
+
+
+
+{\ttfamily \#include $<$types.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{structtesseract__environment_1_1EnvState_a6a9f30b8418e9cb943125008c62b1d39}{Ptr}} = std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structtesseract__environment_1_1EnvState}{Env\+State}} $>$
+\item 
+using \mbox{\hyperlink{structtesseract__environment_1_1EnvState_a670d57a48a695feea60020c81320a851}{Const\+Ptr}} = std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{structtesseract__environment_1_1EnvState}{Env\+State}} $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::unordered\+\_\+map$<$ std\+::string, double $>$ \mbox{\hyperlink{structtesseract__environment_1_1EnvState_a81545c9fea5e448c99c503093641e75b}{joints}}
+\begin{DoxyCompactList}\small\item\em The joint values used for calculating the joint and link transforms. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacetesseract__common_a67bde3cb7bb235f0f61c370ef8bc74d8}{tesseract\+\_\+common\+::\+Transform\+Map}} \mbox{\hyperlink{structtesseract__environment_1_1EnvState_aa816c0c86d5d35dc35b14eb2daff0db5}{link\+\_\+transforms}}
+\begin{DoxyCompactList}\small\item\em The link transforms in world coordinate system. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacetesseract__common_a67bde3cb7bb235f0f61c370ef8bc74d8}{tesseract\+\_\+common\+::\+Transform\+Map}} \mbox{\hyperlink{structtesseract__environment_1_1EnvState_a1e30586f5f3889cb9efb97bf1839656f}{joint\+\_\+transforms}}
+\begin{DoxyCompactList}\small\item\em The joint transforms in world coordinate system. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This holds a state of the environment. 
+
+It provides a way to look up the location of a link/joint in world coordinates system by link/joint name. It is possible to get the joint transform using the child link transfrom of the joint, but they are both provided for convience. Also the joint values used to calculated the link/joint transfroms is provided. 
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{structtesseract__environment_1_1EnvState_a670d57a48a695feea60020c81320a851}\label{structtesseract__environment_1_1EnvState_a670d57a48a695feea60020c81320a851}} 
+\index{tesseract\_environment::EnvState@{tesseract\_environment::EnvState}!ConstPtr@{ConstPtr}}
+\index{ConstPtr@{ConstPtr}!tesseract\_environment::EnvState@{tesseract\_environment::EnvState}}
+\doxysubsubsection{\texorpdfstring{ConstPtr}{ConstPtr}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{structtesseract__environment_1_1EnvState_a670d57a48a695feea60020c81320a851}{tesseract\+\_\+environment\+::\+Env\+State\+::\+Const\+Ptr}} =  std\+::shared\+\_\+ptr$<$const \mbox{\hyperlink{structtesseract__environment_1_1EnvState}{Env\+State}}$>$}
+
+\mbox{\Hypertarget{structtesseract__environment_1_1EnvState_a6a9f30b8418e9cb943125008c62b1d39}\label{structtesseract__environment_1_1EnvState_a6a9f30b8418e9cb943125008c62b1d39}} 
+\index{tesseract\_environment::EnvState@{tesseract\_environment::EnvState}!Ptr@{Ptr}}
+\index{Ptr@{Ptr}!tesseract\_environment::EnvState@{tesseract\_environment::EnvState}}
+\doxysubsubsection{\texorpdfstring{Ptr}{Ptr}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{structtesseract__environment_1_1EnvState_a6a9f30b8418e9cb943125008c62b1d39}{tesseract\+\_\+environment\+::\+Env\+State\+::\+Ptr}} =  std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{structtesseract__environment_1_1EnvState}{Env\+State}}$>$}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structtesseract__environment_1_1EnvState_a1e30586f5f3889cb9efb97bf1839656f}\label{structtesseract__environment_1_1EnvState_a1e30586f5f3889cb9efb97bf1839656f}} 
+\index{tesseract\_environment::EnvState@{tesseract\_environment::EnvState}!joint\_transforms@{joint\_transforms}}
+\index{joint\_transforms@{joint\_transforms}!tesseract\_environment::EnvState@{tesseract\_environment::EnvState}}
+\doxysubsubsection{\texorpdfstring{joint\_transforms}{joint\_transforms}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacetesseract__common_a67bde3cb7bb235f0f61c370ef8bc74d8}{tesseract\+\_\+common\+::\+Transform\+Map}} tesseract\+\_\+environment\+::\+Env\+State\+::joint\+\_\+transforms}
+
+
+
+The joint transforms in world coordinate system. 
+
+\mbox{\Hypertarget{structtesseract__environment_1_1EnvState_a81545c9fea5e448c99c503093641e75b}\label{structtesseract__environment_1_1EnvState_a81545c9fea5e448c99c503093641e75b}} 
+\index{tesseract\_environment::EnvState@{tesseract\_environment::EnvState}!joints@{joints}}
+\index{joints@{joints}!tesseract\_environment::EnvState@{tesseract\_environment::EnvState}}
+\doxysubsubsection{\texorpdfstring{joints}{joints}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$std\+::string, double$>$ tesseract\+\_\+environment\+::\+Env\+State\+::joints}
+
+
+
+The joint values used for calculating the joint and link transforms. 
+
+\mbox{\Hypertarget{structtesseract__environment_1_1EnvState_aa816c0c86d5d35dc35b14eb2daff0db5}\label{structtesseract__environment_1_1EnvState_aa816c0c86d5d35dc35b14eb2daff0db5}} 
+\index{tesseract\_environment::EnvState@{tesseract\_environment::EnvState}!link\_transforms@{link\_transforms}}
+\index{link\_transforms@{link\_transforms}!tesseract\_environment::EnvState@{tesseract\_environment::EnvState}}
+\doxysubsubsection{\texorpdfstring{link\_transforms}{link\_transforms}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacetesseract__common_a67bde3cb7bb235f0f61c370ef8bc74d8}{tesseract\+\_\+common\+::\+Transform\+Map}} tesseract\+\_\+environment\+::\+Env\+State\+::link\+\_\+transforms}
+
+
+
+The link transforms in world coordinate system. 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+tesseract/tesseract\+\_\+environment/include/tesseract\+\_\+environment/core/\mbox{\hyperlink{tesseract__environment_2include_2tesseract__environment_2core_2types_8h}{types.\+h}}\end{DoxyCompactItemize}

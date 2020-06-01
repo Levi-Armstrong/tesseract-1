@@ -1,0 +1,68 @@
+\hypertarget{tesseract__urdf__common__unit_8h}{}\doxysection{tesseract/tesseract\+\_\+urdf/test/tesseract\+\_\+urdf\+\_\+common\+\_\+unit.h File Reference}
+\label{tesseract__urdf__common__unit_8h}\index{tesseract/tesseract\_urdf/test/tesseract\_urdf\_common\_unit.h@{tesseract/tesseract\_urdf/test/tesseract\_urdf\_common\_unit.h}}
+{\ttfamily \#include $<$tesseract\+\_\+common/macros.\+h$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$tinyxml2.\+h$>$}\newline
+{\ttfamily \#include $<$console\+\_\+bridge/console.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+common/status\+\_\+code.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+scene\+\_\+graph/utils.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+scene\+\_\+graph/resource\+\_\+locator.\+h$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{macros_8h_a8cc0e3c6a3382c5c0b19eb9e676fc2db}{T\+E\+S\+S\+E\+R\+A\+C\+T\+\_\+\+C\+O\+M\+M\+O\+N\+\_\+\+I\+G\+N\+O\+R\+E\+\_\+\+W\+A\+R\+N\+I\+N\+G\+S\+\_\+\+P\+U\+SH}} \mbox{\hyperlink{macros_8h_a7af8561cf52519e9896b0697095c1b8b}{T\+E\+S\+S\+E\+R\+A\+C\+T\+\_\+\+C\+O\+M\+M\+O\+N\+\_\+\+I\+G\+N\+O\+R\+E\+\_\+\+W\+A\+R\+N\+I\+N\+G\+S\+\_\+\+P\+OP}} std\+::string \mbox{\hyperlink{tesseract__urdf__common__unit_8h_a093896878775ab688c91d8ef6b92150d}{locate\+Resource}} (const std\+::string \&url)
+\item 
+{\footnotesize template$<$typename Element\+Type $>$ }\\\mbox{\hyperlink{classtesseract__common_1_1StatusCode_a2b285106bd9f4963d1696b9696dbaf5f}{tesseract\+\_\+common\+::\+Status\+Code\+::\+Ptr}} \mbox{\hyperlink{tesseract__urdf__common__unit_8h_a4f06a71273410d2b45dd5b28638280d1}{run\+Test}} (Element\+Type \&type, const std\+::string \&xml\+\_\+string, const std\+::string \&element\+\_\+name, const int version)
+\item 
+{\footnotesize template$<$typename Element\+Type $>$ }\\\mbox{\hyperlink{classtesseract__common_1_1StatusCode_a2b285106bd9f4963d1696b9696dbaf5f}{tesseract\+\_\+common\+::\+Status\+Code\+::\+Ptr}} \mbox{\hyperlink{tesseract__urdf__common__unit_8h_a5affcfdae05f01a937e8a7f198118c3f}{run\+Test}} (Element\+Type \&type, const std\+::string \&xml\+\_\+string, const std\+::string \&element\+\_\+name, const \mbox{\hyperlink{classtesseract__scene__graph_1_1ResourceLocator_a64ddb0339eae8885128e399f1275cf80}{tesseract\+\_\+scene\+\_\+graph\+::\+Resource\+Locator\+::\+Ptr}} \&locator, const int version, bool visual)
+\item 
+{\footnotesize template$<$typename Element\+Type $>$ }\\\mbox{\hyperlink{classtesseract__common_1_1StatusCode_a2b285106bd9f4963d1696b9696dbaf5f}{tesseract\+\_\+common\+::\+Status\+Code\+::\+Ptr}} \mbox{\hyperlink{tesseract__urdf__common__unit_8h_a100ec64ef290c9b9d7512d7333104a23}{run\+Test}} (Element\+Type \&type, const std\+::string \&xml\+\_\+string, const std\+::string \&element\+\_\+name, const \mbox{\hyperlink{classtesseract__scene__graph_1_1ResourceLocator_a64ddb0339eae8885128e399f1275cf80}{tesseract\+\_\+scene\+\_\+graph\+::\+Resource\+Locator\+::\+Ptr}} \&locator, const int version)
+\item 
+{\footnotesize template$<$typename Element\+Type $>$ }\\\mbox{\hyperlink{classtesseract__common_1_1StatusCode_a2b285106bd9f4963d1696b9696dbaf5f}{tesseract\+\_\+common\+::\+Status\+Code\+::\+Ptr}} \mbox{\hyperlink{tesseract__urdf__common__unit_8h_a5e86931e5f253f0b5b249fc284209acf}{run\+Test}} (Element\+Type \&type, const std\+::string \&xml\+\_\+string, const std\+::string \&element\+\_\+name, const \mbox{\hyperlink{classtesseract__scene__graph_1_1ResourceLocator_a64ddb0339eae8885128e399f1275cf80}{tesseract\+\_\+scene\+\_\+graph\+::\+Resource\+Locator\+::\+Ptr}} \&locator, std\+::unordered\+\_\+map$<$ std\+::string, \mbox{\hyperlink{classtesseract__scene__graph_1_1Material_a9d68bd33aa85035e3b291c13d6ae7a98}{tesseract\+\_\+scene\+\_\+graph\+::\+Material\+::\+Ptr}} $>$ \&available\+\_\+materials, const int version)
+\item 
+{\footnotesize template$<$typename Element\+Type $>$ }\\\mbox{\hyperlink{classtesseract__common_1_1StatusCode_a2b285106bd9f4963d1696b9696dbaf5f}{tesseract\+\_\+common\+::\+Status\+Code\+::\+Ptr}} \mbox{\hyperlink{tesseract__urdf__common__unit_8h_a6146e867fb7d02eaf165828ae0a2c1b9}{run\+Test}} (Element\+Type \&type, const std\+::string \&xml\+\_\+string, const std\+::string \&element\+\_\+name, std\+::unordered\+\_\+map$<$ std\+::string, \mbox{\hyperlink{classtesseract__scene__graph_1_1Material_a9d68bd33aa85035e3b291c13d6ae7a98}{tesseract\+\_\+scene\+\_\+graph\+::\+Material\+::\+Ptr}} $>$ \&available\+\_\+materials, const int version, const bool visual)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{tesseract__urdf__common__unit_8h_a093896878775ab688c91d8ef6b92150d}\label{tesseract__urdf__common__unit_8h_a093896878775ab688c91d8ef6b92150d}} 
+\index{tesseract\_urdf\_common\_unit.h@{tesseract\_urdf\_common\_unit.h}!locateResource@{locateResource}}
+\index{locateResource@{locateResource}!tesseract\_urdf\_common\_unit.h@{tesseract\_urdf\_common\_unit.h}}
+\doxysubsubsection{\texorpdfstring{locateResource()}{locateResource()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{macros_8h_a8cc0e3c6a3382c5c0b19eb9e676fc2db}{T\+E\+S\+S\+E\+R\+A\+C\+T\+\_\+\+C\+O\+M\+M\+O\+N\+\_\+\+I\+G\+N\+O\+R\+E\+\_\+\+W\+A\+R\+N\+I\+N\+G\+S\+\_\+\+P\+U\+SH}} \mbox{\hyperlink{macros_8h_a7af8561cf52519e9896b0697095c1b8b}{T\+E\+S\+S\+E\+R\+A\+C\+T\+\_\+\+C\+O\+M\+M\+O\+N\+\_\+\+I\+G\+N\+O\+R\+E\+\_\+\+W\+A\+R\+N\+I\+N\+G\+S\+\_\+\+P\+OP}} std\+::string locate\+Resource (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{url }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{tesseract__urdf__common__unit_8h_a4f06a71273410d2b45dd5b28638280d1}\label{tesseract__urdf__common__unit_8h_a4f06a71273410d2b45dd5b28638280d1}} 
+\index{tesseract\_urdf\_common\_unit.h@{tesseract\_urdf\_common\_unit.h}!runTest@{runTest}}
+\index{runTest@{runTest}!tesseract\_urdf\_common\_unit.h@{tesseract\_urdf\_common\_unit.h}}
+\doxysubsubsection{\texorpdfstring{runTest()}{runTest()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily template$<$typename Element\+Type $>$ \\
+\mbox{\hyperlink{classtesseract__common_1_1StatusCode_a2b285106bd9f4963d1696b9696dbaf5f}{tesseract\+\_\+common\+::\+Status\+Code\+::\+Ptr}} run\+Test (\begin{DoxyParamCaption}\item[{Element\+Type \&}]{type,  }\item[{const std\+::string \&}]{xml\+\_\+string,  }\item[{const std\+::string \&}]{element\+\_\+name,  }\item[{const int}]{version }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{tesseract__urdf__common__unit_8h_a100ec64ef290c9b9d7512d7333104a23}\label{tesseract__urdf__common__unit_8h_a100ec64ef290c9b9d7512d7333104a23}} 
+\index{tesseract\_urdf\_common\_unit.h@{tesseract\_urdf\_common\_unit.h}!runTest@{runTest}}
+\index{runTest@{runTest}!tesseract\_urdf\_common\_unit.h@{tesseract\_urdf\_common\_unit.h}}
+\doxysubsubsection{\texorpdfstring{runTest()}{runTest()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily template$<$typename Element\+Type $>$ \\
+\mbox{\hyperlink{classtesseract__common_1_1StatusCode_a2b285106bd9f4963d1696b9696dbaf5f}{tesseract\+\_\+common\+::\+Status\+Code\+::\+Ptr}} run\+Test (\begin{DoxyParamCaption}\item[{Element\+Type \&}]{type,  }\item[{const std\+::string \&}]{xml\+\_\+string,  }\item[{const std\+::string \&}]{element\+\_\+name,  }\item[{const \mbox{\hyperlink{classtesseract__scene__graph_1_1ResourceLocator_a64ddb0339eae8885128e399f1275cf80}{tesseract\+\_\+scene\+\_\+graph\+::\+Resource\+Locator\+::\+Ptr}} \&}]{locator,  }\item[{const int}]{version }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{tesseract__urdf__common__unit_8h_a5affcfdae05f01a937e8a7f198118c3f}\label{tesseract__urdf__common__unit_8h_a5affcfdae05f01a937e8a7f198118c3f}} 
+\index{tesseract\_urdf\_common\_unit.h@{tesseract\_urdf\_common\_unit.h}!runTest@{runTest}}
+\index{runTest@{runTest}!tesseract\_urdf\_common\_unit.h@{tesseract\_urdf\_common\_unit.h}}
+\doxysubsubsection{\texorpdfstring{runTest()}{runTest()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily template$<$typename Element\+Type $>$ \\
+\mbox{\hyperlink{classtesseract__common_1_1StatusCode_a2b285106bd9f4963d1696b9696dbaf5f}{tesseract\+\_\+common\+::\+Status\+Code\+::\+Ptr}} run\+Test (\begin{DoxyParamCaption}\item[{Element\+Type \&}]{type,  }\item[{const std\+::string \&}]{xml\+\_\+string,  }\item[{const std\+::string \&}]{element\+\_\+name,  }\item[{const \mbox{\hyperlink{classtesseract__scene__graph_1_1ResourceLocator_a64ddb0339eae8885128e399f1275cf80}{tesseract\+\_\+scene\+\_\+graph\+::\+Resource\+Locator\+::\+Ptr}} \&}]{locator,  }\item[{const int}]{version,  }\item[{bool}]{visual }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{tesseract__urdf__common__unit_8h_a5e86931e5f253f0b5b249fc284209acf}\label{tesseract__urdf__common__unit_8h_a5e86931e5f253f0b5b249fc284209acf}} 
+\index{tesseract\_urdf\_common\_unit.h@{tesseract\_urdf\_common\_unit.h}!runTest@{runTest}}
+\index{runTest@{runTest}!tesseract\_urdf\_common\_unit.h@{tesseract\_urdf\_common\_unit.h}}
+\doxysubsubsection{\texorpdfstring{runTest()}{runTest()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily template$<$typename Element\+Type $>$ \\
+\mbox{\hyperlink{classtesseract__common_1_1StatusCode_a2b285106bd9f4963d1696b9696dbaf5f}{tesseract\+\_\+common\+::\+Status\+Code\+::\+Ptr}} run\+Test (\begin{DoxyParamCaption}\item[{Element\+Type \&}]{type,  }\item[{const std\+::string \&}]{xml\+\_\+string,  }\item[{const std\+::string \&}]{element\+\_\+name,  }\item[{const \mbox{\hyperlink{classtesseract__scene__graph_1_1ResourceLocator_a64ddb0339eae8885128e399f1275cf80}{tesseract\+\_\+scene\+\_\+graph\+::\+Resource\+Locator\+::\+Ptr}} \&}]{locator,  }\item[{std\+::unordered\+\_\+map$<$ std\+::string, \mbox{\hyperlink{classtesseract__scene__graph_1_1Material_a9d68bd33aa85035e3b291c13d6ae7a98}{tesseract\+\_\+scene\+\_\+graph\+::\+Material\+::\+Ptr}} $>$ \&}]{available\+\_\+materials,  }\item[{const int}]{version }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{tesseract__urdf__common__unit_8h_a6146e867fb7d02eaf165828ae0a2c1b9}\label{tesseract__urdf__common__unit_8h_a6146e867fb7d02eaf165828ae0a2c1b9}} 
+\index{tesseract\_urdf\_common\_unit.h@{tesseract\_urdf\_common\_unit.h}!runTest@{runTest}}
+\index{runTest@{runTest}!tesseract\_urdf\_common\_unit.h@{tesseract\_urdf\_common\_unit.h}}
+\doxysubsubsection{\texorpdfstring{runTest()}{runTest()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily template$<$typename Element\+Type $>$ \\
+\mbox{\hyperlink{classtesseract__common_1_1StatusCode_a2b285106bd9f4963d1696b9696dbaf5f}{tesseract\+\_\+common\+::\+Status\+Code\+::\+Ptr}} run\+Test (\begin{DoxyParamCaption}\item[{Element\+Type \&}]{type,  }\item[{const std\+::string \&}]{xml\+\_\+string,  }\item[{const std\+::string \&}]{element\+\_\+name,  }\item[{std\+::unordered\+\_\+map$<$ std\+::string, \mbox{\hyperlink{classtesseract__scene__graph_1_1Material_a9d68bd33aa85035e3b291c13d6ae7a98}{tesseract\+\_\+scene\+\_\+graph\+::\+Material\+::\+Ptr}} $>$ \&}]{available\+\_\+materials,  }\item[{const int}]{version,  }\item[{const bool}]{visual }\end{DoxyParamCaption})}
+

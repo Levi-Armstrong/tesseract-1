@@ -1,0 +1,182 @@
+\hypertarget{classtesseract__geometry_1_1Plane}{}\doxysection{tesseract\+\_\+geometry\+::Plane Class Reference}
+\label{classtesseract__geometry_1_1Plane}\index{tesseract\_geometry::Plane@{tesseract\_geometry::Plane}}
+
+
+{\ttfamily \#include $<$plane.\+h$>$}
+
+Inheritance diagram for tesseract\+\_\+geometry\+::Plane\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classtesseract__geometry_1_1Plane}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classtesseract__geometry_1_1Plane_a98f7d57e2ffc6722be729dda1880c607}{Ptr}} = std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classtesseract__geometry_1_1Plane}{Plane}} $>$
+\item 
+using \mbox{\hyperlink{classtesseract__geometry_1_1Plane_adf8d58c9a8d3b0cb962e807d8ef2d428}{Const\+Ptr}} = std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{classtesseract__geometry_1_1Plane}{Plane}} $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtesseract__geometry_1_1Plane_af20287b853394e752ea6233363c3b1e1}{Plane}} (double a, double b, double c, double d)
+\item 
+\mbox{\hyperlink{classtesseract__geometry_1_1Plane_ad27c4e4b97f8b5933fa5fa40d46ff3ba}{$\sim$\+Plane}} () override=default
+\item 
+\mbox{\hyperlink{classtesseract__geometry_1_1Plane_a82190b00efeed412fc102d2fe6351bb2}{Plane}} (const \mbox{\hyperlink{classtesseract__geometry_1_1Plane}{Plane}} \&)=delete
+\item 
+\mbox{\hyperlink{classtesseract__geometry_1_1Plane}{Plane}} \& \mbox{\hyperlink{classtesseract__geometry_1_1Plane_a108e434ad124c92d0cf83eee6d7d2275}{operator=}} (const \mbox{\hyperlink{classtesseract__geometry_1_1Plane}{Plane}} \&)=delete
+\item 
+\mbox{\hyperlink{classtesseract__geometry_1_1Plane_af8e8f7886f0e1e9a7bc097af00cf7a56}{Plane}} (\mbox{\hyperlink{classtesseract__geometry_1_1Plane}{Plane}} \&\&)=delete
+\item 
+\mbox{\hyperlink{classtesseract__geometry_1_1Plane}{Plane}} \& \mbox{\hyperlink{classtesseract__geometry_1_1Plane_a1fabf121c0e4d566c7c564a50a80a14f}{operator=}} (\mbox{\hyperlink{classtesseract__geometry_1_1Plane}{Plane}} \&\&)=delete
+\item 
+double \mbox{\hyperlink{classtesseract__geometry_1_1Plane_a6f1ff19b59116602fd9971cfaac4a6b5}{getA}} () const
+\item 
+double \mbox{\hyperlink{classtesseract__geometry_1_1Plane_a50983fedbd7f43ce23ad3241b4cd03fc}{getB}} () const
+\item 
+double \mbox{\hyperlink{classtesseract__geometry_1_1Plane_ac0dae2b2c6a5a1174d02426a1c994ffd}{getC}} () const
+\item 
+double \mbox{\hyperlink{classtesseract__geometry_1_1Plane_a6b01ed126f677e60d351a9807bb3d5dd}{getD}} () const
+\item 
+\mbox{\hyperlink{classtesseract__geometry_1_1Geometry_acd91c55fb9604ed374446c029b6f2d08}{Geometry\+::\+Ptr}} \mbox{\hyperlink{classtesseract__geometry_1_1Plane_a54eeaf267bd2b1c806786c37f33782af}{clone}} () const override
+\begin{DoxyCompactList}\small\item\em Create a copy of this shape. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{classtesseract__geometry_1_1Plane_a2afce1c120ae3fabb48a45744ed6089d}{a\+\_\+}}
+\item 
+double \mbox{\hyperlink{classtesseract__geometry_1_1Plane_ab77961eee6949733c05375ebcbd9210c}{b\+\_\+}}
+\item 
+double \mbox{\hyperlink{classtesseract__geometry_1_1Plane_af0b631cb98eb1975c6f1760ca12b4f40}{c\+\_\+}}
+\item 
+double \mbox{\hyperlink{classtesseract__geometry_1_1Plane_aefb45ce9be7f2bbecba37713eb169381}{d\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classtesseract__geometry_1_1Plane_adf8d58c9a8d3b0cb962e807d8ef2d428}\label{classtesseract__geometry_1_1Plane_adf8d58c9a8d3b0cb962e807d8ef2d428}} 
+\index{tesseract\_geometry::Plane@{tesseract\_geometry::Plane}!ConstPtr@{ConstPtr}}
+\index{ConstPtr@{ConstPtr}!tesseract\_geometry::Plane@{tesseract\_geometry::Plane}}
+\doxysubsubsection{\texorpdfstring{ConstPtr}{ConstPtr}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classtesseract__geometry_1_1Plane_adf8d58c9a8d3b0cb962e807d8ef2d428}{tesseract\+\_\+geometry\+::\+Plane\+::\+Const\+Ptr}} =  std\+::shared\+\_\+ptr$<$const \mbox{\hyperlink{classtesseract__geometry_1_1Plane}{Plane}}$>$}
+
+\mbox{\Hypertarget{classtesseract__geometry_1_1Plane_a98f7d57e2ffc6722be729dda1880c607}\label{classtesseract__geometry_1_1Plane_a98f7d57e2ffc6722be729dda1880c607}} 
+\index{tesseract\_geometry::Plane@{tesseract\_geometry::Plane}!Ptr@{Ptr}}
+\index{Ptr@{Ptr}!tesseract\_geometry::Plane@{tesseract\_geometry::Plane}}
+\doxysubsubsection{\texorpdfstring{Ptr}{Ptr}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classtesseract__geometry_1_1Plane_a98f7d57e2ffc6722be729dda1880c607}{tesseract\+\_\+geometry\+::\+Plane\+::\+Ptr}} =  std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classtesseract__geometry_1_1Plane}{Plane}}$>$}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtesseract__geometry_1_1Plane_af20287b853394e752ea6233363c3b1e1}\label{classtesseract__geometry_1_1Plane_af20287b853394e752ea6233363c3b1e1}} 
+\index{tesseract\_geometry::Plane@{tesseract\_geometry::Plane}!Plane@{Plane}}
+\index{Plane@{Plane}!tesseract\_geometry::Plane@{tesseract\_geometry::Plane}}
+\doxysubsubsection{\texorpdfstring{Plane()}{Plane()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily tesseract\+\_\+geometry\+::\+Plane\+::\+Plane (\begin{DoxyParamCaption}\item[{double}]{a,  }\item[{double}]{b,  }\item[{double}]{c,  }\item[{double}]{d }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classtesseract__geometry_1_1Plane_ad27c4e4b97f8b5933fa5fa40d46ff3ba}\label{classtesseract__geometry_1_1Plane_ad27c4e4b97f8b5933fa5fa40d46ff3ba}} 
+\index{tesseract\_geometry::Plane@{tesseract\_geometry::Plane}!````~Plane@{$\sim$Plane}}
+\index{````~Plane@{$\sim$Plane}!tesseract\_geometry::Plane@{tesseract\_geometry::Plane}}
+\doxysubsubsection{\texorpdfstring{$\sim$Plane()}{~Plane()}}
+{\footnotesize\ttfamily tesseract\+\_\+geometry\+::\+Plane\+::$\sim$\+Plane (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [default]}}
+
+\mbox{\Hypertarget{classtesseract__geometry_1_1Plane_a82190b00efeed412fc102d2fe6351bb2}\label{classtesseract__geometry_1_1Plane_a82190b00efeed412fc102d2fe6351bb2}} 
+\index{tesseract\_geometry::Plane@{tesseract\_geometry::Plane}!Plane@{Plane}}
+\index{Plane@{Plane}!tesseract\_geometry::Plane@{tesseract\_geometry::Plane}}
+\doxysubsubsection{\texorpdfstring{Plane()}{Plane()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily tesseract\+\_\+geometry\+::\+Plane\+::\+Plane (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtesseract__geometry_1_1Plane}{Plane}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classtesseract__geometry_1_1Plane_af8e8f7886f0e1e9a7bc097af00cf7a56}\label{classtesseract__geometry_1_1Plane_af8e8f7886f0e1e9a7bc097af00cf7a56}} 
+\index{tesseract\_geometry::Plane@{tesseract\_geometry::Plane}!Plane@{Plane}}
+\index{Plane@{Plane}!tesseract\_geometry::Plane@{tesseract\_geometry::Plane}}
+\doxysubsubsection{\texorpdfstring{Plane()}{Plane()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily tesseract\+\_\+geometry\+::\+Plane\+::\+Plane (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtesseract__geometry_1_1Plane}{Plane}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtesseract__geometry_1_1Plane_a54eeaf267bd2b1c806786c37f33782af}\label{classtesseract__geometry_1_1Plane_a54eeaf267bd2b1c806786c37f33782af}} 
+\index{tesseract\_geometry::Plane@{tesseract\_geometry::Plane}!clone@{clone}}
+\index{clone@{clone}!tesseract\_geometry::Plane@{tesseract\_geometry::Plane}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__geometry_1_1Geometry_acd91c55fb9604ed374446c029b6f2d08}{Geometry\+::\+Ptr}} tesseract\+\_\+geometry\+::\+Plane\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Create a copy of this shape. 
+
+
+
+Implements \mbox{\hyperlink{classtesseract__geometry_1_1Geometry_ae8e12b3ae80b55eff558ce4feea1efcd}{tesseract\+\_\+geometry\+::\+Geometry}}.
+
+\mbox{\Hypertarget{classtesseract__geometry_1_1Plane_a6f1ff19b59116602fd9971cfaac4a6b5}\label{classtesseract__geometry_1_1Plane_a6f1ff19b59116602fd9971cfaac4a6b5}} 
+\index{tesseract\_geometry::Plane@{tesseract\_geometry::Plane}!getA@{getA}}
+\index{getA@{getA}!tesseract\_geometry::Plane@{tesseract\_geometry::Plane}}
+\doxysubsubsection{\texorpdfstring{getA()}{getA()}}
+{\footnotesize\ttfamily double tesseract\+\_\+geometry\+::\+Plane\+::getA (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classtesseract__geometry_1_1Plane_a50983fedbd7f43ce23ad3241b4cd03fc}\label{classtesseract__geometry_1_1Plane_a50983fedbd7f43ce23ad3241b4cd03fc}} 
+\index{tesseract\_geometry::Plane@{tesseract\_geometry::Plane}!getB@{getB}}
+\index{getB@{getB}!tesseract\_geometry::Plane@{tesseract\_geometry::Plane}}
+\doxysubsubsection{\texorpdfstring{getB()}{getB()}}
+{\footnotesize\ttfamily double tesseract\+\_\+geometry\+::\+Plane\+::getB (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classtesseract__geometry_1_1Plane_ac0dae2b2c6a5a1174d02426a1c994ffd}\label{classtesseract__geometry_1_1Plane_ac0dae2b2c6a5a1174d02426a1c994ffd}} 
+\index{tesseract\_geometry::Plane@{tesseract\_geometry::Plane}!getC@{getC}}
+\index{getC@{getC}!tesseract\_geometry::Plane@{tesseract\_geometry::Plane}}
+\doxysubsubsection{\texorpdfstring{getC()}{getC()}}
+{\footnotesize\ttfamily double tesseract\+\_\+geometry\+::\+Plane\+::getC (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classtesseract__geometry_1_1Plane_a6b01ed126f677e60d351a9807bb3d5dd}\label{classtesseract__geometry_1_1Plane_a6b01ed126f677e60d351a9807bb3d5dd}} 
+\index{tesseract\_geometry::Plane@{tesseract\_geometry::Plane}!getD@{getD}}
+\index{getD@{getD}!tesseract\_geometry::Plane@{tesseract\_geometry::Plane}}
+\doxysubsubsection{\texorpdfstring{getD()}{getD()}}
+{\footnotesize\ttfamily double tesseract\+\_\+geometry\+::\+Plane\+::getD (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classtesseract__geometry_1_1Plane_a108e434ad124c92d0cf83eee6d7d2275}\label{classtesseract__geometry_1_1Plane_a108e434ad124c92d0cf83eee6d7d2275}} 
+\index{tesseract\_geometry::Plane@{tesseract\_geometry::Plane}!operator=@{operator=}}
+\index{operator=@{operator=}!tesseract\_geometry::Plane@{tesseract\_geometry::Plane}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__geometry_1_1Plane}{Plane}}\& tesseract\+\_\+geometry\+::\+Plane\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtesseract__geometry_1_1Plane}{Plane}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classtesseract__geometry_1_1Plane_a1fabf121c0e4d566c7c564a50a80a14f}\label{classtesseract__geometry_1_1Plane_a1fabf121c0e4d566c7c564a50a80a14f}} 
+\index{tesseract\_geometry::Plane@{tesseract\_geometry::Plane}!operator=@{operator=}}
+\index{operator=@{operator=}!tesseract\_geometry::Plane@{tesseract\_geometry::Plane}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__geometry_1_1Plane}{Plane}}\& tesseract\+\_\+geometry\+::\+Plane\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtesseract__geometry_1_1Plane}{Plane}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classtesseract__geometry_1_1Plane_a2afce1c120ae3fabb48a45744ed6089d}\label{classtesseract__geometry_1_1Plane_a2afce1c120ae3fabb48a45744ed6089d}} 
+\index{tesseract\_geometry::Plane@{tesseract\_geometry::Plane}!a\_@{a\_}}
+\index{a\_@{a\_}!tesseract\_geometry::Plane@{tesseract\_geometry::Plane}}
+\doxysubsubsection{\texorpdfstring{a\_}{a\_}}
+{\footnotesize\ttfamily double tesseract\+\_\+geometry\+::\+Plane\+::a\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classtesseract__geometry_1_1Plane_ab77961eee6949733c05375ebcbd9210c}\label{classtesseract__geometry_1_1Plane_ab77961eee6949733c05375ebcbd9210c}} 
+\index{tesseract\_geometry::Plane@{tesseract\_geometry::Plane}!b\_@{b\_}}
+\index{b\_@{b\_}!tesseract\_geometry::Plane@{tesseract\_geometry::Plane}}
+\doxysubsubsection{\texorpdfstring{b\_}{b\_}}
+{\footnotesize\ttfamily double tesseract\+\_\+geometry\+::\+Plane\+::b\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classtesseract__geometry_1_1Plane_af0b631cb98eb1975c6f1760ca12b4f40}\label{classtesseract__geometry_1_1Plane_af0b631cb98eb1975c6f1760ca12b4f40}} 
+\index{tesseract\_geometry::Plane@{tesseract\_geometry::Plane}!c\_@{c\_}}
+\index{c\_@{c\_}!tesseract\_geometry::Plane@{tesseract\_geometry::Plane}}
+\doxysubsubsection{\texorpdfstring{c\_}{c\_}}
+{\footnotesize\ttfamily double tesseract\+\_\+geometry\+::\+Plane\+::c\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classtesseract__geometry_1_1Plane_aefb45ce9be7f2bbecba37713eb169381}\label{classtesseract__geometry_1_1Plane_aefb45ce9be7f2bbecba37713eb169381}} 
+\index{tesseract\_geometry::Plane@{tesseract\_geometry::Plane}!d\_@{d\_}}
+\index{d\_@{d\_}!tesseract\_geometry::Plane@{tesseract\_geometry::Plane}}
+\doxysubsubsection{\texorpdfstring{d\_}{d\_}}
+{\footnotesize\ttfamily double tesseract\+\_\+geometry\+::\+Plane\+::d\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+tesseract/tesseract\+\_\+geometry/include/tesseract\+\_\+geometry/impl/\mbox{\hyperlink{plane_8h}{plane.\+h}}\end{DoxyCompactItemize}

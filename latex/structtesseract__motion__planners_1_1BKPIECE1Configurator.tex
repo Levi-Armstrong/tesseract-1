@@ -1,0 +1,95 @@
+\hypertarget{structtesseract__motion__planners_1_1BKPIECE1Configurator}{}\doxysection{tesseract\+\_\+motion\+\_\+planners\+::B\+K\+P\+I\+E\+C\+E1\+Configurator Struct Reference}
+\label{structtesseract__motion__planners_1_1BKPIECE1Configurator}\index{tesseract\_motion\_planners::BKPIECE1Configurator@{tesseract\_motion\_planners::BKPIECE1Configurator}}
+
+
+{\ttfamily \#include $<$ompl\+\_\+planner\+\_\+configurator.\+h$>$}
+
+Inheritance diagram for tesseract\+\_\+motion\+\_\+planners\+::B\+K\+P\+I\+E\+C\+E1\+Configurator\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{structtesseract__motion__planners_1_1BKPIECE1Configurator}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+ompl\+::base\+::\+Planner\+Ptr \mbox{\hyperlink{structtesseract__motion__planners_1_1BKPIECE1Configurator_a7280f8164953893a30f3703a5d7f6256}{create}} (ompl\+::base\+::\+Space\+Information\+Ptr si) const override
+\begin{DoxyCompactList}\small\item\em Create the planner. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{structtesseract__motion__planners_1_1BKPIECE1Configurator_a24c846157317c2778875b2ed8dbf19c0}{range}} = 0
+\begin{DoxyCompactList}\small\item\em Max motion added to tree. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{structtesseract__motion__planners_1_1BKPIECE1Configurator_a2b7f8424962d986a309bcb9878b569f9}{border\+\_\+fraction}} = 0.\+9
+\begin{DoxyCompactList}\small\item\em Fraction of time focused on boarder (0.\+0,1.\mbox{]}. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{structtesseract__motion__planners_1_1BKPIECE1Configurator_aebfa2859a99a4ee1d69f3bb58a378ceb}{failed\+\_\+expansion\+\_\+score\+\_\+factor}} = 0.\+5
+\begin{DoxyCompactList}\small\item\em When extending motion fails, scale score by factor. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{structtesseract__motion__planners_1_1BKPIECE1Configurator_ae57e631bb487a614889c524506f28799}{min\+\_\+valid\+\_\+path\+\_\+fraction}} = 0.\+5
+\begin{DoxyCompactList}\small\item\em Accept partially valid moves above fraction. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structtesseract__motion__planners_1_1BKPIECE1Configurator_a7280f8164953893a30f3703a5d7f6256}\label{structtesseract__motion__planners_1_1BKPIECE1Configurator_a7280f8164953893a30f3703a5d7f6256}} 
+\index{tesseract\_motion\_planners::BKPIECE1Configurator@{tesseract\_motion\_planners::BKPIECE1Configurator}!create@{create}}
+\index{create@{create}!tesseract\_motion\_planners::BKPIECE1Configurator@{tesseract\_motion\_planners::BKPIECE1Configurator}}
+\doxysubsubsection{\texorpdfstring{create()}{create()}}
+{\footnotesize\ttfamily ompl\+::base\+::\+Planner\+Ptr tesseract\+\_\+motion\+\_\+planners\+::\+B\+K\+P\+I\+E\+C\+E1\+Configurator\+::create (\begin{DoxyParamCaption}\item[{ompl\+::base\+::\+Space\+Information\+Ptr}]{si }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Create the planner. 
+
+
+
+Implements \mbox{\hyperlink{structtesseract__motion__planners_1_1OMPLPlannerConfigurator_a8f1cf1e97d6b3c43ffa0cc46564d550b}{tesseract\+\_\+motion\+\_\+planners\+::\+O\+M\+P\+L\+Planner\+Configurator}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structtesseract__motion__planners_1_1BKPIECE1Configurator_a2b7f8424962d986a309bcb9878b569f9}\label{structtesseract__motion__planners_1_1BKPIECE1Configurator_a2b7f8424962d986a309bcb9878b569f9}} 
+\index{tesseract\_motion\_planners::BKPIECE1Configurator@{tesseract\_motion\_planners::BKPIECE1Configurator}!border\_fraction@{border\_fraction}}
+\index{border\_fraction@{border\_fraction}!tesseract\_motion\_planners::BKPIECE1Configurator@{tesseract\_motion\_planners::BKPIECE1Configurator}}
+\doxysubsubsection{\texorpdfstring{border\_fraction}{border\_fraction}}
+{\footnotesize\ttfamily double tesseract\+\_\+motion\+\_\+planners\+::\+B\+K\+P\+I\+E\+C\+E1\+Configurator\+::border\+\_\+fraction = 0.\+9}
+
+
+
+Fraction of time focused on boarder (0.\+0,1.\mbox{]}. 
+
+\mbox{\Hypertarget{structtesseract__motion__planners_1_1BKPIECE1Configurator_aebfa2859a99a4ee1d69f3bb58a378ceb}\label{structtesseract__motion__planners_1_1BKPIECE1Configurator_aebfa2859a99a4ee1d69f3bb58a378ceb}} 
+\index{tesseract\_motion\_planners::BKPIECE1Configurator@{tesseract\_motion\_planners::BKPIECE1Configurator}!failed\_expansion\_score\_factor@{failed\_expansion\_score\_factor}}
+\index{failed\_expansion\_score\_factor@{failed\_expansion\_score\_factor}!tesseract\_motion\_planners::BKPIECE1Configurator@{tesseract\_motion\_planners::BKPIECE1Configurator}}
+\doxysubsubsection{\texorpdfstring{failed\_expansion\_score\_factor}{failed\_expansion\_score\_factor}}
+{\footnotesize\ttfamily double tesseract\+\_\+motion\+\_\+planners\+::\+B\+K\+P\+I\+E\+C\+E1\+Configurator\+::failed\+\_\+expansion\+\_\+score\+\_\+factor = 0.\+5}
+
+
+
+When extending motion fails, scale score by factor. 
+
+\mbox{\Hypertarget{structtesseract__motion__planners_1_1BKPIECE1Configurator_ae57e631bb487a614889c524506f28799}\label{structtesseract__motion__planners_1_1BKPIECE1Configurator_ae57e631bb487a614889c524506f28799}} 
+\index{tesseract\_motion\_planners::BKPIECE1Configurator@{tesseract\_motion\_planners::BKPIECE1Configurator}!min\_valid\_path\_fraction@{min\_valid\_path\_fraction}}
+\index{min\_valid\_path\_fraction@{min\_valid\_path\_fraction}!tesseract\_motion\_planners::BKPIECE1Configurator@{tesseract\_motion\_planners::BKPIECE1Configurator}}
+\doxysubsubsection{\texorpdfstring{min\_valid\_path\_fraction}{min\_valid\_path\_fraction}}
+{\footnotesize\ttfamily double tesseract\+\_\+motion\+\_\+planners\+::\+B\+K\+P\+I\+E\+C\+E1\+Configurator\+::min\+\_\+valid\+\_\+path\+\_\+fraction = 0.\+5}
+
+
+
+Accept partially valid moves above fraction. 
+
+\mbox{\Hypertarget{structtesseract__motion__planners_1_1BKPIECE1Configurator_a24c846157317c2778875b2ed8dbf19c0}\label{structtesseract__motion__planners_1_1BKPIECE1Configurator_a24c846157317c2778875b2ed8dbf19c0}} 
+\index{tesseract\_motion\_planners::BKPIECE1Configurator@{tesseract\_motion\_planners::BKPIECE1Configurator}!range@{range}}
+\index{range@{range}!tesseract\_motion\_planners::BKPIECE1Configurator@{tesseract\_motion\_planners::BKPIECE1Configurator}}
+\doxysubsubsection{\texorpdfstring{range}{range}}
+{\footnotesize\ttfamily double tesseract\+\_\+motion\+\_\+planners\+::\+B\+K\+P\+I\+E\+C\+E1\+Configurator\+::range = 0}
+
+
+
+Max motion added to tree. 
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+tesseract/tesseract\+\_\+planning/tesseract\+\_\+motion\+\_\+planners/include/tesseract\+\_\+motion\+\_\+planners/ompl/\mbox{\hyperlink{ompl__planner__configurator_8h}{ompl\+\_\+planner\+\_\+configurator.\+h}}\item 
+tesseract/tesseract\+\_\+planning/tesseract\+\_\+motion\+\_\+planners/src/ompl/\mbox{\hyperlink{ompl__planner__configurator_8cpp}{ompl\+\_\+planner\+\_\+configurator.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,63 @@
+\hypertarget{namespacetesseract__process__planners}{}\doxysection{tesseract\+\_\+process\+\_\+planners Namespace Reference}
+\label{namespacetesseract__process__planners}\index{tesseract\_process\_planners@{tesseract\_process\_planners}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classtesseract__process__planners_1_1AxialApproachGenerator}{Axial\+Approach\+Generator}}
+\item 
+class \mbox{\hyperlink{classtesseract__process__planners_1_1AxialDepartureGenerator}{Axial\+Departure\+Generator}}
+\item 
+class \mbox{\hyperlink{classtesseract__process__planners_1_1ExtensionApproachGenerator}{Extension\+Approach\+Generator}}
+\begin{DoxyCompactList}\small\item\em The \mbox{\hyperlink{classtesseract__process__planners_1_1ExtensionApproachGenerator}{Extension\+Approach\+Generator}} class For a series of waypoints that progresses along either the positive or negative x-\/axis of the waypoints, this class generates an extension at the start of that path. A positive X-\/direction in the supplied vector will automatically be transformed to align with the direction the path will travel, reducing complexity of calling code for alternating paths. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classtesseract__process__planners_1_1ExtensionDepartureGenerator}{Extension\+Departure\+Generator}}
+\begin{DoxyCompactList}\small\item\em The \mbox{\hyperlink{classtesseract__process__planners_1_1ExtensionDepartureGenerator}{Extension\+Departure\+Generator}} class For a series of waypoints that progresses along either the positive or negative x-\/axis of the waypoints, this class generates an extension at the end of that path. A positive X-\/direction in the supplied vector will automatically be transformed to align with the direction the path was traveling, reducing complexity of calling code for alternating paths. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classtesseract__process__planners_1_1LinearTransitionGenerator}{Linear\+Transition\+Generator}}
+\item 
+class \mbox{\hyperlink{classtesseract__process__planners_1_1PassthroughProcessGenerator}{Passthrough\+Process\+Generator}}
+\item 
+class \mbox{\hyperlink{classtesseract__process__planners_1_1PassthroughTransitionGenerator}{Passthrough\+Transition\+Generator}}
+\item 
+class \mbox{\hyperlink{structtesseract__process__planners_1_1ProcessDefinition}{Process\+Definition}}
+\item 
+class \mbox{\hyperlink{structtesseract__process__planners_1_1ProcessDefinitionConfig}{Process\+Definition\+Config}}
+\item 
+class \mbox{\hyperlink{classtesseract__process__planners_1_1ProcessDefinitionGenerator}{Process\+Definition\+Generator}}
+\item 
+struct \mbox{\hyperlink{structtesseract__process__planners_1_1ProcessPlan}{Process\+Plan}}
+\begin{DoxyCompactList}\small\item\em Is a result structure to hold the results generated based on the process definition. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classtesseract__process__planners_1_1ProcessPlanner}{Process\+Planner}}
+\begin{DoxyCompactList}\small\item\em An abstract class for implementing process planners. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classtesseract__process__planners_1_1ProcessSegmentDefinition}{Process\+Segment\+Definition}}
+\item 
+struct \mbox{\hyperlink{structtesseract__process__planners_1_1ProcessSegmentDefinitionConfig}{Process\+Segment\+Definition\+Config}}
+\begin{DoxyCompactList}\small\item\em The Process Segment Definition Configuration. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structtesseract__process__planners_1_1ProcessSegmentPlan}{Process\+Segment\+Plan}}
+\begin{DoxyCompactList}\small\item\em Is a results structure to hold the results generated based on the process segment definition. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classtesseract__process__planners_1_1ProcessStepGenerator}{Process\+Step\+Generator}}
+\item 
+struct \mbox{\hyperlink{structtesseract__process__planners_1_1ProcessTransitionDefinition}{Process\+Transition\+Definition}}
+\begin{DoxyCompactList}\small\item\em The \mbox{\hyperlink{structtesseract__process__planners_1_1ProcessTransitionDefinition}{Process\+Transition\+Definition}} struct which contains the waypoint data to allow moving between adjacent process segments. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classtesseract__process__planners_1_1ProcessTransitionGenerator}{Process\+Transition\+Generator}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structtesseract__process__planners_1_1ProcessDefinition}{Process\+Definition}} \mbox{\hyperlink{namespacetesseract__process__planners_a68eec516c37e233ed3156b9a5e4aae8e}{generate\+Process\+Definition}} (const \mbox{\hyperlink{structtesseract__process__planners_1_1ProcessDefinitionConfig}{Process\+Definition\+Config}} \&process\+\_\+config, const \mbox{\hyperlink{structtesseract__process__planners_1_1ProcessSegmentDefinitionConfig}{Process\+Segment\+Definition\+Config}} \&segment\+\_\+config)
+\item 
+\mbox{\hyperlink{structtesseract__process__planners_1_1ProcessDefinition}{Process\+Definition}} \mbox{\hyperlink{namespacetesseract__process__planners_a58b4c36a0c3394fc48f37644dde17001}{generate\+Process\+Definition}} (const \mbox{\hyperlink{structtesseract__process__planners_1_1ProcessDefinitionConfig}{Process\+Definition\+Config}} \&process\+\_\+config, const std\+::vector$<$ \mbox{\hyperlink{structtesseract__process__planners_1_1ProcessSegmentDefinitionConfig}{Process\+Segment\+Definition\+Config}} $>$ \&segment\+\_\+config)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacetesseract__process__planners_a68eec516c37e233ed3156b9a5e4aae8e}\label{namespacetesseract__process__planners_a68eec516c37e233ed3156b9a5e4aae8e}} 
+\index{tesseract\_process\_planners@{tesseract\_process\_planners}!generateProcessDefinition@{generateProcessDefinition}}
+\index{generateProcessDefinition@{generateProcessDefinition}!tesseract\_process\_planners@{tesseract\_process\_planners}}
+\doxysubsubsection{\texorpdfstring{generateProcessDefinition()}{generateProcessDefinition()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structtesseract__process__planners_1_1ProcessDefinition}{Process\+Definition}} tesseract\+\_\+process\+\_\+planners\+::generate\+Process\+Definition (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structtesseract__process__planners_1_1ProcessDefinitionConfig}{Process\+Definition\+Config}} \&}]{process\+\_\+config,  }\item[{const \mbox{\hyperlink{structtesseract__process__planners_1_1ProcessSegmentDefinitionConfig}{Process\+Segment\+Definition\+Config}} \&}]{segment\+\_\+config }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacetesseract__process__planners_a58b4c36a0c3394fc48f37644dde17001}\label{namespacetesseract__process__planners_a58b4c36a0c3394fc48f37644dde17001}} 
+\index{tesseract\_process\_planners@{tesseract\_process\_planners}!generateProcessDefinition@{generateProcessDefinition}}
+\index{generateProcessDefinition@{generateProcessDefinition}!tesseract\_process\_planners@{tesseract\_process\_planners}}
+\doxysubsubsection{\texorpdfstring{generateProcessDefinition()}{generateProcessDefinition()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structtesseract__process__planners_1_1ProcessDefinition}{Process\+Definition}} tesseract\+\_\+process\+\_\+planners\+::generate\+Process\+Definition (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structtesseract__process__planners_1_1ProcessDefinitionConfig}{Process\+Definition\+Config}} \&}]{process\+\_\+config,  }\item[{const std\+::vector$<$ \mbox{\hyperlink{structtesseract__process__planners_1_1ProcessSegmentDefinitionConfig}{Process\+Segment\+Definition\+Config}} $>$ \&}]{segment\+\_\+config }\end{DoxyParamCaption})}
+

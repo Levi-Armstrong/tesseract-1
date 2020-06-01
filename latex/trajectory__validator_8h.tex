@@ -1,0 +1,69 @@
+\hypertarget{trajectory__validator_8h}{}\doxysection{tesseract/tesseract\+\_\+planning/tesseract\+\_\+motion\+\_\+planners/include/tesseract\+\_\+motion\+\_\+planners/core/trajectory\+\_\+validator.h File Reference}
+\label{trajectory__validator_8h}\index{tesseract/tesseract\_planning/tesseract\_motion\_planners/include/tesseract\_motion\_planners/core/trajectory\_validator.h@{tesseract/tesseract\_planning/tesseract\_motion\_planners/include/tesseract\_motion\_planners/core/trajectory\_validator.h}}
+
+
+Trajectory Validator Class.  
+
+
+{\ttfamily \#include $<$type\+\_\+traits$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+collision/core/continuous\+\_\+contact\+\_\+manager.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+collision/core/discrete\+\_\+contact\+\_\+manager.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+environment/core/utils.\+h$>$}\newline
+{\ttfamily \#include $<$console\+\_\+bridge/console.\+h$>$}\newline
+{\ttfamily \#include $<$trajopt/utils.\+hpp$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classtesseract__motion__planners_1_1TrajectoryValidator}{tesseract\+\_\+motion\+\_\+planners\+::\+Trajectory\+Validator}}
+\begin{DoxyCompactList}\small\item\em Class for performing validation checks on a planned trajectory. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacetesseract__motion__planners}{tesseract\+\_\+motion\+\_\+planners}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespacetesseract__motion__planners_af35aeb2eaf87be9fb4063029a20968bc}{tesseract\+\_\+motion\+\_\+planners\+::\+Post\+Plan\+Check\+Type}} \+: unsigned \{ \mbox{\hyperlink{namespacetesseract__motion__planners_af35aeb2eaf87be9fb4063029a20968bcab50339a10e1de285ac99d4c3990b8693}{tesseract\+\_\+motion\+\_\+planners\+::\+Post\+Plan\+Check\+Type\+::\+N\+O\+NE}} = 0x1, 
+\mbox{\hyperlink{namespacetesseract__motion__planners_af35aeb2eaf87be9fb4063029a20968bca30c84608b01f6b29bf2d56bdf052e2f7}{tesseract\+\_\+motion\+\_\+planners\+::\+Post\+Plan\+Check\+Type\+::\+S\+I\+N\+G\+L\+E\+\_\+\+T\+I\+M\+E\+S\+T\+E\+P\+\_\+\+C\+O\+L\+L\+I\+S\+I\+ON}} = 0x2, 
+\mbox{\hyperlink{namespacetesseract__motion__planners_af35aeb2eaf87be9fb4063029a20968bca75d71be8578a76e5d8919dfb11db07f4}{tesseract\+\_\+motion\+\_\+planners\+::\+Post\+Plan\+Check\+Type\+::\+D\+I\+S\+C\+R\+E\+T\+E\+\_\+\+C\+O\+N\+T\+I\+N\+U\+O\+U\+S\+\_\+\+C\+O\+L\+L\+I\+S\+I\+ON}} = 0x4, 
+\mbox{\hyperlink{namespacetesseract__motion__planners_af35aeb2eaf87be9fb4063029a20968bcadd7abe14217c14466b518bdc7804f5d8}{tesseract\+\_\+motion\+\_\+planners\+::\+Post\+Plan\+Check\+Type\+::\+C\+A\+S\+T\+\_\+\+C\+O\+N\+T\+I\+N\+U\+O\+U\+S\+\_\+\+C\+O\+L\+L\+I\+S\+I\+ON}} = 0x8
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration of the types of validation checks that can be performed on a planned trajectory. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+Post\+Plan\+Check\+Type \mbox{\hyperlink{namespacetesseract__motion__planners_adc4867f4aa14d5086488435d9dbdf42f}{tesseract\+\_\+motion\+\_\+planners\+::operator$\vert$}} (Post\+Plan\+Check\+Type lhs, Post\+Plan\+Check\+Type rhs)
+\item 
+Post\+Plan\+Check\+Type \mbox{\hyperlink{namespacetesseract__motion__planners_a9aee176e3a05d34f387a80e1816056f7}{tesseract\+\_\+motion\+\_\+planners\+::operator\&}} (Post\+Plan\+Check\+Type lhs, Post\+Plan\+Check\+Type rhs)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Trajectory Validator Class. 
+
+\begin{DoxyAuthor}{Author}
+Michael Ripperger 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+March 16, 2020 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+T\+O\+DO 
+\end{DoxyVersion}
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000084}{Bug}}]No known bugs\end{DoxyRefDesc}
+
+
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2020, Southwest Research Institute
+\end{DoxyCopyright}
+\begin{DoxyParagraph}{License}
+Software License Agreement (Apache License) 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+Licensed under the Apache License, Version 2.\+0 (the \char`\"{}\+License\char`\"{}); you may not use this file except in compliance with the License. You may obtain a copy of the License at \href{http://www.apache.org/licenses/LICENSE-2.0}{\texttt{ http\+://www.\+apache.\+org/licenses/\+L\+I\+C\+E\+N\+S\+E-\/2.\+0}} 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \char`\"{}\+A\+S I\+S\char`\"{} B\+A\+S\+IS, W\+I\+T\+H\+O\+UT W\+A\+R\+R\+A\+N\+T\+I\+ES OR C\+O\+N\+D\+I\+T\+I\+O\+NS OF A\+NY K\+I\+ND, either express or implied. See the License for the specific language governing permissions and limitations under the License. 
+\end{DoxyParagraph}

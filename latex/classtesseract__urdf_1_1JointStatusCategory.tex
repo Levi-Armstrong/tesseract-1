@@ -1,0 +1,184 @@
+\hypertarget{classtesseract__urdf_1_1JointStatusCategory}{}\doxysection{tesseract\+\_\+urdf\+::Joint\+Status\+Category Class Reference}
+\label{classtesseract__urdf_1_1JointStatusCategory}\index{tesseract\_urdf::JointStatusCategory@{tesseract\_urdf::JointStatusCategory}}
+
+
+{\ttfamily \#include $<$joint.\+h$>$}
+
+Inheritance diagram for tesseract\+\_\+urdf\+::Joint\+Status\+Category\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classtesseract__urdf_1_1JointStatusCategory}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \newline
+\mbox{\hyperlink{classtesseract__urdf_1_1JointStatusCategory_a132449bcab669158c12fe12183c4af85ac4ca6c6a1e8bd75223abf69061f6e687}{Success}} = 0, 
+\mbox{\hyperlink{classtesseract__urdf_1_1JointStatusCategory_a132449bcab669158c12fe12183c4af85a7a52973e72d72f235270374191ed9ebc}{Error\+Missing\+Attribute\+Name}} = -\/1, 
+\mbox{\hyperlink{classtesseract__urdf_1_1JointStatusCategory_a132449bcab669158c12fe12183c4af85a06af7e8217f304abdc11e327b84e48f3}{Error\+Parsing\+Origin}} = -\/2, 
+\mbox{\hyperlink{classtesseract__urdf_1_1JointStatusCategory_a132449bcab669158c12fe12183c4af85af247c49c8e3044bda000d1289d051e8f}{Error\+Missing\+Parent\+Element}} = -\/3, 
+\newline
+\mbox{\hyperlink{classtesseract__urdf_1_1JointStatusCategory_a132449bcab669158c12fe12183c4af85ad0d75a3cb165bfbd618321667d2a538b}{Error\+Parsing\+Parent\+Attribute\+Link}} = -\/4, 
+\mbox{\hyperlink{classtesseract__urdf_1_1JointStatusCategory_a132449bcab669158c12fe12183c4af85a8d7963810f1277c6d9043d59f4b24aae}{Error\+Missing\+Child\+Element}} = -\/5, 
+\mbox{\hyperlink{classtesseract__urdf_1_1JointStatusCategory_a132449bcab669158c12fe12183c4af85adeba6e0914f2e6201443fa89c5cfeeee}{Error\+Parsing\+Child\+Attribute\+Link}} = -\/6, 
+\mbox{\hyperlink{classtesseract__urdf_1_1JointStatusCategory_a132449bcab669158c12fe12183c4af85aaf1d7ffc5c275e2ee3e4682105dd066d}{Error\+Missing\+Type\+Element}} = -\/7, 
+\newline
+\mbox{\hyperlink{classtesseract__urdf_1_1JointStatusCategory_a132449bcab669158c12fe12183c4af85a270fa698baf22316102c2965cf5af009}{Error\+Invalid\+Type}} = -\/8, 
+\mbox{\hyperlink{classtesseract__urdf_1_1JointStatusCategory_a132449bcab669158c12fe12183c4af85a36950a90c655a7e7da81f52f72739c65}{Error\+Missing\+Axis\+Element}} = -\/9, 
+\mbox{\hyperlink{classtesseract__urdf_1_1JointStatusCategory_a132449bcab669158c12fe12183c4af85a152793fe5466d32644324d181d281aa5}{Error\+Parsing\+Axis\+Attribute\+X\+YZ}} = -\/10, 
+\mbox{\hyperlink{classtesseract__urdf_1_1JointStatusCategory_a132449bcab669158c12fe12183c4af85a080c0c004dbb1d714159ce2e25bfd7dd}{Error\+Missing\+Limits\+Element}} = -\/11, 
+\newline
+\mbox{\hyperlink{classtesseract__urdf_1_1JointStatusCategory_a132449bcab669158c12fe12183c4af85a513c4311cb177fc6e0787b1d50510ab4}{Error\+Parsing\+Limits}} = -\/12, 
+\mbox{\hyperlink{classtesseract__urdf_1_1JointStatusCategory_a132449bcab669158c12fe12183c4af85abd7a366e59db7dff3fde70a79ba9d80c}{Error\+Parsing\+Safety\+Controller}} = -\/13, 
+\mbox{\hyperlink{classtesseract__urdf_1_1JointStatusCategory_a132449bcab669158c12fe12183c4af85a3e51a60ee44040a6f4097c1b473dc133}{Error\+Parsing\+Calibration}} = -\/14, 
+\mbox{\hyperlink{classtesseract__urdf_1_1JointStatusCategory_a132449bcab669158c12fe12183c4af85abb4075eb8fd1634a98143a77fc6c2a41}{Error\+Parsing\+Mimic}} = -\/15, 
+\newline
+\mbox{\hyperlink{classtesseract__urdf_1_1JointStatusCategory_a132449bcab669158c12fe12183c4af85a1c2c5411cb949684992082d3ef1a3ff0}{Error\+Parsing\+Dynamics}} = -\/16
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtesseract__urdf_1_1JointStatusCategory_aa09441d0034adbff20e0799f56691414}{Joint\+Status\+Category}} (std\+::string joint\+\_\+name=\char`\"{}\char`\"{})
+\item 
+const std\+::string \& \mbox{\hyperlink{classtesseract__urdf_1_1JointStatusCategory_a1076e9ea1b4c4eb587957ca0a0064fbd}{name}} () const noexcept override
+\item 
+std\+::string \mbox{\hyperlink{classtesseract__urdf_1_1JointStatusCategory_a385309fe2a9cae0b6b2fb85e9b49c051}{message}} (int code) const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classtesseract__urdf_1_1JointStatusCategory_a9df51a54b7a3b17347e31110dcbc2857}{name\+\_\+}}
+\item 
+std\+::string \mbox{\hyperlink{classtesseract__urdf_1_1JointStatusCategory_a698792b2350046f6625db738e845ffe8}{joint\+\_\+name\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classtesseract__urdf_1_1JointStatusCategory_a132449bcab669158c12fe12183c4af85}\label{classtesseract__urdf_1_1JointStatusCategory_a132449bcab669158c12fe12183c4af85}} 
+\doxysubsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily anonymous enum}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Success@{Success}!tesseract\_urdf::JointStatusCategory@{tesseract\_urdf::JointStatusCategory}}\index{tesseract\_urdf::JointStatusCategory@{tesseract\_urdf::JointStatusCategory}!Success@{Success}}}\mbox{\Hypertarget{classtesseract__urdf_1_1JointStatusCategory_a132449bcab669158c12fe12183c4af85ac4ca6c6a1e8bd75223abf69061f6e687}\label{classtesseract__urdf_1_1JointStatusCategory_a132449bcab669158c12fe12183c4af85ac4ca6c6a1e8bd75223abf69061f6e687}} 
+Success&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ErrorMissingAttributeName@{ErrorMissingAttributeName}!tesseract\_urdf::JointStatusCategory@{tesseract\_urdf::JointStatusCategory}}\index{tesseract\_urdf::JointStatusCategory@{tesseract\_urdf::JointStatusCategory}!ErrorMissingAttributeName@{ErrorMissingAttributeName}}}\mbox{\Hypertarget{classtesseract__urdf_1_1JointStatusCategory_a132449bcab669158c12fe12183c4af85a7a52973e72d72f235270374191ed9ebc}\label{classtesseract__urdf_1_1JointStatusCategory_a132449bcab669158c12fe12183c4af85a7a52973e72d72f235270374191ed9ebc}} 
+Error\+Missing\+Attribute\+Name&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ErrorParsingOrigin@{ErrorParsingOrigin}!tesseract\_urdf::JointStatusCategory@{tesseract\_urdf::JointStatusCategory}}\index{tesseract\_urdf::JointStatusCategory@{tesseract\_urdf::JointStatusCategory}!ErrorParsingOrigin@{ErrorParsingOrigin}}}\mbox{\Hypertarget{classtesseract__urdf_1_1JointStatusCategory_a132449bcab669158c12fe12183c4af85a06af7e8217f304abdc11e327b84e48f3}\label{classtesseract__urdf_1_1JointStatusCategory_a132449bcab669158c12fe12183c4af85a06af7e8217f304abdc11e327b84e48f3}} 
+Error\+Parsing\+Origin&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ErrorMissingParentElement@{ErrorMissingParentElement}!tesseract\_urdf::JointStatusCategory@{tesseract\_urdf::JointStatusCategory}}\index{tesseract\_urdf::JointStatusCategory@{tesseract\_urdf::JointStatusCategory}!ErrorMissingParentElement@{ErrorMissingParentElement}}}\mbox{\Hypertarget{classtesseract__urdf_1_1JointStatusCategory_a132449bcab669158c12fe12183c4af85af247c49c8e3044bda000d1289d051e8f}\label{classtesseract__urdf_1_1JointStatusCategory_a132449bcab669158c12fe12183c4af85af247c49c8e3044bda000d1289d051e8f}} 
+Error\+Missing\+Parent\+Element&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ErrorParsingParentAttributeLink@{ErrorParsingParentAttributeLink}!tesseract\_urdf::JointStatusCategory@{tesseract\_urdf::JointStatusCategory}}\index{tesseract\_urdf::JointStatusCategory@{tesseract\_urdf::JointStatusCategory}!ErrorParsingParentAttributeLink@{ErrorParsingParentAttributeLink}}}\mbox{\Hypertarget{classtesseract__urdf_1_1JointStatusCategory_a132449bcab669158c12fe12183c4af85ad0d75a3cb165bfbd618321667d2a538b}\label{classtesseract__urdf_1_1JointStatusCategory_a132449bcab669158c12fe12183c4af85ad0d75a3cb165bfbd618321667d2a538b}} 
+Error\+Parsing\+Parent\+Attribute\+Link&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ErrorMissingChildElement@{ErrorMissingChildElement}!tesseract\_urdf::JointStatusCategory@{tesseract\_urdf::JointStatusCategory}}\index{tesseract\_urdf::JointStatusCategory@{tesseract\_urdf::JointStatusCategory}!ErrorMissingChildElement@{ErrorMissingChildElement}}}\mbox{\Hypertarget{classtesseract__urdf_1_1JointStatusCategory_a132449bcab669158c12fe12183c4af85a8d7963810f1277c6d9043d59f4b24aae}\label{classtesseract__urdf_1_1JointStatusCategory_a132449bcab669158c12fe12183c4af85a8d7963810f1277c6d9043d59f4b24aae}} 
+Error\+Missing\+Child\+Element&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ErrorParsingChildAttributeLink@{ErrorParsingChildAttributeLink}!tesseract\_urdf::JointStatusCategory@{tesseract\_urdf::JointStatusCategory}}\index{tesseract\_urdf::JointStatusCategory@{tesseract\_urdf::JointStatusCategory}!ErrorParsingChildAttributeLink@{ErrorParsingChildAttributeLink}}}\mbox{\Hypertarget{classtesseract__urdf_1_1JointStatusCategory_a132449bcab669158c12fe12183c4af85adeba6e0914f2e6201443fa89c5cfeeee}\label{classtesseract__urdf_1_1JointStatusCategory_a132449bcab669158c12fe12183c4af85adeba6e0914f2e6201443fa89c5cfeeee}} 
+Error\+Parsing\+Child\+Attribute\+Link&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ErrorMissingTypeElement@{ErrorMissingTypeElement}!tesseract\_urdf::JointStatusCategory@{tesseract\_urdf::JointStatusCategory}}\index{tesseract\_urdf::JointStatusCategory@{tesseract\_urdf::JointStatusCategory}!ErrorMissingTypeElement@{ErrorMissingTypeElement}}}\mbox{\Hypertarget{classtesseract__urdf_1_1JointStatusCategory_a132449bcab669158c12fe12183c4af85aaf1d7ffc5c275e2ee3e4682105dd066d}\label{classtesseract__urdf_1_1JointStatusCategory_a132449bcab669158c12fe12183c4af85aaf1d7ffc5c275e2ee3e4682105dd066d}} 
+Error\+Missing\+Type\+Element&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ErrorInvalidType@{ErrorInvalidType}!tesseract\_urdf::JointStatusCategory@{tesseract\_urdf::JointStatusCategory}}\index{tesseract\_urdf::JointStatusCategory@{tesseract\_urdf::JointStatusCategory}!ErrorInvalidType@{ErrorInvalidType}}}\mbox{\Hypertarget{classtesseract__urdf_1_1JointStatusCategory_a132449bcab669158c12fe12183c4af85a270fa698baf22316102c2965cf5af009}\label{classtesseract__urdf_1_1JointStatusCategory_a132449bcab669158c12fe12183c4af85a270fa698baf22316102c2965cf5af009}} 
+Error\+Invalid\+Type&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ErrorMissingAxisElement@{ErrorMissingAxisElement}!tesseract\_urdf::JointStatusCategory@{tesseract\_urdf::JointStatusCategory}}\index{tesseract\_urdf::JointStatusCategory@{tesseract\_urdf::JointStatusCategory}!ErrorMissingAxisElement@{ErrorMissingAxisElement}}}\mbox{\Hypertarget{classtesseract__urdf_1_1JointStatusCategory_a132449bcab669158c12fe12183c4af85a36950a90c655a7e7da81f52f72739c65}\label{classtesseract__urdf_1_1JointStatusCategory_a132449bcab669158c12fe12183c4af85a36950a90c655a7e7da81f52f72739c65}} 
+Error\+Missing\+Axis\+Element&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ErrorParsingAxisAttributeXYZ@{ErrorParsingAxisAttributeXYZ}!tesseract\_urdf::JointStatusCategory@{tesseract\_urdf::JointStatusCategory}}\index{tesseract\_urdf::JointStatusCategory@{tesseract\_urdf::JointStatusCategory}!ErrorParsingAxisAttributeXYZ@{ErrorParsingAxisAttributeXYZ}}}\mbox{\Hypertarget{classtesseract__urdf_1_1JointStatusCategory_a132449bcab669158c12fe12183c4af85a152793fe5466d32644324d181d281aa5}\label{classtesseract__urdf_1_1JointStatusCategory_a132449bcab669158c12fe12183c4af85a152793fe5466d32644324d181d281aa5}} 
+Error\+Parsing\+Axis\+Attribute\+X\+YZ&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ErrorMissingLimitsElement@{ErrorMissingLimitsElement}!tesseract\_urdf::JointStatusCategory@{tesseract\_urdf::JointStatusCategory}}\index{tesseract\_urdf::JointStatusCategory@{tesseract\_urdf::JointStatusCategory}!ErrorMissingLimitsElement@{ErrorMissingLimitsElement}}}\mbox{\Hypertarget{classtesseract__urdf_1_1JointStatusCategory_a132449bcab669158c12fe12183c4af85a080c0c004dbb1d714159ce2e25bfd7dd}\label{classtesseract__urdf_1_1JointStatusCategory_a132449bcab669158c12fe12183c4af85a080c0c004dbb1d714159ce2e25bfd7dd}} 
+Error\+Missing\+Limits\+Element&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ErrorParsingLimits@{ErrorParsingLimits}!tesseract\_urdf::JointStatusCategory@{tesseract\_urdf::JointStatusCategory}}\index{tesseract\_urdf::JointStatusCategory@{tesseract\_urdf::JointStatusCategory}!ErrorParsingLimits@{ErrorParsingLimits}}}\mbox{\Hypertarget{classtesseract__urdf_1_1JointStatusCategory_a132449bcab669158c12fe12183c4af85a513c4311cb177fc6e0787b1d50510ab4}\label{classtesseract__urdf_1_1JointStatusCategory_a132449bcab669158c12fe12183c4af85a513c4311cb177fc6e0787b1d50510ab4}} 
+Error\+Parsing\+Limits&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ErrorParsingSafetyController@{ErrorParsingSafetyController}!tesseract\_urdf::JointStatusCategory@{tesseract\_urdf::JointStatusCategory}}\index{tesseract\_urdf::JointStatusCategory@{tesseract\_urdf::JointStatusCategory}!ErrorParsingSafetyController@{ErrorParsingSafetyController}}}\mbox{\Hypertarget{classtesseract__urdf_1_1JointStatusCategory_a132449bcab669158c12fe12183c4af85abd7a366e59db7dff3fde70a79ba9d80c}\label{classtesseract__urdf_1_1JointStatusCategory_a132449bcab669158c12fe12183c4af85abd7a366e59db7dff3fde70a79ba9d80c}} 
+Error\+Parsing\+Safety\+Controller&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ErrorParsingCalibration@{ErrorParsingCalibration}!tesseract\_urdf::JointStatusCategory@{tesseract\_urdf::JointStatusCategory}}\index{tesseract\_urdf::JointStatusCategory@{tesseract\_urdf::JointStatusCategory}!ErrorParsingCalibration@{ErrorParsingCalibration}}}\mbox{\Hypertarget{classtesseract__urdf_1_1JointStatusCategory_a132449bcab669158c12fe12183c4af85a3e51a60ee44040a6f4097c1b473dc133}\label{classtesseract__urdf_1_1JointStatusCategory_a132449bcab669158c12fe12183c4af85a3e51a60ee44040a6f4097c1b473dc133}} 
+Error\+Parsing\+Calibration&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ErrorParsingMimic@{ErrorParsingMimic}!tesseract\_urdf::JointStatusCategory@{tesseract\_urdf::JointStatusCategory}}\index{tesseract\_urdf::JointStatusCategory@{tesseract\_urdf::JointStatusCategory}!ErrorParsingMimic@{ErrorParsingMimic}}}\mbox{\Hypertarget{classtesseract__urdf_1_1JointStatusCategory_a132449bcab669158c12fe12183c4af85abb4075eb8fd1634a98143a77fc6c2a41}\label{classtesseract__urdf_1_1JointStatusCategory_a132449bcab669158c12fe12183c4af85abb4075eb8fd1634a98143a77fc6c2a41}} 
+Error\+Parsing\+Mimic&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ErrorParsingDynamics@{ErrorParsingDynamics}!tesseract\_urdf::JointStatusCategory@{tesseract\_urdf::JointStatusCategory}}\index{tesseract\_urdf::JointStatusCategory@{tesseract\_urdf::JointStatusCategory}!ErrorParsingDynamics@{ErrorParsingDynamics}}}\mbox{\Hypertarget{classtesseract__urdf_1_1JointStatusCategory_a132449bcab669158c12fe12183c4af85a1c2c5411cb949684992082d3ef1a3ff0}\label{classtesseract__urdf_1_1JointStatusCategory_a132449bcab669158c12fe12183c4af85a1c2c5411cb949684992082d3ef1a3ff0}} 
+Error\+Parsing\+Dynamics&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtesseract__urdf_1_1JointStatusCategory_aa09441d0034adbff20e0799f56691414}\label{classtesseract__urdf_1_1JointStatusCategory_aa09441d0034adbff20e0799f56691414}} 
+\index{tesseract\_urdf::JointStatusCategory@{tesseract\_urdf::JointStatusCategory}!JointStatusCategory@{JointStatusCategory}}
+\index{JointStatusCategory@{JointStatusCategory}!tesseract\_urdf::JointStatusCategory@{tesseract\_urdf::JointStatusCategory}}
+\doxysubsubsection{\texorpdfstring{JointStatusCategory()}{JointStatusCategory()}}
+{\footnotesize\ttfamily tesseract\+\_\+urdf\+::\+Joint\+Status\+Category\+::\+Joint\+Status\+Category (\begin{DoxyParamCaption}\item[{std\+::string}]{joint\+\_\+name = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtesseract__urdf_1_1JointStatusCategory_a385309fe2a9cae0b6b2fb85e9b49c051}\label{classtesseract__urdf_1_1JointStatusCategory_a385309fe2a9cae0b6b2fb85e9b49c051}} 
+\index{tesseract\_urdf::JointStatusCategory@{tesseract\_urdf::JointStatusCategory}!message@{message}}
+\index{message@{message}!tesseract\_urdf::JointStatusCategory@{tesseract\_urdf::JointStatusCategory}}
+\doxysubsubsection{\texorpdfstring{message()}{message()}}
+{\footnotesize\ttfamily std\+::string tesseract\+\_\+urdf\+::\+Joint\+Status\+Category\+::message (\begin{DoxyParamCaption}\item[{int}]{code }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classtesseract__common_1_1StatusCategory_a1b243ec0e046910ceac90403190b45ac}{tesseract\+\_\+common\+::\+Status\+Category}}.
+
+\mbox{\Hypertarget{classtesseract__urdf_1_1JointStatusCategory_a1076e9ea1b4c4eb587957ca0a0064fbd}\label{classtesseract__urdf_1_1JointStatusCategory_a1076e9ea1b4c4eb587957ca0a0064fbd}} 
+\index{tesseract\_urdf::JointStatusCategory@{tesseract\_urdf::JointStatusCategory}!name@{name}}
+\index{name@{name}!tesseract\_urdf::JointStatusCategory@{tesseract\_urdf::JointStatusCategory}}
+\doxysubsubsection{\texorpdfstring{name()}{name()}}
+{\footnotesize\ttfamily const std\+::string\& tesseract\+\_\+urdf\+::\+Joint\+Status\+Category\+::name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}, {\ttfamily [noexcept]}}
+
+
+
+Implements \mbox{\hyperlink{classtesseract__common_1_1StatusCategory_ae08466c99a1e92f904141e5a070382e5}{tesseract\+\_\+common\+::\+Status\+Category}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classtesseract__urdf_1_1JointStatusCategory_a698792b2350046f6625db738e845ffe8}\label{classtesseract__urdf_1_1JointStatusCategory_a698792b2350046f6625db738e845ffe8}} 
+\index{tesseract\_urdf::JointStatusCategory@{tesseract\_urdf::JointStatusCategory}!joint\_name\_@{joint\_name\_}}
+\index{joint\_name\_@{joint\_name\_}!tesseract\_urdf::JointStatusCategory@{tesseract\_urdf::JointStatusCategory}}
+\doxysubsubsection{\texorpdfstring{joint\_name\_}{joint\_name\_}}
+{\footnotesize\ttfamily std\+::string tesseract\+\_\+urdf\+::\+Joint\+Status\+Category\+::joint\+\_\+name\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classtesseract__urdf_1_1JointStatusCategory_a9df51a54b7a3b17347e31110dcbc2857}\label{classtesseract__urdf_1_1JointStatusCategory_a9df51a54b7a3b17347e31110dcbc2857}} 
+\index{tesseract\_urdf::JointStatusCategory@{tesseract\_urdf::JointStatusCategory}!name\_@{name\_}}
+\index{name\_@{name\_}!tesseract\_urdf::JointStatusCategory@{tesseract\_urdf::JointStatusCategory}}
+\doxysubsubsection{\texorpdfstring{name\_}{name\_}}
+{\footnotesize\ttfamily std\+::string tesseract\+\_\+urdf\+::\+Joint\+Status\+Category\+::name\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+tesseract/tesseract\+\_\+urdf/include/tesseract\+\_\+urdf/\mbox{\hyperlink{tesseract__urdf_2include_2tesseract__urdf_2joint_8h}{joint.\+h}}\end{DoxyCompactItemize}

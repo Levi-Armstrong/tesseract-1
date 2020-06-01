@@ -1,0 +1,123 @@
+\hypertarget{classtesseract__collision_1_1tesseract__collision__fcl_1_1FCLCollisionObjectWrapper}{}\doxysection{tesseract\+\_\+collision\+::tesseract\+\_\+collision\+\_\+fcl\+::F\+C\+L\+Collision\+Object\+Wrapper Class Reference}
+\label{classtesseract__collision_1_1tesseract__collision__fcl_1_1FCLCollisionObjectWrapper}\index{tesseract\_collision::tesseract\_collision\_fcl::FCLCollisionObjectWrapper@{tesseract\_collision::tesseract\_collision\_fcl::FCLCollisionObjectWrapper}}
+
+
+This is a wrapper around F\+CL Collision Object Class which allows you to expand the A\+A\+BB by the contact dist.  
+
+
+
+
+{\ttfamily \#include $<$fcl\+\_\+collision\+\_\+object\+\_\+wrapper.\+h$>$}
+
+Inheritance diagram for tesseract\+\_\+collision\+::tesseract\+\_\+collision\+\_\+fcl\+::F\+C\+L\+Collision\+Object\+Wrapper\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classtesseract__collision_1_1tesseract__collision__fcl_1_1FCLCollisionObjectWrapper}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtesseract__collision_1_1tesseract__collision__fcl_1_1FCLCollisionObjectWrapper_a3a93bbf0f099cbaddbb9b9400d8e3ab9}{F\+C\+L\+Collision\+Object\+Wrapper}} (const std\+::shared\+\_\+ptr$<$ fcl\+::\+Collision\+Geometry$<$ double $>$$>$ \&cgeom)
+\item 
+\mbox{\hyperlink{classtesseract__collision_1_1tesseract__collision__fcl_1_1FCLCollisionObjectWrapper_a9fa4a8692fc9f7fdf0af33b84a6dd3f0}{F\+C\+L\+Collision\+Object\+Wrapper}} (const std\+::shared\+\_\+ptr$<$ fcl\+::\+Collision\+Geometry$<$ double $>$$>$ \&cgeom, const fcl\+::\+Transform3$<$ double $>$ \&tf)
+\item 
+\mbox{\hyperlink{classtesseract__collision_1_1tesseract__collision__fcl_1_1FCLCollisionObjectWrapper_a2d73bcbbb448e053151ed95b655c5ecf}{F\+C\+L\+Collision\+Object\+Wrapper}} (const std\+::shared\+\_\+ptr$<$ fcl\+::\+Collision\+Geometry$<$ double $>$$>$ \&cgeom, const fcl\+::\+Matrix3$<$ double $>$ \&R, const fcl\+::\+Vector3$<$ double $>$ \&T)
+\item 
+void \mbox{\hyperlink{classtesseract__collision_1_1tesseract__collision__fcl_1_1FCLCollisionObjectWrapper_a20bc2ae95cddaf4bcefc9e7a31501833}{set\+Contact\+Distance\+Threshold}} (double contact\+\_\+distance)
+\begin{DoxyCompactList}\small\item\em Set the collision objects contact distance threshold. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classtesseract__collision_1_1tesseract__collision__fcl_1_1FCLCollisionObjectWrapper_afcb85ace1e52b93047335c11e5d4a4bc}{get\+Contact\+Distance\+Threshold}} () const
+\begin{DoxyCompactList}\small\item\em Get the collision objects contact distance threshold. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classtesseract__collision_1_1tesseract__collision__fcl_1_1FCLCollisionObjectWrapper_af606359addeed10e4fe4f6edfd1a444b}{update\+A\+A\+BB}} ()
+\begin{DoxyCompactList}\small\item\em Update the internal A\+A\+BB. This must be called instead of the base class compute\+A\+A\+B\+B(). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{classtesseract__collision_1_1tesseract__collision__fcl_1_1FCLCollisionObjectWrapper_ae00b5537297d2c4bfabfd6489648833f}{contact\+\_\+distance\+\_\+}} \{ 0 \}
+\begin{DoxyCompactList}\small\item\em The contact distance threshold. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This is a wrapper around F\+CL Collision Object Class which allows you to expand the A\+A\+BB by the contact dist. 
+
+This significantly improves performance when making distance requests if performing a contact tests type F\+I\+R\+ST. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtesseract__collision_1_1tesseract__collision__fcl_1_1FCLCollisionObjectWrapper_a3a93bbf0f099cbaddbb9b9400d8e3ab9}\label{classtesseract__collision_1_1tesseract__collision__fcl_1_1FCLCollisionObjectWrapper_a3a93bbf0f099cbaddbb9b9400d8e3ab9}} 
+\index{tesseract\_collision::tesseract\_collision\_fcl::FCLCollisionObjectWrapper@{tesseract\_collision::tesseract\_collision\_fcl::FCLCollisionObjectWrapper}!FCLCollisionObjectWrapper@{FCLCollisionObjectWrapper}}
+\index{FCLCollisionObjectWrapper@{FCLCollisionObjectWrapper}!tesseract\_collision::tesseract\_collision\_fcl::FCLCollisionObjectWrapper@{tesseract\_collision::tesseract\_collision\_fcl::FCLCollisionObjectWrapper}}
+\doxysubsubsection{\texorpdfstring{FCLCollisionObjectWrapper()}{FCLCollisionObjectWrapper()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily tesseract\+\_\+collision\+::tesseract\+\_\+collision\+\_\+fcl\+::\+F\+C\+L\+Collision\+Object\+Wrapper\+::\+F\+C\+L\+Collision\+Object\+Wrapper (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ fcl\+::\+Collision\+Geometry$<$ double $>$$>$ \&}]{cgeom }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classtesseract__collision_1_1tesseract__collision__fcl_1_1FCLCollisionObjectWrapper_a9fa4a8692fc9f7fdf0af33b84a6dd3f0}\label{classtesseract__collision_1_1tesseract__collision__fcl_1_1FCLCollisionObjectWrapper_a9fa4a8692fc9f7fdf0af33b84a6dd3f0}} 
+\index{tesseract\_collision::tesseract\_collision\_fcl::FCLCollisionObjectWrapper@{tesseract\_collision::tesseract\_collision\_fcl::FCLCollisionObjectWrapper}!FCLCollisionObjectWrapper@{FCLCollisionObjectWrapper}}
+\index{FCLCollisionObjectWrapper@{FCLCollisionObjectWrapper}!tesseract\_collision::tesseract\_collision\_fcl::FCLCollisionObjectWrapper@{tesseract\_collision::tesseract\_collision\_fcl::FCLCollisionObjectWrapper}}
+\doxysubsubsection{\texorpdfstring{FCLCollisionObjectWrapper()}{FCLCollisionObjectWrapper()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily tesseract\+\_\+collision\+::tesseract\+\_\+collision\+\_\+fcl\+::\+F\+C\+L\+Collision\+Object\+Wrapper\+::\+F\+C\+L\+Collision\+Object\+Wrapper (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ fcl\+::\+Collision\+Geometry$<$ double $>$$>$ \&}]{cgeom,  }\item[{const fcl\+::\+Transform3$<$ double $>$ \&}]{tf }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classtesseract__collision_1_1tesseract__collision__fcl_1_1FCLCollisionObjectWrapper_a2d73bcbbb448e053151ed95b655c5ecf}\label{classtesseract__collision_1_1tesseract__collision__fcl_1_1FCLCollisionObjectWrapper_a2d73bcbbb448e053151ed95b655c5ecf}} 
+\index{tesseract\_collision::tesseract\_collision\_fcl::FCLCollisionObjectWrapper@{tesseract\_collision::tesseract\_collision\_fcl::FCLCollisionObjectWrapper}!FCLCollisionObjectWrapper@{FCLCollisionObjectWrapper}}
+\index{FCLCollisionObjectWrapper@{FCLCollisionObjectWrapper}!tesseract\_collision::tesseract\_collision\_fcl::FCLCollisionObjectWrapper@{tesseract\_collision::tesseract\_collision\_fcl::FCLCollisionObjectWrapper}}
+\doxysubsubsection{\texorpdfstring{FCLCollisionObjectWrapper()}{FCLCollisionObjectWrapper()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily tesseract\+\_\+collision\+::tesseract\+\_\+collision\+\_\+fcl\+::\+F\+C\+L\+Collision\+Object\+Wrapper\+::\+F\+C\+L\+Collision\+Object\+Wrapper (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ fcl\+::\+Collision\+Geometry$<$ double $>$$>$ \&}]{cgeom,  }\item[{const fcl\+::\+Matrix3$<$ double $>$ \&}]{R,  }\item[{const fcl\+::\+Vector3$<$ double $>$ \&}]{T }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtesseract__collision_1_1tesseract__collision__fcl_1_1FCLCollisionObjectWrapper_afcb85ace1e52b93047335c11e5d4a4bc}\label{classtesseract__collision_1_1tesseract__collision__fcl_1_1FCLCollisionObjectWrapper_afcb85ace1e52b93047335c11e5d4a4bc}} 
+\index{tesseract\_collision::tesseract\_collision\_fcl::FCLCollisionObjectWrapper@{tesseract\_collision::tesseract\_collision\_fcl::FCLCollisionObjectWrapper}!getContactDistanceThreshold@{getContactDistanceThreshold}}
+\index{getContactDistanceThreshold@{getContactDistanceThreshold}!tesseract\_collision::tesseract\_collision\_fcl::FCLCollisionObjectWrapper@{tesseract\_collision::tesseract\_collision\_fcl::FCLCollisionObjectWrapper}}
+\doxysubsubsection{\texorpdfstring{getContactDistanceThreshold()}{getContactDistanceThreshold()}}
+{\footnotesize\ttfamily double tesseract\+\_\+collision\+::tesseract\+\_\+collision\+\_\+fcl\+::\+F\+C\+L\+Collision\+Object\+Wrapper\+::get\+Contact\+Distance\+Threshold (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the collision objects contact distance threshold. 
+
+\begin{DoxyReturn}{Returns}
+The contact distance threshold. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtesseract__collision_1_1tesseract__collision__fcl_1_1FCLCollisionObjectWrapper_a20bc2ae95cddaf4bcefc9e7a31501833}\label{classtesseract__collision_1_1tesseract__collision__fcl_1_1FCLCollisionObjectWrapper_a20bc2ae95cddaf4bcefc9e7a31501833}} 
+\index{tesseract\_collision::tesseract\_collision\_fcl::FCLCollisionObjectWrapper@{tesseract\_collision::tesseract\_collision\_fcl::FCLCollisionObjectWrapper}!setContactDistanceThreshold@{setContactDistanceThreshold}}
+\index{setContactDistanceThreshold@{setContactDistanceThreshold}!tesseract\_collision::tesseract\_collision\_fcl::FCLCollisionObjectWrapper@{tesseract\_collision::tesseract\_collision\_fcl::FCLCollisionObjectWrapper}}
+\doxysubsubsection{\texorpdfstring{setContactDistanceThreshold()}{setContactDistanceThreshold()}}
+{\footnotesize\ttfamily void tesseract\+\_\+collision\+::tesseract\+\_\+collision\+\_\+fcl\+::\+F\+C\+L\+Collision\+Object\+Wrapper\+::set\+Contact\+Distance\+Threshold (\begin{DoxyParamCaption}\item[{double}]{contact\+\_\+distance }\end{DoxyParamCaption})}
+
+
+
+Set the collision objects contact distance threshold. 
+
+This automatically calls \mbox{\hyperlink{classtesseract__collision_1_1tesseract__collision__fcl_1_1FCLCollisionObjectWrapper_af606359addeed10e4fe4f6edfd1a444b}{update\+A\+A\+B\+B()}} which increases the A\+A\+BB by the contact distance. 
+\begin{DoxyParams}{Parameters}
+{\em contact\+\_\+distance} & The contact distance threshold. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classtesseract__collision_1_1tesseract__collision__fcl_1_1FCLCollisionObjectWrapper_af606359addeed10e4fe4f6edfd1a444b}\label{classtesseract__collision_1_1tesseract__collision__fcl_1_1FCLCollisionObjectWrapper_af606359addeed10e4fe4f6edfd1a444b}} 
+\index{tesseract\_collision::tesseract\_collision\_fcl::FCLCollisionObjectWrapper@{tesseract\_collision::tesseract\_collision\_fcl::FCLCollisionObjectWrapper}!updateAABB@{updateAABB}}
+\index{updateAABB@{updateAABB}!tesseract\_collision::tesseract\_collision\_fcl::FCLCollisionObjectWrapper@{tesseract\_collision::tesseract\_collision\_fcl::FCLCollisionObjectWrapper}}
+\doxysubsubsection{\texorpdfstring{updateAABB()}{updateAABB()}}
+{\footnotesize\ttfamily void tesseract\+\_\+collision\+::tesseract\+\_\+collision\+\_\+fcl\+::\+F\+C\+L\+Collision\+Object\+Wrapper\+::update\+A\+A\+BB (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Update the internal A\+A\+BB. This must be called instead of the base class compute\+A\+A\+B\+B(). 
+
+After setting the collision objects transform this must be called. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classtesseract__collision_1_1tesseract__collision__fcl_1_1FCLCollisionObjectWrapper_ae00b5537297d2c4bfabfd6489648833f}\label{classtesseract__collision_1_1tesseract__collision__fcl_1_1FCLCollisionObjectWrapper_ae00b5537297d2c4bfabfd6489648833f}} 
+\index{tesseract\_collision::tesseract\_collision\_fcl::FCLCollisionObjectWrapper@{tesseract\_collision::tesseract\_collision\_fcl::FCLCollisionObjectWrapper}!contact\_distance\_@{contact\_distance\_}}
+\index{contact\_distance\_@{contact\_distance\_}!tesseract\_collision::tesseract\_collision\_fcl::FCLCollisionObjectWrapper@{tesseract\_collision::tesseract\_collision\_fcl::FCLCollisionObjectWrapper}}
+\doxysubsubsection{\texorpdfstring{contact\_distance\_}{contact\_distance\_}}
+{\footnotesize\ttfamily double tesseract\+\_\+collision\+::tesseract\+\_\+collision\+\_\+fcl\+::\+F\+C\+L\+Collision\+Object\+Wrapper\+::contact\+\_\+distance\+\_\+ \{ 0 \}\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The contact distance threshold. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+tesseract/tesseract\+\_\+collision/include/tesseract\+\_\+collision/fcl/\mbox{\hyperlink{fcl__collision__object__wrapper_8h}{fcl\+\_\+collision\+\_\+object\+\_\+wrapper.\+h}}\item 
+tesseract/tesseract\+\_\+collision/src/fcl/\mbox{\hyperlink{fcl__collision__object__wrapper_8cpp}{fcl\+\_\+collision\+\_\+object\+\_\+wrapper.\+cpp}}\end{DoxyCompactItemize}

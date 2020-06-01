@@ -1,0 +1,107 @@
+\hypertarget{structtesseract__motion__planners_1_1TrajOptPlannerFreespaceConfig}{}\doxysection{tesseract\+\_\+motion\+\_\+planners\+::Traj\+Opt\+Planner\+Freespace\+Config Struct Reference}
+\label{structtesseract__motion__planners_1_1TrajOptPlannerFreespaceConfig}\index{tesseract\_motion\_planners::TrajOptPlannerFreespaceConfig@{tesseract\_motion\_planners::TrajOptPlannerFreespaceConfig}}
+
+
+Default configuration to setup Traj\+Opt planner for freespace motions.  
+
+
+
+
+{\ttfamily \#include $<$trajopt\+\_\+planner\+\_\+freespace\+\_\+config.\+h$>$}
+
+Inheritance diagram for tesseract\+\_\+motion\+\_\+planners\+::Traj\+Opt\+Planner\+Freespace\+Config\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{structtesseract__motion__planners_1_1TrajOptPlannerFreespaceConfig}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{structtesseract__motion__planners_1_1TrajOptPlannerFreespaceConfig_a09fde2bdd1affa60573735bf3eda7559}{Ptr}} = std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structtesseract__motion__planners_1_1TrajOptPlannerFreespaceConfig}{Traj\+Opt\+Planner\+Freespace\+Config}} $>$
+\item 
+using \mbox{\hyperlink{structtesseract__motion__planners_1_1TrajOptPlannerFreespaceConfig_ae253479bac5150b577805dd1555940cd}{Const\+Ptr}} = std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{structtesseract__motion__planners_1_1TrajOptPlannerFreespaceConfig}{Traj\+Opt\+Planner\+Freespace\+Config}} $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ trajopt\+::\+Problem\+Construction\+Info $>$ \mbox{\hyperlink{structtesseract__motion__planners_1_1TrajOptPlannerFreespaceConfig_aa86873b9ab18cc7ef18f3df2863d9f17}{generate\+P\+CI}} () const override
+\begin{DoxyCompactList}\small\item\em Function for creating a Problem\+Construction\+Info from the planner configuration. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structtesseract__motion__planners_1_1TrajOptPlannerFreespaceConfig_ae535eaf4ad3d6822dad81be1c063b6f9}{Traj\+Opt\+Planner\+Default\+Config}} (\mbox{\hyperlink{classtesseract_1_1Tesseract_a8af3b0404dc78b21584bb9a42c83be93}{tesseract\+::\+Tesseract\+::\+Const\+Ptr}} tesseract\+\_\+, std\+::string manipulator\+\_\+, std\+::string link\+\_\+, \mbox{\hyperlink{namespacetesseract__common_a94d9921fc7ed323609ac57d06f939cb6}{tesseract\+\_\+common\+::\+Vector\+Isometry3d}} tcp\+\_\+)
+\item 
+\mbox{\hyperlink{structtesseract__motion__planners_1_1TrajOptPlannerFreespaceConfig_a2577580b311854cf03dddcaea51e5cfd}{Traj\+Opt\+Planner\+Default\+Config}} (const \mbox{\hyperlink{classtesseract_1_1Tesseract_a8af3b0404dc78b21584bb9a42c83be93}{tesseract\+::\+Tesseract\+::\+Const\+Ptr}} \&tesseract\+\_\+, const std\+::string \&manipulator\+\_\+, const std\+::string \&link\+\_\+, const Eigen\+::\+Isometry3d \&tcp\+\_\+)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{structtesseract__motion__planners_1_1TrajOptPlannerFreespaceConfig_ad15a2691405f7a28c071d8af8892aaf8}{num\+\_\+steps}} = 20
+\begin{DoxyCompactList}\small\item\em The total number of timesteps used in the freespace motion. Default\+: 20. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Default configuration to setup Traj\+Opt planner for freespace motions. 
+
+While there are many parameters that can be set, the majority of them have defaults that will be suitable for many problems. These are always required\+: tesseract\+\_\+, maninpulator\+\_\+, link\+\_\+, tcp\+\_\+ 
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{structtesseract__motion__planners_1_1TrajOptPlannerFreespaceConfig_ae253479bac5150b577805dd1555940cd}\label{structtesseract__motion__planners_1_1TrajOptPlannerFreespaceConfig_ae253479bac5150b577805dd1555940cd}} 
+\index{tesseract\_motion\_planners::TrajOptPlannerFreespaceConfig@{tesseract\_motion\_planners::TrajOptPlannerFreespaceConfig}!ConstPtr@{ConstPtr}}
+\index{ConstPtr@{ConstPtr}!tesseract\_motion\_planners::TrajOptPlannerFreespaceConfig@{tesseract\_motion\_planners::TrajOptPlannerFreespaceConfig}}
+\doxysubsubsection{\texorpdfstring{ConstPtr}{ConstPtr}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{structtesseract__motion__planners_1_1TrajOptPlannerFreespaceConfig_ae253479bac5150b577805dd1555940cd}{tesseract\+\_\+motion\+\_\+planners\+::\+Traj\+Opt\+Planner\+Freespace\+Config\+::\+Const\+Ptr}} =  std\+::shared\+\_\+ptr$<$const \mbox{\hyperlink{structtesseract__motion__planners_1_1TrajOptPlannerFreespaceConfig}{Traj\+Opt\+Planner\+Freespace\+Config}}$>$}
+
+\mbox{\Hypertarget{structtesseract__motion__planners_1_1TrajOptPlannerFreespaceConfig_a09fde2bdd1affa60573735bf3eda7559}\label{structtesseract__motion__planners_1_1TrajOptPlannerFreespaceConfig_a09fde2bdd1affa60573735bf3eda7559}} 
+\index{tesseract\_motion\_planners::TrajOptPlannerFreespaceConfig@{tesseract\_motion\_planners::TrajOptPlannerFreespaceConfig}!Ptr@{Ptr}}
+\index{Ptr@{Ptr}!tesseract\_motion\_planners::TrajOptPlannerFreespaceConfig@{tesseract\_motion\_planners::TrajOptPlannerFreespaceConfig}}
+\doxysubsubsection{\texorpdfstring{Ptr}{Ptr}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{structtesseract__motion__planners_1_1TrajOptPlannerFreespaceConfig_a09fde2bdd1affa60573735bf3eda7559}{tesseract\+\_\+motion\+\_\+planners\+::\+Traj\+Opt\+Planner\+Freespace\+Config\+::\+Ptr}} =  std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{structtesseract__motion__planners_1_1TrajOptPlannerFreespaceConfig}{Traj\+Opt\+Planner\+Freespace\+Config}}$>$}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structtesseract__motion__planners_1_1TrajOptPlannerFreespaceConfig_aa86873b9ab18cc7ef18f3df2863d9f17}\label{structtesseract__motion__planners_1_1TrajOptPlannerFreespaceConfig_aa86873b9ab18cc7ef18f3df2863d9f17}} 
+\index{tesseract\_motion\_planners::TrajOptPlannerFreespaceConfig@{tesseract\_motion\_planners::TrajOptPlannerFreespaceConfig}!generatePCI@{generatePCI}}
+\index{generatePCI@{generatePCI}!tesseract\_motion\_planners::TrajOptPlannerFreespaceConfig@{tesseract\_motion\_planners::TrajOptPlannerFreespaceConfig}}
+\doxysubsubsection{\texorpdfstring{generatePCI()}{generatePCI()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ trajopt\+::\+Problem\+Construction\+Info $>$ tesseract\+\_\+motion\+\_\+planners\+::\+Traj\+Opt\+Planner\+Freespace\+Config\+::generate\+P\+CI (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Function for creating a Problem\+Construction\+Info from the planner configuration. 
+
+
+
+Reimplemented from \mbox{\hyperlink{structtesseract__motion__planners_1_1TrajOptPlannerDefaultConfig_a91650c17b352f2536447207ce2b6b80b}{tesseract\+\_\+motion\+\_\+planners\+::\+Traj\+Opt\+Planner\+Default\+Config}}.
+
+\mbox{\Hypertarget{structtesseract__motion__planners_1_1TrajOptPlannerFreespaceConfig_a2577580b311854cf03dddcaea51e5cfd}\label{structtesseract__motion__planners_1_1TrajOptPlannerFreespaceConfig_a2577580b311854cf03dddcaea51e5cfd}} 
+\index{tesseract\_motion\_planners::TrajOptPlannerFreespaceConfig@{tesseract\_motion\_planners::TrajOptPlannerFreespaceConfig}!TrajOptPlannerDefaultConfig@{TrajOptPlannerDefaultConfig}}
+\index{TrajOptPlannerDefaultConfig@{TrajOptPlannerDefaultConfig}!tesseract\_motion\_planners::TrajOptPlannerFreespaceConfig@{tesseract\_motion\_planners::TrajOptPlannerFreespaceConfig}}
+\doxysubsubsection{\texorpdfstring{TrajOptPlannerDefaultConfig()}{TrajOptPlannerDefaultConfig()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily tesseract\+\_\+motion\+\_\+planners\+::\+Traj\+Opt\+Planner\+Default\+Config\+::\+Traj\+Opt\+Planner\+Default\+Config}
+
+\mbox{\Hypertarget{structtesseract__motion__planners_1_1TrajOptPlannerFreespaceConfig_ae535eaf4ad3d6822dad81be1c063b6f9}\label{structtesseract__motion__planners_1_1TrajOptPlannerFreespaceConfig_ae535eaf4ad3d6822dad81be1c063b6f9}} 
+\index{tesseract\_motion\_planners::TrajOptPlannerFreespaceConfig@{tesseract\_motion\_planners::TrajOptPlannerFreespaceConfig}!TrajOptPlannerDefaultConfig@{TrajOptPlannerDefaultConfig}}
+\index{TrajOptPlannerDefaultConfig@{TrajOptPlannerDefaultConfig}!tesseract\_motion\_planners::TrajOptPlannerFreespaceConfig@{tesseract\_motion\_planners::TrajOptPlannerFreespaceConfig}}
+\doxysubsubsection{\texorpdfstring{TrajOptPlannerDefaultConfig()}{TrajOptPlannerDefaultConfig()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily tesseract\+\_\+motion\+\_\+planners\+::\+Traj\+Opt\+Planner\+Default\+Config\+::\+Traj\+Opt\+Planner\+Default\+Config}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structtesseract__motion__planners_1_1TrajOptPlannerFreespaceConfig_ad15a2691405f7a28c071d8af8892aaf8}\label{structtesseract__motion__planners_1_1TrajOptPlannerFreespaceConfig_ad15a2691405f7a28c071d8af8892aaf8}} 
+\index{tesseract\_motion\_planners::TrajOptPlannerFreespaceConfig@{tesseract\_motion\_planners::TrajOptPlannerFreespaceConfig}!num\_steps@{num\_steps}}
+\index{num\_steps@{num\_steps}!tesseract\_motion\_planners::TrajOptPlannerFreespaceConfig@{tesseract\_motion\_planners::TrajOptPlannerFreespaceConfig}}
+\doxysubsubsection{\texorpdfstring{num\_steps}{num\_steps}}
+{\footnotesize\ttfamily int tesseract\+\_\+motion\+\_\+planners\+::\+Traj\+Opt\+Planner\+Freespace\+Config\+::num\+\_\+steps = 20}
+
+
+
+The total number of timesteps used in the freespace motion. Default\+: 20. 
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+tesseract/tesseract\+\_\+planning/tesseract\+\_\+motion\+\_\+planners/include/tesseract\+\_\+motion\+\_\+planners/trajopt/config/\mbox{\hyperlink{trajopt__planner__freespace__config_8h}{trajopt\+\_\+planner\+\_\+freespace\+\_\+config.\+h}}\item 
+tesseract/tesseract\+\_\+planning/tesseract\+\_\+motion\+\_\+planners/src/trajopt/config/\mbox{\hyperlink{trajopt__planner__freespace__config_8cpp}{trajopt\+\_\+planner\+\_\+freespace\+\_\+config.\+cpp}}\end{DoxyCompactItemize}

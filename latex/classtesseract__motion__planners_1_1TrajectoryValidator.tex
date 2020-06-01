@@ -1,0 +1,116 @@
+\hypertarget{classtesseract__motion__planners_1_1TrajectoryValidator}{}\doxysection{tesseract\+\_\+motion\+\_\+planners\+::Trajectory\+Validator Class Reference}
+\label{classtesseract__motion__planners_1_1TrajectoryValidator}\index{tesseract\_motion\_planners::TrajectoryValidator@{tesseract\_motion\_planners::TrajectoryValidator}}
+
+
+Class for performing validation checks on a planned trajectory.  
+
+
+
+
+{\ttfamily \#include $<$trajectory\+\_\+validator.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classtesseract__motion__planners_1_1TrajectoryValidator_acc7fdd5ca5ae30a8597e11f360dee86c}{Ptr}} = std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classtesseract__motion__planners_1_1TrajectoryValidator}{Trajectory\+Validator}} $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtesseract__motion__planners_1_1TrajectoryValidator_a10ba8d2e90a8c066987254ff9828634d}{Trajectory\+Validator}} (\mbox{\hyperlink{classtesseract__collision_1_1ContinuousContactManager_a60778058b979eafd448a6a9bec7ff02b}{tesseract\+\_\+collision\+::\+Continuous\+Contact\+Manager\+::\+Ptr}} continuous\+\_\+manager=nullptr, \mbox{\hyperlink{classtesseract__collision_1_1DiscreteContactManager_a108295071670971e81fe3c34794db427}{tesseract\+\_\+collision\+::\+Discrete\+Contact\+Manager\+::\+Ptr}} discrete\+\_\+manager=nullptr, double longest\+\_\+valid\+\_\+segment\+\_\+length=0.\+01, bool verbose=false)
+\item 
+virtual bool \mbox{\hyperlink{classtesseract__motion__planners_1_1TrajectoryValidator_a726db2c7253a8dade4b7556687c9393c}{trajectory\+Valid}} (const \mbox{\hyperlink{namespacetesseract__common_a431ff65777ee0bed71e7671390638244}{tesseract\+\_\+common\+::\+Traj\+Array}} \&trajectory, const \mbox{\hyperlink{namespacetesseract__motion__planners_af35aeb2eaf87be9fb4063029a20968bc}{Post\+Plan\+Check\+Type}} \&check\+\_\+type, const \mbox{\hyperlink{classtesseract__environment_1_1StateSolver}{tesseract\+\_\+environment\+::\+State\+Solver}} \&state\+\_\+solver, const std\+::vector$<$ std\+::string $>$ \&joint\+\_\+names, const \mbox{\hyperlink{structtesseract__collision_1_1ContactRequest}{tesseract\+\_\+collision\+::\+Contact\+Request}} \&request=\mbox{\hyperlink{structtesseract__collision_1_1ContactRequest}{tesseract\+\_\+collision\+::\+Contact\+Request}}(\mbox{\hyperlink{namespacetesseract__collision_ac3da4f46ae16e86ba4f1dfd2935eb80ca2c2624a5059934a947d6e25fe8332ade}{tesseract\+\_\+collision\+::\+Contact\+Test\+Type\+::\+F\+I\+R\+ST}}))
+\begin{DoxyCompactList}\small\item\em Performs checks on a planned trajectory to determine its validity. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtesseract__collision_1_1ContinuousContactManager_a60778058b979eafd448a6a9bec7ff02b}{tesseract\+\_\+collision\+::\+Continuous\+Contact\+Manager\+::\+Ptr}} \mbox{\hyperlink{classtesseract__motion__planners_1_1TrajectoryValidator_a0fcbad86cdf526ddafa18c306d55e10c}{continuous\+\_\+contact\+\_\+manager\+\_\+}}
+\item 
+\mbox{\hyperlink{classtesseract__collision_1_1DiscreteContactManager_a108295071670971e81fe3c34794db427}{tesseract\+\_\+collision\+::\+Discrete\+Contact\+Manager\+::\+Ptr}} \mbox{\hyperlink{classtesseract__motion__planners_1_1TrajectoryValidator_a4a38b660da18fc3cf3cb7496f9aef0bf}{discrete\+\_\+contact\+\_\+manager\+\_\+}}
+\item 
+double \mbox{\hyperlink{classtesseract__motion__planners_1_1TrajectoryValidator_a7ef9298f5b6e5ed1e57b9192e47fdd32}{longest\+\_\+valid\+\_\+segment\+\_\+length\+\_\+}}
+\item 
+bool \mbox{\hyperlink{classtesseract__motion__planners_1_1TrajectoryValidator_a89c50cfa5efede466e3961c7f79fb839}{verbose\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class for performing validation checks on a planned trajectory. 
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classtesseract__motion__planners_1_1TrajectoryValidator_acc7fdd5ca5ae30a8597e11f360dee86c}\label{classtesseract__motion__planners_1_1TrajectoryValidator_acc7fdd5ca5ae30a8597e11f360dee86c}} 
+\index{tesseract\_motion\_planners::TrajectoryValidator@{tesseract\_motion\_planners::TrajectoryValidator}!Ptr@{Ptr}}
+\index{Ptr@{Ptr}!tesseract\_motion\_planners::TrajectoryValidator@{tesseract\_motion\_planners::TrajectoryValidator}}
+\doxysubsubsection{\texorpdfstring{Ptr}{Ptr}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classtesseract__motion__planners_1_1TrajectoryValidator_acc7fdd5ca5ae30a8597e11f360dee86c}{tesseract\+\_\+motion\+\_\+planners\+::\+Trajectory\+Validator\+::\+Ptr}} =  std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classtesseract__motion__planners_1_1TrajectoryValidator}{Trajectory\+Validator}}$>$}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtesseract__motion__planners_1_1TrajectoryValidator_a10ba8d2e90a8c066987254ff9828634d}\label{classtesseract__motion__planners_1_1TrajectoryValidator_a10ba8d2e90a8c066987254ff9828634d}} 
+\index{tesseract\_motion\_planners::TrajectoryValidator@{tesseract\_motion\_planners::TrajectoryValidator}!TrajectoryValidator@{TrajectoryValidator}}
+\index{TrajectoryValidator@{TrajectoryValidator}!tesseract\_motion\_planners::TrajectoryValidator@{tesseract\_motion\_planners::TrajectoryValidator}}
+\doxysubsubsection{\texorpdfstring{TrajectoryValidator()}{TrajectoryValidator()}}
+{\footnotesize\ttfamily tesseract\+\_\+motion\+\_\+planners\+::\+Trajectory\+Validator\+::\+Trajectory\+Validator (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtesseract__collision_1_1ContinuousContactManager_a60778058b979eafd448a6a9bec7ff02b}{tesseract\+\_\+collision\+::\+Continuous\+Contact\+Manager\+::\+Ptr}}}]{continuous\+\_\+manager = {\ttfamily nullptr},  }\item[{\mbox{\hyperlink{classtesseract__collision_1_1DiscreteContactManager_a108295071670971e81fe3c34794db427}{tesseract\+\_\+collision\+::\+Discrete\+Contact\+Manager\+::\+Ptr}}}]{discrete\+\_\+manager = {\ttfamily nullptr},  }\item[{double}]{longest\+\_\+valid\+\_\+segment\+\_\+length = {\ttfamily 0.01},  }\item[{bool}]{verbose = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtesseract__motion__planners_1_1TrajectoryValidator_a726db2c7253a8dade4b7556687c9393c}\label{classtesseract__motion__planners_1_1TrajectoryValidator_a726db2c7253a8dade4b7556687c9393c}} 
+\index{tesseract\_motion\_planners::TrajectoryValidator@{tesseract\_motion\_planners::TrajectoryValidator}!trajectoryValid@{trajectoryValid}}
+\index{trajectoryValid@{trajectoryValid}!tesseract\_motion\_planners::TrajectoryValidator@{tesseract\_motion\_planners::TrajectoryValidator}}
+\doxysubsubsection{\texorpdfstring{trajectoryValid()}{trajectoryValid()}}
+{\footnotesize\ttfamily virtual bool tesseract\+\_\+motion\+\_\+planners\+::\+Trajectory\+Validator\+::trajectory\+Valid (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacetesseract__common_a431ff65777ee0bed71e7671390638244}{tesseract\+\_\+common\+::\+Traj\+Array}} \&}]{trajectory,  }\item[{const \mbox{\hyperlink{namespacetesseract__motion__planners_af35aeb2eaf87be9fb4063029a20968bc}{Post\+Plan\+Check\+Type}} \&}]{check\+\_\+type,  }\item[{const \mbox{\hyperlink{classtesseract__environment_1_1StateSolver}{tesseract\+\_\+environment\+::\+State\+Solver}} \&}]{state\+\_\+solver,  }\item[{const std\+::vector$<$ std\+::string $>$ \&}]{joint\+\_\+names,  }\item[{const \mbox{\hyperlink{structtesseract__collision_1_1ContactRequest}{tesseract\+\_\+collision\+::\+Contact\+Request}} \&}]{request = {\ttfamily \mbox{\hyperlink{structtesseract__collision_1_1ContactRequest}{tesseract\+\_\+collision\+::\+Contact\+Request}}(\mbox{\hyperlink{namespacetesseract__collision_ac3da4f46ae16e86ba4f1dfd2935eb80ca2c2624a5059934a947d6e25fe8332ade}{tesseract\+\_\+collision\+::\+Contact\+Test\+Type\+::\+F\+I\+R\+ST}})} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Performs checks on a planned trajectory to determine its validity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em trajectory} & The planned trajectory \\
+\hline
+{\em check\+\_\+type} & The type of validation check to be performed \\
+\hline
+{\em state\+\_\+solver} & The state solver \\
+\hline
+{\em joint\+\_\+names} & List of joint names \\
+\hline
+{\em request} & Contact Request \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the trajectory is valid according per the check type, false otherwise 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classtesseract__motion__planners_1_1TrajectoryValidator_a0fcbad86cdf526ddafa18c306d55e10c}\label{classtesseract__motion__planners_1_1TrajectoryValidator_a0fcbad86cdf526ddafa18c306d55e10c}} 
+\index{tesseract\_motion\_planners::TrajectoryValidator@{tesseract\_motion\_planners::TrajectoryValidator}!continuous\_contact\_manager\_@{continuous\_contact\_manager\_}}
+\index{continuous\_contact\_manager\_@{continuous\_contact\_manager\_}!tesseract\_motion\_planners::TrajectoryValidator@{tesseract\_motion\_planners::TrajectoryValidator}}
+\doxysubsubsection{\texorpdfstring{continuous\_contact\_manager\_}{continuous\_contact\_manager\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__collision_1_1ContinuousContactManager_a60778058b979eafd448a6a9bec7ff02b}{tesseract\+\_\+collision\+::\+Continuous\+Contact\+Manager\+::\+Ptr}} tesseract\+\_\+motion\+\_\+planners\+::\+Trajectory\+Validator\+::continuous\+\_\+contact\+\_\+manager\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classtesseract__motion__planners_1_1TrajectoryValidator_a4a38b660da18fc3cf3cb7496f9aef0bf}\label{classtesseract__motion__planners_1_1TrajectoryValidator_a4a38b660da18fc3cf3cb7496f9aef0bf}} 
+\index{tesseract\_motion\_planners::TrajectoryValidator@{tesseract\_motion\_planners::TrajectoryValidator}!discrete\_contact\_manager\_@{discrete\_contact\_manager\_}}
+\index{discrete\_contact\_manager\_@{discrete\_contact\_manager\_}!tesseract\_motion\_planners::TrajectoryValidator@{tesseract\_motion\_planners::TrajectoryValidator}}
+\doxysubsubsection{\texorpdfstring{discrete\_contact\_manager\_}{discrete\_contact\_manager\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__collision_1_1DiscreteContactManager_a108295071670971e81fe3c34794db427}{tesseract\+\_\+collision\+::\+Discrete\+Contact\+Manager\+::\+Ptr}} tesseract\+\_\+motion\+\_\+planners\+::\+Trajectory\+Validator\+::discrete\+\_\+contact\+\_\+manager\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classtesseract__motion__planners_1_1TrajectoryValidator_a7ef9298f5b6e5ed1e57b9192e47fdd32}\label{classtesseract__motion__planners_1_1TrajectoryValidator_a7ef9298f5b6e5ed1e57b9192e47fdd32}} 
+\index{tesseract\_motion\_planners::TrajectoryValidator@{tesseract\_motion\_planners::TrajectoryValidator}!longest\_valid\_segment\_length\_@{longest\_valid\_segment\_length\_}}
+\index{longest\_valid\_segment\_length\_@{longest\_valid\_segment\_length\_}!tesseract\_motion\_planners::TrajectoryValidator@{tesseract\_motion\_planners::TrajectoryValidator}}
+\doxysubsubsection{\texorpdfstring{longest\_valid\_segment\_length\_}{longest\_valid\_segment\_length\_}}
+{\footnotesize\ttfamily double tesseract\+\_\+motion\+\_\+planners\+::\+Trajectory\+Validator\+::longest\+\_\+valid\+\_\+segment\+\_\+length\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classtesseract__motion__planners_1_1TrajectoryValidator_a89c50cfa5efede466e3961c7f79fb839}\label{classtesseract__motion__planners_1_1TrajectoryValidator_a89c50cfa5efede466e3961c7f79fb839}} 
+\index{tesseract\_motion\_planners::TrajectoryValidator@{tesseract\_motion\_planners::TrajectoryValidator}!verbose\_@{verbose\_}}
+\index{verbose\_@{verbose\_}!tesseract\_motion\_planners::TrajectoryValidator@{tesseract\_motion\_planners::TrajectoryValidator}}
+\doxysubsubsection{\texorpdfstring{verbose\_}{verbose\_}}
+{\footnotesize\ttfamily bool tesseract\+\_\+motion\+\_\+planners\+::\+Trajectory\+Validator\+::verbose\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+tesseract/tesseract\+\_\+planning/tesseract\+\_\+motion\+\_\+planners/include/tesseract\+\_\+motion\+\_\+planners/core/\mbox{\hyperlink{trajectory__validator_8h}{trajectory\+\_\+validator.\+h}}\end{DoxyCompactItemize}

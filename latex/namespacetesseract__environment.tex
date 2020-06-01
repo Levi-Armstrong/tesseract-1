@@ -1,0 +1,459 @@
+\hypertarget{namespacetesseract__environment}{}\doxysection{tesseract\+\_\+environment Namespace Reference}
+\label{namespacetesseract__environment}\index{tesseract\_environment@{tesseract\_environment}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classtesseract__environment_1_1AddAllowedCollisionCommand}{Add\+Allowed\+Collision\+Command}}
+\item 
+class \mbox{\hyperlink{classtesseract__environment_1_1AddCommand}{Add\+Command}}
+\item 
+class \mbox{\hyperlink{classtesseract__environment_1_1AdjacencyMap}{Adjacency\+Map}}
+\item 
+struct \mbox{\hyperlink{structtesseract__environment_1_1AdjacencyMapPair}{Adjacency\+Map\+Pair}}
+\begin{DoxyCompactList}\small\item\em The \mbox{\hyperlink{structtesseract__environment_1_1AdjacencyMapPair}{Adjacency\+Map\+Pair}} struct. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classtesseract__environment_1_1ChangeJointOriginCommand}{Change\+Joint\+Origin\+Command}}
+\item 
+class \mbox{\hyperlink{classtesseract__environment_1_1ChangeLinkCollisionEnabledCommand}{Change\+Link\+Collision\+Enabled\+Command}}
+\item 
+class \mbox{\hyperlink{classtesseract__environment_1_1ChangeLinkOriginCommand}{Change\+Link\+Origin\+Command}}
+\item 
+class \mbox{\hyperlink{classtesseract__environment_1_1ChangeLinkVisibilityCommand}{Change\+Link\+Visibility\+Command}}
+\item 
+class \mbox{\hyperlink{classtesseract__environment_1_1Command}{Command}}
+\item 
+class \mbox{\hyperlink{classtesseract__environment_1_1Environment}{Environment}}
+\item 
+struct \mbox{\hyperlink{structtesseract__environment_1_1EnvState}{Env\+State}}
+\begin{DoxyCompactList}\small\item\em This holds a state of the environment. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classtesseract__environment_1_1KDLEnv}{K\+D\+L\+Env}}
+\item 
+class \mbox{\hyperlink{classtesseract__environment_1_1KDLStateSolver}{K\+D\+L\+State\+Solver}}
+\item 
+class \mbox{\hyperlink{classtesseract__environment_1_1MoveJointCommand}{Move\+Joint\+Command}}
+\item 
+class \mbox{\hyperlink{classtesseract__environment_1_1MoveLinkCommand}{Move\+Link\+Command}}
+\item 
+class \mbox{\hyperlink{classtesseract__environment_1_1RemoveAllowedCollisionCommand}{Remove\+Allowed\+Collision\+Command}}
+\item 
+class \mbox{\hyperlink{classtesseract__environment_1_1RemoveAllowedCollisionLinkCommand}{Remove\+Allowed\+Collision\+Link\+Command}}
+\item 
+class \mbox{\hyperlink{classtesseract__environment_1_1RemoveJointCommand}{Remove\+Joint\+Command}}
+\item 
+class \mbox{\hyperlink{classtesseract__environment_1_1RemoveLinkCommand}{Remove\+Link\+Command}}
+\item 
+class \mbox{\hyperlink{classtesseract__environment_1_1StateSolver}{State\+Solver}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{namespacetesseract__environment_acb95740502ec41d80a94a7631d4b7a3c}{Commands}} = std\+::vector$<$ \mbox{\hyperlink{classtesseract__environment_1_1Command_a71f41840ff091003233e7ddaff1c4081}{Command\+::\+Const\+Ptr}} $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespacetesseract__environment_afc00c1aecb519acba3afc24dbd367029}{Command\+Type}} \{ \newline
+\mbox{\hyperlink{namespacetesseract__environment_afc00c1aecb519acba3afc24dbd367029a9eeb52badb613229884838847294b90d}{Command\+Type\+::\+A\+DD}} = 0, 
+\mbox{\hyperlink{namespacetesseract__environment_afc00c1aecb519acba3afc24dbd367029a0c4617d6ea17eb456b514b9bc9ddaaec}{Command\+Type\+::\+M\+O\+V\+E\+\_\+\+L\+I\+NK}} = 1, 
+\mbox{\hyperlink{namespacetesseract__environment_afc00c1aecb519acba3afc24dbd367029a4ca2d320bdf40df7e6f465d21e268ec4}{Command\+Type\+::\+M\+O\+V\+E\+\_\+\+J\+O\+I\+NT}} = 2, 
+\mbox{\hyperlink{namespacetesseract__environment_afc00c1aecb519acba3afc24dbd367029afff7bebecead86441476e38b94b3bc05}{Command\+Type\+::\+R\+E\+M\+O\+V\+E\+\_\+\+L\+I\+NK}} = 3, 
+\newline
+\mbox{\hyperlink{namespacetesseract__environment_afc00c1aecb519acba3afc24dbd367029a6721b27017cd21a598f1740481167224}{Command\+Type\+::\+R\+E\+M\+O\+V\+E\+\_\+\+J\+O\+I\+NT}} = 4, 
+\mbox{\hyperlink{namespacetesseract__environment_afc00c1aecb519acba3afc24dbd367029a5556c1986a9b58c054c0038a8c73cab9}{Command\+Type\+::\+C\+H\+A\+N\+G\+E\+\_\+\+L\+I\+N\+K\+\_\+\+O\+R\+I\+G\+IN}} = 5, 
+\mbox{\hyperlink{namespacetesseract__environment_afc00c1aecb519acba3afc24dbd367029a9e520d728925baf2b87146d99a20d8ba}{Command\+Type\+::\+C\+H\+A\+N\+G\+E\+\_\+\+J\+O\+I\+N\+T\+\_\+\+O\+R\+I\+G\+IN}} = 6, 
+\mbox{\hyperlink{namespacetesseract__environment_afc00c1aecb519acba3afc24dbd367029a12a8518522948e345cab8fefd0235008}{Command\+Type\+::\+C\+H\+A\+N\+G\+E\+\_\+\+L\+I\+N\+K\+\_\+\+C\+O\+L\+L\+I\+S\+I\+O\+N\+\_\+\+E\+N\+A\+B\+L\+ED}} = 7, 
+\newline
+\mbox{\hyperlink{namespacetesseract__environment_afc00c1aecb519acba3afc24dbd367029aaa5732dcc51c06b4e9af6373e937e4a1}{Command\+Type\+::\+C\+H\+A\+N\+G\+E\+\_\+\+L\+I\+N\+K\+\_\+\+V\+I\+S\+I\+B\+I\+L\+I\+TY}} = 8, 
+\mbox{\hyperlink{namespacetesseract__environment_afc00c1aecb519acba3afc24dbd367029ab2889e5decae30347cb29cdeb282d664}{Command\+Type\+::\+A\+D\+D\+\_\+\+A\+L\+L\+O\+W\+E\+D\+\_\+\+C\+O\+L\+L\+I\+S\+I\+ON}} = 9, 
+\mbox{\hyperlink{namespacetesseract__environment_afc00c1aecb519acba3afc24dbd367029a6944181c71015e5537d5271cb1c432f3}{Command\+Type\+::\+R\+E\+M\+O\+V\+E\+\_\+\+A\+L\+L\+O\+W\+E\+D\+\_\+\+C\+O\+L\+L\+I\+S\+I\+ON}} = 10, 
+\mbox{\hyperlink{namespacetesseract__environment_afc00c1aecb519acba3afc24dbd367029ac40ca000ef4f65a27cf7998ef4f020a0}{Command\+Type\+::\+R\+E\+M\+O\+V\+E\+\_\+\+A\+L\+L\+O\+W\+E\+D\+\_\+\+C\+O\+L\+L\+I\+S\+I\+O\+N\+\_\+\+L\+I\+NK}} = 11
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{namespacetesseract__environment_ab700d9c6b20d56629a5aac78468eb566}{get\+Active\+Link\+Names\+Recursive}} (std\+::vector$<$ std\+::string $>$ \&active\+\_\+links, const \mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph_a9ee303b2514bfedd8c914d09551b00ff}{tesseract\+\_\+scene\+\_\+graph\+::\+Scene\+Graph\+::\+Const\+Ptr}} \&scene\+\_\+graph, const std\+::string \&current\+\_\+link, bool active)
+\begin{DoxyCompactList}\small\item\em Get the active Link Names Recursively. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespacetesseract__environment_aa5ecb98304914ac69f8243f7bd8b9443}{check\+Trajectory\+Segment}} (std\+::vector$<$ \mbox{\hyperlink{namespacetesseract__collision_a1eeace4cc41027dbde8e7dbeb77ca7cf}{tesseract\+\_\+collision\+::\+Contact\+Result\+Map}} $>$ \&contacts, \mbox{\hyperlink{classtesseract__collision_1_1ContinuousContactManager}{tesseract\+\_\+collision\+::\+Continuous\+Contact\+Manager}} \&manager, const \mbox{\hyperlink{structtesseract__environment_1_1EnvState_a6a9f30b8418e9cb943125008c62b1d39}{tesseract\+\_\+environment\+::\+Env\+State\+::\+Ptr}} \&state0, const \mbox{\hyperlink{structtesseract__environment_1_1EnvState_a6a9f30b8418e9cb943125008c62b1d39}{tesseract\+\_\+environment\+::\+Env\+State\+::\+Ptr}} \&state1, const \mbox{\hyperlink{structtesseract__collision_1_1ContactRequest}{tesseract\+\_\+collision\+::\+Contact\+Request}} \&request=\mbox{\hyperlink{structtesseract__collision_1_1ContactRequest}{tesseract\+\_\+collision\+::\+Contact\+Request}}(\mbox{\hyperlink{namespacetesseract__collision_ac3da4f46ae16e86ba4f1dfd2935eb80ca2c2624a5059934a947d6e25fe8332ade}{tesseract\+\_\+collision\+::\+Contact\+Test\+Type\+::\+F\+I\+R\+ST}}), bool verbose=false)
+\begin{DoxyCompactList}\small\item\em Should perform a continuous collision check between two states. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespacetesseract__environment_aae40791602094d10337a01e3ae9fc332}{check\+Trajectory\+State}} (std\+::vector$<$ \mbox{\hyperlink{namespacetesseract__collision_a1eeace4cc41027dbde8e7dbeb77ca7cf}{tesseract\+\_\+collision\+::\+Contact\+Result\+Map}} $>$ \&contacts, \mbox{\hyperlink{classtesseract__collision_1_1DiscreteContactManager}{tesseract\+\_\+collision\+::\+Discrete\+Contact\+Manager}} \&manager, const \mbox{\hyperlink{structtesseract__environment_1_1EnvState_a6a9f30b8418e9cb943125008c62b1d39}{tesseract\+\_\+environment\+::\+Env\+State\+::\+Ptr}} \&state, const \mbox{\hyperlink{structtesseract__collision_1_1ContactRequest}{tesseract\+\_\+collision\+::\+Contact\+Request}} \&request=\mbox{\hyperlink{structtesseract__collision_1_1ContactRequest}{tesseract\+\_\+collision\+::\+Contact\+Request}}(\mbox{\hyperlink{namespacetesseract__collision_ac3da4f46ae16e86ba4f1dfd2935eb80ca2c2624a5059934a947d6e25fe8332ade}{tesseract\+\_\+collision\+::\+Contact\+Test\+Type\+::\+F\+I\+R\+ST}}), bool verbose=false)
+\begin{DoxyCompactList}\small\item\em Should perform a discrete collision check a state. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespacetesseract__environment_a5fc9f1bcdf0e23252ced2f84779e4393}{check\+Trajectory}} (std\+::vector$<$ \mbox{\hyperlink{namespacetesseract__collision_a1eeace4cc41027dbde8e7dbeb77ca7cf}{tesseract\+\_\+collision\+::\+Contact\+Result\+Map}} $>$ \&contacts, \mbox{\hyperlink{classtesseract__collision_1_1ContinuousContactManager}{tesseract\+\_\+collision\+::\+Continuous\+Contact\+Manager}} \&manager, const \mbox{\hyperlink{classtesseract__environment_1_1StateSolver}{tesseract\+\_\+environment\+::\+State\+Solver}} \&state\+\_\+solver, const std\+::vector$<$ std\+::string $>$ \&joint\+\_\+names, const \mbox{\hyperlink{namespacetesseract__common_a431ff65777ee0bed71e7671390638244}{tesseract\+\_\+common\+::\+Traj\+Array}} \&traj, const \mbox{\hyperlink{structtesseract__collision_1_1ContactRequest}{tesseract\+\_\+collision\+::\+Contact\+Request}} \&request=\mbox{\hyperlink{structtesseract__collision_1_1ContactRequest}{tesseract\+\_\+collision\+::\+Contact\+Request}}(\mbox{\hyperlink{namespacetesseract__collision_ac3da4f46ae16e86ba4f1dfd2935eb80ca2c2624a5059934a947d6e25fe8332ade}{tesseract\+\_\+collision\+::\+Contact\+Test\+Type\+::\+F\+I\+R\+ST}}), bool verbose=false)
+\begin{DoxyCompactList}\small\item\em Should perform a continuous collision check over the trajectory and stop on first collision. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespacetesseract__environment_a7f65d789f3bae3f4a2bae63de86d45a8}{check\+Trajectory}} (std\+::vector$<$ \mbox{\hyperlink{namespacetesseract__collision_a1eeace4cc41027dbde8e7dbeb77ca7cf}{tesseract\+\_\+collision\+::\+Contact\+Result\+Map}} $>$ \&contacts, \mbox{\hyperlink{classtesseract__collision_1_1ContinuousContactManager}{tesseract\+\_\+collision\+::\+Continuous\+Contact\+Manager}} \&manager, const \mbox{\hyperlink{classtesseract__environment_1_1StateSolver}{tesseract\+\_\+environment\+::\+State\+Solver}} \&state\+\_\+solver, const std\+::vector$<$ std\+::string $>$ \&joint\+\_\+names, const \mbox{\hyperlink{namespacetesseract__common_a431ff65777ee0bed71e7671390638244}{tesseract\+\_\+common\+::\+Traj\+Array}} \&traj, double longest\+\_\+valid\+\_\+segment\+\_\+length, const \mbox{\hyperlink{structtesseract__collision_1_1ContactRequest}{tesseract\+\_\+collision\+::\+Contact\+Request}} \&request=\mbox{\hyperlink{structtesseract__collision_1_1ContactRequest}{tesseract\+\_\+collision\+::\+Contact\+Request}}(\mbox{\hyperlink{namespacetesseract__collision_ac3da4f46ae16e86ba4f1dfd2935eb80ca2c2624a5059934a947d6e25fe8332ade}{tesseract\+\_\+collision\+::\+Contact\+Test\+Type\+::\+F\+I\+R\+ST}}), bool verbose=false)
+\begin{DoxyCompactList}\small\item\em Should perform a continuous collision check over the trajectory and stop on first collision. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespacetesseract__environment_a23ee9dba2cf8c1c7234b2e1fcce4ca76}{check\+Trajectory}} (std\+::vector$<$ \mbox{\hyperlink{namespacetesseract__collision_a1eeace4cc41027dbde8e7dbeb77ca7cf}{tesseract\+\_\+collision\+::\+Contact\+Result\+Map}} $>$ \&contacts, \mbox{\hyperlink{classtesseract__collision_1_1DiscreteContactManager}{tesseract\+\_\+collision\+::\+Discrete\+Contact\+Manager}} \&manager, const \mbox{\hyperlink{classtesseract__environment_1_1StateSolver}{tesseract\+\_\+environment\+::\+State\+Solver}} \&state\+\_\+solver, const std\+::vector$<$ std\+::string $>$ \&joint\+\_\+names, const \mbox{\hyperlink{namespacetesseract__common_a431ff65777ee0bed71e7671390638244}{tesseract\+\_\+common\+::\+Traj\+Array}} \&traj, const \mbox{\hyperlink{structtesseract__collision_1_1ContactRequest}{tesseract\+\_\+collision\+::\+Contact\+Request}} \&request=\mbox{\hyperlink{structtesseract__collision_1_1ContactRequest}{tesseract\+\_\+collision\+::\+Contact\+Request}}(\mbox{\hyperlink{namespacetesseract__collision_ac3da4f46ae16e86ba4f1dfd2935eb80ca2c2624a5059934a947d6e25fe8332ade}{tesseract\+\_\+collision\+::\+Contact\+Test\+Type\+::\+F\+I\+R\+ST}}), bool verbose=false)
+\begin{DoxyCompactList}\small\item\em Should perform a discrete collision check over the trajectory and stop on first collision. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespacetesseract__environment_a1cd738a49117cda998bf53b6c0f6c3cb}{check\+Trajectory}} (std\+::vector$<$ \mbox{\hyperlink{namespacetesseract__collision_a1eeace4cc41027dbde8e7dbeb77ca7cf}{tesseract\+\_\+collision\+::\+Contact\+Result\+Map}} $>$ \&contacts, \mbox{\hyperlink{classtesseract__collision_1_1DiscreteContactManager}{tesseract\+\_\+collision\+::\+Discrete\+Contact\+Manager}} \&manager, const \mbox{\hyperlink{classtesseract__environment_1_1StateSolver}{tesseract\+\_\+environment\+::\+State\+Solver}} \&state\+\_\+solver, const std\+::vector$<$ std\+::string $>$ \&joint\+\_\+names, const \mbox{\hyperlink{namespacetesseract__common_a431ff65777ee0bed71e7671390638244}{tesseract\+\_\+common\+::\+Traj\+Array}} \&traj, double longest\+\_\+valid\+\_\+segment\+\_\+length, const \mbox{\hyperlink{structtesseract__collision_1_1ContactRequest}{tesseract\+\_\+collision\+::\+Contact\+Request}} \&request=\mbox{\hyperlink{structtesseract__collision_1_1ContactRequest}{tesseract\+\_\+collision\+::\+Contact\+Request}}(\mbox{\hyperlink{namespacetesseract__collision_ac3da4f46ae16e86ba4f1dfd2935eb80ca2c2624a5059934a947d6e25fe8332ade}{tesseract\+\_\+collision\+::\+Contact\+Test\+Type\+::\+F\+I\+R\+ST}}), bool verbose=false)
+\begin{DoxyCompactList}\small\item\em Should perform a discrete collision check over the trajectory and stop on first collision. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespacetesseract__environment_a4ad0bc2bae5144d405dbdb2480d3044a}{K\+D\+L\+To\+Eigen}} (const K\+D\+L\+::\+Frame \&frame, Eigen\+::\+Isometry3d \&transform)
+\begin{DoxyCompactList}\small\item\em Convert K\+D\+L\+::\+Frame to Eigen\+::\+Isometry3d. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespacetesseract__environment_a711cd848d639d59118d0d2b0e168eee2}{Eigen\+To\+K\+DL}} (const Eigen\+::\+Isometry3d \&transform, K\+D\+L\+::\+Frame \&frame)
+\begin{DoxyCompactList}\small\item\em Convert Eigen\+::\+Isometry3d to K\+D\+L\+::\+Frame. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespacetesseract__environment_a8377849b093e0383f21ced934f19ecff}{K\+D\+L\+To\+Eigen}} (const K\+D\+L\+::\+Jacobian \&jacobian, Eigen\+::\+Ref$<$ Eigen\+::\+Matrix\+Xd $>$ matrix)
+\begin{DoxyCompactList}\small\item\em Convert K\+D\+L\+::\+Jacobian to Eigen\+::\+Matrix. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespacetesseract__environment_ab60a94bf5d9e2101cb42c6d604b4bc30}{K\+D\+L\+To\+Eigen}} (const K\+D\+L\+::\+Jacobian \&jacobian, const std\+::vector$<$ int $>$ \&q\+\_\+nrs, Eigen\+::\+Ref$<$ Eigen\+::\+Matrix\+Xd $>$ matrix)
+\begin{DoxyCompactList}\small\item\em Convert a subset of K\+D\+L\+::\+Jacobian to Eigen\+::\+Matrix. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespacetesseract__environment_a6d4c018fdb13173a79616c41d08650ad}{Eigen\+To\+K\+DL}} (const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector\+Xd $>$ \&vec, K\+D\+L\+::\+Jnt\+Array \&joints)
+\begin{DoxyCompactList}\small\item\em Convert Eigen\+::\+Vector to K\+D\+L\+::\+Jnt\+Array. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{namespacetesseract__environment_acb95740502ec41d80a94a7631d4b7a3c}\label{namespacetesseract__environment_acb95740502ec41d80a94a7631d4b7a3c}} 
+\index{tesseract\_environment@{tesseract\_environment}!Commands@{Commands}}
+\index{Commands@{Commands}!tesseract\_environment@{tesseract\_environment}}
+\doxysubsubsection{\texorpdfstring{Commands}{Commands}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{namespacetesseract__environment_acb95740502ec41d80a94a7631d4b7a3c}{tesseract\+\_\+environment\+::\+Commands}} = typedef std\+::vector$<$\mbox{\hyperlink{classtesseract__environment_1_1Command_a71f41840ff091003233e7ddaff1c4081}{Command\+::\+Const\+Ptr}}$>$}
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{namespacetesseract__environment_afc00c1aecb519acba3afc24dbd367029}\label{namespacetesseract__environment_afc00c1aecb519acba3afc24dbd367029}} 
+\index{tesseract\_environment@{tesseract\_environment}!CommandType@{CommandType}}
+\index{CommandType@{CommandType}!tesseract\_environment@{tesseract\_environment}}
+\doxysubsubsection{\texorpdfstring{CommandType}{CommandType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespacetesseract__environment_afc00c1aecb519acba3afc24dbd367029}{tesseract\+\_\+environment\+::\+Command\+Type}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADD@{ADD}!tesseract\_environment@{tesseract\_environment}}\index{tesseract\_environment@{tesseract\_environment}!ADD@{ADD}}}\mbox{\Hypertarget{namespacetesseract__environment_afc00c1aecb519acba3afc24dbd367029a9eeb52badb613229884838847294b90d}\label{namespacetesseract__environment_afc00c1aecb519acba3afc24dbd367029a9eeb52badb613229884838847294b90d}} 
+A\+DD&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MOVE\_LINK@{MOVE\_LINK}!tesseract\_environment@{tesseract\_environment}}\index{tesseract\_environment@{tesseract\_environment}!MOVE\_LINK@{MOVE\_LINK}}}\mbox{\Hypertarget{namespacetesseract__environment_afc00c1aecb519acba3afc24dbd367029a0c4617d6ea17eb456b514b9bc9ddaaec}\label{namespacetesseract__environment_afc00c1aecb519acba3afc24dbd367029a0c4617d6ea17eb456b514b9bc9ddaaec}} 
+M\+O\+V\+E\+\_\+\+L\+I\+NK&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MOVE\_JOINT@{MOVE\_JOINT}!tesseract\_environment@{tesseract\_environment}}\index{tesseract\_environment@{tesseract\_environment}!MOVE\_JOINT@{MOVE\_JOINT}}}\mbox{\Hypertarget{namespacetesseract__environment_afc00c1aecb519acba3afc24dbd367029a4ca2d320bdf40df7e6f465d21e268ec4}\label{namespacetesseract__environment_afc00c1aecb519acba3afc24dbd367029a4ca2d320bdf40df7e6f465d21e268ec4}} 
+M\+O\+V\+E\+\_\+\+J\+O\+I\+NT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{REMOVE\_LINK@{REMOVE\_LINK}!tesseract\_environment@{tesseract\_environment}}\index{tesseract\_environment@{tesseract\_environment}!REMOVE\_LINK@{REMOVE\_LINK}}}\mbox{\Hypertarget{namespacetesseract__environment_afc00c1aecb519acba3afc24dbd367029afff7bebecead86441476e38b94b3bc05}\label{namespacetesseract__environment_afc00c1aecb519acba3afc24dbd367029afff7bebecead86441476e38b94b3bc05}} 
+R\+E\+M\+O\+V\+E\+\_\+\+L\+I\+NK&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{REMOVE\_JOINT@{REMOVE\_JOINT}!tesseract\_environment@{tesseract\_environment}}\index{tesseract\_environment@{tesseract\_environment}!REMOVE\_JOINT@{REMOVE\_JOINT}}}\mbox{\Hypertarget{namespacetesseract__environment_afc00c1aecb519acba3afc24dbd367029a6721b27017cd21a598f1740481167224}\label{namespacetesseract__environment_afc00c1aecb519acba3afc24dbd367029a6721b27017cd21a598f1740481167224}} 
+R\+E\+M\+O\+V\+E\+\_\+\+J\+O\+I\+NT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CHANGE\_LINK\_ORIGIN@{CHANGE\_LINK\_ORIGIN}!tesseract\_environment@{tesseract\_environment}}\index{tesseract\_environment@{tesseract\_environment}!CHANGE\_LINK\_ORIGIN@{CHANGE\_LINK\_ORIGIN}}}\mbox{\Hypertarget{namespacetesseract__environment_afc00c1aecb519acba3afc24dbd367029a5556c1986a9b58c054c0038a8c73cab9}\label{namespacetesseract__environment_afc00c1aecb519acba3afc24dbd367029a5556c1986a9b58c054c0038a8c73cab9}} 
+C\+H\+A\+N\+G\+E\+\_\+\+L\+I\+N\+K\+\_\+\+O\+R\+I\+G\+IN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CHANGE\_JOINT\_ORIGIN@{CHANGE\_JOINT\_ORIGIN}!tesseract\_environment@{tesseract\_environment}}\index{tesseract\_environment@{tesseract\_environment}!CHANGE\_JOINT\_ORIGIN@{CHANGE\_JOINT\_ORIGIN}}}\mbox{\Hypertarget{namespacetesseract__environment_afc00c1aecb519acba3afc24dbd367029a9e520d728925baf2b87146d99a20d8ba}\label{namespacetesseract__environment_afc00c1aecb519acba3afc24dbd367029a9e520d728925baf2b87146d99a20d8ba}} 
+C\+H\+A\+N\+G\+E\+\_\+\+J\+O\+I\+N\+T\+\_\+\+O\+R\+I\+G\+IN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CHANGE\_LINK\_COLLISION\_ENABLED@{CHANGE\_LINK\_COLLISION\_ENABLED}!tesseract\_environment@{tesseract\_environment}}\index{tesseract\_environment@{tesseract\_environment}!CHANGE\_LINK\_COLLISION\_ENABLED@{CHANGE\_LINK\_COLLISION\_ENABLED}}}\mbox{\Hypertarget{namespacetesseract__environment_afc00c1aecb519acba3afc24dbd367029a12a8518522948e345cab8fefd0235008}\label{namespacetesseract__environment_afc00c1aecb519acba3afc24dbd367029a12a8518522948e345cab8fefd0235008}} 
+C\+H\+A\+N\+G\+E\+\_\+\+L\+I\+N\+K\+\_\+\+C\+O\+L\+L\+I\+S\+I\+O\+N\+\_\+\+E\+N\+A\+B\+L\+ED&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CHANGE\_LINK\_VISIBILITY@{CHANGE\_LINK\_VISIBILITY}!tesseract\_environment@{tesseract\_environment}}\index{tesseract\_environment@{tesseract\_environment}!CHANGE\_LINK\_VISIBILITY@{CHANGE\_LINK\_VISIBILITY}}}\mbox{\Hypertarget{namespacetesseract__environment_afc00c1aecb519acba3afc24dbd367029aaa5732dcc51c06b4e9af6373e937e4a1}\label{namespacetesseract__environment_afc00c1aecb519acba3afc24dbd367029aaa5732dcc51c06b4e9af6373e937e4a1}} 
+C\+H\+A\+N\+G\+E\+\_\+\+L\+I\+N\+K\+\_\+\+V\+I\+S\+I\+B\+I\+L\+I\+TY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADD\_ALLOWED\_COLLISION@{ADD\_ALLOWED\_COLLISION}!tesseract\_environment@{tesseract\_environment}}\index{tesseract\_environment@{tesseract\_environment}!ADD\_ALLOWED\_COLLISION@{ADD\_ALLOWED\_COLLISION}}}\mbox{\Hypertarget{namespacetesseract__environment_afc00c1aecb519acba3afc24dbd367029ab2889e5decae30347cb29cdeb282d664}\label{namespacetesseract__environment_afc00c1aecb519acba3afc24dbd367029ab2889e5decae30347cb29cdeb282d664}} 
+A\+D\+D\+\_\+\+A\+L\+L\+O\+W\+E\+D\+\_\+\+C\+O\+L\+L\+I\+S\+I\+ON&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{REMOVE\_ALLOWED\_COLLISION@{REMOVE\_ALLOWED\_COLLISION}!tesseract\_environment@{tesseract\_environment}}\index{tesseract\_environment@{tesseract\_environment}!REMOVE\_ALLOWED\_COLLISION@{REMOVE\_ALLOWED\_COLLISION}}}\mbox{\Hypertarget{namespacetesseract__environment_afc00c1aecb519acba3afc24dbd367029a6944181c71015e5537d5271cb1c432f3}\label{namespacetesseract__environment_afc00c1aecb519acba3afc24dbd367029a6944181c71015e5537d5271cb1c432f3}} 
+R\+E\+M\+O\+V\+E\+\_\+\+A\+L\+L\+O\+W\+E\+D\+\_\+\+C\+O\+L\+L\+I\+S\+I\+ON&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{REMOVE\_ALLOWED\_COLLISION\_LINK@{REMOVE\_ALLOWED\_COLLISION\_LINK}!tesseract\_environment@{tesseract\_environment}}\index{tesseract\_environment@{tesseract\_environment}!REMOVE\_ALLOWED\_COLLISION\_LINK@{REMOVE\_ALLOWED\_COLLISION\_LINK}}}\mbox{\Hypertarget{namespacetesseract__environment_afc00c1aecb519acba3afc24dbd367029ac40ca000ef4f65a27cf7998ef4f020a0}\label{namespacetesseract__environment_afc00c1aecb519acba3afc24dbd367029ac40ca000ef4f65a27cf7998ef4f020a0}} 
+R\+E\+M\+O\+V\+E\+\_\+\+A\+L\+L\+O\+W\+E\+D\+\_\+\+C\+O\+L\+L\+I\+S\+I\+O\+N\+\_\+\+L\+I\+NK&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacetesseract__environment_a5fc9f1bcdf0e23252ced2f84779e4393}\label{namespacetesseract__environment_a5fc9f1bcdf0e23252ced2f84779e4393}} 
+\index{tesseract\_environment@{tesseract\_environment}!checkTrajectory@{checkTrajectory}}
+\index{checkTrajectory@{checkTrajectory}!tesseract\_environment@{tesseract\_environment}}
+\doxysubsubsection{\texorpdfstring{checkTrajectory()}{checkTrajectory()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily bool tesseract\+\_\+environment\+::check\+Trajectory (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{namespacetesseract__collision_a1eeace4cc41027dbde8e7dbeb77ca7cf}{tesseract\+\_\+collision\+::\+Contact\+Result\+Map}} $>$ \&}]{contacts,  }\item[{\mbox{\hyperlink{classtesseract__collision_1_1ContinuousContactManager}{tesseract\+\_\+collision\+::\+Continuous\+Contact\+Manager}} \&}]{manager,  }\item[{const \mbox{\hyperlink{classtesseract__environment_1_1StateSolver}{tesseract\+\_\+environment\+::\+State\+Solver}} \&}]{state\+\_\+solver,  }\item[{const std\+::vector$<$ std\+::string $>$ \&}]{joint\+\_\+names,  }\item[{const \mbox{\hyperlink{namespacetesseract__common_a431ff65777ee0bed71e7671390638244}{tesseract\+\_\+common\+::\+Traj\+Array}} \&}]{traj,  }\item[{const \mbox{\hyperlink{structtesseract__collision_1_1ContactRequest}{tesseract\+\_\+collision\+::\+Contact\+Request}} \&}]{request = {\ttfamily \mbox{\hyperlink{structtesseract__collision_1_1ContactRequest}{tesseract\+\_\+collision\+::\+Contact\+Request}}(\mbox{\hyperlink{namespacetesseract__collision_ac3da4f46ae16e86ba4f1dfd2935eb80ca2c2624a5059934a947d6e25fe8332ade}{tesseract\+\_\+collision\+::\+Contact\+Test\+Type\+::\+F\+I\+R\+ST}})},  }\item[{bool}]{verbose = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Should perform a continuous collision check over the trajectory and stop on first collision. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em contacts} & A vector of vector of Contact\+Map where each indicie corrisponds to a timestep \\
+\hline
+{\em manager} & A continuous contact manager \\
+\hline
+{\em state\+\_\+solver} & The environment state solver \\
+\hline
+{\em joint\+\_\+names} & Joint\+Names corresponding to the values in traj (must be in same order) \\
+\hline
+{\em traj} & The joint values at each time step \\
+\hline
+{\em request} & Contact request data \\
+\hline
+{\em verbose} & Print out found collisions \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if collision was found, otherwise false. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacetesseract__environment_a7f65d789f3bae3f4a2bae63de86d45a8}\label{namespacetesseract__environment_a7f65d789f3bae3f4a2bae63de86d45a8}} 
+\index{tesseract\_environment@{tesseract\_environment}!checkTrajectory@{checkTrajectory}}
+\index{checkTrajectory@{checkTrajectory}!tesseract\_environment@{tesseract\_environment}}
+\doxysubsubsection{\texorpdfstring{checkTrajectory()}{checkTrajectory()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily bool tesseract\+\_\+environment\+::check\+Trajectory (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{namespacetesseract__collision_a1eeace4cc41027dbde8e7dbeb77ca7cf}{tesseract\+\_\+collision\+::\+Contact\+Result\+Map}} $>$ \&}]{contacts,  }\item[{\mbox{\hyperlink{classtesseract__collision_1_1ContinuousContactManager}{tesseract\+\_\+collision\+::\+Continuous\+Contact\+Manager}} \&}]{manager,  }\item[{const \mbox{\hyperlink{classtesseract__environment_1_1StateSolver}{tesseract\+\_\+environment\+::\+State\+Solver}} \&}]{state\+\_\+solver,  }\item[{const std\+::vector$<$ std\+::string $>$ \&}]{joint\+\_\+names,  }\item[{const \mbox{\hyperlink{namespacetesseract__common_a431ff65777ee0bed71e7671390638244}{tesseract\+\_\+common\+::\+Traj\+Array}} \&}]{traj,  }\item[{double}]{longest\+\_\+valid\+\_\+segment\+\_\+length,  }\item[{const \mbox{\hyperlink{structtesseract__collision_1_1ContactRequest}{tesseract\+\_\+collision\+::\+Contact\+Request}} \&}]{request = {\ttfamily \mbox{\hyperlink{structtesseract__collision_1_1ContactRequest}{tesseract\+\_\+collision\+::\+Contact\+Request}}(\mbox{\hyperlink{namespacetesseract__collision_ac3da4f46ae16e86ba4f1dfd2935eb80ca2c2624a5059934a947d6e25fe8332ade}{tesseract\+\_\+collision\+::\+Contact\+Test\+Type\+::\+F\+I\+R\+ST}})},  }\item[{bool}]{verbose = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Should perform a continuous collision check over the trajectory and stop on first collision. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em contacts} & A vector of vector of Contact\+Map where each indicie corrisponds to a timestep \\
+\hline
+{\em manager} & A continuous contact manager \\
+\hline
+{\em state\+\_\+solver} & The environment state solver \\
+\hline
+{\em joint\+\_\+names} & Joint\+Names corresponding to the values in traj (must be in same order) \\
+\hline
+{\em traj} & The joint values at each time step \\
+\hline
+{\em longest\+\_\+valid\+\_\+segment\+\_\+length} & Used to check collisions between two state if norm(state0-\/state1) $>$ longest\+\_\+valid\+\_\+segment\+\_\+length. \\
+\hline
+{\em request} & Contact request data \\
+\hline
+{\em verbose} & Print out found collisions \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if collision was found, otherwise false. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacetesseract__environment_a23ee9dba2cf8c1c7234b2e1fcce4ca76}\label{namespacetesseract__environment_a23ee9dba2cf8c1c7234b2e1fcce4ca76}} 
+\index{tesseract\_environment@{tesseract\_environment}!checkTrajectory@{checkTrajectory}}
+\index{checkTrajectory@{checkTrajectory}!tesseract\_environment@{tesseract\_environment}}
+\doxysubsubsection{\texorpdfstring{checkTrajectory()}{checkTrajectory()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily bool tesseract\+\_\+environment\+::check\+Trajectory (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{namespacetesseract__collision_a1eeace4cc41027dbde8e7dbeb77ca7cf}{tesseract\+\_\+collision\+::\+Contact\+Result\+Map}} $>$ \&}]{contacts,  }\item[{\mbox{\hyperlink{classtesseract__collision_1_1DiscreteContactManager}{tesseract\+\_\+collision\+::\+Discrete\+Contact\+Manager}} \&}]{manager,  }\item[{const \mbox{\hyperlink{classtesseract__environment_1_1StateSolver}{tesseract\+\_\+environment\+::\+State\+Solver}} \&}]{state\+\_\+solver,  }\item[{const std\+::vector$<$ std\+::string $>$ \&}]{joint\+\_\+names,  }\item[{const \mbox{\hyperlink{namespacetesseract__common_a431ff65777ee0bed71e7671390638244}{tesseract\+\_\+common\+::\+Traj\+Array}} \&}]{traj,  }\item[{const \mbox{\hyperlink{structtesseract__collision_1_1ContactRequest}{tesseract\+\_\+collision\+::\+Contact\+Request}} \&}]{request = {\ttfamily \mbox{\hyperlink{structtesseract__collision_1_1ContactRequest}{tesseract\+\_\+collision\+::\+Contact\+Request}}(\mbox{\hyperlink{namespacetesseract__collision_ac3da4f46ae16e86ba4f1dfd2935eb80ca2c2624a5059934a947d6e25fe8332ade}{tesseract\+\_\+collision\+::\+Contact\+Test\+Type\+::\+F\+I\+R\+ST}})},  }\item[{bool}]{verbose = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Should perform a discrete collision check over the trajectory and stop on first collision. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em contacts} & A vector of vector of Contact\+Map where each indicie corrisponds to a timestep \\
+\hline
+{\em manager} & A continuous contact manager \\
+\hline
+{\em state\+\_\+solver} & The environment state solver \\
+\hline
+{\em joint\+\_\+names} & Joint\+Names corresponding to the values in traj (must be in same order) \\
+\hline
+{\em traj} & The joint values at each time step \\
+\hline
+{\em request} & Contact request data \\
+\hline
+{\em verbose} & Print out found collisions \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if collision was found, otherwise false. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacetesseract__environment_a1cd738a49117cda998bf53b6c0f6c3cb}\label{namespacetesseract__environment_a1cd738a49117cda998bf53b6c0f6c3cb}} 
+\index{tesseract\_environment@{tesseract\_environment}!checkTrajectory@{checkTrajectory}}
+\index{checkTrajectory@{checkTrajectory}!tesseract\_environment@{tesseract\_environment}}
+\doxysubsubsection{\texorpdfstring{checkTrajectory()}{checkTrajectory()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily bool tesseract\+\_\+environment\+::check\+Trajectory (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{namespacetesseract__collision_a1eeace4cc41027dbde8e7dbeb77ca7cf}{tesseract\+\_\+collision\+::\+Contact\+Result\+Map}} $>$ \&}]{contacts,  }\item[{\mbox{\hyperlink{classtesseract__collision_1_1DiscreteContactManager}{tesseract\+\_\+collision\+::\+Discrete\+Contact\+Manager}} \&}]{manager,  }\item[{const \mbox{\hyperlink{classtesseract__environment_1_1StateSolver}{tesseract\+\_\+environment\+::\+State\+Solver}} \&}]{state\+\_\+solver,  }\item[{const std\+::vector$<$ std\+::string $>$ \&}]{joint\+\_\+names,  }\item[{const \mbox{\hyperlink{namespacetesseract__common_a431ff65777ee0bed71e7671390638244}{tesseract\+\_\+common\+::\+Traj\+Array}} \&}]{traj,  }\item[{double}]{longest\+\_\+valid\+\_\+segment\+\_\+length,  }\item[{const \mbox{\hyperlink{structtesseract__collision_1_1ContactRequest}{tesseract\+\_\+collision\+::\+Contact\+Request}} \&}]{request = {\ttfamily \mbox{\hyperlink{structtesseract__collision_1_1ContactRequest}{tesseract\+\_\+collision\+::\+Contact\+Request}}(\mbox{\hyperlink{namespacetesseract__collision_ac3da4f46ae16e86ba4f1dfd2935eb80ca2c2624a5059934a947d6e25fe8332ade}{tesseract\+\_\+collision\+::\+Contact\+Test\+Type\+::\+F\+I\+R\+ST}})},  }\item[{bool}]{verbose = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Should perform a discrete collision check over the trajectory and stop on first collision. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em contacts} & A vector of vector of Contact\+Map where each indicie corrisponds to a timestep \\
+\hline
+{\em manager} & A continuous contact manager \\
+\hline
+{\em state\+\_\+solver} & The environment state solver \\
+\hline
+{\em joint\+\_\+names} & Joint\+Names corresponding to the values in traj (must be in same order) \\
+\hline
+{\em traj} & The joint values at each time step \\
+\hline
+{\em longest\+\_\+valid\+\_\+segment\+\_\+length} & Used to check collisions between two state if norm(state0-\/state1) $>$ longest\+\_\+valid\+\_\+segment\+\_\+length. \\
+\hline
+{\em request} & Contact request data \\
+\hline
+{\em verbose} & Print out found collisions \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if collision was found, otherwise false. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacetesseract__environment_aa5ecb98304914ac69f8243f7bd8b9443}\label{namespacetesseract__environment_aa5ecb98304914ac69f8243f7bd8b9443}} 
+\index{tesseract\_environment@{tesseract\_environment}!checkTrajectorySegment@{checkTrajectorySegment}}
+\index{checkTrajectorySegment@{checkTrajectorySegment}!tesseract\_environment@{tesseract\_environment}}
+\doxysubsubsection{\texorpdfstring{checkTrajectorySegment()}{checkTrajectorySegment()}}
+{\footnotesize\ttfamily bool tesseract\+\_\+environment\+::check\+Trajectory\+Segment (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{namespacetesseract__collision_a1eeace4cc41027dbde8e7dbeb77ca7cf}{tesseract\+\_\+collision\+::\+Contact\+Result\+Map}} $>$ \&}]{contacts,  }\item[{\mbox{\hyperlink{classtesseract__collision_1_1ContinuousContactManager}{tesseract\+\_\+collision\+::\+Continuous\+Contact\+Manager}} \&}]{manager,  }\item[{const \mbox{\hyperlink{structtesseract__environment_1_1EnvState_a6a9f30b8418e9cb943125008c62b1d39}{tesseract\+\_\+environment\+::\+Env\+State\+::\+Ptr}} \&}]{state0,  }\item[{const \mbox{\hyperlink{structtesseract__environment_1_1EnvState_a6a9f30b8418e9cb943125008c62b1d39}{tesseract\+\_\+environment\+::\+Env\+State\+::\+Ptr}} \&}]{state1,  }\item[{const \mbox{\hyperlink{structtesseract__collision_1_1ContactRequest}{tesseract\+\_\+collision\+::\+Contact\+Request}} \&}]{request = {\ttfamily \mbox{\hyperlink{structtesseract__collision_1_1ContactRequest}{tesseract\+\_\+collision\+::\+Contact\+Request}}(\mbox{\hyperlink{namespacetesseract__collision_ac3da4f46ae16e86ba4f1dfd2935eb80ca2c2624a5059934a947d6e25fe8332ade}{tesseract\+\_\+collision\+::\+Contact\+Test\+Type\+::\+F\+I\+R\+ST}})},  }\item[{bool}]{verbose = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Should perform a continuous collision check between two states. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em contacts} & A vector of vector of Contact\+Map where each indicie corrisponds to a timestep \\
+\hline
+{\em manager} & A continuous contact manager \\
+\hline
+{\em state0} & First environment state \\
+\hline
+{\em state1} & Second environment state \\
+\hline
+{\em request} & Contact request data \\
+\hline
+{\em verbose} & Print out found collisions \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if collision was found, otherwise false. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacetesseract__environment_aae40791602094d10337a01e3ae9fc332}\label{namespacetesseract__environment_aae40791602094d10337a01e3ae9fc332}} 
+\index{tesseract\_environment@{tesseract\_environment}!checkTrajectoryState@{checkTrajectoryState}}
+\index{checkTrajectoryState@{checkTrajectoryState}!tesseract\_environment@{tesseract\_environment}}
+\doxysubsubsection{\texorpdfstring{checkTrajectoryState()}{checkTrajectoryState()}}
+{\footnotesize\ttfamily bool tesseract\+\_\+environment\+::check\+Trajectory\+State (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{namespacetesseract__collision_a1eeace4cc41027dbde8e7dbeb77ca7cf}{tesseract\+\_\+collision\+::\+Contact\+Result\+Map}} $>$ \&}]{contacts,  }\item[{\mbox{\hyperlink{classtesseract__collision_1_1DiscreteContactManager}{tesseract\+\_\+collision\+::\+Discrete\+Contact\+Manager}} \&}]{manager,  }\item[{const \mbox{\hyperlink{structtesseract__environment_1_1EnvState_a6a9f30b8418e9cb943125008c62b1d39}{tesseract\+\_\+environment\+::\+Env\+State\+::\+Ptr}} \&}]{state,  }\item[{const \mbox{\hyperlink{structtesseract__collision_1_1ContactRequest}{tesseract\+\_\+collision\+::\+Contact\+Request}} \&}]{request = {\ttfamily \mbox{\hyperlink{structtesseract__collision_1_1ContactRequest}{tesseract\+\_\+collision\+::\+Contact\+Request}}(\mbox{\hyperlink{namespacetesseract__collision_ac3da4f46ae16e86ba4f1dfd2935eb80ca2c2624a5059934a947d6e25fe8332ade}{tesseract\+\_\+collision\+::\+Contact\+Test\+Type\+::\+F\+I\+R\+ST}})},  }\item[{bool}]{verbose = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Should perform a discrete collision check a state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em contacts} & A vector of vector of Contact\+Map where each indicie corrisponds to a timestep \\
+\hline
+{\em manager} & A discrete contact manager \\
+\hline
+{\em state} & First environment state \\
+\hline
+{\em request} & Contact request data \\
+\hline
+{\em verbose} & Print out found collisions \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if collision was found, otherwise false. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacetesseract__environment_a711cd848d639d59118d0d2b0e168eee2}\label{namespacetesseract__environment_a711cd848d639d59118d0d2b0e168eee2}} 
+\index{tesseract\_environment@{tesseract\_environment}!EigenToKDL@{EigenToKDL}}
+\index{EigenToKDL@{EigenToKDL}!tesseract\_environment@{tesseract\_environment}}
+\doxysubsubsection{\texorpdfstring{EigenToKDL()}{EigenToKDL()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void tesseract\+\_\+environment\+::\+Eigen\+To\+K\+DL (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Isometry3d \&}]{transform,  }\item[{K\+D\+L\+::\+Frame \&}]{frame }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Convert Eigen\+::\+Isometry3d to K\+D\+L\+::\+Frame. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em transform} & Input Eigen transform (Isometry3d) \\
+\hline
+{\em frame} & Output K\+DL Frame \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{namespacetesseract__environment_a6d4c018fdb13173a79616c41d08650ad}\label{namespacetesseract__environment_a6d4c018fdb13173a79616c41d08650ad}} 
+\index{tesseract\_environment@{tesseract\_environment}!EigenToKDL@{EigenToKDL}}
+\index{EigenToKDL@{EigenToKDL}!tesseract\_environment@{tesseract\_environment}}
+\doxysubsubsection{\texorpdfstring{EigenToKDL()}{EigenToKDL()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void tesseract\+\_\+environment\+::\+Eigen\+To\+K\+DL (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector\+Xd $>$ \&}]{vec,  }\item[{K\+D\+L\+::\+Jnt\+Array \&}]{joints }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Convert Eigen\+::\+Vector to K\+D\+L\+::\+Jnt\+Array. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vec} & Input Eigen vector \\
+\hline
+{\em joints} & Output K\+DL joint array \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{namespacetesseract__environment_ab700d9c6b20d56629a5aac78468eb566}\label{namespacetesseract__environment_ab700d9c6b20d56629a5aac78468eb566}} 
+\index{tesseract\_environment@{tesseract\_environment}!getActiveLinkNamesRecursive@{getActiveLinkNamesRecursive}}
+\index{getActiveLinkNamesRecursive@{getActiveLinkNamesRecursive}!tesseract\_environment@{tesseract\_environment}}
+\doxysubsubsection{\texorpdfstring{getActiveLinkNamesRecursive()}{getActiveLinkNamesRecursive()}}
+{\footnotesize\ttfamily void tesseract\+\_\+environment\+::get\+Active\+Link\+Names\+Recursive (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::string $>$ \&}]{active\+\_\+links,  }\item[{const \mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph_a9ee303b2514bfedd8c914d09551b00ff}{tesseract\+\_\+scene\+\_\+graph\+::\+Scene\+Graph\+::\+Const\+Ptr}} \&}]{scene\+\_\+graph,  }\item[{const std\+::string \&}]{current\+\_\+link,  }\item[{bool}]{active }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the active Link Names Recursively. 
+
+\begin{DoxyVerb}   This currently only works for graphs that are trees. Need to create a generic method using boost::visitor
+   TODO: Need to update using graph->getLinkChildren
+\end{DoxyVerb}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em active\+\_\+links} & \\
+\hline
+{\em scene\+\_\+graph} & \\
+\hline
+{\em current\+\_\+link} & \\
+\hline
+{\em active} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{namespacetesseract__environment_a4ad0bc2bae5144d405dbdb2480d3044a}\label{namespacetesseract__environment_a4ad0bc2bae5144d405dbdb2480d3044a}} 
+\index{tesseract\_environment@{tesseract\_environment}!KDLToEigen@{KDLToEigen}}
+\index{KDLToEigen@{KDLToEigen}!tesseract\_environment@{tesseract\_environment}}
+\doxysubsubsection{\texorpdfstring{KDLToEigen()}{KDLToEigen()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily void tesseract\+\_\+environment\+::\+K\+D\+L\+To\+Eigen (\begin{DoxyParamCaption}\item[{const K\+D\+L\+::\+Frame \&}]{frame,  }\item[{Eigen\+::\+Isometry3d \&}]{transform }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Convert K\+D\+L\+::\+Frame to Eigen\+::\+Isometry3d. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em frame} & Input K\+DL Frame \\
+\hline
+{\em transform} & Output Eigen transform (Isometry3d) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{namespacetesseract__environment_ab60a94bf5d9e2101cb42c6d604b4bc30}\label{namespacetesseract__environment_ab60a94bf5d9e2101cb42c6d604b4bc30}} 
+\index{tesseract\_environment@{tesseract\_environment}!KDLToEigen@{KDLToEigen}}
+\index{KDLToEigen@{KDLToEigen}!tesseract\_environment@{tesseract\_environment}}
+\doxysubsubsection{\texorpdfstring{KDLToEigen()}{KDLToEigen()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily void tesseract\+\_\+environment\+::\+K\+D\+L\+To\+Eigen (\begin{DoxyParamCaption}\item[{const K\+D\+L\+::\+Jacobian \&}]{jacobian,  }\item[{const std\+::vector$<$ int $>$ \&}]{q\+\_\+nrs,  }\item[{Eigen\+::\+Ref$<$ Eigen\+::\+Matrix\+Xd $>$}]{matrix }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Convert a subset of K\+D\+L\+::\+Jacobian to Eigen\+::\+Matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em jacobian} & Input K\+DL Jacobian \\
+\hline
+{\em q\+\_\+nrs} & Input the columns to use \\
+\hline
+{\em matrix} & Output Eigen Matrix\+Xd \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{namespacetesseract__environment_a8377849b093e0383f21ced934f19ecff}\label{namespacetesseract__environment_a8377849b093e0383f21ced934f19ecff}} 
+\index{tesseract\_environment@{tesseract\_environment}!KDLToEigen@{KDLToEigen}}
+\index{KDLToEigen@{KDLToEigen}!tesseract\_environment@{tesseract\_environment}}
+\doxysubsubsection{\texorpdfstring{KDLToEigen()}{KDLToEigen()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily void tesseract\+\_\+environment\+::\+K\+D\+L\+To\+Eigen (\begin{DoxyParamCaption}\item[{const K\+D\+L\+::\+Jacobian \&}]{jacobian,  }\item[{Eigen\+::\+Ref$<$ Eigen\+::\+Matrix\+Xd $>$}]{matrix }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Convert K\+D\+L\+::\+Jacobian to Eigen\+::\+Matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em jacobian} & Input K\+DL Jacobian \\
+\hline
+{\em matrix} & Output Eigen Matrix\+Xd \\
+\hline
+\end{DoxyParams}

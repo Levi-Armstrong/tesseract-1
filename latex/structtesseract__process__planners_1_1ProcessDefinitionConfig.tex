@@ -1,0 +1,86 @@
+\hypertarget{structtesseract__process__planners_1_1ProcessDefinitionConfig}{}\doxysection{tesseract\+\_\+process\+\_\+planners\+::Process\+Definition\+Config Class Reference}
+\label{structtesseract__process__planners_1_1ProcessDefinitionConfig}\index{tesseract\_process\_planners::ProcessDefinitionConfig@{tesseract\_process\_planners::ProcessDefinitionConfig}}
+
+
+{\ttfamily \#include $<$process\+\_\+definition.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structtesseract__process__planners_1_1ProcessDefinitionConfig_ae6f2cf79f3fd2b1e2832dd5b39d935ef}{Process\+Definition\+Config}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+E\+I\+G\+E\+N\+\_\+\+M\+A\+K\+E\+\_\+\+A\+L\+I\+G\+N\+E\+D\+\_\+\+O\+P\+E\+R\+A\+T\+O\+R\+\_\+\+N\+EW \mbox{\hyperlink{classtesseract__motion__planners_1_1Waypoint_a29451e07e89a6a6695dd6c1b557b0905}{tesseract\+\_\+motion\+\_\+planners\+::\+Waypoint\+::\+Const\+Ptr}} \mbox{\hyperlink{structtesseract__process__planners_1_1ProcessDefinitionConfig_aceeb5739c2d167305634b219612948ab}{start}}
+\item 
+\mbox{\hyperlink{classtesseract__motion__planners_1_1Waypoint_a29451e07e89a6a6695dd6c1b557b0905}{tesseract\+\_\+motion\+\_\+planners\+::\+Waypoint\+::\+Const\+Ptr}} \mbox{\hyperlink{structtesseract__process__planners_1_1ProcessDefinitionConfig_a66ec54c9fc57f4619e88091925916be2}{end}}
+\item 
+std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classtesseract__motion__planners_1_1Waypoint_a6a3eae473f2bb3bd94684561aae0bd3e}{tesseract\+\_\+motion\+\_\+planners\+::\+Waypoint\+::\+Ptr}} $>$ $>$ \mbox{\hyperlink{structtesseract__process__planners_1_1ProcessDefinitionConfig_a3e64be71da01f63627cc60b3291f3810}{tool\+\_\+paths}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classtesseract__process__planners_1_1ProcessTransitionGenerator_a00beb5ae460f154a2aa20433adf7c22e}{Process\+Transition\+Generator\+::\+Const\+Ptr}} $>$ \mbox{\hyperlink{structtesseract__process__planners_1_1ProcessDefinitionConfig_a4860c07031b1ac2a6876fe0e5bd8cf05}{transition\+\_\+generator}}
+\item 
+Eigen\+::\+Isometry3d \mbox{\hyperlink{structtesseract__process__planners_1_1ProcessDefinitionConfig_a5ce310f15c397364f8a3fc6d19a8b84e}{local\+\_\+offset\+\_\+direction}}
+\item 
+Eigen\+::\+Isometry3d \mbox{\hyperlink{structtesseract__process__planners_1_1ProcessDefinitionConfig_af6af8db095af76ef34fcbc7c8ee664aa}{world\+\_\+offset\+\_\+direction}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The Process Definition Config
+
+This provides the high level process configuration information. It requires the user to provide the start position waypoint (Joint\+Waypoint) and a set of tool paths (strokes) that should be converted into a process results definition leveraging both this configuration information and the Process\+Segment\+Definitions.
+
+Also, other operations that are nice to have is the ability to offset the process. Particularly useful when wanting to verify the process without making contact with a surface in the case of sanding. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structtesseract__process__planners_1_1ProcessDefinitionConfig_ae6f2cf79f3fd2b1e2832dd5b39d935ef}\label{structtesseract__process__planners_1_1ProcessDefinitionConfig_ae6f2cf79f3fd2b1e2832dd5b39d935ef}} 
+\index{tesseract\_process\_planners::ProcessDefinitionConfig@{tesseract\_process\_planners::ProcessDefinitionConfig}!ProcessDefinitionConfig@{ProcessDefinitionConfig}}
+\index{ProcessDefinitionConfig@{ProcessDefinitionConfig}!tesseract\_process\_planners::ProcessDefinitionConfig@{tesseract\_process\_planners::ProcessDefinitionConfig}}
+\doxysubsubsection{\texorpdfstring{ProcessDefinitionConfig()}{ProcessDefinitionConfig()}}
+{\footnotesize\ttfamily tesseract\+\_\+process\+\_\+planners\+::\+Process\+Definition\+Config\+::\+Process\+Definition\+Config (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structtesseract__process__planners_1_1ProcessDefinitionConfig_a66ec54c9fc57f4619e88091925916be2}\label{structtesseract__process__planners_1_1ProcessDefinitionConfig_a66ec54c9fc57f4619e88091925916be2}} 
+\index{tesseract\_process\_planners::ProcessDefinitionConfig@{tesseract\_process\_planners::ProcessDefinitionConfig}!end@{end}}
+\index{end@{end}!tesseract\_process\_planners::ProcessDefinitionConfig@{tesseract\_process\_planners::ProcessDefinitionConfig}}
+\doxysubsubsection{\texorpdfstring{end}{end}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__motion__planners_1_1Waypoint_a29451e07e89a6a6695dd6c1b557b0905}{tesseract\+\_\+motion\+\_\+planners\+::\+Waypoint\+::\+Const\+Ptr}} tesseract\+\_\+process\+\_\+planners\+::\+Process\+Definition\+Config\+::end}
+
+\mbox{\Hypertarget{structtesseract__process__planners_1_1ProcessDefinitionConfig_a5ce310f15c397364f8a3fc6d19a8b84e}\label{structtesseract__process__planners_1_1ProcessDefinitionConfig_a5ce310f15c397364f8a3fc6d19a8b84e}} 
+\index{tesseract\_process\_planners::ProcessDefinitionConfig@{tesseract\_process\_planners::ProcessDefinitionConfig}!local\_offset\_direction@{local\_offset\_direction}}
+\index{local\_offset\_direction@{local\_offset\_direction}!tesseract\_process\_planners::ProcessDefinitionConfig@{tesseract\_process\_planners::ProcessDefinitionConfig}}
+\doxysubsubsection{\texorpdfstring{local\_offset\_direction}{local\_offset\_direction}}
+{\footnotesize\ttfamily Eigen\+::\+Isometry3d tesseract\+\_\+process\+\_\+planners\+::\+Process\+Definition\+Config\+::local\+\_\+offset\+\_\+direction}
+
+\mbox{\Hypertarget{structtesseract__process__planners_1_1ProcessDefinitionConfig_aceeb5739c2d167305634b219612948ab}\label{structtesseract__process__planners_1_1ProcessDefinitionConfig_aceeb5739c2d167305634b219612948ab}} 
+\index{tesseract\_process\_planners::ProcessDefinitionConfig@{tesseract\_process\_planners::ProcessDefinitionConfig}!start@{start}}
+\index{start@{start}!tesseract\_process\_planners::ProcessDefinitionConfig@{tesseract\_process\_planners::ProcessDefinitionConfig}}
+\doxysubsubsection{\texorpdfstring{start}{start}}
+{\footnotesize\ttfamily E\+I\+G\+E\+N\+\_\+\+M\+A\+K\+E\+\_\+\+A\+L\+I\+G\+N\+E\+D\+\_\+\+O\+P\+E\+R\+A\+T\+O\+R\+\_\+\+N\+EW \mbox{\hyperlink{classtesseract__motion__planners_1_1Waypoint_a29451e07e89a6a6695dd6c1b557b0905}{tesseract\+\_\+motion\+\_\+planners\+::\+Waypoint\+::\+Const\+Ptr}} tesseract\+\_\+process\+\_\+planners\+::\+Process\+Definition\+Config\+::start}
+
+\mbox{\Hypertarget{structtesseract__process__planners_1_1ProcessDefinitionConfig_a3e64be71da01f63627cc60b3291f3810}\label{structtesseract__process__planners_1_1ProcessDefinitionConfig_a3e64be71da01f63627cc60b3291f3810}} 
+\index{tesseract\_process\_planners::ProcessDefinitionConfig@{tesseract\_process\_planners::ProcessDefinitionConfig}!tool\_paths@{tool\_paths}}
+\index{tool\_paths@{tool\_paths}!tesseract\_process\_planners::ProcessDefinitionConfig@{tesseract\_process\_planners::ProcessDefinitionConfig}}
+\doxysubsubsection{\texorpdfstring{tool\_paths}{tool\_paths}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::vector$<$\mbox{\hyperlink{classtesseract__motion__planners_1_1Waypoint_a6a3eae473f2bb3bd94684561aae0bd3e}{tesseract\+\_\+motion\+\_\+planners\+::\+Waypoint\+::\+Ptr}}$>$ $>$ tesseract\+\_\+process\+\_\+planners\+::\+Process\+Definition\+Config\+::tool\+\_\+paths}
+
+\mbox{\Hypertarget{structtesseract__process__planners_1_1ProcessDefinitionConfig_a4860c07031b1ac2a6876fe0e5bd8cf05}\label{structtesseract__process__planners_1_1ProcessDefinitionConfig_a4860c07031b1ac2a6876fe0e5bd8cf05}} 
+\index{tesseract\_process\_planners::ProcessDefinitionConfig@{tesseract\_process\_planners::ProcessDefinitionConfig}!transition\_generator@{transition\_generator}}
+\index{transition\_generator@{transition\_generator}!tesseract\_process\_planners::ProcessDefinitionConfig@{tesseract\_process\_planners::ProcessDefinitionConfig}}
+\doxysubsubsection{\texorpdfstring{transition\_generator}{transition\_generator}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{classtesseract__process__planners_1_1ProcessTransitionGenerator_a00beb5ae460f154a2aa20433adf7c22e}{Process\+Transition\+Generator\+::\+Const\+Ptr}}$>$ tesseract\+\_\+process\+\_\+planners\+::\+Process\+Definition\+Config\+::transition\+\_\+generator}
+
+\mbox{\Hypertarget{structtesseract__process__planners_1_1ProcessDefinitionConfig_af6af8db095af76ef34fcbc7c8ee664aa}\label{structtesseract__process__planners_1_1ProcessDefinitionConfig_af6af8db095af76ef34fcbc7c8ee664aa}} 
+\index{tesseract\_process\_planners::ProcessDefinitionConfig@{tesseract\_process\_planners::ProcessDefinitionConfig}!world\_offset\_direction@{world\_offset\_direction}}
+\index{world\_offset\_direction@{world\_offset\_direction}!tesseract\_process\_planners::ProcessDefinitionConfig@{tesseract\_process\_planners::ProcessDefinitionConfig}}
+\doxysubsubsection{\texorpdfstring{world\_offset\_direction}{world\_offset\_direction}}
+{\footnotesize\ttfamily Eigen\+::\+Isometry3d tesseract\+\_\+process\+\_\+planners\+::\+Process\+Definition\+Config\+::world\+\_\+offset\+\_\+direction}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+tesseract/tesseract\+\_\+planning/tesseract\+\_\+process\+\_\+planners/include/tesseract\+\_\+process\+\_\+planners/\mbox{\hyperlink{process__definition_8h}{process\+\_\+definition.\+h}}\end{DoxyCompactItemize}

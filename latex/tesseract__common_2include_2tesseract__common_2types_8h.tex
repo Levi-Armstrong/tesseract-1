@@ -1,0 +1,73 @@
+\hypertarget{tesseract__common_2include_2tesseract__common_2types_8h}{}\doxysection{tesseract/tesseract\+\_\+common/include/tesseract\+\_\+common/types.h File Reference}
+\label{tesseract__common_2include_2tesseract__common_2types_8h}\index{tesseract/tesseract\_common/include/tesseract\_common/types.h@{tesseract/tesseract\_common/include/tesseract\_common/types.h}}
+
+
+Common Tesseract Types.  
+
+
+{\ttfamily \#include $<$tesseract\+\_\+common/macros.\+h$>$}\newline
+{\ttfamily \#include $<$Eigen/\+Core$>$}\newline
+{\ttfamily \#include $<$Eigen/\+Geometry$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include $<$map$>$}\newline
+{\ttfamily \#include $<$unordered\+\_\+map$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structtesseract__common_1_1JointTrajectory}{tesseract\+\_\+common\+::\+Joint\+Trajectory}}
+\begin{DoxyCompactList}\small\item\em Represents a joint trajectory. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacetesseract__common}{tesseract\+\_\+common}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\using \mbox{\hyperlink{namespacetesseract__common_a000d15c3ab8d8ba4ebdaae64153b053a}{tesseract\+\_\+common\+::\+Aligned\+Vector}} = std\+::vector$<$ T, Eigen\+::aligned\+\_\+allocator$<$ T $>$ $>$
+\item 
+{\footnotesize template$<$typename Key , typename Value $>$ }\\using \mbox{\hyperlink{namespacetesseract__common_a2c5a4b6149060671cf8c3f9d15ef58c4}{tesseract\+\_\+common\+::\+Aligned\+Map}} = std\+::map$<$ Key, Value, std\+::less$<$ Key $>$, Eigen\+::aligned\+\_\+allocator$<$ std\+::pair$<$ const Key, Value $>$ $>$$>$
+\item 
+{\footnotesize template$<$typename Key , typename Value $>$ }\\using \mbox{\hyperlink{namespacetesseract__common_a85a5c73ede3e67335c3e09f9f3bc33a3}{tesseract\+\_\+common\+::\+Aligned\+Unordered\+Map}} = std\+::unordered\+\_\+map$<$ Key, Value, std\+::hash$<$ Key $>$, std\+::equal\+\_\+to$<$ Key $>$, Eigen\+::aligned\+\_\+allocator$<$ std\+::pair$<$ const Key, Value $>$ $>$$>$
+\item 
+using \mbox{\hyperlink{namespacetesseract__common_a94d9921fc7ed323609ac57d06f939cb6}{tesseract\+\_\+common\+::\+Vector\+Isometry3d}} = Aligned\+Vector$<$ Eigen\+::\+Isometry3d $>$
+\item 
+using \mbox{\hyperlink{namespacetesseract__common_a7f208ea8b9c62f41c593647319d56f37}{tesseract\+\_\+common\+::\+Vector\+Vector4d}} = Aligned\+Vector$<$ Eigen\+::\+Vector4d $>$
+\item 
+using \mbox{\hyperlink{namespacetesseract__common_af89ed6517f4c84bdb2b037bb40f7d9d9}{tesseract\+\_\+common\+::\+Vector\+Vector3d}} = std\+::vector$<$ Eigen\+::\+Vector3d $>$
+\item 
+using \mbox{\hyperlink{namespacetesseract__common_a67bde3cb7bb235f0f61c370ef8bc74d8}{tesseract\+\_\+common\+::\+Transform\+Map}} = Aligned\+Map$<$ std\+::string, Eigen\+::\+Isometry3d $>$
+\item 
+using \mbox{\hyperlink{namespacetesseract__common_a431ff65777ee0bed71e7671390638244}{tesseract\+\_\+common\+::\+Traj\+Array}} = Eigen\+::\+Matrix$<$ double, Eigen\+::\+Dynamic, Eigen\+::\+Dynamic, Eigen\+::\+Row\+Major $>$
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Common Tesseract Types. 
+
+\begin{DoxyAuthor}{Author}
+Levi Armstrong 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+January 18, 2018 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+T\+O\+DO 
+\end{DoxyVersion}
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000034}{Bug}}]No known bugs\end{DoxyRefDesc}
+
+
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2017, Southwest Research Institute
+\end{DoxyCopyright}
+\begin{DoxyParagraph}{License}
+Software License Agreement (Apache License) 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+Licensed under the Apache License, Version 2.\+0 (the \char`\"{}\+License\char`\"{}); you may not use this file except in compliance with the License. You may obtain a copy of the License at \href{http://www.apache.org/licenses/LICENSE-2.0}{\texttt{ http\+://www.\+apache.\+org/licenses/\+L\+I\+C\+E\+N\+S\+E-\/2.\+0}} 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \char`\"{}\+A\+S I\+S\char`\"{} B\+A\+S\+IS, W\+I\+T\+H\+O\+UT W\+A\+R\+R\+A\+N\+T\+I\+ES OR C\+O\+N\+D\+I\+T\+I\+O\+NS OF A\+NY K\+I\+ND, either express or implied. See the License for the specific language governing permissions and limitations under the License. 
+\end{DoxyParagraph}

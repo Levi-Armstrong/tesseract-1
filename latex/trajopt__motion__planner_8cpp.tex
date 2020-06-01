@@ -1,0 +1,32 @@
+\hypertarget{trajopt__motion__planner_8cpp}{}\doxysection{tesseract/tesseract\+\_\+planning/tesseract\+\_\+motion\+\_\+planners/src/trajopt/trajopt\+\_\+motion\+\_\+planner.cpp File Reference}
+\label{trajopt__motion__planner_8cpp}\index{tesseract/tesseract\_planning/tesseract\_motion\_planners/src/trajopt/trajopt\_motion\_planner.cpp@{tesseract/tesseract\_planning/tesseract\_motion\_planners/src/trajopt/trajopt\_motion\_planner.cpp}}
+{\ttfamily \#include $<$tesseract\+\_\+common/macros.\+h$>$}\newline
+{\ttfamily \#include $<$console\+\_\+bridge/console.\+h$>$}\newline
+{\ttfamily \#include $<$trajopt/plot\+\_\+callback.\+hpp$>$}\newline
+{\ttfamily \#include $<$trajopt/problem\+\_\+description.\+hpp$>$}\newline
+{\ttfamily \#include $<$trajopt\+\_\+utils/config.\+hpp$>$}\newline
+{\ttfamily \#include $<$trajopt\+\_\+utils/logging.\+hpp$>$}\newline
+{\ttfamily \#include $<$trajopt\+\_\+sco/optimizers.\+hpp$>$}\newline
+{\ttfamily \#include $<$trajopt\+\_\+sco/sco\+\_\+common.\+hpp$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+environment/core/utils.\+h$>$}\newline
+{\ttfamily \#include $<$boost/date\+\_\+time/posix\+\_\+time/posix\+\_\+time.\+hpp$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+motion\+\_\+planners/trajopt/trajopt\+\_\+motion\+\_\+planner.\+h$>$}\newline
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacetesseract__motion__planners}{tesseract\+\_\+motion\+\_\+planners}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static const double \mbox{\hyperlink{trajopt__motion__planner_8cpp_aa12baabc0dd2a5fbead934da8037194c}{L\+O\+N\+G\+E\+S\+T\+\_\+\+V\+A\+L\+I\+D\+\_\+\+S\+E\+G\+M\+E\+N\+T\+\_\+\+F\+R\+A\+C\+T\+I\+O\+N\+\_\+\+D\+E\+F\+A\+U\+LT}} = 0.\+01
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{trajopt__motion__planner_8cpp_aa12baabc0dd2a5fbead934da8037194c}\label{trajopt__motion__planner_8cpp_aa12baabc0dd2a5fbead934da8037194c}} 
+\index{trajopt\_motion\_planner.cpp@{trajopt\_motion\_planner.cpp}!LONGEST\_VALID\_SEGMENT\_FRACTION\_DEFAULT@{LONGEST\_VALID\_SEGMENT\_FRACTION\_DEFAULT}}
+\index{LONGEST\_VALID\_SEGMENT\_FRACTION\_DEFAULT@{LONGEST\_VALID\_SEGMENT\_FRACTION\_DEFAULT}!trajopt\_motion\_planner.cpp@{trajopt\_motion\_planner.cpp}}
+\doxysubsubsection{\texorpdfstring{LONGEST\_VALID\_SEGMENT\_FRACTION\_DEFAULT}{LONGEST\_VALID\_SEGMENT\_FRACTION\_DEFAULT}}
+{\footnotesize\ttfamily const double L\+O\+N\+G\+E\+S\+T\+\_\+\+V\+A\+L\+I\+D\+\_\+\+S\+E\+G\+M\+E\+N\+T\+\_\+\+F\+R\+A\+C\+T\+I\+O\+N\+\_\+\+D\+E\+F\+A\+U\+LT = 0.\+01\hspace{0.3cm}{\ttfamily [static]}}
+

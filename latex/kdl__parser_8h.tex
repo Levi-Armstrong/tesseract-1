@@ -1,0 +1,32 @@
+\hypertarget{kdl__parser_8h}{}\doxysection{tesseract/tesseract\+\_\+scene\+\_\+graph/include/tesseract\+\_\+scene\+\_\+graph/parser/kdl\+\_\+parser.h File Reference}
+\label{kdl__parser_8h}\index{tesseract/tesseract\_scene\_graph/include/tesseract\_scene\_graph/parser/kdl\_parser.h@{tesseract/tesseract\_scene\_graph/include/tesseract\_scene\_graph/parser/kdl\_parser.h}}
+{\ttfamily \#include $<$tesseract\+\_\+common/macros.\+h$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$kdl/tree.\+hpp$>$}\newline
+{\ttfamily \#include $<$console\+\_\+bridge/console.\+h$>$}\newline
+{\ttfamily \#include $<$boost/utility.\+hpp$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+scene\+\_\+graph/graph.\+h$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structtesseract__scene__graph_1_1kdl__tree__builder}{tesseract\+\_\+scene\+\_\+graph\+::kdl\+\_\+tree\+\_\+builder}}
+\begin{DoxyCompactList}\small\item\em Everytime a vertex is visited for the first time add a new segment to the K\+DL Tree;. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacetesseract__scene__graph}{tesseract\+\_\+scene\+\_\+graph}}
+\begin{DoxyCompactList}\small\item\em Main namespace. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+K\+D\+L\+::\+Frame \mbox{\hyperlink{namespacetesseract__scene__graph_a9f0ce2dde1dfc29ac92461d216bb82a8}{tesseract\+\_\+scene\+\_\+graph\+::convert}} (const Eigen\+::\+Isometry3d \&transform)
+\begin{DoxyCompactList}\small\item\em Convert Eigen\+::\+Isometry3d to K\+D\+L\+::\+Frame. \end{DoxyCompactList}\item 
+K\+D\+L\+::\+Vector \mbox{\hyperlink{namespacetesseract__scene__graph_a2b1998c47fe8c81fdada6a5f7c28581d}{tesseract\+\_\+scene\+\_\+graph\+::convert}} (const Eigen\+::\+Vector3d \&vector)
+\begin{DoxyCompactList}\small\item\em Convert Eigen\+::\+Isometry3d to K\+D\+L\+::\+Frame. \end{DoxyCompactList}\item 
+K\+D\+L\+::\+Joint \mbox{\hyperlink{namespacetesseract__scene__graph_aa77add93f95a664b924ff3067128eb15}{tesseract\+\_\+scene\+\_\+graph\+::convert}} (const Joint\+::\+Const\+Ptr \&joint)
+\begin{DoxyCompactList}\small\item\em Convert Tesseract \mbox{\hyperlink{classtesseract__scene__graph_1_1Joint}{Joint}} to K\+DL \mbox{\hyperlink{classtesseract__scene__graph_1_1Joint}{Joint}}. \end{DoxyCompactList}\item 
+K\+D\+L\+::\+Rigid\+Body\+Inertia \mbox{\hyperlink{namespacetesseract__scene__graph_aecc9b2b45d0f05eaa5afa16a5c99729a}{tesseract\+\_\+scene\+\_\+graph\+::convert}} (const Inertial\+::\+Const\+Ptr \&inertial)
+\begin{DoxyCompactList}\small\item\em Convert Tesseract Inertail to K\+DL \mbox{\hyperlink{classtesseract__scene__graph_1_1Inertial}{Inertial}}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespacetesseract__scene__graph_a7132480e5402ba4a3c44d4dc09712c0a}{tesseract\+\_\+scene\+\_\+graph\+::parse\+Scene\+Graph}} (const Scene\+Graph \&scene\+\_\+graph, K\+D\+L\+::\+Tree \&tree)
+\begin{DoxyCompactList}\small\item\em Convert a Tesseract \mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph}{Scene\+Graph}} into a K\+DL Tree If graph is not a tree it will return false. \end{DoxyCompactList}\end{DoxyCompactItemize}

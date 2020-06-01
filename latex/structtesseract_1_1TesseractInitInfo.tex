@@ -1,0 +1,146 @@
+\hypertarget{structtesseract_1_1TesseractInitInfo}{}\doxysection{tesseract\+::Tesseract\+Init\+Info Struct Reference}
+\label{structtesseract_1_1TesseractInitInfo}\index{tesseract::TesseractInitInfo@{tesseract::TesseractInitInfo}}
+
+
+Used to store information about how a given \mbox{\hyperlink{classtesseract_1_1Tesseract}{Tesseract}} was initialized. See the \mbox{\hyperlink{classtesseract_1_1Tesseract}{Tesseract}} init methods.  
+
+
+
+
+{\ttfamily \#include $<$tesseract\+\_\+init\+\_\+info.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{structtesseract_1_1TesseractInitInfo_a4e6c65eefdbe6fd5bc2695b83832a302}{Ptr}} = std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structtesseract_1_1TesseractInitInfo}{Tesseract\+Init\+Info}} $>$
+\item 
+using \mbox{\hyperlink{structtesseract_1_1TesseractInitInfo_a82877597055819786e40bbe7ee79f4b1}{Const\+Ptr}} = std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{structtesseract_1_1TesseractInitInfo}{Tesseract\+Init\+Info}} $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacetesseract_af2551b44850bb881619f6449be1fcc5a}{Tesseract\+Init\+Type}} \mbox{\hyperlink{structtesseract_1_1TesseractInitInfo_ad2ac1e30174ed23d0982a5f311b59a83}{type}}
+\begin{DoxyCompactList}\small\item\em Specifies which members should be used to recreate the \mbox{\hyperlink{classtesseract_1_1Tesseract}{Tesseract}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph_a4421b8568bd664cf203613a054e1847b}{tesseract\+\_\+scene\+\_\+graph\+::\+Scene\+Graph\+::\+Ptr}} \mbox{\hyperlink{structtesseract_1_1TesseractInitInfo_a706dd92e588ac174fc3cd6c3391ae3d5}{scene\+\_\+graph}}
+\begin{DoxyCompactList}\small\item\em Used when Init\+Type is S\+C\+E\+N\+E\+\_\+\+G\+R\+A\+PH or S\+C\+E\+N\+E\+\_\+\+G\+R\+A\+P\+H\+\_\+\+S\+R\+D\+F\+\_\+\+M\+O\+D\+EL. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classtesseract__scene__graph_1_1SRDFModel_a8f29a2073209f6d445be00acb2f4a13a}{tesseract\+\_\+scene\+\_\+graph\+::\+S\+R\+D\+F\+Model\+::\+Const\+Ptr}} \mbox{\hyperlink{structtesseract_1_1TesseractInitInfo_a4f84b18c88e2022cc7206e7adcd61c90}{srdf\+\_\+model}}
+\begin{DoxyCompactList}\small\item\em Used when Init\+Type is S\+C\+E\+N\+E\+\_\+\+G\+R\+A\+P\+H\+\_\+\+S\+R\+D\+F\+\_\+\+M\+O\+D\+EL. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{structtesseract_1_1TesseractInitInfo_a59b14168fdb3e21a4b51f61e86274d7a}{urdf\+\_\+string}}
+\begin{DoxyCompactList}\small\item\em Used when Init\+Type is U\+R\+D\+F\+\_\+\+S\+T\+R\+I\+NG and U\+R\+D\+F\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+S\+R\+D\+F\+\_\+\+S\+T\+R\+I\+NG. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{structtesseract_1_1TesseractInitInfo_a0c312e2977d4c3737d7659dfcc69a238}{srdf\+\_\+string}}
+\begin{DoxyCompactList}\small\item\em Used when Init\+Type is U\+R\+D\+F\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+S\+R\+D\+F\+\_\+\+S\+T\+R\+I\+NG. \end{DoxyCompactList}\item 
+boost\+::filesystem\+::path \mbox{\hyperlink{structtesseract_1_1TesseractInitInfo_a8dfc0d3dd1c0b5d19fc57d19da9af586}{urdf\+\_\+path}}
+\begin{DoxyCompactList}\small\item\em Used when Init\+Type is U\+R\+D\+F\+\_\+\+P\+A\+TH and U\+R\+D\+F\+\_\+\+P\+A\+T\+H\+\_\+\+S\+R\+D\+F\+\_\+\+P\+A\+TH. \end{DoxyCompactList}\item 
+boost\+::filesystem\+::path \mbox{\hyperlink{structtesseract_1_1TesseractInitInfo_a23b7afc794035ea66d56f2fe32b7255e}{srdf\+\_\+path}}
+\begin{DoxyCompactList}\small\item\em Used when Init\+Type is U\+R\+D\+F\+\_\+\+P\+A\+T\+H\+\_\+\+S\+R\+D\+F\+\_\+\+P\+A\+TH. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classtesseract__scene__graph_1_1ResourceLocator_a64ddb0339eae8885128e399f1275cf80}{tesseract\+\_\+scene\+\_\+graph\+::\+Resource\+Locator\+::\+Ptr}} \mbox{\hyperlink{structtesseract_1_1TesseractInitInfo_a6b6fada44f6fda273ac2a8106893e9bc}{resource\+\_\+locator}}
+\begin{DoxyCompactList}\small\item\em Used when Init\+Type is U\+R\+D\+F\+\_\+\+S\+T\+R\+I\+NG, U\+R\+D\+F\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+S\+R\+D\+F\+\_\+\+S\+T\+R\+I\+NG, U\+R\+D\+F\+\_\+\+P\+A\+TH, and U\+R\+D\+F\+\_\+\+P\+A\+T\+H\+\_\+\+S\+R\+D\+F\+\_\+\+P\+A\+TH. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Used to store information about how a given \mbox{\hyperlink{classtesseract_1_1Tesseract}{Tesseract}} was initialized. See the \mbox{\hyperlink{classtesseract_1_1Tesseract}{Tesseract}} init methods. 
+
+Note\+: Recreating a \mbox{\hyperlink{classtesseract_1_1Tesseract}{Tesseract}} does not guarantee that it is identical to the \mbox{\hyperlink{classtesseract_1_1Tesseract}{Tesseract}} associate with this construction info since the kinmeatics managers could have changed and it does not include the environment command history. This will simply recreate the \mbox{\hyperlink{classtesseract_1_1Tesseract}{Tesseract}} as it was at construction. ~\newline
+ 
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{structtesseract_1_1TesseractInitInfo_a82877597055819786e40bbe7ee79f4b1}\label{structtesseract_1_1TesseractInitInfo_a82877597055819786e40bbe7ee79f4b1}} 
+\index{tesseract::TesseractInitInfo@{tesseract::TesseractInitInfo}!ConstPtr@{ConstPtr}}
+\index{ConstPtr@{ConstPtr}!tesseract::TesseractInitInfo@{tesseract::TesseractInitInfo}}
+\doxysubsubsection{\texorpdfstring{ConstPtr}{ConstPtr}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{structtesseract_1_1TesseractInitInfo_a82877597055819786e40bbe7ee79f4b1}{tesseract\+::\+Tesseract\+Init\+Info\+::\+Const\+Ptr}} =  std\+::shared\+\_\+ptr$<$const \mbox{\hyperlink{structtesseract_1_1TesseractInitInfo}{Tesseract\+Init\+Info}}$>$}
+
+\mbox{\Hypertarget{structtesseract_1_1TesseractInitInfo_a4e6c65eefdbe6fd5bc2695b83832a302}\label{structtesseract_1_1TesseractInitInfo_a4e6c65eefdbe6fd5bc2695b83832a302}} 
+\index{tesseract::TesseractInitInfo@{tesseract::TesseractInitInfo}!Ptr@{Ptr}}
+\index{Ptr@{Ptr}!tesseract::TesseractInitInfo@{tesseract::TesseractInitInfo}}
+\doxysubsubsection{\texorpdfstring{Ptr}{Ptr}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{structtesseract_1_1TesseractInitInfo_a4e6c65eefdbe6fd5bc2695b83832a302}{tesseract\+::\+Tesseract\+Init\+Info\+::\+Ptr}} =  std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{structtesseract_1_1TesseractInitInfo}{Tesseract\+Init\+Info}}$>$}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structtesseract_1_1TesseractInitInfo_a6b6fada44f6fda273ac2a8106893e9bc}\label{structtesseract_1_1TesseractInitInfo_a6b6fada44f6fda273ac2a8106893e9bc}} 
+\index{tesseract::TesseractInitInfo@{tesseract::TesseractInitInfo}!resource\_locator@{resource\_locator}}
+\index{resource\_locator@{resource\_locator}!tesseract::TesseractInitInfo@{tesseract::TesseractInitInfo}}
+\doxysubsubsection{\texorpdfstring{resource\_locator}{resource\_locator}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__scene__graph_1_1ResourceLocator_a64ddb0339eae8885128e399f1275cf80}{tesseract\+\_\+scene\+\_\+graph\+::\+Resource\+Locator\+::\+Ptr}} tesseract\+::\+Tesseract\+Init\+Info\+::resource\+\_\+locator}
+
+
+
+Used when Init\+Type is U\+R\+D\+F\+\_\+\+S\+T\+R\+I\+NG, U\+R\+D\+F\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+S\+R\+D\+F\+\_\+\+S\+T\+R\+I\+NG, U\+R\+D\+F\+\_\+\+P\+A\+TH, and U\+R\+D\+F\+\_\+\+P\+A\+T\+H\+\_\+\+S\+R\+D\+F\+\_\+\+P\+A\+TH. 
+
+\mbox{\Hypertarget{structtesseract_1_1TesseractInitInfo_a706dd92e588ac174fc3cd6c3391ae3d5}\label{structtesseract_1_1TesseractInitInfo_a706dd92e588ac174fc3cd6c3391ae3d5}} 
+\index{tesseract::TesseractInitInfo@{tesseract::TesseractInitInfo}!scene\_graph@{scene\_graph}}
+\index{scene\_graph@{scene\_graph}!tesseract::TesseractInitInfo@{tesseract::TesseractInitInfo}}
+\doxysubsubsection{\texorpdfstring{scene\_graph}{scene\_graph}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph_a4421b8568bd664cf203613a054e1847b}{tesseract\+\_\+scene\+\_\+graph\+::\+Scene\+Graph\+::\+Ptr}} tesseract\+::\+Tesseract\+Init\+Info\+::scene\+\_\+graph}
+
+
+
+Used when Init\+Type is S\+C\+E\+N\+E\+\_\+\+G\+R\+A\+PH or S\+C\+E\+N\+E\+\_\+\+G\+R\+A\+P\+H\+\_\+\+S\+R\+D\+F\+\_\+\+M\+O\+D\+EL. 
+
+T\+O\+DO\+: When Scene\+Graph is given a clone method make this a copy of the initial state rather than a pointer \mbox{\Hypertarget{structtesseract_1_1TesseractInitInfo_a4f84b18c88e2022cc7206e7adcd61c90}\label{structtesseract_1_1TesseractInitInfo_a4f84b18c88e2022cc7206e7adcd61c90}} 
+\index{tesseract::TesseractInitInfo@{tesseract::TesseractInitInfo}!srdf\_model@{srdf\_model}}
+\index{srdf\_model@{srdf\_model}!tesseract::TesseractInitInfo@{tesseract::TesseractInitInfo}}
+\doxysubsubsection{\texorpdfstring{srdf\_model}{srdf\_model}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__scene__graph_1_1SRDFModel_a8f29a2073209f6d445be00acb2f4a13a}{tesseract\+\_\+scene\+\_\+graph\+::\+S\+R\+D\+F\+Model\+::\+Const\+Ptr}} tesseract\+::\+Tesseract\+Init\+Info\+::srdf\+\_\+model}
+
+
+
+Used when Init\+Type is S\+C\+E\+N\+E\+\_\+\+G\+R\+A\+P\+H\+\_\+\+S\+R\+D\+F\+\_\+\+M\+O\+D\+EL. 
+
+\mbox{\Hypertarget{structtesseract_1_1TesseractInitInfo_a23b7afc794035ea66d56f2fe32b7255e}\label{structtesseract_1_1TesseractInitInfo_a23b7afc794035ea66d56f2fe32b7255e}} 
+\index{tesseract::TesseractInitInfo@{tesseract::TesseractInitInfo}!srdf\_path@{srdf\_path}}
+\index{srdf\_path@{srdf\_path}!tesseract::TesseractInitInfo@{tesseract::TesseractInitInfo}}
+\doxysubsubsection{\texorpdfstring{srdf\_path}{srdf\_path}}
+{\footnotesize\ttfamily boost\+::filesystem\+::path tesseract\+::\+Tesseract\+Init\+Info\+::srdf\+\_\+path}
+
+
+
+Used when Init\+Type is U\+R\+D\+F\+\_\+\+P\+A\+T\+H\+\_\+\+S\+R\+D\+F\+\_\+\+P\+A\+TH. 
+
+\mbox{\Hypertarget{structtesseract_1_1TesseractInitInfo_a0c312e2977d4c3737d7659dfcc69a238}\label{structtesseract_1_1TesseractInitInfo_a0c312e2977d4c3737d7659dfcc69a238}} 
+\index{tesseract::TesseractInitInfo@{tesseract::TesseractInitInfo}!srdf\_string@{srdf\_string}}
+\index{srdf\_string@{srdf\_string}!tesseract::TesseractInitInfo@{tesseract::TesseractInitInfo}}
+\doxysubsubsection{\texorpdfstring{srdf\_string}{srdf\_string}}
+{\footnotesize\ttfamily std\+::string tesseract\+::\+Tesseract\+Init\+Info\+::srdf\+\_\+string}
+
+
+
+Used when Init\+Type is U\+R\+D\+F\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+S\+R\+D\+F\+\_\+\+S\+T\+R\+I\+NG. 
+
+\mbox{\Hypertarget{structtesseract_1_1TesseractInitInfo_ad2ac1e30174ed23d0982a5f311b59a83}\label{structtesseract_1_1TesseractInitInfo_ad2ac1e30174ed23d0982a5f311b59a83}} 
+\index{tesseract::TesseractInitInfo@{tesseract::TesseractInitInfo}!type@{type}}
+\index{type@{type}!tesseract::TesseractInitInfo@{tesseract::TesseractInitInfo}}
+\doxysubsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacetesseract_af2551b44850bb881619f6449be1fcc5a}{Tesseract\+Init\+Type}} tesseract\+::\+Tesseract\+Init\+Info\+::type}
+
+
+
+Specifies which members should be used to recreate the \mbox{\hyperlink{classtesseract_1_1Tesseract}{Tesseract}}. 
+
+\mbox{\Hypertarget{structtesseract_1_1TesseractInitInfo_a8dfc0d3dd1c0b5d19fc57d19da9af586}\label{structtesseract_1_1TesseractInitInfo_a8dfc0d3dd1c0b5d19fc57d19da9af586}} 
+\index{tesseract::TesseractInitInfo@{tesseract::TesseractInitInfo}!urdf\_path@{urdf\_path}}
+\index{urdf\_path@{urdf\_path}!tesseract::TesseractInitInfo@{tesseract::TesseractInitInfo}}
+\doxysubsubsection{\texorpdfstring{urdf\_path}{urdf\_path}}
+{\footnotesize\ttfamily boost\+::filesystem\+::path tesseract\+::\+Tesseract\+Init\+Info\+::urdf\+\_\+path}
+
+
+
+Used when Init\+Type is U\+R\+D\+F\+\_\+\+P\+A\+TH and U\+R\+D\+F\+\_\+\+P\+A\+T\+H\+\_\+\+S\+R\+D\+F\+\_\+\+P\+A\+TH. 
+
+\mbox{\Hypertarget{structtesseract_1_1TesseractInitInfo_a59b14168fdb3e21a4b51f61e86274d7a}\label{structtesseract_1_1TesseractInitInfo_a59b14168fdb3e21a4b51f61e86274d7a}} 
+\index{tesseract::TesseractInitInfo@{tesseract::TesseractInitInfo}!urdf\_string@{urdf\_string}}
+\index{urdf\_string@{urdf\_string}!tesseract::TesseractInitInfo@{tesseract::TesseractInitInfo}}
+\doxysubsubsection{\texorpdfstring{urdf\_string}{urdf\_string}}
+{\footnotesize\ttfamily std\+::string tesseract\+::\+Tesseract\+Init\+Info\+::urdf\+\_\+string}
+
+
+
+Used when Init\+Type is U\+R\+D\+F\+\_\+\+S\+T\+R\+I\+NG and U\+R\+D\+F\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+S\+R\+D\+F\+\_\+\+S\+T\+R\+I\+NG. 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+tesseract/tesseract/include/tesseract/\mbox{\hyperlink{tesseract__init__info_8h}{tesseract\+\_\+init\+\_\+info.\+h}}\end{DoxyCompactItemize}

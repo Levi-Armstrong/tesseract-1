@@ -1,0 +1,147 @@
+\hypertarget{classtesseract__process__planners_1_1ExtensionApproachGenerator}{}\doxysection{tesseract\+\_\+process\+\_\+planners\+::Extension\+Approach\+Generator Class Reference}
+\label{classtesseract__process__planners_1_1ExtensionApproachGenerator}\index{tesseract\_process\_planners::ExtensionApproachGenerator@{tesseract\_process\_planners::ExtensionApproachGenerator}}
+
+
+The \mbox{\hyperlink{classtesseract__process__planners_1_1ExtensionApproachGenerator}{Extension\+Approach\+Generator}} class For a series of waypoints that progresses along either the positive or negative x-\/axis of the waypoints, this class generates an extension at the start of that path. A positive X-\/direction in the supplied vector will automatically be transformed to align with the direction the path will travel, reducing complexity of calling code for alternating paths.  
+
+
+
+
+{\ttfamily \#include $<$extension\+\_\+approach\+\_\+generator.\+h$>$}
+
+Inheritance diagram for tesseract\+\_\+process\+\_\+planners\+::Extension\+Approach\+Generator\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classtesseract__process__planners_1_1ExtensionApproachGenerator}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtesseract__process__planners_1_1ExtensionApproachGenerator_a72f87ef844c8f4f1b44d057b2493eb2b}{Extension\+Approach\+Generator}} (const Eigen\+::\+Vector3d \&approach, int step\+\_\+count)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classtesseract__process__planners_1_1ExtensionApproachGenerator}{Extension\+Approach\+Generator}} -\/ constructor. Supply a vector for the approach to follow along. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classtesseract__process__planners_1_1ExtensionApproachGenerator_a74fbc2075a95bb24bf567fe7a8446a9a}{Extension\+Approach\+Generator}} (const Eigen\+::\+Isometry3d \&approach, int step\+\_\+count)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classtesseract__process__planners_1_1ExtensionApproachGenerator}{Extension\+Approach\+Generator}} -\/ alternate constructor to ease use with Process\+Planner\+Config, which uses Isometry3d for approach\+\_\+direction. Uses only the translation portion of a provided isometry. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classtesseract__process__planners_1_1ExtensionApproachGenerator_ab86f7e5d26b063c456eba027da31e910}{$\sim$\+Extension\+Approach\+Generator}} () override=default
+\item 
+\mbox{\hyperlink{classtesseract__process__planners_1_1ExtensionApproachGenerator_ad7c2c3e2e23cd767041120e22785bd5e}{Extension\+Approach\+Generator}} (const \mbox{\hyperlink{classtesseract__process__planners_1_1ExtensionApproachGenerator}{Extension\+Approach\+Generator}} \&)=default
+\item 
+\mbox{\hyperlink{classtesseract__process__planners_1_1ExtensionApproachGenerator}{Extension\+Approach\+Generator}} \& \mbox{\hyperlink{classtesseract__process__planners_1_1ExtensionApproachGenerator_a82faec0e91c40a260663f08a1e8244af}{operator=}} (const \mbox{\hyperlink{classtesseract__process__planners_1_1ExtensionApproachGenerator}{Extension\+Approach\+Generator}} \&)=default
+\item 
+\mbox{\hyperlink{classtesseract__process__planners_1_1ExtensionApproachGenerator_ac171175e3e0406ce350a5e2b171f14e1}{Extension\+Approach\+Generator}} (\mbox{\hyperlink{classtesseract__process__planners_1_1ExtensionApproachGenerator}{Extension\+Approach\+Generator}} \&\&)=default
+\item 
+\mbox{\hyperlink{classtesseract__process__planners_1_1ExtensionApproachGenerator}{Extension\+Approach\+Generator}} \& \mbox{\hyperlink{classtesseract__process__planners_1_1ExtensionApproachGenerator_a832f61140f662069925175294718c566}{operator=}} (\mbox{\hyperlink{classtesseract__process__planners_1_1ExtensionApproachGenerator}{Extension\+Approach\+Generator}} \&\&)=default
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classtesseract__motion__planners_1_1Waypoint_a6a3eae473f2bb3bd94684561aae0bd3e}{tesseract\+\_\+motion\+\_\+planners\+::\+Waypoint\+::\+Ptr}} $>$ \mbox{\hyperlink{classtesseract__process__planners_1_1ExtensionApproachGenerator_aa3be98ea098c14ad8ea29ab81ce6fa9c}{generate}} (const std\+::vector$<$ \mbox{\hyperlink{classtesseract__motion__planners_1_1Waypoint_a6a3eae473f2bb3bd94684561aae0bd3e}{tesseract\+\_\+motion\+\_\+planners\+::\+Waypoint\+::\+Ptr}} $>$ \&waypoints, const \mbox{\hyperlink{structtesseract__process__planners_1_1ProcessDefinitionConfig}{Process\+Definition\+Config}} \&config) const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Eigen\+::\+Isometry3d \mbox{\hyperlink{classtesseract__process__planners_1_1ExtensionApproachGenerator_afd4198c6a1a24bbb34e5f6d887f00b66}{approach\+\_\+}}
+\item 
+int \mbox{\hyperlink{classtesseract__process__planners_1_1ExtensionApproachGenerator_a22737a05377e207acea39a5820545bf1}{step\+\_\+count\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classtesseract__process__planners_1_1ExtensionApproachGenerator}{Extension\+Approach\+Generator}} class For a series of waypoints that progresses along either the positive or negative x-\/axis of the waypoints, this class generates an extension at the start of that path. A positive X-\/direction in the supplied vector will automatically be transformed to align with the direction the path will travel, reducing complexity of calling code for alternating paths. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtesseract__process__planners_1_1ExtensionApproachGenerator_a72f87ef844c8f4f1b44d057b2493eb2b}\label{classtesseract__process__planners_1_1ExtensionApproachGenerator_a72f87ef844c8f4f1b44d057b2493eb2b}} 
+\index{tesseract\_process\_planners::ExtensionApproachGenerator@{tesseract\_process\_planners::ExtensionApproachGenerator}!ExtensionApproachGenerator@{ExtensionApproachGenerator}}
+\index{ExtensionApproachGenerator@{ExtensionApproachGenerator}!tesseract\_process\_planners::ExtensionApproachGenerator@{tesseract\_process\_planners::ExtensionApproachGenerator}}
+\doxysubsubsection{\texorpdfstring{ExtensionApproachGenerator()}{ExtensionApproachGenerator()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily tesseract\+\_\+process\+\_\+planners\+::\+Extension\+Approach\+Generator\+::\+Extension\+Approach\+Generator (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Vector3d \&}]{approach,  }\item[{int}]{step\+\_\+count }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\mbox{\hyperlink{classtesseract__process__planners_1_1ExtensionApproachGenerator}{Extension\+Approach\+Generator}} -\/ constructor. Supply a vector for the approach to follow along. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em approach} & -\/ the vector along which the approach should be generated \\
+\hline
+{\em step\+\_\+count} & -\/ how many waypoints should be generated \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classtesseract__process__planners_1_1ExtensionApproachGenerator_a74fbc2075a95bb24bf567fe7a8446a9a}\label{classtesseract__process__planners_1_1ExtensionApproachGenerator_a74fbc2075a95bb24bf567fe7a8446a9a}} 
+\index{tesseract\_process\_planners::ExtensionApproachGenerator@{tesseract\_process\_planners::ExtensionApproachGenerator}!ExtensionApproachGenerator@{ExtensionApproachGenerator}}
+\index{ExtensionApproachGenerator@{ExtensionApproachGenerator}!tesseract\_process\_planners::ExtensionApproachGenerator@{tesseract\_process\_planners::ExtensionApproachGenerator}}
+\doxysubsubsection{\texorpdfstring{ExtensionApproachGenerator()}{ExtensionApproachGenerator()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily tesseract\+\_\+process\+\_\+planners\+::\+Extension\+Approach\+Generator\+::\+Extension\+Approach\+Generator (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Isometry3d \&}]{approach,  }\item[{int}]{step\+\_\+count }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\mbox{\hyperlink{classtesseract__process__planners_1_1ExtensionApproachGenerator}{Extension\+Approach\+Generator}} -\/ alternate constructor to ease use with Process\+Planner\+Config, which uses Isometry3d for approach\+\_\+direction. Uses only the translation portion of a provided isometry. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em approach} & -\/ the vector along which the approach should be generated \\
+\hline
+{\em step\+\_\+count} & -\/ how many waypoints should be generated \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classtesseract__process__planners_1_1ExtensionApproachGenerator_ab86f7e5d26b063c456eba027da31e910}\label{classtesseract__process__planners_1_1ExtensionApproachGenerator_ab86f7e5d26b063c456eba027da31e910}} 
+\index{tesseract\_process\_planners::ExtensionApproachGenerator@{tesseract\_process\_planners::ExtensionApproachGenerator}!````~ExtensionApproachGenerator@{$\sim$ExtensionApproachGenerator}}
+\index{````~ExtensionApproachGenerator@{$\sim$ExtensionApproachGenerator}!tesseract\_process\_planners::ExtensionApproachGenerator@{tesseract\_process\_planners::ExtensionApproachGenerator}}
+\doxysubsubsection{\texorpdfstring{$\sim$ExtensionApproachGenerator()}{~ExtensionApproachGenerator()}}
+{\footnotesize\ttfamily tesseract\+\_\+process\+\_\+planners\+::\+Extension\+Approach\+Generator\+::$\sim$\+Extension\+Approach\+Generator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [default]}}
+
+\mbox{\Hypertarget{classtesseract__process__planners_1_1ExtensionApproachGenerator_ad7c2c3e2e23cd767041120e22785bd5e}\label{classtesseract__process__planners_1_1ExtensionApproachGenerator_ad7c2c3e2e23cd767041120e22785bd5e}} 
+\index{tesseract\_process\_planners::ExtensionApproachGenerator@{tesseract\_process\_planners::ExtensionApproachGenerator}!ExtensionApproachGenerator@{ExtensionApproachGenerator}}
+\index{ExtensionApproachGenerator@{ExtensionApproachGenerator}!tesseract\_process\_planners::ExtensionApproachGenerator@{tesseract\_process\_planners::ExtensionApproachGenerator}}
+\doxysubsubsection{\texorpdfstring{ExtensionApproachGenerator()}{ExtensionApproachGenerator()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily tesseract\+\_\+process\+\_\+planners\+::\+Extension\+Approach\+Generator\+::\+Extension\+Approach\+Generator (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtesseract__process__planners_1_1ExtensionApproachGenerator}{Extension\+Approach\+Generator}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classtesseract__process__planners_1_1ExtensionApproachGenerator_ac171175e3e0406ce350a5e2b171f14e1}\label{classtesseract__process__planners_1_1ExtensionApproachGenerator_ac171175e3e0406ce350a5e2b171f14e1}} 
+\index{tesseract\_process\_planners::ExtensionApproachGenerator@{tesseract\_process\_planners::ExtensionApproachGenerator}!ExtensionApproachGenerator@{ExtensionApproachGenerator}}
+\index{ExtensionApproachGenerator@{ExtensionApproachGenerator}!tesseract\_process\_planners::ExtensionApproachGenerator@{tesseract\_process\_planners::ExtensionApproachGenerator}}
+\doxysubsubsection{\texorpdfstring{ExtensionApproachGenerator()}{ExtensionApproachGenerator()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily tesseract\+\_\+process\+\_\+planners\+::\+Extension\+Approach\+Generator\+::\+Extension\+Approach\+Generator (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtesseract__process__planners_1_1ExtensionApproachGenerator}{Extension\+Approach\+Generator}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtesseract__process__planners_1_1ExtensionApproachGenerator_aa3be98ea098c14ad8ea29ab81ce6fa9c}\label{classtesseract__process__planners_1_1ExtensionApproachGenerator_aa3be98ea098c14ad8ea29ab81ce6fa9c}} 
+\index{tesseract\_process\_planners::ExtensionApproachGenerator@{tesseract\_process\_planners::ExtensionApproachGenerator}!generate@{generate}}
+\index{generate@{generate}!tesseract\_process\_planners::ExtensionApproachGenerator@{tesseract\_process\_planners::ExtensionApproachGenerator}}
+\doxysubsubsection{\texorpdfstring{generate()}{generate()}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{classtesseract__motion__planners_1_1Waypoint_a6a3eae473f2bb3bd94684561aae0bd3e}{tesseract\+\_\+motion\+\_\+planners\+::\+Waypoint\+::\+Ptr}}$>$ tesseract\+\_\+process\+\_\+planners\+::\+Extension\+Approach\+Generator\+::generate (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{classtesseract__motion__planners_1_1Waypoint_a6a3eae473f2bb3bd94684561aae0bd3e}{tesseract\+\_\+motion\+\_\+planners\+::\+Waypoint\+::\+Ptr}} $>$ \&}]{waypoints,  }\item[{const \mbox{\hyperlink{structtesseract__process__planners_1_1ProcessDefinitionConfig}{Process\+Definition\+Config}} \&}]{config }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classtesseract__process__planners_1_1ProcessStepGenerator_a966ff84e77d98701a92022e7ea82cc9a}{tesseract\+\_\+process\+\_\+planners\+::\+Process\+Step\+Generator}}.
+
+\mbox{\Hypertarget{classtesseract__process__planners_1_1ExtensionApproachGenerator_a82faec0e91c40a260663f08a1e8244af}\label{classtesseract__process__planners_1_1ExtensionApproachGenerator_a82faec0e91c40a260663f08a1e8244af}} 
+\index{tesseract\_process\_planners::ExtensionApproachGenerator@{tesseract\_process\_planners::ExtensionApproachGenerator}!operator=@{operator=}}
+\index{operator=@{operator=}!tesseract\_process\_planners::ExtensionApproachGenerator@{tesseract\_process\_planners::ExtensionApproachGenerator}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__process__planners_1_1ExtensionApproachGenerator}{Extension\+Approach\+Generator}}\& tesseract\+\_\+process\+\_\+planners\+::\+Extension\+Approach\+Generator\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtesseract__process__planners_1_1ExtensionApproachGenerator}{Extension\+Approach\+Generator}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classtesseract__process__planners_1_1ExtensionApproachGenerator_a832f61140f662069925175294718c566}\label{classtesseract__process__planners_1_1ExtensionApproachGenerator_a832f61140f662069925175294718c566}} 
+\index{tesseract\_process\_planners::ExtensionApproachGenerator@{tesseract\_process\_planners::ExtensionApproachGenerator}!operator=@{operator=}}
+\index{operator=@{operator=}!tesseract\_process\_planners::ExtensionApproachGenerator@{tesseract\_process\_planners::ExtensionApproachGenerator}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__process__planners_1_1ExtensionApproachGenerator}{Extension\+Approach\+Generator}}\& tesseract\+\_\+process\+\_\+planners\+::\+Extension\+Approach\+Generator\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtesseract__process__planners_1_1ExtensionApproachGenerator}{Extension\+Approach\+Generator}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classtesseract__process__planners_1_1ExtensionApproachGenerator_afd4198c6a1a24bbb34e5f6d887f00b66}\label{classtesseract__process__planners_1_1ExtensionApproachGenerator_afd4198c6a1a24bbb34e5f6d887f00b66}} 
+\index{tesseract\_process\_planners::ExtensionApproachGenerator@{tesseract\_process\_planners::ExtensionApproachGenerator}!approach\_@{approach\_}}
+\index{approach\_@{approach\_}!tesseract\_process\_planners::ExtensionApproachGenerator@{tesseract\_process\_planners::ExtensionApproachGenerator}}
+\doxysubsubsection{\texorpdfstring{approach\_}{approach\_}}
+{\footnotesize\ttfamily Eigen\+::\+Isometry3d tesseract\+\_\+process\+\_\+planners\+::\+Extension\+Approach\+Generator\+::approach\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classtesseract__process__planners_1_1ExtensionApproachGenerator_a22737a05377e207acea39a5820545bf1}\label{classtesseract__process__planners_1_1ExtensionApproachGenerator_a22737a05377e207acea39a5820545bf1}} 
+\index{tesseract\_process\_planners::ExtensionApproachGenerator@{tesseract\_process\_planners::ExtensionApproachGenerator}!step\_count\_@{step\_count\_}}
+\index{step\_count\_@{step\_count\_}!tesseract\_process\_planners::ExtensionApproachGenerator@{tesseract\_process\_planners::ExtensionApproachGenerator}}
+\doxysubsubsection{\texorpdfstring{step\_count\_}{step\_count\_}}
+{\footnotesize\ttfamily int tesseract\+\_\+process\+\_\+planners\+::\+Extension\+Approach\+Generator\+::step\+\_\+count\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+tesseract/tesseract\+\_\+planning/tesseract\+\_\+process\+\_\+planners/include/tesseract\+\_\+process\+\_\+planners/generators/\mbox{\hyperlink{extension__approach__generator_8h}{extension\+\_\+approach\+\_\+generator.\+h}}\end{DoxyCompactItemize}

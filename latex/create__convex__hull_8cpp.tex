@@ -1,0 +1,70 @@
+\hypertarget{create__convex__hull_8cpp}{}\doxysection{tesseract/tesseract\+\_\+collision/src/create\+\_\+convex\+\_\+hull.cpp File Reference}
+\label{create__convex__hull_8cpp}\index{tesseract/tesseract\_collision/src/create\_convex\_hull.cpp@{tesseract/tesseract\_collision/src/create\_convex\_hull.cpp}}
+
+
+This takes an input file and generates a convex hull ply file.  
+
+
+{\ttfamily \#include $<$tesseract\+\_\+common/macros.\+h$>$}\newline
+{\ttfamily \#include $<$console\+\_\+bridge/console.\+h$>$}\newline
+{\ttfamily \#include $<$boost/program\+\_\+options.\+hpp$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+collision/core/common.\+h$>$}\newline
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespaceTESSERACT__COMMON__IGNORE__WARNINGS__POP}{T\+E\+S\+S\+E\+R\+A\+C\+T\+\_\+\+C\+O\+M\+M\+O\+N\+\_\+\+I\+G\+N\+O\+R\+E\+\_\+\+W\+A\+R\+N\+I\+N\+G\+S\+\_\+\+P\+OP}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{create__convex__hull_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const size\+\_\+t \mbox{\hyperlink{namespaceTESSERACT__COMMON__IGNORE__WARNINGS__POP_a20986084e455c46a44248aaaf208d6ff}{T\+E\+S\+S\+E\+R\+A\+C\+T\+\_\+\+C\+O\+M\+M\+O\+N\+\_\+\+I\+G\+N\+O\+R\+E\+\_\+\+W\+A\+R\+N\+I\+N\+G\+S\+\_\+\+P\+O\+P\+::\+E\+R\+R\+O\+R\+\_\+\+I\+N\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+L\+I\+NE}} = 1
+\item 
+const size\+\_\+t \mbox{\hyperlink{namespaceTESSERACT__COMMON__IGNORE__WARNINGS__POP_a9fcac8394ad37c9049b6314d50b990bf}{T\+E\+S\+S\+E\+R\+A\+C\+T\+\_\+\+C\+O\+M\+M\+O\+N\+\_\+\+I\+G\+N\+O\+R\+E\+\_\+\+W\+A\+R\+N\+I\+N\+G\+S\+\_\+\+P\+O\+P\+::\+S\+U\+C\+C\+E\+SS}} = 0
+\item 
+const size\+\_\+t \mbox{\hyperlink{namespaceTESSERACT__COMMON__IGNORE__WARNINGS__POP_aa53785550ab204920f21f163fd2306dc}{T\+E\+S\+S\+E\+R\+A\+C\+T\+\_\+\+C\+O\+M\+M\+O\+N\+\_\+\+I\+G\+N\+O\+R\+E\+\_\+\+W\+A\+R\+N\+I\+N\+G\+S\+\_\+\+P\+O\+P\+::\+E\+R\+R\+O\+R\+\_\+\+U\+N\+H\+A\+N\+D\+L\+E\+D\+\_\+\+E\+X\+C\+E\+P\+T\+I\+ON}} = 2
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This takes an input file and generates a convex hull ply file. 
+
+\begin{DoxyAuthor}{Author}
+Levi Armstrong 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+Dec 18, 2017 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+T\+O\+DO 
+\end{DoxyVersion}
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000027}{Bug}}]No known bugs\end{DoxyRefDesc}
+
+
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2017, Southwest Research Institute
+\end{DoxyCopyright}
+\begin{DoxyParagraph}{License}
+Software License Agreement (Apache License) 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+Licensed under the Apache License, Version 2.\+0 (the \char`\"{}\+License\char`\"{}); you may not use this file except in compliance with the License. You may obtain a copy of the License at \href{http://www.apache.org/licenses/LICENSE-2.0}{\texttt{ http\+://www.\+apache.\+org/licenses/\+L\+I\+C\+E\+N\+S\+E-\/2.\+0}} 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \char`\"{}\+A\+S I\+S\char`\"{} B\+A\+S\+IS, W\+I\+T\+H\+O\+UT W\+A\+R\+R\+A\+N\+T\+I\+ES OR C\+O\+N\+D\+I\+T\+I\+O\+NS OF A\+NY K\+I\+ND, either express or implied. See the License for the specific language governing permissions and limitations under the License. 
+\end{DoxyParagraph}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{create__convex__hull_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}\label{create__convex__hull_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}} 
+\index{create\_convex\_hull.cpp@{create\_convex\_hull.cpp}!main@{main}}
+\index{main@{main}!create\_convex\_hull.cpp@{create\_convex\_hull.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+--help option

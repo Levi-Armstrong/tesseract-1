@@ -1,0 +1,66 @@
+\hypertarget{tesseract__init__info_8h}{}\doxysection{tesseract/tesseract/include/tesseract/tesseract\+\_\+init\+\_\+info.h File Reference}
+\label{tesseract__init__info_8h}\index{tesseract/tesseract/include/tesseract/tesseract\_init\_info.h@{tesseract/tesseract/include/tesseract/tesseract\_init\_info.h}}
+
+
+This is a container used to store information about how a given Tesseract was initialized.  
+
+
+{\ttfamily \#include $<$tesseract\+\_\+common/macros.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+environment/core/environment.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+scene\+\_\+graph/resource\+\_\+locator.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+scene\+\_\+graph/graph.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+scene\+\_\+graph/srdf\+\_\+model.\+h$>$}\newline
+{\ttfamily \#include $<$boost/filesystem.\+hpp$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structtesseract_1_1TesseractInitInfo}{tesseract\+::\+Tesseract\+Init\+Info}}
+\begin{DoxyCompactList}\small\item\em Used to store information about how a given \mbox{\hyperlink{classtesseract_1_1Tesseract}{Tesseract}} was initialized. See the \mbox{\hyperlink{classtesseract_1_1Tesseract}{Tesseract}} init methods. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacetesseract}{tesseract}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespacetesseract_af2551b44850bb881619f6449be1fcc5a}{tesseract\+::\+Tesseract\+Init\+Type}} \{ \newline
+\mbox{\hyperlink{namespacetesseract_af2551b44850bb881619f6449be1fcc5aa625ecc49c701f39a7d136c9645dadd12}{tesseract\+::\+Tesseract\+Init\+Type\+::\+S\+C\+E\+N\+E\+\_\+\+G\+R\+A\+PH}}, 
+\mbox{\hyperlink{namespacetesseract_af2551b44850bb881619f6449be1fcc5aaf7610871c687c9944a5f50c536d43e9b}{tesseract\+::\+Tesseract\+Init\+Type\+::\+S\+C\+E\+N\+E\+\_\+\+G\+R\+A\+P\+H\+\_\+\+S\+R\+D\+F\+\_\+\+M\+O\+D\+EL}}, 
+\mbox{\hyperlink{namespacetesseract_af2551b44850bb881619f6449be1fcc5aa807a3a9760c6d4e0ffc3314f65ebe26f}{tesseract\+::\+Tesseract\+Init\+Type\+::\+U\+R\+D\+F\+\_\+\+S\+T\+R\+I\+NG}}, 
+\mbox{\hyperlink{namespacetesseract_af2551b44850bb881619f6449be1fcc5aa0996db91cb6cb32e8c74a44894d2f45f}{tesseract\+::\+Tesseract\+Init\+Type\+::\+U\+R\+D\+F\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+S\+R\+D\+F\+\_\+\+S\+T\+R\+I\+NG}}, 
+\newline
+\mbox{\hyperlink{namespacetesseract_af2551b44850bb881619f6449be1fcc5aa39e3f5e0ab06555e7ec85f9fe18edb47}{tesseract\+::\+Tesseract\+Init\+Type\+::\+U\+R\+D\+F\+\_\+\+P\+A\+TH}}, 
+\mbox{\hyperlink{namespacetesseract_af2551b44850bb881619f6449be1fcc5aa4ec73fcd3f1c00bcf1eaa59cd92bf6b1}{tesseract\+::\+Tesseract\+Init\+Type\+::\+U\+R\+D\+F\+\_\+\+P\+A\+T\+H\+\_\+\+S\+R\+D\+F\+\_\+\+P\+A\+TH}}
+ \}
+\begin{DoxyCompactList}\small\item\em Used to specify which init method was used to construct a Tesseract. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This is a container used to store information about how a given Tesseract was initialized. 
+
+\begin{DoxyAuthor}{Author}
+Matthew Powelson 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+March 17, 2020 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+T\+O\+DO 
+\end{DoxyVersion}
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000004}{Bug}}]No known bugs\end{DoxyRefDesc}
+
+
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2020, Southwest Research Institute
+\end{DoxyCopyright}
+\begin{DoxyParagraph}{License}
+Software License Agreement (Apache License) 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+Licensed under the Apache License, Version 2.\+0 (the \char`\"{}\+License\char`\"{}); you may not use this file except in compliance with the License. You may obtain a copy of the License at \href{http://www.apache.org/licenses/LICENSE-2.0}{\texttt{ http\+://www.\+apache.\+org/licenses/\+L\+I\+C\+E\+N\+S\+E-\/2.\+0}} 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \char`\"{}\+A\+S I\+S\char`\"{} B\+A\+S\+IS, W\+I\+T\+H\+O\+UT W\+A\+R\+R\+A\+N\+T\+I\+ES OR C\+O\+N\+D\+I\+T\+I\+O\+NS OF A\+NY K\+I\+ND, either express or implied. See the License for the specific language governing permissions and limitations under the License. 
+\end{DoxyParagraph}

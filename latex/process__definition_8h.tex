@@ -1,0 +1,64 @@
+\hypertarget{process__definition_8h}{}\doxysection{tesseract/tesseract\+\_\+planning/tesseract\+\_\+process\+\_\+planners/include/tesseract\+\_\+process\+\_\+planners/process\+\_\+definition.h File Reference}
+\label{process__definition_8h}\index{tesseract/tesseract\_planning/tesseract\_process\_planners/include/tesseract\_process\_planners/process\_definition.h@{tesseract/tesseract\_planning/tesseract\_process\_planners/include/tesseract\_process\_planners/process\_definition.h}}
+
+
+describes the basic definition of a process, as expected by the process planners  
+
+
+{\ttfamily \#include $<$Eigen/\+Core$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+motion\+\_\+planners/core/waypoint.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+process\+\_\+planners/process\+\_\+segment\+\_\+definition.\+h$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structtesseract__process__planners_1_1ProcessTransitionDefinition}{tesseract\+\_\+process\+\_\+planners\+::\+Process\+Transition\+Definition}}
+\begin{DoxyCompactList}\small\item\em The \mbox{\hyperlink{structtesseract__process__planners_1_1ProcessTransitionDefinition}{Process\+Transition\+Definition}} struct which contains the waypoint data to allow moving between adjacent process segments. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{structtesseract__process__planners_1_1ProcessDefinition}{tesseract\+\_\+process\+\_\+planners\+::\+Process\+Definition}}
+\item 
+class \mbox{\hyperlink{classtesseract__process__planners_1_1ProcessTransitionGenerator}{tesseract\+\_\+process\+\_\+planners\+::\+Process\+Transition\+Generator}}
+\item 
+class \mbox{\hyperlink{structtesseract__process__planners_1_1ProcessDefinitionConfig}{tesseract\+\_\+process\+\_\+planners\+::\+Process\+Definition\+Config}}
+\item 
+class \mbox{\hyperlink{classtesseract__process__planners_1_1ProcessStepGenerator}{tesseract\+\_\+process\+\_\+planners\+::\+Process\+Step\+Generator}}
+\item 
+struct \mbox{\hyperlink{structtesseract__process__planners_1_1ProcessSegmentDefinitionConfig}{tesseract\+\_\+process\+\_\+planners\+::\+Process\+Segment\+Definition\+Config}}
+\begin{DoxyCompactList}\small\item\em The Process Segment Definition Configuration. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacetesseract__process__planners}{tesseract\+\_\+process\+\_\+planners}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+Process\+Definition \mbox{\hyperlink{namespacetesseract__process__planners_a68eec516c37e233ed3156b9a5e4aae8e}{tesseract\+\_\+process\+\_\+planners\+::generate\+Process\+Definition}} (const Process\+Definition\+Config \&process\+\_\+config, const Process\+Segment\+Definition\+Config \&segment\+\_\+config)
+\item 
+Process\+Definition \mbox{\hyperlink{namespacetesseract__process__planners_a58b4c36a0c3394fc48f37644dde17001}{tesseract\+\_\+process\+\_\+planners\+::generate\+Process\+Definition}} (const Process\+Definition\+Config \&process\+\_\+config, const std\+::vector$<$ Process\+Segment\+Definition\+Config $>$ \&segment\+\_\+config)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+describes the basic definition of a process, as expected by the process planners 
+
+\begin{DoxyAuthor}{Author}
+Levi Armstrong 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+T\+O\+DO 
+\end{DoxyVersion}
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000162}{Bug}}]No known bugs\end{DoxyRefDesc}
+
+
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2020, Southwest Research Institute
+\end{DoxyCopyright}
+\begin{DoxyParagraph}{License}
+Software License Agreement (Apache License) 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+Licensed under the Apache License, Version 2.\+0 (the \char`\"{}\+License\char`\"{}); you may not use this file except in compliance with the License. You may obtain a copy of the License at \href{http://www.apache.org/licenses/LICENSE-2.0}{\texttt{ http\+://www.\+apache.\+org/licenses/\+L\+I\+C\+E\+N\+S\+E-\/2.\+0}} 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \char`\"{}\+A\+S I\+S\char`\"{} B\+A\+S\+IS, W\+I\+T\+H\+O\+UT W\+A\+R\+R\+A\+N\+T\+I\+ES OR C\+O\+N\+D\+I\+T\+I\+O\+NS OF A\+NY K\+I\+ND, either express or implied. See the License for the specific language governing permissions and limitations under the License. 
+\end{DoxyParagraph}

@@ -1,0 +1,82 @@
+\hypertarget{tesseract__planning_2tesseract__motion__planners_2include_2tesseract__motion__planners_2trajopt_2config_2utils_8h}{}\doxysection{tesseract/tesseract\+\_\+planning/tesseract\+\_\+motion\+\_\+planners/include/tesseract\+\_\+motion\+\_\+planners/trajopt/config/utils.h File Reference}
+\label{tesseract__planning_2tesseract__motion__planners_2include_2tesseract__motion__planners_2trajopt_2config_2utils_8h}\index{tesseract/tesseract\_planning/tesseract\_motion\_planners/include/tesseract\_motion\_planners/trajopt/config/utils.h@{tesseract/tesseract\_planning/tesseract\_motion\_planners/include/tesseract\_motion\_planners/trajopt/config/utils.h}}
+
+
+Utilities for creating Traj\+Opt term information.  
+
+
+{\ttfamily \#include $<$trajopt/problem\+\_\+description.\+hpp$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+motion\+\_\+planners/core/waypoint.\+h$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structtesseract__motion__planners_1_1WaypointTermInfo}{tesseract\+\_\+motion\+\_\+planners\+::\+Waypoint\+Term\+Info}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacetesseract__motion__planners}{tesseract\+\_\+motion\+\_\+planners}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+trajopt\+::\+Term\+Info\+::\+Ptr \mbox{\hyperlink{namespacetesseract__motion__planners_ad9a8e29a6ef0ea2ca2d2da3c5dcfeb63}{tesseract\+\_\+motion\+\_\+planners\+::create\+Joint\+Waypoint\+Term\+Info}} (const Joint\+Waypoint\+::\+Const\+Ptr \&waypoint, int ind, const std\+::vector$<$ std\+::string $>$ \&joint\+\_\+names, double coeff=1.\+0, const std\+::string \&name=\char`\"{}joint\+\_\+waypoint\char`\"{})
+\item 
+trajopt\+::\+Term\+Info\+::\+Ptr \mbox{\hyperlink{namespacetesseract__motion__planners_a542ba21c18dcbb0f4a2f022feddd563f}{tesseract\+\_\+motion\+\_\+planners\+::create\+Joint\+Toleranced\+Waypoint\+Term\+Info}} (const Joint\+Toleranced\+Waypoint\+::\+Const\+Ptr \&waypoint, int ind, const std\+::vector$<$ std\+::string $>$ \&joint\+\_\+names, double coeff=0.\+1, const std\+::string \&name=\char`\"{}joint\+\_\+tol\+\_\+waypoint\char`\"{})
+\item 
+trajopt\+::\+Term\+Info\+::\+Ptr \mbox{\hyperlink{namespacetesseract__motion__planners_aa7cc07f88f3b9b57956f1005f05a1fb3}{tesseract\+\_\+motion\+\_\+planners\+::create\+Cartesian\+Waypoint\+Term\+Info}} (const Cartesian\+Waypoint\+::\+Const\+Ptr \&waypoint, int ind, const std\+::string \&link, const Eigen\+::\+Isometry3d \&tcp=Eigen\+::\+Isometry3d\+::\+Identity(), const std\+::string \&name=\char`\"{}cart\+\_\+waypoint\char`\"{})
+\item 
+trajopt\+::\+Term\+Info\+::\+Ptr \mbox{\hyperlink{namespacetesseract__motion__planners_a20793c768069bd5c04fffcf0e8c28297}{tesseract\+\_\+motion\+\_\+planners\+::create\+Dynamic\+Cartesian\+Waypoint\+Term\+Info}} (const Cartesian\+Waypoint\+::\+Const\+Ptr \&waypoint, int ind, const std\+::string \&link, const Eigen\+::\+Isometry3d \&tcp=Eigen\+::\+Isometry3d\+::\+Identity(), const std\+::string \&name=\char`\"{}dyn\+\_\+cart\+\_\+waypoint\char`\"{})
+\item 
+Waypoint\+Term\+Info \mbox{\hyperlink{namespacetesseract__motion__planners_a76dff14b904118e907bc679c1173adb1}{tesseract\+\_\+motion\+\_\+planners\+::create\+Waypoint\+Term\+Info}} (const Waypoint\+::\+Const\+Ptr \&waypoint, int ind, const std\+::vector$<$ std\+::string $>$ \&joint\+\_\+names, const std\+::vector$<$ std\+::string $>$ \&adjacency\+\_\+map\+\_\+links, const std\+::string \&link, const Eigen\+::\+Isometry3d \&tcp=Eigen\+::\+Isometry3d\+::\+Identity())
+\item 
+trajopt\+::\+Term\+Info\+::\+Ptr \mbox{\hyperlink{namespacetesseract__motion__planners_a40f5e2cddb25faba343c3d53188fbc93}{tesseract\+\_\+motion\+\_\+planners\+::create\+Configuration\+Term\+Info}} (const Joint\+Waypoint\+::\+Const\+Ptr \&configuration, const std\+::vector$<$ std\+::string $>$ \&joint\+\_\+names, int n\+\_\+steps, double coeff=1.\+0, const std\+::string \&name=\char`\"{}configuration\+\_\+cost\char`\"{})
+\item 
+trajopt\+::\+Term\+Info\+::\+Ptr \mbox{\hyperlink{namespacetesseract__motion__planners_a174090b6c5a5847187db6ea4ed4a3c88}{tesseract\+\_\+motion\+\_\+planners\+::create\+Collision\+Term\+Info}} (int n\+\_\+steps, double collision\+\_\+safety\+\_\+margin, double collision\+\_\+safety\+\_\+margin\+\_\+buffer, trajopt\+::\+Collision\+Evaluator\+Type evaluator\+\_\+type, bool use\+\_\+weighted\+\_\+sum=false, double coeff=20.\+0, \mbox{\hyperlink{namespacetesseract__collision_ac3da4f46ae16e86ba4f1dfd2935eb80c}{tesseract\+\_\+collision\+::\+Contact\+Test\+Type}} contact\+\_\+test\+\_\+type=\mbox{\hyperlink{namespacetesseract__collision_ac3da4f46ae16e86ba4f1dfd2935eb80ca5fb1f955b45e38e31789286a1790398d}{tesseract\+\_\+collision\+::\+Contact\+Test\+Type\+::\+A\+LL}}, double longest\+\_\+valid\+\_\+segment\+\_\+length=0.\+5, const std\+::string \&name=\char`\"{}collision\+\_\+cost\char`\"{}, bool is\+\_\+constraint=false)
+\item 
+trajopt\+::\+Term\+Info\+::\+Ptr \mbox{\hyperlink{namespacetesseract__motion__planners_ad9867cdf33c1fa4085d03419fe7bfabc}{tesseract\+\_\+motion\+\_\+planners\+::create\+Smooth\+Velocity\+Term\+Info}} (int n\+\_\+steps, int n\+\_\+joints, double coeff=5.\+0, const std\+::string \&name=\char`\"{}joint\+\_\+vel\+\_\+cost\char`\"{})
+\item 
+trajopt\+::\+Term\+Info\+::\+Ptr \mbox{\hyperlink{namespacetesseract__motion__planners_a1c9d39d862f922f234924f5449c606db}{tesseract\+\_\+motion\+\_\+planners\+::create\+Smooth\+Velocity\+Term\+Info}} (int n\+\_\+steps, const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector\+Xd $>$ \&coeff, const std\+::string \&name=\char`\"{}joint\+\_\+vel\+\_\+cost\char`\"{})
+\item 
+trajopt\+::\+Term\+Info\+::\+Ptr \mbox{\hyperlink{namespacetesseract__motion__planners_ab156373dab327515d1d54b8579b4692d}{tesseract\+\_\+motion\+\_\+planners\+::create\+Smooth\+Acceleration\+Term\+Info}} (int n\+\_\+steps, int n\+\_\+joints, double coeff=1.\+0, const std\+::string \&name=\char`\"{}joint\+\_\+accel\+\_\+cost\char`\"{})
+\item 
+trajopt\+::\+Term\+Info\+::\+Ptr \mbox{\hyperlink{namespacetesseract__motion__planners_a3d417ce3e952264c6fb0425690864fb6}{tesseract\+\_\+motion\+\_\+planners\+::create\+Smooth\+Acceleration\+Term\+Info}} (int n\+\_\+steps, const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector\+Xd $>$ \&coeff, const std\+::string \&name=\char`\"{}joint\+\_\+accel\+\_\+cost\char`\"{})
+\item 
+trajopt\+::\+Term\+Info\+::\+Ptr \mbox{\hyperlink{namespacetesseract__motion__planners_a2a5c28db70e6def8b5d14c13aedd9d91}{tesseract\+\_\+motion\+\_\+planners\+::create\+Smooth\+Jerk\+Term\+Info}} (int n\+\_\+steps, int n\+\_\+joints, double coeff=1.\+0, const std\+::string \&name=\char`\"{}joint\+\_\+jerk\+\_\+cost\char`\"{})
+\item 
+trajopt\+::\+Term\+Info\+::\+Ptr \mbox{\hyperlink{namespacetesseract__motion__planners_a28da560ed072a7e27306fe9b8d76d766}{tesseract\+\_\+motion\+\_\+planners\+::create\+Smooth\+Jerk\+Term\+Info}} (int n\+\_\+steps, const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector\+Xd $>$ \&coeff, const std\+::string \&name=\char`\"{}joint\+\_\+jerk\+\_\+cost\char`\"{})
+\item 
+trajopt\+::\+Term\+Info\+::\+Ptr \mbox{\hyperlink{namespacetesseract__motion__planners_aa2d62f1334d5e853810a216a1b63a76f}{tesseract\+\_\+motion\+\_\+planners\+::create\+User\+Defined\+Term\+Info}} (int n\+\_\+steps, sco\+::\+Vector\+Of\+Vector\+::func error\+\_\+function, sco\+::\+Matrix\+Of\+Vector\+::func jacobian\+\_\+function, const std\+::string \&name=\char`\"{}user\+\_\+defined\char`\"{})
+\item 
+trajopt\+::\+Term\+Info\+::\+Ptr \mbox{\hyperlink{namespacetesseract__motion__planners_a7700bb26e38ffda2fe5a1b14199d5c76}{tesseract\+\_\+motion\+\_\+planners\+::create\+Avoid\+Singularity\+Term\+Info}} (int n\+\_\+steps, const std\+::string \&link, double coeff=5.\+0, const std\+::string \&name=\char`\"{}avoid\+\_\+singularity\char`\"{})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Utilities for creating Traj\+Opt term information. 
+
+\begin{DoxyAuthor}{Author}
+Michael Ripperger 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+September 16, 2019 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+T\+O\+DO 
+\end{DoxyVersion}
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000123}{Bug}}]No known bugs\end{DoxyRefDesc}
+
+
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2019, Southwest Research Institute
+\end{DoxyCopyright}
+\begin{DoxyParagraph}{License}
+Software License Agreement (Apache License) 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+Licensed under the Apache License, Version 2.\+0 (the \char`\"{}\+License\char`\"{}); you may not use this file except in compliance with the License. You may obtain a copy of the License at \href{http://www.apache.org/licenses/LICENSE-2.0}{\texttt{ http\+://www.\+apache.\+org/licenses/\+L\+I\+C\+E\+N\+S\+E-\/2.\+0}} 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \char`\"{}\+A\+S I\+S\char`\"{} B\+A\+S\+IS, W\+I\+T\+H\+O\+UT W\+A\+R\+R\+A\+N\+T\+I\+ES OR C\+O\+N\+D\+I\+T\+I\+O\+NS OF A\+NY K\+I\+ND, either express or implied. See the License for the specific language governing permissions and limitations under the License. 
+\end{DoxyParagraph}

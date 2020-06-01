@@ -1,0 +1,125 @@
+\hypertarget{classtesseract__kinematics_1_1KDLInvKinChainLMAFactory}{}\doxysection{tesseract\+\_\+kinematics\+::K\+D\+L\+Inv\+Kin\+Chain\+L\+M\+A\+Factory Class Reference}
+\label{classtesseract__kinematics_1_1KDLInvKinChainLMAFactory}\index{tesseract\_kinematics::KDLInvKinChainLMAFactory@{tesseract\_kinematics::KDLInvKinChainLMAFactory}}
+
+
+{\ttfamily \#include $<$kdl\+\_\+inv\+\_\+kin\+\_\+chain\+\_\+lma\+\_\+factory.\+h$>$}
+
+Inheritance diagram for tesseract\+\_\+kinematics\+::K\+D\+L\+Inv\+Kin\+Chain\+L\+M\+A\+Factory\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classtesseract__kinematics_1_1KDLInvKinChainLMAFactory}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtesseract__kinematics_1_1KDLInvKinChainLMAFactory_a69cfb2415959d3cd63c75f26c63a0cee}{K\+D\+L\+Inv\+Kin\+Chain\+L\+M\+A\+Factory}} ()
+\item 
+const std\+::string \& \mbox{\hyperlink{classtesseract__kinematics_1_1KDLInvKinChainLMAFactory_a92b3c924367d970d63dae879aed07c9b}{get\+Name}} () const override
+\begin{DoxyCompactList}\small\item\em Get the name of the factory. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacetesseract__kinematics_a2ff85855971411dd8a4477bb31cee835}{Inverse\+Kinematics\+Factory\+Type}} \mbox{\hyperlink{classtesseract__kinematics_1_1KDLInvKinChainLMAFactory_a83aa264f74b31850521a5c8d3022b531}{get\+Type}} () const override
+\begin{DoxyCompactList}\small\item\em Get the type of Inverse Kinematic factory. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classtesseract__kinematics_1_1InverseKinematics_a189ebd423f38f83720d58a922d049688}{Inverse\+Kinematics\+::\+Ptr}} \mbox{\hyperlink{classtesseract__kinematics_1_1KDLInvKinChainLMAFactory_a02afff655b6b1e39204725af4a7db525}{create}} (\mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph_a9ee303b2514bfedd8c914d09551b00ff}{tesseract\+\_\+scene\+\_\+graph\+::\+Scene\+Graph\+::\+Const\+Ptr}} scene\+\_\+graph, const std\+::string \&base\+\_\+link, const std\+::string \&tip\+\_\+link, const std\+::string name) const override
+\begin{DoxyCompactList}\small\item\em Create Inverse Kinematics Chain Object This only need to be implemented if of type chain. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classtesseract__kinematics_1_1InverseKinematics_a189ebd423f38f83720d58a922d049688}{Inverse\+Kinematics\+::\+Ptr}} \mbox{\hyperlink{classtesseract__kinematics_1_1KDLInvKinChainLMAFactory_a0110a48b2a8d510d4fb966b4eaf9d7f6}{create}} (\mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph_a9ee303b2514bfedd8c914d09551b00ff}{tesseract\+\_\+scene\+\_\+graph\+::\+Scene\+Graph\+::\+Const\+Ptr}} scene\+\_\+graph, const std\+::vector$<$ std\+::pair$<$ std\+::string, std\+::string $>$$>$ \&chains, const std\+::string name) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classtesseract__kinematics_1_1KDLInvKinChainLMAFactory_aee10c608ac6be312478c0d9be135111c}{name\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtesseract__kinematics_1_1KDLInvKinChainLMAFactory_a69cfb2415959d3cd63c75f26c63a0cee}\label{classtesseract__kinematics_1_1KDLInvKinChainLMAFactory_a69cfb2415959d3cd63c75f26c63a0cee}} 
+\index{tesseract\_kinematics::KDLInvKinChainLMAFactory@{tesseract\_kinematics::KDLInvKinChainLMAFactory}!KDLInvKinChainLMAFactory@{KDLInvKinChainLMAFactory}}
+\index{KDLInvKinChainLMAFactory@{KDLInvKinChainLMAFactory}!tesseract\_kinematics::KDLInvKinChainLMAFactory@{tesseract\_kinematics::KDLInvKinChainLMAFactory}}
+\doxysubsubsection{\texorpdfstring{KDLInvKinChainLMAFactory()}{KDLInvKinChainLMAFactory()}}
+{\footnotesize\ttfamily tesseract\+\_\+kinematics\+::\+K\+D\+L\+Inv\+Kin\+Chain\+L\+M\+A\+Factory\+::\+K\+D\+L\+Inv\+Kin\+Chain\+L\+M\+A\+Factory (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtesseract__kinematics_1_1KDLInvKinChainLMAFactory_a02afff655b6b1e39204725af4a7db525}\label{classtesseract__kinematics_1_1KDLInvKinChainLMAFactory_a02afff655b6b1e39204725af4a7db525}} 
+\index{tesseract\_kinematics::KDLInvKinChainLMAFactory@{tesseract\_kinematics::KDLInvKinChainLMAFactory}!create@{create}}
+\index{create@{create}!tesseract\_kinematics::KDLInvKinChainLMAFactory@{tesseract\_kinematics::KDLInvKinChainLMAFactory}}
+\doxysubsubsection{\texorpdfstring{create()}{create()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__kinematics_1_1InverseKinematics_a189ebd423f38f83720d58a922d049688}{Inverse\+Kinematics\+::\+Ptr}} tesseract\+\_\+kinematics\+::\+K\+D\+L\+Inv\+Kin\+Chain\+L\+M\+A\+Factory\+::create (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph_a9ee303b2514bfedd8c914d09551b00ff}{tesseract\+\_\+scene\+\_\+graph\+::\+Scene\+Graph\+::\+Const\+Ptr}}}]{,  }\item[{const std\+::string \&}]{,  }\item[{const std\+::string \&}]{,  }\item[{const std\+::string}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Create Inverse Kinematics Chain Object This only need to be implemented if of type chain. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scene\+\_\+graph} & The Tesseract Scene Graph \\
+\hline
+{\em base\+\_\+link} & The name of the base link for the kinematic chain \\
+\hline
+{\em tip\+\_\+link} & The name of the tip link for the kinematic chain \\
+\hline
+{\em name} & The name of the kinematic chain \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+If failed to create, nullptr is returned. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classtesseract__kinematics_1_1InverseKinematicsFactory_abd96c44707daab8b5d70f4fe6051a6a4}{tesseract\+\_\+kinematics\+::\+Inverse\+Kinematics\+Factory}}.
+
+\mbox{\Hypertarget{classtesseract__kinematics_1_1KDLInvKinChainLMAFactory_a0110a48b2a8d510d4fb966b4eaf9d7f6}\label{classtesseract__kinematics_1_1KDLInvKinChainLMAFactory_a0110a48b2a8d510d4fb966b4eaf9d7f6}} 
+\index{tesseract\_kinematics::KDLInvKinChainLMAFactory@{tesseract\_kinematics::KDLInvKinChainLMAFactory}!create@{create}}
+\index{create@{create}!tesseract\_kinematics::KDLInvKinChainLMAFactory@{tesseract\_kinematics::KDLInvKinChainLMAFactory}}
+\doxysubsubsection{\texorpdfstring{create()}{create()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__kinematics_1_1InverseKinematics_a189ebd423f38f83720d58a922d049688}{Inverse\+Kinematics\+::\+Ptr}} tesseract\+\_\+kinematics\+::\+K\+D\+L\+Inv\+Kin\+Chain\+L\+M\+A\+Factory\+::create (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph_a9ee303b2514bfedd8c914d09551b00ff}{tesseract\+\_\+scene\+\_\+graph\+::\+Scene\+Graph\+::\+Const\+Ptr}}}]{scene\+\_\+graph,  }\item[{const std\+::vector$<$ std\+::pair$<$ std\+::string, std\+::string $>$$>$ \&}]{chains,  }\item[{const std\+::string}]{name }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classtesseract__kinematics_1_1KDLInvKinChainLMAFactory_a92b3c924367d970d63dae879aed07c9b}\label{classtesseract__kinematics_1_1KDLInvKinChainLMAFactory_a92b3c924367d970d63dae879aed07c9b}} 
+\index{tesseract\_kinematics::KDLInvKinChainLMAFactory@{tesseract\_kinematics::KDLInvKinChainLMAFactory}!getName@{getName}}
+\index{getName@{getName}!tesseract\_kinematics::KDLInvKinChainLMAFactory@{tesseract\_kinematics::KDLInvKinChainLMAFactory}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily const std\+::string\& tesseract\+\_\+kinematics\+::\+K\+D\+L\+Inv\+Kin\+Chain\+L\+M\+A\+Factory\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get the name of the factory. 
+
+\begin{DoxyReturn}{Returns}
+The name 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classtesseract__kinematics_1_1InverseKinematicsFactory_ab0326bbb08d3f0f222d286da96f0d2c4}{tesseract\+\_\+kinematics\+::\+Inverse\+Kinematics\+Factory}}.
+
+\mbox{\Hypertarget{classtesseract__kinematics_1_1KDLInvKinChainLMAFactory_a83aa264f74b31850521a5c8d3022b531}\label{classtesseract__kinematics_1_1KDLInvKinChainLMAFactory_a83aa264f74b31850521a5c8d3022b531}} 
+\index{tesseract\_kinematics::KDLInvKinChainLMAFactory@{tesseract\_kinematics::KDLInvKinChainLMAFactory}!getType@{getType}}
+\index{getType@{getType}!tesseract\_kinematics::KDLInvKinChainLMAFactory@{tesseract\_kinematics::KDLInvKinChainLMAFactory}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacetesseract__kinematics_a2ff85855971411dd8a4477bb31cee835}{Inverse\+Kinematics\+Factory\+Type}} tesseract\+\_\+kinematics\+::\+K\+D\+L\+Inv\+Kin\+Chain\+L\+M\+A\+Factory\+::get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get the type of Inverse Kinematic factory. 
+
+\begin{DoxyReturn}{Returns}
+Type \{C\+H\+A\+IN, T\+R\+EE, G\+R\+A\+PH\} 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classtesseract__kinematics_1_1InverseKinematicsFactory_aad974c759231d5acf4dcc88e7db2bcd0}{tesseract\+\_\+kinematics\+::\+Inverse\+Kinematics\+Factory}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classtesseract__kinematics_1_1KDLInvKinChainLMAFactory_aee10c608ac6be312478c0d9be135111c}\label{classtesseract__kinematics_1_1KDLInvKinChainLMAFactory_aee10c608ac6be312478c0d9be135111c}} 
+\index{tesseract\_kinematics::KDLInvKinChainLMAFactory@{tesseract\_kinematics::KDLInvKinChainLMAFactory}!name\_@{name\_}}
+\index{name\_@{name\_}!tesseract\_kinematics::KDLInvKinChainLMAFactory@{tesseract\_kinematics::KDLInvKinChainLMAFactory}}
+\doxysubsubsection{\texorpdfstring{name\_}{name\_}}
+{\footnotesize\ttfamily std\+::string tesseract\+\_\+kinematics\+::\+K\+D\+L\+Inv\+Kin\+Chain\+L\+M\+A\+Factory\+::name\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+tesseract/tesseract\+\_\+kinematics/include/tesseract\+\_\+kinematics/kdl/\mbox{\hyperlink{kdl__inv__kin__chain__lma__factory_8h}{kdl\+\_\+inv\+\_\+kin\+\_\+chain\+\_\+lma\+\_\+factory.\+h}}\end{DoxyCompactItemize}

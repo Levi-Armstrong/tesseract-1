@@ -1,0 +1,94 @@
+\hypertarget{fcl__utils_8cpp}{}\doxysection{tesseract/tesseract\+\_\+collision/src/fcl/fcl\+\_\+utils.cpp File Reference}
+\label{fcl__utils_8cpp}\index{tesseract/tesseract\_collision/src/fcl/fcl\_utils.cpp@{tesseract/tesseract\_collision/src/fcl/fcl\_utils.cpp}}
+
+
+Tesseract R\+OS F\+CL Utility Functions.  
+
+
+{\ttfamily \#include $<$tesseract\+\_\+common/macros.\+h$>$}\newline
+{\ttfamily \#include $<$fcl/geometry/bvh/\+B\+V\+H\+\_\+model.\+h$>$}\newline
+{\ttfamily \#include $<$fcl/geometry/shape/box.\+h$>$}\newline
+{\ttfamily \#include $<$fcl/geometry/shape/cylinder.\+h$>$}\newline
+{\ttfamily \#include $<$fcl/geometry/shape/convex.\+h$>$}\newline
+{\ttfamily \#include $<$fcl/geometry/shape/plane.\+h$>$}\newline
+{\ttfamily \#include $<$fcl/geometry/shape/sphere.\+h$>$}\newline
+{\ttfamily \#include $<$fcl/geometry/shape/cone.\+h$>$}\newline
+{\ttfamily \#include $<$fcl/geometry/shape/capsule.\+h$>$}\newline
+{\ttfamily \#include $<$fcl/geometry/octree/octree.\+h$>$}\newline
+{\ttfamily \#include $<$boost/thread/mutex.\+hpp$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+collision/fcl/fcl\+\_\+utils.\+h$>$}\newline
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacetesseract__collision}{tesseract\+\_\+collision}}
+\item 
+ \mbox{\hyperlink{namespacetesseract__collision_1_1tesseract__collision__fcl}{tesseract\+\_\+collision\+::tesseract\+\_\+collision\+\_\+fcl}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+Collision\+Geometry\+Ptr \mbox{\hyperlink{namespacetesseract__collision_1_1tesseract__collision__fcl_a9e12786683f45c1322b586a1b6d9476c}{tesseract\+\_\+collision\+::tesseract\+\_\+collision\+\_\+fcl\+::create\+Shape\+Primitive}} (const \mbox{\hyperlink{classtesseract__geometry_1_1Plane_adf8d58c9a8d3b0cb962e807d8ef2d428}{tesseract\+\_\+geometry\+::\+Plane\+::\+Const\+Ptr}} \&geom)
+\item 
+Collision\+Geometry\+Ptr \mbox{\hyperlink{namespacetesseract__collision_1_1tesseract__collision__fcl_ad1802f42cc3bdea6490ae9130c545803}{tesseract\+\_\+collision\+::tesseract\+\_\+collision\+\_\+fcl\+::create\+Shape\+Primitive}} (const \mbox{\hyperlink{classtesseract__geometry_1_1Box_aec8152cc23a7ad1b16c135240824d161}{tesseract\+\_\+geometry\+::\+Box\+::\+Const\+Ptr}} \&geom)
+\item 
+Collision\+Geometry\+Ptr \mbox{\hyperlink{namespacetesseract__collision_1_1tesseract__collision__fcl_ab55186aa831a06715ffb04a30ce816d4}{tesseract\+\_\+collision\+::tesseract\+\_\+collision\+\_\+fcl\+::create\+Shape\+Primitive}} (const \mbox{\hyperlink{classtesseract__geometry_1_1Sphere_ac986cb2217d07320a259ba4277af5b31}{tesseract\+\_\+geometry\+::\+Sphere\+::\+Const\+Ptr}} \&geom)
+\item 
+Collision\+Geometry\+Ptr \mbox{\hyperlink{namespacetesseract__collision_1_1tesseract__collision__fcl_a9047c3cf437bc6b475ced5b3f7632960}{tesseract\+\_\+collision\+::tesseract\+\_\+collision\+\_\+fcl\+::create\+Shape\+Primitive}} (const \mbox{\hyperlink{classtesseract__geometry_1_1Cylinder_a4249ce200933a1fb9050e76d9fa45d93}{tesseract\+\_\+geometry\+::\+Cylinder\+::\+Const\+Ptr}} \&geom)
+\item 
+Collision\+Geometry\+Ptr \mbox{\hyperlink{namespacetesseract__collision_1_1tesseract__collision__fcl_a6fb6d035ef4146368730521b1b0e1758}{tesseract\+\_\+collision\+::tesseract\+\_\+collision\+\_\+fcl\+::create\+Shape\+Primitive}} (const \mbox{\hyperlink{classtesseract__geometry_1_1Cone_a776461706bd71882a1cc0d38c56445de}{tesseract\+\_\+geometry\+::\+Cone\+::\+Const\+Ptr}} \&geom)
+\item 
+Collision\+Geometry\+Ptr \mbox{\hyperlink{namespacetesseract__collision_1_1tesseract__collision__fcl_a50da2d389c38e25f021653efe8aa61e1}{tesseract\+\_\+collision\+::tesseract\+\_\+collision\+\_\+fcl\+::create\+Shape\+Primitive}} (const \mbox{\hyperlink{classtesseract__geometry_1_1Capsule_ad1746418f72f252f0431e059a9ba5411}{tesseract\+\_\+geometry\+::\+Capsule\+::\+Const\+Ptr}} \&geom)
+\item 
+Collision\+Geometry\+Ptr \mbox{\hyperlink{namespacetesseract__collision_1_1tesseract__collision__fcl_aa7be36827f3dce545cbee9bd1b39d37a}{tesseract\+\_\+collision\+::tesseract\+\_\+collision\+\_\+fcl\+::create\+Shape\+Primitive}} (const \mbox{\hyperlink{classtesseract__geometry_1_1Mesh_af9e7b416df5d635267f64b4604f969e2}{tesseract\+\_\+geometry\+::\+Mesh\+::\+Const\+Ptr}} \&geom)
+\item 
+Collision\+Geometry\+Ptr \mbox{\hyperlink{namespacetesseract__collision_1_1tesseract__collision__fcl_a245914a6a621d799bb45e5721d1995a7}{tesseract\+\_\+collision\+::tesseract\+\_\+collision\+\_\+fcl\+::create\+Shape\+Primitive}} (const \mbox{\hyperlink{classtesseract__geometry_1_1ConvexMesh_a891ee4bcb9a02f4d57f1400bc32f561a}{tesseract\+\_\+geometry\+::\+Convex\+Mesh\+::\+Const\+Ptr}} \&geom)
+\item 
+Collision\+Geometry\+Ptr \mbox{\hyperlink{namespacetesseract__collision_1_1tesseract__collision__fcl_a22e2397deac5516d2d0b1aaa0ed99199}{tesseract\+\_\+collision\+::tesseract\+\_\+collision\+\_\+fcl\+::create\+Shape\+Primitive}} (const \mbox{\hyperlink{classtesseract__geometry_1_1Octree_a0c3e8cdfa8826acdca6e727c3097a08c}{tesseract\+\_\+geometry\+::\+Octree\+::\+Const\+Ptr}} \&geom)
+\item 
+Collision\+Geometry\+Ptr \mbox{\hyperlink{namespacetesseract__collision_1_1tesseract__collision__fcl_a6186814bdb5480c6906b16d59d3baa1b}{tesseract\+\_\+collision\+::tesseract\+\_\+collision\+\_\+fcl\+::create\+Shape\+Primitive}} (const Collision\+Shape\+Const\+Ptr \&geom)
+\item 
+bool \mbox{\hyperlink{namespacetesseract__collision_1_1tesseract__collision__fcl_ac8ce443c1dc3dd3345d0a28770b412d4}{tesseract\+\_\+collision\+::tesseract\+\_\+collision\+\_\+fcl\+::collision\+Callback}} (fcl\+::\+Collision\+Objectd $\ast$o1, fcl\+::\+Collision\+Objectd $\ast$o2, void $\ast$data)
+\item 
+bool \mbox{\hyperlink{namespacetesseract__collision_1_1tesseract__collision__fcl_adf0adc55ff1fb9cf4ae26fade5ecc530}{tesseract\+\_\+collision\+::tesseract\+\_\+collision\+\_\+fcl\+::distance\+Callback}} (fcl\+::\+Collision\+Objectd $\ast$o1, fcl\+::\+Collision\+Objectd $\ast$o2, void $\ast$data)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Tesseract R\+OS F\+CL Utility Functions. 
+
+\begin{DoxyAuthor}{Author}
+Levi Armstrong 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+Dec 18, 2017 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+T\+O\+DO 
+\end{DoxyVersion}
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000030}{Bug}}]No known bugs\end{DoxyRefDesc}
+
+
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2017, Southwest Research Institute
+\end{DoxyCopyright}
+\begin{DoxyParagraph}{License}
+Software License Agreement (B\+SD) 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+All rights reserved. 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met\+: 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+
+\begin{DoxyItemize}
+\item Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+\item Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution. 
+\end{DoxyItemize}
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+T\+H\+IS S\+O\+F\+T\+W\+A\+RE IS P\+R\+O\+V\+I\+D\+ED BY T\+HE C\+O\+P\+Y\+R\+I\+G\+HT H\+O\+L\+D\+E\+RS A\+ND C\+O\+N\+T\+R\+I\+B\+U\+T\+O\+RS \char`\"{}\+A\+S I\+S\char`\"{} A\+ND A\+NY E\+X\+P\+R\+E\+SS OR I\+M\+P\+L\+I\+ED W\+A\+R\+R\+A\+N\+T\+I\+ES, I\+N\+C\+L\+U\+D\+I\+NG, B\+UT N\+OT L\+I\+M\+I\+T\+ED TO, T\+HE I\+M\+P\+L\+I\+ED W\+A\+R\+R\+A\+N\+T\+I\+ES OF M\+E\+R\+C\+H\+A\+N\+T\+A\+B\+I\+L\+I\+TY A\+ND F\+I\+T\+N\+E\+SS F\+OR A P\+A\+R\+T\+I\+C\+U\+L\+AR P\+U\+R\+P\+O\+SE A\+RE D\+I\+S\+C\+L\+A\+I\+M\+ED. IN NO E\+V\+E\+NT S\+H\+A\+LL T\+HE C\+O\+P\+Y\+R\+I\+G\+HT O\+W\+N\+ER OR C\+O\+N\+T\+R\+I\+B\+U\+T\+O\+RS BE L\+I\+A\+B\+LE F\+OR A\+NY D\+I\+R\+E\+CT, I\+N\+D\+I\+R\+E\+CT, I\+N\+C\+I\+D\+E\+N\+T\+AL, S\+P\+E\+C\+I\+AL, E\+X\+E\+M\+P\+L\+A\+RY, OR C\+O\+N\+S\+E\+Q\+U\+E\+N\+T\+I\+AL D\+A\+M\+A\+G\+ES (I\+N\+C\+L\+U\+D\+I\+NG, B\+UT N\+OT L\+I\+M\+I\+T\+ED TO, P\+R\+O\+C\+U\+R\+E\+M\+E\+NT OF S\+U\+B\+S\+T\+I\+T\+U\+TE G\+O\+O\+DS OR S\+E\+R\+V\+I\+C\+ES; L\+O\+SS OF U\+SE, D\+A\+TA, OR P\+R\+O\+F\+I\+TS; OR B\+U\+S\+I\+N\+E\+SS I\+N\+T\+E\+R\+R\+U\+P\+T\+I\+ON) H\+O\+W\+E\+V\+ER C\+A\+U\+S\+ED A\+ND ON A\+NY T\+H\+E\+O\+RY OF L\+I\+A\+B\+I\+L\+I\+TY, W\+H\+E\+T\+H\+ER IN C\+O\+N\+T\+R\+A\+CT, S\+T\+R\+I\+CT L\+I\+A\+B\+I\+L\+I\+TY, OR T\+O\+RT (I\+N\+C\+L\+U\+D\+I\+NG N\+E\+G\+L\+I\+G\+E\+N\+CE OR O\+T\+H\+E\+R\+W\+I\+SE) A\+R\+I\+S\+I\+NG IN A\+NY W\+AY O\+UT OF T\+HE U\+SE OF T\+H\+IS S\+O\+F\+T\+W\+A\+RE, E\+V\+EN IF A\+D\+V\+I\+S\+ED OF T\+HE P\+O\+S\+S\+I\+B\+I\+L\+I\+TY OF S\+U\+CH D\+A\+M\+A\+GE. 
+\end{DoxyParagraph}

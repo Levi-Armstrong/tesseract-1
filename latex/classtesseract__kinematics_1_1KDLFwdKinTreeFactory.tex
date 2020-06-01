@@ -1,0 +1,117 @@
+\hypertarget{classtesseract__kinematics_1_1KDLFwdKinTreeFactory}{}\doxysection{tesseract\+\_\+kinematics\+::K\+D\+L\+Fwd\+Kin\+Tree\+Factory Class Reference}
+\label{classtesseract__kinematics_1_1KDLFwdKinTreeFactory}\index{tesseract\_kinematics::KDLFwdKinTreeFactory@{tesseract\_kinematics::KDLFwdKinTreeFactory}}
+
+
+{\ttfamily \#include $<$kdl\+\_\+fwd\+\_\+kin\+\_\+tree\+\_\+factory.\+h$>$}
+
+Inheritance diagram for tesseract\+\_\+kinematics\+::K\+D\+L\+Fwd\+Kin\+Tree\+Factory\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classtesseract__kinematics_1_1KDLFwdKinTreeFactory}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtesseract__kinematics_1_1KDLFwdKinTreeFactory_a6565241106537384d71a143d14bab246}{K\+D\+L\+Fwd\+Kin\+Tree\+Factory}} ()
+\item 
+const std\+::string \& \mbox{\hyperlink{classtesseract__kinematics_1_1KDLFwdKinTreeFactory_a488c54f5fd6b2c7ec3fc9c77364b927d}{get\+Name}} () const override
+\begin{DoxyCompactList}\small\item\em Get the name of the factory. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacetesseract__kinematics_a5f1cae9822cd53cafb08d56263485069}{Forward\+Kinematics\+Factory\+Type}} \mbox{\hyperlink{classtesseract__kinematics_1_1KDLFwdKinTreeFactory_a013beca6901605755f338e31d7ddcb56}{get\+Type}} () const override
+\begin{DoxyCompactList}\small\item\em Get the type of Forward Kinematic factory. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classtesseract__kinematics_1_1ForwardKinematics_abdb52d493e8f0c584be778ddb193ed46}{Forward\+Kinematics\+::\+Ptr}} \mbox{\hyperlink{classtesseract__kinematics_1_1KDLFwdKinTreeFactory_a737ca713af88f41a9d26fc11d60fd734}{create}} (\mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph_a9ee303b2514bfedd8c914d09551b00ff}{tesseract\+\_\+scene\+\_\+graph\+::\+Scene\+Graph\+::\+Const\+Ptr}} scene\+\_\+graph, const std\+::vector$<$ std\+::string $>$ \&joint\+\_\+names, const std\+::string name, std\+::unordered\+\_\+map$<$ std\+::string, double $>$ \mbox{\hyperlink{ompl__trajopt__planner__test_8cpp_a484547b7c0c0900a1491bad799bec8b2}{start\+\_\+state}}=std\+::unordered\+\_\+map$<$ std\+::string, double $>$()) const override
+\begin{DoxyCompactList}\small\item\em Create Forward Kinematics Tree Object This only need to be implemented if of type chain. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classtesseract__kinematics_1_1KDLFwdKinTreeFactory_a9fa2cbf2e0dca8ad8f2bbf743ba0b84f}{name\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtesseract__kinematics_1_1KDLFwdKinTreeFactory_a6565241106537384d71a143d14bab246}\label{classtesseract__kinematics_1_1KDLFwdKinTreeFactory_a6565241106537384d71a143d14bab246}} 
+\index{tesseract\_kinematics::KDLFwdKinTreeFactory@{tesseract\_kinematics::KDLFwdKinTreeFactory}!KDLFwdKinTreeFactory@{KDLFwdKinTreeFactory}}
+\index{KDLFwdKinTreeFactory@{KDLFwdKinTreeFactory}!tesseract\_kinematics::KDLFwdKinTreeFactory@{tesseract\_kinematics::KDLFwdKinTreeFactory}}
+\doxysubsubsection{\texorpdfstring{KDLFwdKinTreeFactory()}{KDLFwdKinTreeFactory()}}
+{\footnotesize\ttfamily tesseract\+\_\+kinematics\+::\+K\+D\+L\+Fwd\+Kin\+Tree\+Factory\+::\+K\+D\+L\+Fwd\+Kin\+Tree\+Factory (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtesseract__kinematics_1_1KDLFwdKinTreeFactory_a737ca713af88f41a9d26fc11d60fd734}\label{classtesseract__kinematics_1_1KDLFwdKinTreeFactory_a737ca713af88f41a9d26fc11d60fd734}} 
+\index{tesseract\_kinematics::KDLFwdKinTreeFactory@{tesseract\_kinematics::KDLFwdKinTreeFactory}!create@{create}}
+\index{create@{create}!tesseract\_kinematics::KDLFwdKinTreeFactory@{tesseract\_kinematics::KDLFwdKinTreeFactory}}
+\doxysubsubsection{\texorpdfstring{create()}{create()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__kinematics_1_1ForwardKinematics_abdb52d493e8f0c584be778ddb193ed46}{Forward\+Kinematics\+::\+Ptr}} tesseract\+\_\+kinematics\+::\+K\+D\+L\+Fwd\+Kin\+Tree\+Factory\+::create (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph_a9ee303b2514bfedd8c914d09551b00ff}{tesseract\+\_\+scene\+\_\+graph\+::\+Scene\+Graph\+::\+Const\+Ptr}}}]{,  }\item[{const std\+::vector$<$ std\+::string $>$ \&}]{,  }\item[{const std\+::string}]{,  }\item[{std\+::unordered\+\_\+map$<$ std\+::string, double $>$}]{ = {\ttfamily std\+:\+:unordered\+\_\+map$<$std\+:\+:string,~double$>$()} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Create Forward Kinematics Tree Object This only need to be implemented if of type chain. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scene\+\_\+graph} & The tesseract scene graph \\
+\hline
+{\em joint\+\_\+names} & The list of active joints to be considered \\
+\hline
+{\em name} & The name of the kinematic chain \\
+\hline
+{\em start\+\_\+state} & The initial start state for the tree. This should inlclude all joints in the scene graph \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+If failed to create, nullptr is returned. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classtesseract__kinematics_1_1ForwardKinematicsFactory_ae6da6eadf8e52aad716be0be7a166d1c}{tesseract\+\_\+kinematics\+::\+Forward\+Kinematics\+Factory}}.
+
+\mbox{\Hypertarget{classtesseract__kinematics_1_1KDLFwdKinTreeFactory_a488c54f5fd6b2c7ec3fc9c77364b927d}\label{classtesseract__kinematics_1_1KDLFwdKinTreeFactory_a488c54f5fd6b2c7ec3fc9c77364b927d}} 
+\index{tesseract\_kinematics::KDLFwdKinTreeFactory@{tesseract\_kinematics::KDLFwdKinTreeFactory}!getName@{getName}}
+\index{getName@{getName}!tesseract\_kinematics::KDLFwdKinTreeFactory@{tesseract\_kinematics::KDLFwdKinTreeFactory}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily const std\+::string\& tesseract\+\_\+kinematics\+::\+K\+D\+L\+Fwd\+Kin\+Tree\+Factory\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get the name of the factory. 
+
+\begin{DoxyReturn}{Returns}
+The name 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classtesseract__kinematics_1_1ForwardKinematicsFactory_a7f90de7ef1a196581d8506323c648486}{tesseract\+\_\+kinematics\+::\+Forward\+Kinematics\+Factory}}.
+
+\mbox{\Hypertarget{classtesseract__kinematics_1_1KDLFwdKinTreeFactory_a013beca6901605755f338e31d7ddcb56}\label{classtesseract__kinematics_1_1KDLFwdKinTreeFactory_a013beca6901605755f338e31d7ddcb56}} 
+\index{tesseract\_kinematics::KDLFwdKinTreeFactory@{tesseract\_kinematics::KDLFwdKinTreeFactory}!getType@{getType}}
+\index{getType@{getType}!tesseract\_kinematics::KDLFwdKinTreeFactory@{tesseract\_kinematics::KDLFwdKinTreeFactory}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacetesseract__kinematics_a5f1cae9822cd53cafb08d56263485069}{Forward\+Kinematics\+Factory\+Type}} tesseract\+\_\+kinematics\+::\+K\+D\+L\+Fwd\+Kin\+Tree\+Factory\+::get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get the type of Forward Kinematic factory. 
+
+\begin{DoxyReturn}{Returns}
+Type \{C\+H\+A\+IN, T\+R\+EE, G\+R\+A\+PH\} 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classtesseract__kinematics_1_1ForwardKinematicsFactory_adf3e535f70430a2b426f749ee4eb5718}{tesseract\+\_\+kinematics\+::\+Forward\+Kinematics\+Factory}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classtesseract__kinematics_1_1KDLFwdKinTreeFactory_a9fa2cbf2e0dca8ad8f2bbf743ba0b84f}\label{classtesseract__kinematics_1_1KDLFwdKinTreeFactory_a9fa2cbf2e0dca8ad8f2bbf743ba0b84f}} 
+\index{tesseract\_kinematics::KDLFwdKinTreeFactory@{tesseract\_kinematics::KDLFwdKinTreeFactory}!name\_@{name\_}}
+\index{name\_@{name\_}!tesseract\_kinematics::KDLFwdKinTreeFactory@{tesseract\_kinematics::KDLFwdKinTreeFactory}}
+\doxysubsubsection{\texorpdfstring{name\_}{name\_}}
+{\footnotesize\ttfamily std\+::string tesseract\+\_\+kinematics\+::\+K\+D\+L\+Fwd\+Kin\+Tree\+Factory\+::name\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+tesseract/tesseract\+\_\+kinematics/include/tesseract\+\_\+kinematics/kdl/\mbox{\hyperlink{kdl__fwd__kin__tree__factory_8h}{kdl\+\_\+fwd\+\_\+kin\+\_\+tree\+\_\+factory.\+h}}\end{DoxyCompactItemize}

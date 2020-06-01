@@ -1,0 +1,94 @@
+\hypertarget{classtesseract__process__planners_1_1ProcessDefinitionGenerator}{}\doxysection{tesseract\+\_\+process\+\_\+planners\+::Process\+Definition\+Generator Class Reference}
+\label{classtesseract__process__planners_1_1ProcessDefinitionGenerator}\index{tesseract\_process\_planners::ProcessDefinitionGenerator@{tesseract\_process\_planners::ProcessDefinitionGenerator}}
+
+
+{\ttfamily \#include $<$process\+\_\+definition\+\_\+generator.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classtesseract__process__planners_1_1ProcessDefinitionGenerator_aba00807a09dd70d7d8b73ce71f401589}{Tool\+Path}} = std\+::vector$<$ \mbox{\hyperlink{classtesseract__motion__planners_1_1Waypoint_a6a3eae473f2bb3bd94684561aae0bd3e}{tesseract\+\_\+motion\+\_\+planners\+::\+Waypoint\+::\+Ptr}} $>$
+\item 
+using \mbox{\hyperlink{classtesseract__process__planners_1_1ProcessDefinitionGenerator_a294029a4c8edb5449f8403290dceacb3}{Tool\+Paths}} = std\+::vector$<$ \mbox{\hyperlink{classtesseract__process__planners_1_1ProcessDefinitionGenerator_aba00807a09dd70d7d8b73ce71f401589}{Tool\+Path}} $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classtesseract__process__planners_1_1ProcessDefinitionGenerator_ad4c6424226c66663f4994cc93f4386e5}{$\sim$\+Process\+Definition\+Generator}} ()=default
+\item 
+virtual \mbox{\hyperlink{structtesseract__process__planners_1_1ProcessDefinition}{Process\+Definition}} \mbox{\hyperlink{classtesseract__process__planners_1_1ProcessDefinitionGenerator_ac8d89471b7f237a3b56c220e0c116d7a}{generate}} (\mbox{\hyperlink{classtesseract__motion__planners_1_1Waypoint_a29451e07e89a6a6695dd6c1b557b0905}{tesseract\+\_\+motion\+\_\+planners\+::\+Waypoint\+::\+Const\+Ptr}} start, \mbox{\hyperlink{classtesseract__motion__planners_1_1Waypoint_a29451e07e89a6a6695dd6c1b557b0905}{tesseract\+\_\+motion\+\_\+planners\+::\+Waypoint\+::\+Const\+Ptr}} end, const \mbox{\hyperlink{classtesseract__process__planners_1_1ProcessDefinitionGenerator_a294029a4c8edb5449f8403290dceacb3}{Tool\+Paths}} \&tool\+\_\+paths) const =0
+\begin{DoxyCompactList}\small\item\em generate Generates a process definition from a toolpath \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{structtesseract__process__planners_1_1ProcessDefinition}{Process\+Definition}} \mbox{\hyperlink{classtesseract__process__planners_1_1ProcessDefinitionGenerator_ad4f543e2cd21559ca0247ec3cfaf8b34}{generate}} (const \mbox{\hyperlink{classtesseract__process__planners_1_1ProcessDefinitionGenerator_a294029a4c8edb5449f8403290dceacb3}{Tool\+Paths}} \&tool\+\_\+paths) const =0
+\begin{DoxyCompactList}\small\item\em generate Generates a process definition from a toolpath \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classtesseract__process__planners_1_1ProcessDefinitionGenerator_aba00807a09dd70d7d8b73ce71f401589}\label{classtesseract__process__planners_1_1ProcessDefinitionGenerator_aba00807a09dd70d7d8b73ce71f401589}} 
+\index{tesseract\_process\_planners::ProcessDefinitionGenerator@{tesseract\_process\_planners::ProcessDefinitionGenerator}!ToolPath@{ToolPath}}
+\index{ToolPath@{ToolPath}!tesseract\_process\_planners::ProcessDefinitionGenerator@{tesseract\_process\_planners::ProcessDefinitionGenerator}}
+\doxysubsubsection{\texorpdfstring{ToolPath}{ToolPath}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classtesseract__process__planners_1_1ProcessDefinitionGenerator_aba00807a09dd70d7d8b73ce71f401589}{tesseract\+\_\+process\+\_\+planners\+::\+Process\+Definition\+Generator\+::\+Tool\+Path}} =  std\+::vector$<$\mbox{\hyperlink{classtesseract__motion__planners_1_1Waypoint_a6a3eae473f2bb3bd94684561aae0bd3e}{tesseract\+\_\+motion\+\_\+planners\+::\+Waypoint\+::\+Ptr}}$>$}
+
+\mbox{\Hypertarget{classtesseract__process__planners_1_1ProcessDefinitionGenerator_a294029a4c8edb5449f8403290dceacb3}\label{classtesseract__process__planners_1_1ProcessDefinitionGenerator_a294029a4c8edb5449f8403290dceacb3}} 
+\index{tesseract\_process\_planners::ProcessDefinitionGenerator@{tesseract\_process\_planners::ProcessDefinitionGenerator}!ToolPaths@{ToolPaths}}
+\index{ToolPaths@{ToolPaths}!tesseract\_process\_planners::ProcessDefinitionGenerator@{tesseract\_process\_planners::ProcessDefinitionGenerator}}
+\doxysubsubsection{\texorpdfstring{ToolPaths}{ToolPaths}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classtesseract__process__planners_1_1ProcessDefinitionGenerator_a294029a4c8edb5449f8403290dceacb3}{tesseract\+\_\+process\+\_\+planners\+::\+Process\+Definition\+Generator\+::\+Tool\+Paths}} =  std\+::vector$<$\mbox{\hyperlink{classtesseract__process__planners_1_1ProcessDefinitionGenerator_aba00807a09dd70d7d8b73ce71f401589}{Tool\+Path}}$>$}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtesseract__process__planners_1_1ProcessDefinitionGenerator_ad4c6424226c66663f4994cc93f4386e5}\label{classtesseract__process__planners_1_1ProcessDefinitionGenerator_ad4c6424226c66663f4994cc93f4386e5}} 
+\index{tesseract\_process\_planners::ProcessDefinitionGenerator@{tesseract\_process\_planners::ProcessDefinitionGenerator}!````~ProcessDefinitionGenerator@{$\sim$ProcessDefinitionGenerator}}
+\index{````~ProcessDefinitionGenerator@{$\sim$ProcessDefinitionGenerator}!tesseract\_process\_planners::ProcessDefinitionGenerator@{tesseract\_process\_planners::ProcessDefinitionGenerator}}
+\doxysubsubsection{\texorpdfstring{$\sim$ProcessDefinitionGenerator()}{~ProcessDefinitionGenerator()}}
+{\footnotesize\ttfamily virtual tesseract\+\_\+process\+\_\+planners\+::\+Process\+Definition\+Generator\+::$\sim$\+Process\+Definition\+Generator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtesseract__process__planners_1_1ProcessDefinitionGenerator_ad4f543e2cd21559ca0247ec3cfaf8b34}\label{classtesseract__process__planners_1_1ProcessDefinitionGenerator_ad4f543e2cd21559ca0247ec3cfaf8b34}} 
+\index{tesseract\_process\_planners::ProcessDefinitionGenerator@{tesseract\_process\_planners::ProcessDefinitionGenerator}!generate@{generate}}
+\index{generate@{generate}!tesseract\_process\_planners::ProcessDefinitionGenerator@{tesseract\_process\_planners::ProcessDefinitionGenerator}}
+\doxysubsubsection{\texorpdfstring{generate()}{generate()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{structtesseract__process__planners_1_1ProcessDefinition}{Process\+Definition}} tesseract\+\_\+process\+\_\+planners\+::\+Process\+Definition\+Generator\+::generate (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtesseract__process__planners_1_1ProcessDefinitionGenerator_a294029a4c8edb5449f8403290dceacb3}{Tool\+Paths}} \&}]{tool\+\_\+paths }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+generate Generates a process definition from a toolpath 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tool\+\_\+paths} & The vector of toolpath rasters to be processed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A process definition encompassing the segments and transitions of the process 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtesseract__process__planners_1_1ProcessDefinitionGenerator_ac8d89471b7f237a3b56c220e0c116d7a}\label{classtesseract__process__planners_1_1ProcessDefinitionGenerator_ac8d89471b7f237a3b56c220e0c116d7a}} 
+\index{tesseract\_process\_planners::ProcessDefinitionGenerator@{tesseract\_process\_planners::ProcessDefinitionGenerator}!generate@{generate}}
+\index{generate@{generate}!tesseract\_process\_planners::ProcessDefinitionGenerator@{tesseract\_process\_planners::ProcessDefinitionGenerator}}
+\doxysubsubsection{\texorpdfstring{generate()}{generate()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{structtesseract__process__planners_1_1ProcessDefinition}{Process\+Definition}} tesseract\+\_\+process\+\_\+planners\+::\+Process\+Definition\+Generator\+::generate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtesseract__motion__planners_1_1Waypoint_a29451e07e89a6a6695dd6c1b557b0905}{tesseract\+\_\+motion\+\_\+planners\+::\+Waypoint\+::\+Const\+Ptr}}}]{start,  }\item[{\mbox{\hyperlink{classtesseract__motion__planners_1_1Waypoint_a29451e07e89a6a6695dd6c1b557b0905}{tesseract\+\_\+motion\+\_\+planners\+::\+Waypoint\+::\+Const\+Ptr}}}]{end,  }\item[{const \mbox{\hyperlink{classtesseract__process__planners_1_1ProcessDefinitionGenerator_a294029a4c8edb5449f8403290dceacb3}{Tool\+Paths}} \&}]{tool\+\_\+paths }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+generate Generates a process definition from a toolpath 
+
+
+\begin{DoxyParams}{Parameters}
+{\em start} & The intial robot position \\
+\hline
+{\em end} & The final robot position \\
+\hline
+{\em tool\+\_\+paths} & The vector of toolpath rasters to be processed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A process definition encompassing the segments and transitions of the process 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+tesseract/tesseract\+\_\+planning/tesseract\+\_\+process\+\_\+planners/include/tesseract\+\_\+process\+\_\+planners/generators/\mbox{\hyperlink{process__definition__generator_8h}{process\+\_\+definition\+\_\+generator.\+h}}\end{DoxyCompactItemize}

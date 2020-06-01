@@ -1,0 +1,164 @@
+\hypertarget{ompl__trajopt__planner__test_8cpp}{}\doxysection{tesseract/tesseract\+\_\+planning/tesseract\+\_\+motion\+\_\+planners/test/ompl\+\_\+trajopt\+\_\+planner\+\_\+test.cpp File Reference}
+\label{ompl__trajopt__planner__test_8cpp}\index{tesseract/tesseract\_planning/tesseract\_motion\_planners/test/ompl\_trajopt\_planner\_test.cpp@{tesseract/tesseract\_planning/tesseract\_motion\_planners/test/ompl\_trajopt\_planner\_test.cpp}}
+{\ttfamily \#include $<$tesseract\+\_\+common/macros.\+h$>$}\newline
+{\ttfamily \#include $<$boost/filesystem/path.\+hpp$>$}\newline
+{\ttfamily \#include $<$ompl/geometric/planners/sbl/\+S\+B\+L.\+h$>$}\newline
+{\ttfamily \#include $<$ompl/geometric/planners/est/\+E\+S\+T.\+h$>$}\newline
+{\ttfamily \#include $<$ompl/geometric/planners/kpiece/\+L\+B\+K\+P\+I\+E\+C\+E1.\+h$>$}\newline
+{\ttfamily \#include $<$ompl/geometric/planners/kpiece/\+B\+K\+P\+I\+E\+C\+E1.\+h$>$}\newline
+{\ttfamily \#include $<$ompl/geometric/planners/kpiece/\+K\+P\+I\+E\+C\+E1.\+h$>$}\newline
+{\ttfamily \#include $<$ompl/geometric/planners/rrt/\+R\+R\+T.\+h$>$}\newline
+{\ttfamily \#include $<$ompl/geometric/planners/rrt/\+R\+R\+T\+Connect.\+h$>$}\newline
+{\ttfamily \#include $<$ompl/geometric/planners/rrt/\+R\+R\+Tstar.\+h$>$}\newline
+{\ttfamily \#include $<$ompl/geometric/planners/rrt/\+T\+R\+R\+T.\+h$>$}\newline
+{\ttfamily \#include $<$ompl/geometric/planners/prm/\+P\+R\+M.\+h$>$}\newline
+{\ttfamily \#include $<$ompl/geometric/planners/prm/\+P\+R\+Mstar.\+h$>$}\newline
+{\ttfamily \#include $<$ompl/geometric/planners/prm/\+Lazy\+P\+R\+Mstar.\+h$>$}\newline
+{\ttfamily \#include $<$ompl/geometric/planners/prm/\+S\+P\+A\+R\+S.\+h$>$}\newline
+{\ttfamily \#include $<$ompl/util/\+Random\+Numbers.\+h$>$}\newline
+{\ttfamily \#include $<$functional$>$}\newline
+{\ttfamily \#include $<$gtest/gtest.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract/tesseract.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+environment/core/utils.\+h$>$}\newline
+{\ttfamily \#include $<$trajopt\+\_\+utils/logging.\+hpp$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+motion\+\_\+planners/hybrid/ompl\+\_\+trajopt\+\_\+freespace\+\_\+planner.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+motion\+\_\+planners/trajopt/config/trajopt\+\_\+planner\+\_\+freespace\+\_\+config.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+motion\+\_\+planners/ompl/config/ompl\+\_\+planner\+\_\+freespace\+\_\+config.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+motion\+\_\+planners/ompl/ompl\+\_\+planner\+\_\+configurator.\+h$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classOMPLTrajOptTestFixtureNoRange}{O\+M\+P\+L\+Traj\+Opt\+Test\+Fixture\+No\+Range$<$ Configurator $>$}}
+\item 
+class \mbox{\hyperlink{classOMPLTrajOptTestFixture}{O\+M\+P\+L\+Traj\+Opt\+Test\+Fixture$<$ Configurator $>$}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{ompl__trajopt__planner__test_8cpp_aec374f397912199bdb8bc2e816ef8dc8}{Implementations}} = \+::testing\+::\+Types$<$ \mbox{\hyperlink{structtesseract__motion__planners_1_1SBLConfigurator}{tesseract\+\_\+motion\+\_\+planners\+::\+S\+B\+L\+Configurator}}, \mbox{\hyperlink{structtesseract__motion__planners_1_1LBKPIECE1Configurator}{tesseract\+\_\+motion\+\_\+planners\+::\+L\+B\+K\+P\+I\+E\+C\+E1\+Configurator}}, \mbox{\hyperlink{structtesseract__motion__planners_1_1BKPIECE1Configurator}{tesseract\+\_\+motion\+\_\+planners\+::\+B\+K\+P\+I\+E\+C\+E1\+Configurator}}, \mbox{\hyperlink{structtesseract__motion__planners_1_1KPIECE1Configurator}{tesseract\+\_\+motion\+\_\+planners\+::\+K\+P\+I\+E\+C\+E1\+Configurator}}, \mbox{\hyperlink{structtesseract__motion__planners_1_1RRTConnectConfigurator}{tesseract\+\_\+motion\+\_\+planners\+::\+R\+R\+T\+Connect\+Configurator}} $>$
+\item 
+using \mbox{\hyperlink{ompl__trajopt__planner__test_8cpp_ae41e028960d72ba9e3d751b0c75e57ba}{Implementations\+No\+Range}} = \+::testing\+::\+Types$<$ \mbox{\hyperlink{structtesseract__motion__planners_1_1PRMConfigurator}{tesseract\+\_\+motion\+\_\+planners\+::\+P\+R\+M\+Configurator}}, \mbox{\hyperlink{structtesseract__motion__planners_1_1PRMstarConfigurator}{tesseract\+\_\+motion\+\_\+planners\+::\+P\+R\+Mstar\+Configurator}}, \mbox{\hyperlink{structtesseract__motion__planners_1_1LazyPRMstarConfigurator}{tesseract\+\_\+motion\+\_\+planners\+::\+Lazy\+P\+R\+Mstar\+Configurator}} $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{ompl__trajopt__planner__test_8cpp_ad43b67aac2fb3de014c67c88f9dc4db9}{locate\+Resource}} (const std\+::string \&url)
+\item 
+static void \mbox{\hyperlink{ompl__trajopt__planner__test_8cpp_a533082e77d10c35b9e73f7f62b59bbce}{add\+Box}} (\mbox{\hyperlink{classtesseract__environment_1_1Environment}{tesseract\+\_\+environment\+::\+Environment}} \&env)
+\item 
+\mbox{\hyperlink{ompl__trajopt__planner__test_8cpp_a27e0c4ee0b6e37c59bf43d3e5d26fcf0}{T\+Y\+P\+E\+D\+\_\+\+T\+E\+S\+T\+\_\+\+C\+A\+SE}} (\mbox{\hyperlink{classOMPLTrajOptTestFixture}{O\+M\+P\+L\+Traj\+Opt\+Test\+Fixture}}, \mbox{\hyperlink{ompl__planner__tests_8cpp_acc0916b449d264d160fefc26b725074d}{Implementations}})
+\item 
+\mbox{\hyperlink{ompl__trajopt__planner__test_8cpp_a7bd3ae2eeebf152d6660df584019c237}{T\+Y\+P\+E\+D\+\_\+\+T\+E\+S\+T\+\_\+\+C\+A\+SE}} (\mbox{\hyperlink{classOMPLTrajOptTestFixtureNoRange}{O\+M\+P\+L\+Traj\+Opt\+Test\+Fixture\+No\+Range}}, \mbox{\hyperlink{ompl__trajopt__planner__test_8cpp_ae41e028960d72ba9e3d751b0c75e57ba}{Implementations\+No\+Range}})
+\item 
+\mbox{\hyperlink{ompl__trajopt__planner__test_8cpp_a9e168c28a8428078f162a0e3e6a1866d}{T\+Y\+P\+E\+D\+\_\+\+T\+E\+ST}} (\mbox{\hyperlink{classOMPLTrajOptTestFixtureNoRange}{O\+M\+P\+L\+Traj\+Opt\+Test\+Fixture\+No\+Range}}, O\+M\+P\+L\+Traj\+Opt\+Freespace\+Planner\+Unit)
+\item 
+\mbox{\hyperlink{ompl__trajopt__planner__test_8cpp_a4f4ee3dd1d80659a68df7e43d557f04b}{T\+Y\+P\+E\+D\+\_\+\+T\+E\+ST}} (\mbox{\hyperlink{classOMPLTrajOptTestFixture}{O\+M\+P\+L\+Traj\+Opt\+Test\+Fixture}}, O\+M\+P\+L\+Traj\+Opt\+Freespace\+Planner\+Unit)
+\item 
+int \mbox{\hyperlink{ompl__trajopt__planner__test_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static const int \mbox{\hyperlink{ompl__trajopt__planner__test_8cpp_a4c0d5cbc910bbc8cac68735cb0afd76a}{S\+E\+ED}} = 1
+\item 
+static const std\+::vector$<$ double $>$ \mbox{\hyperlink{ompl__trajopt__planner__test_8cpp_a484547b7c0c0900a1491bad799bec8b2}{start\+\_\+state}} = \{ -\/0.\+5, 0.\+5, 0.\+0, -\/1.\+3348, 0.\+0, 1.\+4959, 0.\+0 \}
+\item 
+static const std\+::vector$<$ double $>$ \mbox{\hyperlink{ompl__trajopt__planner__test_8cpp_a33df652be8e68c853b03222aed100f68}{end\+\_\+state}} = \{ 0.\+5, 0.\+5, 0.\+0, -\/1.\+3348, 0.\+0, 1.\+4959, 0.\+0 \}
+\item 
+static const bool \mbox{\hyperlink{ompl__trajopt__planner__test_8cpp_adf5fd135b3ddf7f4e76576ea364e4886}{P\+L\+A\+N\+N\+E\+R\+\_\+\+V\+E\+R\+B\+O\+SE}} = true
+\item 
+static const \mbox{\hyperlink{namespacetesseract__motion__planners_af35aeb2eaf87be9fb4063029a20968bc}{Post\+Plan\+Check\+Type}} \mbox{\hyperlink{ompl__trajopt__planner__test_8cpp_aa4fb688e4a9a770e220e28a89c48edb1}{P\+L\+A\+N\+N\+E\+R\+\_\+\+C\+O\+L\+L\+I\+S\+I\+O\+N\+\_\+\+C\+H\+E\+C\+K\+\_\+\+T\+Y\+PE}} = Post\+Plan\+Check\+Type\+::\+D\+I\+S\+C\+R\+E\+T\+E\+\_\+\+C\+O\+N\+T\+I\+N\+U\+O\+U\+S\+\_\+\+C\+O\+L\+L\+I\+S\+I\+ON
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{ompl__trajopt__planner__test_8cpp_aec374f397912199bdb8bc2e816ef8dc8}\label{ompl__trajopt__planner__test_8cpp_aec374f397912199bdb8bc2e816ef8dc8}} 
+\index{ompl\_trajopt\_planner\_test.cpp@{ompl\_trajopt\_planner\_test.cpp}!Implementations@{Implementations}}
+\index{Implementations@{Implementations}!ompl\_trajopt\_planner\_test.cpp@{ompl\_trajopt\_planner\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{Implementations}{Implementations}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{ompl__planner__tests_8cpp_acc0916b449d264d160fefc26b725074d}{Implementations}} =  \+::testing\+::\+Types$<$\mbox{\hyperlink{structtesseract__motion__planners_1_1SBLConfigurator}{tesseract\+\_\+motion\+\_\+planners\+::\+S\+B\+L\+Configurator}}, \mbox{\hyperlink{structtesseract__motion__planners_1_1LBKPIECE1Configurator}{tesseract\+\_\+motion\+\_\+planners\+::\+L\+B\+K\+P\+I\+E\+C\+E1\+Configurator}}, \mbox{\hyperlink{structtesseract__motion__planners_1_1BKPIECE1Configurator}{tesseract\+\_\+motion\+\_\+planners\+::\+B\+K\+P\+I\+E\+C\+E1\+Configurator}}, \mbox{\hyperlink{structtesseract__motion__planners_1_1KPIECE1Configurator}{tesseract\+\_\+motion\+\_\+planners\+::\+K\+P\+I\+E\+C\+E1\+Configurator}}, \mbox{\hyperlink{structtesseract__motion__planners_1_1RRTConnectConfigurator}{tesseract\+\_\+motion\+\_\+planners\+::\+R\+R\+T\+Connect\+Configurator}}$>$}
+
+\mbox{\Hypertarget{ompl__trajopt__planner__test_8cpp_ae41e028960d72ba9e3d751b0c75e57ba}\label{ompl__trajopt__planner__test_8cpp_ae41e028960d72ba9e3d751b0c75e57ba}} 
+\index{ompl\_trajopt\_planner\_test.cpp@{ompl\_trajopt\_planner\_test.cpp}!ImplementationsNoRange@{ImplementationsNoRange}}
+\index{ImplementationsNoRange@{ImplementationsNoRange}!ompl\_trajopt\_planner\_test.cpp@{ompl\_trajopt\_planner\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{ImplementationsNoRange}{ImplementationsNoRange}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{ompl__trajopt__planner__test_8cpp_ae41e028960d72ba9e3d751b0c75e57ba}{Implementations\+No\+Range}} =  \+::testing\+::\+Types$<$\mbox{\hyperlink{structtesseract__motion__planners_1_1PRMConfigurator}{tesseract\+\_\+motion\+\_\+planners\+::\+P\+R\+M\+Configurator}}, \mbox{\hyperlink{structtesseract__motion__planners_1_1PRMstarConfigurator}{tesseract\+\_\+motion\+\_\+planners\+::\+P\+R\+Mstar\+Configurator}}, \mbox{\hyperlink{structtesseract__motion__planners_1_1LazyPRMstarConfigurator}{tesseract\+\_\+motion\+\_\+planners\+::\+Lazy\+P\+R\+Mstar\+Configurator}}$>$}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{ompl__trajopt__planner__test_8cpp_a533082e77d10c35b9e73f7f62b59bbce}\label{ompl__trajopt__planner__test_8cpp_a533082e77d10c35b9e73f7f62b59bbce}} 
+\index{ompl\_trajopt\_planner\_test.cpp@{ompl\_trajopt\_planner\_test.cpp}!addBox@{addBox}}
+\index{addBox@{addBox}!ompl\_trajopt\_planner\_test.cpp@{ompl\_trajopt\_planner\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{addBox()}{addBox()}}
+{\footnotesize\ttfamily static void add\+Box (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtesseract__environment_1_1Environment}{tesseract\+\_\+environment\+::\+Environment}} \&}]{env }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{ompl__trajopt__planner__test_8cpp_ad43b67aac2fb3de014c67c88f9dc4db9}\label{ompl__trajopt__planner__test_8cpp_ad43b67aac2fb3de014c67c88f9dc4db9}} 
+\index{ompl\_trajopt\_planner\_test.cpp@{ompl\_trajopt\_planner\_test.cpp}!locateResource@{locateResource}}
+\index{locateResource@{locateResource}!ompl\_trajopt\_planner\_test.cpp@{ompl\_trajopt\_planner\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{locateResource()}{locateResource()}}
+{\footnotesize\ttfamily std\+::string locate\+Resource (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{url }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ompl__trajopt__planner__test_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}\label{ompl__trajopt__planner__test_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}} 
+\index{ompl\_trajopt\_planner\_test.cpp@{ompl\_trajopt\_planner\_test.cpp}!main@{main}}
+\index{main@{main}!ompl\_trajopt\_planner\_test.cpp@{ompl\_trajopt\_planner\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ompl__trajopt__planner__test_8cpp_a4f4ee3dd1d80659a68df7e43d557f04b}\label{ompl__trajopt__planner__test_8cpp_a4f4ee3dd1d80659a68df7e43d557f04b}} 
+\index{ompl\_trajopt\_planner\_test.cpp@{ompl\_trajopt\_planner\_test.cpp}!TYPED\_TEST@{TYPED\_TEST}}
+\index{TYPED\_TEST@{TYPED\_TEST}!ompl\_trajopt\_planner\_test.cpp@{ompl\_trajopt\_planner\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TYPED\_TEST()}{TYPED\_TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily T\+Y\+P\+E\+D\+\_\+\+T\+E\+ST (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classOMPLTrajOptTestFixture}{O\+M\+P\+L\+Traj\+Opt\+Test\+Fixture}}}]{,  }\item[{O\+M\+P\+L\+Traj\+Opt\+Freespace\+Planner\+Unit}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ompl__trajopt__planner__test_8cpp_a9e168c28a8428078f162a0e3e6a1866d}\label{ompl__trajopt__planner__test_8cpp_a9e168c28a8428078f162a0e3e6a1866d}} 
+\index{ompl\_trajopt\_planner\_test.cpp@{ompl\_trajopt\_planner\_test.cpp}!TYPED\_TEST@{TYPED\_TEST}}
+\index{TYPED\_TEST@{TYPED\_TEST}!ompl\_trajopt\_planner\_test.cpp@{ompl\_trajopt\_planner\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TYPED\_TEST()}{TYPED\_TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily T\+Y\+P\+E\+D\+\_\+\+T\+E\+ST (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classOMPLTrajOptTestFixtureNoRange}{O\+M\+P\+L\+Traj\+Opt\+Test\+Fixture\+No\+Range}}}]{,  }\item[{O\+M\+P\+L\+Traj\+Opt\+Freespace\+Planner\+Unit}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ompl__trajopt__planner__test_8cpp_a27e0c4ee0b6e37c59bf43d3e5d26fcf0}\label{ompl__trajopt__planner__test_8cpp_a27e0c4ee0b6e37c59bf43d3e5d26fcf0}} 
+\index{ompl\_trajopt\_planner\_test.cpp@{ompl\_trajopt\_planner\_test.cpp}!TYPED\_TEST\_CASE@{TYPED\_TEST\_CASE}}
+\index{TYPED\_TEST\_CASE@{TYPED\_TEST\_CASE}!ompl\_trajopt\_planner\_test.cpp@{ompl\_trajopt\_planner\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TYPED\_TEST\_CASE()}{TYPED\_TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily T\+Y\+P\+E\+D\+\_\+\+T\+E\+S\+T\+\_\+\+C\+A\+SE (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classOMPLTrajOptTestFixture}{O\+M\+P\+L\+Traj\+Opt\+Test\+Fixture}}}]{,  }\item[{\mbox{\hyperlink{ompl__planner__tests_8cpp_acc0916b449d264d160fefc26b725074d}{Implementations}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ompl__trajopt__planner__test_8cpp_a7bd3ae2eeebf152d6660df584019c237}\label{ompl__trajopt__planner__test_8cpp_a7bd3ae2eeebf152d6660df584019c237}} 
+\index{ompl\_trajopt\_planner\_test.cpp@{ompl\_trajopt\_planner\_test.cpp}!TYPED\_TEST\_CASE@{TYPED\_TEST\_CASE}}
+\index{TYPED\_TEST\_CASE@{TYPED\_TEST\_CASE}!ompl\_trajopt\_planner\_test.cpp@{ompl\_trajopt\_planner\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TYPED\_TEST\_CASE()}{TYPED\_TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily T\+Y\+P\+E\+D\+\_\+\+T\+E\+S\+T\+\_\+\+C\+A\+SE (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classOMPLTrajOptTestFixtureNoRange}{O\+M\+P\+L\+Traj\+Opt\+Test\+Fixture\+No\+Range}}}]{,  }\item[{\mbox{\hyperlink{ompl__trajopt__planner__test_8cpp_ae41e028960d72ba9e3d751b0c75e57ba}{Implementations\+No\+Range}}}]{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{ompl__trajopt__planner__test_8cpp_a33df652be8e68c853b03222aed100f68}\label{ompl__trajopt__planner__test_8cpp_a33df652be8e68c853b03222aed100f68}} 
+\index{ompl\_trajopt\_planner\_test.cpp@{ompl\_trajopt\_planner\_test.cpp}!end\_state@{end\_state}}
+\index{end\_state@{end\_state}!ompl\_trajopt\_planner\_test.cpp@{ompl\_trajopt\_planner\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{end\_state}{end\_state}}
+{\footnotesize\ttfamily const std\+::vector$<$double$>$ end\+\_\+state = \{ 0.\+5, 0.\+5, 0.\+0, -\/1.\+3348, 0.\+0, 1.\+4959, 0.\+0 \}\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{ompl__trajopt__planner__test_8cpp_aa4fb688e4a9a770e220e28a89c48edb1}\label{ompl__trajopt__planner__test_8cpp_aa4fb688e4a9a770e220e28a89c48edb1}} 
+\index{ompl\_trajopt\_planner\_test.cpp@{ompl\_trajopt\_planner\_test.cpp}!PLANNER\_COLLISION\_CHECK\_TYPE@{PLANNER\_COLLISION\_CHECK\_TYPE}}
+\index{PLANNER\_COLLISION\_CHECK\_TYPE@{PLANNER\_COLLISION\_CHECK\_TYPE}!ompl\_trajopt\_planner\_test.cpp@{ompl\_trajopt\_planner\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{PLANNER\_COLLISION\_CHECK\_TYPE}{PLANNER\_COLLISION\_CHECK\_TYPE}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{namespacetesseract__motion__planners_af35aeb2eaf87be9fb4063029a20968bc}{Post\+Plan\+Check\+Type}} P\+L\+A\+N\+N\+E\+R\+\_\+\+C\+O\+L\+L\+I\+S\+I\+O\+N\+\_\+\+C\+H\+E\+C\+K\+\_\+\+T\+Y\+PE = Post\+Plan\+Check\+Type\+::\+D\+I\+S\+C\+R\+E\+T\+E\+\_\+\+C\+O\+N\+T\+I\+N\+U\+O\+U\+S\+\_\+\+C\+O\+L\+L\+I\+S\+I\+ON\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{ompl__trajopt__planner__test_8cpp_adf5fd135b3ddf7f4e76576ea364e4886}\label{ompl__trajopt__planner__test_8cpp_adf5fd135b3ddf7f4e76576ea364e4886}} 
+\index{ompl\_trajopt\_planner\_test.cpp@{ompl\_trajopt\_planner\_test.cpp}!PLANNER\_VERBOSE@{PLANNER\_VERBOSE}}
+\index{PLANNER\_VERBOSE@{PLANNER\_VERBOSE}!ompl\_trajopt\_planner\_test.cpp@{ompl\_trajopt\_planner\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{PLANNER\_VERBOSE}{PLANNER\_VERBOSE}}
+{\footnotesize\ttfamily const bool P\+L\+A\+N\+N\+E\+R\+\_\+\+V\+E\+R\+B\+O\+SE = true\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{ompl__trajopt__planner__test_8cpp_a4c0d5cbc910bbc8cac68735cb0afd76a}\label{ompl__trajopt__planner__test_8cpp_a4c0d5cbc910bbc8cac68735cb0afd76a}} 
+\index{ompl\_trajopt\_planner\_test.cpp@{ompl\_trajopt\_planner\_test.cpp}!SEED@{SEED}}
+\index{SEED@{SEED}!ompl\_trajopt\_planner\_test.cpp@{ompl\_trajopt\_planner\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{SEED}{SEED}}
+{\footnotesize\ttfamily const int S\+E\+ED = 1\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{ompl__trajopt__planner__test_8cpp_a484547b7c0c0900a1491bad799bec8b2}\label{ompl__trajopt__planner__test_8cpp_a484547b7c0c0900a1491bad799bec8b2}} 
+\index{ompl\_trajopt\_planner\_test.cpp@{ompl\_trajopt\_planner\_test.cpp}!start\_state@{start\_state}}
+\index{start\_state@{start\_state}!ompl\_trajopt\_planner\_test.cpp@{ompl\_trajopt\_planner\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{start\_state}{start\_state}}
+{\footnotesize\ttfamily const std\+::vector$<$double$>$ start\+\_\+state = \{ -\/0.\+5, 0.\+5, 0.\+0, -\/1.\+3348, 0.\+0, 1.\+4959, 0.\+0 \}\hspace{0.3cm}{\ttfamily [static]}}
+

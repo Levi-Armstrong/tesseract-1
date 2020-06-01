@@ -1,0 +1,67 @@
+\hypertarget{structtesseract__process__planners_1_1ProcessSegmentPlan}{}\doxysection{tesseract\+\_\+process\+\_\+planners\+::Process\+Segment\+Plan Struct Reference}
+\label{structtesseract__process__planners_1_1ProcessSegmentPlan}\index{tesseract\_process\_planners::ProcessSegmentPlan@{tesseract\_process\_planners::ProcessSegmentPlan}}
+
+
+Is a results structure to hold the results generated based on the process segment definition.  
+
+
+
+
+{\ttfamily \#include $<$process\+\_\+planner.\+h$>$}
+
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structtesseract__common_1_1JointTrajectory}{tesseract\+\_\+common\+::\+Joint\+Trajectory}} \mbox{\hyperlink{structtesseract__process__planners_1_1ProcessSegmentPlan_aeddbe06b2ff6b3686c92fed9a2367760}{approach}}
+\item 
+\mbox{\hyperlink{structtesseract__common_1_1JointTrajectory}{tesseract\+\_\+common\+::\+Joint\+Trajectory}} \mbox{\hyperlink{structtesseract__process__planners_1_1ProcessSegmentPlan_a480378c50a6a1810a4e863b290956c57}{process}}
+\item 
+\mbox{\hyperlink{structtesseract__common_1_1JointTrajectory}{tesseract\+\_\+common\+::\+Joint\+Trajectory}} \mbox{\hyperlink{structtesseract__process__planners_1_1ProcessSegmentPlan_a472d6c9e3c2a3727978e95aacf485fc8}{departure}}
+\item 
+bool \mbox{\hyperlink{structtesseract__process__planners_1_1ProcessSegmentPlan_a70db001e21f8d1506b8199b7f1d5fa62}{valid}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Is a results structure to hold the results generated based on the process segment definition. 
+
+An empty trajectory indicates that this process step is to be omitted.
+
+T\+O\+DO\+: Should we store the planner response for each? 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structtesseract__process__planners_1_1ProcessSegmentPlan_aeddbe06b2ff6b3686c92fed9a2367760}\label{structtesseract__process__planners_1_1ProcessSegmentPlan_aeddbe06b2ff6b3686c92fed9a2367760}} 
+\index{tesseract\_process\_planners::ProcessSegmentPlan@{tesseract\_process\_planners::ProcessSegmentPlan}!approach@{approach}}
+\index{approach@{approach}!tesseract\_process\_planners::ProcessSegmentPlan@{tesseract\_process\_planners::ProcessSegmentPlan}}
+\doxysubsubsection{\texorpdfstring{approach}{approach}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structtesseract__common_1_1JointTrajectory}{tesseract\+\_\+common\+::\+Joint\+Trajectory}} tesseract\+\_\+process\+\_\+planners\+::\+Process\+Segment\+Plan\+::approach}
+
+The generated approach trajectory generated based on the Process Segment Definition \mbox{\Hypertarget{structtesseract__process__planners_1_1ProcessSegmentPlan_a472d6c9e3c2a3727978e95aacf485fc8}\label{structtesseract__process__planners_1_1ProcessSegmentPlan_a472d6c9e3c2a3727978e95aacf485fc8}} 
+\index{tesseract\_process\_planners::ProcessSegmentPlan@{tesseract\_process\_planners::ProcessSegmentPlan}!departure@{departure}}
+\index{departure@{departure}!tesseract\_process\_planners::ProcessSegmentPlan@{tesseract\_process\_planners::ProcessSegmentPlan}}
+\doxysubsubsection{\texorpdfstring{departure}{departure}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structtesseract__common_1_1JointTrajectory}{tesseract\+\_\+common\+::\+Joint\+Trajectory}} tesseract\+\_\+process\+\_\+planners\+::\+Process\+Segment\+Plan\+::departure}
+
+The generated departure trajectory generated based on the Process Segment Definition \mbox{\Hypertarget{structtesseract__process__planners_1_1ProcessSegmentPlan_a480378c50a6a1810a4e863b290956c57}\label{structtesseract__process__planners_1_1ProcessSegmentPlan_a480378c50a6a1810a4e863b290956c57}} 
+\index{tesseract\_process\_planners::ProcessSegmentPlan@{tesseract\_process\_planners::ProcessSegmentPlan}!process@{process}}
+\index{process@{process}!tesseract\_process\_planners::ProcessSegmentPlan@{tesseract\_process\_planners::ProcessSegmentPlan}}
+\doxysubsubsection{\texorpdfstring{process}{process}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structtesseract__common_1_1JointTrajectory}{tesseract\+\_\+common\+::\+Joint\+Trajectory}} tesseract\+\_\+process\+\_\+planners\+::\+Process\+Segment\+Plan\+::process}
+
+The generated process trajectory generated based on the Process Segment Definition \mbox{\Hypertarget{structtesseract__process__planners_1_1ProcessSegmentPlan_a70db001e21f8d1506b8199b7f1d5fa62}\label{structtesseract__process__planners_1_1ProcessSegmentPlan_a70db001e21f8d1506b8199b7f1d5fa62}} 
+\index{tesseract\_process\_planners::ProcessSegmentPlan@{tesseract\_process\_planners::ProcessSegmentPlan}!valid@{valid}}
+\index{valid@{valid}!tesseract\_process\_planners::ProcessSegmentPlan@{tesseract\_process\_planners::ProcessSegmentPlan}}
+\doxysubsubsection{\texorpdfstring{valid}{valid}}
+{\footnotesize\ttfamily bool tesseract\+\_\+process\+\_\+planners\+::\+Process\+Segment\+Plan\+::valid}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=}
+\DoxyCodeLine{      \textcolor{keyword}{true}}
+
+\end{DoxyCode}
+If true, a motion plan was sucessfully found for approach, process and departure, otherwise false 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+tesseract/tesseract\+\_\+planning/tesseract\+\_\+process\+\_\+planners/include/tesseract\+\_\+process\+\_\+planners/\mbox{\hyperlink{process__planner_8h}{process\+\_\+planner.\+h}}\end{DoxyCompactItemize}

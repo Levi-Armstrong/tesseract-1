@@ -1,0 +1,80 @@
+\hypertarget{tesseract__geometry_2include_2tesseract__geometry_2geometry_8h}{}\doxysection{tesseract/tesseract\+\_\+geometry/include/tesseract\+\_\+geometry/geometry.h File Reference}
+\label{tesseract__geometry_2include_2tesseract__geometry_2geometry_8h}\index{tesseract/tesseract\_geometry/include/tesseract\_geometry/geometry.h@{tesseract/tesseract\_geometry/include/tesseract\_geometry/geometry.h}}
+
+
+Tesseract Geometries.  
+
+
+{\ttfamily \#include $<$tesseract\+\_\+common/macros.\+h$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classtesseract__geometry_1_1Geometry}{tesseract\+\_\+geometry\+::\+Geometry}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacetesseract__geometry}{tesseract\+\_\+geometry}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{namespacetesseract__geometry_a9d42ccc6299c94d6af0c424d7fedabe8}{tesseract\+\_\+geometry\+::\+Geometrys}} = std\+::vector$<$ Geometry\+::\+Ptr $>$
+\item 
+using \mbox{\hyperlink{namespacetesseract__geometry_ae9f8615eaa9a2c7ac430e54ab5e2f2d2}{tesseract\+\_\+geometry\+::\+Geometrys\+Const}} = std\+::vector$<$ Geometry\+::\+Const\+Ptr $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespacetesseract__geometry_a7543d6c1dc8947a3274abdd21fb56feb}{tesseract\+\_\+geometry\+::\+Geometry\+Type}} \{ \newline
+\mbox{\hyperlink{namespacetesseract__geometry_a7543d6c1dc8947a3274abdd21fb56febafb20b649d5d1c5441b986a717b632ee3}{tesseract\+\_\+geometry\+::\+S\+P\+H\+E\+RE}}, 
+\mbox{\hyperlink{namespacetesseract__geometry_a7543d6c1dc8947a3274abdd21fb56feba7981168389c1e2bece204752fb30023d}{tesseract\+\_\+geometry\+::\+C\+Y\+L\+I\+N\+D\+ER}}, 
+\mbox{\hyperlink{namespacetesseract__geometry_a7543d6c1dc8947a3274abdd21fb56feba0d9f34b1d722a71a18f611f7b63cc37b}{tesseract\+\_\+geometry\+::\+C\+A\+P\+S\+U\+LE}}, 
+\mbox{\hyperlink{namespacetesseract__geometry_a7543d6c1dc8947a3274abdd21fb56feba27c4f4ab45a9be529e93017bb9b29bed}{tesseract\+\_\+geometry\+::\+C\+O\+NE}}, 
+\newline
+\mbox{\hyperlink{namespacetesseract__geometry_a7543d6c1dc8947a3274abdd21fb56feba0d73a200cb122841ab0db4cf1e22be90}{tesseract\+\_\+geometry\+::\+B\+OX}}, 
+\mbox{\hyperlink{namespacetesseract__geometry_a7543d6c1dc8947a3274abdd21fb56feba67f39b6bb359d38675adb7dfab65fdb6}{tesseract\+\_\+geometry\+::\+P\+L\+A\+NE}}, 
+\mbox{\hyperlink{namespacetesseract__geometry_a7543d6c1dc8947a3274abdd21fb56febad452813d26ea6530df4492e3ad9f230c}{tesseract\+\_\+geometry\+::\+M\+E\+SH}}, 
+\mbox{\hyperlink{namespacetesseract__geometry_a7543d6c1dc8947a3274abdd21fb56febae0e321886bf5c6aa4c17eafccecf8ac5}{tesseract\+\_\+geometry\+::\+C\+O\+N\+V\+E\+X\+\_\+\+M\+E\+SH}}, 
+\newline
+\mbox{\hyperlink{namespacetesseract__geometry_a7543d6c1dc8947a3274abdd21fb56febaa9adc2ee7a511e5eb8ce7e2ad63ae3d3}{tesseract\+\_\+geometry\+::\+S\+D\+F\+\_\+\+M\+E\+SH}}, 
+\mbox{\hyperlink{namespacetesseract__geometry_a7543d6c1dc8947a3274abdd21fb56febaa7b8033ed9f31f599bdc33da2b5b8d83}{tesseract\+\_\+geometry\+::\+O\+C\+T\+R\+EE}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static const std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{namespacetesseract__geometry_a6ea1bf6a0c260107bf088b639ddcfecc}{tesseract\+\_\+geometry\+::\+Geometry\+Type\+Strings}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Tesseract Geometries. 
+
+\begin{DoxyAuthor}{Author}
+Levi Armstrong 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+January 18, 2018 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+T\+O\+DO 
+\end{DoxyVersion}
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000047}{Bug}}]No known bugs\end{DoxyRefDesc}
+
+
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2017, Southwest Research Institute
+\end{DoxyCopyright}
+\begin{DoxyParagraph}{License}
+Software License Agreement (Apache License) 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+Licensed under the Apache License, Version 2.\+0 (the \char`\"{}\+License\char`\"{}); you may not use this file except in compliance with the License. You may obtain a copy of the License at \href{http://www.apache.org/licenses/LICENSE-2.0}{\texttt{ http\+://www.\+apache.\+org/licenses/\+L\+I\+C\+E\+N\+S\+E-\/2.\+0}} 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \char`\"{}\+A\+S I\+S\char`\"{} B\+A\+S\+IS, W\+I\+T\+H\+O\+UT W\+A\+R\+R\+A\+N\+T\+I\+ES OR C\+O\+N\+D\+I\+T\+I\+O\+NS OF A\+NY K\+I\+ND, either express or implied. See the License for the specific language governing permissions and limitations under the License. 
+\end{DoxyParagraph}

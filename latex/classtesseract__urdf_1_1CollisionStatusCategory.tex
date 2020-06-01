@@ -1,0 +1,106 @@
+\hypertarget{classtesseract__urdf_1_1CollisionStatusCategory}{}\doxysection{tesseract\+\_\+urdf\+::Collision\+Status\+Category Class Reference}
+\label{classtesseract__urdf_1_1CollisionStatusCategory}\index{tesseract\_urdf::CollisionStatusCategory@{tesseract\_urdf::CollisionStatusCategory}}
+
+
+{\ttfamily \#include $<$collision.\+h$>$}
+
+Inheritance diagram for tesseract\+\_\+urdf\+::Collision\+Status\+Category\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classtesseract__urdf_1_1CollisionStatusCategory}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \mbox{\hyperlink{classtesseract__urdf_1_1CollisionStatusCategory_a83b3ba64a939091de7142ea1cacdc628a81537400e34687b85f10549e4e36d701}{Success}} = 0, 
+\mbox{\hyperlink{classtesseract__urdf_1_1CollisionStatusCategory_a83b3ba64a939091de7142ea1cacdc628a6af7618844d21efb923cfaff037fa37a}{Error\+Parsing\+Origin\+Element}} = -\/1, 
+\mbox{\hyperlink{classtesseract__urdf_1_1CollisionStatusCategory_a83b3ba64a939091de7142ea1cacdc628a7c21492916fb27a95e21442020eaa37a}{Error\+Missing\+Geometry\+Element}} = -\/2, 
+\mbox{\hyperlink{classtesseract__urdf_1_1CollisionStatusCategory_a83b3ba64a939091de7142ea1cacdc628a38e9cb0fb958ae4ef492e49fc2205084}{Error\+Parsing\+Geometry\+Element}} = -\/3
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtesseract__urdf_1_1CollisionStatusCategory_a4fc3d5d90a01b8190fcc1aeb3d166284}{Collision\+Status\+Category}} ()
+\item 
+const std\+::string \& \mbox{\hyperlink{classtesseract__urdf_1_1CollisionStatusCategory_ab4301487373895e8277c41e8e235f23f}{name}} () const noexcept override
+\item 
+std\+::string \mbox{\hyperlink{classtesseract__urdf_1_1CollisionStatusCategory_acfc092ae8bb0a82d66c5c969af4a1228}{message}} (int code) const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classtesseract__urdf_1_1CollisionStatusCategory_a46e09466c29c8c4d53c6f65d4a20271b}{name\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classtesseract__urdf_1_1CollisionStatusCategory_a83b3ba64a939091de7142ea1cacdc628}\label{classtesseract__urdf_1_1CollisionStatusCategory_a83b3ba64a939091de7142ea1cacdc628}} 
+\doxysubsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily anonymous enum}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Success@{Success}!tesseract\_urdf::CollisionStatusCategory@{tesseract\_urdf::CollisionStatusCategory}}\index{tesseract\_urdf::CollisionStatusCategory@{tesseract\_urdf::CollisionStatusCategory}!Success@{Success}}}\mbox{\Hypertarget{classtesseract__urdf_1_1CollisionStatusCategory_a83b3ba64a939091de7142ea1cacdc628a81537400e34687b85f10549e4e36d701}\label{classtesseract__urdf_1_1CollisionStatusCategory_a83b3ba64a939091de7142ea1cacdc628a81537400e34687b85f10549e4e36d701}} 
+Success&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ErrorParsingOriginElement@{ErrorParsingOriginElement}!tesseract\_urdf::CollisionStatusCategory@{tesseract\_urdf::CollisionStatusCategory}}\index{tesseract\_urdf::CollisionStatusCategory@{tesseract\_urdf::CollisionStatusCategory}!ErrorParsingOriginElement@{ErrorParsingOriginElement}}}\mbox{\Hypertarget{classtesseract__urdf_1_1CollisionStatusCategory_a83b3ba64a939091de7142ea1cacdc628a6af7618844d21efb923cfaff037fa37a}\label{classtesseract__urdf_1_1CollisionStatusCategory_a83b3ba64a939091de7142ea1cacdc628a6af7618844d21efb923cfaff037fa37a}} 
+Error\+Parsing\+Origin\+Element&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ErrorMissingGeometryElement@{ErrorMissingGeometryElement}!tesseract\_urdf::CollisionStatusCategory@{tesseract\_urdf::CollisionStatusCategory}}\index{tesseract\_urdf::CollisionStatusCategory@{tesseract\_urdf::CollisionStatusCategory}!ErrorMissingGeometryElement@{ErrorMissingGeometryElement}}}\mbox{\Hypertarget{classtesseract__urdf_1_1CollisionStatusCategory_a83b3ba64a939091de7142ea1cacdc628a7c21492916fb27a95e21442020eaa37a}\label{classtesseract__urdf_1_1CollisionStatusCategory_a83b3ba64a939091de7142ea1cacdc628a7c21492916fb27a95e21442020eaa37a}} 
+Error\+Missing\+Geometry\+Element&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ErrorParsingGeometryElement@{ErrorParsingGeometryElement}!tesseract\_urdf::CollisionStatusCategory@{tesseract\_urdf::CollisionStatusCategory}}\index{tesseract\_urdf::CollisionStatusCategory@{tesseract\_urdf::CollisionStatusCategory}!ErrorParsingGeometryElement@{ErrorParsingGeometryElement}}}\mbox{\Hypertarget{classtesseract__urdf_1_1CollisionStatusCategory_a83b3ba64a939091de7142ea1cacdc628a38e9cb0fb958ae4ef492e49fc2205084}\label{classtesseract__urdf_1_1CollisionStatusCategory_a83b3ba64a939091de7142ea1cacdc628a38e9cb0fb958ae4ef492e49fc2205084}} 
+Error\+Parsing\+Geometry\+Element&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtesseract__urdf_1_1CollisionStatusCategory_a4fc3d5d90a01b8190fcc1aeb3d166284}\label{classtesseract__urdf_1_1CollisionStatusCategory_a4fc3d5d90a01b8190fcc1aeb3d166284}} 
+\index{tesseract\_urdf::CollisionStatusCategory@{tesseract\_urdf::CollisionStatusCategory}!CollisionStatusCategory@{CollisionStatusCategory}}
+\index{CollisionStatusCategory@{CollisionStatusCategory}!tesseract\_urdf::CollisionStatusCategory@{tesseract\_urdf::CollisionStatusCategory}}
+\doxysubsubsection{\texorpdfstring{CollisionStatusCategory()}{CollisionStatusCategory()}}
+{\footnotesize\ttfamily tesseract\+\_\+urdf\+::\+Collision\+Status\+Category\+::\+Collision\+Status\+Category (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtesseract__urdf_1_1CollisionStatusCategory_acfc092ae8bb0a82d66c5c969af4a1228}\label{classtesseract__urdf_1_1CollisionStatusCategory_acfc092ae8bb0a82d66c5c969af4a1228}} 
+\index{tesseract\_urdf::CollisionStatusCategory@{tesseract\_urdf::CollisionStatusCategory}!message@{message}}
+\index{message@{message}!tesseract\_urdf::CollisionStatusCategory@{tesseract\_urdf::CollisionStatusCategory}}
+\doxysubsubsection{\texorpdfstring{message()}{message()}}
+{\footnotesize\ttfamily std\+::string tesseract\+\_\+urdf\+::\+Collision\+Status\+Category\+::message (\begin{DoxyParamCaption}\item[{int}]{code }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classtesseract__common_1_1StatusCategory_a1b243ec0e046910ceac90403190b45ac}{tesseract\+\_\+common\+::\+Status\+Category}}.
+
+\mbox{\Hypertarget{classtesseract__urdf_1_1CollisionStatusCategory_ab4301487373895e8277c41e8e235f23f}\label{classtesseract__urdf_1_1CollisionStatusCategory_ab4301487373895e8277c41e8e235f23f}} 
+\index{tesseract\_urdf::CollisionStatusCategory@{tesseract\_urdf::CollisionStatusCategory}!name@{name}}
+\index{name@{name}!tesseract\_urdf::CollisionStatusCategory@{tesseract\_urdf::CollisionStatusCategory}}
+\doxysubsubsection{\texorpdfstring{name()}{name()}}
+{\footnotesize\ttfamily const std\+::string\& tesseract\+\_\+urdf\+::\+Collision\+Status\+Category\+::name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}, {\ttfamily [noexcept]}}
+
+
+
+Implements \mbox{\hyperlink{classtesseract__common_1_1StatusCategory_ae08466c99a1e92f904141e5a070382e5}{tesseract\+\_\+common\+::\+Status\+Category}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classtesseract__urdf_1_1CollisionStatusCategory_a46e09466c29c8c4d53c6f65d4a20271b}\label{classtesseract__urdf_1_1CollisionStatusCategory_a46e09466c29c8c4d53c6f65d4a20271b}} 
+\index{tesseract\_urdf::CollisionStatusCategory@{tesseract\_urdf::CollisionStatusCategory}!name\_@{name\_}}
+\index{name\_@{name\_}!tesseract\_urdf::CollisionStatusCategory@{tesseract\_urdf::CollisionStatusCategory}}
+\doxysubsubsection{\texorpdfstring{name\_}{name\_}}
+{\footnotesize\ttfamily std\+::string tesseract\+\_\+urdf\+::\+Collision\+Status\+Category\+::name\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+tesseract/tesseract\+\_\+urdf/include/tesseract\+\_\+urdf/\mbox{\hyperlink{collision_8h}{collision.\+h}}\end{DoxyCompactItemize}

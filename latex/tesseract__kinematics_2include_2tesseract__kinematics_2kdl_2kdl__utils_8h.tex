@@ -1,0 +1,75 @@
+\hypertarget{tesseract__kinematics_2include_2tesseract__kinematics_2kdl_2kdl__utils_8h}{}\doxysection{tesseract/tesseract\+\_\+kinematics/include/tesseract\+\_\+kinematics/kdl/kdl\+\_\+utils.h File Reference}
+\label{tesseract__kinematics_2include_2tesseract__kinematics_2kdl_2kdl__utils_8h}\index{tesseract/tesseract\_kinematics/include/tesseract\_kinematics/kdl/kdl\_utils.h@{tesseract/tesseract\_kinematics/include/tesseract\_kinematics/kdl/kdl\_utils.h}}
+
+
+Tesseract K\+DL utility functions.  
+
+
+{\ttfamily \#include $<$tesseract\+\_\+common/macros.\+h$>$}\newline
+{\ttfamily \#include $<$kdl/frames.\+hpp$>$}\newline
+{\ttfamily \#include $<$kdl/jntarray.\+hpp$>$}\newline
+{\ttfamily \#include $<$Eigen/\+Eigen$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+common/types.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+scene\+\_\+graph/graph.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+scene\+\_\+graph/parser/kdl\+\_\+parser.\+h$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structtesseract__kinematics_1_1KDLChainData}{tesseract\+\_\+kinematics\+::\+K\+D\+L\+Chain\+Data}}
+\begin{DoxyCompactList}\small\item\em The \mbox{\hyperlink{structtesseract__kinematics_1_1KDLChainData}{K\+D\+L\+Chain\+Data}} struct. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacetesseract__kinematics}{tesseract\+\_\+kinematics}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{namespacetesseract__kinematics_a31f7f29dd370fc43ca385827cdc44947}{tesseract\+\_\+kinematics\+::\+K\+D\+L\+To\+Eigen}} (const K\+D\+L\+::\+Frame \&frame, Eigen\+::\+Isometry3d \&transform)
+\begin{DoxyCompactList}\small\item\em Convert K\+D\+L\+::\+Frame to Eigen\+::\+Isometry3d. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespacetesseract__kinematics_a402234335697b67232a9957b16054ec4}{tesseract\+\_\+kinematics\+::\+K\+D\+L\+To\+Eigen}} (const std\+::vector$<$ K\+D\+L\+::\+Frame $>$ \&frames, \mbox{\hyperlink{namespacetesseract__common_a94d9921fc7ed323609ac57d06f939cb6}{tesseract\+\_\+common\+::\+Vector\+Isometry3d}} \&transforms)
+\begin{DoxyCompactList}\small\item\em Convert vector of K\+D\+L\+::\+Frame to vector Eigen\+::\+Isometry3d. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespacetesseract__kinematics_a3f809ae73e283a469271cb69460079e3}{tesseract\+\_\+kinematics\+::\+Eigen\+To\+K\+DL}} (const Eigen\+::\+Isometry3d \&transform, K\+D\+L\+::\+Frame \&frame)
+\begin{DoxyCompactList}\small\item\em Convert Eigen\+::\+Isometry3d to K\+D\+L\+::\+Frame. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespacetesseract__kinematics_afe07309f1c4d122c337ed9fdc5c92280}{tesseract\+\_\+kinematics\+::\+K\+D\+L\+To\+Eigen}} (const K\+D\+L\+::\+Jacobian \&jacobian, Eigen\+::\+Ref$<$ Eigen\+::\+Matrix\+Xd $>$ matrix)
+\begin{DoxyCompactList}\small\item\em Convert K\+D\+L\+::\+Jacobian to Eigen\+::\+Matrix. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespacetesseract__kinematics_ab343312c8807fe55149efc686a18496d}{tesseract\+\_\+kinematics\+::\+K\+D\+L\+To\+Eigen}} (const K\+D\+L\+::\+Jacobian \&jacobian, const std\+::vector$<$ int $>$ \&q\+\_\+nrs, Eigen\+::\+Ref$<$ Eigen\+::\+Matrix\+Xd $>$ matrix)
+\begin{DoxyCompactList}\small\item\em Convert a subset of K\+D\+L\+::\+Jacobian to Eigen\+::\+Matrix. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespacetesseract__kinematics_aff79a8e38a3d87ca0fd981ef87eac794}{tesseract\+\_\+kinematics\+::\+Eigen\+To\+K\+DL}} (const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector\+Xd $>$ \&vec, K\+D\+L\+::\+Jnt\+Array \&joints)
+\begin{DoxyCompactList}\small\item\em Convert Eigen\+::\+Vector to K\+D\+L\+::\+Jnt\+Array. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespacetesseract__kinematics_acc243b4eaa4f3dc348e7d41b10608a43}{tesseract\+\_\+kinematics\+::\+K\+D\+L\+To\+Eigen}} (const K\+D\+L\+::\+Jnt\+Array \&joints, Eigen\+::\+Ref$<$ Eigen\+::\+Vector\+Xd $>$ vec)
+\begin{DoxyCompactList}\small\item\em Convert K\+D\+L\+::\+Jnt\+Array to Eigen\+::\+Vector. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespacetesseract__kinematics_a870155d00a26ef465e6abf598ca5bdb7}{tesseract\+\_\+kinematics\+::parse\+Scene\+Graph}} (K\+D\+L\+Chain\+Data \&results, const \mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph}{tesseract\+\_\+scene\+\_\+graph\+::\+Scene\+Graph}} \&scene\+\_\+graph, const std\+::vector$<$ std\+::pair$<$ std\+::string, std\+::string $>$$>$ \&chains)
+\begin{DoxyCompactList}\small\item\em Parse K\+DL chain data from the scene graph. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespacetesseract__kinematics_a2155d49cf12de450b17aa74b4333755c}{tesseract\+\_\+kinematics\+::parse\+Scene\+Graph}} (K\+D\+L\+Chain\+Data \&results, const \mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph}{tesseract\+\_\+scene\+\_\+graph\+::\+Scene\+Graph}} \&scene\+\_\+graph, const std\+::string \&base\+\_\+name, const std\+::string \&tip\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Parse K\+DL chain data from the scene graph. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Tesseract K\+DL utility functions. 
+
+\begin{DoxyAuthor}{Author}
+Levi Armstrong 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+May 27, 2018 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+T\+O\+DO 
+\end{DoxyVersion}
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000076}{Bug}}]No known bugs\end{DoxyRefDesc}
+
+
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2017, Southwest Research Institute
+\end{DoxyCopyright}
+\begin{DoxyParagraph}{License}
+Software License Agreement (Apache License) 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+Licensed under the Apache License, Version 2.\+0 (the \char`\"{}\+License\char`\"{}); you may not use this file except in compliance with the License. You may obtain a copy of the License at \href{http://www.apache.org/licenses/LICENSE-2.0}{\texttt{ http\+://www.\+apache.\+org/licenses/\+L\+I\+C\+E\+N\+S\+E-\/2.\+0}} 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \char`\"{}\+A\+S I\+S\char`\"{} B\+A\+S\+IS, W\+I\+T\+H\+O\+UT W\+A\+R\+R\+A\+N\+T\+I\+ES OR C\+O\+N\+D\+I\+T\+I\+O\+NS OF A\+NY K\+I\+ND, either express or implied. See the License for the specific language governing permissions and limitations under the License. 
+\end{DoxyParagraph}

@@ -1,0 +1,105 @@
+\hypertarget{classtesseract__motion__planners_1_1CompoundStateValidator}{}\doxysection{tesseract\+\_\+motion\+\_\+planners\+::Compound\+State\+Validator Class Reference}
+\label{classtesseract__motion__planners_1_1CompoundStateValidator}\index{tesseract\_motion\_planners::CompoundStateValidator@{tesseract\_motion\_planners::CompoundStateValidator}}
+
+
+Create a single state validity checker from multiple.  
+
+
+
+
+{\ttfamily \#include $<$compound\+\_\+state\+\_\+validator.\+h$>$}
+
+Inheritance diagram for tesseract\+\_\+motion\+\_\+planners\+::Compound\+State\+Validator\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classtesseract__motion__planners_1_1CompoundStateValidator}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtesseract__motion__planners_1_1CompoundStateValidator_ae51c91dd21cd5dc59e4776fd5695128b}{Compound\+State\+Validator}} ()
+\item 
+\mbox{\hyperlink{classtesseract__motion__planners_1_1CompoundStateValidator_ac2551952209204d94cad8f7892e7aeaa}{Compound\+State\+Validator}} (ompl\+::base\+::\+State\+Validity\+Checker\+Ptr validator)
+\item 
+\mbox{\hyperlink{classtesseract__motion__planners_1_1CompoundStateValidator_acf5811bf1caf12598cf20e4aacf4978a}{Compound\+State\+Validator}} (ompl\+::base\+::\+State\+Validity\+Checker\+Fn validator)
+\item 
+bool \mbox{\hyperlink{classtesseract__motion__planners_1_1CompoundStateValidator_a49ea89f0e818993606b829fc102eda3c}{is\+Valid}} (const ompl\+::base\+::\+State $\ast$state) const override
+\item 
+void \mbox{\hyperlink{classtesseract__motion__planners_1_1CompoundStateValidator_a541d3ecf850aef022a1407390acdecf5}{add\+State\+Validator}} (ompl\+::base\+::\+State\+Validity\+Checker\+Ptr validator)
+\item 
+void \mbox{\hyperlink{classtesseract__motion__planners_1_1CompoundStateValidator_a9df5923da20395f4355b7e9d2ddc21b4}{add\+State\+Validator}} (ompl\+::base\+::\+State\+Validity\+Checker\+Fn validator)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ ompl\+::base\+::\+State\+Validity\+Checker\+Ptr $>$ \mbox{\hyperlink{classtesseract__motion__planners_1_1CompoundStateValidator_aa08f6571ef7953f9404a5c38cb4c779b}{cache\+\_\+}}
+\item 
+std\+::vector$<$ ompl\+::base\+::\+State\+Validity\+Checker\+Fn $>$ \mbox{\hyperlink{classtesseract__motion__planners_1_1CompoundStateValidator_ae9a28c7f2dae4216d94aa6a5070ea7d0}{validators\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Create a single state validity checker from multiple. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtesseract__motion__planners_1_1CompoundStateValidator_ae51c91dd21cd5dc59e4776fd5695128b}\label{classtesseract__motion__planners_1_1CompoundStateValidator_ae51c91dd21cd5dc59e4776fd5695128b}} 
+\index{tesseract\_motion\_planners::CompoundStateValidator@{tesseract\_motion\_planners::CompoundStateValidator}!CompoundStateValidator@{CompoundStateValidator}}
+\index{CompoundStateValidator@{CompoundStateValidator}!tesseract\_motion\_planners::CompoundStateValidator@{tesseract\_motion\_planners::CompoundStateValidator}}
+\doxysubsubsection{\texorpdfstring{CompoundStateValidator()}{CompoundStateValidator()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily tesseract\+\_\+motion\+\_\+planners\+::\+Compound\+State\+Validator\+::\+Compound\+State\+Validator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classtesseract__motion__planners_1_1CompoundStateValidator_ac2551952209204d94cad8f7892e7aeaa}\label{classtesseract__motion__planners_1_1CompoundStateValidator_ac2551952209204d94cad8f7892e7aeaa}} 
+\index{tesseract\_motion\_planners::CompoundStateValidator@{tesseract\_motion\_planners::CompoundStateValidator}!CompoundStateValidator@{CompoundStateValidator}}
+\index{CompoundStateValidator@{CompoundStateValidator}!tesseract\_motion\_planners::CompoundStateValidator@{tesseract\_motion\_planners::CompoundStateValidator}}
+\doxysubsubsection{\texorpdfstring{CompoundStateValidator()}{CompoundStateValidator()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily tesseract\+\_\+motion\+\_\+planners\+::\+Compound\+State\+Validator\+::\+Compound\+State\+Validator (\begin{DoxyParamCaption}\item[{ompl\+::base\+::\+State\+Validity\+Checker\+Ptr}]{validator }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classtesseract__motion__planners_1_1CompoundStateValidator_acf5811bf1caf12598cf20e4aacf4978a}\label{classtesseract__motion__planners_1_1CompoundStateValidator_acf5811bf1caf12598cf20e4aacf4978a}} 
+\index{tesseract\_motion\_planners::CompoundStateValidator@{tesseract\_motion\_planners::CompoundStateValidator}!CompoundStateValidator@{CompoundStateValidator}}
+\index{CompoundStateValidator@{CompoundStateValidator}!tesseract\_motion\_planners::CompoundStateValidator@{tesseract\_motion\_planners::CompoundStateValidator}}
+\doxysubsubsection{\texorpdfstring{CompoundStateValidator()}{CompoundStateValidator()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily tesseract\+\_\+motion\+\_\+planners\+::\+Compound\+State\+Validator\+::\+Compound\+State\+Validator (\begin{DoxyParamCaption}\item[{ompl\+::base\+::\+State\+Validity\+Checker\+Fn}]{validator }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtesseract__motion__planners_1_1CompoundStateValidator_a9df5923da20395f4355b7e9d2ddc21b4}\label{classtesseract__motion__planners_1_1CompoundStateValidator_a9df5923da20395f4355b7e9d2ddc21b4}} 
+\index{tesseract\_motion\_planners::CompoundStateValidator@{tesseract\_motion\_planners::CompoundStateValidator}!addStateValidator@{addStateValidator}}
+\index{addStateValidator@{addStateValidator}!tesseract\_motion\_planners::CompoundStateValidator@{tesseract\_motion\_planners::CompoundStateValidator}}
+\doxysubsubsection{\texorpdfstring{addStateValidator()}{addStateValidator()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void tesseract\+\_\+motion\+\_\+planners\+::\+Compound\+State\+Validator\+::add\+State\+Validator (\begin{DoxyParamCaption}\item[{ompl\+::base\+::\+State\+Validity\+Checker\+Fn}]{validator }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classtesseract__motion__planners_1_1CompoundStateValidator_a541d3ecf850aef022a1407390acdecf5}\label{classtesseract__motion__planners_1_1CompoundStateValidator_a541d3ecf850aef022a1407390acdecf5}} 
+\index{tesseract\_motion\_planners::CompoundStateValidator@{tesseract\_motion\_planners::CompoundStateValidator}!addStateValidator@{addStateValidator}}
+\index{addStateValidator@{addStateValidator}!tesseract\_motion\_planners::CompoundStateValidator@{tesseract\_motion\_planners::CompoundStateValidator}}
+\doxysubsubsection{\texorpdfstring{addStateValidator()}{addStateValidator()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void tesseract\+\_\+motion\+\_\+planners\+::\+Compound\+State\+Validator\+::add\+State\+Validator (\begin{DoxyParamCaption}\item[{ompl\+::base\+::\+State\+Validity\+Checker\+Ptr}]{validator }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classtesseract__motion__planners_1_1CompoundStateValidator_a49ea89f0e818993606b829fc102eda3c}\label{classtesseract__motion__planners_1_1CompoundStateValidator_a49ea89f0e818993606b829fc102eda3c}} 
+\index{tesseract\_motion\_planners::CompoundStateValidator@{tesseract\_motion\_planners::CompoundStateValidator}!isValid@{isValid}}
+\index{isValid@{isValid}!tesseract\_motion\_planners::CompoundStateValidator@{tesseract\_motion\_planners::CompoundStateValidator}}
+\doxysubsubsection{\texorpdfstring{isValid()}{isValid()}}
+{\footnotesize\ttfamily bool tesseract\+\_\+motion\+\_\+planners\+::\+Compound\+State\+Validator\+::is\+Valid (\begin{DoxyParamCaption}\item[{const ompl\+::base\+::\+State $\ast$}]{state }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classtesseract__motion__planners_1_1CompoundStateValidator_aa08f6571ef7953f9404a5c38cb4c779b}\label{classtesseract__motion__planners_1_1CompoundStateValidator_aa08f6571ef7953f9404a5c38cb4c779b}} 
+\index{tesseract\_motion\_planners::CompoundStateValidator@{tesseract\_motion\_planners::CompoundStateValidator}!cache\_@{cache\_}}
+\index{cache\_@{cache\_}!tesseract\_motion\_planners::CompoundStateValidator@{tesseract\_motion\_planners::CompoundStateValidator}}
+\doxysubsubsection{\texorpdfstring{cache\_}{cache\_}}
+{\footnotesize\ttfamily std\+::vector$<$ompl\+::base\+::\+State\+Validity\+Checker\+Ptr$>$ tesseract\+\_\+motion\+\_\+planners\+::\+Compound\+State\+Validator\+::cache\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classtesseract__motion__planners_1_1CompoundStateValidator_ae9a28c7f2dae4216d94aa6a5070ea7d0}\label{classtesseract__motion__planners_1_1CompoundStateValidator_ae9a28c7f2dae4216d94aa6a5070ea7d0}} 
+\index{tesseract\_motion\_planners::CompoundStateValidator@{tesseract\_motion\_planners::CompoundStateValidator}!validators\_@{validators\_}}
+\index{validators\_@{validators\_}!tesseract\_motion\_planners::CompoundStateValidator@{tesseract\_motion\_planners::CompoundStateValidator}}
+\doxysubsubsection{\texorpdfstring{validators\_}{validators\_}}
+{\footnotesize\ttfamily std\+::vector$<$ompl\+::base\+::\+State\+Validity\+Checker\+Fn$>$ tesseract\+\_\+motion\+\_\+planners\+::\+Compound\+State\+Validator\+::validators\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+tesseract/tesseract\+\_\+planning/tesseract\+\_\+motion\+\_\+planners/include/tesseract\+\_\+motion\+\_\+planners/ompl/\mbox{\hyperlink{compound__state__validator_8h}{compound\+\_\+state\+\_\+validator.\+h}}\item 
+tesseract/tesseract\+\_\+planning/tesseract\+\_\+motion\+\_\+planners/src/ompl/\mbox{\hyperlink{compound__state__validator_8cpp}{compound\+\_\+state\+\_\+validator.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,165 @@
+\hypertarget{classtesseract__process__planners_1_1ProcessPlanner}{}\doxysection{tesseract\+\_\+process\+\_\+planners\+::Process\+Planner Class Reference}
+\label{classtesseract__process__planners_1_1ProcessPlanner}\index{tesseract\_process\_planners::ProcessPlanner@{tesseract\_process\_planners::ProcessPlanner}}
+
+
+An abstract class for implementing process planners.  
+
+
+
+
+{\ttfamily \#include $<$process\+\_\+planner.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classtesseract__process__planners_1_1ProcessPlanner_ae16a23718693ddc31cbfabec6167a0ab}{Ptr}} = std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classtesseract__process__planners_1_1ProcessPlanner}{Process\+Planner}} $>$
+\item 
+using \mbox{\hyperlink{classtesseract__process__planners_1_1ProcessPlanner_aa26be59c2e2000d23a0bb4b35c1b4a05}{Const\+Ptr}} = std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{classtesseract__process__planners_1_1ProcessPlanner}{Process\+Planner}} $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtesseract__process__planners_1_1ProcessPlanner_a9380e3ff5817e8ea5278351e99e47648}{Process\+Planner}} ()=default
+\item 
+virtual \mbox{\hyperlink{classtesseract__process__planners_1_1ProcessPlanner_a1aba755e12aaf9b882fb08e8ebf0dd07}{$\sim$\+Process\+Planner}} ()=default
+\item 
+\mbox{\hyperlink{classtesseract__process__planners_1_1ProcessPlanner_aab01645bd7fa1c1d2374e7160e068e2e}{Process\+Planner}} (const \mbox{\hyperlink{classtesseract__process__planners_1_1ProcessPlanner}{Process\+Planner}} \&)=default
+\item 
+\mbox{\hyperlink{classtesseract__process__planners_1_1ProcessPlanner}{Process\+Planner}} \& \mbox{\hyperlink{classtesseract__process__planners_1_1ProcessPlanner_a327b743d337fc5dd93ab14e42932376e}{operator=}} (const \mbox{\hyperlink{classtesseract__process__planners_1_1ProcessPlanner}{Process\+Planner}} \&)=default
+\item 
+\mbox{\hyperlink{classtesseract__process__planners_1_1ProcessPlanner_a79e1da7de580f4417b2c74974d96e04f}{Process\+Planner}} (\mbox{\hyperlink{classtesseract__process__planners_1_1ProcessPlanner}{Process\+Planner}} \&\&)=default
+\item 
+\mbox{\hyperlink{classtesseract__process__planners_1_1ProcessPlanner}{Process\+Planner}} \& \mbox{\hyperlink{classtesseract__process__planners_1_1ProcessPlanner_ada91c6a3b06fed8a755c2e44a6e7fc35}{operator=}} (\mbox{\hyperlink{classtesseract__process__planners_1_1ProcessPlanner}{Process\+Planner}} \&\&)=default
+\item 
+virtual void \mbox{\hyperlink{classtesseract__process__planners_1_1ProcessPlanner_aa10fd0d2b02425e0ad2c8f9be362bca2}{set\+Tool\+Path}} (const std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classtesseract__motion__planners_1_1Waypoint_a6a3eae473f2bb3bd94684561aae0bd3e}{tesseract\+\_\+motion\+\_\+planners\+::\+Waypoint\+::\+Ptr}} $>$$>$ \&tool\+\_\+path)=0
+\begin{DoxyCompactList}\small\item\em Given a tool path generate process specific plan. \end{DoxyCompactList}\item 
+virtual const \mbox{\hyperlink{structtesseract__process__planners_1_1ProcessDefinition}{Process\+Definition}} \& \mbox{\hyperlink{classtesseract__process__planners_1_1ProcessPlanner_acd642f0317cda9f3530ae629808a1ba1}{get\+Process\+Definition}} () const =0
+\begin{DoxyCompactList}\small\item\em Get process definintion for the set tool path. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{structtesseract__process__planners_1_1ProcessPlan}{Process\+Plan}} \mbox{\hyperlink{classtesseract__process__planners_1_1ProcessPlanner_ac91b37ff89b1757d125ce7952f3840f1}{plan}} ()=0
+\begin{DoxyCompactList}\small\item\em Generate process plan for set tool path. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{structtesseract__process__planners_1_1ProcessPlan}{Process\+Plan}} \mbox{\hyperlink{classtesseract__process__planners_1_1ProcessPlanner_a853a3ec1e3493b72fa36eb2279496f36}{plan}} (const Eigen\+::\+Vector\+Xd \&seed)=0
+\begin{DoxyCompactList}\small\item\em Generate process plan for set tool path using the provided seed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+An abstract class for implementing process planners. 
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classtesseract__process__planners_1_1ProcessPlanner_aa26be59c2e2000d23a0bb4b35c1b4a05}\label{classtesseract__process__planners_1_1ProcessPlanner_aa26be59c2e2000d23a0bb4b35c1b4a05}} 
+\index{tesseract\_process\_planners::ProcessPlanner@{tesseract\_process\_planners::ProcessPlanner}!ConstPtr@{ConstPtr}}
+\index{ConstPtr@{ConstPtr}!tesseract\_process\_planners::ProcessPlanner@{tesseract\_process\_planners::ProcessPlanner}}
+\doxysubsubsection{\texorpdfstring{ConstPtr}{ConstPtr}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classtesseract__process__planners_1_1ProcessPlanner_aa26be59c2e2000d23a0bb4b35c1b4a05}{tesseract\+\_\+process\+\_\+planners\+::\+Process\+Planner\+::\+Const\+Ptr}} =  std\+::shared\+\_\+ptr$<$const \mbox{\hyperlink{classtesseract__process__planners_1_1ProcessPlanner}{Process\+Planner}}$>$}
+
+\mbox{\Hypertarget{classtesseract__process__planners_1_1ProcessPlanner_ae16a23718693ddc31cbfabec6167a0ab}\label{classtesseract__process__planners_1_1ProcessPlanner_ae16a23718693ddc31cbfabec6167a0ab}} 
+\index{tesseract\_process\_planners::ProcessPlanner@{tesseract\_process\_planners::ProcessPlanner}!Ptr@{Ptr}}
+\index{Ptr@{Ptr}!tesseract\_process\_planners::ProcessPlanner@{tesseract\_process\_planners::ProcessPlanner}}
+\doxysubsubsection{\texorpdfstring{Ptr}{Ptr}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classtesseract__process__planners_1_1ProcessPlanner_ae16a23718693ddc31cbfabec6167a0ab}{tesseract\+\_\+process\+\_\+planners\+::\+Process\+Planner\+::\+Ptr}} =  std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classtesseract__process__planners_1_1ProcessPlanner}{Process\+Planner}}$>$}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtesseract__process__planners_1_1ProcessPlanner_a9380e3ff5817e8ea5278351e99e47648}\label{classtesseract__process__planners_1_1ProcessPlanner_a9380e3ff5817e8ea5278351e99e47648}} 
+\index{tesseract\_process\_planners::ProcessPlanner@{tesseract\_process\_planners::ProcessPlanner}!ProcessPlanner@{ProcessPlanner}}
+\index{ProcessPlanner@{ProcessPlanner}!tesseract\_process\_planners::ProcessPlanner@{tesseract\_process\_planners::ProcessPlanner}}
+\doxysubsubsection{\texorpdfstring{ProcessPlanner()}{ProcessPlanner()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily tesseract\+\_\+process\+\_\+planners\+::\+Process\+Planner\+::\+Process\+Planner (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classtesseract__process__planners_1_1ProcessPlanner_a1aba755e12aaf9b882fb08e8ebf0dd07}\label{classtesseract__process__planners_1_1ProcessPlanner_a1aba755e12aaf9b882fb08e8ebf0dd07}} 
+\index{tesseract\_process\_planners::ProcessPlanner@{tesseract\_process\_planners::ProcessPlanner}!````~ProcessPlanner@{$\sim$ProcessPlanner}}
+\index{````~ProcessPlanner@{$\sim$ProcessPlanner}!tesseract\_process\_planners::ProcessPlanner@{tesseract\_process\_planners::ProcessPlanner}}
+\doxysubsubsection{\texorpdfstring{$\sim$ProcessPlanner()}{~ProcessPlanner()}}
+{\footnotesize\ttfamily virtual tesseract\+\_\+process\+\_\+planners\+::\+Process\+Planner\+::$\sim$\+Process\+Planner (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+\mbox{\Hypertarget{classtesseract__process__planners_1_1ProcessPlanner_aab01645bd7fa1c1d2374e7160e068e2e}\label{classtesseract__process__planners_1_1ProcessPlanner_aab01645bd7fa1c1d2374e7160e068e2e}} 
+\index{tesseract\_process\_planners::ProcessPlanner@{tesseract\_process\_planners::ProcessPlanner}!ProcessPlanner@{ProcessPlanner}}
+\index{ProcessPlanner@{ProcessPlanner}!tesseract\_process\_planners::ProcessPlanner@{tesseract\_process\_planners::ProcessPlanner}}
+\doxysubsubsection{\texorpdfstring{ProcessPlanner()}{ProcessPlanner()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily tesseract\+\_\+process\+\_\+planners\+::\+Process\+Planner\+::\+Process\+Planner (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtesseract__process__planners_1_1ProcessPlanner}{Process\+Planner}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classtesseract__process__planners_1_1ProcessPlanner_a79e1da7de580f4417b2c74974d96e04f}\label{classtesseract__process__planners_1_1ProcessPlanner_a79e1da7de580f4417b2c74974d96e04f}} 
+\index{tesseract\_process\_planners::ProcessPlanner@{tesseract\_process\_planners::ProcessPlanner}!ProcessPlanner@{ProcessPlanner}}
+\index{ProcessPlanner@{ProcessPlanner}!tesseract\_process\_planners::ProcessPlanner@{tesseract\_process\_planners::ProcessPlanner}}
+\doxysubsubsection{\texorpdfstring{ProcessPlanner()}{ProcessPlanner()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily tesseract\+\_\+process\+\_\+planners\+::\+Process\+Planner\+::\+Process\+Planner (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtesseract__process__planners_1_1ProcessPlanner}{Process\+Planner}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtesseract__process__planners_1_1ProcessPlanner_acd642f0317cda9f3530ae629808a1ba1}\label{classtesseract__process__planners_1_1ProcessPlanner_acd642f0317cda9f3530ae629808a1ba1}} 
+\index{tesseract\_process\_planners::ProcessPlanner@{tesseract\_process\_planners::ProcessPlanner}!getProcessDefinition@{getProcessDefinition}}
+\index{getProcessDefinition@{getProcessDefinition}!tesseract\_process\_planners::ProcessPlanner@{tesseract\_process\_planners::ProcessPlanner}}
+\doxysubsubsection{\texorpdfstring{getProcessDefinition()}{getProcessDefinition()}}
+{\footnotesize\ttfamily virtual const \mbox{\hyperlink{structtesseract__process__planners_1_1ProcessDefinition}{Process\+Definition}}\& tesseract\+\_\+process\+\_\+planners\+::\+Process\+Planner\+::get\+Process\+Definition (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Get process definintion for the set tool path. 
+
+\begin{DoxyReturn}{Returns}
+Process definition 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtesseract__process__planners_1_1ProcessPlanner_a327b743d337fc5dd93ab14e42932376e}\label{classtesseract__process__planners_1_1ProcessPlanner_a327b743d337fc5dd93ab14e42932376e}} 
+\index{tesseract\_process\_planners::ProcessPlanner@{tesseract\_process\_planners::ProcessPlanner}!operator=@{operator=}}
+\index{operator=@{operator=}!tesseract\_process\_planners::ProcessPlanner@{tesseract\_process\_planners::ProcessPlanner}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__process__planners_1_1ProcessPlanner}{Process\+Planner}}\& tesseract\+\_\+process\+\_\+planners\+::\+Process\+Planner\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtesseract__process__planners_1_1ProcessPlanner}{Process\+Planner}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classtesseract__process__planners_1_1ProcessPlanner_ada91c6a3b06fed8a755c2e44a6e7fc35}\label{classtesseract__process__planners_1_1ProcessPlanner_ada91c6a3b06fed8a755c2e44a6e7fc35}} 
+\index{tesseract\_process\_planners::ProcessPlanner@{tesseract\_process\_planners::ProcessPlanner}!operator=@{operator=}}
+\index{operator=@{operator=}!tesseract\_process\_planners::ProcessPlanner@{tesseract\_process\_planners::ProcessPlanner}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__process__planners_1_1ProcessPlanner}{Process\+Planner}}\& tesseract\+\_\+process\+\_\+planners\+::\+Process\+Planner\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtesseract__process__planners_1_1ProcessPlanner}{Process\+Planner}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classtesseract__process__planners_1_1ProcessPlanner_ac91b37ff89b1757d125ce7952f3840f1}\label{classtesseract__process__planners_1_1ProcessPlanner_ac91b37ff89b1757d125ce7952f3840f1}} 
+\index{tesseract\_process\_planners::ProcessPlanner@{tesseract\_process\_planners::ProcessPlanner}!plan@{plan}}
+\index{plan@{plan}!tesseract\_process\_planners::ProcessPlanner@{tesseract\_process\_planners::ProcessPlanner}}
+\doxysubsubsection{\texorpdfstring{plan()}{plan()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{structtesseract__process__planners_1_1ProcessPlan}{Process\+Plan}} tesseract\+\_\+process\+\_\+planners\+::\+Process\+Planner\+::plan (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Generate process plan for set tool path. 
+
+\begin{DoxyReturn}{Returns}
+Process motion plan 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtesseract__process__planners_1_1ProcessPlanner_a853a3ec1e3493b72fa36eb2279496f36}\label{classtesseract__process__planners_1_1ProcessPlanner_a853a3ec1e3493b72fa36eb2279496f36}} 
+\index{tesseract\_process\_planners::ProcessPlanner@{tesseract\_process\_planners::ProcessPlanner}!plan@{plan}}
+\index{plan@{plan}!tesseract\_process\_planners::ProcessPlanner@{tesseract\_process\_planners::ProcessPlanner}}
+\doxysubsubsection{\texorpdfstring{plan()}{plan()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{structtesseract__process__planners_1_1ProcessPlan}{Process\+Plan}} tesseract\+\_\+process\+\_\+planners\+::\+Process\+Planner\+::plan (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Vector\+Xd \&}]{seed }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Generate process plan for set tool path using the provided seed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em seed} & The seed position for first tool path segment \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Process motion plan 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtesseract__process__planners_1_1ProcessPlanner_aa10fd0d2b02425e0ad2c8f9be362bca2}\label{classtesseract__process__planners_1_1ProcessPlanner_aa10fd0d2b02425e0ad2c8f9be362bca2}} 
+\index{tesseract\_process\_planners::ProcessPlanner@{tesseract\_process\_planners::ProcessPlanner}!setToolPath@{setToolPath}}
+\index{setToolPath@{setToolPath}!tesseract\_process\_planners::ProcessPlanner@{tesseract\_process\_planners::ProcessPlanner}}
+\doxysubsubsection{\texorpdfstring{setToolPath()}{setToolPath()}}
+{\footnotesize\ttfamily virtual void tesseract\+\_\+process\+\_\+planners\+::\+Process\+Planner\+::set\+Tool\+Path (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classtesseract__motion__planners_1_1Waypoint_a6a3eae473f2bb3bd94684561aae0bd3e}{tesseract\+\_\+motion\+\_\+planners\+::\+Waypoint\+::\+Ptr}} $>$$>$ \&}]{tool\+\_\+path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Given a tool path generate process specific plan. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tool\+\_\+path} & Process tool path \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+tesseract/tesseract\+\_\+planning/tesseract\+\_\+process\+\_\+planners/include/tesseract\+\_\+process\+\_\+planners/\mbox{\hyperlink{process__planner_8h}{process\+\_\+planner.\+h}}\end{DoxyCompactItemize}

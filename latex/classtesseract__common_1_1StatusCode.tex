@@ -1,0 +1,223 @@
+\hypertarget{classtesseract__common_1_1StatusCode}{}\doxysection{tesseract\+\_\+common\+::Status\+Code Class Reference}
+\label{classtesseract__common_1_1StatusCode}\index{tesseract\_common::StatusCode@{tesseract\_common::StatusCode}}
+
+
+{\ttfamily \#include $<$status\+\_\+code.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classtesseract__common_1_1StatusCode_a2b285106bd9f4963d1696b9696dbaf5f}{Ptr}} = std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classtesseract__common_1_1StatusCode}{Status\+Code}} $>$
+\item 
+using \mbox{\hyperlink{classtesseract__common_1_1StatusCode_a61254055f82822c470a7b8db39f85cf9}{Const\+Ptr}} = std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{classtesseract__common_1_1StatusCode}{Status\+Code}} $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtesseract__common_1_1StatusCode_a7ee4d1e51eafb3d981f1a4751c45a7c3}{Status\+Code}} (\mbox{\hyperlink{classtesseract__common_1_1StatusCode_a61254055f82822c470a7b8db39f85cf9}{Status\+Code\+::\+Const\+Ptr}} child=nullptr)
+\item 
+\mbox{\hyperlink{classtesseract__common_1_1StatusCode_ae5b4a2c3af547f1ae078cad4d2046036}{Status\+Code}} (int val, \mbox{\hyperlink{classtesseract__common_1_1StatusCategory_a78a59d8af48194ec283b74237025e992}{Status\+Category\+::\+Const\+Ptr}} cat, \mbox{\hyperlink{classtesseract__common_1_1StatusCode_a61254055f82822c470a7b8db39f85cf9}{Status\+Code\+::\+Const\+Ptr}} child=nullptr)
+\item 
+\mbox{\hyperlink{classtesseract__common_1_1StatusCode_a20e9886159a47f5837aee54e395a619e}{$\sim$\+Status\+Code}} ()=default
+\item 
+\mbox{\hyperlink{classtesseract__common_1_1StatusCode_af157185b35ae995f6aec286212203354}{Status\+Code}} (const \mbox{\hyperlink{classtesseract__common_1_1StatusCode}{Status\+Code}} \&)=default
+\item 
+\mbox{\hyperlink{classtesseract__common_1_1StatusCode}{Status\+Code}} \& \mbox{\hyperlink{classtesseract__common_1_1StatusCode_a2bfb865aff681eeb253239f41ca6bbe9}{operator=}} (const \mbox{\hyperlink{classtesseract__common_1_1StatusCode}{Status\+Code}} \&)=default
+\item 
+\mbox{\hyperlink{classtesseract__common_1_1StatusCode_ab8d12b985ee9b11afc11ec53e142aefa}{Status\+Code}} (\mbox{\hyperlink{classtesseract__common_1_1StatusCode}{Status\+Code}} \&\&)=default
+\item 
+\mbox{\hyperlink{classtesseract__common_1_1StatusCode}{Status\+Code}} \& \mbox{\hyperlink{classtesseract__common_1_1StatusCode_afd814a732f56fe45f0c0b335f8ee5e81}{operator=}} (\mbox{\hyperlink{classtesseract__common_1_1StatusCode}{Status\+Code}} \&\&)=default
+\item 
+int \mbox{\hyperlink{classtesseract__common_1_1StatusCode_ae02dbb736881bbc025ed45e85e9c429b}{value}} () const noexcept
+\item 
+const \mbox{\hyperlink{classtesseract__common_1_1StatusCategory_a78a59d8af48194ec283b74237025e992}{Status\+Category\+::\+Const\+Ptr}} \& \mbox{\hyperlink{classtesseract__common_1_1StatusCode_ad9f6a748ce567819d226569ffdaa1073}{category}} () const noexcept
+\item 
+std\+::string \mbox{\hyperlink{classtesseract__common_1_1StatusCode_abeafec55717a0aa564c83b44ba903b5d}{message}} () const
+\item 
+void \mbox{\hyperlink{classtesseract__common_1_1StatusCode_a1f5ac671c45151c992abc225b90bae0f}{set\+Child}} (\mbox{\hyperlink{classtesseract__common_1_1StatusCode_a61254055f82822c470a7b8db39f85cf9}{Status\+Code\+::\+Const\+Ptr}} child)
+\begin{DoxyCompactList}\small\item\em Set the child status code. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classtesseract__common_1_1StatusCode_a61254055f82822c470a7b8db39f85cf9}{Status\+Code\+::\+Const\+Ptr}} \& \mbox{\hyperlink{classtesseract__common_1_1StatusCode_a4121208e1ccb5be13378d3c3dbc1cadd}{get\+Child}} () const
+\begin{DoxyCompactList}\small\item\em Get the child status code if it exist. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classtesseract__common_1_1StatusCode_a73a98aa36d3aa1c2982153e289a8458e}{operator bool}} () const noexcept
+\begin{DoxyCompactList}\small\item\em This return true if status value is greater or equal to zero which is not in an error state. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classtesseract__common_1_1StatusCode_ae40302bb7991937bd8c5b60bff9966c7}{operator==}} (const \mbox{\hyperlink{classtesseract__common_1_1StatusCode}{Status\+Code}} \&rhs) noexcept
+\item 
+bool \mbox{\hyperlink{classtesseract__common_1_1StatusCode_a8d051111463e408ac95d021c7eb72c2f}{operator!=}} (const \mbox{\hyperlink{classtesseract__common_1_1StatusCode}{Status\+Code}} \&rhs) noexcept
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classtesseract__common_1_1StatusCode_a3e0c1223fdea221504d53fb69bc40dcc}{message\+Indent}} (const std\+::string \&previous\+\_\+indent) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classtesseract__common_1_1StatusCode_adbd03f1d51d72b9676ecb740ca0f21ff}{val\+\_\+}} \{ 0 \}
+\item 
+\mbox{\hyperlink{classtesseract__common_1_1StatusCategory_a78a59d8af48194ec283b74237025e992}{Status\+Category\+::\+Const\+Ptr}} \mbox{\hyperlink{classtesseract__common_1_1StatusCode_a653a23c29e1d70c5e961a9ea42091834}{cat\+\_\+}}
+\item 
+\mbox{\hyperlink{classtesseract__common_1_1StatusCode_a61254055f82822c470a7b8db39f85cf9}{Status\+Code\+::\+Const\+Ptr}} \mbox{\hyperlink{classtesseract__common_1_1StatusCode_a93d43782540c7a9e7ad0458072aef753}{child\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classtesseract__common_1_1StatusCode_a61254055f82822c470a7b8db39f85cf9}\label{classtesseract__common_1_1StatusCode_a61254055f82822c470a7b8db39f85cf9}} 
+\index{tesseract\_common::StatusCode@{tesseract\_common::StatusCode}!ConstPtr@{ConstPtr}}
+\index{ConstPtr@{ConstPtr}!tesseract\_common::StatusCode@{tesseract\_common::StatusCode}}
+\doxysubsubsection{\texorpdfstring{ConstPtr}{ConstPtr}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classtesseract__common_1_1StatusCode_a61254055f82822c470a7b8db39f85cf9}{tesseract\+\_\+common\+::\+Status\+Code\+::\+Const\+Ptr}} =  std\+::shared\+\_\+ptr$<$const \mbox{\hyperlink{classtesseract__common_1_1StatusCode}{Status\+Code}}$>$}
+
+\mbox{\Hypertarget{classtesseract__common_1_1StatusCode_a2b285106bd9f4963d1696b9696dbaf5f}\label{classtesseract__common_1_1StatusCode_a2b285106bd9f4963d1696b9696dbaf5f}} 
+\index{tesseract\_common::StatusCode@{tesseract\_common::StatusCode}!Ptr@{Ptr}}
+\index{Ptr@{Ptr}!tesseract\_common::StatusCode@{tesseract\_common::StatusCode}}
+\doxysubsubsection{\texorpdfstring{Ptr}{Ptr}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classtesseract__common_1_1StatusCode_a2b285106bd9f4963d1696b9696dbaf5f}{tesseract\+\_\+common\+::\+Status\+Code\+::\+Ptr}} =  std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classtesseract__common_1_1StatusCode}{Status\+Code}}$>$}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtesseract__common_1_1StatusCode_a7ee4d1e51eafb3d981f1a4751c45a7c3}\label{classtesseract__common_1_1StatusCode_a7ee4d1e51eafb3d981f1a4751c45a7c3}} 
+\index{tesseract\_common::StatusCode@{tesseract\_common::StatusCode}!StatusCode@{StatusCode}}
+\index{StatusCode@{StatusCode}!tesseract\_common::StatusCode@{tesseract\_common::StatusCode}}
+\doxysubsubsection{\texorpdfstring{StatusCode()}{StatusCode()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily tesseract\+\_\+common\+::\+Status\+Code\+::\+Status\+Code (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtesseract__common_1_1StatusCode_a61254055f82822c470a7b8db39f85cf9}{Status\+Code\+::\+Const\+Ptr}}}]{child = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classtesseract__common_1_1StatusCode_ae5b4a2c3af547f1ae078cad4d2046036}\label{classtesseract__common_1_1StatusCode_ae5b4a2c3af547f1ae078cad4d2046036}} 
+\index{tesseract\_common::StatusCode@{tesseract\_common::StatusCode}!StatusCode@{StatusCode}}
+\index{StatusCode@{StatusCode}!tesseract\_common::StatusCode@{tesseract\_common::StatusCode}}
+\doxysubsubsection{\texorpdfstring{StatusCode()}{StatusCode()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily tesseract\+\_\+common\+::\+Status\+Code\+::\+Status\+Code (\begin{DoxyParamCaption}\item[{int}]{val,  }\item[{\mbox{\hyperlink{classtesseract__common_1_1StatusCategory_a78a59d8af48194ec283b74237025e992}{Status\+Category\+::\+Const\+Ptr}}}]{cat,  }\item[{\mbox{\hyperlink{classtesseract__common_1_1StatusCode_a61254055f82822c470a7b8db39f85cf9}{Status\+Code\+::\+Const\+Ptr}}}]{child = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classtesseract__common_1_1StatusCode_a20e9886159a47f5837aee54e395a619e}\label{classtesseract__common_1_1StatusCode_a20e9886159a47f5837aee54e395a619e}} 
+\index{tesseract\_common::StatusCode@{tesseract\_common::StatusCode}!````~StatusCode@{$\sim$StatusCode}}
+\index{````~StatusCode@{$\sim$StatusCode}!tesseract\_common::StatusCode@{tesseract\_common::StatusCode}}
+\doxysubsubsection{\texorpdfstring{$\sim$StatusCode()}{~StatusCode()}}
+{\footnotesize\ttfamily tesseract\+\_\+common\+::\+Status\+Code\+::$\sim$\+Status\+Code (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classtesseract__common_1_1StatusCode_af157185b35ae995f6aec286212203354}\label{classtesseract__common_1_1StatusCode_af157185b35ae995f6aec286212203354}} 
+\index{tesseract\_common::StatusCode@{tesseract\_common::StatusCode}!StatusCode@{StatusCode}}
+\index{StatusCode@{StatusCode}!tesseract\_common::StatusCode@{tesseract\_common::StatusCode}}
+\doxysubsubsection{\texorpdfstring{StatusCode()}{StatusCode()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily tesseract\+\_\+common\+::\+Status\+Code\+::\+Status\+Code (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtesseract__common_1_1StatusCode}{Status\+Code}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classtesseract__common_1_1StatusCode_ab8d12b985ee9b11afc11ec53e142aefa}\label{classtesseract__common_1_1StatusCode_ab8d12b985ee9b11afc11ec53e142aefa}} 
+\index{tesseract\_common::StatusCode@{tesseract\_common::StatusCode}!StatusCode@{StatusCode}}
+\index{StatusCode@{StatusCode}!tesseract\_common::StatusCode@{tesseract\_common::StatusCode}}
+\doxysubsubsection{\texorpdfstring{StatusCode()}{StatusCode()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily tesseract\+\_\+common\+::\+Status\+Code\+::\+Status\+Code (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtesseract__common_1_1StatusCode}{Status\+Code}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtesseract__common_1_1StatusCode_ad9f6a748ce567819d226569ffdaa1073}\label{classtesseract__common_1_1StatusCode_ad9f6a748ce567819d226569ffdaa1073}} 
+\index{tesseract\_common::StatusCode@{tesseract\_common::StatusCode}!category@{category}}
+\index{category@{category}!tesseract\_common::StatusCode@{tesseract\_common::StatusCode}}
+\doxysubsubsection{\texorpdfstring{category()}{category()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classtesseract__common_1_1StatusCategory_a78a59d8af48194ec283b74237025e992}{Status\+Category\+::\+Const\+Ptr}}\& tesseract\+\_\+common\+::\+Status\+Code\+::category (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classtesseract__common_1_1StatusCode_a4121208e1ccb5be13378d3c3dbc1cadd}\label{classtesseract__common_1_1StatusCode_a4121208e1ccb5be13378d3c3dbc1cadd}} 
+\index{tesseract\_common::StatusCode@{tesseract\_common::StatusCode}!getChild@{getChild}}
+\index{getChild@{getChild}!tesseract\_common::StatusCode@{tesseract\_common::StatusCode}}
+\doxysubsubsection{\texorpdfstring{getChild()}{getChild()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classtesseract__common_1_1StatusCode_a61254055f82822c470a7b8db39f85cf9}{Status\+Code\+::\+Const\+Ptr}}\& tesseract\+\_\+common\+::\+Status\+Code\+::get\+Child (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the child status code if it exist. 
+
+\begin{DoxyReturn}{Returns}
+Child status code, nullptr if it does not have a child. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtesseract__common_1_1StatusCode_abeafec55717a0aa564c83b44ba903b5d}\label{classtesseract__common_1_1StatusCode_abeafec55717a0aa564c83b44ba903b5d}} 
+\index{tesseract\_common::StatusCode@{tesseract\_common::StatusCode}!message@{message}}
+\index{message@{message}!tesseract\_common::StatusCode@{tesseract\_common::StatusCode}}
+\doxysubsubsection{\texorpdfstring{message()}{message()}}
+{\footnotesize\ttfamily std\+::string tesseract\+\_\+common\+::\+Status\+Code\+::message (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classtesseract__common_1_1StatusCode_a3e0c1223fdea221504d53fb69bc40dcc}\label{classtesseract__common_1_1StatusCode_a3e0c1223fdea221504d53fb69bc40dcc}} 
+\index{tesseract\_common::StatusCode@{tesseract\_common::StatusCode}!messageIndent@{messageIndent}}
+\index{messageIndent@{messageIndent}!tesseract\_common::StatusCode@{tesseract\_common::StatusCode}}
+\doxysubsubsection{\texorpdfstring{messageIndent()}{messageIndent()}}
+{\footnotesize\ttfamily std\+::string tesseract\+\_\+common\+::\+Status\+Code\+::message\+Indent (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{previous\+\_\+indent }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classtesseract__common_1_1StatusCode_a73a98aa36d3aa1c2982153e289a8458e}\label{classtesseract__common_1_1StatusCode_a73a98aa36d3aa1c2982153e289a8458e}} 
+\index{tesseract\_common::StatusCode@{tesseract\_common::StatusCode}!operator bool@{operator bool}}
+\index{operator bool@{operator bool}!tesseract\_common::StatusCode@{tesseract\_common::StatusCode}}
+\doxysubsubsection{\texorpdfstring{operator bool()}{operator bool()}}
+{\footnotesize\ttfamily tesseract\+\_\+common\+::\+Status\+Code\+::operator bool (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}, {\ttfamily [noexcept]}}
+
+
+
+This return true if status value is greater or equal to zero which is not in an error state. 
+
+\mbox{\Hypertarget{classtesseract__common_1_1StatusCode_a8d051111463e408ac95d021c7eb72c2f}\label{classtesseract__common_1_1StatusCode_a8d051111463e408ac95d021c7eb72c2f}} 
+\index{tesseract\_common::StatusCode@{tesseract\_common::StatusCode}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!tesseract\_common::StatusCode@{tesseract\_common::StatusCode}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily bool tesseract\+\_\+common\+::\+Status\+Code\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtesseract__common_1_1StatusCode}{Status\+Code}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classtesseract__common_1_1StatusCode_a2bfb865aff681eeb253239f41ca6bbe9}\label{classtesseract__common_1_1StatusCode_a2bfb865aff681eeb253239f41ca6bbe9}} 
+\index{tesseract\_common::StatusCode@{tesseract\_common::StatusCode}!operator=@{operator=}}
+\index{operator=@{operator=}!tesseract\_common::StatusCode@{tesseract\_common::StatusCode}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__common_1_1StatusCode}{Status\+Code}}\& tesseract\+\_\+common\+::\+Status\+Code\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtesseract__common_1_1StatusCode}{Status\+Code}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classtesseract__common_1_1StatusCode_afd814a732f56fe45f0c0b335f8ee5e81}\label{classtesseract__common_1_1StatusCode_afd814a732f56fe45f0c0b335f8ee5e81}} 
+\index{tesseract\_common::StatusCode@{tesseract\_common::StatusCode}!operator=@{operator=}}
+\index{operator=@{operator=}!tesseract\_common::StatusCode@{tesseract\_common::StatusCode}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__common_1_1StatusCode}{Status\+Code}}\& tesseract\+\_\+common\+::\+Status\+Code\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtesseract__common_1_1StatusCode}{Status\+Code}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classtesseract__common_1_1StatusCode_ae40302bb7991937bd8c5b60bff9966c7}\label{classtesseract__common_1_1StatusCode_ae40302bb7991937bd8c5b60bff9966c7}} 
+\index{tesseract\_common::StatusCode@{tesseract\_common::StatusCode}!operator==@{operator==}}
+\index{operator==@{operator==}!tesseract\_common::StatusCode@{tesseract\_common::StatusCode}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool tesseract\+\_\+common\+::\+Status\+Code\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtesseract__common_1_1StatusCode}{Status\+Code}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classtesseract__common_1_1StatusCode_a1f5ac671c45151c992abc225b90bae0f}\label{classtesseract__common_1_1StatusCode_a1f5ac671c45151c992abc225b90bae0f}} 
+\index{tesseract\_common::StatusCode@{tesseract\_common::StatusCode}!setChild@{setChild}}
+\index{setChild@{setChild}!tesseract\_common::StatusCode@{tesseract\_common::StatusCode}}
+\doxysubsubsection{\texorpdfstring{setChild()}{setChild()}}
+{\footnotesize\ttfamily void tesseract\+\_\+common\+::\+Status\+Code\+::set\+Child (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtesseract__common_1_1StatusCode_a61254055f82822c470a7b8db39f85cf9}{Status\+Code\+::\+Const\+Ptr}}}]{child }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the child status code. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em child} & The child status code to assign \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classtesseract__common_1_1StatusCode_ae02dbb736881bbc025ed45e85e9c429b}\label{classtesseract__common_1_1StatusCode_ae02dbb736881bbc025ed45e85e9c429b}} 
+\index{tesseract\_common::StatusCode@{tesseract\_common::StatusCode}!value@{value}}
+\index{value@{value}!tesseract\_common::StatusCode@{tesseract\_common::StatusCode}}
+\doxysubsubsection{\texorpdfstring{value()}{value()}}
+{\footnotesize\ttfamily int tesseract\+\_\+common\+::\+Status\+Code\+::value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classtesseract__common_1_1StatusCode_a653a23c29e1d70c5e961a9ea42091834}\label{classtesseract__common_1_1StatusCode_a653a23c29e1d70c5e961a9ea42091834}} 
+\index{tesseract\_common::StatusCode@{tesseract\_common::StatusCode}!cat\_@{cat\_}}
+\index{cat\_@{cat\_}!tesseract\_common::StatusCode@{tesseract\_common::StatusCode}}
+\doxysubsubsection{\texorpdfstring{cat\_}{cat\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__common_1_1StatusCategory_a78a59d8af48194ec283b74237025e992}{Status\+Category\+::\+Const\+Ptr}} tesseract\+\_\+common\+::\+Status\+Code\+::cat\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classtesseract__common_1_1StatusCode_a93d43782540c7a9e7ad0458072aef753}\label{classtesseract__common_1_1StatusCode_a93d43782540c7a9e7ad0458072aef753}} 
+\index{tesseract\_common::StatusCode@{tesseract\_common::StatusCode}!child\_@{child\_}}
+\index{child\_@{child\_}!tesseract\_common::StatusCode@{tesseract\_common::StatusCode}}
+\doxysubsubsection{\texorpdfstring{child\_}{child\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__common_1_1StatusCode_a61254055f82822c470a7b8db39f85cf9}{Status\+Code\+::\+Const\+Ptr}} tesseract\+\_\+common\+::\+Status\+Code\+::child\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classtesseract__common_1_1StatusCode_adbd03f1d51d72b9676ecb740ca0f21ff}\label{classtesseract__common_1_1StatusCode_adbd03f1d51d72b9676ecb740ca0f21ff}} 
+\index{tesseract\_common::StatusCode@{tesseract\_common::StatusCode}!val\_@{val\_}}
+\index{val\_@{val\_}!tesseract\_common::StatusCode@{tesseract\_common::StatusCode}}
+\doxysubsubsection{\texorpdfstring{val\_}{val\_}}
+{\footnotesize\ttfamily int tesseract\+\_\+common\+::\+Status\+Code\+::val\+\_\+ \{ 0 \}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+tesseract/tesseract\+\_\+common/include/tesseract\+\_\+common/\mbox{\hyperlink{status__code_8h}{status\+\_\+code.\+h}}\end{DoxyCompactItemize}

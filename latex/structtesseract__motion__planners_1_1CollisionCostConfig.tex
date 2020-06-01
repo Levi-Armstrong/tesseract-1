@@ -1,0 +1,97 @@
+\hypertarget{structtesseract__motion__planners_1_1CollisionCostConfig}{}\doxysection{tesseract\+\_\+motion\+\_\+planners\+::Collision\+Cost\+Config Struct Reference}
+\label{structtesseract__motion__planners_1_1CollisionCostConfig}\index{tesseract\_motion\_planners::CollisionCostConfig@{tesseract\_motion\_planners::CollisionCostConfig}}
+
+
+Config settings for collision cost terms.  
+
+
+
+
+{\ttfamily \#include $<$trajopt\+\_\+collision\+\_\+config.\+h$>$}
+
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{structtesseract__motion__planners_1_1CollisionCostConfig_a9076e917a517cff002db6cb74c20ef6c}{enabled}} = true
+\begin{DoxyCompactList}\small\item\em If true, a collision cost term will be added to the problem. Default\+: true. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structtesseract__motion__planners_1_1CollisionCostConfig_a4a5e473aebe2622753012f56bb7e1ef8}{use\+\_\+weighted\+\_\+sum}} = false
+\begin{DoxyCompactList}\small\item\em Use the weighted sum for each link pair. This reduces the number equations added to the problem If set to true, it is recommended to start with the coeff set to one. \end{DoxyCompactList}\item 
+trajopt\+::\+Collision\+Evaluator\+Type \mbox{\hyperlink{structtesseract__motion__planners_1_1CollisionCostConfig_a823076ba461f96ea7f2ae6e5ad147ae9}{type}} = trajopt\+::\+Collision\+Evaluator\+Type\+::\+C\+A\+S\+T\+\_\+\+C\+O\+N\+T\+I\+N\+U\+O\+US
+\begin{DoxyCompactList}\small\item\em The evaluator type that will be used for collision checking. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{structtesseract__motion__planners_1_1CollisionCostConfig_a1e7e00a3dcfb88ce1c007ee1826690cf}{buffer\+\_\+margin}} = 0.\+025
+\begin{DoxyCompactList}\small\item\em Max distance in which collision costs will be evaluated. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{structtesseract__motion__planners_1_1CollisionCostConfig_a4294f1b3ecd7b7ec61bf91a4b145c935}{safety\+\_\+margin\+\_\+buffer}} = 0.\+0
+\begin{DoxyCompactList}\small\item\em Distance beyond buffer\+\_\+margin in which collision optimization will be evaluated. This is set to 0 by default (effectively disabled) for collision costs. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{structtesseract__motion__planners_1_1CollisionCostConfig_ab63ffa54fcba196ec1a28982ea2c589b}{coeff}} = 20
+\begin{DoxyCompactList}\small\item\em The collision coeff/weight. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Config settings for collision cost terms. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structtesseract__motion__planners_1_1CollisionCostConfig_a1e7e00a3dcfb88ce1c007ee1826690cf}\label{structtesseract__motion__planners_1_1CollisionCostConfig_a1e7e00a3dcfb88ce1c007ee1826690cf}} 
+\index{tesseract\_motion\_planners::CollisionCostConfig@{tesseract\_motion\_planners::CollisionCostConfig}!buffer\_margin@{buffer\_margin}}
+\index{buffer\_margin@{buffer\_margin}!tesseract\_motion\_planners::CollisionCostConfig@{tesseract\_motion\_planners::CollisionCostConfig}}
+\doxysubsubsection{\texorpdfstring{buffer\_margin}{buffer\_margin}}
+{\footnotesize\ttfamily double tesseract\+\_\+motion\+\_\+planners\+::\+Collision\+Cost\+Config\+::buffer\+\_\+margin = 0.\+025}
+
+
+
+Max distance in which collision costs will be evaluated. 
+
+\mbox{\Hypertarget{structtesseract__motion__planners_1_1CollisionCostConfig_ab63ffa54fcba196ec1a28982ea2c589b}\label{structtesseract__motion__planners_1_1CollisionCostConfig_ab63ffa54fcba196ec1a28982ea2c589b}} 
+\index{tesseract\_motion\_planners::CollisionCostConfig@{tesseract\_motion\_planners::CollisionCostConfig}!coeff@{coeff}}
+\index{coeff@{coeff}!tesseract\_motion\_planners::CollisionCostConfig@{tesseract\_motion\_planners::CollisionCostConfig}}
+\doxysubsubsection{\texorpdfstring{coeff}{coeff}}
+{\footnotesize\ttfamily double tesseract\+\_\+motion\+\_\+planners\+::\+Collision\+Cost\+Config\+::coeff = 20}
+
+
+
+The collision coeff/weight. 
+
+\mbox{\Hypertarget{structtesseract__motion__planners_1_1CollisionCostConfig_a9076e917a517cff002db6cb74c20ef6c}\label{structtesseract__motion__planners_1_1CollisionCostConfig_a9076e917a517cff002db6cb74c20ef6c}} 
+\index{tesseract\_motion\_planners::CollisionCostConfig@{tesseract\_motion\_planners::CollisionCostConfig}!enabled@{enabled}}
+\index{enabled@{enabled}!tesseract\_motion\_planners::CollisionCostConfig@{tesseract\_motion\_planners::CollisionCostConfig}}
+\doxysubsubsection{\texorpdfstring{enabled}{enabled}}
+{\footnotesize\ttfamily bool tesseract\+\_\+motion\+\_\+planners\+::\+Collision\+Cost\+Config\+::enabled = true}
+
+
+
+If true, a collision cost term will be added to the problem. Default\+: true. 
+
+\mbox{\Hypertarget{structtesseract__motion__planners_1_1CollisionCostConfig_a4294f1b3ecd7b7ec61bf91a4b145c935}\label{structtesseract__motion__planners_1_1CollisionCostConfig_a4294f1b3ecd7b7ec61bf91a4b145c935}} 
+\index{tesseract\_motion\_planners::CollisionCostConfig@{tesseract\_motion\_planners::CollisionCostConfig}!safety\_margin\_buffer@{safety\_margin\_buffer}}
+\index{safety\_margin\_buffer@{safety\_margin\_buffer}!tesseract\_motion\_planners::CollisionCostConfig@{tesseract\_motion\_planners::CollisionCostConfig}}
+\doxysubsubsection{\texorpdfstring{safety\_margin\_buffer}{safety\_margin\_buffer}}
+{\footnotesize\ttfamily double tesseract\+\_\+motion\+\_\+planners\+::\+Collision\+Cost\+Config\+::safety\+\_\+margin\+\_\+buffer = 0.\+0}
+
+
+
+Distance beyond buffer\+\_\+margin in which collision optimization will be evaluated. This is set to 0 by default (effectively disabled) for collision costs. 
+
+\mbox{\Hypertarget{structtesseract__motion__planners_1_1CollisionCostConfig_a823076ba461f96ea7f2ae6e5ad147ae9}\label{structtesseract__motion__planners_1_1CollisionCostConfig_a823076ba461f96ea7f2ae6e5ad147ae9}} 
+\index{tesseract\_motion\_planners::CollisionCostConfig@{tesseract\_motion\_planners::CollisionCostConfig}!type@{type}}
+\index{type@{type}!tesseract\_motion\_planners::CollisionCostConfig@{tesseract\_motion\_planners::CollisionCostConfig}}
+\doxysubsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily trajopt\+::\+Collision\+Evaluator\+Type tesseract\+\_\+motion\+\_\+planners\+::\+Collision\+Cost\+Config\+::type = trajopt\+::\+Collision\+Evaluator\+Type\+::\+C\+A\+S\+T\+\_\+\+C\+O\+N\+T\+I\+N\+U\+O\+US}
+
+
+
+The evaluator type that will be used for collision checking. 
+
+\mbox{\Hypertarget{structtesseract__motion__planners_1_1CollisionCostConfig_a4a5e473aebe2622753012f56bb7e1ef8}\label{structtesseract__motion__planners_1_1CollisionCostConfig_a4a5e473aebe2622753012f56bb7e1ef8}} 
+\index{tesseract\_motion\_planners::CollisionCostConfig@{tesseract\_motion\_planners::CollisionCostConfig}!use\_weighted\_sum@{use\_weighted\_sum}}
+\index{use\_weighted\_sum@{use\_weighted\_sum}!tesseract\_motion\_planners::CollisionCostConfig@{tesseract\_motion\_planners::CollisionCostConfig}}
+\doxysubsubsection{\texorpdfstring{use\_weighted\_sum}{use\_weighted\_sum}}
+{\footnotesize\ttfamily bool tesseract\+\_\+motion\+\_\+planners\+::\+Collision\+Cost\+Config\+::use\+\_\+weighted\+\_\+sum = false}
+
+
+
+Use the weighted sum for each link pair. This reduces the number equations added to the problem If set to true, it is recommended to start with the coeff set to one. 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+tesseract/tesseract\+\_\+planning/tesseract\+\_\+motion\+\_\+planners/include/tesseract\+\_\+motion\+\_\+planners/trajopt/config/\mbox{\hyperlink{trajopt__collision__config_8h}{trajopt\+\_\+collision\+\_\+config.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,147 @@
+\hypertarget{classtesseract__process__planners_1_1ExtensionDepartureGenerator}{}\doxysection{tesseract\+\_\+process\+\_\+planners\+::Extension\+Departure\+Generator Class Reference}
+\label{classtesseract__process__planners_1_1ExtensionDepartureGenerator}\index{tesseract\_process\_planners::ExtensionDepartureGenerator@{tesseract\_process\_planners::ExtensionDepartureGenerator}}
+
+
+The \mbox{\hyperlink{classtesseract__process__planners_1_1ExtensionDepartureGenerator}{Extension\+Departure\+Generator}} class For a series of waypoints that progresses along either the positive or negative x-\/axis of the waypoints, this class generates an extension at the end of that path. A positive X-\/direction in the supplied vector will automatically be transformed to align with the direction the path was traveling, reducing complexity of calling code for alternating paths.  
+
+
+
+
+{\ttfamily \#include $<$extension\+\_\+departure\+\_\+generator.\+h$>$}
+
+Inheritance diagram for tesseract\+\_\+process\+\_\+planners\+::Extension\+Departure\+Generator\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classtesseract__process__planners_1_1ExtensionDepartureGenerator}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtesseract__process__planners_1_1ExtensionDepartureGenerator_a0a5659caba053e1a9be34a1617c9d866}{Extension\+Departure\+Generator}} (const Eigen\+::\+Vector3d \&departure, int step\+\_\+count)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classtesseract__process__planners_1_1ExtensionDepartureGenerator}{Extension\+Departure\+Generator}} -\/ constructor. Supply a vector for the departure to follow along. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classtesseract__process__planners_1_1ExtensionDepartureGenerator_ac8532ea9a37455590ba363d9b10c58d7}{Extension\+Departure\+Generator}} (const Eigen\+::\+Isometry3d \&departure, int step\+\_\+count)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classtesseract__process__planners_1_1ExtensionDepartureGenerator}{Extension\+Departure\+Generator}} -\/ alternate constructor to ease use with Process\+Planner\+Config, which uses Isometry3d for departure\+\_\+direction. Uses only the translation portion of a provided isometry. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classtesseract__process__planners_1_1ExtensionDepartureGenerator_a1a7356c70b88dc88e09ebde5741e6a59}{$\sim$\+Extension\+Departure\+Generator}} () override=default
+\item 
+\mbox{\hyperlink{classtesseract__process__planners_1_1ExtensionDepartureGenerator_a6db3f75d929257e7c1906682ff0db6b9}{Extension\+Departure\+Generator}} (const \mbox{\hyperlink{classtesseract__process__planners_1_1ExtensionDepartureGenerator}{Extension\+Departure\+Generator}} \&)=default
+\item 
+\mbox{\hyperlink{classtesseract__process__planners_1_1ExtensionDepartureGenerator}{Extension\+Departure\+Generator}} \& \mbox{\hyperlink{classtesseract__process__planners_1_1ExtensionDepartureGenerator_a4636e2b448dbd9638009cc00cb9280fc}{operator=}} (const \mbox{\hyperlink{classtesseract__process__planners_1_1ExtensionDepartureGenerator}{Extension\+Departure\+Generator}} \&)=default
+\item 
+\mbox{\hyperlink{classtesseract__process__planners_1_1ExtensionDepartureGenerator_aba56ee1ff70e37dbf46ee99a9ddebbc5}{Extension\+Departure\+Generator}} (\mbox{\hyperlink{classtesseract__process__planners_1_1ExtensionDepartureGenerator}{Extension\+Departure\+Generator}} \&\&)=default
+\item 
+\mbox{\hyperlink{classtesseract__process__planners_1_1ExtensionDepartureGenerator}{Extension\+Departure\+Generator}} \& \mbox{\hyperlink{classtesseract__process__planners_1_1ExtensionDepartureGenerator_af73a69bc40a35ded6ce82859e6b73d97}{operator=}} (\mbox{\hyperlink{classtesseract__process__planners_1_1ExtensionDepartureGenerator}{Extension\+Departure\+Generator}} \&\&)=default
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classtesseract__motion__planners_1_1Waypoint_a6a3eae473f2bb3bd94684561aae0bd3e}{tesseract\+\_\+motion\+\_\+planners\+::\+Waypoint\+::\+Ptr}} $>$ \mbox{\hyperlink{classtesseract__process__planners_1_1ExtensionDepartureGenerator_ab06c2bab03ea76b8e62620c1412842df}{generate}} (const std\+::vector$<$ \mbox{\hyperlink{classtesseract__motion__planners_1_1Waypoint_a6a3eae473f2bb3bd94684561aae0bd3e}{tesseract\+\_\+motion\+\_\+planners\+::\+Waypoint\+::\+Ptr}} $>$ \&waypoints, const \mbox{\hyperlink{structtesseract__process__planners_1_1ProcessDefinitionConfig}{Process\+Definition\+Config}} \&config) const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Eigen\+::\+Isometry3d \mbox{\hyperlink{classtesseract__process__planners_1_1ExtensionDepartureGenerator_a6dd1df458c2ea58c24fd8eb413a68462}{departure\+\_\+}}
+\item 
+int \mbox{\hyperlink{classtesseract__process__planners_1_1ExtensionDepartureGenerator_ac5acc29740870032fbffac98635ff3a6}{step\+\_\+count\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classtesseract__process__planners_1_1ExtensionDepartureGenerator}{Extension\+Departure\+Generator}} class For a series of waypoints that progresses along either the positive or negative x-\/axis of the waypoints, this class generates an extension at the end of that path. A positive X-\/direction in the supplied vector will automatically be transformed to align with the direction the path was traveling, reducing complexity of calling code for alternating paths. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtesseract__process__planners_1_1ExtensionDepartureGenerator_a0a5659caba053e1a9be34a1617c9d866}\label{classtesseract__process__planners_1_1ExtensionDepartureGenerator_a0a5659caba053e1a9be34a1617c9d866}} 
+\index{tesseract\_process\_planners::ExtensionDepartureGenerator@{tesseract\_process\_planners::ExtensionDepartureGenerator}!ExtensionDepartureGenerator@{ExtensionDepartureGenerator}}
+\index{ExtensionDepartureGenerator@{ExtensionDepartureGenerator}!tesseract\_process\_planners::ExtensionDepartureGenerator@{tesseract\_process\_planners::ExtensionDepartureGenerator}}
+\doxysubsubsection{\texorpdfstring{ExtensionDepartureGenerator()}{ExtensionDepartureGenerator()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily tesseract\+\_\+process\+\_\+planners\+::\+Extension\+Departure\+Generator\+::\+Extension\+Departure\+Generator (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Vector3d \&}]{departure,  }\item[{int}]{step\+\_\+count }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\mbox{\hyperlink{classtesseract__process__planners_1_1ExtensionDepartureGenerator}{Extension\+Departure\+Generator}} -\/ constructor. Supply a vector for the departure to follow along. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em departure} & -\/ the vector along which the departure should be generated \\
+\hline
+{\em step\+\_\+count} & -\/ how many waypoints should be generated \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classtesseract__process__planners_1_1ExtensionDepartureGenerator_ac8532ea9a37455590ba363d9b10c58d7}\label{classtesseract__process__planners_1_1ExtensionDepartureGenerator_ac8532ea9a37455590ba363d9b10c58d7}} 
+\index{tesseract\_process\_planners::ExtensionDepartureGenerator@{tesseract\_process\_planners::ExtensionDepartureGenerator}!ExtensionDepartureGenerator@{ExtensionDepartureGenerator}}
+\index{ExtensionDepartureGenerator@{ExtensionDepartureGenerator}!tesseract\_process\_planners::ExtensionDepartureGenerator@{tesseract\_process\_planners::ExtensionDepartureGenerator}}
+\doxysubsubsection{\texorpdfstring{ExtensionDepartureGenerator()}{ExtensionDepartureGenerator()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily tesseract\+\_\+process\+\_\+planners\+::\+Extension\+Departure\+Generator\+::\+Extension\+Departure\+Generator (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Isometry3d \&}]{departure,  }\item[{int}]{step\+\_\+count }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\mbox{\hyperlink{classtesseract__process__planners_1_1ExtensionDepartureGenerator}{Extension\+Departure\+Generator}} -\/ alternate constructor to ease use with Process\+Planner\+Config, which uses Isometry3d for departure\+\_\+direction. Uses only the translation portion of a provided isometry. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em departure} & -\/ the vector along which the departure should be generated \\
+\hline
+{\em step\+\_\+count} & -\/ how many waypoints should be generated \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classtesseract__process__planners_1_1ExtensionDepartureGenerator_a1a7356c70b88dc88e09ebde5741e6a59}\label{classtesseract__process__planners_1_1ExtensionDepartureGenerator_a1a7356c70b88dc88e09ebde5741e6a59}} 
+\index{tesseract\_process\_planners::ExtensionDepartureGenerator@{tesseract\_process\_planners::ExtensionDepartureGenerator}!````~ExtensionDepartureGenerator@{$\sim$ExtensionDepartureGenerator}}
+\index{````~ExtensionDepartureGenerator@{$\sim$ExtensionDepartureGenerator}!tesseract\_process\_planners::ExtensionDepartureGenerator@{tesseract\_process\_planners::ExtensionDepartureGenerator}}
+\doxysubsubsection{\texorpdfstring{$\sim$ExtensionDepartureGenerator()}{~ExtensionDepartureGenerator()}}
+{\footnotesize\ttfamily tesseract\+\_\+process\+\_\+planners\+::\+Extension\+Departure\+Generator\+::$\sim$\+Extension\+Departure\+Generator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [default]}}
+
+\mbox{\Hypertarget{classtesseract__process__planners_1_1ExtensionDepartureGenerator_a6db3f75d929257e7c1906682ff0db6b9}\label{classtesseract__process__planners_1_1ExtensionDepartureGenerator_a6db3f75d929257e7c1906682ff0db6b9}} 
+\index{tesseract\_process\_planners::ExtensionDepartureGenerator@{tesseract\_process\_planners::ExtensionDepartureGenerator}!ExtensionDepartureGenerator@{ExtensionDepartureGenerator}}
+\index{ExtensionDepartureGenerator@{ExtensionDepartureGenerator}!tesseract\_process\_planners::ExtensionDepartureGenerator@{tesseract\_process\_planners::ExtensionDepartureGenerator}}
+\doxysubsubsection{\texorpdfstring{ExtensionDepartureGenerator()}{ExtensionDepartureGenerator()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily tesseract\+\_\+process\+\_\+planners\+::\+Extension\+Departure\+Generator\+::\+Extension\+Departure\+Generator (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtesseract__process__planners_1_1ExtensionDepartureGenerator}{Extension\+Departure\+Generator}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classtesseract__process__planners_1_1ExtensionDepartureGenerator_aba56ee1ff70e37dbf46ee99a9ddebbc5}\label{classtesseract__process__planners_1_1ExtensionDepartureGenerator_aba56ee1ff70e37dbf46ee99a9ddebbc5}} 
+\index{tesseract\_process\_planners::ExtensionDepartureGenerator@{tesseract\_process\_planners::ExtensionDepartureGenerator}!ExtensionDepartureGenerator@{ExtensionDepartureGenerator}}
+\index{ExtensionDepartureGenerator@{ExtensionDepartureGenerator}!tesseract\_process\_planners::ExtensionDepartureGenerator@{tesseract\_process\_planners::ExtensionDepartureGenerator}}
+\doxysubsubsection{\texorpdfstring{ExtensionDepartureGenerator()}{ExtensionDepartureGenerator()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily tesseract\+\_\+process\+\_\+planners\+::\+Extension\+Departure\+Generator\+::\+Extension\+Departure\+Generator (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtesseract__process__planners_1_1ExtensionDepartureGenerator}{Extension\+Departure\+Generator}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtesseract__process__planners_1_1ExtensionDepartureGenerator_ab06c2bab03ea76b8e62620c1412842df}\label{classtesseract__process__planners_1_1ExtensionDepartureGenerator_ab06c2bab03ea76b8e62620c1412842df}} 
+\index{tesseract\_process\_planners::ExtensionDepartureGenerator@{tesseract\_process\_planners::ExtensionDepartureGenerator}!generate@{generate}}
+\index{generate@{generate}!tesseract\_process\_planners::ExtensionDepartureGenerator@{tesseract\_process\_planners::ExtensionDepartureGenerator}}
+\doxysubsubsection{\texorpdfstring{generate()}{generate()}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{classtesseract__motion__planners_1_1Waypoint_a6a3eae473f2bb3bd94684561aae0bd3e}{tesseract\+\_\+motion\+\_\+planners\+::\+Waypoint\+::\+Ptr}}$>$ tesseract\+\_\+process\+\_\+planners\+::\+Extension\+Departure\+Generator\+::generate (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{classtesseract__motion__planners_1_1Waypoint_a6a3eae473f2bb3bd94684561aae0bd3e}{tesseract\+\_\+motion\+\_\+planners\+::\+Waypoint\+::\+Ptr}} $>$ \&}]{waypoints,  }\item[{const \mbox{\hyperlink{structtesseract__process__planners_1_1ProcessDefinitionConfig}{Process\+Definition\+Config}} \&}]{config }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classtesseract__process__planners_1_1ProcessStepGenerator_a966ff84e77d98701a92022e7ea82cc9a}{tesseract\+\_\+process\+\_\+planners\+::\+Process\+Step\+Generator}}.
+
+\mbox{\Hypertarget{classtesseract__process__planners_1_1ExtensionDepartureGenerator_a4636e2b448dbd9638009cc00cb9280fc}\label{classtesseract__process__planners_1_1ExtensionDepartureGenerator_a4636e2b448dbd9638009cc00cb9280fc}} 
+\index{tesseract\_process\_planners::ExtensionDepartureGenerator@{tesseract\_process\_planners::ExtensionDepartureGenerator}!operator=@{operator=}}
+\index{operator=@{operator=}!tesseract\_process\_planners::ExtensionDepartureGenerator@{tesseract\_process\_planners::ExtensionDepartureGenerator}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__process__planners_1_1ExtensionDepartureGenerator}{Extension\+Departure\+Generator}}\& tesseract\+\_\+process\+\_\+planners\+::\+Extension\+Departure\+Generator\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtesseract__process__planners_1_1ExtensionDepartureGenerator}{Extension\+Departure\+Generator}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classtesseract__process__planners_1_1ExtensionDepartureGenerator_af73a69bc40a35ded6ce82859e6b73d97}\label{classtesseract__process__planners_1_1ExtensionDepartureGenerator_af73a69bc40a35ded6ce82859e6b73d97}} 
+\index{tesseract\_process\_planners::ExtensionDepartureGenerator@{tesseract\_process\_planners::ExtensionDepartureGenerator}!operator=@{operator=}}
+\index{operator=@{operator=}!tesseract\_process\_planners::ExtensionDepartureGenerator@{tesseract\_process\_planners::ExtensionDepartureGenerator}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__process__planners_1_1ExtensionDepartureGenerator}{Extension\+Departure\+Generator}}\& tesseract\+\_\+process\+\_\+planners\+::\+Extension\+Departure\+Generator\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtesseract__process__planners_1_1ExtensionDepartureGenerator}{Extension\+Departure\+Generator}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classtesseract__process__planners_1_1ExtensionDepartureGenerator_a6dd1df458c2ea58c24fd8eb413a68462}\label{classtesseract__process__planners_1_1ExtensionDepartureGenerator_a6dd1df458c2ea58c24fd8eb413a68462}} 
+\index{tesseract\_process\_planners::ExtensionDepartureGenerator@{tesseract\_process\_planners::ExtensionDepartureGenerator}!departure\_@{departure\_}}
+\index{departure\_@{departure\_}!tesseract\_process\_planners::ExtensionDepartureGenerator@{tesseract\_process\_planners::ExtensionDepartureGenerator}}
+\doxysubsubsection{\texorpdfstring{departure\_}{departure\_}}
+{\footnotesize\ttfamily Eigen\+::\+Isometry3d tesseract\+\_\+process\+\_\+planners\+::\+Extension\+Departure\+Generator\+::departure\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classtesseract__process__planners_1_1ExtensionDepartureGenerator_ac5acc29740870032fbffac98635ff3a6}\label{classtesseract__process__planners_1_1ExtensionDepartureGenerator_ac5acc29740870032fbffac98635ff3a6}} 
+\index{tesseract\_process\_planners::ExtensionDepartureGenerator@{tesseract\_process\_planners::ExtensionDepartureGenerator}!step\_count\_@{step\_count\_}}
+\index{step\_count\_@{step\_count\_}!tesseract\_process\_planners::ExtensionDepartureGenerator@{tesseract\_process\_planners::ExtensionDepartureGenerator}}
+\doxysubsubsection{\texorpdfstring{step\_count\_}{step\_count\_}}
+{\footnotesize\ttfamily int tesseract\+\_\+process\+\_\+planners\+::\+Extension\+Departure\+Generator\+::step\+\_\+count\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+tesseract/tesseract\+\_\+planning/tesseract\+\_\+process\+\_\+planners/include/tesseract\+\_\+process\+\_\+planners/generators/\mbox{\hyperlink{extension__departure__generator_8h}{extension\+\_\+departure\+\_\+generator.\+h}}\end{DoxyCompactItemize}

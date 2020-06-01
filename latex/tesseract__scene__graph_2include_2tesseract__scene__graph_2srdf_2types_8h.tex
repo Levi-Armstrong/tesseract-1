@@ -1,0 +1,40 @@
+\hypertarget{tesseract__scene__graph_2include_2tesseract__scene__graph_2srdf_2types_8h}{}\doxysection{tesseract/tesseract\+\_\+scene\+\_\+graph/include/tesseract\+\_\+scene\+\_\+graph/srdf/types.h File Reference}
+\label{tesseract__scene__graph_2include_2tesseract__scene__graph_2srdf_2types_8h}\index{tesseract/tesseract\_scene\_graph/include/tesseract\_scene\_graph/srdf/types.h@{tesseract/tesseract\_scene\_graph/include/tesseract\_scene\_graph/srdf/types.h}}
+{\ttfamily \#include $<$tesseract\+\_\+common/macros.\+h$>$}\newline
+{\ttfamily \#include $<$unordered\+\_\+map$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$Eigen/\+Geometry$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structtesseract__scene__graph_1_1OPWKinematicParameters}{tesseract\+\_\+scene\+\_\+graph\+::\+O\+P\+W\+Kinematic\+Parameters}}
+\begin{DoxyCompactList}\small\item\em A structure to hold opw kinematics data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacetesseract__scene__graph}{tesseract\+\_\+scene\+\_\+graph}}
+\begin{DoxyCompactList}\small\item\em Main namespace. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{namespacetesseract__scene__graph_a15a43fdaff3a226edbe13093ca390aba}{tesseract\+\_\+scene\+\_\+graph\+::\+Joint\+State}} = std\+::unordered\+\_\+map$<$ std\+::string, double $>$
+\item 
+using \mbox{\hyperlink{namespacetesseract__scene__graph_a42d691a8c9fb9660bfe7ef1a39c3dea9}{tesseract\+\_\+scene\+\_\+graph\+::\+Joint\+States}} = std\+::unordered\+\_\+map$<$ std\+::string, Joint\+State $>$
+\item 
+using \mbox{\hyperlink{namespacetesseract__scene__graph_a1fb59e8460185dc99f8175d7584a781f}{tesseract\+\_\+scene\+\_\+graph\+::\+Group\+States}} = std\+::unordered\+\_\+map$<$ std\+::string, Joint\+States $>$
+\item 
+using \mbox{\hyperlink{namespacetesseract__scene__graph_aad56e14ea97356ed23f6aadd7194c607}{tesseract\+\_\+scene\+\_\+graph\+::\+T\+C\+Ps}} = std\+::unordered\+\_\+map$<$ std\+::string, Eigen\+::\+Isometry3d $>$
+\item 
+using \mbox{\hyperlink{namespacetesseract__scene__graph_a02f7e533d79493ebb7efcaa673795435}{tesseract\+\_\+scene\+\_\+graph\+::\+Group\+T\+C\+Ps}} = std\+::unordered\+\_\+map$<$ std\+::string, T\+C\+Ps $>$
+\item 
+using \mbox{\hyperlink{namespacetesseract__scene__graph_a5198559324430b63205375e24be9f24d}{tesseract\+\_\+scene\+\_\+graph\+::\+Chain\+Groups}} = std\+::unordered\+\_\+map$<$ std\+::string, std\+::vector$<$ std\+::pair$<$ std\+::string, std\+::string $>$ $>$$>$
+\item 
+using \mbox{\hyperlink{namespacetesseract__scene__graph_a64547d97ab6a292d952428d0e6814619}{tesseract\+\_\+scene\+\_\+graph\+::\+Joint\+Groups}} = std\+::unordered\+\_\+map$<$ std\+::string, std\+::vector$<$ std\+::string $>$ $>$
+\item 
+using \mbox{\hyperlink{namespacetesseract__scene__graph_a6b6329998f2eb8078111f2415a469b1a}{tesseract\+\_\+scene\+\_\+graph\+::\+Link\+Groups}} = std\+::unordered\+\_\+map$<$ std\+::string, std\+::vector$<$ std\+::string $>$ $>$
+\item 
+using \mbox{\hyperlink{namespacetesseract__scene__graph_a32f5566007ca12430e9ea9da77a83205}{tesseract\+\_\+scene\+\_\+graph\+::\+Group\+Names}} = std\+::vector$<$ std\+::string $>$
+\item 
+using \mbox{\hyperlink{namespacetesseract__scene__graph_a33353003fc3c590f3f10a9a1dab84b77}{tesseract\+\_\+scene\+\_\+graph\+::\+Group\+O\+P\+W\+Kinematics}} = std\+::unordered\+\_\+map$<$ std\+::string, O\+P\+W\+Kinematic\+Parameters $>$
+\end{DoxyCompactItemize}

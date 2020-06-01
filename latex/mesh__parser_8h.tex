@@ -1,0 +1,27 @@
+\hypertarget{mesh__parser_8h}{}\doxysection{tesseract/tesseract\+\_\+geometry/include/tesseract\+\_\+geometry/mesh\+\_\+parser.h File Reference}
+\label{mesh__parser_8h}\index{tesseract/tesseract\_geometry/include/tesseract\_geometry/mesh\_parser.h@{tesseract/tesseract\_geometry/include/tesseract\_geometry/mesh\_parser.h}}
+{\ttfamily \#include $<$tesseract\+\_\+common/macros.\+h$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$assimp/scene.\+h$>$}\newline
+{\ttfamily \#include $<$assimp/\+Importer.\+hpp$>$}\newline
+{\ttfamily \#include $<$assimp/postprocess.\+h$>$}\newline
+{\ttfamily \#include $<$console\+\_\+bridge/console.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+common/types.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+common/resource.\+h$>$}\newline
+{\ttfamily \#include $<$regex$>$}\newline
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacetesseract__geometry}{tesseract\+\_\+geometry}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class T $>$ }\\std\+::vector$<$ std\+::shared\+\_\+ptr$<$ T $>$ $>$ \mbox{\hyperlink{namespacetesseract__geometry_a5eedebf33318d863912dd2fddb3ff25d}{tesseract\+\_\+geometry\+::extract\+Mesh\+Data}} (const ai\+Scene $\ast$scene, const ai\+Node $\ast$node, const ai\+Matrix4x4 \&parent\+\_\+transform, const Eigen\+::\+Vector3d \&scale, \mbox{\hyperlink{classtesseract__common_1_1Resource_acdba916fa227bef4391c469581844dc6}{tesseract\+\_\+common\+::\+Resource\+::\+Ptr}} resource)
+\item 
+{\footnotesize template$<$class T $>$ }\\std\+::vector$<$ std\+::shared\+\_\+ptr$<$ T $>$ $>$ \mbox{\hyperlink{namespacetesseract__geometry_a50302af5196a8a0dbaf7d9443e069b3b}{tesseract\+\_\+geometry\+::create\+Mesh\+From\+Asset}} (const ai\+Scene $\ast$scene, const Eigen\+::\+Vector3d \&scale, \mbox{\hyperlink{classtesseract__common_1_1Resource_acdba916fa227bef4391c469581844dc6}{tesseract\+\_\+common\+::\+Resource\+::\+Ptr}} resource)
+\begin{DoxyCompactList}\small\item\em Create list of meshes from the assimp scene. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\std\+::vector$<$ std\+::shared\+\_\+ptr$<$ T $>$ $>$ \mbox{\hyperlink{namespacetesseract__geometry_a3f4e01e08202e6a7fecf7aa9e04d3174}{tesseract\+\_\+geometry\+::create\+Mesh\+From\+Path}} (const std\+::string \&path, Eigen\+::\+Vector3d scale=Eigen\+::\+Vector3d(1, 1, 1), bool triangulate=false, bool flatten=false)
+\begin{DoxyCompactList}\small\item\em Create a mesh using assimp from file path. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\std\+::vector$<$ std\+::shared\+\_\+ptr$<$ T $>$ $>$ \mbox{\hyperlink{namespacetesseract__geometry_adeb074f54a4c799f05492fc1945945a9}{tesseract\+\_\+geometry\+::create\+Mesh\+From\+Resource}} (\mbox{\hyperlink{classtesseract__common_1_1Resource_acdba916fa227bef4391c469581844dc6}{tesseract\+\_\+common\+::\+Resource\+::\+Ptr}} resource, Eigen\+::\+Vector3d scale=Eigen\+::\+Vector3d(1, 1, 1), bool triangulate=false, bool flatten=false)
+\begin{DoxyCompactList}\small\item\em Create a mesh using assimp from resource. \end{DoxyCompactList}\end{DoxyCompactItemize}

@@ -1,0 +1,202 @@
+\hypertarget{classtesseract__visualization_1_1Visualization}{}\doxysection{tesseract\+\_\+visualization\+::Visualization Class Reference}
+\label{classtesseract__visualization_1_1Visualization}\index{tesseract\_visualization::Visualization@{tesseract\_visualization::Visualization}}
+
+
+The Vizualization class.  
+
+
+
+
+{\ttfamily \#include $<$visualization.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classtesseract__visualization_1_1Visualization_a61e87b2a04c6f22161fa0be9f808e077}{Ptr}} = std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classtesseract__visualization_1_1Visualization}{Visualization}} $>$
+\item 
+using \mbox{\hyperlink{classtesseract__visualization_1_1Visualization_a705b7c982396fb56d69b34f2dec106f7}{Const\+Ptr}} = std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{classtesseract__visualization_1_1Visualization}{Visualization}} $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtesseract__visualization_1_1Visualization_acd6c18a411ccdbee717fe0a9b2f37fa8}{Visualization}} ()=default
+\item 
+virtual \mbox{\hyperlink{classtesseract__visualization_1_1Visualization_af803aa96352fba0aa55ed6fa152a66a5}{$\sim$\+Visualization}} ()=default
+\item 
+\mbox{\hyperlink{classtesseract__visualization_1_1Visualization_afcccbd73dea09e75b7d59f0057da0259}{Visualization}} (const \mbox{\hyperlink{classtesseract__visualization_1_1Visualization}{Visualization}} \&)=default
+\item 
+\mbox{\hyperlink{classtesseract__visualization_1_1Visualization}{Visualization}} \& \mbox{\hyperlink{classtesseract__visualization_1_1Visualization_a91b18191f4cf22e3233d2f2c0d277815}{operator=}} (const \mbox{\hyperlink{classtesseract__visualization_1_1Visualization}{Visualization}} \&)=default
+\item 
+\mbox{\hyperlink{classtesseract__visualization_1_1Visualization_a530fd713f952c4df287433ebff6e4b34}{Visualization}} (\mbox{\hyperlink{classtesseract__visualization_1_1Visualization}{Visualization}} \&\&)=default
+\item 
+\mbox{\hyperlink{classtesseract__visualization_1_1Visualization}{Visualization}} \& \mbox{\hyperlink{classtesseract__visualization_1_1Visualization_adc4668f28bd65b0b52d7ca0228c2bbcb}{operator=}} (\mbox{\hyperlink{classtesseract__visualization_1_1Visualization}{Visualization}} \&\&)=default
+\item 
+virtual void \mbox{\hyperlink{classtesseract__visualization_1_1Visualization_a046e29ee7c767d892606799f0ee760dc}{plot\+Trajectory}} (const std\+::vector$<$ std\+::string $>$ \&joint\+\_\+names, const Eigen\+::\+Ref$<$ const \mbox{\hyperlink{namespacetesseract__common_a431ff65777ee0bed71e7671390638244}{tesseract\+\_\+common\+::\+Traj\+Array}} $>$ \&traj)=0
+\begin{DoxyCompactList}\small\item\em Plot a trajectory. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classtesseract__visualization_1_1Visualization_a0ed913e72765135ac4313ac9fa5347ac}{plot\+Contact\+Results}} (const std\+::vector$<$ std\+::string $>$ \&link\+\_\+names, const \mbox{\hyperlink{namespacetesseract__collision_a96d77f62b7c26962d1090f0a2f00419b}{tesseract\+\_\+collision\+::\+Contact\+Result\+Vector}} \&dist\+\_\+results, const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector\+Xd $>$ \&safety\+\_\+distances)=0
+\begin{DoxyCompactList}\small\item\em Plot the collision results data. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classtesseract__visualization_1_1Visualization_a42153345a684e7dfc181c78ce59cc3ef}{plot\+Arrow}} (const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector3d $>$ \&pt1, const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector3d $>$ \&pt2, const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector4d $>$ \&rgba, double scale)=0
+\begin{DoxyCompactList}\small\item\em Plot arrow defined by two points. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classtesseract__visualization_1_1Visualization_a1ccca7d56a63fca9e850cbd4718554f1}{plot\+Axis}} (const Eigen\+::\+Isometry3d \&axis, double scale)=0
+\begin{DoxyCompactList}\small\item\em Plot axis. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classtesseract__visualization_1_1Visualization_a3df0b2c1a16f0ab3936846fd2e221ffc}{clear}} ()=0
+\begin{DoxyCompactList}\small\item\em This is called at the start of the plotting for each iteration to clear previous iteration graphics if neccessary. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classtesseract__visualization_1_1Visualization_a3c82492636d57cc7b5e85befc787a3ac}{wait\+For\+Input}} ()=0
+\begin{DoxyCompactList}\small\item\em Pause code and wait for enter key in terminal. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The Vizualization class. 
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classtesseract__visualization_1_1Visualization_a705b7c982396fb56d69b34f2dec106f7}\label{classtesseract__visualization_1_1Visualization_a705b7c982396fb56d69b34f2dec106f7}} 
+\index{tesseract\_visualization::Visualization@{tesseract\_visualization::Visualization}!ConstPtr@{ConstPtr}}
+\index{ConstPtr@{ConstPtr}!tesseract\_visualization::Visualization@{tesseract\_visualization::Visualization}}
+\doxysubsubsection{\texorpdfstring{ConstPtr}{ConstPtr}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classtesseract__visualization_1_1Visualization_a705b7c982396fb56d69b34f2dec106f7}{tesseract\+\_\+visualization\+::\+Visualization\+::\+Const\+Ptr}} =  std\+::shared\+\_\+ptr$<$const \mbox{\hyperlink{classtesseract__visualization_1_1Visualization}{Visualization}}$>$}
+
+\mbox{\Hypertarget{classtesseract__visualization_1_1Visualization_a61e87b2a04c6f22161fa0be9f808e077}\label{classtesseract__visualization_1_1Visualization_a61e87b2a04c6f22161fa0be9f808e077}} 
+\index{tesseract\_visualization::Visualization@{tesseract\_visualization::Visualization}!Ptr@{Ptr}}
+\index{Ptr@{Ptr}!tesseract\_visualization::Visualization@{tesseract\_visualization::Visualization}}
+\doxysubsubsection{\texorpdfstring{Ptr}{Ptr}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classtesseract__visualization_1_1Visualization_a61e87b2a04c6f22161fa0be9f808e077}{tesseract\+\_\+visualization\+::\+Visualization\+::\+Ptr}} =  std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classtesseract__visualization_1_1Visualization}{Visualization}}$>$}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtesseract__visualization_1_1Visualization_acd6c18a411ccdbee717fe0a9b2f37fa8}\label{classtesseract__visualization_1_1Visualization_acd6c18a411ccdbee717fe0a9b2f37fa8}} 
+\index{tesseract\_visualization::Visualization@{tesseract\_visualization::Visualization}!Visualization@{Visualization}}
+\index{Visualization@{Visualization}!tesseract\_visualization::Visualization@{tesseract\_visualization::Visualization}}
+\doxysubsubsection{\texorpdfstring{Visualization()}{Visualization()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily tesseract\+\_\+visualization\+::\+Visualization\+::\+Visualization (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classtesseract__visualization_1_1Visualization_af803aa96352fba0aa55ed6fa152a66a5}\label{classtesseract__visualization_1_1Visualization_af803aa96352fba0aa55ed6fa152a66a5}} 
+\index{tesseract\_visualization::Visualization@{tesseract\_visualization::Visualization}!````~Visualization@{$\sim$Visualization}}
+\index{````~Visualization@{$\sim$Visualization}!tesseract\_visualization::Visualization@{tesseract\_visualization::Visualization}}
+\doxysubsubsection{\texorpdfstring{$\sim$Visualization()}{~Visualization()}}
+{\footnotesize\ttfamily virtual tesseract\+\_\+visualization\+::\+Visualization\+::$\sim$\+Visualization (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+\mbox{\Hypertarget{classtesseract__visualization_1_1Visualization_afcccbd73dea09e75b7d59f0057da0259}\label{classtesseract__visualization_1_1Visualization_afcccbd73dea09e75b7d59f0057da0259}} 
+\index{tesseract\_visualization::Visualization@{tesseract\_visualization::Visualization}!Visualization@{Visualization}}
+\index{Visualization@{Visualization}!tesseract\_visualization::Visualization@{tesseract\_visualization::Visualization}}
+\doxysubsubsection{\texorpdfstring{Visualization()}{Visualization()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily tesseract\+\_\+visualization\+::\+Visualization\+::\+Visualization (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtesseract__visualization_1_1Visualization}{Visualization}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classtesseract__visualization_1_1Visualization_a530fd713f952c4df287433ebff6e4b34}\label{classtesseract__visualization_1_1Visualization_a530fd713f952c4df287433ebff6e4b34}} 
+\index{tesseract\_visualization::Visualization@{tesseract\_visualization::Visualization}!Visualization@{Visualization}}
+\index{Visualization@{Visualization}!tesseract\_visualization::Visualization@{tesseract\_visualization::Visualization}}
+\doxysubsubsection{\texorpdfstring{Visualization()}{Visualization()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily tesseract\+\_\+visualization\+::\+Visualization\+::\+Visualization (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtesseract__visualization_1_1Visualization}{Visualization}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtesseract__visualization_1_1Visualization_a3df0b2c1a16f0ab3936846fd2e221ffc}\label{classtesseract__visualization_1_1Visualization_a3df0b2c1a16f0ab3936846fd2e221ffc}} 
+\index{tesseract\_visualization::Visualization@{tesseract\_visualization::Visualization}!clear@{clear}}
+\index{clear@{clear}!tesseract\_visualization::Visualization@{tesseract\_visualization::Visualization}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily virtual void tesseract\+\_\+visualization\+::\+Visualization\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+This is called at the start of the plotting for each iteration to clear previous iteration graphics if neccessary. 
+
+\mbox{\Hypertarget{classtesseract__visualization_1_1Visualization_a91b18191f4cf22e3233d2f2c0d277815}\label{classtesseract__visualization_1_1Visualization_a91b18191f4cf22e3233d2f2c0d277815}} 
+\index{tesseract\_visualization::Visualization@{tesseract\_visualization::Visualization}!operator=@{operator=}}
+\index{operator=@{operator=}!tesseract\_visualization::Visualization@{tesseract\_visualization::Visualization}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__visualization_1_1Visualization}{Visualization}}\& tesseract\+\_\+visualization\+::\+Visualization\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtesseract__visualization_1_1Visualization}{Visualization}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classtesseract__visualization_1_1Visualization_adc4668f28bd65b0b52d7ca0228c2bbcb}\label{classtesseract__visualization_1_1Visualization_adc4668f28bd65b0b52d7ca0228c2bbcb}} 
+\index{tesseract\_visualization::Visualization@{tesseract\_visualization::Visualization}!operator=@{operator=}}
+\index{operator=@{operator=}!tesseract\_visualization::Visualization@{tesseract\_visualization::Visualization}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__visualization_1_1Visualization}{Visualization}}\& tesseract\+\_\+visualization\+::\+Visualization\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtesseract__visualization_1_1Visualization}{Visualization}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classtesseract__visualization_1_1Visualization_a42153345a684e7dfc181c78ce59cc3ef}\label{classtesseract__visualization_1_1Visualization_a42153345a684e7dfc181c78ce59cc3ef}} 
+\index{tesseract\_visualization::Visualization@{tesseract\_visualization::Visualization}!plotArrow@{plotArrow}}
+\index{plotArrow@{plotArrow}!tesseract\_visualization::Visualization@{tesseract\_visualization::Visualization}}
+\doxysubsubsection{\texorpdfstring{plotArrow()}{plotArrow()}}
+{\footnotesize\ttfamily virtual void tesseract\+\_\+visualization\+::\+Visualization\+::plot\+Arrow (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector3d $>$ \&}]{pt1,  }\item[{const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector3d $>$ \&}]{pt2,  }\item[{const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector4d $>$ \&}]{rgba,  }\item[{double}]{scale }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Plot arrow defined by two points. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pt1} & Start position of the arrow \\
+\hline
+{\em pt2} & Final position of the arrow \\
+\hline
+{\em rgba} & Color of the arrow \\
+\hline
+{\em scale} & The size of the arrow (related to diameter) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classtesseract__visualization_1_1Visualization_a1ccca7d56a63fca9e850cbd4718554f1}\label{classtesseract__visualization_1_1Visualization_a1ccca7d56a63fca9e850cbd4718554f1}} 
+\index{tesseract\_visualization::Visualization@{tesseract\_visualization::Visualization}!plotAxis@{plotAxis}}
+\index{plotAxis@{plotAxis}!tesseract\_visualization::Visualization@{tesseract\_visualization::Visualization}}
+\doxysubsubsection{\texorpdfstring{plotAxis()}{plotAxis()}}
+{\footnotesize\ttfamily virtual void tesseract\+\_\+visualization\+::\+Visualization\+::plot\+Axis (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Isometry3d \&}]{axis,  }\item[{double}]{scale }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Plot axis. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em axis} & The axis \\
+\hline
+{\em scale} & The size of the axis \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classtesseract__visualization_1_1Visualization_a0ed913e72765135ac4313ac9fa5347ac}\label{classtesseract__visualization_1_1Visualization_a0ed913e72765135ac4313ac9fa5347ac}} 
+\index{tesseract\_visualization::Visualization@{tesseract\_visualization::Visualization}!plotContactResults@{plotContactResults}}
+\index{plotContactResults@{plotContactResults}!tesseract\_visualization::Visualization@{tesseract\_visualization::Visualization}}
+\doxysubsubsection{\texorpdfstring{plotContactResults()}{plotContactResults()}}
+{\footnotesize\ttfamily virtual void tesseract\+\_\+visualization\+::\+Visualization\+::plot\+Contact\+Results (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::string $>$ \&}]{link\+\_\+names,  }\item[{const \mbox{\hyperlink{namespacetesseract__collision_a96d77f62b7c26962d1090f0a2f00419b}{tesseract\+\_\+collision\+::\+Contact\+Result\+Vector}} \&}]{dist\+\_\+results,  }\item[{const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector\+Xd $>$ \&}]{safety\+\_\+distances }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Plot the collision results data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em link\+\_\+names} & List of link names for which to plot data \\
+\hline
+{\em dist\+\_\+results} & The collision results data \\
+\hline
+{\em safety\+\_\+distance} & Vector of safety Distance corresponding to dist\+\_\+results (Must be in the same order and length). \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classtesseract__visualization_1_1Visualization_a046e29ee7c767d892606799f0ee760dc}\label{classtesseract__visualization_1_1Visualization_a046e29ee7c767d892606799f0ee760dc}} 
+\index{tesseract\_visualization::Visualization@{tesseract\_visualization::Visualization}!plotTrajectory@{plotTrajectory}}
+\index{plotTrajectory@{plotTrajectory}!tesseract\_visualization::Visualization@{tesseract\_visualization::Visualization}}
+\doxysubsubsection{\texorpdfstring{plotTrajectory()}{plotTrajectory()}}
+{\footnotesize\ttfamily virtual void tesseract\+\_\+visualization\+::\+Visualization\+::plot\+Trajectory (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::string $>$ \&}]{joint\+\_\+names,  }\item[{const Eigen\+::\+Ref$<$ const \mbox{\hyperlink{namespacetesseract__common_a431ff65777ee0bed71e7671390638244}{tesseract\+\_\+common\+::\+Traj\+Array}} $>$ \&}]{traj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Plot a trajectory. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em traj} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classtesseract__visualization_1_1Visualization_a3c82492636d57cc7b5e85befc787a3ac}\label{classtesseract__visualization_1_1Visualization_a3c82492636d57cc7b5e85befc787a3ac}} 
+\index{tesseract\_visualization::Visualization@{tesseract\_visualization::Visualization}!waitForInput@{waitForInput}}
+\index{waitForInput@{waitForInput}!tesseract\_visualization::Visualization@{tesseract\_visualization::Visualization}}
+\doxysubsubsection{\texorpdfstring{waitForInput()}{waitForInput()}}
+{\footnotesize\ttfamily virtual void tesseract\+\_\+visualization\+::\+Visualization\+::wait\+For\+Input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Pause code and wait for enter key in terminal. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+tesseract/tesseract\+\_\+visualization/include/tesseract\+\_\+visualization/\mbox{\hyperlink{visualization_8h}{visualization.\+h}}\end{DoxyCompactItemize}

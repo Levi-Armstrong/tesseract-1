@@ -1,0 +1,361 @@
+\hypertarget{classtesseract__kinematics_1_1InverseKinematics}{}\doxysection{tesseract\+\_\+kinematics\+::Inverse\+Kinematics Class Reference}
+\label{classtesseract__kinematics_1_1InverseKinematics}\index{tesseract\_kinematics::InverseKinematics@{tesseract\_kinematics::InverseKinematics}}
+
+
+Inverse kinematics functions.  
+
+
+
+
+{\ttfamily \#include $<$inverse\+\_\+kinematics.\+h$>$}
+
+Inheritance diagram for tesseract\+\_\+kinematics\+::Inverse\+Kinematics\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.072797cm]{classtesseract__kinematics_1_1InverseKinematics}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classtesseract__kinematics_1_1InverseKinematics_a189ebd423f38f83720d58a922d049688}{Ptr}} = std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classtesseract__kinematics_1_1InverseKinematics}{Inverse\+Kinematics}} $>$
+\item 
+using \mbox{\hyperlink{classtesseract__kinematics_1_1InverseKinematics_ab8d8c23f62e4298bcc0951f82f3dba27}{Const\+Ptr}} = std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{classtesseract__kinematics_1_1InverseKinematics}{Inverse\+Kinematics}} $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtesseract__kinematics_1_1InverseKinematics_ac3acd9e61dce17e71a151abd27a50449}{Inverse\+Kinematics}} ()=default
+\item 
+virtual \mbox{\hyperlink{classtesseract__kinematics_1_1InverseKinematics_a1d701891ad5785ec42fa770848245aa3}{$\sim$\+Inverse\+Kinematics}} ()=default
+\item 
+\mbox{\hyperlink{classtesseract__kinematics_1_1InverseKinematics_af0998a48d9b2da335a504cd703c43f4f}{Inverse\+Kinematics}} (const \mbox{\hyperlink{classtesseract__kinematics_1_1InverseKinematics}{Inverse\+Kinematics}} \&)=delete
+\item 
+\mbox{\hyperlink{classtesseract__kinematics_1_1InverseKinematics}{Inverse\+Kinematics}} \& \mbox{\hyperlink{classtesseract__kinematics_1_1InverseKinematics_abe2ca18f89526bfa5a908fef933564b7}{operator=}} (const \mbox{\hyperlink{classtesseract__kinematics_1_1InverseKinematics}{Inverse\+Kinematics}} \&)=delete
+\item 
+\mbox{\hyperlink{classtesseract__kinematics_1_1InverseKinematics_ac796032fbc79848c44ca1130d8ca396d}{Inverse\+Kinematics}} (\mbox{\hyperlink{classtesseract__kinematics_1_1InverseKinematics}{Inverse\+Kinematics}} \&\&)=delete
+\item 
+\mbox{\hyperlink{classtesseract__kinematics_1_1InverseKinematics}{Inverse\+Kinematics}} \& \mbox{\hyperlink{classtesseract__kinematics_1_1InverseKinematics_aed2914ca8b36735a0cf70dab4cd6e3b8}{operator=}} (\mbox{\hyperlink{classtesseract__kinematics_1_1InverseKinematics}{Inverse\+Kinematics}} \&\&)=delete
+\item 
+virtual bool \mbox{\hyperlink{classtesseract__kinematics_1_1InverseKinematics_ad944080e198501a2db0aeb91fcc65c08}{calc\+Inv\+Kin}} (Eigen\+::\+Vector\+Xd \&solutions, const Eigen\+::\+Isometry3d \&pose, const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector\+Xd $>$ \&seed) const =0
+\begin{DoxyCompactList}\small\item\em Calculates joint solutions given a pose. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classtesseract__kinematics_1_1InverseKinematics_a622eb9c27e988a618b01890546e77aa2}{calc\+Inv\+Kin}} (Eigen\+::\+Vector\+Xd \&solutions, const Eigen\+::\+Isometry3d \&pose, const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector\+Xd $>$ \&seed, const std\+::string \&link\+\_\+name) const =0
+\begin{DoxyCompactList}\small\item\em Calculates joint solutions given a pose for a specific link. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classtesseract__kinematics_1_1InverseKinematics_a506b3d2d31903e51f370106c923d3ede}{check\+Joints}} (const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector\+Xd $>$ \&vec) const =0
+\begin{DoxyCompactList}\small\item\em Check for consistency in \# and limits of joints. \end{DoxyCompactList}\item 
+virtual const std\+::vector$<$ std\+::string $>$ \& \mbox{\hyperlink{classtesseract__kinematics_1_1InverseKinematics_a509112d77dac341dee52f0137e01e6f6}{get\+Joint\+Names}} () const =0
+\begin{DoxyCompactList}\small\item\em Get list of joint names for kinematic object. \end{DoxyCompactList}\item 
+virtual const std\+::vector$<$ std\+::string $>$ \& \mbox{\hyperlink{classtesseract__kinematics_1_1InverseKinematics_a7dc0b25363b6f5a0b3dbe537e103bd0a}{get\+Link\+Names}} () const =0
+\begin{DoxyCompactList}\small\item\em Get list of all link names (with and without geometry) for kinematic object. \end{DoxyCompactList}\item 
+virtual const std\+::vector$<$ std\+::string $>$ \& \mbox{\hyperlink{classtesseract__kinematics_1_1InverseKinematics_a38aa7a03a850f6033b19fd8e51874a27}{get\+Active\+Link\+Names}} () const =0
+\begin{DoxyCompactList}\small\item\em Get list of active link names (with and without geometry) for kinematic object. \end{DoxyCompactList}\item 
+virtual const Eigen\+::\+Matrix\+X2d \& \mbox{\hyperlink{classtesseract__kinematics_1_1InverseKinematics_abfc9e35ad45e98cd2abae916fcbf29f6}{get\+Limits}} () const =0
+\begin{DoxyCompactList}\small\item\em Getter for joint\+\_\+limits\+\_\+. \end{DoxyCompactList}\item 
+virtual unsigned int \mbox{\hyperlink{classtesseract__kinematics_1_1InverseKinematics_ac2608c4cab983f72ed534d5e2ea97568}{num\+Joints}} () const =0
+\begin{DoxyCompactList}\small\item\em Number of joints in robot. \end{DoxyCompactList}\item 
+virtual const std\+::string \& \mbox{\hyperlink{classtesseract__kinematics_1_1InverseKinematics_ae3152e3d458a0b48afbc1d886c76241a}{get\+Base\+Link\+Name}} () const =0
+\begin{DoxyCompactList}\small\item\em getter for the robot base link name \end{DoxyCompactList}\item 
+virtual const std\+::string \& \mbox{\hyperlink{classtesseract__kinematics_1_1InverseKinematics_a4bc2d1bf676a2f111752863d7110b42a}{get\+Tip\+Link\+Name}} () const =0
+\begin{DoxyCompactList}\small\item\em Get the tip link name. \end{DoxyCompactList}\item 
+virtual const std\+::string \& \mbox{\hyperlink{classtesseract__kinematics_1_1InverseKinematics_a1ab1cc410d1cc2977d0191c3ca755861}{get\+Name}} () const =0
+\begin{DoxyCompactList}\small\item\em Name of the maniputlator. \end{DoxyCompactList}\item 
+virtual const std\+::string \& \mbox{\hyperlink{classtesseract__kinematics_1_1InverseKinematics_adf7d4c9c4d555d74f86e9910a66fe693}{get\+Solver\+Name}} () const =0
+\begin{DoxyCompactList}\small\item\em Get the name of the solver. Recommned using the name of the class. \end{DoxyCompactList}\item 
+virtual std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classtesseract__kinematics_1_1InverseKinematics}{Inverse\+Kinematics}} $>$ \mbox{\hyperlink{classtesseract__kinematics_1_1InverseKinematics_a451f0377261e5806e606f7df4a7331f8}{clone}} () const =0
+\begin{DoxyCompactList}\small\item\em Clone the forward kinematics object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Inverse kinematics functions. 
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classtesseract__kinematics_1_1InverseKinematics_ab8d8c23f62e4298bcc0951f82f3dba27}\label{classtesseract__kinematics_1_1InverseKinematics_ab8d8c23f62e4298bcc0951f82f3dba27}} 
+\index{tesseract\_kinematics::InverseKinematics@{tesseract\_kinematics::InverseKinematics}!ConstPtr@{ConstPtr}}
+\index{ConstPtr@{ConstPtr}!tesseract\_kinematics::InverseKinematics@{tesseract\_kinematics::InverseKinematics}}
+\doxysubsubsection{\texorpdfstring{ConstPtr}{ConstPtr}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classtesseract__kinematics_1_1InverseKinematics_ab8d8c23f62e4298bcc0951f82f3dba27}{tesseract\+\_\+kinematics\+::\+Inverse\+Kinematics\+::\+Const\+Ptr}} =  std\+::shared\+\_\+ptr$<$const \mbox{\hyperlink{classtesseract__kinematics_1_1InverseKinematics}{Inverse\+Kinematics}}$>$}
+
+\mbox{\Hypertarget{classtesseract__kinematics_1_1InverseKinematics_a189ebd423f38f83720d58a922d049688}\label{classtesseract__kinematics_1_1InverseKinematics_a189ebd423f38f83720d58a922d049688}} 
+\index{tesseract\_kinematics::InverseKinematics@{tesseract\_kinematics::InverseKinematics}!Ptr@{Ptr}}
+\index{Ptr@{Ptr}!tesseract\_kinematics::InverseKinematics@{tesseract\_kinematics::InverseKinematics}}
+\doxysubsubsection{\texorpdfstring{Ptr}{Ptr}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classtesseract__kinematics_1_1InverseKinematics_a189ebd423f38f83720d58a922d049688}{tesseract\+\_\+kinematics\+::\+Inverse\+Kinematics\+::\+Ptr}} =  std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classtesseract__kinematics_1_1InverseKinematics}{Inverse\+Kinematics}}$>$}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtesseract__kinematics_1_1InverseKinematics_ac3acd9e61dce17e71a151abd27a50449}\label{classtesseract__kinematics_1_1InverseKinematics_ac3acd9e61dce17e71a151abd27a50449}} 
+\index{tesseract\_kinematics::InverseKinematics@{tesseract\_kinematics::InverseKinematics}!InverseKinematics@{InverseKinematics}}
+\index{InverseKinematics@{InverseKinematics}!tesseract\_kinematics::InverseKinematics@{tesseract\_kinematics::InverseKinematics}}
+\doxysubsubsection{\texorpdfstring{InverseKinematics()}{InverseKinematics()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily tesseract\+\_\+kinematics\+::\+Inverse\+Kinematics\+::\+Inverse\+Kinematics (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classtesseract__kinematics_1_1InverseKinematics_a1d701891ad5785ec42fa770848245aa3}\label{classtesseract__kinematics_1_1InverseKinematics_a1d701891ad5785ec42fa770848245aa3}} 
+\index{tesseract\_kinematics::InverseKinematics@{tesseract\_kinematics::InverseKinematics}!````~InverseKinematics@{$\sim$InverseKinematics}}
+\index{````~InverseKinematics@{$\sim$InverseKinematics}!tesseract\_kinematics::InverseKinematics@{tesseract\_kinematics::InverseKinematics}}
+\doxysubsubsection{\texorpdfstring{$\sim$InverseKinematics()}{~InverseKinematics()}}
+{\footnotesize\ttfamily virtual tesseract\+\_\+kinematics\+::\+Inverse\+Kinematics\+::$\sim$\+Inverse\+Kinematics (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+\mbox{\Hypertarget{classtesseract__kinematics_1_1InverseKinematics_af0998a48d9b2da335a504cd703c43f4f}\label{classtesseract__kinematics_1_1InverseKinematics_af0998a48d9b2da335a504cd703c43f4f}} 
+\index{tesseract\_kinematics::InverseKinematics@{tesseract\_kinematics::InverseKinematics}!InverseKinematics@{InverseKinematics}}
+\index{InverseKinematics@{InverseKinematics}!tesseract\_kinematics::InverseKinematics@{tesseract\_kinematics::InverseKinematics}}
+\doxysubsubsection{\texorpdfstring{InverseKinematics()}{InverseKinematics()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily tesseract\+\_\+kinematics\+::\+Inverse\+Kinematics\+::\+Inverse\+Kinematics (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtesseract__kinematics_1_1InverseKinematics}{Inverse\+Kinematics}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classtesseract__kinematics_1_1InverseKinematics_ac796032fbc79848c44ca1130d8ca396d}\label{classtesseract__kinematics_1_1InverseKinematics_ac796032fbc79848c44ca1130d8ca396d}} 
+\index{tesseract\_kinematics::InverseKinematics@{tesseract\_kinematics::InverseKinematics}!InverseKinematics@{InverseKinematics}}
+\index{InverseKinematics@{InverseKinematics}!tesseract\_kinematics::InverseKinematics@{tesseract\_kinematics::InverseKinematics}}
+\doxysubsubsection{\texorpdfstring{InverseKinematics()}{InverseKinematics()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily tesseract\+\_\+kinematics\+::\+Inverse\+Kinematics\+::\+Inverse\+Kinematics (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtesseract__kinematics_1_1InverseKinematics}{Inverse\+Kinematics}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtesseract__kinematics_1_1InverseKinematics_ad944080e198501a2db0aeb91fcc65c08}\label{classtesseract__kinematics_1_1InverseKinematics_ad944080e198501a2db0aeb91fcc65c08}} 
+\index{tesseract\_kinematics::InverseKinematics@{tesseract\_kinematics::InverseKinematics}!calcInvKin@{calcInvKin}}
+\index{calcInvKin@{calcInvKin}!tesseract\_kinematics::InverseKinematics@{tesseract\_kinematics::InverseKinematics}}
+\doxysubsubsection{\texorpdfstring{calcInvKin()}{calcInvKin()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual bool tesseract\+\_\+kinematics\+::\+Inverse\+Kinematics\+::calc\+Inv\+Kin (\begin{DoxyParamCaption}\item[{Eigen\+::\+Vector\+Xd \&}]{solutions,  }\item[{const Eigen\+::\+Isometry3d \&}]{pose,  }\item[{const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector\+Xd $>$ \&}]{seed }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Calculates joint solutions given a pose. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em solutions} & A vector of solutions, so check the size of the vector to determine the number of solutions \\
+\hline
+{\em pose} & Transform of end-\/of-\/tip relative to root (base link) \\
+\hline
+{\em seed} & Vector of seed joint angles (size must match number of joints in robot chain) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if calculation successful, False if anything is wrong (including uninitialized) 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classtesseract__kinematics_1_1IKFastInvKin_ac183202d391b2f75f98359e085c472d9}{tesseract\+\_\+kinematics\+::\+I\+K\+Fast\+Inv\+Kin}}, \mbox{\hyperlink{classtesseract__kinematics_1_1KDLInvKinChainNR_ad1e4671df51c049219bd0522ffa5709e}{tesseract\+\_\+kinematics\+::\+K\+D\+L\+Inv\+Kin\+Chain\+NR}}, \mbox{\hyperlink{classtesseract__kinematics_1_1KDLInvKinChainLMA_a004ac8294cda655f681152ff22945dbc}{tesseract\+\_\+kinematics\+::\+K\+D\+L\+Inv\+Kin\+Chain\+L\+MA}}, and \mbox{\hyperlink{classtesseract__kinematics_1_1OPWInvKin_a81b9acc1a2149c831887d59e7894d3fb}{tesseract\+\_\+kinematics\+::\+O\+P\+W\+Inv\+Kin}}.
+
+\mbox{\Hypertarget{classtesseract__kinematics_1_1InverseKinematics_a622eb9c27e988a618b01890546e77aa2}\label{classtesseract__kinematics_1_1InverseKinematics_a622eb9c27e988a618b01890546e77aa2}} 
+\index{tesseract\_kinematics::InverseKinematics@{tesseract\_kinematics::InverseKinematics}!calcInvKin@{calcInvKin}}
+\index{calcInvKin@{calcInvKin}!tesseract\_kinematics::InverseKinematics@{tesseract\_kinematics::InverseKinematics}}
+\doxysubsubsection{\texorpdfstring{calcInvKin()}{calcInvKin()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual bool tesseract\+\_\+kinematics\+::\+Inverse\+Kinematics\+::calc\+Inv\+Kin (\begin{DoxyParamCaption}\item[{Eigen\+::\+Vector\+Xd \&}]{solutions,  }\item[{const Eigen\+::\+Isometry3d \&}]{pose,  }\item[{const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector\+Xd $>$ \&}]{seed,  }\item[{const std\+::string \&}]{link\+\_\+name }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Calculates joint solutions given a pose for a specific link. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em solutions} & A vector of solutions, so check the size of the vector to determine the number of solutions \\
+\hline
+{\em pose} & Transform of end-\/of-\/tip relative to root (base link) \\
+\hline
+{\em seed} & Vector of seed joint angles (size must match number of joints in robot chain) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if calculation successful, False if anything is wrong (including uninitialized) 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classtesseract__kinematics_1_1IKFastInvKin_a0924b31c8e8aedf57d654959919ea73e}{tesseract\+\_\+kinematics\+::\+I\+K\+Fast\+Inv\+Kin}}, \mbox{\hyperlink{classtesseract__kinematics_1_1KDLInvKinChainNR_a6b951c2e79de9eaf92e1b0785302908d}{tesseract\+\_\+kinematics\+::\+K\+D\+L\+Inv\+Kin\+Chain\+NR}}, \mbox{\hyperlink{classtesseract__kinematics_1_1KDLInvKinChainLMA_ada1769438011d2109370b39a6cbfa7f2}{tesseract\+\_\+kinematics\+::\+K\+D\+L\+Inv\+Kin\+Chain\+L\+MA}}, and \mbox{\hyperlink{classtesseract__kinematics_1_1OPWInvKin_a9ac1592552f43ea807a0782ddde4c1ad}{tesseract\+\_\+kinematics\+::\+O\+P\+W\+Inv\+Kin}}.
+
+\mbox{\Hypertarget{classtesseract__kinematics_1_1InverseKinematics_a506b3d2d31903e51f370106c923d3ede}\label{classtesseract__kinematics_1_1InverseKinematics_a506b3d2d31903e51f370106c923d3ede}} 
+\index{tesseract\_kinematics::InverseKinematics@{tesseract\_kinematics::InverseKinematics}!checkJoints@{checkJoints}}
+\index{checkJoints@{checkJoints}!tesseract\_kinematics::InverseKinematics@{tesseract\_kinematics::InverseKinematics}}
+\doxysubsubsection{\texorpdfstring{checkJoints()}{checkJoints()}}
+{\footnotesize\ttfamily virtual bool tesseract\+\_\+kinematics\+::\+Inverse\+Kinematics\+::check\+Joints (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector\+Xd $>$ \&}]{vec }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Check for consistency in \# and limits of joints. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vec} & Vector of joint values \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if size of vec matches \# of robot joints and all joints are within limits 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classtesseract__kinematics_1_1IKFastInvKin_add9306597df421de730f37f248a41fab}{tesseract\+\_\+kinematics\+::\+I\+K\+Fast\+Inv\+Kin}}, \mbox{\hyperlink{classtesseract__kinematics_1_1KDLInvKinChainNR_adbd83f0ab4d2fd4128604dfe1d980fad}{tesseract\+\_\+kinematics\+::\+K\+D\+L\+Inv\+Kin\+Chain\+NR}}, \mbox{\hyperlink{classtesseract__kinematics_1_1KDLInvKinChainLMA_a3f125dc669efca2ce58e6afcc06a99a1}{tesseract\+\_\+kinematics\+::\+K\+D\+L\+Inv\+Kin\+Chain\+L\+MA}}, and \mbox{\hyperlink{classtesseract__kinematics_1_1OPWInvKin_a429af4de178b3a1cc3af544cdb6bf5fa}{tesseract\+\_\+kinematics\+::\+O\+P\+W\+Inv\+Kin}}.
+
+\mbox{\Hypertarget{classtesseract__kinematics_1_1InverseKinematics_a451f0377261e5806e606f7df4a7331f8}\label{classtesseract__kinematics_1_1InverseKinematics_a451f0377261e5806e606f7df4a7331f8}} 
+\index{tesseract\_kinematics::InverseKinematics@{tesseract\_kinematics::InverseKinematics}!clone@{clone}}
+\index{clone@{clone}!tesseract\_kinematics::InverseKinematics@{tesseract\_kinematics::InverseKinematics}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily virtual std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classtesseract__kinematics_1_1InverseKinematics}{Inverse\+Kinematics}}$>$ tesseract\+\_\+kinematics\+::\+Inverse\+Kinematics\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Clone the forward kinematics object. 
+
+
+
+Implemented in \mbox{\hyperlink{classtesseract__kinematics_1_1IKFastInvKin_af79f1ab81bd740e7f436a3bb92f96fb0}{tesseract\+\_\+kinematics\+::\+I\+K\+Fast\+Inv\+Kin}}, \mbox{\hyperlink{classtesseract__kinematics_1_1KDLInvKinChainNR_a8032302c47a13a3dfd2c1398d16fdecb}{tesseract\+\_\+kinematics\+::\+K\+D\+L\+Inv\+Kin\+Chain\+NR}}, \mbox{\hyperlink{classtesseract__kinematics_1_1KDLInvKinChainLMA_af59bfec9aa33d9d665b6d9235ea716d0}{tesseract\+\_\+kinematics\+::\+K\+D\+L\+Inv\+Kin\+Chain\+L\+MA}}, and \mbox{\hyperlink{classtesseract__kinematics_1_1OPWInvKin_a5d7b657400d7f84044cb84d3d734df73}{tesseract\+\_\+kinematics\+::\+O\+P\+W\+Inv\+Kin}}.
+
+\mbox{\Hypertarget{classtesseract__kinematics_1_1InverseKinematics_a38aa7a03a850f6033b19fd8e51874a27}\label{classtesseract__kinematics_1_1InverseKinematics_a38aa7a03a850f6033b19fd8e51874a27}} 
+\index{tesseract\_kinematics::InverseKinematics@{tesseract\_kinematics::InverseKinematics}!getActiveLinkNames@{getActiveLinkNames}}
+\index{getActiveLinkNames@{getActiveLinkNames}!tesseract\_kinematics::InverseKinematics@{tesseract\_kinematics::InverseKinematics}}
+\doxysubsubsection{\texorpdfstring{getActiveLinkNames()}{getActiveLinkNames()}}
+{\footnotesize\ttfamily virtual const std\+::vector$<$std\+::string$>$\& tesseract\+\_\+kinematics\+::\+Inverse\+Kinematics\+::get\+Active\+Link\+Names (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Get list of active link names (with and without geometry) for kinematic object. 
+
+Note\+: This only includes links that are children of the active joints
+
+\begin{DoxyReturn}{Returns}
+A vector of names, active\+\_\+link\+\_\+list\+\_\+ 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classtesseract__kinematics_1_1KDLInvKinChainNR_aa6eaaf228736bcc9dca7042837e66575}{tesseract\+\_\+kinematics\+::\+K\+D\+L\+Inv\+Kin\+Chain\+NR}}, \mbox{\hyperlink{classtesseract__kinematics_1_1KDLInvKinChainLMA_a3bb6ccefef293033dd637a976841dabb}{tesseract\+\_\+kinematics\+::\+K\+D\+L\+Inv\+Kin\+Chain\+L\+MA}}, \mbox{\hyperlink{classtesseract__kinematics_1_1OPWInvKin_a7b5bff8ca11935a2e09e704c65f7866f}{tesseract\+\_\+kinematics\+::\+O\+P\+W\+Inv\+Kin}}, and \mbox{\hyperlink{classtesseract__kinematics_1_1IKFastInvKin_ae62d7c437cef791ff71142e468b822c5}{tesseract\+\_\+kinematics\+::\+I\+K\+Fast\+Inv\+Kin}}.
+
+\mbox{\Hypertarget{classtesseract__kinematics_1_1InverseKinematics_ae3152e3d458a0b48afbc1d886c76241a}\label{classtesseract__kinematics_1_1InverseKinematics_ae3152e3d458a0b48afbc1d886c76241a}} 
+\index{tesseract\_kinematics::InverseKinematics@{tesseract\_kinematics::InverseKinematics}!getBaseLinkName@{getBaseLinkName}}
+\index{getBaseLinkName@{getBaseLinkName}!tesseract\_kinematics::InverseKinematics@{tesseract\_kinematics::InverseKinematics}}
+\doxysubsubsection{\texorpdfstring{getBaseLinkName()}{getBaseLinkName()}}
+{\footnotesize\ttfamily virtual const std\+::string\& tesseract\+\_\+kinematics\+::\+Inverse\+Kinematics\+::get\+Base\+Link\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+getter for the robot base link name 
+
+
+
+Implemented in \mbox{\hyperlink{classtesseract__kinematics_1_1IKFastInvKin_a5117f4d79cb41d6daad35999f6183800}{tesseract\+\_\+kinematics\+::\+I\+K\+Fast\+Inv\+Kin}}, \mbox{\hyperlink{classtesseract__kinematics_1_1KDLInvKinChainNR_a84ee0d231367d7b9906fbc07a0fe042c}{tesseract\+\_\+kinematics\+::\+K\+D\+L\+Inv\+Kin\+Chain\+NR}}, \mbox{\hyperlink{classtesseract__kinematics_1_1KDLInvKinChainLMA_a254303af9147c43b8c631b1a09dbd50b}{tesseract\+\_\+kinematics\+::\+K\+D\+L\+Inv\+Kin\+Chain\+L\+MA}}, and \mbox{\hyperlink{classtesseract__kinematics_1_1OPWInvKin_adfae09d9a1c8db5a9c6cd02d79eb8ab8}{tesseract\+\_\+kinematics\+::\+O\+P\+W\+Inv\+Kin}}.
+
+\mbox{\Hypertarget{classtesseract__kinematics_1_1InverseKinematics_a509112d77dac341dee52f0137e01e6f6}\label{classtesseract__kinematics_1_1InverseKinematics_a509112d77dac341dee52f0137e01e6f6}} 
+\index{tesseract\_kinematics::InverseKinematics@{tesseract\_kinematics::InverseKinematics}!getJointNames@{getJointNames}}
+\index{getJointNames@{getJointNames}!tesseract\_kinematics::InverseKinematics@{tesseract\_kinematics::InverseKinematics}}
+\doxysubsubsection{\texorpdfstring{getJointNames()}{getJointNames()}}
+{\footnotesize\ttfamily virtual const std\+::vector$<$std\+::string$>$\& tesseract\+\_\+kinematics\+::\+Inverse\+Kinematics\+::get\+Joint\+Names (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Get list of joint names for kinematic object. 
+
+\begin{DoxyReturn}{Returns}
+A vector of joint names, joint\+\_\+list\+\_\+ 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classtesseract__kinematics_1_1IKFastInvKin_abfb0701556d7b9c1f1af4d05988c7a57}{tesseract\+\_\+kinematics\+::\+I\+K\+Fast\+Inv\+Kin}}, \mbox{\hyperlink{classtesseract__kinematics_1_1KDLInvKinChainNR_a5bcce2eb2ee87aabfaf0fdaa6f7e5d52}{tesseract\+\_\+kinematics\+::\+K\+D\+L\+Inv\+Kin\+Chain\+NR}}, \mbox{\hyperlink{classtesseract__kinematics_1_1KDLInvKinChainLMA_a049d07448649b03b7fe7f339873708a2}{tesseract\+\_\+kinematics\+::\+K\+D\+L\+Inv\+Kin\+Chain\+L\+MA}}, and \mbox{\hyperlink{classtesseract__kinematics_1_1OPWInvKin_ab1c638c784dd52a2669a882494959a34}{tesseract\+\_\+kinematics\+::\+O\+P\+W\+Inv\+Kin}}.
+
+\mbox{\Hypertarget{classtesseract__kinematics_1_1InverseKinematics_abfc9e35ad45e98cd2abae916fcbf29f6}\label{classtesseract__kinematics_1_1InverseKinematics_abfc9e35ad45e98cd2abae916fcbf29f6}} 
+\index{tesseract\_kinematics::InverseKinematics@{tesseract\_kinematics::InverseKinematics}!getLimits@{getLimits}}
+\index{getLimits@{getLimits}!tesseract\_kinematics::InverseKinematics@{tesseract\_kinematics::InverseKinematics}}
+\doxysubsubsection{\texorpdfstring{getLimits()}{getLimits()}}
+{\footnotesize\ttfamily virtual const Eigen\+::\+Matrix\+X2d\& tesseract\+\_\+kinematics\+::\+Inverse\+Kinematics\+::get\+Limits (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Getter for joint\+\_\+limits\+\_\+. 
+
+\begin{DoxyReturn}{Returns}
+Matrix of joint limits 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classtesseract__kinematics_1_1IKFastInvKin_aabda402d68b8868f15312480adc578f1}{tesseract\+\_\+kinematics\+::\+I\+K\+Fast\+Inv\+Kin}}, \mbox{\hyperlink{classtesseract__kinematics_1_1KDLInvKinChainNR_ac3e65ebf331d41275d5171db479f0ec8}{tesseract\+\_\+kinematics\+::\+K\+D\+L\+Inv\+Kin\+Chain\+NR}}, \mbox{\hyperlink{classtesseract__kinematics_1_1KDLInvKinChainLMA_ab92a6c9e989d9327014f528feb2c3fdf}{tesseract\+\_\+kinematics\+::\+K\+D\+L\+Inv\+Kin\+Chain\+L\+MA}}, and \mbox{\hyperlink{classtesseract__kinematics_1_1OPWInvKin_a69c6627d18f424679a31a6252d1abd32}{tesseract\+\_\+kinematics\+::\+O\+P\+W\+Inv\+Kin}}.
+
+\mbox{\Hypertarget{classtesseract__kinematics_1_1InverseKinematics_a7dc0b25363b6f5a0b3dbe537e103bd0a}\label{classtesseract__kinematics_1_1InverseKinematics_a7dc0b25363b6f5a0b3dbe537e103bd0a}} 
+\index{tesseract\_kinematics::InverseKinematics@{tesseract\_kinematics::InverseKinematics}!getLinkNames@{getLinkNames}}
+\index{getLinkNames@{getLinkNames}!tesseract\_kinematics::InverseKinematics@{tesseract\_kinematics::InverseKinematics}}
+\doxysubsubsection{\texorpdfstring{getLinkNames()}{getLinkNames()}}
+{\footnotesize\ttfamily virtual const std\+::vector$<$std\+::string$>$\& tesseract\+\_\+kinematics\+::\+Inverse\+Kinematics\+::get\+Link\+Names (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Get list of all link names (with and without geometry) for kinematic object. 
+
+\begin{DoxyReturn}{Returns}
+A vector of names, link\+\_\+list\+\_\+ 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classtesseract__kinematics_1_1IKFastInvKin_aa0969014494b2269afedceb0772a3b25}{tesseract\+\_\+kinematics\+::\+I\+K\+Fast\+Inv\+Kin}}, \mbox{\hyperlink{classtesseract__kinematics_1_1KDLInvKinChainNR_a7169474007f03663fd1647929d4e03e5}{tesseract\+\_\+kinematics\+::\+K\+D\+L\+Inv\+Kin\+Chain\+NR}}, \mbox{\hyperlink{classtesseract__kinematics_1_1KDLInvKinChainLMA_ace664bb5eb1af0654729719e5eb3d0cc}{tesseract\+\_\+kinematics\+::\+K\+D\+L\+Inv\+Kin\+Chain\+L\+MA}}, and \mbox{\hyperlink{classtesseract__kinematics_1_1OPWInvKin_a13ee1425565762e6001e7aeb1c6ec925}{tesseract\+\_\+kinematics\+::\+O\+P\+W\+Inv\+Kin}}.
+
+\mbox{\Hypertarget{classtesseract__kinematics_1_1InverseKinematics_a1ab1cc410d1cc2977d0191c3ca755861}\label{classtesseract__kinematics_1_1InverseKinematics_a1ab1cc410d1cc2977d0191c3ca755861}} 
+\index{tesseract\_kinematics::InverseKinematics@{tesseract\_kinematics::InverseKinematics}!getName@{getName}}
+\index{getName@{getName}!tesseract\_kinematics::InverseKinematics@{tesseract\_kinematics::InverseKinematics}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily virtual const std\+::string\& tesseract\+\_\+kinematics\+::\+Inverse\+Kinematics\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Name of the maniputlator. 
+
+
+
+Implemented in \mbox{\hyperlink{classtesseract__kinematics_1_1IKFastInvKin_aa3dc3dc3bae42279a5d046cae0e34806}{tesseract\+\_\+kinematics\+::\+I\+K\+Fast\+Inv\+Kin}}, \mbox{\hyperlink{classtesseract__kinematics_1_1KDLInvKinChainNR_a9309d75de417b585b269f25c9026a71b}{tesseract\+\_\+kinematics\+::\+K\+D\+L\+Inv\+Kin\+Chain\+NR}}, \mbox{\hyperlink{classtesseract__kinematics_1_1KDLInvKinChainLMA_a9c6728748570ebd5536e426bf868bd06}{tesseract\+\_\+kinematics\+::\+K\+D\+L\+Inv\+Kin\+Chain\+L\+MA}}, and \mbox{\hyperlink{classtesseract__kinematics_1_1OPWInvKin_ae34aa74636d520d30548b7d719d1926a}{tesseract\+\_\+kinematics\+::\+O\+P\+W\+Inv\+Kin}}.
+
+\mbox{\Hypertarget{classtesseract__kinematics_1_1InverseKinematics_adf7d4c9c4d555d74f86e9910a66fe693}\label{classtesseract__kinematics_1_1InverseKinematics_adf7d4c9c4d555d74f86e9910a66fe693}} 
+\index{tesseract\_kinematics::InverseKinematics@{tesseract\_kinematics::InverseKinematics}!getSolverName@{getSolverName}}
+\index{getSolverName@{getSolverName}!tesseract\_kinematics::InverseKinematics@{tesseract\_kinematics::InverseKinematics}}
+\doxysubsubsection{\texorpdfstring{getSolverName()}{getSolverName()}}
+{\footnotesize\ttfamily virtual const std\+::string\& tesseract\+\_\+kinematics\+::\+Inverse\+Kinematics\+::get\+Solver\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Get the name of the solver. Recommned using the name of the class. 
+
+
+
+Implemented in \mbox{\hyperlink{classtesseract__kinematics_1_1IKFastInvKin_a9e9d70b9f35d06192bf7c7ba8206dacd}{tesseract\+\_\+kinematics\+::\+I\+K\+Fast\+Inv\+Kin}}, \mbox{\hyperlink{classtesseract__kinematics_1_1KDLInvKinChainNR_a92e7e8a63e05b1581d1e7b589681687f}{tesseract\+\_\+kinematics\+::\+K\+D\+L\+Inv\+Kin\+Chain\+NR}}, \mbox{\hyperlink{classtesseract__kinematics_1_1KDLInvKinChainLMA_a4020bb8f93a02efeb3a0bdec971d6ffa}{tesseract\+\_\+kinematics\+::\+K\+D\+L\+Inv\+Kin\+Chain\+L\+MA}}, and \mbox{\hyperlink{classtesseract__kinematics_1_1OPWInvKin_ab731ab79563d6ab02f6dcc16187ab6e4}{tesseract\+\_\+kinematics\+::\+O\+P\+W\+Inv\+Kin}}.
+
+\mbox{\Hypertarget{classtesseract__kinematics_1_1InverseKinematics_a4bc2d1bf676a2f111752863d7110b42a}\label{classtesseract__kinematics_1_1InverseKinematics_a4bc2d1bf676a2f111752863d7110b42a}} 
+\index{tesseract\_kinematics::InverseKinematics@{tesseract\_kinematics::InverseKinematics}!getTipLinkName@{getTipLinkName}}
+\index{getTipLinkName@{getTipLinkName}!tesseract\_kinematics::InverseKinematics@{tesseract\_kinematics::InverseKinematics}}
+\doxysubsubsection{\texorpdfstring{getTipLinkName()}{getTipLinkName()}}
+{\footnotesize\ttfamily virtual const std\+::string\& tesseract\+\_\+kinematics\+::\+Inverse\+Kinematics\+::get\+Tip\+Link\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Get the tip link name. 
+
+
+
+Implemented in \mbox{\hyperlink{classtesseract__kinematics_1_1IKFastInvKin_a0d559ee5403c360ab66729260de081be}{tesseract\+\_\+kinematics\+::\+I\+K\+Fast\+Inv\+Kin}}, \mbox{\hyperlink{classtesseract__kinematics_1_1KDLInvKinChainNR_a22b39c4c72b4c9dfbccfa4dead64f524}{tesseract\+\_\+kinematics\+::\+K\+D\+L\+Inv\+Kin\+Chain\+NR}}, \mbox{\hyperlink{classtesseract__kinematics_1_1KDLInvKinChainLMA_ad96a12ac5d9fad8725bac7fb2d08b1ef}{tesseract\+\_\+kinematics\+::\+K\+D\+L\+Inv\+Kin\+Chain\+L\+MA}}, and \mbox{\hyperlink{classtesseract__kinematics_1_1OPWInvKin_a5cd5ae36205551623bfb89c021781da0}{tesseract\+\_\+kinematics\+::\+O\+P\+W\+Inv\+Kin}}.
+
+\mbox{\Hypertarget{classtesseract__kinematics_1_1InverseKinematics_ac2608c4cab983f72ed534d5e2ea97568}\label{classtesseract__kinematics_1_1InverseKinematics_ac2608c4cab983f72ed534d5e2ea97568}} 
+\index{tesseract\_kinematics::InverseKinematics@{tesseract\_kinematics::InverseKinematics}!numJoints@{numJoints}}
+\index{numJoints@{numJoints}!tesseract\_kinematics::InverseKinematics@{tesseract\_kinematics::InverseKinematics}}
+\doxysubsubsection{\texorpdfstring{numJoints()}{numJoints()}}
+{\footnotesize\ttfamily virtual unsigned int tesseract\+\_\+kinematics\+::\+Inverse\+Kinematics\+::num\+Joints (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Number of joints in robot. 
+
+\begin{DoxyReturn}{Returns}
+Number of joints in robot 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classtesseract__kinematics_1_1IKFastInvKin_a819b3bdc97fa334d50d945d18b2bb8fc}{tesseract\+\_\+kinematics\+::\+I\+K\+Fast\+Inv\+Kin}}, \mbox{\hyperlink{classtesseract__kinematics_1_1KDLInvKinChainNR_a1116459d73586b160d7d79b25841291d}{tesseract\+\_\+kinematics\+::\+K\+D\+L\+Inv\+Kin\+Chain\+NR}}, \mbox{\hyperlink{classtesseract__kinematics_1_1KDLInvKinChainLMA_a650a612d9a7b65689aed76ab66e03e9d}{tesseract\+\_\+kinematics\+::\+K\+D\+L\+Inv\+Kin\+Chain\+L\+MA}}, and \mbox{\hyperlink{classtesseract__kinematics_1_1OPWInvKin_ae1b027ca58ed8309a604e5fabfeb250f}{tesseract\+\_\+kinematics\+::\+O\+P\+W\+Inv\+Kin}}.
+
+\mbox{\Hypertarget{classtesseract__kinematics_1_1InverseKinematics_abe2ca18f89526bfa5a908fef933564b7}\label{classtesseract__kinematics_1_1InverseKinematics_abe2ca18f89526bfa5a908fef933564b7}} 
+\index{tesseract\_kinematics::InverseKinematics@{tesseract\_kinematics::InverseKinematics}!operator=@{operator=}}
+\index{operator=@{operator=}!tesseract\_kinematics::InverseKinematics@{tesseract\_kinematics::InverseKinematics}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__kinematics_1_1InverseKinematics}{Inverse\+Kinematics}}\& tesseract\+\_\+kinematics\+::\+Inverse\+Kinematics\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtesseract__kinematics_1_1InverseKinematics}{Inverse\+Kinematics}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classtesseract__kinematics_1_1InverseKinematics_aed2914ca8b36735a0cf70dab4cd6e3b8}\label{classtesseract__kinematics_1_1InverseKinematics_aed2914ca8b36735a0cf70dab4cd6e3b8}} 
+\index{tesseract\_kinematics::InverseKinematics@{tesseract\_kinematics::InverseKinematics}!operator=@{operator=}}
+\index{operator=@{operator=}!tesseract\_kinematics::InverseKinematics@{tesseract\_kinematics::InverseKinematics}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__kinematics_1_1InverseKinematics}{Inverse\+Kinematics}}\& tesseract\+\_\+kinematics\+::\+Inverse\+Kinematics\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtesseract__kinematics_1_1InverseKinematics}{Inverse\+Kinematics}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+tesseract/tesseract\+\_\+kinematics/include/tesseract\+\_\+kinematics/core/\mbox{\hyperlink{inverse__kinematics_8h}{inverse\+\_\+kinematics.\+h}}\end{DoxyCompactItemize}

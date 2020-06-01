@@ -1,0 +1,64 @@
+\hypertarget{structtesseract__process__planners_1_1ProcessDefinition}{}\doxysection{tesseract\+\_\+process\+\_\+planners\+::Process\+Definition Class Reference}
+\label{structtesseract__process__planners_1_1ProcessDefinition}\index{tesseract\_process\_planners::ProcessDefinition@{tesseract\_process\_planners::ProcessDefinition}}
+
+
+{\ttfamily \#include $<$process\+\_\+definition.\+h$>$}
+
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtesseract__motion__planners_1_1Waypoint_a29451e07e89a6a6695dd6c1b557b0905}{tesseract\+\_\+motion\+\_\+planners\+::\+Waypoint\+::\+Const\+Ptr}} \mbox{\hyperlink{structtesseract__process__planners_1_1ProcessDefinition_a0ba3576e618a6290160ea5a2442d1ec2}{start}}
+\item 
+\mbox{\hyperlink{classtesseract__motion__planners_1_1Waypoint_a29451e07e89a6a6695dd6c1b557b0905}{tesseract\+\_\+motion\+\_\+planners\+::\+Waypoint\+::\+Const\+Ptr}} \mbox{\hyperlink{structtesseract__process__planners_1_1ProcessDefinition_aab54cd5554fe9a511023756e0e02cc93}{end}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classtesseract__process__planners_1_1ProcessSegmentDefinition}{Process\+Segment\+Definition}} $>$ \mbox{\hyperlink{structtesseract__process__planners_1_1ProcessDefinition_adac10ebccd3196da88a19447130cbec8}{segments}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structtesseract__process__planners_1_1ProcessTransitionDefinition}{Process\+Transition\+Definition}} $>$ \mbox{\hyperlink{structtesseract__process__planners_1_1ProcessDefinition_a1d51e0cc6a98148fbe6a0799aa35daae}{transitions}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A process definition.
+
+This is not intended to support or handle all processes but should covers most of the common ones like sanding, painting, grinding, etc.
+
+In a process, we assume they follow this pattern.
+\begin{DoxyItemize}
+\item The robot starts from a start position,
+\item Moves to an approach position just above the object
+\item Executes a process(sanding, painting, etc.)
+\item Return to the start position
+\end{DoxyItemize}
+
+Given the process described the user is only required to define two objects. The start position of the robot and a vector of Process Segment Definitions. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structtesseract__process__planners_1_1ProcessDefinition_aab54cd5554fe9a511023756e0e02cc93}\label{structtesseract__process__planners_1_1ProcessDefinition_aab54cd5554fe9a511023756e0e02cc93}} 
+\index{tesseract\_process\_planners::ProcessDefinition@{tesseract\_process\_planners::ProcessDefinition}!end@{end}}
+\index{end@{end}!tesseract\_process\_planners::ProcessDefinition@{tesseract\_process\_planners::ProcessDefinition}}
+\doxysubsubsection{\texorpdfstring{end}{end}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__motion__planners_1_1Waypoint_a29451e07e89a6a6695dd6c1b557b0905}{tesseract\+\_\+motion\+\_\+planners\+::\+Waypoint\+::\+Const\+Ptr}} tesseract\+\_\+process\+\_\+planners\+::\+Process\+Definition\+::end}
+
+The end position of the robot \mbox{\Hypertarget{structtesseract__process__planners_1_1ProcessDefinition_adac10ebccd3196da88a19447130cbec8}\label{structtesseract__process__planners_1_1ProcessDefinition_adac10ebccd3196da88a19447130cbec8}} 
+\index{tesseract\_process\_planners::ProcessDefinition@{tesseract\_process\_planners::ProcessDefinition}!segments@{segments}}
+\index{segments@{segments}!tesseract\_process\_planners::ProcessDefinition@{tesseract\_process\_planners::ProcessDefinition}}
+\doxysubsubsection{\texorpdfstring{segments}{segments}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{classtesseract__process__planners_1_1ProcessSegmentDefinition}{Process\+Segment\+Definition}}$>$ tesseract\+\_\+process\+\_\+planners\+::\+Process\+Definition\+::segments}
+
+All of the raster segments with approaches and departures \mbox{\Hypertarget{structtesseract__process__planners_1_1ProcessDefinition_a0ba3576e618a6290160ea5a2442d1ec2}\label{structtesseract__process__planners_1_1ProcessDefinition_a0ba3576e618a6290160ea5a2442d1ec2}} 
+\index{tesseract\_process\_planners::ProcessDefinition@{tesseract\_process\_planners::ProcessDefinition}!start@{start}}
+\index{start@{start}!tesseract\_process\_planners::ProcessDefinition@{tesseract\_process\_planners::ProcessDefinition}}
+\doxysubsubsection{\texorpdfstring{start}{start}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__motion__planners_1_1Waypoint_a29451e07e89a6a6695dd6c1b557b0905}{tesseract\+\_\+motion\+\_\+planners\+::\+Waypoint\+::\+Const\+Ptr}} tesseract\+\_\+process\+\_\+planners\+::\+Process\+Definition\+::start}
+
+The start position of the robot \mbox{\Hypertarget{structtesseract__process__planners_1_1ProcessDefinition_a1d51e0cc6a98148fbe6a0799aa35daae}\label{structtesseract__process__planners_1_1ProcessDefinition_a1d51e0cc6a98148fbe6a0799aa35daae}} 
+\index{tesseract\_process\_planners::ProcessDefinition@{tesseract\_process\_planners::ProcessDefinition}!transitions@{transitions}}
+\index{transitions@{transitions}!tesseract\_process\_planners::ProcessDefinition@{tesseract\_process\_planners::ProcessDefinition}}
+\doxysubsubsection{\texorpdfstring{transitions}{transitions}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{structtesseract__process__planners_1_1ProcessTransitionDefinition}{Process\+Transition\+Definition}}$>$ tesseract\+\_\+process\+\_\+planners\+::\+Process\+Definition\+::transitions}
+
+All of the transition to/from a given segment. Must be same length as segments 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+tesseract/tesseract\+\_\+planning/tesseract\+\_\+process\+\_\+planners/include/tesseract\+\_\+process\+\_\+planners/\mbox{\hyperlink{process__definition_8h}{process\+\_\+definition.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,169 @@
+\hypertarget{classtesseract__motion__planners_1_1CartesianWaypoint}{}\doxysection{tesseract\+\_\+motion\+\_\+planners\+::Cartesian\+Waypoint Class Reference}
+\label{classtesseract__motion__planners_1_1CartesianWaypoint}\index{tesseract\_motion\_planners::CartesianWaypoint@{tesseract\_motion\_planners::CartesianWaypoint}}
+
+
+Defines a cartesian position waypoint for use with Tesseract Planners.  
+
+
+
+
+{\ttfamily \#include $<$waypoint.\+h$>$}
+
+Inheritance diagram for tesseract\+\_\+motion\+\_\+planners\+::Cartesian\+Waypoint\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classtesseract__motion__planners_1_1CartesianWaypoint}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classtesseract__motion__planners_1_1CartesianWaypoint_a2e32962180c41749938cd86431671401}{Ptr}} = std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classtesseract__motion__planners_1_1CartesianWaypoint}{Cartesian\+Waypoint}} $>$
+\item 
+using \mbox{\hyperlink{classtesseract__motion__planners_1_1CartesianWaypoint_af1608cbf82c00af7c4a85fea954b70c4}{Const\+Ptr}} = std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{classtesseract__motion__planners_1_1CartesianWaypoint}{Cartesian\+Waypoint}} $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtesseract__motion__planners_1_1CartesianWaypoint_aac824cbc9ae2d6cecf3abdb3d7eb568f}{Cartesian\+Waypoint}} (const Eigen\+::\+Isometry3d \&cartesian\+\_\+position, std\+::string parent\+\_\+link=\char`\"{}\char`\"{})
+\item 
+\mbox{\hyperlink{classtesseract__motion__planners_1_1CartesianWaypoint_a978b05f8341789eb34e4f9419946e9a1}{Cartesian\+Waypoint}} (const Eigen\+::\+Vector3d \&position, const Eigen\+::\+Quaterniond \&orientation, std\+::string link=\char`\"{}\char`\"{})
+\item 
+const Eigen\+::\+Isometry3d \& \mbox{\hyperlink{classtesseract__motion__planners_1_1CartesianWaypoint_a649a0fda90e4cbfac106e644aba5cdb0}{get\+Transform}} () const
+\begin{DoxyCompactList}\small\item\em Get the cartesian transform. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector3d \mbox{\hyperlink{classtesseract__motion__planners_1_1CartesianWaypoint_ac3e577d03e1c0d582910993bc155574c}{get\+Position}} () const
+\begin{DoxyCompactList}\small\item\em Convenience function that returns the xyz cartesian position contained in cartesian\+\_\+position\+\_\+. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector4d \mbox{\hyperlink{classtesseract__motion__planners_1_1CartesianWaypoint_a8ec5bcad32c490d714b0a681a98425ad}{get\+Orientation}} () const
+\begin{DoxyCompactList}\small\item\em Convenience function that returns the wxyz rotation quarternion contained in cartesian\+\_\+position. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classtesseract__motion__planners_1_1CartesianWaypoint_ae7db8d1b64a0113a4bf898bd0828e3c6}{get\+Parent\+Link\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Gets the name of the link to which this position is relative. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classtesseract__motion__planners_1_1CartesianWaypoint}{Cartesian\+Waypoint}} \& \mbox{\hyperlink{classtesseract__motion__planners_1_1CartesianWaypoint_a7aa0c2f3b527b8ffd950a5553f328c01}{operator$\ast$=}} (const Eigen\+::\+Isometry3d \&delta)
+\begin{DoxyCompactList}\small\item\em Operator to multiply matrix to the current transform. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Eigen\+::\+Isometry3d \mbox{\hyperlink{classtesseract__motion__planners_1_1CartesianWaypoint_a34868a8a3e050691e137f9f5be3aa095}{cartesian\+\_\+position\+\_\+}}
+\item 
+std\+::string \mbox{\hyperlink{classtesseract__motion__planners_1_1CartesianWaypoint_aabb4ae10187aab073f12db6e8cb3b4b6}{parent\+\_\+link\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Pose of this waypoint. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Defines a cartesian position waypoint for use with Tesseract Planners. 
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classtesseract__motion__planners_1_1CartesianWaypoint_af1608cbf82c00af7c4a85fea954b70c4}\label{classtesseract__motion__planners_1_1CartesianWaypoint_af1608cbf82c00af7c4a85fea954b70c4}} 
+\index{tesseract\_motion\_planners::CartesianWaypoint@{tesseract\_motion\_planners::CartesianWaypoint}!ConstPtr@{ConstPtr}}
+\index{ConstPtr@{ConstPtr}!tesseract\_motion\_planners::CartesianWaypoint@{tesseract\_motion\_planners::CartesianWaypoint}}
+\doxysubsubsection{\texorpdfstring{ConstPtr}{ConstPtr}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classtesseract__motion__planners_1_1CartesianWaypoint_af1608cbf82c00af7c4a85fea954b70c4}{tesseract\+\_\+motion\+\_\+planners\+::\+Cartesian\+Waypoint\+::\+Const\+Ptr}} =  std\+::shared\+\_\+ptr$<$const \mbox{\hyperlink{classtesseract__motion__planners_1_1CartesianWaypoint}{Cartesian\+Waypoint}}$>$}
+
+\mbox{\Hypertarget{classtesseract__motion__planners_1_1CartesianWaypoint_a2e32962180c41749938cd86431671401}\label{classtesseract__motion__planners_1_1CartesianWaypoint_a2e32962180c41749938cd86431671401}} 
+\index{tesseract\_motion\_planners::CartesianWaypoint@{tesseract\_motion\_planners::CartesianWaypoint}!Ptr@{Ptr}}
+\index{Ptr@{Ptr}!tesseract\_motion\_planners::CartesianWaypoint@{tesseract\_motion\_planners::CartesianWaypoint}}
+\doxysubsubsection{\texorpdfstring{Ptr}{Ptr}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classtesseract__motion__planners_1_1CartesianWaypoint_a2e32962180c41749938cd86431671401}{tesseract\+\_\+motion\+\_\+planners\+::\+Cartesian\+Waypoint\+::\+Ptr}} =  std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classtesseract__motion__planners_1_1CartesianWaypoint}{Cartesian\+Waypoint}}$>$}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtesseract__motion__planners_1_1CartesianWaypoint_aac824cbc9ae2d6cecf3abdb3d7eb568f}\label{classtesseract__motion__planners_1_1CartesianWaypoint_aac824cbc9ae2d6cecf3abdb3d7eb568f}} 
+\index{tesseract\_motion\_planners::CartesianWaypoint@{tesseract\_motion\_planners::CartesianWaypoint}!CartesianWaypoint@{CartesianWaypoint}}
+\index{CartesianWaypoint@{CartesianWaypoint}!tesseract\_motion\_planners::CartesianWaypoint@{tesseract\_motion\_planners::CartesianWaypoint}}
+\doxysubsubsection{\texorpdfstring{CartesianWaypoint()}{CartesianWaypoint()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily tesseract\+\_\+motion\+\_\+planners\+::\+Cartesian\+Waypoint\+::\+Cartesian\+Waypoint (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Isometry3d \&}]{cartesian\+\_\+position,  }\item[{std\+::string}]{parent\+\_\+link = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classtesseract__motion__planners_1_1CartesianWaypoint_a978b05f8341789eb34e4f9419946e9a1}\label{classtesseract__motion__planners_1_1CartesianWaypoint_a978b05f8341789eb34e4f9419946e9a1}} 
+\index{tesseract\_motion\_planners::CartesianWaypoint@{tesseract\_motion\_planners::CartesianWaypoint}!CartesianWaypoint@{CartesianWaypoint}}
+\index{CartesianWaypoint@{CartesianWaypoint}!tesseract\_motion\_planners::CartesianWaypoint@{tesseract\_motion\_planners::CartesianWaypoint}}
+\doxysubsubsection{\texorpdfstring{CartesianWaypoint()}{CartesianWaypoint()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily tesseract\+\_\+motion\+\_\+planners\+::\+Cartesian\+Waypoint\+::\+Cartesian\+Waypoint (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Vector3d \&}]{position,  }\item[{const Eigen\+::\+Quaterniond \&}]{orientation,  }\item[{std\+::string}]{link = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtesseract__motion__planners_1_1CartesianWaypoint_a8ec5bcad32c490d714b0a681a98425ad}\label{classtesseract__motion__planners_1_1CartesianWaypoint_a8ec5bcad32c490d714b0a681a98425ad}} 
+\index{tesseract\_motion\_planners::CartesianWaypoint@{tesseract\_motion\_planners::CartesianWaypoint}!getOrientation@{getOrientation}}
+\index{getOrientation@{getOrientation}!tesseract\_motion\_planners::CartesianWaypoint@{tesseract\_motion\_planners::CartesianWaypoint}}
+\doxysubsubsection{\texorpdfstring{getOrientation()}{getOrientation()}}
+{\footnotesize\ttfamily Eigen\+::\+Vector4d tesseract\+\_\+motion\+\_\+planners\+::\+Cartesian\+Waypoint\+::get\+Orientation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Convenience function that returns the wxyz rotation quarternion contained in cartesian\+\_\+position. 
+
+\begin{DoxyReturn}{Returns}
+Quaternion(w, x, y, z) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtesseract__motion__planners_1_1CartesianWaypoint_ae7db8d1b64a0113a4bf898bd0828e3c6}\label{classtesseract__motion__planners_1_1CartesianWaypoint_ae7db8d1b64a0113a4bf898bd0828e3c6}} 
+\index{tesseract\_motion\_planners::CartesianWaypoint@{tesseract\_motion\_planners::CartesianWaypoint}!getParentLinkName@{getParentLinkName}}
+\index{getParentLinkName@{getParentLinkName}!tesseract\_motion\_planners::CartesianWaypoint@{tesseract\_motion\_planners::CartesianWaypoint}}
+\doxysubsubsection{\texorpdfstring{getParentLinkName()}{getParentLinkName()}}
+{\footnotesize\ttfamily std\+::string tesseract\+\_\+motion\+\_\+planners\+::\+Cartesian\+Waypoint\+::get\+Parent\+Link\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the name of the link to which this position is relative. 
+
+\mbox{\Hypertarget{classtesseract__motion__planners_1_1CartesianWaypoint_ac3e577d03e1c0d582910993bc155574c}\label{classtesseract__motion__planners_1_1CartesianWaypoint_ac3e577d03e1c0d582910993bc155574c}} 
+\index{tesseract\_motion\_planners::CartesianWaypoint@{tesseract\_motion\_planners::CartesianWaypoint}!getPosition@{getPosition}}
+\index{getPosition@{getPosition}!tesseract\_motion\_planners::CartesianWaypoint@{tesseract\_motion\_planners::CartesianWaypoint}}
+\doxysubsubsection{\texorpdfstring{getPosition()}{getPosition()}}
+{\footnotesize\ttfamily Eigen\+::\+Vector3d tesseract\+\_\+motion\+\_\+planners\+::\+Cartesian\+Waypoint\+::get\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Convenience function that returns the xyz cartesian position contained in cartesian\+\_\+position\+\_\+. 
+
+\mbox{\Hypertarget{classtesseract__motion__planners_1_1CartesianWaypoint_a649a0fda90e4cbfac106e644aba5cdb0}\label{classtesseract__motion__planners_1_1CartesianWaypoint_a649a0fda90e4cbfac106e644aba5cdb0}} 
+\index{tesseract\_motion\_planners::CartesianWaypoint@{tesseract\_motion\_planners::CartesianWaypoint}!getTransform@{getTransform}}
+\index{getTransform@{getTransform}!tesseract\_motion\_planners::CartesianWaypoint@{tesseract\_motion\_planners::CartesianWaypoint}}
+\doxysubsubsection{\texorpdfstring{getTransform()}{getTransform()}}
+{\footnotesize\ttfamily const Eigen\+::\+Isometry3d\& tesseract\+\_\+motion\+\_\+planners\+::\+Cartesian\+Waypoint\+::get\+Transform (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the cartesian transform. 
+
+\begin{DoxyReturn}{Returns}
+The cartesian transform 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtesseract__motion__planners_1_1CartesianWaypoint_a7aa0c2f3b527b8ffd950a5553f328c01}\label{classtesseract__motion__planners_1_1CartesianWaypoint_a7aa0c2f3b527b8ffd950a5553f328c01}} 
+\index{tesseract\_motion\_planners::CartesianWaypoint@{tesseract\_motion\_planners::CartesianWaypoint}!operator$\ast$=@{operator$\ast$=}}
+\index{operator$\ast$=@{operator$\ast$=}!tesseract\_motion\_planners::CartesianWaypoint@{tesseract\_motion\_planners::CartesianWaypoint}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$=()}{operator*=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__motion__planners_1_1CartesianWaypoint}{Cartesian\+Waypoint}}\& tesseract\+\_\+motion\+\_\+planners\+::\+Cartesian\+Waypoint\+::operator$\ast$= (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Isometry3d \&}]{delta }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Operator to multiply matrix to the current transform. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em delta} & Matrix to add to current transform \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classtesseract__motion__planners_1_1CartesianWaypoint_a34868a8a3e050691e137f9f5be3aa095}\label{classtesseract__motion__planners_1_1CartesianWaypoint_a34868a8a3e050691e137f9f5be3aa095}} 
+\index{tesseract\_motion\_planners::CartesianWaypoint@{tesseract\_motion\_planners::CartesianWaypoint}!cartesian\_position\_@{cartesian\_position\_}}
+\index{cartesian\_position\_@{cartesian\_position\_}!tesseract\_motion\_planners::CartesianWaypoint@{tesseract\_motion\_planners::CartesianWaypoint}}
+\doxysubsubsection{\texorpdfstring{cartesian\_position\_}{cartesian\_position\_}}
+{\footnotesize\ttfamily Eigen\+::\+Isometry3d tesseract\+\_\+motion\+\_\+planners\+::\+Cartesian\+Waypoint\+::cartesian\+\_\+position\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classtesseract__motion__planners_1_1CartesianWaypoint_aabb4ae10187aab073f12db6e8cb3b4b6}\label{classtesseract__motion__planners_1_1CartesianWaypoint_aabb4ae10187aab073f12db6e8cb3b4b6}} 
+\index{tesseract\_motion\_planners::CartesianWaypoint@{tesseract\_motion\_planners::CartesianWaypoint}!parent\_link\_@{parent\_link\_}}
+\index{parent\_link\_@{parent\_link\_}!tesseract\_motion\_planners::CartesianWaypoint@{tesseract\_motion\_planners::CartesianWaypoint}}
+\doxysubsubsection{\texorpdfstring{parent\_link\_}{parent\_link\_}}
+{\footnotesize\ttfamily std\+::string tesseract\+\_\+motion\+\_\+planners\+::\+Cartesian\+Waypoint\+::parent\+\_\+link\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Pose of this waypoint. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+tesseract/tesseract\+\_\+planning/tesseract\+\_\+motion\+\_\+planners/include/tesseract\+\_\+motion\+\_\+planners/core/\mbox{\hyperlink{waypoint_8h}{waypoint.\+h}}\end{DoxyCompactItemize}

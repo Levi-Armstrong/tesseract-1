@@ -1,0 +1,94 @@
+\hypertarget{urdf__parser_8h}{}\doxysection{tesseract/tesseract\+\_\+urdf/include/tesseract\+\_\+urdf/urdf\+\_\+parser.h File Reference}
+\label{urdf__parser_8h}\index{tesseract/tesseract\_urdf/include/tesseract\_urdf/urdf\_parser.h@{tesseract/tesseract\_urdf/include/tesseract\_urdf/urdf\_parser.h}}
+
+
+A urdf parser for tesseract.  
+
+
+{\ttfamily \#include $<$tesseract\+\_\+common/macros.\+h$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+common/status\+\_\+code.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+common/utils.\+h$>$}\newline
+{\ttfamily \#include $<$tinyxml2.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+scene\+\_\+graph/graph.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+scene\+\_\+graph/utils.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+scene\+\_\+graph/resource\+\_\+locator.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+urdf/joint.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+urdf/link.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+urdf/material.\+h$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classtesseract__urdf_1_1URDFStatusCategory}{tesseract\+\_\+urdf\+::\+U\+R\+D\+F\+Status\+Category}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacetesseract__urdf}{tesseract\+\_\+urdf}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtesseract__common_1_1StatusCode_a2b285106bd9f4963d1696b9696dbaf5f}{tesseract\+\_\+common\+::\+Status\+Code\+::\+Ptr}} \mbox{\hyperlink{namespacetesseract__urdf_a897cfdb4bbe41677a272ce67de7a6ffe}{tesseract\+\_\+urdf\+::parse\+U\+R\+D\+F\+String}} (\mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph_a4421b8568bd664cf203613a054e1847b}{tesseract\+\_\+scene\+\_\+graph\+::\+Scene\+Graph\+::\+Ptr}} \&scene\+\_\+graph, const std\+::string \&urdf\+\_\+xml\+\_\+string, const \mbox{\hyperlink{classtesseract__scene__graph_1_1ResourceLocator_a64ddb0339eae8885128e399f1275cf80}{tesseract\+\_\+scene\+\_\+graph\+::\+Resource\+Locator\+::\+Ptr}} \&locator)
+\begin{DoxyCompactList}\small\item\em Parse a U\+R\+DF string into a Tesseract Scene Graph. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classtesseract__common_1_1StatusCode_a2b285106bd9f4963d1696b9696dbaf5f}{tesseract\+\_\+common\+::\+Status\+Code\+::\+Ptr}} \mbox{\hyperlink{namespacetesseract__urdf_ace6cf8c78cb86f35d2b22583fa922486}{tesseract\+\_\+urdf\+::parse\+U\+R\+D\+F\+File}} (\mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph_a4421b8568bd664cf203613a054e1847b}{tesseract\+\_\+scene\+\_\+graph\+::\+Scene\+Graph\+::\+Ptr}} \&scene\+\_\+graph, const std\+::string \&path, const \mbox{\hyperlink{classtesseract__scene__graph_1_1ResourceLocator_a64ddb0339eae8885128e399f1275cf80}{tesseract\+\_\+scene\+\_\+graph\+::\+Resource\+Locator\+::\+Ptr}} \&locator)
+\begin{DoxyCompactList}\small\item\em Parse a U\+R\+DF file into a Tesseract Scene Graph. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph_a4421b8568bd664cf203613a054e1847b}{tesseract\+\_\+scene\+\_\+graph\+::\+Scene\+Graph\+::\+Ptr}} \mbox{\hyperlink{namespacetesseract__urdf_a399a0fa4614813bfcb22424c8ed89e7f}{tesseract\+\_\+urdf\+::parse\+U\+R\+D\+F\+String}} (const std\+::string \&urdf\+\_\+xml\+\_\+string, const \mbox{\hyperlink{classtesseract__scene__graph_1_1ResourceLocator_a64ddb0339eae8885128e399f1275cf80}{tesseract\+\_\+scene\+\_\+graph\+::\+Resource\+Locator\+::\+Ptr}} \&locator)
+\begin{DoxyCompactList}\small\item\em Parse a U\+R\+DF string into a Tesseract Scene Graph. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph_a4421b8568bd664cf203613a054e1847b}{tesseract\+\_\+scene\+\_\+graph\+::\+Scene\+Graph\+::\+Ptr}} \mbox{\hyperlink{namespacetesseract__urdf_a469be3fc084d489391b16381b71db206}{tesseract\+\_\+urdf\+::parse\+U\+R\+D\+F\+File}} (const std\+::string \&path, const \mbox{\hyperlink{classtesseract__scene__graph_1_1ResourceLocator_a64ddb0339eae8885128e399f1275cf80}{tesseract\+\_\+scene\+\_\+graph\+::\+Resource\+Locator\+::\+Ptr}} \&locator)
+\begin{DoxyCompactList}\small\item\em Parse a U\+R\+DF file into a Tesseract Scene Graph. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A urdf parser for tesseract. 
+
+\begin{DoxyAuthor}{Author}
+Levi Armstrong 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+September 1, 2019 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+T\+O\+DO 
+\end{DoxyVersion}
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000198}{Bug}}]No known bugs\end{DoxyRefDesc}
+
+
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2019, Southwest Research Institute
+\end{DoxyCopyright}
+\begin{DoxyParagraph}{License}
+Software License Agreement (Apache License) 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+Licensed under the Apache License, Version 2.\+0 (the \char`\"{}\+License\char`\"{}); you may not use this file except in compliance with the License. You may obtain a copy of the License at \href{http://www.apache.org/licenses/LICENSE-2.0}{\texttt{ http\+://www.\+apache.\+org/licenses/\+L\+I\+C\+E\+N\+S\+E-\/2.\+0}} 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \char`\"{}\+A\+S I\+S\char`\"{} B\+A\+S\+IS, W\+I\+T\+H\+O\+UT W\+A\+R\+R\+A\+N\+T\+I\+ES OR C\+O\+N\+D\+I\+T\+I\+O\+NS OF A\+NY K\+I\+ND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+\end{DoxyParagraph}
+\begin{DoxyAuthor}{Author}
+Levi Armstrong 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+September 1, 2019 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+T\+O\+DO 
+\end{DoxyVersion}
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000200}{Bug}}]No known bugs\end{DoxyRefDesc}
+
+
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2019, Southwest Research Institute
+\end{DoxyCopyright}
+\begin{DoxyParagraph}{License}
+Software License Agreement (Apache License) 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+Licensed under the Apache License, Version 2.\+0 (the \char`\"{}\+License\char`\"{}); you may not use this file except in compliance with the License. You may obtain a copy of the License at \href{http://www.apache.org/licenses/LICENSE-2.0}{\texttt{ http\+://www.\+apache.\+org/licenses/\+L\+I\+C\+E\+N\+S\+E-\/2.\+0}} 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \char`\"{}\+A\+S I\+S\char`\"{} B\+A\+S\+IS, W\+I\+T\+H\+O\+UT W\+A\+R\+R\+A\+N\+T\+I\+ES OR C\+O\+N\+D\+I\+T\+I\+O\+NS OF A\+NY K\+I\+ND, either express or implied. See the License for the specific language governing permissions and limitations under the License. 
+\end{DoxyParagraph}

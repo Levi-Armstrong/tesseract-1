@@ -1,0 +1,64 @@
+\hypertarget{tesseract__planning_2tesseract__motion__planners_2include_2tesseract__motion__planners_2descartes_2utils_8h}{}\doxysection{tesseract/tesseract\+\_\+planning/tesseract\+\_\+motion\+\_\+planners/include/tesseract\+\_\+motion\+\_\+planners/descartes/utils.h File Reference}
+\label{tesseract__planning_2tesseract__motion__planners_2include_2tesseract__motion__planners_2descartes_2utils_8h}\index{tesseract/tesseract\_planning/tesseract\_motion\_planners/include/tesseract\_motion\_planners/descartes/utils.h@{tesseract/tesseract\_planning/tesseract\_motion\_planners/include/tesseract\_motion\_planners/descartes/utils.h}}
+
+
+Tesseract descartes utility functions.  
+
+
+{\ttfamily \#include $<$tesseract\+\_\+common/macros.\+h$>$}\newline
+{\ttfamily \#include $<$descartes\+\_\+samplers/samplers/fixed\+\_\+joint\+\_\+pose\+\_\+sampler.\+h$>$}\newline
+{\ttfamily \#include $<$descartes\+\_\+light/ladder\+\_\+graph.\+h$>$}\newline
+{\ttfamily \#include $<$console\+\_\+bridge/console.\+h$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$Eigen/\+Geometry$>$}\newline
+{\ttfamily \#include $<$functional$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+motion\+\_\+planners/core/waypoint.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+motion\+\_\+planners/descartes/descartes\+\_\+robot\+\_\+sampler.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+motion\+\_\+planners/descartes/descartes\+\_\+robot\+\_\+positioner\+\_\+sampler.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+motion\+\_\+planners/descartes/types.\+h$>$}\newline
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacetesseract__motion__planners}{tesseract\+\_\+motion\+\_\+planners}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Float\+Type $>$ }\\\mbox{\hyperlink{namespacetesseract__motion__planners_a7556501ffdf032a87415923b0a1372d4}{tesseract\+\_\+motion\+\_\+planners\+::\+Pose\+Sampler\+Fn}} \mbox{\hyperlink{namespacetesseract__motion__planners_a2c3c7319706ac227dc15c879deeee884}{tesseract\+\_\+motion\+\_\+planners\+::get\+Pose\+Sampler}} (const Waypoint\+::\+Const\+Ptr \&wp, const Float\+Type x\+\_\+sample\+\_\+resolution=0.\+001, const Float\+Type y\+\_\+sample\+\_\+resolution=0.\+001, const Float\+Type z\+\_\+sample\+\_\+resolution=0.\+001, const Float\+Type x\+\_\+axes\+\_\+sample\+\_\+resolution=60 $\ast$M\+\_\+\+PI/180, const Float\+Type y\+\_\+axes\+\_\+sample\+\_\+resolution=60 $\ast$M\+\_\+\+PI/180, const Float\+Type z\+\_\+axes\+\_\+sample\+\_\+resolution=60 $\ast$M\+\_\+\+PI/180)
+\begin{DoxyCompactList}\small\item\em Given a waypoint it will return the correct tool pose sampler. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Float\+Type $>$ }\\std\+::vector$<$ typename descartes\+\_\+light\+::\+Position\+Sampler$<$ Float\+Type $>$\+::Ptr $>$ \mbox{\hyperlink{namespacetesseract__motion__planners_aba3ad1f724d948fcf1706093c07bb128}{tesseract\+\_\+motion\+\_\+planners\+::make\+Robot\+Samplers}} (const std\+::vector$<$ Waypoint\+::\+Ptr $>$ \&path, const \mbox{\hyperlink{classtesseract__kinematics_1_1InverseKinematics_ab8d8c23f62e4298bcc0951f82f3dba27}{tesseract\+\_\+kinematics\+::\+Inverse\+Kinematics\+::\+Const\+Ptr}} robot\+\_\+kinematics, const typename descartes\+\_\+light\+::\+Collision\+Interface$<$ Float\+Type $>$\+::Ptr \&collision\+\_\+interface, const \mbox{\hyperlink{structtesseract__environment_1_1EnvState_a670d57a48a695feea60020c81320a851}{tesseract\+\_\+environment\+::\+Env\+State\+::\+Const\+Ptr}} current\+\_\+state, const Eigen\+::\+Isometry3d \&robot\+\_\+tcp, const double robot\+\_\+reach, const bool allow\+\_\+collision, const Descartes\+Is\+Valid\+Fn$<$ Float\+Type $>$ \&is\+\_\+valid, const Float\+Type x\+\_\+sample\+\_\+resolution=0.\+001, const Float\+Type y\+\_\+sample\+\_\+resolution=0.\+001, const Float\+Type z\+\_\+sample\+\_\+resolution=0.\+001, const Float\+Type x\+\_\+axes\+\_\+sample\+\_\+resolution=60 $\ast$M\+\_\+\+PI/180, const Float\+Type y\+\_\+axes\+\_\+sample\+\_\+resolution=60 $\ast$M\+\_\+\+PI/180, const Float\+Type z\+\_\+axes\+\_\+sample\+\_\+resolution=60 $\ast$M\+\_\+\+PI/180)
+\begin{DoxyCompactList}\small\item\em Make a vector of position samplers from a vector of waypoints for a robot. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Float\+Type $>$ }\\std\+::vector$<$ typename descartes\+\_\+light\+::\+Position\+Sampler$<$ Float\+Type $>$\+::Ptr $>$ \mbox{\hyperlink{namespacetesseract__motion__planners_a9f7547e1a2d8ef3d3e2a0feb59f5752e}{tesseract\+\_\+motion\+\_\+planners\+::make\+Robot\+Positioner\+Samplers}} (const std\+::vector$<$ Waypoint\+::\+Ptr $>$ \&path, const \mbox{\hyperlink{classtesseract__kinematics_1_1ForwardKinematics_a2c99fff4d4596e15bfdc4f72ec3b7406}{tesseract\+\_\+kinematics\+::\+Forward\+Kinematics\+::\+Const\+Ptr}} positioner\+\_\+kinematics, const \mbox{\hyperlink{classtesseract__kinematics_1_1InverseKinematics_ab8d8c23f62e4298bcc0951f82f3dba27}{tesseract\+\_\+kinematics\+::\+Inverse\+Kinematics\+::\+Const\+Ptr}} robot\+\_\+kinematics, const typename descartes\+\_\+light\+::\+Collision\+Interface$<$ Float\+Type $>$\+::Ptr \&collision\+\_\+interface, const \mbox{\hyperlink{structtesseract__environment_1_1EnvState_a670d57a48a695feea60020c81320a851}{tesseract\+\_\+environment\+::\+Env\+State\+::\+Const\+Ptr}} current\+\_\+state, const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector\+Xd $>$ \&positioner\+\_\+sample\+\_\+resolution, const Eigen\+::\+Isometry3d \&robot\+\_\+tcp, const double robot\+\_\+reach, const bool allow\+\_\+collision, const Descartes\+Is\+Valid\+Fn$<$ Float\+Type $>$ \&is\+\_\+valid, const Float\+Type x\+\_\+sample\+\_\+resolution=0.\+001, const Float\+Type y\+\_\+sample\+\_\+resolution=0.\+001, const Float\+Type z\+\_\+sample\+\_\+resolution=0.\+001, const Float\+Type x\+\_\+axes\+\_\+sample\+\_\+resolution=60 $\ast$M\+\_\+\+PI/180, const Float\+Type y\+\_\+axes\+\_\+sample\+\_\+resolution=60 $\ast$M\+\_\+\+PI/180, const Float\+Type z\+\_\+axes\+\_\+sample\+\_\+resolution=60 $\ast$M\+\_\+\+PI/180)
+\begin{DoxyCompactList}\small\item\em Make a vector of position samplers from a vector of waypoints for a robot attached to a kinematic positioner. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Float\+Type $>$ }\\std\+::vector$<$ descartes\+\_\+core\+::\+Timing\+Constraint$<$ Float\+Type $>$ $>$ \mbox{\hyperlink{namespacetesseract__motion__planners_ab2f4a2af82b536368c9f2ee784671423}{tesseract\+\_\+motion\+\_\+planners\+::make\+Timing}} (const std\+::vector$<$ Waypoint\+::\+Ptr $>$ \&path, const double dt)
+\begin{DoxyCompactList}\small\item\em Make a vector of Descartes timing constraints from a vector of waypoints. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Tesseract descartes utility functions. 
+
+\begin{DoxyAuthor}{Author}
+Levi Armstrong 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+April 18, 2018 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+T\+O\+DO 
+\end{DoxyVersion}
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000105}{Bug}}]No known bugs\end{DoxyRefDesc}
+
+
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2017, Southwest Research Institute
+\end{DoxyCopyright}
+\begin{DoxyParagraph}{License}
+Software License Agreement (Apache License) 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+Licensed under the Apache License, Version 2.\+0 (the \char`\"{}\+License\char`\"{}); you may not use this file except in compliance with the License. You may obtain a copy of the License at \href{http://www.apache.org/licenses/LICENSE-2.0}{\texttt{ http\+://www.\+apache.\+org/licenses/\+L\+I\+C\+E\+N\+S\+E-\/2.\+0}} 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \char`\"{}\+A\+S I\+S\char`\"{} B\+A\+S\+IS, W\+I\+T\+H\+O\+UT W\+A\+R\+R\+A\+N\+T\+I\+ES OR C\+O\+N\+D\+I\+T\+I\+O\+NS OF A\+NY K\+I\+ND, either express or implied. See the License for the specific language governing permissions and limitations under the License. 
+\end{DoxyParagraph}

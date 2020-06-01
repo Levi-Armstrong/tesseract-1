@@ -1,0 +1,417 @@
+\hypertarget{namespacetesseract__collision}{}\doxysection{tesseract\+\_\+collision Namespace Reference}
+\label{namespacetesseract__collision}\index{tesseract\_collision@{tesseract\_collision}}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacetesseract__collision_1_1tesseract__collision__bullet}{tesseract\+\_\+collision\+\_\+bullet}}
+\item 
+ \mbox{\hyperlink{namespacetesseract__collision_1_1tesseract__collision__fcl}{tesseract\+\_\+collision\+\_\+fcl}}
+\item 
+ \mbox{\hyperlink{namespacetesseract__collision_1_1test__suite}{test\+\_\+suite}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structtesseract__collision_1_1ContactRequest}{Contact\+Request}}
+\begin{DoxyCompactList}\small\item\em The \mbox{\hyperlink{structtesseract__collision_1_1ContactRequest}{Contact\+Request}} struct. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structtesseract__collision_1_1ContactResult}{Contact\+Result}}
+\item 
+struct \mbox{\hyperlink{structtesseract__collision_1_1ContactTestData}{Contact\+Test\+Data}}
+\begin{DoxyCompactList}\small\item\em This data is intended only to be used internal to the collision checkers as a container and should not be externally used by other libraries or packages. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classtesseract__collision_1_1ContinuousContactManager}{Continuous\+Contact\+Manager}}
+\item 
+class \mbox{\hyperlink{classtesseract__collision_1_1ContinuousContactManagerFactory}{Continuous\+Contact\+Manager\+Factory}}
+\item 
+class \mbox{\hyperlink{classtesseract__collision_1_1DiscreteContactManager}{Discrete\+Contact\+Manager}}
+\item 
+class \mbox{\hyperlink{classtesseract__collision_1_1DiscreteContactManagerFactory}{Discrete\+Contact\+Manager\+Factory}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{namespacetesseract__collision_af5926355228f0196ddf51e6951dbe491}{Object\+Pair\+Key}} = std\+::pair$<$ std\+::string, std\+::string $>$
+\item 
+using \mbox{\hyperlink{namespacetesseract__collision_a2472107aae8174a30873bb0a955c3cb4}{Collision\+Shapes\+Const}} = std\+::vector$<$ \mbox{\hyperlink{classtesseract__geometry_1_1Geometry_a755a973394d2ccb45ad53a5e11ff03c7}{tesseract\+\_\+geometry\+::\+Geometry\+::\+Const\+Ptr}} $>$
+\item 
+using \mbox{\hyperlink{namespacetesseract__collision_a0ba6c3df4805b8c865cb45f6571486c0}{Collision\+Shape\+Const\+Ptr}} = \mbox{\hyperlink{classtesseract__geometry_1_1Geometry_a755a973394d2ccb45ad53a5e11ff03c7}{tesseract\+\_\+geometry\+::\+Geometry\+::\+Const\+Ptr}}
+\item 
+using \mbox{\hyperlink{namespacetesseract__collision_a0aa5b9a264467e92cd1b9f0cd0c38ee8}{Collision\+Shape\+Ptr}} = \mbox{\hyperlink{classtesseract__geometry_1_1Geometry_acd91c55fb9604ed374446c029b6f2d08}{tesseract\+\_\+geometry\+::\+Geometry\+::\+Ptr}}
+\item 
+using \mbox{\hyperlink{namespacetesseract__collision_abe7752ce161fbd1139533ac566fec1cb}{Is\+Contact\+Allowed\+Fn}} = std\+::function$<$ bool(const std\+::string \&, const std\+::string \&)$>$
+\begin{DoxyCompactList}\small\item\em Should return true if contact allowed, otherwise false. \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{namespacetesseract__collision_a96d77f62b7c26962d1090f0a2f00419b}{Contact\+Result\+Vector}} = \mbox{\hyperlink{namespacetesseract__common_a000d15c3ab8d8ba4ebdaae64153b053a}{tesseract\+\_\+common\+::\+Aligned\+Vector}}$<$ \mbox{\hyperlink{structtesseract__collision_1_1ContactResult}{Contact\+Result}} $>$
+\item 
+using \mbox{\hyperlink{namespacetesseract__collision_a1eeace4cc41027dbde8e7dbeb77ca7cf}{Contact\+Result\+Map}} = \mbox{\hyperlink{namespacetesseract__common_a2c5a4b6149060671cf8c3f9d15ef58c4}{tesseract\+\_\+common\+::\+Aligned\+Map}}$<$ std\+::pair$<$ std\+::string, std\+::string $>$, \mbox{\hyperlink{namespacetesseract__collision_a96d77f62b7c26962d1090f0a2f00419b}{Contact\+Result\+Vector}} $>$
+\item 
+using \mbox{\hyperlink{namespacetesseract__collision_a66fd355f5026f0f64424a756a3788c38}{Is\+Contact\+Result\+Valid\+Fn}} = std\+::function$<$ bool(const \mbox{\hyperlink{structtesseract__collision_1_1ContactResult}{Contact\+Result}} \&)$>$
+\begin{DoxyCompactList}\small\item\em Should return true if contact results are valid, otherwise false. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespacetesseract__collision_a267c740fd3b446222ba19cbaa56dab5e}{Continuous\+Collision\+Type}} \{ \mbox{\hyperlink{namespacetesseract__collision_a267c740fd3b446222ba19cbaa56dab5ea79e497b3f5d3d8b23ea29c9370354bb6}{Continuous\+Collision\+Type\+::\+C\+C\+Type\+\_\+\+None}}, 
+\mbox{\hyperlink{namespacetesseract__collision_a267c740fd3b446222ba19cbaa56dab5eaf8c51e6d7c61aa31897c3dd7b0719093}{Continuous\+Collision\+Type\+::\+C\+C\+Type\+\_\+\+Time0}}, 
+\mbox{\hyperlink{namespacetesseract__collision_a267c740fd3b446222ba19cbaa56dab5ea333ec902092c850b7f23cf437d0fac01}{Continuous\+Collision\+Type\+::\+C\+C\+Type\+\_\+\+Time1}}, 
+\mbox{\hyperlink{namespacetesseract__collision_a267c740fd3b446222ba19cbaa56dab5ea1101988a82b0cd8a2e2c5ee5fda455eb}{Continuous\+Collision\+Type\+::\+C\+C\+Type\+\_\+\+Between}}
+ \}
+\item 
+enum \mbox{\hyperlink{namespacetesseract__collision_ac3da4f46ae16e86ba4f1dfd2935eb80c}{Contact\+Test\+Type}} \{ \mbox{\hyperlink{namespacetesseract__collision_ac3da4f46ae16e86ba4f1dfd2935eb80ca2c2624a5059934a947d6e25fe8332ade}{Contact\+Test\+Type\+::\+F\+I\+R\+ST}} = 0, 
+\mbox{\hyperlink{namespacetesseract__collision_ac3da4f46ae16e86ba4f1dfd2935eb80cae9c32f09a44ae1ae34e42d53502fab77}{Contact\+Test\+Type\+::\+C\+L\+O\+S\+E\+ST}} = 1, 
+\mbox{\hyperlink{namespacetesseract__collision_ac3da4f46ae16e86ba4f1dfd2935eb80ca5fb1f955b45e38e31789286a1790398d}{Contact\+Test\+Type\+::\+A\+LL}} = 2, 
+\mbox{\hyperlink{namespacetesseract__collision_ac3da4f46ae16e86ba4f1dfd2935eb80cad9e0d83abd8b9bb4c1998be68831922c}{Contact\+Test\+Type\+::\+L\+I\+M\+I\+T\+ED}} = 3
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacetesseract__collision_af5926355228f0196ddf51e6951dbe491}{Object\+Pair\+Key}} \mbox{\hyperlink{namespacetesseract__collision_a0876bd0182505440236643eb5bade1c7}{get\+Object\+Pair\+Key}} (const std\+::string \&obj1, const std\+::string \&obj2)
+\begin{DoxyCompactList}\small\item\em Get a key for two object to search the collision matrix. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespacetesseract__collision_ab6cce1ce95e96f38382f53976bbe9dea}{is\+Link\+Active}} (const std\+::vector$<$ std\+::string $>$ \&active, const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em This will check if a link is active provided a list. If the list is empty the link is considered active. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespacetesseract__collision_a1d5b1daf53ea0152f87f4ab565643478}{is\+Contact\+Allowed}} (const std\+::string \&name1, const std\+::string \&name2, const \mbox{\hyperlink{namespacetesseract__collision_abe7752ce161fbd1139533ac566fec1cb}{Is\+Contact\+Allowed\+Fn}} \&acm, bool verbose=false)
+\begin{DoxyCompactList}\small\item\em Determine if contact is allowed between two objects. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structtesseract__collision_1_1ContactResult}{Contact\+Result}} $\ast$ \mbox{\hyperlink{namespacetesseract__collision_a6e40c6a2976671ddb907584a16760b6f}{process\+Result}} (\mbox{\hyperlink{structtesseract__collision_1_1ContactTestData}{Contact\+Test\+Data}} \&cdata, \mbox{\hyperlink{structtesseract__collision_1_1ContactResult}{Contact\+Result}} \&contact, const std\+::pair$<$ std\+::string, std\+::string $>$ \&key, bool found)
+\item 
+int \mbox{\hyperlink{namespacetesseract__collision_ac97bc1eb96f0aa2e1d3033d7e7758849}{create\+Convex\+Hull}} (\mbox{\hyperlink{namespacetesseract__common_af89ed6517f4c84bdb2b037bb40f7d9d9}{tesseract\+\_\+common\+::\+Vector\+Vector3d}} \&vertices, Eigen\+::\+Vector\+Xi \&faces, const \mbox{\hyperlink{namespacetesseract__common_af89ed6517f4c84bdb2b037bb40f7d9d9}{tesseract\+\_\+common\+::\+Vector\+Vector3d}} \&input, double shrink=-\/1, double shrink\+Clamp=-\/1)
+\begin{DoxyCompactList}\small\item\em Create a convex hull from vertices using Bullet Convex Hull Computer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classtesseract__geometry_1_1ConvexMesh_aecd145c5f75117ff7a3bab1fb921e4c0}{tesseract\+\_\+geometry\+::\+Convex\+Mesh\+::\+Ptr}} \mbox{\hyperlink{namespacetesseract__collision_ad17b98123f412bcc30207daa6931cbb2}{make\+Convex\+Mesh}} (const \mbox{\hyperlink{classtesseract__geometry_1_1Mesh}{tesseract\+\_\+geometry\+::\+Mesh}} \&mesh)
+\item 
+bool \mbox{\hyperlink{namespacetesseract__collision_a4dc11acdd34b2eaa5023e5828463ba05}{write\+Simple\+Ply\+File}} (const std\+::string \&path, const \mbox{\hyperlink{namespacetesseract__common_af89ed6517f4c84bdb2b037bb40f7d9d9}{tesseract\+\_\+common\+::\+Vector\+Vector3d}} \&vertices, const std\+::vector$<$ Eigen\+::\+Vector3i $>$ \&vectices\+\_\+color, const Eigen\+::\+Vector\+Xi \&faces, int num\+\_\+faces)
+\begin{DoxyCompactList}\small\item\em Write a simple ply file given vertices and faces. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespacetesseract__collision_ab322b688c8e598e590e5a9af30084272}{write\+Simple\+Ply\+File}} (const std\+::string \&path, const \mbox{\hyperlink{namespacetesseract__common_af89ed6517f4c84bdb2b037bb40f7d9d9}{tesseract\+\_\+common\+::\+Vector\+Vector3d}} \&vertices, const Eigen\+::\+Vector\+Xi \&faces, int num\+\_\+faces)
+\begin{DoxyCompactList}\small\item\em Write a simple ply file given vertices and faces. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{namespacetesseract__collision_ab79187502eefb0f670dbde89a5b7b969}{load\+Simple\+Ply\+File}} (const std\+::string \&path, \mbox{\hyperlink{namespacetesseract__common_af89ed6517f4c84bdb2b037bb40f7d9d9}{tesseract\+\_\+common\+::\+Vector\+Vector3d}} \&vertices, Eigen\+::\+Vector\+Xi \&faces, bool triangles\+\_\+only=false)
+\begin{DoxyCompactList}\small\item\em Loads a simple ply file given a path. \end{DoxyCompactList}\item 
+std\+::size\+\_\+t \mbox{\hyperlink{namespacetesseract__collision_a1e54919ee87e54445b7926d0b2880882}{flatten\+Move\+Results}} (\mbox{\hyperlink{namespacetesseract__collision_a1eeace4cc41027dbde8e7dbeb77ca7cf}{Contact\+Result\+Map}} \&\&m, \mbox{\hyperlink{namespacetesseract__collision_a96d77f62b7c26962d1090f0a2f00419b}{Contact\+Result\+Vector}} \&v)
+\item 
+std\+::size\+\_\+t \mbox{\hyperlink{namespacetesseract__collision_a0249bb2994ca5e8258ea55309467ae4a}{flatten\+Copy\+Results}} (const \mbox{\hyperlink{namespacetesseract__collision_a1eeace4cc41027dbde8e7dbeb77ca7cf}{Contact\+Result\+Map}} \&m, \mbox{\hyperlink{namespacetesseract__collision_a96d77f62b7c26962d1090f0a2f00419b}{Contact\+Result\+Vector}} \&v)
+\item 
+std\+::size\+\_\+t \mbox{\hyperlink{namespacetesseract__collision_a3d63942ad37df10958b434c860782fbb}{flatten\+Results}} (\mbox{\hyperlink{namespacetesseract__collision_a1eeace4cc41027dbde8e7dbeb77ca7cf}{Contact\+Result\+Map}} \&\&m, \mbox{\hyperlink{namespacetesseract__collision_a96d77f62b7c26962d1090f0a2f00419b}{Contact\+Result\+Vector}} \&v)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static const std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{namespacetesseract__collision_a7b23767d95cb11ee74a0001502f930a5}{Contact\+Test\+Type\+Strings}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{namespacetesseract__collision_a0ba6c3df4805b8c865cb45f6571486c0}\label{namespacetesseract__collision_a0ba6c3df4805b8c865cb45f6571486c0}} 
+\index{tesseract\_collision@{tesseract\_collision}!CollisionShapeConstPtr@{CollisionShapeConstPtr}}
+\index{CollisionShapeConstPtr@{CollisionShapeConstPtr}!tesseract\_collision@{tesseract\_collision}}
+\doxysubsubsection{\texorpdfstring{CollisionShapeConstPtr}{CollisionShapeConstPtr}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{namespacetesseract__collision_a0ba6c3df4805b8c865cb45f6571486c0}{tesseract\+\_\+collision\+::\+Collision\+Shape\+Const\+Ptr}} = typedef \mbox{\hyperlink{classtesseract__geometry_1_1Geometry_a755a973394d2ccb45ad53a5e11ff03c7}{tesseract\+\_\+geometry\+::\+Geometry\+::\+Const\+Ptr}}}
+
+\mbox{\Hypertarget{namespacetesseract__collision_a0aa5b9a264467e92cd1b9f0cd0c38ee8}\label{namespacetesseract__collision_a0aa5b9a264467e92cd1b9f0cd0c38ee8}} 
+\index{tesseract\_collision@{tesseract\_collision}!CollisionShapePtr@{CollisionShapePtr}}
+\index{CollisionShapePtr@{CollisionShapePtr}!tesseract\_collision@{tesseract\_collision}}
+\doxysubsubsection{\texorpdfstring{CollisionShapePtr}{CollisionShapePtr}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{namespacetesseract__collision_a0aa5b9a264467e92cd1b9f0cd0c38ee8}{tesseract\+\_\+collision\+::\+Collision\+Shape\+Ptr}} = typedef \mbox{\hyperlink{classtesseract__geometry_1_1Geometry_acd91c55fb9604ed374446c029b6f2d08}{tesseract\+\_\+geometry\+::\+Geometry\+::\+Ptr}}}
+
+\mbox{\Hypertarget{namespacetesseract__collision_a2472107aae8174a30873bb0a955c3cb4}\label{namespacetesseract__collision_a2472107aae8174a30873bb0a955c3cb4}} 
+\index{tesseract\_collision@{tesseract\_collision}!CollisionShapesConst@{CollisionShapesConst}}
+\index{CollisionShapesConst@{CollisionShapesConst}!tesseract\_collision@{tesseract\_collision}}
+\doxysubsubsection{\texorpdfstring{CollisionShapesConst}{CollisionShapesConst}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{namespacetesseract__collision_a2472107aae8174a30873bb0a955c3cb4}{tesseract\+\_\+collision\+::\+Collision\+Shapes\+Const}} = typedef std\+::vector$<$\mbox{\hyperlink{classtesseract__geometry_1_1Geometry_a755a973394d2ccb45ad53a5e11ff03c7}{tesseract\+\_\+geometry\+::\+Geometry\+::\+Const\+Ptr}}$>$}
+
+\mbox{\Hypertarget{namespacetesseract__collision_a1eeace4cc41027dbde8e7dbeb77ca7cf}\label{namespacetesseract__collision_a1eeace4cc41027dbde8e7dbeb77ca7cf}} 
+\index{tesseract\_collision@{tesseract\_collision}!ContactResultMap@{ContactResultMap}}
+\index{ContactResultMap@{ContactResultMap}!tesseract\_collision@{tesseract\_collision}}
+\doxysubsubsection{\texorpdfstring{ContactResultMap}{ContactResultMap}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{namespacetesseract__collision_a1eeace4cc41027dbde8e7dbeb77ca7cf}{tesseract\+\_\+collision\+::\+Contact\+Result\+Map}} = typedef \mbox{\hyperlink{namespacetesseract__common_a2c5a4b6149060671cf8c3f9d15ef58c4}{tesseract\+\_\+common\+::\+Aligned\+Map}}$<$std\+::pair$<$std\+::string, std\+::string$>$, \mbox{\hyperlink{namespacetesseract__collision_a96d77f62b7c26962d1090f0a2f00419b}{Contact\+Result\+Vector}}$>$}
+
+\mbox{\Hypertarget{namespacetesseract__collision_a96d77f62b7c26962d1090f0a2f00419b}\label{namespacetesseract__collision_a96d77f62b7c26962d1090f0a2f00419b}} 
+\index{tesseract\_collision@{tesseract\_collision}!ContactResultVector@{ContactResultVector}}
+\index{ContactResultVector@{ContactResultVector}!tesseract\_collision@{tesseract\_collision}}
+\doxysubsubsection{\texorpdfstring{ContactResultVector}{ContactResultVector}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{namespacetesseract__collision_a96d77f62b7c26962d1090f0a2f00419b}{tesseract\+\_\+collision\+::\+Contact\+Result\+Vector}} = typedef \mbox{\hyperlink{namespacetesseract__common_a000d15c3ab8d8ba4ebdaae64153b053a}{tesseract\+\_\+common\+::\+Aligned\+Vector}}$<$\mbox{\hyperlink{structtesseract__collision_1_1ContactResult}{Contact\+Result}}$>$}
+
+\mbox{\Hypertarget{namespacetesseract__collision_abe7752ce161fbd1139533ac566fec1cb}\label{namespacetesseract__collision_abe7752ce161fbd1139533ac566fec1cb}} 
+\index{tesseract\_collision@{tesseract\_collision}!IsContactAllowedFn@{IsContactAllowedFn}}
+\index{IsContactAllowedFn@{IsContactAllowedFn}!tesseract\_collision@{tesseract\_collision}}
+\doxysubsubsection{\texorpdfstring{IsContactAllowedFn}{IsContactAllowedFn}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{namespacetesseract__collision_abe7752ce161fbd1139533ac566fec1cb}{tesseract\+\_\+collision\+::\+Is\+Contact\+Allowed\+Fn}} = typedef std\+::function$<$bool(const std\+::string\&, const std\+::string\&)$>$}
+
+
+
+Should return true if contact allowed, otherwise false. 
+
+Also the order of strings should not matter, the function should handled by the function. \mbox{\Hypertarget{namespacetesseract__collision_a66fd355f5026f0f64424a756a3788c38}\label{namespacetesseract__collision_a66fd355f5026f0f64424a756a3788c38}} 
+\index{tesseract\_collision@{tesseract\_collision}!IsContactResultValidFn@{IsContactResultValidFn}}
+\index{IsContactResultValidFn@{IsContactResultValidFn}!tesseract\_collision@{tesseract\_collision}}
+\doxysubsubsection{\texorpdfstring{IsContactResultValidFn}{IsContactResultValidFn}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{namespacetesseract__collision_a66fd355f5026f0f64424a756a3788c38}{tesseract\+\_\+collision\+::\+Is\+Contact\+Result\+Valid\+Fn}} = typedef std\+::function$<$bool(const \mbox{\hyperlink{structtesseract__collision_1_1ContactResult}{Contact\+Result}}\&)$>$}
+
+
+
+Should return true if contact results are valid, otherwise false. 
+
+This is used so users may provide a callback to reject/approve collision results in various algorithms. \mbox{\Hypertarget{namespacetesseract__collision_af5926355228f0196ddf51e6951dbe491}\label{namespacetesseract__collision_af5926355228f0196ddf51e6951dbe491}} 
+\index{tesseract\_collision@{tesseract\_collision}!ObjectPairKey@{ObjectPairKey}}
+\index{ObjectPairKey@{ObjectPairKey}!tesseract\_collision@{tesseract\_collision}}
+\doxysubsubsection{\texorpdfstring{ObjectPairKey}{ObjectPairKey}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{namespacetesseract__collision_af5926355228f0196ddf51e6951dbe491}{tesseract\+\_\+collision\+::\+Object\+Pair\+Key}} = typedef std\+::pair$<$std\+::string, std\+::string$>$}
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{namespacetesseract__collision_ac3da4f46ae16e86ba4f1dfd2935eb80c}\label{namespacetesseract__collision_ac3da4f46ae16e86ba4f1dfd2935eb80c}} 
+\index{tesseract\_collision@{tesseract\_collision}!ContactTestType@{ContactTestType}}
+\index{ContactTestType@{ContactTestType}!tesseract\_collision@{tesseract\_collision}}
+\doxysubsubsection{\texorpdfstring{ContactTestType}{ContactTestType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespacetesseract__collision_ac3da4f46ae16e86ba4f1dfd2935eb80c}{tesseract\+\_\+collision\+::\+Contact\+Test\+Type}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FIRST@{FIRST}!tesseract\_collision@{tesseract\_collision}}\index{tesseract\_collision@{tesseract\_collision}!FIRST@{FIRST}}}\mbox{\Hypertarget{namespacetesseract__collision_ac3da4f46ae16e86ba4f1dfd2935eb80ca2c2624a5059934a947d6e25fe8332ade}\label{namespacetesseract__collision_ac3da4f46ae16e86ba4f1dfd2935eb80ca2c2624a5059934a947d6e25fe8332ade}} 
+F\+I\+R\+ST&Return at first contact for any pair of objects \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CLOSEST@{CLOSEST}!tesseract\_collision@{tesseract\_collision}}\index{tesseract\_collision@{tesseract\_collision}!CLOSEST@{CLOSEST}}}\mbox{\Hypertarget{namespacetesseract__collision_ac3da4f46ae16e86ba4f1dfd2935eb80cae9c32f09a44ae1ae34e42d53502fab77}\label{namespacetesseract__collision_ac3da4f46ae16e86ba4f1dfd2935eb80cae9c32f09a44ae1ae34e42d53502fab77}} 
+C\+L\+O\+S\+E\+ST&Return the global minimum for a pair of objects \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ALL@{ALL}!tesseract\_collision@{tesseract\_collision}}\index{tesseract\_collision@{tesseract\_collision}!ALL@{ALL}}}\mbox{\Hypertarget{namespacetesseract__collision_ac3da4f46ae16e86ba4f1dfd2935eb80ca5fb1f955b45e38e31789286a1790398d}\label{namespacetesseract__collision_ac3da4f46ae16e86ba4f1dfd2935eb80ca5fb1f955b45e38e31789286a1790398d}} 
+A\+LL&Return all contacts for a pair of objects \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LIMITED@{LIMITED}!tesseract\_collision@{tesseract\_collision}}\index{tesseract\_collision@{tesseract\_collision}!LIMITED@{LIMITED}}}\mbox{\Hypertarget{namespacetesseract__collision_ac3da4f46ae16e86ba4f1dfd2935eb80cad9e0d83abd8b9bb4c1998be68831922c}\label{namespacetesseract__collision_ac3da4f46ae16e86ba4f1dfd2935eb80cad9e0d83abd8b9bb4c1998be68831922c}} 
+L\+I\+M\+I\+T\+ED&Return limited set of contacts for a pair of objects \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{namespacetesseract__collision_a267c740fd3b446222ba19cbaa56dab5e}\label{namespacetesseract__collision_a267c740fd3b446222ba19cbaa56dab5e}} 
+\index{tesseract\_collision@{tesseract\_collision}!ContinuousCollisionType@{ContinuousCollisionType}}
+\index{ContinuousCollisionType@{ContinuousCollisionType}!tesseract\_collision@{tesseract\_collision}}
+\doxysubsubsection{\texorpdfstring{ContinuousCollisionType}{ContinuousCollisionType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespacetesseract__collision_a267c740fd3b446222ba19cbaa56dab5e}{tesseract\+\_\+collision\+::\+Continuous\+Collision\+Type}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CCType\_None@{CCType\_None}!tesseract\_collision@{tesseract\_collision}}\index{tesseract\_collision@{tesseract\_collision}!CCType\_None@{CCType\_None}}}\mbox{\Hypertarget{namespacetesseract__collision_a267c740fd3b446222ba19cbaa56dab5ea79e497b3f5d3d8b23ea29c9370354bb6}\label{namespacetesseract__collision_a267c740fd3b446222ba19cbaa56dab5ea79e497b3f5d3d8b23ea29c9370354bb6}} 
+C\+C\+Type\+\_\+\+None&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CCType\_Time0@{CCType\_Time0}!tesseract\_collision@{tesseract\_collision}}\index{tesseract\_collision@{tesseract\_collision}!CCType\_Time0@{CCType\_Time0}}}\mbox{\Hypertarget{namespacetesseract__collision_a267c740fd3b446222ba19cbaa56dab5eaf8c51e6d7c61aa31897c3dd7b0719093}\label{namespacetesseract__collision_a267c740fd3b446222ba19cbaa56dab5eaf8c51e6d7c61aa31897c3dd7b0719093}} 
+C\+C\+Type\+\_\+\+Time0&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CCType\_Time1@{CCType\_Time1}!tesseract\_collision@{tesseract\_collision}}\index{tesseract\_collision@{tesseract\_collision}!CCType\_Time1@{CCType\_Time1}}}\mbox{\Hypertarget{namespacetesseract__collision_a267c740fd3b446222ba19cbaa56dab5ea333ec902092c850b7f23cf437d0fac01}\label{namespacetesseract__collision_a267c740fd3b446222ba19cbaa56dab5ea333ec902092c850b7f23cf437d0fac01}} 
+C\+C\+Type\+\_\+\+Time1&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CCType\_Between@{CCType\_Between}!tesseract\_collision@{tesseract\_collision}}\index{tesseract\_collision@{tesseract\_collision}!CCType\_Between@{CCType\_Between}}}\mbox{\Hypertarget{namespacetesseract__collision_a267c740fd3b446222ba19cbaa56dab5ea1101988a82b0cd8a2e2c5ee5fda455eb}\label{namespacetesseract__collision_a267c740fd3b446222ba19cbaa56dab5ea1101988a82b0cd8a2e2c5ee5fda455eb}} 
+C\+C\+Type\+\_\+\+Between&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacetesseract__collision_ac97bc1eb96f0aa2e1d3033d7e7758849}\label{namespacetesseract__collision_ac97bc1eb96f0aa2e1d3033d7e7758849}} 
+\index{tesseract\_collision@{tesseract\_collision}!createConvexHull@{createConvexHull}}
+\index{createConvexHull@{createConvexHull}!tesseract\_collision@{tesseract\_collision}}
+\doxysubsubsection{\texorpdfstring{createConvexHull()}{createConvexHull()}}
+{\footnotesize\ttfamily int tesseract\+\_\+collision\+::create\+Convex\+Hull (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacetesseract__common_af89ed6517f4c84bdb2b037bb40f7d9d9}{tesseract\+\_\+common\+::\+Vector\+Vector3d}} \&}]{vertices,  }\item[{Eigen\+::\+Vector\+Xi \&}]{faces,  }\item[{const \mbox{\hyperlink{namespacetesseract__common_af89ed6517f4c84bdb2b037bb40f7d9d9}{tesseract\+\_\+common\+::\+Vector\+Vector3d}} \&}]{input,  }\item[{double}]{shrink = {\ttfamily -\/1},  }\item[{double}]{shrink\+Clamp = {\ttfamily -\/1} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Create a convex hull from vertices using Bullet Convex Hull Computer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em (\+Output)} & vertices A vector of vertices \\
+\hline
+{\em (\+Output)} & faces The first values indicates the number of vertices that define the face followed by the vertice index \\
+\hline
+{\em (input)} & input A vector of point to create a convex hull from \\
+\hline
+{\em (input)} & shrink If positive, the convex hull is shrunken by that amount (each face is moved by \char`\"{}shrink\char`\"{} length units towards the center along its normal). \\
+\hline
+{\em (input)} & shrink\+Clamp If positive, \char`\"{}shrink\char`\"{} is clamped to not exceed \char`\"{}shrink\+Clamp $\ast$ inner\+Radius\char`\"{}, where \char`\"{}inner\+Radius\char`\"{} is the minimum distance of a face to the center of the convex hull. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of faces. If less than zero an error occured when trying to create the convex hull 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacetesseract__collision_a0249bb2994ca5e8258ea55309467ae4a}\label{namespacetesseract__collision_a0249bb2994ca5e8258ea55309467ae4a}} 
+\index{tesseract\_collision@{tesseract\_collision}!flattenCopyResults@{flattenCopyResults}}
+\index{flattenCopyResults@{flattenCopyResults}!tesseract\_collision@{tesseract\_collision}}
+\doxysubsubsection{\texorpdfstring{flattenCopyResults()}{flattenCopyResults()}}
+{\footnotesize\ttfamily std\+::size\+\_\+t tesseract\+\_\+collision\+::flatten\+Copy\+Results (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacetesseract__collision_a1eeace4cc41027dbde8e7dbeb77ca7cf}{Contact\+Result\+Map}} \&}]{m,  }\item[{\mbox{\hyperlink{namespacetesseract__collision_a96d77f62b7c26962d1090f0a2f00419b}{Contact\+Result\+Vector}} \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{namespacetesseract__collision_a1e54919ee87e54445b7926d0b2880882}\label{namespacetesseract__collision_a1e54919ee87e54445b7926d0b2880882}} 
+\index{tesseract\_collision@{tesseract\_collision}!flattenMoveResults@{flattenMoveResults}}
+\index{flattenMoveResults@{flattenMoveResults}!tesseract\_collision@{tesseract\_collision}}
+\doxysubsubsection{\texorpdfstring{flattenMoveResults()}{flattenMoveResults()}}
+{\footnotesize\ttfamily std\+::size\+\_\+t tesseract\+\_\+collision\+::flatten\+Move\+Results (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacetesseract__collision_a1eeace4cc41027dbde8e7dbeb77ca7cf}{Contact\+Result\+Map}} \&\&}]{m,  }\item[{\mbox{\hyperlink{namespacetesseract__collision_a96d77f62b7c26962d1090f0a2f00419b}{Contact\+Result\+Vector}} \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{namespacetesseract__collision_a3d63942ad37df10958b434c860782fbb}\label{namespacetesseract__collision_a3d63942ad37df10958b434c860782fbb}} 
+\index{tesseract\_collision@{tesseract\_collision}!flattenResults@{flattenResults}}
+\index{flattenResults@{flattenResults}!tesseract\_collision@{tesseract\_collision}}
+\doxysubsubsection{\texorpdfstring{flattenResults()}{flattenResults()}}
+{\footnotesize\ttfamily std\+::size\+\_\+t tesseract\+\_\+collision\+::flatten\+Results (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacetesseract__collision_a1eeace4cc41027dbde8e7dbeb77ca7cf}{Contact\+Result\+Map}} \&\&}]{m,  }\item[{\mbox{\hyperlink{namespacetesseract__collision_a96d77f62b7c26962d1090f0a2f00419b}{Contact\+Result\+Vector}} \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{namespacetesseract__collision_a0876bd0182505440236643eb5bade1c7}\label{namespacetesseract__collision_a0876bd0182505440236643eb5bade1c7}} 
+\index{tesseract\_collision@{tesseract\_collision}!getObjectPairKey@{getObjectPairKey}}
+\index{getObjectPairKey@{getObjectPairKey}!tesseract\_collision@{tesseract\_collision}}
+\doxysubsubsection{\texorpdfstring{getObjectPairKey()}{getObjectPairKey()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacetesseract__collision_af5926355228f0196ddf51e6951dbe491}{Object\+Pair\+Key}} tesseract\+\_\+collision\+::get\+Object\+Pair\+Key (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{obj1,  }\item[{const std\+::string \&}]{obj2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get a key for two object to search the collision matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj1} & First collision object name \\
+\hline
+{\em obj2} & Second collision object name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The collision pair key 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacetesseract__collision_a1d5b1daf53ea0152f87f4ab565643478}\label{namespacetesseract__collision_a1d5b1daf53ea0152f87f4ab565643478}} 
+\index{tesseract\_collision@{tesseract\_collision}!isContactAllowed@{isContactAllowed}}
+\index{isContactAllowed@{isContactAllowed}!tesseract\_collision@{tesseract\_collision}}
+\doxysubsubsection{\texorpdfstring{isContactAllowed()}{isContactAllowed()}}
+{\footnotesize\ttfamily bool tesseract\+\_\+collision\+::is\+Contact\+Allowed (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name1,  }\item[{const std\+::string \&}]{name2,  }\item[{const \mbox{\hyperlink{namespacetesseract__collision_abe7752ce161fbd1139533ac566fec1cb}{Is\+Contact\+Allowed\+Fn}} \&}]{acm,  }\item[{bool}]{verbose = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Determine if contact is allowed between two objects. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name1} & The name of the first object \\
+\hline
+{\em name2} & The name of the second object \\
+\hline
+{\em acm} & The contact allowed function \\
+\hline
+{\em verbose} & If true print debug informaton \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if contact is allowed between the two object, otherwise false. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacetesseract__collision_ab6cce1ce95e96f38382f53976bbe9dea}\label{namespacetesseract__collision_ab6cce1ce95e96f38382f53976bbe9dea}} 
+\index{tesseract\_collision@{tesseract\_collision}!isLinkActive@{isLinkActive}}
+\index{isLinkActive@{isLinkActive}!tesseract\_collision@{tesseract\_collision}}
+\doxysubsubsection{\texorpdfstring{isLinkActive()}{isLinkActive()}}
+{\footnotesize\ttfamily bool tesseract\+\_\+collision\+::is\+Link\+Active (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::string $>$ \&}]{active,  }\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+This will check if a link is active provided a list. If the list is empty the link is considered active. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em active} & List of active link names \\
+\hline
+{\em name} & The name of link to check if it is active. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{namespacetesseract__collision_ab79187502eefb0f670dbde89a5b7b969}\label{namespacetesseract__collision_ab79187502eefb0f670dbde89a5b7b969}} 
+\index{tesseract\_collision@{tesseract\_collision}!loadSimplePlyFile@{loadSimplePlyFile}}
+\index{loadSimplePlyFile@{loadSimplePlyFile}!tesseract\_collision@{tesseract\_collision}}
+\doxysubsubsection{\texorpdfstring{loadSimplePlyFile()}{loadSimplePlyFile()}}
+{\footnotesize\ttfamily int tesseract\+\_\+collision\+::load\+Simple\+Ply\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{path,  }\item[{\mbox{\hyperlink{namespacetesseract__common_af89ed6517f4c84bdb2b037bb40f7d9d9}{tesseract\+\_\+common\+::\+Vector\+Vector3d}} \&}]{vertices,  }\item[{Eigen\+::\+Vector\+Xi \&}]{faces,  }\item[{bool}]{triangles\+\_\+only = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Loads a simple ply file given a path. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & The file path \\
+\hline
+{\em vertices} & A vector of vertices \\
+\hline
+{\em faces} & The first values indicates the number of vertices that define the face followed by the vertice index \\
+\hline
+{\em triangles\+\_\+only} & Convert to only include triangles \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Number of faces, If returned 0 it failed to load. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacetesseract__collision_ad17b98123f412bcc30207daa6931cbb2}\label{namespacetesseract__collision_ad17b98123f412bcc30207daa6931cbb2}} 
+\index{tesseract\_collision@{tesseract\_collision}!makeConvexMesh@{makeConvexMesh}}
+\index{makeConvexMesh@{makeConvexMesh}!tesseract\_collision@{tesseract\_collision}}
+\doxysubsubsection{\texorpdfstring{makeConvexMesh()}{makeConvexMesh()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__geometry_1_1ConvexMesh_aecd145c5f75117ff7a3bab1fb921e4c0}{tesseract\+\_\+geometry\+::\+Convex\+Mesh\+::\+Ptr}} tesseract\+\_\+collision\+::make\+Convex\+Mesh (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtesseract__geometry_1_1Mesh}{tesseract\+\_\+geometry\+::\+Mesh}} \&}]{mesh }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{namespacetesseract__collision_a6e40c6a2976671ddb907584a16760b6f}\label{namespacetesseract__collision_a6e40c6a2976671ddb907584a16760b6f}} 
+\index{tesseract\_collision@{tesseract\_collision}!processResult@{processResult}}
+\index{processResult@{processResult}!tesseract\_collision@{tesseract\_collision}}
+\doxysubsubsection{\texorpdfstring{processResult()}{processResult()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structtesseract__collision_1_1ContactResult}{Contact\+Result}}$\ast$ tesseract\+\_\+collision\+::process\+Result (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtesseract__collision_1_1ContactTestData}{Contact\+Test\+Data}} \&}]{cdata,  }\item[{\mbox{\hyperlink{structtesseract__collision_1_1ContactResult}{Contact\+Result}} \&}]{contact,  }\item[{const std\+::pair$<$ std\+::string, std\+::string $>$ \&}]{key,  }\item[{bool}]{found }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{namespacetesseract__collision_ab322b688c8e598e590e5a9af30084272}\label{namespacetesseract__collision_ab322b688c8e598e590e5a9af30084272}} 
+\index{tesseract\_collision@{tesseract\_collision}!writeSimplePlyFile@{writeSimplePlyFile}}
+\index{writeSimplePlyFile@{writeSimplePlyFile}!tesseract\_collision@{tesseract\_collision}}
+\doxysubsubsection{\texorpdfstring{writeSimplePlyFile()}{writeSimplePlyFile()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool tesseract\+\_\+collision\+::write\+Simple\+Ply\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{path,  }\item[{const \mbox{\hyperlink{namespacetesseract__common_af89ed6517f4c84bdb2b037bb40f7d9d9}{tesseract\+\_\+common\+::\+Vector\+Vector3d}} \&}]{vertices,  }\item[{const Eigen\+::\+Vector\+Xi \&}]{faces,  }\item[{int}]{num\+\_\+faces }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Write a simple ply file given vertices and faces. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & The file path \\
+\hline
+{\em vertices} & A vector of vertices \\
+\hline
+{\em faces} & The first values indicates the number of vertices that define the face followed by the vertice index \\
+\hline
+{\em num\+\_\+faces} & The number of faces \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+False if failed to write file, otherwise true 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacetesseract__collision_a4dc11acdd34b2eaa5023e5828463ba05}\label{namespacetesseract__collision_a4dc11acdd34b2eaa5023e5828463ba05}} 
+\index{tesseract\_collision@{tesseract\_collision}!writeSimplePlyFile@{writeSimplePlyFile}}
+\index{writeSimplePlyFile@{writeSimplePlyFile}!tesseract\_collision@{tesseract\_collision}}
+\doxysubsubsection{\texorpdfstring{writeSimplePlyFile()}{writeSimplePlyFile()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool tesseract\+\_\+collision\+::write\+Simple\+Ply\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{path,  }\item[{const \mbox{\hyperlink{namespacetesseract__common_af89ed6517f4c84bdb2b037bb40f7d9d9}{tesseract\+\_\+common\+::\+Vector\+Vector3d}} \&}]{vertices,  }\item[{const std\+::vector$<$ Eigen\+::\+Vector3i $>$ \&}]{vectices\+\_\+color,  }\item[{const Eigen\+::\+Vector\+Xi \&}]{faces,  }\item[{int}]{num\+\_\+faces }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Write a simple ply file given vertices and faces. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & The file path \\
+\hline
+{\em vertices} & A vector of vertices \\
+\hline
+{\em vertices\+\_\+color} & The vertices color (0-\/255,0-\/255,0-\/255), if empty uses a default color \\
+\hline
+{\em faces} & The first values indicates the number of vertices that define the face followed by the vertice index \\
+\hline
+{\em num\+\_\+faces} & The number of faces \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+False if failed to write file, otherwise true 
+\end{DoxyReturn}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespacetesseract__collision_a7b23767d95cb11ee74a0001502f930a5}\label{namespacetesseract__collision_a7b23767d95cb11ee74a0001502f930a5}} 
+\index{tesseract\_collision@{tesseract\_collision}!ContactTestTypeStrings@{ContactTestTypeStrings}}
+\index{ContactTestTypeStrings@{ContactTestTypeStrings}!tesseract\_collision@{tesseract\_collision}}
+\doxysubsubsection{\texorpdfstring{ContactTestTypeStrings}{ContactTestTypeStrings}}
+{\footnotesize\ttfamily const std\+::vector$<$std\+::string$>$ tesseract\+\_\+collision\+::\+Contact\+Test\+Type\+Strings\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{}
+\DoxyCodeLine{  \textcolor{stringliteral}{"FIRST"},}
+\DoxyCodeLine{  \textcolor{stringliteral}{"CLOSEST"},}
+\DoxyCodeLine{  \textcolor{stringliteral}{"ALL"},}
+\DoxyCodeLine{  \textcolor{stringliteral}{"LIMITED"},}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}

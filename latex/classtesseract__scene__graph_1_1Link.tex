@@ -1,0 +1,167 @@
+\hypertarget{classtesseract__scene__graph_1_1Link}{}\doxysection{tesseract\+\_\+scene\+\_\+graph\+::Link Class Reference}
+\label{classtesseract__scene__graph_1_1Link}\index{tesseract\_scene\_graph::Link@{tesseract\_scene\_graph::Link}}
+
+
+{\ttfamily \#include $<$link.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classtesseract__scene__graph_1_1Link_a424c06b5c02fe0b92fee449ef1190bf0}{Ptr}} = std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classtesseract__scene__graph_1_1Link}{Link}} $>$
+\item 
+using \mbox{\hyperlink{classtesseract__scene__graph_1_1Link_afad1873344245e2223664b6b7f846f1c}{Const\+Ptr}} = std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{classtesseract__scene__graph_1_1Link}{Link}} $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtesseract__scene__graph_1_1Link_a0024ffd73a4d4c1680e29678d99c5395}{Link}} (std\+::string name)
+\item 
+\mbox{\hyperlink{classtesseract__scene__graph_1_1Link_a64c153234e6b6e2321ecabaf83f66d6d}{$\sim$\+Link}} ()=default
+\item 
+\mbox{\hyperlink{classtesseract__scene__graph_1_1Link_a66b8dfd04b656d67b6d076f99e0c3394}{Link}} (const \mbox{\hyperlink{classtesseract__scene__graph_1_1Link}{Link}} \&other)=delete
+\item 
+\mbox{\hyperlink{classtesseract__scene__graph_1_1Link}{Link}} \& \mbox{\hyperlink{classtesseract__scene__graph_1_1Link_acb5aa2e368d110d372942e23eae64b02}{operator=}} (const \mbox{\hyperlink{classtesseract__scene__graph_1_1Link}{Link}} \&other)=delete
+\item 
+\mbox{\hyperlink{classtesseract__scene__graph_1_1Link_ad6980f15508ba452f7b3ac1528ba6de7}{Link}} (\mbox{\hyperlink{classtesseract__scene__graph_1_1Link}{Link}} \&\&other)=default
+\item 
+\mbox{\hyperlink{classtesseract__scene__graph_1_1Link}{Link}} \& \mbox{\hyperlink{classtesseract__scene__graph_1_1Link_a1c4c6297179ec9cd8676836764815b37}{operator=}} (\mbox{\hyperlink{classtesseract__scene__graph_1_1Link}{Link}} \&\&other)=default
+\item 
+const std\+::string \& \mbox{\hyperlink{classtesseract__scene__graph_1_1Link_a379d7c87ec621839aa2482db5b91daa7}{get\+Name}} () const
+\item 
+void \mbox{\hyperlink{classtesseract__scene__graph_1_1Link_a591eae7457042a675bd7a79f536a4adc}{clear}} ()
+\item 
+\mbox{\hyperlink{classtesseract__scene__graph_1_1Link}{Link}} \mbox{\hyperlink{classtesseract__scene__graph_1_1Link_a6989771df3e0f5de6bc50a4298eb9086}{clone}} (const std\+::string \&name) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtesseract__scene__graph_1_1Inertial_ab6bb54cb76a7a31768d2db41b43b5b63}{Inertial\+::\+Ptr}} \mbox{\hyperlink{classtesseract__scene__graph_1_1Link_afc0d758d2f7fd3cce4ad6cefc3246475}{inertial}}
+\begin{DoxyCompactList}\small\item\em inertial element \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{classtesseract__scene__graph_1_1Visual_aabcb8106e59f659ad53243dfb51916e4}{Visual\+::\+Ptr}} $>$ \mbox{\hyperlink{classtesseract__scene__graph_1_1Link_aa4d41b44549649a9795409c33707a45b}{visual}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classtesseract__scene__graph_1_1Visual}{Visual}} Elements. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{classtesseract__scene__graph_1_1Collision_a8125bc208e0da8bf1530b98828cc7321}{Collision\+::\+Ptr}} $>$ \mbox{\hyperlink{classtesseract__scene__graph_1_1Link_ad62424fd624abb65bd4b6bc1c33eb5a2}{collision}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classtesseract__scene__graph_1_1Collision}{Collision}} Elements. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classtesseract__scene__graph_1_1Link_aa0f887a98e35fc977b46d79d56a2a7fd}{name\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classtesseract__scene__graph_1_1Link_afad1873344245e2223664b6b7f846f1c}\label{classtesseract__scene__graph_1_1Link_afad1873344245e2223664b6b7f846f1c}} 
+\index{tesseract\_scene\_graph::Link@{tesseract\_scene\_graph::Link}!ConstPtr@{ConstPtr}}
+\index{ConstPtr@{ConstPtr}!tesseract\_scene\_graph::Link@{tesseract\_scene\_graph::Link}}
+\doxysubsubsection{\texorpdfstring{ConstPtr}{ConstPtr}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classtesseract__scene__graph_1_1Link_afad1873344245e2223664b6b7f846f1c}{tesseract\+\_\+scene\+\_\+graph\+::\+Link\+::\+Const\+Ptr}} =  std\+::shared\+\_\+ptr$<$const \mbox{\hyperlink{classtesseract__scene__graph_1_1Link}{Link}}$>$}
+
+\mbox{\Hypertarget{classtesseract__scene__graph_1_1Link_a424c06b5c02fe0b92fee449ef1190bf0}\label{classtesseract__scene__graph_1_1Link_a424c06b5c02fe0b92fee449ef1190bf0}} 
+\index{tesseract\_scene\_graph::Link@{tesseract\_scene\_graph::Link}!Ptr@{Ptr}}
+\index{Ptr@{Ptr}!tesseract\_scene\_graph::Link@{tesseract\_scene\_graph::Link}}
+\doxysubsubsection{\texorpdfstring{Ptr}{Ptr}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classtesseract__scene__graph_1_1Link_a424c06b5c02fe0b92fee449ef1190bf0}{tesseract\+\_\+scene\+\_\+graph\+::\+Link\+::\+Ptr}} =  std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classtesseract__scene__graph_1_1Link}{Link}}$>$}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtesseract__scene__graph_1_1Link_a0024ffd73a4d4c1680e29678d99c5395}\label{classtesseract__scene__graph_1_1Link_a0024ffd73a4d4c1680e29678d99c5395}} 
+\index{tesseract\_scene\_graph::Link@{tesseract\_scene\_graph::Link}!Link@{Link}}
+\index{Link@{Link}!tesseract\_scene\_graph::Link@{tesseract\_scene\_graph::Link}}
+\doxysubsubsection{\texorpdfstring{Link()}{Link()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily tesseract\+\_\+scene\+\_\+graph\+::\+Link\+::\+Link (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classtesseract__scene__graph_1_1Link_a64c153234e6b6e2321ecabaf83f66d6d}\label{classtesseract__scene__graph_1_1Link_a64c153234e6b6e2321ecabaf83f66d6d}} 
+\index{tesseract\_scene\_graph::Link@{tesseract\_scene\_graph::Link}!````~Link@{$\sim$Link}}
+\index{````~Link@{$\sim$Link}!tesseract\_scene\_graph::Link@{tesseract\_scene\_graph::Link}}
+\doxysubsubsection{\texorpdfstring{$\sim$Link()}{~Link()}}
+{\footnotesize\ttfamily tesseract\+\_\+scene\+\_\+graph\+::\+Link\+::$\sim$\+Link (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classtesseract__scene__graph_1_1Link_a66b8dfd04b656d67b6d076f99e0c3394}\label{classtesseract__scene__graph_1_1Link_a66b8dfd04b656d67b6d076f99e0c3394}} 
+\index{tesseract\_scene\_graph::Link@{tesseract\_scene\_graph::Link}!Link@{Link}}
+\index{Link@{Link}!tesseract\_scene\_graph::Link@{tesseract\_scene\_graph::Link}}
+\doxysubsubsection{\texorpdfstring{Link()}{Link()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily tesseract\+\_\+scene\+\_\+graph\+::\+Link\+::\+Link (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtesseract__scene__graph_1_1Link}{Link}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classtesseract__scene__graph_1_1Link_ad6980f15508ba452f7b3ac1528ba6de7}\label{classtesseract__scene__graph_1_1Link_ad6980f15508ba452f7b3ac1528ba6de7}} 
+\index{tesseract\_scene\_graph::Link@{tesseract\_scene\_graph::Link}!Link@{Link}}
+\index{Link@{Link}!tesseract\_scene\_graph::Link@{tesseract\_scene\_graph::Link}}
+\doxysubsubsection{\texorpdfstring{Link()}{Link()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily tesseract\+\_\+scene\+\_\+graph\+::\+Link\+::\+Link (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtesseract__scene__graph_1_1Link}{Link}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtesseract__scene__graph_1_1Link_a591eae7457042a675bd7a79f536a4adc}\label{classtesseract__scene__graph_1_1Link_a591eae7457042a675bd7a79f536a4adc}} 
+\index{tesseract\_scene\_graph::Link@{tesseract\_scene\_graph::Link}!clear@{clear}}
+\index{clear@{clear}!tesseract\_scene\_graph::Link@{tesseract\_scene\_graph::Link}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily void tesseract\+\_\+scene\+\_\+graph\+::\+Link\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classtesseract__scene__graph_1_1Link_a6989771df3e0f5de6bc50a4298eb9086}\label{classtesseract__scene__graph_1_1Link_a6989771df3e0f5de6bc50a4298eb9086}} 
+\index{tesseract\_scene\_graph::Link@{tesseract\_scene\_graph::Link}!clone@{clone}}
+\index{clone@{clone}!tesseract\_scene\_graph::Link@{tesseract\_scene\_graph::Link}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__scene__graph_1_1Link}{Link}} tesseract\+\_\+scene\+\_\+graph\+::\+Link\+::clone (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Perform a copy of link, changing its name \mbox{\Hypertarget{classtesseract__scene__graph_1_1Link_a379d7c87ec621839aa2482db5b91daa7}\label{classtesseract__scene__graph_1_1Link_a379d7c87ec621839aa2482db5b91daa7}} 
+\index{tesseract\_scene\_graph::Link@{tesseract\_scene\_graph::Link}!getName@{getName}}
+\index{getName@{getName}!tesseract\_scene\_graph::Link@{tesseract\_scene\_graph::Link}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily const std\+::string\& tesseract\+\_\+scene\+\_\+graph\+::\+Link\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classtesseract__scene__graph_1_1Link_acb5aa2e368d110d372942e23eae64b02}\label{classtesseract__scene__graph_1_1Link_acb5aa2e368d110d372942e23eae64b02}} 
+\index{tesseract\_scene\_graph::Link@{tesseract\_scene\_graph::Link}!operator=@{operator=}}
+\index{operator=@{operator=}!tesseract\_scene\_graph::Link@{tesseract\_scene\_graph::Link}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__scene__graph_1_1Link}{Link}}\& tesseract\+\_\+scene\+\_\+graph\+::\+Link\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtesseract__scene__graph_1_1Link}{Link}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classtesseract__scene__graph_1_1Link_a1c4c6297179ec9cd8676836764815b37}\label{classtesseract__scene__graph_1_1Link_a1c4c6297179ec9cd8676836764815b37}} 
+\index{tesseract\_scene\_graph::Link@{tesseract\_scene\_graph::Link}!operator=@{operator=}}
+\index{operator=@{operator=}!tesseract\_scene\_graph::Link@{tesseract\_scene\_graph::Link}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__scene__graph_1_1Link}{Link}}\& tesseract\+\_\+scene\+\_\+graph\+::\+Link\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtesseract__scene__graph_1_1Link}{Link}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classtesseract__scene__graph_1_1Link_ad62424fd624abb65bd4b6bc1c33eb5a2}\label{classtesseract__scene__graph_1_1Link_ad62424fd624abb65bd4b6bc1c33eb5a2}} 
+\index{tesseract\_scene\_graph::Link@{tesseract\_scene\_graph::Link}!collision@{collision}}
+\index{collision@{collision}!tesseract\_scene\_graph::Link@{tesseract\_scene\_graph::Link}}
+\doxysubsubsection{\texorpdfstring{collision}{collision}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{classtesseract__scene__graph_1_1Collision_a8125bc208e0da8bf1530b98828cc7321}{Collision\+::\+Ptr}}$>$ tesseract\+\_\+scene\+\_\+graph\+::\+Link\+::collision}
+
+
+
+\mbox{\hyperlink{classtesseract__scene__graph_1_1Collision}{Collision}} Elements. 
+
+\mbox{\Hypertarget{classtesseract__scene__graph_1_1Link_afc0d758d2f7fd3cce4ad6cefc3246475}\label{classtesseract__scene__graph_1_1Link_afc0d758d2f7fd3cce4ad6cefc3246475}} 
+\index{tesseract\_scene\_graph::Link@{tesseract\_scene\_graph::Link}!inertial@{inertial}}
+\index{inertial@{inertial}!tesseract\_scene\_graph::Link@{tesseract\_scene\_graph::Link}}
+\doxysubsubsection{\texorpdfstring{inertial}{inertial}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__scene__graph_1_1Inertial_ab6bb54cb76a7a31768d2db41b43b5b63}{Inertial\+::\+Ptr}} tesseract\+\_\+scene\+\_\+graph\+::\+Link\+::inertial}
+
+
+
+inertial element 
+
+\mbox{\Hypertarget{classtesseract__scene__graph_1_1Link_aa0f887a98e35fc977b46d79d56a2a7fd}\label{classtesseract__scene__graph_1_1Link_aa0f887a98e35fc977b46d79d56a2a7fd}} 
+\index{tesseract\_scene\_graph::Link@{tesseract\_scene\_graph::Link}!name\_@{name\_}}
+\index{name\_@{name\_}!tesseract\_scene\_graph::Link@{tesseract\_scene\_graph::Link}}
+\doxysubsubsection{\texorpdfstring{name\_}{name\_}}
+{\footnotesize\ttfamily std\+::string tesseract\+\_\+scene\+\_\+graph\+::\+Link\+::name\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classtesseract__scene__graph_1_1Link_aa4d41b44549649a9795409c33707a45b}\label{classtesseract__scene__graph_1_1Link_aa4d41b44549649a9795409c33707a45b}} 
+\index{tesseract\_scene\_graph::Link@{tesseract\_scene\_graph::Link}!visual@{visual}}
+\index{visual@{visual}!tesseract\_scene\_graph::Link@{tesseract\_scene\_graph::Link}}
+\doxysubsubsection{\texorpdfstring{visual}{visual}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{classtesseract__scene__graph_1_1Visual_aabcb8106e59f659ad53243dfb51916e4}{Visual\+::\+Ptr}}$>$ tesseract\+\_\+scene\+\_\+graph\+::\+Link\+::visual}
+
+
+
+\mbox{\hyperlink{classtesseract__scene__graph_1_1Visual}{Visual}} Elements. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+tesseract/tesseract\+\_\+scene\+\_\+graph/include/tesseract\+\_\+scene\+\_\+graph/\mbox{\hyperlink{tesseract__scene__graph_2include_2tesseract__scene__graph_2link_8h}{link.\+h}}\end{DoxyCompactItemize}

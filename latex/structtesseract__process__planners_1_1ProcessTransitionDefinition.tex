@@ -1,0 +1,41 @@
+\hypertarget{structtesseract__process__planners_1_1ProcessTransitionDefinition}{}\doxysection{tesseract\+\_\+process\+\_\+planners\+::Process\+Transition\+Definition Struct Reference}
+\label{structtesseract__process__planners_1_1ProcessTransitionDefinition}\index{tesseract\_process\_planners::ProcessTransitionDefinition@{tesseract\_process\_planners::ProcessTransitionDefinition}}
+
+
+The \mbox{\hyperlink{structtesseract__process__planners_1_1ProcessTransitionDefinition}{Process\+Transition\+Definition}} struct which contains the waypoint data to allow moving between adjacent process segments.  
+
+
+
+
+{\ttfamily \#include $<$process\+\_\+definition.\+h$>$}
+
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classtesseract__motion__planners_1_1Waypoint_a6a3eae473f2bb3bd94684561aae0bd3e}{tesseract\+\_\+motion\+\_\+planners\+::\+Waypoint\+::\+Ptr}} $>$ \mbox{\hyperlink{structtesseract__process__planners_1_1ProcessTransitionDefinition_a1551fa745427c5ed4e1ce98896347c9c}{transition\+\_\+from\+\_\+start}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classtesseract__motion__planners_1_1Waypoint_a6a3eae473f2bb3bd94684561aae0bd3e}{tesseract\+\_\+motion\+\_\+planners\+::\+Waypoint\+::\+Ptr}} $>$ \mbox{\hyperlink{structtesseract__process__planners_1_1ProcessTransitionDefinition_a8b4759e69e580e121242ac836c54a502}{transition\+\_\+from\+\_\+end}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{structtesseract__process__planners_1_1ProcessTransitionDefinition}{Process\+Transition\+Definition}} struct which contains the waypoint data to allow moving between adjacent process segments. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structtesseract__process__planners_1_1ProcessTransitionDefinition_a8b4759e69e580e121242ac836c54a502}\label{structtesseract__process__planners_1_1ProcessTransitionDefinition_a8b4759e69e580e121242ac836c54a502}} 
+\index{tesseract\_process\_planners::ProcessTransitionDefinition@{tesseract\_process\_planners::ProcessTransitionDefinition}!transition\_from\_end@{transition\_from\_end}}
+\index{transition\_from\_end@{transition\_from\_end}!tesseract\_process\_planners::ProcessTransitionDefinition@{tesseract\_process\_planners::ProcessTransitionDefinition}}
+\doxysubsubsection{\texorpdfstring{transition\_from\_end}{transition\_from\_end}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{classtesseract__motion__planners_1_1Waypoint_a6a3eae473f2bb3bd94684561aae0bd3e}{tesseract\+\_\+motion\+\_\+planners\+::\+Waypoint\+::\+Ptr}}$>$ tesseract\+\_\+process\+\_\+planners\+::\+Process\+Transition\+Definition\+::transition\+\_\+from\+\_\+end}
+
+A transition plans from the end of segment\mbox{[}i\mbox{]} to the start of segment\mbox{[}i+1\mbox{]} \mbox{\Hypertarget{structtesseract__process__planners_1_1ProcessTransitionDefinition_a1551fa745427c5ed4e1ce98896347c9c}\label{structtesseract__process__planners_1_1ProcessTransitionDefinition_a1551fa745427c5ed4e1ce98896347c9c}} 
+\index{tesseract\_process\_planners::ProcessTransitionDefinition@{tesseract\_process\_planners::ProcessTransitionDefinition}!transition\_from\_start@{transition\_from\_start}}
+\index{transition\_from\_start@{transition\_from\_start}!tesseract\_process\_planners::ProcessTransitionDefinition@{tesseract\_process\_planners::ProcessTransitionDefinition}}
+\doxysubsubsection{\texorpdfstring{transition\_from\_start}{transition\_from\_start}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{classtesseract__motion__planners_1_1Waypoint_a6a3eae473f2bb3bd94684561aae0bd3e}{tesseract\+\_\+motion\+\_\+planners\+::\+Waypoint\+::\+Ptr}}$>$ tesseract\+\_\+process\+\_\+planners\+::\+Process\+Transition\+Definition\+::transition\+\_\+from\+\_\+start}
+
+A transition plans from the start of segment\mbox{[}i\mbox{]} to the end of segment\mbox{[}i+1\mbox{]}, this data can be used for finding collision free exit moves after cancelling an ongoing process 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+tesseract/tesseract\+\_\+planning/tesseract\+\_\+process\+\_\+planners/include/tesseract\+\_\+process\+\_\+planners/\mbox{\hyperlink{process__definition_8h}{process\+\_\+definition.\+h}}\end{DoxyCompactItemize}

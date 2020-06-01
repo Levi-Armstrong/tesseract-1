@@ -1,0 +1,75 @@
+\hypertarget{structtesseract__process__planners_1_1ProcessPlan}{}\doxysection{tesseract\+\_\+process\+\_\+planners\+::Process\+Plan Struct Reference}
+\label{structtesseract__process__planners_1_1ProcessPlan}\index{tesseract\_process\_planners::ProcessPlan@{tesseract\_process\_planners::ProcessPlan}}
+
+
+Is a result structure to hold the results generated based on the process definition.  
+
+
+
+
+{\ttfamily \#include $<$process\+\_\+planner.\+h$>$}
+
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structtesseract__common_1_1JointTrajectory}{tesseract\+\_\+common\+::\+Joint\+Trajectory}} \mbox{\hyperlink{structtesseract__process__planners_1_1ProcessPlan_a9e036fa7077fc8989dbb35e639eba7e7}{from\+\_\+start}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structtesseract__process__planners_1_1ProcessSegmentPlan}{Process\+Segment\+Plan}} $>$ \mbox{\hyperlink{structtesseract__process__planners_1_1ProcessPlan_a1448bb49835802d849d421f78e020395}{segments}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structtesseract__common_1_1JointTrajectory}{tesseract\+\_\+common\+::\+Joint\+Trajectory}} $>$ \mbox{\hyperlink{structtesseract__process__planners_1_1ProcessPlan_a2ad2ea2246619ea106c9dd2b1e57d334}{transition\+\_\+from\+\_\+start}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structtesseract__common_1_1JointTrajectory}{tesseract\+\_\+common\+::\+Joint\+Trajectory}} $>$ \mbox{\hyperlink{structtesseract__process__planners_1_1ProcessPlan_ad7646165cb8aa9a40e3c4104a10e3c5b}{transition\+\_\+from\+\_\+end}}
+\item 
+\mbox{\hyperlink{structtesseract__common_1_1JointTrajectory}{tesseract\+\_\+common\+::\+Joint\+Trajectory}} \mbox{\hyperlink{structtesseract__process__planners_1_1ProcessPlan_a4279f8269ba0022f8c0d4dc0b5c763f1}{to\+\_\+end}}
+\item 
+bool \mbox{\hyperlink{structtesseract__process__planners_1_1ProcessPlan_a703db210f33e2b715d001ebdc1fa5efa}{valid}} = true
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Is a result structure to hold the results generated based on the process definition. 
+
+Note\+: An empty trajectory for any process step indicates that it is to be omitted. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structtesseract__process__planners_1_1ProcessPlan_a9e036fa7077fc8989dbb35e639eba7e7}\label{structtesseract__process__planners_1_1ProcessPlan_a9e036fa7077fc8989dbb35e639eba7e7}} 
+\index{tesseract\_process\_planners::ProcessPlan@{tesseract\_process\_planners::ProcessPlan}!from\_start@{from\_start}}
+\index{from\_start@{from\_start}!tesseract\_process\_planners::ProcessPlan@{tesseract\_process\_planners::ProcessPlan}}
+\doxysubsubsection{\texorpdfstring{from\_start}{from\_start}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structtesseract__common_1_1JointTrajectory}{tesseract\+\_\+common\+::\+Joint\+Trajectory}} tesseract\+\_\+process\+\_\+planners\+::\+Process\+Plan\+::from\+\_\+start}
+
+A trajectory from the start position to the first point in the first segment \mbox{\Hypertarget{structtesseract__process__planners_1_1ProcessPlan_a1448bb49835802d849d421f78e020395}\label{structtesseract__process__planners_1_1ProcessPlan_a1448bb49835802d849d421f78e020395}} 
+\index{tesseract\_process\_planners::ProcessPlan@{tesseract\_process\_planners::ProcessPlan}!segments@{segments}}
+\index{segments@{segments}!tesseract\_process\_planners::ProcessPlan@{tesseract\_process\_planners::ProcessPlan}}
+\doxysubsubsection{\texorpdfstring{segments}{segments}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{structtesseract__process__planners_1_1ProcessSegmentPlan}{Process\+Segment\+Plan}}$>$ tesseract\+\_\+process\+\_\+planners\+::\+Process\+Plan\+::segments}
+
+A vector of process segment results \mbox{\Hypertarget{structtesseract__process__planners_1_1ProcessPlan_a4279f8269ba0022f8c0d4dc0b5c763f1}\label{structtesseract__process__planners_1_1ProcessPlan_a4279f8269ba0022f8c0d4dc0b5c763f1}} 
+\index{tesseract\_process\_planners::ProcessPlan@{tesseract\_process\_planners::ProcessPlan}!to\_end@{to\_end}}
+\index{to\_end@{to\_end}!tesseract\_process\_planners::ProcessPlan@{tesseract\_process\_planners::ProcessPlan}}
+\doxysubsubsection{\texorpdfstring{to\_end}{to\_end}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structtesseract__common_1_1JointTrajectory}{tesseract\+\_\+common\+::\+Joint\+Trajectory}} tesseract\+\_\+process\+\_\+planners\+::\+Process\+Plan\+::to\+\_\+end}
+
+A trajectory from the last segments waypoint to the end position \mbox{\Hypertarget{structtesseract__process__planners_1_1ProcessPlan_ad7646165cb8aa9a40e3c4104a10e3c5b}\label{structtesseract__process__planners_1_1ProcessPlan_ad7646165cb8aa9a40e3c4104a10e3c5b}} 
+\index{tesseract\_process\_planners::ProcessPlan@{tesseract\_process\_planners::ProcessPlan}!transition\_from\_end@{transition\_from\_end}}
+\index{transition\_from\_end@{transition\_from\_end}!tesseract\_process\_planners::ProcessPlan@{tesseract\_process\_planners::ProcessPlan}}
+\doxysubsubsection{\texorpdfstring{transition\_from\_end}{transition\_from\_end}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{structtesseract__common_1_1JointTrajectory}{tesseract\+\_\+common\+::\+Joint\+Trajectory}}$>$ tesseract\+\_\+process\+\_\+planners\+::\+Process\+Plan\+::transition\+\_\+from\+\_\+end}
+
+A vector of transition plans from the end of segment\mbox{[}i\mbox{]} to the start of segment\mbox{[}i+1\mbox{]} \mbox{\Hypertarget{structtesseract__process__planners_1_1ProcessPlan_a2ad2ea2246619ea106c9dd2b1e57d334}\label{structtesseract__process__planners_1_1ProcessPlan_a2ad2ea2246619ea106c9dd2b1e57d334}} 
+\index{tesseract\_process\_planners::ProcessPlan@{tesseract\_process\_planners::ProcessPlan}!transition\_from\_start@{transition\_from\_start}}
+\index{transition\_from\_start@{transition\_from\_start}!tesseract\_process\_planners::ProcessPlan@{tesseract\_process\_planners::ProcessPlan}}
+\doxysubsubsection{\texorpdfstring{transition\_from\_start}{transition\_from\_start}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{structtesseract__common_1_1JointTrajectory}{tesseract\+\_\+common\+::\+Joint\+Trajectory}}$>$ tesseract\+\_\+process\+\_\+planners\+::\+Process\+Plan\+::transition\+\_\+from\+\_\+start}
+
+A vector of transition plans from the start of segment\mbox{[}i\mbox{]} to the end of segment\mbox{[}i+1\mbox{]}, this data can be useful to make quick exit moves after canceling an ongoing process \mbox{\Hypertarget{structtesseract__process__planners_1_1ProcessPlan_a703db210f33e2b715d001ebdc1fa5efa}\label{structtesseract__process__planners_1_1ProcessPlan_a703db210f33e2b715d001ebdc1fa5efa}} 
+\index{tesseract\_process\_planners::ProcessPlan@{tesseract\_process\_planners::ProcessPlan}!valid@{valid}}
+\index{valid@{valid}!tesseract\_process\_planners::ProcessPlan@{tesseract\_process\_planners::ProcessPlan}}
+\doxysubsubsection{\texorpdfstring{valid}{valid}}
+{\footnotesize\ttfamily bool tesseract\+\_\+process\+\_\+planners\+::\+Process\+Plan\+::valid = true}
+
+If true, a motion plan was successfully found for everything, otherwise false 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+tesseract/tesseract\+\_\+planning/tesseract\+\_\+process\+\_\+planners/include/tesseract\+\_\+process\+\_\+planners/\mbox{\hyperlink{process__planner_8h}{process\+\_\+planner.\+h}}\end{DoxyCompactItemize}

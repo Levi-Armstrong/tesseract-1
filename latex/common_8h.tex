@@ -1,0 +1,106 @@
+\hypertarget{common_8h}{}\doxysection{tesseract/tesseract\+\_\+collision/include/tesseract\+\_\+collision/core/common.h File Reference}
+\label{common_8h}\index{tesseract/tesseract\_collision/include/tesseract\_collision/core/common.h@{tesseract/tesseract\_collision/include/tesseract\_collision/core/common.h}}
+
+
+This is a collection of common methods.  
+
+
+{\ttfamily \#include $<$tesseract\+\_\+common/macros.\+h$>$}\newline
+{\ttfamily \#include $<$Linear\+Math/bt\+Convex\+Hull\+Computer.\+h$>$}\newline
+{\ttfamily \#include $<$cstdio$>$}\newline
+{\ttfamily \#include $<$cctype$>$}\newline
+{\ttfamily \#include $<$Eigen/\+Geometry$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$iomanip$>$}\newline
+{\ttfamily \#include $<$boost/algorithm/string.\+hpp$>$}\newline
+{\ttfamily \#include $<$console\+\_\+bridge/console.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+common/utils.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+collision/core/types.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+collision/core/common.\+h$>$}\newline
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacetesseract__collision}{tesseract\+\_\+collision}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{namespacetesseract__collision_af5926355228f0196ddf51e6951dbe491}{tesseract\+\_\+collision\+::\+Object\+Pair\+Key}} = std\+::pair$<$ std\+::string, std\+::string $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+Object\+Pair\+Key \mbox{\hyperlink{namespacetesseract__collision_a0876bd0182505440236643eb5bade1c7}{tesseract\+\_\+collision\+::get\+Object\+Pair\+Key}} (const std\+::string \&obj1, const std\+::string \&obj2)
+\begin{DoxyCompactList}\small\item\em Get a key for two object to search the collision matrix. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespacetesseract__collision_ab6cce1ce95e96f38382f53976bbe9dea}{tesseract\+\_\+collision\+::is\+Link\+Active}} (const std\+::vector$<$ std\+::string $>$ \&active, const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em This will check if a link is active provided a list. If the list is empty the link is considered active. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespacetesseract__collision_a1d5b1daf53ea0152f87f4ab565643478}{tesseract\+\_\+collision\+::is\+Contact\+Allowed}} (const std\+::string \&name1, const std\+::string \&name2, const Is\+Contact\+Allowed\+Fn \&acm, bool verbose=false)
+\begin{DoxyCompactList}\small\item\em Determine if contact is allowed between two objects. \end{DoxyCompactList}\item 
+Contact\+Result $\ast$ \mbox{\hyperlink{namespacetesseract__collision_a6e40c6a2976671ddb907584a16760b6f}{tesseract\+\_\+collision\+::process\+Result}} (Contact\+Test\+Data \&cdata, Contact\+Result \&contact, const std\+::pair$<$ std\+::string, std\+::string $>$ \&key, bool found)
+\item 
+int \mbox{\hyperlink{namespacetesseract__collision_ac97bc1eb96f0aa2e1d3033d7e7758849}{tesseract\+\_\+collision\+::create\+Convex\+Hull}} (\mbox{\hyperlink{namespacetesseract__common_af89ed6517f4c84bdb2b037bb40f7d9d9}{tesseract\+\_\+common\+::\+Vector\+Vector3d}} \&vertices, Eigen\+::\+Vector\+Xi \&faces, const \mbox{\hyperlink{namespacetesseract__common_af89ed6517f4c84bdb2b037bb40f7d9d9}{tesseract\+\_\+common\+::\+Vector\+Vector3d}} \&input, double shrink=-\/1, double shrink\+Clamp=-\/1)
+\begin{DoxyCompactList}\small\item\em Create a convex hull from vertices using Bullet Convex Hull Computer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classtesseract__geometry_1_1ConvexMesh_aecd145c5f75117ff7a3bab1fb921e4c0}{tesseract\+\_\+geometry\+::\+Convex\+Mesh\+::\+Ptr}} \mbox{\hyperlink{namespacetesseract__collision_ad17b98123f412bcc30207daa6931cbb2}{tesseract\+\_\+collision\+::make\+Convex\+Mesh}} (const \mbox{\hyperlink{classtesseract__geometry_1_1Mesh}{tesseract\+\_\+geometry\+::\+Mesh}} \&mesh)
+\item 
+bool \mbox{\hyperlink{namespacetesseract__collision_a4dc11acdd34b2eaa5023e5828463ba05}{tesseract\+\_\+collision\+::write\+Simple\+Ply\+File}} (const std\+::string \&path, const \mbox{\hyperlink{namespacetesseract__common_af89ed6517f4c84bdb2b037bb40f7d9d9}{tesseract\+\_\+common\+::\+Vector\+Vector3d}} \&vertices, const std\+::vector$<$ Eigen\+::\+Vector3i $>$ \&vectices\+\_\+color, const Eigen\+::\+Vector\+Xi \&faces, int num\+\_\+faces)
+\begin{DoxyCompactList}\small\item\em Write a simple ply file given vertices and faces. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespacetesseract__collision_ab322b688c8e598e590e5a9af30084272}{tesseract\+\_\+collision\+::write\+Simple\+Ply\+File}} (const std\+::string \&path, const \mbox{\hyperlink{namespacetesseract__common_af89ed6517f4c84bdb2b037bb40f7d9d9}{tesseract\+\_\+common\+::\+Vector\+Vector3d}} \&vertices, const Eigen\+::\+Vector\+Xi \&faces, int num\+\_\+faces)
+\begin{DoxyCompactList}\small\item\em Write a simple ply file given vertices and faces. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{namespacetesseract__collision_ab79187502eefb0f670dbde89a5b7b969}{tesseract\+\_\+collision\+::load\+Simple\+Ply\+File}} (const std\+::string \&path, \mbox{\hyperlink{namespacetesseract__common_af89ed6517f4c84bdb2b037bb40f7d9d9}{tesseract\+\_\+common\+::\+Vector\+Vector3d}} \&vertices, Eigen\+::\+Vector\+Xi \&faces, bool triangles\+\_\+only=false)
+\begin{DoxyCompactList}\small\item\em Loads a simple ply file given a path. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This is a collection of common methods. 
+
+\begin{DoxyAuthor}{Author}
+Levi Armstrong 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+Dec 18, 2017 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+T\+O\+DO 
+\end{DoxyVersion}
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000005}{Bug}}]No known bugs\end{DoxyRefDesc}
+
+
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2017, Southwest Research Institute
+\end{DoxyCopyright}
+\begin{DoxyParagraph}{License}
+Software License Agreement (Apache License) 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+Licensed under the Apache License, Version 2.\+0 (the \char`\"{}\+License\char`\"{}); you may not use this file except in compliance with the License. You may obtain a copy of the License at \href{http://www.apache.org/licenses/LICENSE-2.0}{\texttt{ http\+://www.\+apache.\+org/licenses/\+L\+I\+C\+E\+N\+S\+E-\/2.\+0}} 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \char`\"{}\+A\+S I\+S\char`\"{} B\+A\+S\+IS, W\+I\+T\+H\+O\+UT W\+A\+R\+R\+A\+N\+T\+I\+ES OR C\+O\+N\+D\+I\+T\+I\+O\+NS OF A\+NY K\+I\+ND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+\end{DoxyParagraph}
+\begin{DoxyAuthor}{Author}
+Levi Armstrong 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+Dec 18, 2017 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+T\+O\+DO 
+\end{DoxyVersion}
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000012}{Bug}}]No known bugs\end{DoxyRefDesc}
+
+
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2017, Southwest Research Institute
+\end{DoxyCopyright}
+\begin{DoxyParagraph}{License}
+Software License Agreement (Apache License) 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+Licensed under the Apache License, Version 2.\+0 (the \char`\"{}\+License\char`\"{}); you may not use this file except in compliance with the License. You may obtain a copy of the License at \href{http://www.apache.org/licenses/LICENSE-2.0}{\texttt{ http\+://www.\+apache.\+org/licenses/\+L\+I\+C\+E\+N\+S\+E-\/2.\+0}} 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \char`\"{}\+A\+S I\+S\char`\"{} B\+A\+S\+IS, W\+I\+T\+H\+O\+UT W\+A\+R\+R\+A\+N\+T\+I\+ES OR C\+O\+N\+D\+I\+T\+I\+O\+NS OF A\+NY K\+I\+ND, either express or implied. See the License for the specific language governing permissions and limitations under the License. 
+\end{DoxyParagraph}

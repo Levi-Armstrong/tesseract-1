@@ -1,0 +1,119 @@
+\hypertarget{structtesseract__collision_1_1ContactTestData}{}\doxysection{tesseract\+\_\+collision\+::Contact\+Test\+Data Struct Reference}
+\label{structtesseract__collision_1_1ContactTestData}\index{tesseract\_collision::ContactTestData@{tesseract\_collision::ContactTestData}}
+
+
+This data is intended only to be used internal to the collision checkers as a container and should not be externally used by other libraries or packages.  
+
+
+
+
+{\ttfamily \#include $<$types.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+E\+I\+G\+E\+N\+\_\+\+M\+A\+K\+E\+\_\+\+A\+L\+I\+G\+N\+E\+D\+\_\+\+O\+P\+E\+R\+A\+T\+O\+R\+\_\+\+N\+EW \mbox{\hyperlink{structtesseract__collision_1_1ContactTestData_ad9fbfd4604a971cd4b3348b1e97eda27}{Contact\+Test\+Data}} ()=default
+\item 
+\mbox{\hyperlink{structtesseract__collision_1_1ContactTestData_a311eb7d6f73a7ce8122d9c715dda52d0}{Contact\+Test\+Data}} (const std\+::vector$<$ std\+::string $>$ \&\mbox{\hyperlink{structtesseract__collision_1_1ContactTestData_aba830e8db4eaf18c10cf9d33d39c887e}{active}}, double \mbox{\hyperlink{structtesseract__collision_1_1ContactTestData_a38d49c4e5869efae4904e46314594127}{contact\+\_\+distance}}, \mbox{\hyperlink{namespacetesseract__collision_abe7752ce161fbd1139533ac566fec1cb}{Is\+Contact\+Allowed\+Fn}} \mbox{\hyperlink{structtesseract__collision_1_1ContactTestData_ac5d7267ce7a61655cc00b472c5900546}{fn}}, \mbox{\hyperlink{structtesseract__collision_1_1ContactRequest}{Contact\+Request}} \mbox{\hyperlink{structtesseract__collision_1_1ContactTestData_a4ce38355a8864e83ffc9dd03992d1ca4}{req}}, \mbox{\hyperlink{namespacetesseract__collision_a1eeace4cc41027dbde8e7dbeb77ca7cf}{Contact\+Result\+Map}} \&\mbox{\hyperlink{structtesseract__collision_1_1ContactTestData_ab1f4df903d99975e900e916eaa356ce0}{res}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const std\+::vector$<$ std\+::string $>$ $\ast$ \mbox{\hyperlink{structtesseract__collision_1_1ContactTestData_aba830e8db4eaf18c10cf9d33d39c887e}{active}} \{ nullptr \}
+\begin{DoxyCompactList}\small\item\em A vector of active links. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{structtesseract__collision_1_1ContactTestData_a38d49c4e5869efae4904e46314594127}{contact\+\_\+distance}} \{ 0 \}
+\begin{DoxyCompactList}\small\item\em The current contact\+\_\+distance threshold. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacetesseract__collision_abe7752ce161fbd1139533ac566fec1cb}{Is\+Contact\+Allowed\+Fn}} \mbox{\hyperlink{structtesseract__collision_1_1ContactTestData_ac5d7267ce7a61655cc00b472c5900546}{fn}} \{ nullptr \}
+\begin{DoxyCompactList}\small\item\em The allowed collision function used to check if two links should be excluded from collision checking. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structtesseract__collision_1_1ContactRequest}{Contact\+Request}} \mbox{\hyperlink{structtesseract__collision_1_1ContactTestData_a4ce38355a8864e83ffc9dd03992d1ca4}{req}}
+\begin{DoxyCompactList}\small\item\em The type of contact request data. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacetesseract__collision_a1eeace4cc41027dbde8e7dbeb77ca7cf}{Contact\+Result\+Map}} $\ast$ \mbox{\hyperlink{structtesseract__collision_1_1ContactTestData_ab1f4df903d99975e900e916eaa356ce0}{res}} \{ nullptr \}
+\begin{DoxyCompactList}\small\item\em Destance query results information. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structtesseract__collision_1_1ContactTestData_a9a87806afb0e55ad7279fca2d985bf79}{done}} \{ false \}
+\begin{DoxyCompactList}\small\item\em Indicate if search is finished. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This data is intended only to be used internal to the collision checkers as a container and should not be externally used by other libraries or packages. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structtesseract__collision_1_1ContactTestData_ad9fbfd4604a971cd4b3348b1e97eda27}\label{structtesseract__collision_1_1ContactTestData_ad9fbfd4604a971cd4b3348b1e97eda27}} 
+\index{tesseract\_collision::ContactTestData@{tesseract\_collision::ContactTestData}!ContactTestData@{ContactTestData}}
+\index{ContactTestData@{ContactTestData}!tesseract\_collision::ContactTestData@{tesseract\_collision::ContactTestData}}
+\doxysubsubsection{\texorpdfstring{ContactTestData()}{ContactTestData()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily E\+I\+G\+E\+N\+\_\+\+M\+A\+K\+E\+\_\+\+A\+L\+I\+G\+N\+E\+D\+\_\+\+O\+P\+E\+R\+A\+T\+O\+R\+\_\+\+N\+EW tesseract\+\_\+collision\+::\+Contact\+Test\+Data\+::\+Contact\+Test\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{structtesseract__collision_1_1ContactTestData_a311eb7d6f73a7ce8122d9c715dda52d0}\label{structtesseract__collision_1_1ContactTestData_a311eb7d6f73a7ce8122d9c715dda52d0}} 
+\index{tesseract\_collision::ContactTestData@{tesseract\_collision::ContactTestData}!ContactTestData@{ContactTestData}}
+\index{ContactTestData@{ContactTestData}!tesseract\_collision::ContactTestData@{tesseract\_collision::ContactTestData}}
+\doxysubsubsection{\texorpdfstring{ContactTestData()}{ContactTestData()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily tesseract\+\_\+collision\+::\+Contact\+Test\+Data\+::\+Contact\+Test\+Data (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::string $>$ \&}]{active,  }\item[{double}]{contact\+\_\+distance,  }\item[{\mbox{\hyperlink{namespacetesseract__collision_abe7752ce161fbd1139533ac566fec1cb}{Is\+Contact\+Allowed\+Fn}}}]{fn,  }\item[{\mbox{\hyperlink{structtesseract__collision_1_1ContactRequest}{Contact\+Request}}}]{req,  }\item[{\mbox{\hyperlink{namespacetesseract__collision_a1eeace4cc41027dbde8e7dbeb77ca7cf}{Contact\+Result\+Map}} \&}]{res }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structtesseract__collision_1_1ContactTestData_aba830e8db4eaf18c10cf9d33d39c887e}\label{structtesseract__collision_1_1ContactTestData_aba830e8db4eaf18c10cf9d33d39c887e}} 
+\index{tesseract\_collision::ContactTestData@{tesseract\_collision::ContactTestData}!active@{active}}
+\index{active@{active}!tesseract\_collision::ContactTestData@{tesseract\_collision::ContactTestData}}
+\doxysubsubsection{\texorpdfstring{active}{active}}
+{\footnotesize\ttfamily const std\+::vector$<$std\+::string$>$$\ast$ tesseract\+\_\+collision\+::\+Contact\+Test\+Data\+::active \{ nullptr \}}
+
+
+
+A vector of active links. 
+
+\mbox{\Hypertarget{structtesseract__collision_1_1ContactTestData_a38d49c4e5869efae4904e46314594127}\label{structtesseract__collision_1_1ContactTestData_a38d49c4e5869efae4904e46314594127}} 
+\index{tesseract\_collision::ContactTestData@{tesseract\_collision::ContactTestData}!contact\_distance@{contact\_distance}}
+\index{contact\_distance@{contact\_distance}!tesseract\_collision::ContactTestData@{tesseract\_collision::ContactTestData}}
+\doxysubsubsection{\texorpdfstring{contact\_distance}{contact\_distance}}
+{\footnotesize\ttfamily double tesseract\+\_\+collision\+::\+Contact\+Test\+Data\+::contact\+\_\+distance \{ 0 \}}
+
+
+
+The current contact\+\_\+distance threshold. 
+
+\mbox{\Hypertarget{structtesseract__collision_1_1ContactTestData_a9a87806afb0e55ad7279fca2d985bf79}\label{structtesseract__collision_1_1ContactTestData_a9a87806afb0e55ad7279fca2d985bf79}} 
+\index{tesseract\_collision::ContactTestData@{tesseract\_collision::ContactTestData}!done@{done}}
+\index{done@{done}!tesseract\_collision::ContactTestData@{tesseract\_collision::ContactTestData}}
+\doxysubsubsection{\texorpdfstring{done}{done}}
+{\footnotesize\ttfamily bool tesseract\+\_\+collision\+::\+Contact\+Test\+Data\+::done \{ false \}}
+
+
+
+Indicate if search is finished. 
+
+\mbox{\Hypertarget{structtesseract__collision_1_1ContactTestData_ac5d7267ce7a61655cc00b472c5900546}\label{structtesseract__collision_1_1ContactTestData_ac5d7267ce7a61655cc00b472c5900546}} 
+\index{tesseract\_collision::ContactTestData@{tesseract\_collision::ContactTestData}!fn@{fn}}
+\index{fn@{fn}!tesseract\_collision::ContactTestData@{tesseract\_collision::ContactTestData}}
+\doxysubsubsection{\texorpdfstring{fn}{fn}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacetesseract__collision_abe7752ce161fbd1139533ac566fec1cb}{Is\+Contact\+Allowed\+Fn}} tesseract\+\_\+collision\+::\+Contact\+Test\+Data\+::fn \{ nullptr \}}
+
+
+
+The allowed collision function used to check if two links should be excluded from collision checking. 
+
+\mbox{\Hypertarget{structtesseract__collision_1_1ContactTestData_a4ce38355a8864e83ffc9dd03992d1ca4}\label{structtesseract__collision_1_1ContactTestData_a4ce38355a8864e83ffc9dd03992d1ca4}} 
+\index{tesseract\_collision::ContactTestData@{tesseract\_collision::ContactTestData}!req@{req}}
+\index{req@{req}!tesseract\_collision::ContactTestData@{tesseract\_collision::ContactTestData}}
+\doxysubsubsection{\texorpdfstring{req}{req}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structtesseract__collision_1_1ContactRequest}{Contact\+Request}} tesseract\+\_\+collision\+::\+Contact\+Test\+Data\+::req}
+
+
+
+The type of contact request data. 
+
+\mbox{\Hypertarget{structtesseract__collision_1_1ContactTestData_ab1f4df903d99975e900e916eaa356ce0}\label{structtesseract__collision_1_1ContactTestData_ab1f4df903d99975e900e916eaa356ce0}} 
+\index{tesseract\_collision::ContactTestData@{tesseract\_collision::ContactTestData}!res@{res}}
+\index{res@{res}!tesseract\_collision::ContactTestData@{tesseract\_collision::ContactTestData}}
+\doxysubsubsection{\texorpdfstring{res}{res}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacetesseract__collision_a1eeace4cc41027dbde8e7dbeb77ca7cf}{Contact\+Result\+Map}}$\ast$ tesseract\+\_\+collision\+::\+Contact\+Test\+Data\+::res \{ nullptr \}}
+
+
+
+Destance query results information. 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+tesseract/tesseract\+\_\+collision/include/tesseract\+\_\+collision/core/\mbox{\hyperlink{tesseract__collision_2include_2tesseract__collision_2core_2types_8h}{types.\+h}}\end{DoxyCompactItemize}

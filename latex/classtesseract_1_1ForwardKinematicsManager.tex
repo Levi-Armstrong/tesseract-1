@@ -1,0 +1,351 @@
+\hypertarget{classtesseract_1_1ForwardKinematicsManager}{}\doxysection{tesseract\+::Forward\+Kinematics\+Manager Class Reference}
+\label{classtesseract_1_1ForwardKinematicsManager}\index{tesseract::ForwardKinematicsManager@{tesseract::ForwardKinematicsManager}}
+
+
+{\ttfamily \#include $<$forward\+\_\+kinematics\+\_\+manager.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classtesseract_1_1ForwardKinematicsManager_a0e36054f7f410997da6f28c69aa214ac}{Ptr}} = std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classtesseract_1_1ForwardKinematicsManager}{Forward\+Kinematics\+Manager}} $>$
+\item 
+using \mbox{\hyperlink{classtesseract_1_1ForwardKinematicsManager_afc82d08610e78bf014f59bf0b992c9bf}{Const\+Ptr}} = std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{classtesseract_1_1ForwardKinematicsManager}{Forward\+Kinematics\+Manager}} $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtesseract_1_1ForwardKinematicsManager_a667c9741e28f3cd8b6b95be405060a7b}{Forward\+Kinematics\+Manager}} ()=default
+\item 
+virtual \mbox{\hyperlink{classtesseract_1_1ForwardKinematicsManager_a0570f870b3c8a85bce8bc4f202d208da}{$\sim$\+Forward\+Kinematics\+Manager}} ()=default
+\item 
+\mbox{\hyperlink{classtesseract_1_1ForwardKinematicsManager_acd48416485cfe0fa0fc5f928db0f2804}{Forward\+Kinematics\+Manager}} (const \mbox{\hyperlink{classtesseract_1_1ForwardKinematicsManager}{Forward\+Kinematics\+Manager}} \&)=default
+\item 
+\mbox{\hyperlink{classtesseract_1_1ForwardKinematicsManager}{Forward\+Kinematics\+Manager}} \& \mbox{\hyperlink{classtesseract_1_1ForwardKinematicsManager_a31d7c2564212357bf3592faf126226a5}{operator=}} (const \mbox{\hyperlink{classtesseract_1_1ForwardKinematicsManager}{Forward\+Kinematics\+Manager}} \&)=default
+\item 
+\mbox{\hyperlink{classtesseract_1_1ForwardKinematicsManager_aabb26502cda2ec0b9b903f0244952a33}{Forward\+Kinematics\+Manager}} (\mbox{\hyperlink{classtesseract_1_1ForwardKinematicsManager}{Forward\+Kinematics\+Manager}} \&\&)=default
+\item 
+\mbox{\hyperlink{classtesseract_1_1ForwardKinematicsManager}{Forward\+Kinematics\+Manager}} \& \mbox{\hyperlink{classtesseract_1_1ForwardKinematicsManager_a39977ae22c2a0ea7518276300863ad67}{operator=}} (\mbox{\hyperlink{classtesseract_1_1ForwardKinematicsManager}{Forward\+Kinematics\+Manager}} \&\&)=default
+\item 
+bool \mbox{\hyperlink{classtesseract_1_1ForwardKinematicsManager_a3a037aaa4f208ec7559fd64ceefb0f39}{register\+Fwd\+Kinematics\+Factory}} (\mbox{\hyperlink{classtesseract__kinematics_1_1ForwardKinematicsFactory_a23856fb5482bd9d9bb6b5113a75a3123}{tesseract\+\_\+kinematics\+::\+Forward\+Kinematics\+Factory\+::\+Ptr}} factory)
+\begin{DoxyCompactList}\small\item\em Register a forward kinematics factory. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classtesseract_1_1ForwardKinematicsManager_a151fff869b41aedb7b08c47841d074ab}{remove\+Fwd\+Kinematics\+Factory}} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Removes a registered forward kinematics factory. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classtesseract_1_1ForwardKinematicsManager_a009f234a9dbf32f08c04de8283505d56}{get\+Available\+Fwd\+Kinematics\+Solvers}} () const
+\begin{DoxyCompactList}\small\item\em Get a list of all available forward kinematics solvers. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classtesseract_1_1ForwardKinematicsManager_a930c2bf15d809bf0548d927d49129be1}{get\+Available\+Fwd\+Kinematics\+Solvers}} (\mbox{\hyperlink{namespacetesseract__kinematics_a5f1cae9822cd53cafb08d56263485069}{tesseract\+\_\+kinematics\+::\+Forward\+Kinematics\+Factory\+Type}} type) const
+\begin{DoxyCompactList}\small\item\em Get a list of forward kinematics solver for a specific type \{C\+H\+A\+IN, T\+R\+EE, G\+R\+A\+PH\}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classtesseract__kinematics_1_1ForwardKinematicsFactory_a33c7aac804e9ae1dbb4c7b84f611223d}{tesseract\+\_\+kinematics\+::\+Forward\+Kinematics\+Factory\+::\+Const\+Ptr}} \mbox{\hyperlink{classtesseract_1_1ForwardKinematicsManager_a777b993107a4cd19455449894c2e93cc}{get\+Fwd\+Kinematic\+Factory}} (const std\+::string \&name) const
+\begin{DoxyCompactList}\small\item\em This will return the forward kinematics solver factory. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classtesseract_1_1ForwardKinematicsManager_ad2173c72a63d10dc398c9cda58730b87}{add\+Fwd\+Kinematic\+Solver}} (const \mbox{\hyperlink{classtesseract__kinematics_1_1ForwardKinematics_a2c99fff4d4596e15bfdc4f72ec3b7406}{tesseract\+\_\+kinematics\+::\+Forward\+Kinematics\+::\+Const\+Ptr}} \&solver)
+\begin{DoxyCompactList}\small\item\em Add a manipulator forward kinematics solver. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classtesseract_1_1ForwardKinematicsManager_a706d211a4ac398c34d5e7b930f441037}{remove\+Fwd\+Kinematic\+Solver}} (const std\+::string \&manipulator, const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Remove a forward kinematic solver for a given manipulator. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classtesseract_1_1ForwardKinematicsManager_a087e9d66255d19d7fc725771aa4cc24d}{remove\+Fwd\+Kinematic\+Solver}} (const std\+::string \&manipulator)
+\begin{DoxyCompactList}\small\item\em Remove all forward kinematic solver for a given manipulator. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classtesseract_1_1ForwardKinematicsManager_adcd0d975046ca3b30fed89c006c380af}{get\+Available\+Fwd\+Kinematics\+Manipulators}} () const
+\begin{DoxyCompactList}\small\item\em Get a list of all available forward kinematics manipulators. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classtesseract_1_1ForwardKinematicsManager_acc5509810f037ddcf2bc060f6effe5d6}{set\+Default\+Fwd\+Kinematic\+Solver}} (const std\+::string \&manipulator, const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Set default forward kinematic solver for manipulator. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classtesseract__kinematics_1_1ForwardKinematics_abdb52d493e8f0c584be778ddb193ed46}{tesseract\+\_\+kinematics\+::\+Forward\+Kinematics\+::\+Ptr}} \mbox{\hyperlink{classtesseract_1_1ForwardKinematicsManager_a1a5a1e81934c91c92278c0fcaf0069a3}{get\+Fwd\+Kinematic\+Solver}} (const std\+::string \&manipulator, const std\+::string \&name) const
+\begin{DoxyCompactList}\small\item\em Get forward kinematic solver for manipulator. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classtesseract__kinematics_1_1ForwardKinematics_abdb52d493e8f0c584be778ddb193ed46}{tesseract\+\_\+kinematics\+::\+Forward\+Kinematics\+::\+Ptr}} \mbox{\hyperlink{classtesseract_1_1ForwardKinematicsManager_ae576a842c588615fbb1b13b88e8628f3}{get\+Fwd\+Kinematic\+Solver}} (const std\+::string \&manipulator) const
+\begin{DoxyCompactList}\small\item\em Get default forward kinematic solver for manipulator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::unordered\+\_\+map$<$ std\+::string, \mbox{\hyperlink{classtesseract__kinematics_1_1ForwardKinematicsFactory_a33c7aac804e9ae1dbb4c7b84f611223d}{tesseract\+\_\+kinematics\+::\+Forward\+Kinematics\+Factory\+::\+Const\+Ptr}} $>$ \mbox{\hyperlink{classtesseract_1_1ForwardKinematicsManager_a757a5465b820dfcef62b902213713271}{fwd\+\_\+kin\+\_\+factories\+\_\+}}
+\item 
+std\+::map$<$ std\+::pair$<$ std\+::string, std\+::string $>$, \mbox{\hyperlink{classtesseract__kinematics_1_1ForwardKinematics_a2c99fff4d4596e15bfdc4f72ec3b7406}{tesseract\+\_\+kinematics\+::\+Forward\+Kinematics\+::\+Const\+Ptr}} $>$ \mbox{\hyperlink{classtesseract_1_1ForwardKinematicsManager_a2f65d32f59b5b2c6abc7660a2d44b21d}{fwd\+\_\+kin\+\_\+manipulators\+\_\+}}
+\item 
+std\+::unordered\+\_\+map$<$ std\+::string, \mbox{\hyperlink{classtesseract__kinematics_1_1ForwardKinematics_a2c99fff4d4596e15bfdc4f72ec3b7406}{tesseract\+\_\+kinematics\+::\+Forward\+Kinematics\+::\+Const\+Ptr}} $>$ \mbox{\hyperlink{classtesseract_1_1ForwardKinematicsManager_a6ae62d3ed2a8a28d9cb0d954be8c55b3}{fwd\+\_\+kin\+\_\+manipulators\+\_\+default\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classtesseract_1_1ForwardKinematicsManager_afc82d08610e78bf014f59bf0b992c9bf}\label{classtesseract_1_1ForwardKinematicsManager_afc82d08610e78bf014f59bf0b992c9bf}} 
+\index{tesseract::ForwardKinematicsManager@{tesseract::ForwardKinematicsManager}!ConstPtr@{ConstPtr}}
+\index{ConstPtr@{ConstPtr}!tesseract::ForwardKinematicsManager@{tesseract::ForwardKinematicsManager}}
+\doxysubsubsection{\texorpdfstring{ConstPtr}{ConstPtr}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classtesseract_1_1ForwardKinematicsManager_afc82d08610e78bf014f59bf0b992c9bf}{tesseract\+::\+Forward\+Kinematics\+Manager\+::\+Const\+Ptr}} =  std\+::shared\+\_\+ptr$<$const \mbox{\hyperlink{classtesseract_1_1ForwardKinematicsManager}{Forward\+Kinematics\+Manager}}$>$}
+
+\mbox{\Hypertarget{classtesseract_1_1ForwardKinematicsManager_a0e36054f7f410997da6f28c69aa214ac}\label{classtesseract_1_1ForwardKinematicsManager_a0e36054f7f410997da6f28c69aa214ac}} 
+\index{tesseract::ForwardKinematicsManager@{tesseract::ForwardKinematicsManager}!Ptr@{Ptr}}
+\index{Ptr@{Ptr}!tesseract::ForwardKinematicsManager@{tesseract::ForwardKinematicsManager}}
+\doxysubsubsection{\texorpdfstring{Ptr}{Ptr}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classtesseract_1_1ForwardKinematicsManager_a0e36054f7f410997da6f28c69aa214ac}{tesseract\+::\+Forward\+Kinematics\+Manager\+::\+Ptr}} =  std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classtesseract_1_1ForwardKinematicsManager}{Forward\+Kinematics\+Manager}}$>$}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtesseract_1_1ForwardKinematicsManager_a667c9741e28f3cd8b6b95be405060a7b}\label{classtesseract_1_1ForwardKinematicsManager_a667c9741e28f3cd8b6b95be405060a7b}} 
+\index{tesseract::ForwardKinematicsManager@{tesseract::ForwardKinematicsManager}!ForwardKinematicsManager@{ForwardKinematicsManager}}
+\index{ForwardKinematicsManager@{ForwardKinematicsManager}!tesseract::ForwardKinematicsManager@{tesseract::ForwardKinematicsManager}}
+\doxysubsubsection{\texorpdfstring{ForwardKinematicsManager()}{ForwardKinematicsManager()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily tesseract\+::\+Forward\+Kinematics\+Manager\+::\+Forward\+Kinematics\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classtesseract_1_1ForwardKinematicsManager_a0570f870b3c8a85bce8bc4f202d208da}\label{classtesseract_1_1ForwardKinematicsManager_a0570f870b3c8a85bce8bc4f202d208da}} 
+\index{tesseract::ForwardKinematicsManager@{tesseract::ForwardKinematicsManager}!````~ForwardKinematicsManager@{$\sim$ForwardKinematicsManager}}
+\index{````~ForwardKinematicsManager@{$\sim$ForwardKinematicsManager}!tesseract::ForwardKinematicsManager@{tesseract::ForwardKinematicsManager}}
+\doxysubsubsection{\texorpdfstring{$\sim$ForwardKinematicsManager()}{~ForwardKinematicsManager()}}
+{\footnotesize\ttfamily virtual tesseract\+::\+Forward\+Kinematics\+Manager\+::$\sim$\+Forward\+Kinematics\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+\mbox{\Hypertarget{classtesseract_1_1ForwardKinematicsManager_acd48416485cfe0fa0fc5f928db0f2804}\label{classtesseract_1_1ForwardKinematicsManager_acd48416485cfe0fa0fc5f928db0f2804}} 
+\index{tesseract::ForwardKinematicsManager@{tesseract::ForwardKinematicsManager}!ForwardKinematicsManager@{ForwardKinematicsManager}}
+\index{ForwardKinematicsManager@{ForwardKinematicsManager}!tesseract::ForwardKinematicsManager@{tesseract::ForwardKinematicsManager}}
+\doxysubsubsection{\texorpdfstring{ForwardKinematicsManager()}{ForwardKinematicsManager()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily tesseract\+::\+Forward\+Kinematics\+Manager\+::\+Forward\+Kinematics\+Manager (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtesseract_1_1ForwardKinematicsManager}{Forward\+Kinematics\+Manager}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classtesseract_1_1ForwardKinematicsManager_aabb26502cda2ec0b9b903f0244952a33}\label{classtesseract_1_1ForwardKinematicsManager_aabb26502cda2ec0b9b903f0244952a33}} 
+\index{tesseract::ForwardKinematicsManager@{tesseract::ForwardKinematicsManager}!ForwardKinematicsManager@{ForwardKinematicsManager}}
+\index{ForwardKinematicsManager@{ForwardKinematicsManager}!tesseract::ForwardKinematicsManager@{tesseract::ForwardKinematicsManager}}
+\doxysubsubsection{\texorpdfstring{ForwardKinematicsManager()}{ForwardKinematicsManager()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily tesseract\+::\+Forward\+Kinematics\+Manager\+::\+Forward\+Kinematics\+Manager (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtesseract_1_1ForwardKinematicsManager}{Forward\+Kinematics\+Manager}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtesseract_1_1ForwardKinematicsManager_ad2173c72a63d10dc398c9cda58730b87}\label{classtesseract_1_1ForwardKinematicsManager_ad2173c72a63d10dc398c9cda58730b87}} 
+\index{tesseract::ForwardKinematicsManager@{tesseract::ForwardKinematicsManager}!addFwdKinematicSolver@{addFwdKinematicSolver}}
+\index{addFwdKinematicSolver@{addFwdKinematicSolver}!tesseract::ForwardKinematicsManager@{tesseract::ForwardKinematicsManager}}
+\doxysubsubsection{\texorpdfstring{addFwdKinematicSolver()}{addFwdKinematicSolver()}}
+{\footnotesize\ttfamily bool tesseract\+::\+Forward\+Kinematics\+Manager\+::add\+Fwd\+Kinematic\+Solver (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtesseract__kinematics_1_1ForwardKinematics_a2c99fff4d4596e15bfdc4f72ec3b7406}{tesseract\+\_\+kinematics\+::\+Forward\+Kinematics\+::\+Const\+Ptr}} \&}]{solver }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Add a manipulator forward kinematics solver. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em manipulator} & The manipulator name \\
+\hline
+{\em solver} & The solver \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtesseract_1_1ForwardKinematicsManager_adcd0d975046ca3b30fed89c006c380af}\label{classtesseract_1_1ForwardKinematicsManager_adcd0d975046ca3b30fed89c006c380af}} 
+\index{tesseract::ForwardKinematicsManager@{tesseract::ForwardKinematicsManager}!getAvailableFwdKinematicsManipulators@{getAvailableFwdKinematicsManipulators}}
+\index{getAvailableFwdKinematicsManipulators@{getAvailableFwdKinematicsManipulators}!tesseract::ForwardKinematicsManager@{tesseract::ForwardKinematicsManager}}
+\doxysubsubsection{\texorpdfstring{getAvailableFwdKinematicsManipulators()}{getAvailableFwdKinematicsManipulators()}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::string$>$ tesseract\+::\+Forward\+Kinematics\+Manager\+::get\+Available\+Fwd\+Kinematics\+Manipulators (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get a list of all available forward kinematics manipulators. 
+
+\begin{DoxyReturn}{Returns}
+Vector of names 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtesseract_1_1ForwardKinematicsManager_a009f234a9dbf32f08c04de8283505d56}\label{classtesseract_1_1ForwardKinematicsManager_a009f234a9dbf32f08c04de8283505d56}} 
+\index{tesseract::ForwardKinematicsManager@{tesseract::ForwardKinematicsManager}!getAvailableFwdKinematicsSolvers@{getAvailableFwdKinematicsSolvers}}
+\index{getAvailableFwdKinematicsSolvers@{getAvailableFwdKinematicsSolvers}!tesseract::ForwardKinematicsManager@{tesseract::ForwardKinematicsManager}}
+\doxysubsubsection{\texorpdfstring{getAvailableFwdKinematicsSolvers()}{getAvailableFwdKinematicsSolvers()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::string$>$ tesseract\+::\+Forward\+Kinematics\+Manager\+::get\+Available\+Fwd\+Kinematics\+Solvers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get a list of all available forward kinematics solvers. 
+
+\begin{DoxyReturn}{Returns}
+Vector of names 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtesseract_1_1ForwardKinematicsManager_a930c2bf15d809bf0548d927d49129be1}\label{classtesseract_1_1ForwardKinematicsManager_a930c2bf15d809bf0548d927d49129be1}} 
+\index{tesseract::ForwardKinematicsManager@{tesseract::ForwardKinematicsManager}!getAvailableFwdKinematicsSolvers@{getAvailableFwdKinematicsSolvers}}
+\index{getAvailableFwdKinematicsSolvers@{getAvailableFwdKinematicsSolvers}!tesseract::ForwardKinematicsManager@{tesseract::ForwardKinematicsManager}}
+\doxysubsubsection{\texorpdfstring{getAvailableFwdKinematicsSolvers()}{getAvailableFwdKinematicsSolvers()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::string$>$ tesseract\+::\+Forward\+Kinematics\+Manager\+::get\+Available\+Fwd\+Kinematics\+Solvers (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacetesseract__kinematics_a5f1cae9822cd53cafb08d56263485069}{tesseract\+\_\+kinematics\+::\+Forward\+Kinematics\+Factory\+Type}}}]{type }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get a list of forward kinematics solver for a specific type \{C\+H\+A\+IN, T\+R\+EE, G\+R\+A\+PH\}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & The type of solver \{C\+H\+A\+IN, T\+R\+EE, G\+R\+A\+PH\} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vector of names 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtesseract_1_1ForwardKinematicsManager_a777b993107a4cd19455449894c2e93cc}\label{classtesseract_1_1ForwardKinematicsManager_a777b993107a4cd19455449894c2e93cc}} 
+\index{tesseract::ForwardKinematicsManager@{tesseract::ForwardKinematicsManager}!getFwdKinematicFactory@{getFwdKinematicFactory}}
+\index{getFwdKinematicFactory@{getFwdKinematicFactory}!tesseract::ForwardKinematicsManager@{tesseract::ForwardKinematicsManager}}
+\doxysubsubsection{\texorpdfstring{getFwdKinematicFactory()}{getFwdKinematicFactory()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__kinematics_1_1ForwardKinematicsFactory_a33c7aac804e9ae1dbb4c7b84f611223d}{tesseract\+\_\+kinematics\+::\+Forward\+Kinematics\+Factory\+::\+Const\+Ptr}} tesseract\+::\+Forward\+Kinematics\+Manager\+::get\+Fwd\+Kinematic\+Factory (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+This will return the forward kinematics solver factory. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the solver \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+If not found it returns a nullptr, otherwise a new instance of the solver. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtesseract_1_1ForwardKinematicsManager_ae576a842c588615fbb1b13b88e8628f3}\label{classtesseract_1_1ForwardKinematicsManager_ae576a842c588615fbb1b13b88e8628f3}} 
+\index{tesseract::ForwardKinematicsManager@{tesseract::ForwardKinematicsManager}!getFwdKinematicSolver@{getFwdKinematicSolver}}
+\index{getFwdKinematicSolver@{getFwdKinematicSolver}!tesseract::ForwardKinematicsManager@{tesseract::ForwardKinematicsManager}}
+\doxysubsubsection{\texorpdfstring{getFwdKinematicSolver()}{getFwdKinematicSolver()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__kinematics_1_1ForwardKinematics_abdb52d493e8f0c584be778ddb193ed46}{tesseract\+\_\+kinematics\+::\+Forward\+Kinematics\+::\+Ptr}} tesseract\+::\+Forward\+Kinematics\+Manager\+::get\+Fwd\+Kinematic\+Solver (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{manipulator }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get default forward kinematic solver for manipulator. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em manipulator} & The name of the manipulator \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+If not found returns a nullptr, otherwise a instance of the solver. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtesseract_1_1ForwardKinematicsManager_a1a5a1e81934c91c92278c0fcaf0069a3}\label{classtesseract_1_1ForwardKinematicsManager_a1a5a1e81934c91c92278c0fcaf0069a3}} 
+\index{tesseract::ForwardKinematicsManager@{tesseract::ForwardKinematicsManager}!getFwdKinematicSolver@{getFwdKinematicSolver}}
+\index{getFwdKinematicSolver@{getFwdKinematicSolver}!tesseract::ForwardKinematicsManager@{tesseract::ForwardKinematicsManager}}
+\doxysubsubsection{\texorpdfstring{getFwdKinematicSolver()}{getFwdKinematicSolver()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__kinematics_1_1ForwardKinematics_abdb52d493e8f0c584be778ddb193ed46}{tesseract\+\_\+kinematics\+::\+Forward\+Kinematics\+::\+Ptr}} tesseract\+::\+Forward\+Kinematics\+Manager\+::get\+Fwd\+Kinematic\+Solver (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{manipulator,  }\item[{const std\+::string \&}]{name }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get forward kinematic solver for manipulator. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em manipulator} & The name of the manipulator \\
+\hline
+{\em name} & The name of the solver \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+If not found returns a nullptr, otherwise a instance of the solver. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtesseract_1_1ForwardKinematicsManager_a31d7c2564212357bf3592faf126226a5}\label{classtesseract_1_1ForwardKinematicsManager_a31d7c2564212357bf3592faf126226a5}} 
+\index{tesseract::ForwardKinematicsManager@{tesseract::ForwardKinematicsManager}!operator=@{operator=}}
+\index{operator=@{operator=}!tesseract::ForwardKinematicsManager@{tesseract::ForwardKinematicsManager}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract_1_1ForwardKinematicsManager}{Forward\+Kinematics\+Manager}}\& tesseract\+::\+Forward\+Kinematics\+Manager\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtesseract_1_1ForwardKinematicsManager}{Forward\+Kinematics\+Manager}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classtesseract_1_1ForwardKinematicsManager_a39977ae22c2a0ea7518276300863ad67}\label{classtesseract_1_1ForwardKinematicsManager_a39977ae22c2a0ea7518276300863ad67}} 
+\index{tesseract::ForwardKinematicsManager@{tesseract::ForwardKinematicsManager}!operator=@{operator=}}
+\index{operator=@{operator=}!tesseract::ForwardKinematicsManager@{tesseract::ForwardKinematicsManager}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract_1_1ForwardKinematicsManager}{Forward\+Kinematics\+Manager}}\& tesseract\+::\+Forward\+Kinematics\+Manager\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtesseract_1_1ForwardKinematicsManager}{Forward\+Kinematics\+Manager}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classtesseract_1_1ForwardKinematicsManager_a3a037aaa4f208ec7559fd64ceefb0f39}\label{classtesseract_1_1ForwardKinematicsManager_a3a037aaa4f208ec7559fd64ceefb0f39}} 
+\index{tesseract::ForwardKinematicsManager@{tesseract::ForwardKinematicsManager}!registerFwdKinematicsFactory@{registerFwdKinematicsFactory}}
+\index{registerFwdKinematicsFactory@{registerFwdKinematicsFactory}!tesseract::ForwardKinematicsManager@{tesseract::ForwardKinematicsManager}}
+\doxysubsubsection{\texorpdfstring{registerFwdKinematicsFactory()}{registerFwdKinematicsFactory()}}
+{\footnotesize\ttfamily bool tesseract\+::\+Forward\+Kinematics\+Manager\+::register\+Fwd\+Kinematics\+Factory (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtesseract__kinematics_1_1ForwardKinematicsFactory_a23856fb5482bd9d9bb6b5113a75a3123}{tesseract\+\_\+kinematics\+::\+Forward\+Kinematics\+Factory\+::\+Ptr}}}]{factory }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Register a forward kinematics factory. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em factory} & The factory to register \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+False if factory already exists, otherwise true. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtesseract_1_1ForwardKinematicsManager_a151fff869b41aedb7b08c47841d074ab}\label{classtesseract_1_1ForwardKinematicsManager_a151fff869b41aedb7b08c47841d074ab}} 
+\index{tesseract::ForwardKinematicsManager@{tesseract::ForwardKinematicsManager}!removeFwdKinematicsFactory@{removeFwdKinematicsFactory}}
+\index{removeFwdKinematicsFactory@{removeFwdKinematicsFactory}!tesseract::ForwardKinematicsManager@{tesseract::ForwardKinematicsManager}}
+\doxysubsubsection{\texorpdfstring{removeFwdKinematicsFactory()}{removeFwdKinematicsFactory()}}
+{\footnotesize\ttfamily void tesseract\+::\+Forward\+Kinematics\+Manager\+::remove\+Fwd\+Kinematics\+Factory (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Removes a registered forward kinematics factory. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the factory to remove \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classtesseract_1_1ForwardKinematicsManager_a087e9d66255d19d7fc725771aa4cc24d}\label{classtesseract_1_1ForwardKinematicsManager_a087e9d66255d19d7fc725771aa4cc24d}} 
+\index{tesseract::ForwardKinematicsManager@{tesseract::ForwardKinematicsManager}!removeFwdKinematicSolver@{removeFwdKinematicSolver}}
+\index{removeFwdKinematicSolver@{removeFwdKinematicSolver}!tesseract::ForwardKinematicsManager@{tesseract::ForwardKinematicsManager}}
+\doxysubsubsection{\texorpdfstring{removeFwdKinematicSolver()}{removeFwdKinematicSolver()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void tesseract\+::\+Forward\+Kinematics\+Manager\+::remove\+Fwd\+Kinematic\+Solver (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{manipulator }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Remove all forward kinematic solver for a given manipulator. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em manipulator} & The name of the manipulator \\
+\hline
+{\em name} & The name of the solver \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classtesseract_1_1ForwardKinematicsManager_a706d211a4ac398c34d5e7b930f441037}\label{classtesseract_1_1ForwardKinematicsManager_a706d211a4ac398c34d5e7b930f441037}} 
+\index{tesseract::ForwardKinematicsManager@{tesseract::ForwardKinematicsManager}!removeFwdKinematicSolver@{removeFwdKinematicSolver}}
+\index{removeFwdKinematicSolver@{removeFwdKinematicSolver}!tesseract::ForwardKinematicsManager@{tesseract::ForwardKinematicsManager}}
+\doxysubsubsection{\texorpdfstring{removeFwdKinematicSolver()}{removeFwdKinematicSolver()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void tesseract\+::\+Forward\+Kinematics\+Manager\+::remove\+Fwd\+Kinematic\+Solver (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{manipulator,  }\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Remove a forward kinematic solver for a given manipulator. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em manipulator} & The name of the manipulator \\
+\hline
+{\em name} & The name of the solver \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classtesseract_1_1ForwardKinematicsManager_acc5509810f037ddcf2bc060f6effe5d6}\label{classtesseract_1_1ForwardKinematicsManager_acc5509810f037ddcf2bc060f6effe5d6}} 
+\index{tesseract::ForwardKinematicsManager@{tesseract::ForwardKinematicsManager}!setDefaultFwdKinematicSolver@{setDefaultFwdKinematicSolver}}
+\index{setDefaultFwdKinematicSolver@{setDefaultFwdKinematicSolver}!tesseract::ForwardKinematicsManager@{tesseract::ForwardKinematicsManager}}
+\doxysubsubsection{\texorpdfstring{setDefaultFwdKinematicSolver()}{setDefaultFwdKinematicSolver()}}
+{\footnotesize\ttfamily bool tesseract\+::\+Forward\+Kinematics\+Manager\+::set\+Default\+Fwd\+Kinematic\+Solver (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{manipulator,  }\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set default forward kinematic solver for manipulator. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em manipulator} & The name of the manipulator \\
+\hline
+{\em name} & The name of the solver \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if manipulator solver pair exist, otherwise false 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classtesseract_1_1ForwardKinematicsManager_a757a5465b820dfcef62b902213713271}\label{classtesseract_1_1ForwardKinematicsManager_a757a5465b820dfcef62b902213713271}} 
+\index{tesseract::ForwardKinematicsManager@{tesseract::ForwardKinematicsManager}!fwd\_kin\_factories\_@{fwd\_kin\_factories\_}}
+\index{fwd\_kin\_factories\_@{fwd\_kin\_factories\_}!tesseract::ForwardKinematicsManager@{tesseract::ForwardKinematicsManager}}
+\doxysubsubsection{\texorpdfstring{fwd\_kin\_factories\_}{fwd\_kin\_factories\_}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$std\+::string, \mbox{\hyperlink{classtesseract__kinematics_1_1ForwardKinematicsFactory_a33c7aac804e9ae1dbb4c7b84f611223d}{tesseract\+\_\+kinematics\+::\+Forward\+Kinematics\+Factory\+::\+Const\+Ptr}}$>$ tesseract\+::\+Forward\+Kinematics\+Manager\+::fwd\+\_\+kin\+\_\+factories\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classtesseract_1_1ForwardKinematicsManager_a2f65d32f59b5b2c6abc7660a2d44b21d}\label{classtesseract_1_1ForwardKinematicsManager_a2f65d32f59b5b2c6abc7660a2d44b21d}} 
+\index{tesseract::ForwardKinematicsManager@{tesseract::ForwardKinematicsManager}!fwd\_kin\_manipulators\_@{fwd\_kin\_manipulators\_}}
+\index{fwd\_kin\_manipulators\_@{fwd\_kin\_manipulators\_}!tesseract::ForwardKinematicsManager@{tesseract::ForwardKinematicsManager}}
+\doxysubsubsection{\texorpdfstring{fwd\_kin\_manipulators\_}{fwd\_kin\_manipulators\_}}
+{\footnotesize\ttfamily std\+::map$<$std\+::pair$<$std\+::string, std\+::string$>$, \mbox{\hyperlink{classtesseract__kinematics_1_1ForwardKinematics_a2c99fff4d4596e15bfdc4f72ec3b7406}{tesseract\+\_\+kinematics\+::\+Forward\+Kinematics\+::\+Const\+Ptr}}$>$ tesseract\+::\+Forward\+Kinematics\+Manager\+::fwd\+\_\+kin\+\_\+manipulators\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classtesseract_1_1ForwardKinematicsManager_a6ae62d3ed2a8a28d9cb0d954be8c55b3}\label{classtesseract_1_1ForwardKinematicsManager_a6ae62d3ed2a8a28d9cb0d954be8c55b3}} 
+\index{tesseract::ForwardKinematicsManager@{tesseract::ForwardKinematicsManager}!fwd\_kin\_manipulators\_default\_@{fwd\_kin\_manipulators\_default\_}}
+\index{fwd\_kin\_manipulators\_default\_@{fwd\_kin\_manipulators\_default\_}!tesseract::ForwardKinematicsManager@{tesseract::ForwardKinematicsManager}}
+\doxysubsubsection{\texorpdfstring{fwd\_kin\_manipulators\_default\_}{fwd\_kin\_manipulators\_default\_}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$std\+::string, \mbox{\hyperlink{classtesseract__kinematics_1_1ForwardKinematics_a2c99fff4d4596e15bfdc4f72ec3b7406}{tesseract\+\_\+kinematics\+::\+Forward\+Kinematics\+::\+Const\+Ptr}}$>$ tesseract\+::\+Forward\+Kinematics\+Manager\+::fwd\+\_\+kin\+\_\+manipulators\+\_\+default\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+tesseract/tesseract/include/tesseract/\mbox{\hyperlink{forward__kinematics__manager_8h}{forward\+\_\+kinematics\+\_\+manager.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,303 @@
+\hypertarget{classtesseract__process__planners_1_1ProcessSegmentDefinition}{}\doxysection{tesseract\+\_\+process\+\_\+planners\+::Process\+Segment\+Definition Class Reference}
+\label{classtesseract__process__planners_1_1ProcessSegmentDefinition}\index{tesseract\_process\_planners::ProcessSegmentDefinition@{tesseract\_process\_planners::ProcessSegmentDefinition}}
+
+
+{\ttfamily \#include $<$process\+\_\+segment\+\_\+definition.\+h$>$}
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classtesseract__process__planners_1_1ProcessSegmentDefinition_1_1Iterator}{Iterator}}
+\begin{DoxyCompactList}\small\item\em The \mbox{\hyperlink{classtesseract__process__planners_1_1ProcessSegmentDefinition_1_1Iterator}{Iterator}} class \mbox{\hyperlink{classtesseract__process__planners_1_1ProcessSegmentDefinition}{Process\+Segment\+Definition}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::size\+\_\+t \mbox{\hyperlink{classtesseract__process__planners_1_1ProcessSegmentDefinition_ae35735dbc56cd7b3c0108a6e210a69c7}{size}} () const noexcept
+\begin{DoxyCompactList}\small\item\em Get the size = approach.\+size() + process.\+size() + departure.\+size() \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classtesseract__process__planners_1_1ProcessSegmentDefinition_af7064ca67faf919d7e3e6dcb5f602156}{is\+Approach}} (std\+::size\+\_\+t index) const noexcept
+\begin{DoxyCompactList}\small\item\em Given an index, check if it is part of the approach. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classtesseract__process__planners_1_1ProcessSegmentDefinition_a82f0f88fac74d47a9ffbbacaf32afedd}{is\+Process}} (std\+::size\+\_\+t index) const noexcept
+\begin{DoxyCompactList}\small\item\em Given an index, check if it is part of the process. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classtesseract__process__planners_1_1ProcessSegmentDefinition_a2ce70e6f0fe09fc630fe7f3576d63a6a}{is\+Departure}} (std\+::size\+\_\+t index) const noexcept
+\begin{DoxyCompactList}\small\item\em Given an index, check if it is part of the departure. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classtesseract__process__planners_1_1ProcessSegmentDefinition_1_1Iterator}{Iterator}} \mbox{\hyperlink{classtesseract__process__planners_1_1ProcessSegmentDefinition_a8759212be999cb080fceb6673109278f}{begin}} () noexcept
+\begin{DoxyCompactList}\small\item\em Get the iterator to the beginning of the process segment definition. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classtesseract__process__planners_1_1ProcessSegmentDefinition_1_1Iterator}{Iterator}} \mbox{\hyperlink{classtesseract__process__planners_1_1ProcessSegmentDefinition_ac0b1b0189fb08e48d0851f08cefe8f43}{end}} () noexcept
+\begin{DoxyCompactList}\small\item\em Get the iterator to the end of the process segment definition. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classtesseract__motion__planners_1_1Waypoint_a6a3eae473f2bb3bd94684561aae0bd3e}{tesseract\+\_\+motion\+\_\+planners\+::\+Waypoint\+::\+Ptr}} \& \mbox{\hyperlink{classtesseract__process__planners_1_1ProcessSegmentDefinition_ac6250803cfade2707ab2460bfb9016b1}{operator\mbox{[}$\,$\mbox{]}}} (std\+::size\+\_\+t index) noexcept
+\begin{DoxyCompactList}\small\item\em Get waypoint by index. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classtesseract__motion__planners_1_1Waypoint_a6a3eae473f2bb3bd94684561aae0bd3e}{tesseract\+\_\+motion\+\_\+planners\+::\+Waypoint\+::\+Ptr}} \& \mbox{\hyperlink{classtesseract__process__planners_1_1ProcessSegmentDefinition_addb77aaa1ee53f7d1cdb6534ea02e6c1}{operator\mbox{[}$\,$\mbox{]}}} (std\+::size\+\_\+t index) const noexcept
+\begin{DoxyCompactList}\small\item\em Get const waypoint by index. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classtesseract__motion__planners_1_1Waypoint_a6a3eae473f2bb3bd94684561aae0bd3e}{tesseract\+\_\+motion\+\_\+planners\+::\+Waypoint\+::\+Ptr}} \& \mbox{\hyperlink{classtesseract__process__planners_1_1ProcessSegmentDefinition_a35e48e823ff3ab1b53824310a1a10059}{at}} (std\+::size\+\_\+t index)
+\begin{DoxyCompactList}\small\item\em Get waypoint by index. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classtesseract__motion__planners_1_1Waypoint_a6a3eae473f2bb3bd94684561aae0bd3e}{tesseract\+\_\+motion\+\_\+planners\+::\+Waypoint\+::\+Ptr}} \& \mbox{\hyperlink{classtesseract__process__planners_1_1ProcessSegmentDefinition_aa96cdc7bf4ffa33373d4422f49d9ecf0}{at}} (std\+::size\+\_\+t index) const
+\begin{DoxyCompactList}\small\item\em Get const waypoint by index. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classtesseract__process__planners_1_1ProcessSegmentDefinition_1_1Iterator}{Iterator}} \mbox{\hyperlink{classtesseract__process__planners_1_1ProcessSegmentDefinition_a918acbf50378f217d91ec61acfd86704}{erase}} (\mbox{\hyperlink{classtesseract__process__planners_1_1ProcessSegmentDefinition_1_1Iterator}{Iterator}} pos)
+\begin{DoxyCompactList}\small\item\em Erase waypoint given iterator. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classtesseract__process__planners_1_1ProcessSegmentDefinition_1_1Iterator}{Iterator}} \mbox{\hyperlink{classtesseract__process__planners_1_1ProcessSegmentDefinition_a02c2705e28dbfc97b9a408af85e5c9e0}{erase}} (\mbox{\hyperlink{classtesseract__process__planners_1_1ProcessSegmentDefinition_1_1Iterator}{Iterator}} first, \mbox{\hyperlink{classtesseract__process__planners_1_1ProcessSegmentDefinition_1_1Iterator}{Iterator}} last)
+\begin{DoxyCompactList}\small\item\em Erase waypoints given iterator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classtesseract__motion__planners_1_1Waypoint_a6a3eae473f2bb3bd94684561aae0bd3e}{tesseract\+\_\+motion\+\_\+planners\+::\+Waypoint\+::\+Ptr}} $>$ \mbox{\hyperlink{classtesseract__process__planners_1_1ProcessSegmentDefinition_af82f1db293bd3fdb93afb092d611a4ba}{approach}}
+\begin{DoxyCompactList}\small\item\em The approach defined as a series of waypoints. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{classtesseract__motion__planners_1_1Waypoint_a6a3eae473f2bb3bd94684561aae0bd3e}{tesseract\+\_\+motion\+\_\+planners\+::\+Waypoint\+::\+Ptr}} $>$ \mbox{\hyperlink{classtesseract__process__planners_1_1ProcessSegmentDefinition_a7fcf671b1dfd45bd1ac03122cac1008d}{process}}
+\begin{DoxyCompactList}\small\item\em The process is defined as a series of waypoints. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{classtesseract__motion__planners_1_1Waypoint_a6a3eae473f2bb3bd94684561aae0bd3e}{tesseract\+\_\+motion\+\_\+planners\+::\+Waypoint\+::\+Ptr}} $>$ \mbox{\hyperlink{classtesseract__process__planners_1_1ProcessSegmentDefinition_ad66eadfe37ffc294c936f6fe5407def0}{departure}}
+\begin{DoxyCompactList}\small\item\em The departure is defined as a series of waypoints. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A process segment definition is assumed to have three components, an approach, process and departure. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtesseract__process__planners_1_1ProcessSegmentDefinition_a35e48e823ff3ab1b53824310a1a10059}\label{classtesseract__process__planners_1_1ProcessSegmentDefinition_a35e48e823ff3ab1b53824310a1a10059}} 
+\index{tesseract\_process\_planners::ProcessSegmentDefinition@{tesseract\_process\_planners::ProcessSegmentDefinition}!at@{at}}
+\index{at@{at}!tesseract\_process\_planners::ProcessSegmentDefinition@{tesseract\_process\_planners::ProcessSegmentDefinition}}
+\doxysubsubsection{\texorpdfstring{at()}{at()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__motion__planners_1_1Waypoint_a6a3eae473f2bb3bd94684561aae0bd3e}{tesseract\+\_\+motion\+\_\+planners\+::\+Waypoint\+::\+Ptr}} \& tesseract\+\_\+process\+\_\+planners\+::\+Process\+Segment\+Definition\+::at (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{index }\end{DoxyParamCaption})}
+
+
+
+Get waypoint by index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & The index \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Waypoint 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::out\+\_\+of\+\_\+range} & If {\itshape index} is an invalid index.\\
+\hline
+\end{DoxyExceptions}
+This function provides for safer data access. The parameter is first checked that it is in the range of the vector. The function throws out\+\_\+of\+\_\+range if the check fails. \mbox{\Hypertarget{classtesseract__process__planners_1_1ProcessSegmentDefinition_aa96cdc7bf4ffa33373d4422f49d9ecf0}\label{classtesseract__process__planners_1_1ProcessSegmentDefinition_aa96cdc7bf4ffa33373d4422f49d9ecf0}} 
+\index{tesseract\_process\_planners::ProcessSegmentDefinition@{tesseract\_process\_planners::ProcessSegmentDefinition}!at@{at}}
+\index{at@{at}!tesseract\_process\_planners::ProcessSegmentDefinition@{tesseract\_process\_planners::ProcessSegmentDefinition}}
+\doxysubsubsection{\texorpdfstring{at()}{at()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classtesseract__motion__planners_1_1Waypoint_a6a3eae473f2bb3bd94684561aae0bd3e}{tesseract\+\_\+motion\+\_\+planners\+::\+Waypoint\+::\+Ptr}} \& tesseract\+\_\+process\+\_\+planners\+::\+Process\+Segment\+Definition\+::at (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{index }\end{DoxyParamCaption}) const}
+
+
+
+Get const waypoint by index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & The index \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Const Waypoint 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::out\+\_\+of\+\_\+range} & If {\itshape index} is an invalid index.\\
+\hline
+\end{DoxyExceptions}
+This function provides for safer data access. The parameter is first checked that it is in the range of the vector. The function throws out\+\_\+of\+\_\+range if the check fails. \mbox{\Hypertarget{classtesseract__process__planners_1_1ProcessSegmentDefinition_a8759212be999cb080fceb6673109278f}\label{classtesseract__process__planners_1_1ProcessSegmentDefinition_a8759212be999cb080fceb6673109278f}} 
+\index{tesseract\_process\_planners::ProcessSegmentDefinition@{tesseract\_process\_planners::ProcessSegmentDefinition}!begin@{begin}}
+\index{begin@{begin}!tesseract\_process\_planners::ProcessSegmentDefinition@{tesseract\_process\_planners::ProcessSegmentDefinition}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__process__planners_1_1ProcessSegmentDefinition_1_1Iterator}{Process\+Segment\+Definition\+::\+Iterator}} tesseract\+\_\+process\+\_\+planners\+::\+Process\+Segment\+Definition\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Get the iterator to the beginning of the process segment definition. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classtesseract__process__planners_1_1ProcessSegmentDefinition_1_1Iterator}{Iterator}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtesseract__process__planners_1_1ProcessSegmentDefinition_ac0b1b0189fb08e48d0851f08cefe8f43}\label{classtesseract__process__planners_1_1ProcessSegmentDefinition_ac0b1b0189fb08e48d0851f08cefe8f43}} 
+\index{tesseract\_process\_planners::ProcessSegmentDefinition@{tesseract\_process\_planners::ProcessSegmentDefinition}!end@{end}}
+\index{end@{end}!tesseract\_process\_planners::ProcessSegmentDefinition@{tesseract\_process\_planners::ProcessSegmentDefinition}}
+\doxysubsubsection{\texorpdfstring{end()}{end()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__process__planners_1_1ProcessSegmentDefinition_1_1Iterator}{Process\+Segment\+Definition\+::\+Iterator}} tesseract\+\_\+process\+\_\+planners\+::\+Process\+Segment\+Definition\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Get the iterator to the end of the process segment definition. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classtesseract__process__planners_1_1ProcessSegmentDefinition_1_1Iterator}{Iterator}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtesseract__process__planners_1_1ProcessSegmentDefinition_a02c2705e28dbfc97b9a408af85e5c9e0}\label{classtesseract__process__planners_1_1ProcessSegmentDefinition_a02c2705e28dbfc97b9a408af85e5c9e0}} 
+\index{tesseract\_process\_planners::ProcessSegmentDefinition@{tesseract\_process\_planners::ProcessSegmentDefinition}!erase@{erase}}
+\index{erase@{erase}!tesseract\_process\_planners::ProcessSegmentDefinition@{tesseract\_process\_planners::ProcessSegmentDefinition}}
+\doxysubsubsection{\texorpdfstring{erase()}{erase()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__process__planners_1_1ProcessSegmentDefinition_1_1Iterator}{Process\+Segment\+Definition\+::\+Iterator}} tesseract\+\_\+process\+\_\+planners\+::\+Process\+Segment\+Definition\+::erase (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtesseract__process__planners_1_1ProcessSegmentDefinition_1_1Iterator}{Iterator}}}]{first,  }\item[{\mbox{\hyperlink{classtesseract__process__planners_1_1ProcessSegmentDefinition_1_1Iterator}{Iterator}}}]{last }\end{DoxyParamCaption})}
+
+
+
+Erase waypoints given iterator. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & The iterator associated with the waypoint to remove \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The iterator 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtesseract__process__planners_1_1ProcessSegmentDefinition_a918acbf50378f217d91ec61acfd86704}\label{classtesseract__process__planners_1_1ProcessSegmentDefinition_a918acbf50378f217d91ec61acfd86704}} 
+\index{tesseract\_process\_planners::ProcessSegmentDefinition@{tesseract\_process\_planners::ProcessSegmentDefinition}!erase@{erase}}
+\index{erase@{erase}!tesseract\_process\_planners::ProcessSegmentDefinition@{tesseract\_process\_planners::ProcessSegmentDefinition}}
+\doxysubsubsection{\texorpdfstring{erase()}{erase()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__process__planners_1_1ProcessSegmentDefinition_1_1Iterator}{Process\+Segment\+Definition\+::\+Iterator}} tesseract\+\_\+process\+\_\+planners\+::\+Process\+Segment\+Definition\+::erase (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtesseract__process__planners_1_1ProcessSegmentDefinition_1_1Iterator}{Iterator}}}]{pos }\end{DoxyParamCaption})}
+
+
+
+Erase waypoint given iterator. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & The iterator associated with the waypoint to remove \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The iterator 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtesseract__process__planners_1_1ProcessSegmentDefinition_af7064ca67faf919d7e3e6dcb5f602156}\label{classtesseract__process__planners_1_1ProcessSegmentDefinition_af7064ca67faf919d7e3e6dcb5f602156}} 
+\index{tesseract\_process\_planners::ProcessSegmentDefinition@{tesseract\_process\_planners::ProcessSegmentDefinition}!isApproach@{isApproach}}
+\index{isApproach@{isApproach}!tesseract\_process\_planners::ProcessSegmentDefinition@{tesseract\_process\_planners::ProcessSegmentDefinition}}
+\doxysubsubsection{\texorpdfstring{isApproach()}{isApproach()}}
+{\footnotesize\ttfamily bool tesseract\+\_\+process\+\_\+planners\+::\+Process\+Segment\+Definition\+::is\+Approach (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Given an index, check if it is part of the approach. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & The index to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if associated with the approach, otherwise false. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtesseract__process__planners_1_1ProcessSegmentDefinition_a2ce70e6f0fe09fc630fe7f3576d63a6a}\label{classtesseract__process__planners_1_1ProcessSegmentDefinition_a2ce70e6f0fe09fc630fe7f3576d63a6a}} 
+\index{tesseract\_process\_planners::ProcessSegmentDefinition@{tesseract\_process\_planners::ProcessSegmentDefinition}!isDeparture@{isDeparture}}
+\index{isDeparture@{isDeparture}!tesseract\_process\_planners::ProcessSegmentDefinition@{tesseract\_process\_planners::ProcessSegmentDefinition}}
+\doxysubsubsection{\texorpdfstring{isDeparture()}{isDeparture()}}
+{\footnotesize\ttfamily bool tesseract\+\_\+process\+\_\+planners\+::\+Process\+Segment\+Definition\+::is\+Departure (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Given an index, check if it is part of the departure. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & The index to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if associated with the departure, otherwise false. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtesseract__process__planners_1_1ProcessSegmentDefinition_a82f0f88fac74d47a9ffbbacaf32afedd}\label{classtesseract__process__planners_1_1ProcessSegmentDefinition_a82f0f88fac74d47a9ffbbacaf32afedd}} 
+\index{tesseract\_process\_planners::ProcessSegmentDefinition@{tesseract\_process\_planners::ProcessSegmentDefinition}!isProcess@{isProcess}}
+\index{isProcess@{isProcess}!tesseract\_process\_planners::ProcessSegmentDefinition@{tesseract\_process\_planners::ProcessSegmentDefinition}}
+\doxysubsubsection{\texorpdfstring{isProcess()}{isProcess()}}
+{\footnotesize\ttfamily bool tesseract\+\_\+process\+\_\+planners\+::\+Process\+Segment\+Definition\+::is\+Process (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Given an index, check if it is part of the process. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & The index to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if associated with the process, otherwise false. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtesseract__process__planners_1_1ProcessSegmentDefinition_addb77aaa1ee53f7d1cdb6534ea02e6c1}\label{classtesseract__process__planners_1_1ProcessSegmentDefinition_addb77aaa1ee53f7d1cdb6534ea02e6c1}} 
+\index{tesseract\_process\_planners::ProcessSegmentDefinition@{tesseract\_process\_planners::ProcessSegmentDefinition}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!tesseract\_process\_planners::ProcessSegmentDefinition@{tesseract\_process\_planners::ProcessSegmentDefinition}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classtesseract__motion__planners_1_1Waypoint_a6a3eae473f2bb3bd94684561aae0bd3e}{tesseract\+\_\+motion\+\_\+planners\+::\+Waypoint\+::\+Ptr}} \& tesseract\+\_\+process\+\_\+planners\+::\+Process\+Segment\+Definition\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Get const waypoint by index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & The index \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Const Waypoint 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtesseract__process__planners_1_1ProcessSegmentDefinition_ac6250803cfade2707ab2460bfb9016b1}\label{classtesseract__process__planners_1_1ProcessSegmentDefinition_ac6250803cfade2707ab2460bfb9016b1}} 
+\index{tesseract\_process\_planners::ProcessSegmentDefinition@{tesseract\_process\_planners::ProcessSegmentDefinition}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!tesseract\_process\_planners::ProcessSegmentDefinition@{tesseract\_process\_planners::ProcessSegmentDefinition}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__motion__planners_1_1Waypoint_a6a3eae473f2bb3bd94684561aae0bd3e}{tesseract\+\_\+motion\+\_\+planners\+::\+Waypoint\+::\+Ptr}} \& tesseract\+\_\+process\+\_\+planners\+::\+Process\+Segment\+Definition\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Get waypoint by index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & The index \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Waypoint 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtesseract__process__planners_1_1ProcessSegmentDefinition_ae35735dbc56cd7b3c0108a6e210a69c7}\label{classtesseract__process__planners_1_1ProcessSegmentDefinition_ae35735dbc56cd7b3c0108a6e210a69c7}} 
+\index{tesseract\_process\_planners::ProcessSegmentDefinition@{tesseract\_process\_planners::ProcessSegmentDefinition}!size@{size}}
+\index{size@{size}!tesseract\_process\_planners::ProcessSegmentDefinition@{tesseract\_process\_planners::ProcessSegmentDefinition}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily std\+::size\+\_\+t tesseract\+\_\+process\+\_\+planners\+::\+Process\+Segment\+Definition\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Get the size = approach.\+size() + process.\+size() + departure.\+size() 
+
+\begin{DoxyReturn}{Returns}
+The size of the process segement definition 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classtesseract__process__planners_1_1ProcessSegmentDefinition_af82f1db293bd3fdb93afb092d611a4ba}\label{classtesseract__process__planners_1_1ProcessSegmentDefinition_af82f1db293bd3fdb93afb092d611a4ba}} 
+\index{tesseract\_process\_planners::ProcessSegmentDefinition@{tesseract\_process\_planners::ProcessSegmentDefinition}!approach@{approach}}
+\index{approach@{approach}!tesseract\_process\_planners::ProcessSegmentDefinition@{tesseract\_process\_planners::ProcessSegmentDefinition}}
+\doxysubsubsection{\texorpdfstring{approach}{approach}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{classtesseract__motion__planners_1_1Waypoint_a6a3eae473f2bb3bd94684561aae0bd3e}{tesseract\+\_\+motion\+\_\+planners\+::\+Waypoint\+::\+Ptr}}$>$ tesseract\+\_\+process\+\_\+planners\+::\+Process\+Segment\+Definition\+::approach}
+
+
+
+The approach defined as a series of waypoints. 
+
+If empty, the approach is skipped \mbox{\Hypertarget{classtesseract__process__planners_1_1ProcessSegmentDefinition_ad66eadfe37ffc294c936f6fe5407def0}\label{classtesseract__process__planners_1_1ProcessSegmentDefinition_ad66eadfe37ffc294c936f6fe5407def0}} 
+\index{tesseract\_process\_planners::ProcessSegmentDefinition@{tesseract\_process\_planners::ProcessSegmentDefinition}!departure@{departure}}
+\index{departure@{departure}!tesseract\_process\_planners::ProcessSegmentDefinition@{tesseract\_process\_planners::ProcessSegmentDefinition}}
+\doxysubsubsection{\texorpdfstring{departure}{departure}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{classtesseract__motion__planners_1_1Waypoint_a6a3eae473f2bb3bd94684561aae0bd3e}{tesseract\+\_\+motion\+\_\+planners\+::\+Waypoint\+::\+Ptr}}$>$ tesseract\+\_\+process\+\_\+planners\+::\+Process\+Segment\+Definition\+::departure}
+
+
+
+The departure is defined as a series of waypoints. 
+
+If empty, the approach is skipped \mbox{\Hypertarget{classtesseract__process__planners_1_1ProcessSegmentDefinition_a7fcf671b1dfd45bd1ac03122cac1008d}\label{classtesseract__process__planners_1_1ProcessSegmentDefinition_a7fcf671b1dfd45bd1ac03122cac1008d}} 
+\index{tesseract\_process\_planners::ProcessSegmentDefinition@{tesseract\_process\_planners::ProcessSegmentDefinition}!process@{process}}
+\index{process@{process}!tesseract\_process\_planners::ProcessSegmentDefinition@{tesseract\_process\_planners::ProcessSegmentDefinition}}
+\doxysubsubsection{\texorpdfstring{process}{process}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{classtesseract__motion__planners_1_1Waypoint_a6a3eae473f2bb3bd94684561aae0bd3e}{tesseract\+\_\+motion\+\_\+planners\+::\+Waypoint\+::\+Ptr}}$>$ tesseract\+\_\+process\+\_\+planners\+::\+Process\+Segment\+Definition\+::process}
+
+
+
+The process is defined as a series of waypoints. 
+
+This should contain a minimum of two waypoints. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+tesseract/tesseract\+\_\+planning/tesseract\+\_\+process\+\_\+planners/include/tesseract\+\_\+process\+\_\+planners/\mbox{\hyperlink{process__segment__definition_8h}{process\+\_\+segment\+\_\+definition.\+h}}\item 
+tesseract/tesseract\+\_\+planning/tesseract\+\_\+process\+\_\+planners/src/tesseract\+\_\+process\+\_\+planners/\mbox{\hyperlink{process__segment__definition_8cpp}{process\+\_\+segment\+\_\+definition.\+cpp}}\end{DoxyCompactItemize}

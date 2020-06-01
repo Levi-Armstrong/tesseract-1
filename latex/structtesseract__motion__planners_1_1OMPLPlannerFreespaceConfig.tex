@@ -1,0 +1,252 @@
+\hypertarget{structtesseract__motion__planners_1_1OMPLPlannerFreespaceConfig}{}\doxysection{tesseract\+\_\+motion\+\_\+planners\+::O\+M\+P\+L\+Planner\+Freespace\+Config Struct Reference}
+\label{structtesseract__motion__planners_1_1OMPLPlannerFreespaceConfig}\index{tesseract\_motion\_planners::OMPLPlannerFreespaceConfig@{tesseract\_motion\_planners::OMPLPlannerFreespaceConfig}}
+
+
+{\ttfamily \#include $<$ompl\+\_\+planner\+\_\+freespace\+\_\+config.\+h$>$}
+
+Inheritance diagram for tesseract\+\_\+motion\+\_\+planners\+::O\+M\+P\+L\+Planner\+Freespace\+Config\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{structtesseract__motion__planners_1_1OMPLPlannerFreespaceConfig}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{structtesseract__motion__planners_1_1OMPLPlannerFreespaceConfig_adfb591f6f88dfec3e70d3e987489f083}{Ptr}} = std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structtesseract__motion__planners_1_1OMPLPlannerFreespaceConfig}{O\+M\+P\+L\+Planner\+Freespace\+Config}} $>$
+\item 
+using \mbox{\hyperlink{structtesseract__motion__planners_1_1OMPLPlannerFreespaceConfig_a7cb656715e1fc0a232b6d011bf93ddb0}{Const\+Ptr}} = std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{structtesseract__motion__planners_1_1OMPLPlannerFreespaceConfig}{O\+M\+P\+L\+Planner\+Freespace\+Config}} $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structtesseract__motion__planners_1_1OMPLPlannerFreespaceConfig_a8541222666e9bb1c307d904bd4fe8b8c}{O\+M\+P\+L\+Planner\+Freespace\+Config}} (\mbox{\hyperlink{classtesseract_1_1Tesseract_a8af3b0404dc78b21584bb9a42c83be93}{tesseract\+::\+Tesseract\+::\+Const\+Ptr}} \mbox{\hyperlink{structtesseract__motion__planners_1_1OMPLPlannerConfig_a8837ecce85bdff3b9563d8abfbecf4df}{tesseract}}, std\+::string \mbox{\hyperlink{structtesseract__motion__planners_1_1OMPLPlannerConfig_ab4cea4cf2632d0573a414992ad95bac6}{manipulator}})
+\begin{DoxyCompactList}\small\item\em Construct a basic planner. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structtesseract__motion__planners_1_1OMPLPlannerFreespaceConfig_a69b881f1754b7ee6e768c2f3b39b7efa}{O\+M\+P\+L\+Planner\+Freespace\+Config}} (\mbox{\hyperlink{classtesseract_1_1Tesseract_a8af3b0404dc78b21584bb9a42c83be93}{tesseract\+::\+Tesseract\+::\+Const\+Ptr}} \mbox{\hyperlink{structtesseract__motion__planners_1_1OMPLPlannerConfig_a8837ecce85bdff3b9563d8abfbecf4df}{tesseract}}, std\+::string \mbox{\hyperlink{structtesseract__motion__planners_1_1OMPLPlannerConfig_ab4cea4cf2632d0573a414992ad95bac6}{manipulator}}, std\+::vector$<$ \mbox{\hyperlink{structtesseract__motion__planners_1_1OMPLPlannerConfigurator_ad31eadb507155473e592c6d91095e38f}{O\+M\+P\+L\+Planner\+Configurator\+::\+Const\+Ptr}} $>$ \mbox{\hyperlink{structtesseract__motion__planners_1_1OMPLPlannerConfig_a5e6a2f8d38f9beb00c74701edcd09520}{planners}})
+\item 
+bool \mbox{\hyperlink{structtesseract__motion__planners_1_1OMPLPlannerFreespaceConfig_aeca87f184ee2a7e95fe9e37087e59f6c}{generate}} () override
+\begin{DoxyCompactList}\small\item\em Generates the O\+M\+PL problem and saves the result internally. \end{DoxyCompactList}\item 
+ompl\+::base\+::\+State\+Sampler\+Ptr \mbox{\hyperlink{structtesseract__motion__planners_1_1OMPLPlannerFreespaceConfig_a2ebcc09a9d3a0a5f0b4483908201c393}{alloc\+Weighted\+Real\+Vector\+State\+Sampler}} (const ompl\+::base\+::\+State\+Space $\ast$space) const
+\begin{DoxyCompactList}\small\item\em Default State sampler which uses the weights information to scale the sampled state. This is use full when you state space has mixed units like meters and radian. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtesseract__motion__planners_1_1Waypoint_a6a3eae473f2bb3bd94684561aae0bd3e}{Waypoint\+::\+Ptr}} \mbox{\hyperlink{structtesseract__motion__planners_1_1OMPLPlannerFreespaceConfig_a6d94e899fa5e6d5b9f930523e26b2130}{start\+\_\+waypoint}}
+\begin{DoxyCompactList}\small\item\em Determines the constraint placed at the start of the trajectory. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classtesseract__motion__planners_1_1Waypoint_a6a3eae473f2bb3bd94684561aae0bd3e}{Waypoint\+::\+Ptr}} \mbox{\hyperlink{structtesseract__motion__planners_1_1OMPLPlannerFreespaceConfig_a87bddce8e8690f6625d97a15dab3b9e2}{end\+\_\+waypoint}}
+\begin{DoxyCompactList}\small\item\em Determines the constraint placed at the end of the trajectory. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector\+Xd \mbox{\hyperlink{structtesseract__motion__planners_1_1OMPLPlannerFreespaceConfig_aea45ab6f4648647f503970886ad25a47}{weights}}
+\begin{DoxyCompactList}\small\item\em This scales the variables search space. Must be same size as number of joints. If empty it defaults to all ones. \end{DoxyCompactList}\item 
+ompl\+::base\+::\+State\+Sampler\+Allocator \mbox{\hyperlink{structtesseract__motion__planners_1_1OMPLPlannerFreespaceConfig_a6a1e35851ddb908a0e8dd76c3d999d55}{state\+\_\+sampler\+\_\+allocator}}
+\begin{DoxyCompactList}\small\item\em The state sampler allocator. This can be null and it will use O\+M\+PL default state sampler allocator. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacetesseract__motion__planners_a48c1a24ef193df5880eb09ffeb5d844c}{Optimization\+Objective\+Allocator}} \mbox{\hyperlink{structtesseract__motion__planners_1_1OMPLPlannerFreespaceConfig_a466a22a63f906693de1e14410cb794c6}{optimization\+\_\+objective\+\_\+allocator}}
+\begin{DoxyCompactList}\small\item\em Set the optimization objective function allocator. Default is to minimize path length. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacetesseract__motion__planners_ab508d5fa26d718884fa7dbca2f588347}{State\+Validity\+Checker\+Allocator}} \mbox{\hyperlink{structtesseract__motion__planners_1_1OMPLPlannerFreespaceConfig_aa0f5d122e55cf94234d4909ea7f2ba76}{svc\+\_\+allocator}}
+\begin{DoxyCompactList}\small\item\em The ompl state validity checker. If nullptr and collision checking enabled it uses \mbox{\hyperlink{classtesseract__motion__planners_1_1StateCollisionValidator}{State\+Collision\+Validator}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacetesseract__motion__planners_a8ddce55d257f10ec21ae126bfbde5a5b}{Motion\+Validator\+Allocator}} \mbox{\hyperlink{structtesseract__motion__planners_1_1OMPLPlannerFreespaceConfig_ad3a36280541823a99755f44349335d7e}{mv\+\_\+allocator}}
+\begin{DoxyCompactList}\small\item\em The ompl motion validator. If nullptr and continuous collision checking enabled it used \mbox{\hyperlink{classtesseract__motion__planners_1_1ContinuousMotionValidator}{Continuous\+Motion\+Validator}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{structtesseract__motion__planners_1_1OMPLPlannerFreespaceConfig_a71c397ded45cf28690f0a11a89331f8e}{process\+Longest\+Valid\+Segment}} (const ompl\+::base\+::\+State\+Space\+Ptr \&state\+\_\+space\+\_\+ptr)
+\item 
+bool \mbox{\hyperlink{structtesseract__motion__planners_1_1OMPLPlannerFreespaceConfig_a1754152d71d49f4acaed771d86ed9458}{process\+Start\+And\+Goal\+State}} (const \mbox{\hyperlink{classtesseract__environment_1_1Environment_a9d9ecedaebeea1d7ba45be7670fbcd77}{tesseract\+\_\+environment\+::\+Environment\+::\+Const\+Ptr}} \&env, const \mbox{\hyperlink{classtesseract__kinematics_1_1ForwardKinematics_abdb52d493e8f0c584be778ddb193ed46}{tesseract\+\_\+kinematics\+::\+Forward\+Kinematics\+::\+Ptr}} \&kin)
+\item 
+ompl\+::base\+::\+State\+Validity\+Checker\+Ptr \mbox{\hyperlink{structtesseract__motion__planners_1_1OMPLPlannerFreespaceConfig_a9bf0d388b8d4afe5d7d92d8a9bc6b115}{process\+State\+Validator}} (const \mbox{\hyperlink{classtesseract__environment_1_1Environment_a9d9ecedaebeea1d7ba45be7670fbcd77}{tesseract\+\_\+environment\+::\+Environment\+::\+Const\+Ptr}} \&env, const \mbox{\hyperlink{classtesseract__kinematics_1_1ForwardKinematics_abdb52d493e8f0c584be778ddb193ed46}{tesseract\+\_\+kinematics\+::\+Forward\+Kinematics\+::\+Ptr}} \&kin)
+\item 
+void \mbox{\hyperlink{structtesseract__motion__planners_1_1OMPLPlannerFreespaceConfig_a0a41697d6023a2d758f3f2dc519fbc5b}{process\+Motion\+Validator}} (ompl\+::base\+::\+State\+Validity\+Checker\+Ptr svc\+\_\+without\+\_\+collision, const \mbox{\hyperlink{classtesseract__environment_1_1Environment_a9d9ecedaebeea1d7ba45be7670fbcd77}{tesseract\+\_\+environment\+::\+Environment\+::\+Const\+Ptr}} \&env, const \mbox{\hyperlink{classtesseract__kinematics_1_1ForwardKinematics_abdb52d493e8f0c584be778ddb193ed46}{tesseract\+\_\+kinematics\+::\+Forward\+Kinematics\+::\+Ptr}} \&kin)
+\item 
+void \mbox{\hyperlink{structtesseract__motion__planners_1_1OMPLPlannerFreespaceConfig_a1b57bdbddd504ad2e1dcc3703c04705e}{process\+Optimization\+Objective}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{structtesseract__motion__planners_1_1OMPLPlannerFreespaceConfig_a7cb656715e1fc0a232b6d011bf93ddb0}\label{structtesseract__motion__planners_1_1OMPLPlannerFreespaceConfig_a7cb656715e1fc0a232b6d011bf93ddb0}} 
+\index{tesseract\_motion\_planners::OMPLPlannerFreespaceConfig@{tesseract\_motion\_planners::OMPLPlannerFreespaceConfig}!ConstPtr@{ConstPtr}}
+\index{ConstPtr@{ConstPtr}!tesseract\_motion\_planners::OMPLPlannerFreespaceConfig@{tesseract\_motion\_planners::OMPLPlannerFreespaceConfig}}
+\doxysubsubsection{\texorpdfstring{ConstPtr}{ConstPtr}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{structtesseract__motion__planners_1_1OMPLPlannerFreespaceConfig_a7cb656715e1fc0a232b6d011bf93ddb0}{tesseract\+\_\+motion\+\_\+planners\+::\+O\+M\+P\+L\+Planner\+Freespace\+Config\+::\+Const\+Ptr}} =  std\+::shared\+\_\+ptr$<$const \mbox{\hyperlink{structtesseract__motion__planners_1_1OMPLPlannerFreespaceConfig}{O\+M\+P\+L\+Planner\+Freespace\+Config}}$>$}
+
+\mbox{\Hypertarget{structtesseract__motion__planners_1_1OMPLPlannerFreespaceConfig_adfb591f6f88dfec3e70d3e987489f083}\label{structtesseract__motion__planners_1_1OMPLPlannerFreespaceConfig_adfb591f6f88dfec3e70d3e987489f083}} 
+\index{tesseract\_motion\_planners::OMPLPlannerFreespaceConfig@{tesseract\_motion\_planners::OMPLPlannerFreespaceConfig}!Ptr@{Ptr}}
+\index{Ptr@{Ptr}!tesseract\_motion\_planners::OMPLPlannerFreespaceConfig@{tesseract\_motion\_planners::OMPLPlannerFreespaceConfig}}
+\doxysubsubsection{\texorpdfstring{Ptr}{Ptr}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{structtesseract__motion__planners_1_1OMPLPlannerFreespaceConfig_adfb591f6f88dfec3e70d3e987489f083}{tesseract\+\_\+motion\+\_\+planners\+::\+O\+M\+P\+L\+Planner\+Freespace\+Config\+::\+Ptr}} =  std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{structtesseract__motion__planners_1_1OMPLPlannerFreespaceConfig}{O\+M\+P\+L\+Planner\+Freespace\+Config}}$>$}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structtesseract__motion__planners_1_1OMPLPlannerFreespaceConfig_a8541222666e9bb1c307d904bd4fe8b8c}\label{structtesseract__motion__planners_1_1OMPLPlannerFreespaceConfig_a8541222666e9bb1c307d904bd4fe8b8c}} 
+\index{tesseract\_motion\_planners::OMPLPlannerFreespaceConfig@{tesseract\_motion\_planners::OMPLPlannerFreespaceConfig}!OMPLPlannerFreespaceConfig@{OMPLPlannerFreespaceConfig}}
+\index{OMPLPlannerFreespaceConfig@{OMPLPlannerFreespaceConfig}!tesseract\_motion\_planners::OMPLPlannerFreespaceConfig@{tesseract\_motion\_planners::OMPLPlannerFreespaceConfig}}
+\doxysubsubsection{\texorpdfstring{OMPLPlannerFreespaceConfig()}{OMPLPlannerFreespaceConfig()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily tesseract\+\_\+motion\+\_\+planners\+::\+O\+M\+P\+L\+Planner\+Freespace\+Config\+::\+O\+M\+P\+L\+Planner\+Freespace\+Config (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtesseract_1_1Tesseract_a8af3b0404dc78b21584bb9a42c83be93}{tesseract\+::\+Tesseract\+::\+Const\+Ptr}}}]{tesseract,  }\item[{std\+::string}]{manipulator }\end{DoxyParamCaption})}
+
+
+
+Construct a basic planner. 
+
+\mbox{\Hypertarget{structtesseract__motion__planners_1_1OMPLPlannerFreespaceConfig_a69b881f1754b7ee6e768c2f3b39b7efa}\label{structtesseract__motion__planners_1_1OMPLPlannerFreespaceConfig_a69b881f1754b7ee6e768c2f3b39b7efa}} 
+\index{tesseract\_motion\_planners::OMPLPlannerFreespaceConfig@{tesseract\_motion\_planners::OMPLPlannerFreespaceConfig}!OMPLPlannerFreespaceConfig@{OMPLPlannerFreespaceConfig}}
+\index{OMPLPlannerFreespaceConfig@{OMPLPlannerFreespaceConfig}!tesseract\_motion\_planners::OMPLPlannerFreespaceConfig@{tesseract\_motion\_planners::OMPLPlannerFreespaceConfig}}
+\doxysubsubsection{\texorpdfstring{OMPLPlannerFreespaceConfig()}{OMPLPlannerFreespaceConfig()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily tesseract\+\_\+motion\+\_\+planners\+::\+O\+M\+P\+L\+Planner\+Freespace\+Config\+::\+O\+M\+P\+L\+Planner\+Freespace\+Config (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtesseract_1_1Tesseract_a8af3b0404dc78b21584bb9a42c83be93}{tesseract\+::\+Tesseract\+::\+Const\+Ptr}}}]{tesseract,  }\item[{std\+::string}]{manipulator,  }\item[{std\+::vector$<$ \mbox{\hyperlink{structtesseract__motion__planners_1_1OMPLPlannerConfigurator_ad31eadb507155473e592c6d91095e38f}{O\+M\+P\+L\+Planner\+Configurator\+::\+Const\+Ptr}} $>$}]{planners }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structtesseract__motion__planners_1_1OMPLPlannerFreespaceConfig_a2ebcc09a9d3a0a5f0b4483908201c393}\label{structtesseract__motion__planners_1_1OMPLPlannerFreespaceConfig_a2ebcc09a9d3a0a5f0b4483908201c393}} 
+\index{tesseract\_motion\_planners::OMPLPlannerFreespaceConfig@{tesseract\_motion\_planners::OMPLPlannerFreespaceConfig}!allocWeightedRealVectorStateSampler@{allocWeightedRealVectorStateSampler}}
+\index{allocWeightedRealVectorStateSampler@{allocWeightedRealVectorStateSampler}!tesseract\_motion\_planners::OMPLPlannerFreespaceConfig@{tesseract\_motion\_planners::OMPLPlannerFreespaceConfig}}
+\doxysubsubsection{\texorpdfstring{allocWeightedRealVectorStateSampler()}{allocWeightedRealVectorStateSampler()}}
+{\footnotesize\ttfamily ompl\+::base\+::\+State\+Sampler\+Ptr tesseract\+\_\+motion\+\_\+planners\+::\+O\+M\+P\+L\+Planner\+Freespace\+Config\+::alloc\+Weighted\+Real\+Vector\+State\+Sampler (\begin{DoxyParamCaption}\item[{const ompl\+::base\+::\+State\+Space $\ast$}]{space }\end{DoxyParamCaption}) const}
+
+
+
+Default State sampler which uses the weights information to scale the sampled state. This is use full when you state space has mixed units like meters and radian. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em space} & The ompl state space. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O\+M\+PL state sampler shared pointer 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structtesseract__motion__planners_1_1OMPLPlannerFreespaceConfig_aeca87f184ee2a7e95fe9e37087e59f6c}\label{structtesseract__motion__planners_1_1OMPLPlannerFreespaceConfig_aeca87f184ee2a7e95fe9e37087e59f6c}} 
+\index{tesseract\_motion\_planners::OMPLPlannerFreespaceConfig@{tesseract\_motion\_planners::OMPLPlannerFreespaceConfig}!generate@{generate}}
+\index{generate@{generate}!tesseract\_motion\_planners::OMPLPlannerFreespaceConfig@{tesseract\_motion\_planners::OMPLPlannerFreespaceConfig}}
+\doxysubsubsection{\texorpdfstring{generate()}{generate()}}
+{\footnotesize\ttfamily bool tesseract\+\_\+motion\+\_\+planners\+::\+O\+M\+P\+L\+Planner\+Freespace\+Config\+::generate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Generates the O\+M\+PL problem and saves the result internally. 
+
+
+
+Reimplemented from \mbox{\hyperlink{structtesseract__motion__planners_1_1OMPLPlannerConfig_af4382d3ef61ed33d554d452df03780cc}{tesseract\+\_\+motion\+\_\+planners\+::\+O\+M\+P\+L\+Planner\+Config}}.
+
+\mbox{\Hypertarget{structtesseract__motion__planners_1_1OMPLPlannerFreespaceConfig_a71c397ded45cf28690f0a11a89331f8e}\label{structtesseract__motion__planners_1_1OMPLPlannerFreespaceConfig_a71c397ded45cf28690f0a11a89331f8e}} 
+\index{tesseract\_motion\_planners::OMPLPlannerFreespaceConfig@{tesseract\_motion\_planners::OMPLPlannerFreespaceConfig}!processLongestValidSegment@{processLongestValidSegment}}
+\index{processLongestValidSegment@{processLongestValidSegment}!tesseract\_motion\_planners::OMPLPlannerFreespaceConfig@{tesseract\_motion\_planners::OMPLPlannerFreespaceConfig}}
+\doxysubsubsection{\texorpdfstring{processLongestValidSegment()}{processLongestValidSegment()}}
+{\footnotesize\ttfamily void tesseract\+\_\+motion\+\_\+planners\+::\+O\+M\+P\+L\+Planner\+Freespace\+Config\+::process\+Longest\+Valid\+Segment (\begin{DoxyParamCaption}\item[{const ompl\+::base\+::\+State\+Space\+Ptr \&}]{state\+\_\+space\+\_\+ptr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{structtesseract__motion__planners_1_1OMPLPlannerFreespaceConfig_a0a41697d6023a2d758f3f2dc519fbc5b}\label{structtesseract__motion__planners_1_1OMPLPlannerFreespaceConfig_a0a41697d6023a2d758f3f2dc519fbc5b}} 
+\index{tesseract\_motion\_planners::OMPLPlannerFreespaceConfig@{tesseract\_motion\_planners::OMPLPlannerFreespaceConfig}!processMotionValidator@{processMotionValidator}}
+\index{processMotionValidator@{processMotionValidator}!tesseract\_motion\_planners::OMPLPlannerFreespaceConfig@{tesseract\_motion\_planners::OMPLPlannerFreespaceConfig}}
+\doxysubsubsection{\texorpdfstring{processMotionValidator()}{processMotionValidator()}}
+{\footnotesize\ttfamily void tesseract\+\_\+motion\+\_\+planners\+::\+O\+M\+P\+L\+Planner\+Freespace\+Config\+::process\+Motion\+Validator (\begin{DoxyParamCaption}\item[{ompl\+::base\+::\+State\+Validity\+Checker\+Ptr}]{svc\+\_\+without\+\_\+collision,  }\item[{const \mbox{\hyperlink{classtesseract__environment_1_1Environment_a9d9ecedaebeea1d7ba45be7670fbcd77}{tesseract\+\_\+environment\+::\+Environment\+::\+Const\+Ptr}} \&}]{env,  }\item[{const \mbox{\hyperlink{classtesseract__kinematics_1_1ForwardKinematics_abdb52d493e8f0c584be778ddb193ed46}{tesseract\+\_\+kinematics\+::\+Forward\+Kinematics\+::\+Ptr}} \&}]{kin }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{structtesseract__motion__planners_1_1OMPLPlannerFreespaceConfig_a1b57bdbddd504ad2e1dcc3703c04705e}\label{structtesseract__motion__planners_1_1OMPLPlannerFreespaceConfig_a1b57bdbddd504ad2e1dcc3703c04705e}} 
+\index{tesseract\_motion\_planners::OMPLPlannerFreespaceConfig@{tesseract\_motion\_planners::OMPLPlannerFreespaceConfig}!processOptimizationObjective@{processOptimizationObjective}}
+\index{processOptimizationObjective@{processOptimizationObjective}!tesseract\_motion\_planners::OMPLPlannerFreespaceConfig@{tesseract\_motion\_planners::OMPLPlannerFreespaceConfig}}
+\doxysubsubsection{\texorpdfstring{processOptimizationObjective()}{processOptimizationObjective()}}
+{\footnotesize\ttfamily void tesseract\+\_\+motion\+\_\+planners\+::\+O\+M\+P\+L\+Planner\+Freespace\+Config\+::process\+Optimization\+Objective (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{structtesseract__motion__planners_1_1OMPLPlannerFreespaceConfig_a1754152d71d49f4acaed771d86ed9458}\label{structtesseract__motion__planners_1_1OMPLPlannerFreespaceConfig_a1754152d71d49f4acaed771d86ed9458}} 
+\index{tesseract\_motion\_planners::OMPLPlannerFreespaceConfig@{tesseract\_motion\_planners::OMPLPlannerFreespaceConfig}!processStartAndGoalState@{processStartAndGoalState}}
+\index{processStartAndGoalState@{processStartAndGoalState}!tesseract\_motion\_planners::OMPLPlannerFreespaceConfig@{tesseract\_motion\_planners::OMPLPlannerFreespaceConfig}}
+\doxysubsubsection{\texorpdfstring{processStartAndGoalState()}{processStartAndGoalState()}}
+{\footnotesize\ttfamily bool tesseract\+\_\+motion\+\_\+planners\+::\+O\+M\+P\+L\+Planner\+Freespace\+Config\+::process\+Start\+And\+Goal\+State (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtesseract__environment_1_1Environment_a9d9ecedaebeea1d7ba45be7670fbcd77}{tesseract\+\_\+environment\+::\+Environment\+::\+Const\+Ptr}} \&}]{env,  }\item[{const \mbox{\hyperlink{classtesseract__kinematics_1_1ForwardKinematics_abdb52d493e8f0c584be778ddb193ed46}{tesseract\+\_\+kinematics\+::\+Forward\+Kinematics\+::\+Ptr}} \&}]{kin }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{structtesseract__motion__planners_1_1OMPLPlannerFreespaceConfig_a9bf0d388b8d4afe5d7d92d8a9bc6b115}\label{structtesseract__motion__planners_1_1OMPLPlannerFreespaceConfig_a9bf0d388b8d4afe5d7d92d8a9bc6b115}} 
+\index{tesseract\_motion\_planners::OMPLPlannerFreespaceConfig@{tesseract\_motion\_planners::OMPLPlannerFreespaceConfig}!processStateValidator@{processStateValidator}}
+\index{processStateValidator@{processStateValidator}!tesseract\_motion\_planners::OMPLPlannerFreespaceConfig@{tesseract\_motion\_planners::OMPLPlannerFreespaceConfig}}
+\doxysubsubsection{\texorpdfstring{processStateValidator()}{processStateValidator()}}
+{\footnotesize\ttfamily ompl\+::base\+::\+State\+Validity\+Checker\+Ptr tesseract\+\_\+motion\+\_\+planners\+::\+O\+M\+P\+L\+Planner\+Freespace\+Config\+::process\+State\+Validator (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtesseract__environment_1_1Environment_a9d9ecedaebeea1d7ba45be7670fbcd77}{tesseract\+\_\+environment\+::\+Environment\+::\+Const\+Ptr}} \&}]{env,  }\item[{const \mbox{\hyperlink{classtesseract__kinematics_1_1ForwardKinematics_abdb52d493e8f0c584be778ddb193ed46}{tesseract\+\_\+kinematics\+::\+Forward\+Kinematics\+::\+Ptr}} \&}]{kin }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structtesseract__motion__planners_1_1OMPLPlannerFreespaceConfig_a87bddce8e8690f6625d97a15dab3b9e2}\label{structtesseract__motion__planners_1_1OMPLPlannerFreespaceConfig_a87bddce8e8690f6625d97a15dab3b9e2}} 
+\index{tesseract\_motion\_planners::OMPLPlannerFreespaceConfig@{tesseract\_motion\_planners::OMPLPlannerFreespaceConfig}!end\_waypoint@{end\_waypoint}}
+\index{end\_waypoint@{end\_waypoint}!tesseract\_motion\_planners::OMPLPlannerFreespaceConfig@{tesseract\_motion\_planners::OMPLPlannerFreespaceConfig}}
+\doxysubsubsection{\texorpdfstring{end\_waypoint}{end\_waypoint}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__motion__planners_1_1Waypoint_a6a3eae473f2bb3bd94684561aae0bd3e}{Waypoint\+::\+Ptr}} tesseract\+\_\+motion\+\_\+planners\+::\+O\+M\+P\+L\+Planner\+Freespace\+Config\+::end\+\_\+waypoint}
+
+
+
+Determines the constraint placed at the end of the trajectory. 
+
+The planner currently only support joint waypoints. Need to expose the ability to create a state sampler. \mbox{\Hypertarget{structtesseract__motion__planners_1_1OMPLPlannerFreespaceConfig_ad3a36280541823a99755f44349335d7e}\label{structtesseract__motion__planners_1_1OMPLPlannerFreespaceConfig_ad3a36280541823a99755f44349335d7e}} 
+\index{tesseract\_motion\_planners::OMPLPlannerFreespaceConfig@{tesseract\_motion\_planners::OMPLPlannerFreespaceConfig}!mv\_allocator@{mv\_allocator}}
+\index{mv\_allocator@{mv\_allocator}!tesseract\_motion\_planners::OMPLPlannerFreespaceConfig@{tesseract\_motion\_planners::OMPLPlannerFreespaceConfig}}
+\doxysubsubsection{\texorpdfstring{mv\_allocator}{mv\_allocator}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacetesseract__motion__planners_a8ddce55d257f10ec21ae126bfbde5a5b}{Motion\+Validator\+Allocator}} tesseract\+\_\+motion\+\_\+planners\+::\+O\+M\+P\+L\+Planner\+Freespace\+Config\+::mv\+\_\+allocator}
+
+
+
+The ompl motion validator. If nullptr and continuous collision checking enabled it used \mbox{\hyperlink{classtesseract__motion__planners_1_1ContinuousMotionValidator}{Continuous\+Motion\+Validator}}. 
+
+\mbox{\Hypertarget{structtesseract__motion__planners_1_1OMPLPlannerFreespaceConfig_a466a22a63f906693de1e14410cb794c6}\label{structtesseract__motion__planners_1_1OMPLPlannerFreespaceConfig_a466a22a63f906693de1e14410cb794c6}} 
+\index{tesseract\_motion\_planners::OMPLPlannerFreespaceConfig@{tesseract\_motion\_planners::OMPLPlannerFreespaceConfig}!optimization\_objective\_allocator@{optimization\_objective\_allocator}}
+\index{optimization\_objective\_allocator@{optimization\_objective\_allocator}!tesseract\_motion\_planners::OMPLPlannerFreespaceConfig@{tesseract\_motion\_planners::OMPLPlannerFreespaceConfig}}
+\doxysubsubsection{\texorpdfstring{optimization\_objective\_allocator}{optimization\_objective\_allocator}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacetesseract__motion__planners_a48c1a24ef193df5880eb09ffeb5d844c}{Optimization\+Objective\+Allocator}} tesseract\+\_\+motion\+\_\+planners\+::\+O\+M\+P\+L\+Planner\+Freespace\+Config\+::optimization\+\_\+objective\+\_\+allocator}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= [](\textcolor{keyword}{const} ompl::base::SpaceInformationPtr\& si,}
+\DoxyCodeLine{                                                                       \textcolor{keyword}{const} \mbox{\hyperlink{structtesseract__motion__planners_1_1OMPLPlannerConfig_ae44b80225600c526debb476015df2df6}{OMPLPlannerConfig}}\&) \{}
+\DoxyCodeLine{    \textcolor{keywordflow}{return} std::make\_shared<ompl::base::PathLengthOptimizationObjective>(si);}
+\DoxyCodeLine{  \}}
+
+\end{DoxyCode}
+
+
+Set the optimization objective function allocator. Default is to minimize path length. 
+
+\mbox{\Hypertarget{structtesseract__motion__planners_1_1OMPLPlannerFreespaceConfig_a6d94e899fa5e6d5b9f930523e26b2130}\label{structtesseract__motion__planners_1_1OMPLPlannerFreespaceConfig_a6d94e899fa5e6d5b9f930523e26b2130}} 
+\index{tesseract\_motion\_planners::OMPLPlannerFreespaceConfig@{tesseract\_motion\_planners::OMPLPlannerFreespaceConfig}!start\_waypoint@{start\_waypoint}}
+\index{start\_waypoint@{start\_waypoint}!tesseract\_motion\_planners::OMPLPlannerFreespaceConfig@{tesseract\_motion\_planners::OMPLPlannerFreespaceConfig}}
+\doxysubsubsection{\texorpdfstring{start\_waypoint}{start\_waypoint}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__motion__planners_1_1Waypoint_a6a3eae473f2bb3bd94684561aae0bd3e}{Waypoint\+::\+Ptr}} tesseract\+\_\+motion\+\_\+planners\+::\+O\+M\+P\+L\+Planner\+Freespace\+Config\+::start\+\_\+waypoint}
+
+
+
+Determines the constraint placed at the start of the trajectory. 
+
+The planner currently only support joint waypoints. Need to expose the ability to create a state sampler. \mbox{\Hypertarget{structtesseract__motion__planners_1_1OMPLPlannerFreespaceConfig_a6a1e35851ddb908a0e8dd76c3d999d55}\label{structtesseract__motion__planners_1_1OMPLPlannerFreespaceConfig_a6a1e35851ddb908a0e8dd76c3d999d55}} 
+\index{tesseract\_motion\_planners::OMPLPlannerFreespaceConfig@{tesseract\_motion\_planners::OMPLPlannerFreespaceConfig}!state\_sampler\_allocator@{state\_sampler\_allocator}}
+\index{state\_sampler\_allocator@{state\_sampler\_allocator}!tesseract\_motion\_planners::OMPLPlannerFreespaceConfig@{tesseract\_motion\_planners::OMPLPlannerFreespaceConfig}}
+\doxysubsubsection{\texorpdfstring{state\_sampler\_allocator}{state\_sampler\_allocator}}
+{\footnotesize\ttfamily ompl\+::base\+::\+State\+Sampler\+Allocator tesseract\+\_\+motion\+\_\+planners\+::\+O\+M\+P\+L\+Planner\+Freespace\+Config\+::state\+\_\+sampler\+\_\+allocator}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=}
+\DoxyCodeLine{      std::bind(\&\mbox{\hyperlink{structtesseract__motion__planners_1_1OMPLPlannerFreespaceConfig_a2ebcc09a9d3a0a5f0b4483908201c393}{OMPLPlannerFreespaceConfig::allocWeightedRealVectorStateSampler}}, \textcolor{keyword}{this}, std::placeholders::\_1)}
+
+\end{DoxyCode}
+
+
+The state sampler allocator. This can be null and it will use O\+M\+PL default state sampler allocator. 
+
+\mbox{\Hypertarget{structtesseract__motion__planners_1_1OMPLPlannerFreespaceConfig_aa0f5d122e55cf94234d4909ea7f2ba76}\label{structtesseract__motion__planners_1_1OMPLPlannerFreespaceConfig_aa0f5d122e55cf94234d4909ea7f2ba76}} 
+\index{tesseract\_motion\_planners::OMPLPlannerFreespaceConfig@{tesseract\_motion\_planners::OMPLPlannerFreespaceConfig}!svc\_allocator@{svc\_allocator}}
+\index{svc\_allocator@{svc\_allocator}!tesseract\_motion\_planners::OMPLPlannerFreespaceConfig@{tesseract\_motion\_planners::OMPLPlannerFreespaceConfig}}
+\doxysubsubsection{\texorpdfstring{svc\_allocator}{svc\_allocator}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacetesseract__motion__planners_ab508d5fa26d718884fa7dbca2f588347}{State\+Validity\+Checker\+Allocator}} tesseract\+\_\+motion\+\_\+planners\+::\+O\+M\+P\+L\+Planner\+Freespace\+Config\+::svc\+\_\+allocator}
+
+
+
+The ompl state validity checker. If nullptr and collision checking enabled it uses \mbox{\hyperlink{classtesseract__motion__planners_1_1StateCollisionValidator}{State\+Collision\+Validator}}. 
+
+\mbox{\Hypertarget{structtesseract__motion__planners_1_1OMPLPlannerFreespaceConfig_aea45ab6f4648647f503970886ad25a47}\label{structtesseract__motion__planners_1_1OMPLPlannerFreespaceConfig_aea45ab6f4648647f503970886ad25a47}} 
+\index{tesseract\_motion\_planners::OMPLPlannerFreespaceConfig@{tesseract\_motion\_planners::OMPLPlannerFreespaceConfig}!weights@{weights}}
+\index{weights@{weights}!tesseract\_motion\_planners::OMPLPlannerFreespaceConfig@{tesseract\_motion\_planners::OMPLPlannerFreespaceConfig}}
+\doxysubsubsection{\texorpdfstring{weights}{weights}}
+{\footnotesize\ttfamily Eigen\+::\+Vector\+Xd tesseract\+\_\+motion\+\_\+planners\+::\+O\+M\+P\+L\+Planner\+Freespace\+Config\+::weights}
+
+
+
+This scales the variables search space. Must be same size as number of joints. If empty it defaults to all ones. 
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+tesseract/tesseract\+\_\+planning/tesseract\+\_\+motion\+\_\+planners/include/tesseract\+\_\+motion\+\_\+planners/ompl/config/\mbox{\hyperlink{ompl__planner__freespace__config_8h}{ompl\+\_\+planner\+\_\+freespace\+\_\+config.\+h}}\item 
+tesseract/tesseract\+\_\+planning/tesseract\+\_\+motion\+\_\+planners/src/ompl/config/\mbox{\hyperlink{ompl__planner__freespace__config_8cpp}{ompl\+\_\+planner\+\_\+freespace\+\_\+config.\+cpp}}\end{DoxyCompactItemize}
