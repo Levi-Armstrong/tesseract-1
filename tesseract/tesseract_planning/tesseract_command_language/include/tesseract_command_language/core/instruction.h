@@ -27,6 +27,8 @@ struct InstructionInnerBase
 
   virtual bool isComposite() const = 0;
 
+  virtual bool isPlan() const = 0;
+
   virtual bool isMove() const = 0;
 
   virtual void print() const = 0;
@@ -66,6 +68,8 @@ struct InstructionInner final : InstructionInnerBase
   void setDescription(const std::string& description) { instruction_.setDescription(description); }
 
   bool isComposite() const { return instruction_.isComposite(); }
+
+  bool isPlan() const { return instruction_.isPlan(); }
 
   bool isMove() const { return instruction_.isMove(); }
 
@@ -128,6 +132,8 @@ public:
   void setDescription(const std::string& description) { instruction_->setDescription(description); }
 
   bool isComposite() const { return instruction_->isComposite(); };
+
+  bool isPlan() const { return instruction_->isPlan(); }
 
   bool isMove() const { return instruction_->isMove(); }
 

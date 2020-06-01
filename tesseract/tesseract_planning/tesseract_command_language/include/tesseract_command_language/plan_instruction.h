@@ -1,5 +1,5 @@
-#ifndef TESSERACT_COMMAND_LANGUAGE_MOVE_INSTRUCTION_H
-#define TESSERACT_COMMAND_LANGUAGE_MOVE_INSTRUCTION_H
+#ifndef TESSERACT_COMMAND_LANGUAGE_PLAN_INSTRUCTION_H
+#define TESSERACT_COMMAND_LANGUAGE_PLAN_INSTRUCTION_H
 
 #include <tesseract_command_language/core/component_info.h>
 #include <tesseract_command_language/core/waypoint.h>
@@ -10,20 +10,20 @@
 namespace tesseract_planning
 {
 
-enum class MoveInstructionType : int
+enum class PlanInstructionType : int
 {
   LINEAR,
   FREESPACE,
   CIRCULAR
 };
 
-class MoveInstruction
+class PlanInstruction
 {
 public:
-  using Ptr = std::shared_ptr<MoveInstruction>;
-  using ConstPtr = std::shared_ptr<const MoveInstruction>;
+  using Ptr = std::shared_ptr<PlanInstruction>;
+  using ConstPtr = std::shared_ptr<const PlanInstruction>;
 
-  MoveInstruction(Waypoint waypoint, MoveInstructionType type);
+  PlanInstruction(Waypoint waypoint, PlanInstructionType type);
 
   void setWaypoint(Waypoint waypoint);
   const Waypoint& getWaypoint() const;
@@ -34,17 +34,17 @@ public:
   void setWorkingFrame(std::string working_frame);
   const std::string& getWorkingFrame() const;
 
-  void setVelocity(Eigen::VectorXd velocity);
-  const Eigen::VectorXd& getVelocity() const;
+  void addCost(ComponentInfo component);
+  const std::vector<ComponentInfo>& getCosts() const;
 
-  void setAcceleration(Eigen::VectorXd acceleration);
-  const Eigen::VectorXd& getAcceleration() const;
+  void addConstraint(ComponentInfo component);
+  const std::vector<ComponentInfo>& getConstraints() const;
 
-  void setEffort(Eigen::VectorXd effort);
-  const Eigen::VectorXd& getEffort() const;
+  void addPathCost(ComponentInfo component);
+  const std::vector<ComponentInfo>& getPathCosts() const;
 
-  void setTime(double time);
-  const double& getTime() const;
+  void addPathConstraint(ComponentInfo component);
+  const std::vector<ComponentInfo>& getPathConstraints() const;
 
   int getType() const;
 
@@ -67,10 +67,9 @@ public:
   bool isCircular() const;
 
 private:
-  int type_ { static_cast<int>(InstructionType::MOVE_INSTRUCTION) };
+  int type_ { static_cast<int>(InstructionType::PLAN_INSTRUCTION) };
 
-  MoveInstructionType move_type_;
-  std::string description_;
+  PlanInstructionType plan_type_;
 
   /** @brief The assigned waypoint (Cartesian or Joint) */
   Waypoint waypoint_;
@@ -81,19 +80,15 @@ private:
   /** @brief The working frame the waypoint is relative to */
   std::string working_frame_;
 
-  /** @brief The velocity at the waypoint */
-  Eigen::VectorXd velocity_;
+  std::string description_;
 
-  /** @brief The Acceleration at the waypoint */
-  Eigen::VectorXd acceleration_;
+  std::vector<ComponentInfo> costs_;
+  std::vector<ComponentInfo> constraints_;
 
-  /** @brief The Effort at the waypoint */
-  Eigen::VectorXd effort_;
-
-  /** @brief The Time from start at the waypoint */
-  double time_;
+  std::vector<ComponentInfo> path_costs_;
+  std::vector<ComponentInfo> path_constraints_;
 };
 
 }
 
-#endif // TESSERACT_COMMAND_LANGUAGE_MOVE_INSTRUCTION_H
+#endif // TESSERACT_COMMAND_LANGUAGE_PLAN_INSTRUCTION_H

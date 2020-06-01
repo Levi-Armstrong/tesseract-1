@@ -5,7 +5,7 @@
 #include <tesseract_command_language/joint_waypoint.h>
 #include <tesseract_command_language/cartesian_waypoint.h>
 #include <tesseract_command_language/composite_instruction.h>
-#include <tesseract_command_language/move_instruction.h>
+#include <tesseract_command_language/plan_instruction.h>
 #include <tesseract_command_language/component_info_impl.h>
 
 #include <tesseract_command_language/trajopt_planner_universal_config.h>
@@ -39,6 +39,44 @@ std::string locateResource(const std::string& url)
   return mod_url;
 }
 
+tesseract_planning::CompositeInstruction generateSeed(const tesseract_planning::CompositeInstruction& instructions)
+{
+  tesseract_planning::CompositeInstruction seed;
+  const tesseract_planning::PlanInstruction* prev_plan_instruction {nullptr};
+
+  for (const auto& instruction : instructions)
+  {
+    if (instruction.isPlan())
+    {
+      const tesseract_planning::PlanInstruction* plan_instruction = instruction.cast_const<tesseract_planning::PlanInstruction>();
+      if (plan_instruction->isLinear())
+      {
+        if (prev_plan_instruction)
+        {
+
+        }
+        else
+        {
+
+        }
+      }
+      else if (plan_instruction->isFreespace())
+      {
+
+      }
+      else
+      {
+        throw std::runtime_error("Unsupported!");
+      }
+    }
+    else
+    {
+      seed.push_back(instruction);
+    }
+  }
+  return seed;
+}
+
 int main (int argc, char *argv[])
 {
   using namespace tesseract_planning;
@@ -51,13 +89,12 @@ int main (int argc, char *argv[])
 
 
   // Define freespace move instruction
-  MoveInstruction move_f1(wp2);
-  move_f1.addConstraint(FixedComponent());
-  move_f1.addPathConstraint(FreespaceComponent());
+  PlanInstruction plan_f1(wp2, PlanInstructionType::FREESPACE);
+  plan_f1.addConstraint(FixedComponent());
 
   // Create a program
   CompositeInstruction program;
-  program.push_back(move_f1);
+  program.push_back(plan_f1);
   program.addCost(VelocitySmoothingComponent());
   program.addCost(AccelerationSmoothingComponent());
   program.addCost(JerkSmoothingComponent());

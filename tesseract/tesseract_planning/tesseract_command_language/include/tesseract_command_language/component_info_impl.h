@@ -1,7 +1,7 @@
 #ifndef TESSERACT_COMMAND_LANGUAGE_COMPONENT_INFO_IMPL_H
 #define TESSERACT_COMMAND_LANGUAGE_COMPONENT_INFO_IMPL_H
 
-#include <Eigen::Geometry>
+#include <Eigen/Geometry>
 
 namespace tesseract_planning
 {

@@ -2,6 +2,8 @@ cmake_minimum_required(VERSION 3.5.0)
 project(tesseract_command_language VERSION 0.1.0 LANGUAGES CXX)
 
 find_package(tesseract_common REQUIRED)
+find_package(tesseract_motion_planners REQUIRED)
+find_package(tesseract REQUIRED)
 find_package(Eigen3 REQUIRED)
 
 set(COVERAGE_EXCLUDE /usr/* /opt/* ${CMAKE_CURRENT_LIST_DIR}/test/* /*/gtest/*)
@@ -9,6 +11,7 @@ set(COVERAGE_EXCLUDE /usr/* /opt/* ${CMAKE_CURRENT_LIST_DIR}/test/* /*/gtest/*)
 add_code_coverage_all_targets(EXCLUDE ${COVERAGE_EXCLUDE})
 
 add_library(${PROJECT_NAME} SHARED
+  src/plan_instruction.cpp
   src/move_instruction.cpp
   src/composite_instruction.cpp)
 target_link_libraries(${PROJECT_NAME} PUBLIC tesseract::tesseract_common)
@@ -22,7 +25,7 @@ target_include_directories(${PROJECT_NAME} SYSTEM PUBLIC
  	${EIGEN3_INCLUDE_DIRS})
 
 add_library(${PROJECT_NAME}_trajopt src/trajopt_planner_universal_config.cpp)
-target_link_libraries(${PROJECT_NAME}_trajopt PUBLIC ${PROJECT_NAME})
+target_link_libraries(${PROJECT_NAME}_trajopt PUBLIC ${PROJECT_NAME} tesseract::tesseract_motion_planners_trajopt tesseract::tesseract)
 tesseract_target_compile_options(${PROJECT_NAME}_trajopt PUBLIC)
 tesseract_clang_tidy(${PROJECT_NAME}_trajopt)
 tesseract_code_coverage(${PROJECT_NAME}_trajopt ALL EXCLUDE ${COVERAGE_EXCLUDE})

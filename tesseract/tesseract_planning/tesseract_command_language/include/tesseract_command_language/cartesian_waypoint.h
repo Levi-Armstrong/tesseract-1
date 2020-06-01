@@ -44,14 +44,6 @@ public:
 
   int getType() const { return static_cast<int>(WaypointType::CARTESIAN_WAYPOINT); }
 
-  const std::string& getParentLinkName() const { return parent_link_; }
-  void setParentLinkName(const std::string& link_name) { parent_link_ = link_name; }
-
-  const Eigen::Isometry3d& getTCP() const { return tcp_; }
-  void setTCP(Eigen::Isometry3d tcp) { tcp_ = tcp; }
-private:
-  std::string parent_link_;
-  Eigen::Isometry3d tcp_ { Eigen::Isometry3d::Identity() };
 };
 
 }

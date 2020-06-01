@@ -24,7 +24,7 @@
  * limitations under the License.
  */
 #include <tesseract_command_language/trajopt_planner_universal_config.h>
-#include <tesseract_command_language/move_instruction.h>
+#include <tesseract_command_language/plan_instruction.h>
 #include <tesseract_command_language/cartesian_waypoint.h>
 #include <tesseract_command_language/joint_waypoint.h>
 #include <tesseract_command_language/component_info_impl.h>
@@ -221,6 +221,7 @@ bool TrajOptPlannerUniversalConfig::addInitTrajectory(trajopt::ProblemConstructi
 
 trajopt::TermInfo::Ptr createCartesianWaypoint(const CartesianWaypoint* c_wp,
                                                int index,
+                                               std::string working_frame,
                                                Eigen::Isometry3d tcp,
                                                std::string link,
                                                trajopt::TermType type)
@@ -234,8 +235,9 @@ trajopt::TermInfo::Ptr createCartesianWaypoint(const CartesianWaypoint* c_wp,
 
   pose_info->timestep = index;
   pose_info->xyz = c_wp->translation();
-  pose_info->wxyz = c_wp->linear();
-  pose_info->target = c_wp->getParentLinkName();
+  Eigen::Quaterniond q(c_wp->linear());
+  pose_info->wxyz = Eigen::Vector4d(q.w(), q.x(), q.y(), q.z());
+  pose_info->target = working_frame;
 
 //              const Eigen::VectorXd& coeffs = waypoint->getCoefficients();
   Eigen::VectorXd coeffs = Eigen::VectorXd::Ones(6);
@@ -249,6 +251,8 @@ trajopt::TermInfo::Ptr createCartesianWaypoint(const CartesianWaypoint* c_wp,
 void createCartesianComponents(tesseract_motion_planners::WaypointTermInfo& term_info,
                                const CartesianWaypoint* c_wp,
                                int index,
+                               std::string working_frame,
+                               Eigen::Isometry3d tcp,
                                const std::vector<ComponentInfo>& components,
                                std::string link,
                                trajopt::TermType type)
@@ -260,12 +264,12 @@ void createCartesianComponents(tesseract_motion_planners::WaypointTermInfo& term
     {
       case static_cast<int>(ComponentTypes::FIXED):
       {
-        info = createCartesianWaypoint(c_wp, index, c_wp->getTCP(), link, trajopt::TT_COST);
+        info = createCartesianWaypoint(c_wp, index, working_frame, tcp, link, trajopt::TT_COST);
         break;
       }
       case static_cast<int>(ComponentTypes::CARTESIAN_X_TOL):
       {
-        info = createCartesianWaypoint(c_wp, index, c_wp->getTCP(), link, trajopt::TT_COST);
+        info = createCartesianWaypoint(c_wp, index, working_frame, tcp, link, trajopt::TT_COST);
         break;
       }
       default:
@@ -358,7 +362,7 @@ void createCompositeComponents(trajopt::ProblemConstructionInfo &pci,
         if (vs->coeff.size() == 0)
           info = tesseract_motion_planners::createSmoothVelocityTermInfo(pci.basic_info.n_steps, static_cast<int>(pci.kin->numJoints()));
         else if (vs->coeff.size() == 1)
-          info = tesseract_motion_planners::createSmoothVelocityTermInf(pci.basic_info.n_steps, static_cast<int>(pci.kin->numJoints()), vs->coeff(0));
+          info = tesseract_motion_planners::createSmoothVelocityTermInfo(pci.basic_info.n_steps, static_cast<int>(pci.kin->numJoints()), vs->coeff(0));
         else
           info = tesseract_motion_planners::createSmoothVelocityTermInfo(pci.basic_info.n_steps, vs->coeff);
         break;
@@ -408,14 +412,14 @@ void TrajOptPlannerUniversalConfig::addInstructions(trajopt::ProblemConstruction
                                                     std::vector<int> &fixed_steps) const
 {
   // Check and make sure it does not contain any composite instruction
-  const MoveInstruction* start_instruction {nullptr};
+  const PlanInstruction* start_instruction {nullptr};
   for (const auto& instruction : instructions)
   {
     if (instruction.isComposite())
       throw std::runtime_error("Trajopt planner does not support child composite instructions.");
 
-    if (start_instruction == nullptr && instruction.isMove())
-      start_instruction = instruction.cast_const<MoveInstruction>();
+    if (start_instruction == nullptr && instruction.isPlan())
+      start_instruction = instruction.cast_const<PlanInstruction>();
   }
 
   // Get kinematics information
@@ -425,46 +429,48 @@ void TrajOptPlannerUniversalConfig::addInstructions(trajopt::ProblemConstruction
   const std::vector<std::string>& adjacency_links = map.getActiveLinkNames();
 
   // Transform move instructions into trajopt cost and constraints
-  const MoveInstruction* prev_move_instruction {nullptr};
+  const PlanInstruction* prev_plan_instruction {nullptr};
   int index = 0;
   for (const auto& instruction : instructions)
   {
-    if (instruction.isMove())
+    if (instruction.isPlan())
     {
-      if (instruction.getType() == static_cast<int>(InstructionType::MOVE_INSTRUCTION))
+      if (instruction.getType() == static_cast<int>(InstructionType::PLAN_INSTRUCTION))
       {
-        const auto* move_instruction = instruction.cast_const<MoveInstruction>();
-        const Waypoint& wp = move_instruction->getWaypoint();
+        const auto* plan_instruction = instruction.cast_const<PlanInstruction>();
+        const Waypoint& wp = plan_instruction->getWaypoint();
+        const std::string& working_frame = plan_instruction->getWorkingFrame();
+        const Eigen::Isometry3d& tcp = plan_instruction->getTCP();
 
         if (wp.getType() == static_cast<int>(WaypointType::CARTESIAN_WAYPOINT))
         {
           const CartesianWaypoint* c_wp = wp.cast_const<CartesianWaypoint>();
 
           // If nullptr this this is the start position
-          if (prev_move_instruction == nullptr)
+          if (prev_plan_instruction == nullptr)
           {
             tesseract_motion_planners::WaypointTermInfo term_info;
-            createCartesianComponents(term_info, c_wp, index, move_instruction->getCosts(), link, trajopt::TT_COST);
-            createCartesianComponents(term_info, c_wp, index, move_instruction->getConstraints(), link, trajopt::TT_CNT);
+            createCartesianComponents(term_info, c_wp, index, working_frame, tcp, plan_instruction->getCosts(), link, trajopt::TT_COST);
+            createCartesianComponents(term_info, c_wp, index, working_frame, tcp, plan_instruction->getConstraints(), link, trajopt::TT_CNT);
 
             /** @todo Add createDynamicCartesianWaypointTermInfo */
             /* Check if this cartesian waypoint is dynamic
              * (i.e. defined relative to a frame that will move with the kinematic chain)
              */
-            auto it = std::find(adjacency_links.begin(), adjacency_links.end(), c_wp->getParentLinkName());
+            auto it = std::find(adjacency_links.begin(), adjacency_links.end(), working_frame);
             if (it != adjacency_links.end())
               throw std::runtime_error("Dynamic cartesian waypoint is currently not supported!");
 
-            prev_move_instruction = move_instruction;
+            prev_plan_instruction = plan_instruction;
           }
           else
           {
-            if (move_instruction->isLinearMove())
+            if (plan_instruction->isLinear())
             {
               /** @todo Interpolate cartesian */
               /** @todo Interpolate seed trajectory if exist */
             }
-            else if (move_instruction->isFreespaceMove())
+            else if (plan_instruction->isFreespace())
             {
               /** @todo Interpolate seed trajectory if exist, if not use stationary state. */
             }
@@ -475,14 +481,14 @@ void TrajOptPlannerUniversalConfig::addInstructions(trajopt::ProblemConstruction
 
             // Since we are currently not interpolating we will just add the provided waypoint
             tesseract_motion_planners::WaypointTermInfo term_info;
-            createCartesianComponents(term_info, c_wp, index, move_instruction->getCosts(), link, trajopt::TT_COST);
-            createCartesianComponents(term_info, c_wp, index, move_instruction->getConstraints(), link, trajopt::TT_CNT);
+            createCartesianComponents(term_info, c_wp, index, working_frame, tcp, plan_instruction->getCosts(), link, trajopt::TT_COST);
+            createCartesianComponents(term_info, c_wp, index, working_frame, tcp, plan_instruction->getConstraints(), link, trajopt::TT_CNT);
 
             /** @todo Add createDynamicCartesianWaypointTermInfo */
             /* Check if this cartesian waypoint is dynamic
              * (i.e. defined relative to a frame that will move with the kinematic chain)
              */
-            auto it = std::find(adjacency_links.begin(), adjacency_links.end(), c_wp->getParentLinkName());
+            auto it = std::find(adjacency_links.begin(), adjacency_links.end(), working_frame);
             if (it != adjacency_links.end())
               throw std::runtime_error("Dynamic cartesian waypoint is currently not supported!");
           }
@@ -492,22 +498,22 @@ void TrajOptPlannerUniversalConfig::addInstructions(trajopt::ProblemConstruction
           const JointWaypoint* j_wp = wp.cast_const<JointWaypoint>();
 
           // If nullptr this this is the start position
-          if (prev_move_instruction == nullptr)
+          if (prev_plan_instruction == nullptr)
           {
             tesseract_motion_planners::WaypointTermInfo term_info;
-            createJointComponents(term_info, j_wp, index, move_instruction->getCosts(), link, trajopt::TT_COST);
-            createJointComponents(term_info, j_wp, index, move_instruction->getConstraints(), link, trajopt::TT_CNT);
+            createJointComponents(term_info, j_wp, index, plan_instruction->getCosts(), link, trajopt::TT_COST);
+            createJointComponents(term_info, j_wp, index, plan_instruction->getConstraints(), link, trajopt::TT_CNT);
 
-            prev_move_instruction = move_instruction;
+            prev_plan_instruction = plan_instruction;
           }
           else
           {
-            if (move_instruction->isLinearMove())
+            if (plan_instruction->isLinear())
             {
               /** @todo Interpolate cartesian */
               /** @todo Interpolate seed trajectory if exist */
             }
-            else if (move_instruction->isFreespaceMove())
+            else if (plan_instruction->isFreespace())
             {
               /** @todo Interpolate seed trajectory if exist, if not use stationary state. */
             }
@@ -518,15 +524,15 @@ void TrajOptPlannerUniversalConfig::addInstructions(trajopt::ProblemConstruction
 
             // Since we are currently not interpolating we will just add the provided waypoint
             tesseract_motion_planners::WaypointTermInfo term_info;
-            createJointComponents(term_info, j_wp, index, move_instruction->getCosts(), link, trajopt::TT_COST);
-            createJointComponents(term_info, j_wp, index, move_instruction->getConstraints(), link, trajopt::TT_CNT);
+            createJointComponents(term_info, j_wp, index, plan_instruction->getCosts(), link, trajopt::TT_COST);
+            createJointComponents(term_info, j_wp, index, plan_instruction->getConstraints(), link, trajopt::TT_CNT);
 
             /* Update the first and last step for the costs
              * Certain costs (collision checking and configuration) should not be applied to start and end states
              * that are incapable of changing (i.e. joint positions). Therefore, the first and last indices of these
              * costs (which equal 0 and num_steps-1 by default) should be changed to exclude those states
              */
-            if (!move_instruction->getConstraints().empty())
+            if (!plan_instruction->getConstraints().empty())
               fixed_steps.push_back(index);
           }
         }
@@ -534,7 +540,7 @@ void TrajOptPlannerUniversalConfig::addInstructions(trajopt::ProblemConstruction
         {
           throw std::runtime_error("Trajopt planner does not support waypoint type " + std::to_string(wp.getType()));
         }
-        prev_move_instruction = move_instruction;
+        prev_plan_instruction = plan_instruction;
       }
       ++index;
     }

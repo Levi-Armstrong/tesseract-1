@@ -39,6 +39,8 @@ public:
 
   bool isComposite() const;
 
+  bool isPlan() const;
+
   bool isMove() const;
 
   void print() const;

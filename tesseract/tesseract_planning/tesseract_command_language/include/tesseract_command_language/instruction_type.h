@@ -6,6 +6,9 @@ namespace tesseract_planning
 
 enum class InstructionType : int
 {
+  //Everything before must be a motion plan Instruction
+  PLAN_INSTRUCTION,
+
   //Everything before must be a motion Instruction
   MOVE_INSTRUCTION,
 
@@ -55,7 +58,12 @@ inline bool isCompositeInstruction(int type)
 
 inline bool isMoveInstruction(int type)
 {
-  return (type <= static_cast<int>(InstructionType::MOVE_INSTRUCTION));
+  return (type <= static_cast<int>(InstructionType::MOVE_INSTRUCTION) && type > static_cast<int>(InstructionType::PLAN_INSTRUCTION));
+}
+
+inline bool isPlanInstruction(int type)
+{
+  return (type <= static_cast<int>(InstructionType::PLAN_INSTRUCTION));
 }
 
 }

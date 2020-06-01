@@ -5,7 +5,7 @@
 #include <tesseract_command_language/joint_waypoint.h>
 #include <tesseract_command_language/cartesian_waypoint.h>
 #include <tesseract_command_language/composite_instruction.h>
-#include <tesseract_command_language/move_instruction.h>
+#include <tesseract_command_language/plan_instruction.h>
 #include <tesseract_command_language/component_info_impl.h>
 
 int main (int argc, char *argv[])
@@ -27,68 +27,68 @@ int main (int argc, char *argv[])
   const CartesianWaypoint* cast_test2 = wp2.cast_const<CartesianWaypoint>();
 
   // Define raster move instruction
-  MoveInstruction move_c1(wp3, MoveInstructionType::LINEAR);
-  move_c1.addConstraint(FixedComponent());
+  PlanInstruction plan_c1(wp3, PlanInstructionType::LINEAR);
+  plan_c1.addConstraint(FixedComponent());
 
-  MoveInstruction move_c2(wp4, MoveInstructionType::LINEAR);
-  move_c2.addConstraint(FixedComponent());
+  PlanInstruction plan_c2(wp4, PlanInstructionType::LINEAR);
+  plan_c2.addConstraint(FixedComponent());
 
-  MoveInstruction move_c3(wp5, MoveInstructionType::LINEAR);
-  move_c3.addConstraint(FixedComponent());
+  PlanInstruction plan_c3(wp5, PlanInstructionType::LINEAR);
+  plan_c3.addConstraint(FixedComponent());
 
-  MoveInstruction move_c4(wp6, MoveInstructionType::LINEAR);
-  move_c4.addConstraint(FixedComponent());
+  PlanInstruction plan_c4(wp6, PlanInstructionType::LINEAR);
+  plan_c4.addConstraint(FixedComponent());
 
-  MoveInstruction move_c5(wp7, MoveInstructionType::LINEAR);
-  move_c5.addConstraint(FixedComponent());
+  PlanInstruction plan_c5(wp7, PlanInstructionType::LINEAR);
+  plan_c5.addConstraint(FixedComponent());
 
   // Create a program
   CompositeInstruction program;
 
-  MoveInstruction move_f0(wp1, MoveInstructionType::FREESPACE);
-  move_f0.addConstraint(FixedComponent());
-  program.push_back(move_f0);
+  PlanInstruction plan_f0(wp1, PlanInstructionType::FREESPACE);
+  plan_f0.addConstraint(FixedComponent());
+  program.push_back(plan_f0);
 
-  MoveInstruction move_f1(wp2, MoveInstructionType::FREESPACE);
-  move_f1.addConstraint(FixedComponent());
+  PlanInstruction plan_f1(wp2, PlanInstructionType::FREESPACE);
+  plan_f1.addConstraint(FixedComponent());
 
   CompositeInstruction raster1;
-  raster1.push_back(move_f1);
-  raster1.push_back(move_c1);
-  raster1.push_back(move_c2);
-  raster1.push_back(move_c3);
-  raster1.push_back(move_c4);
-  raster1.push_back(move_c5);
+  raster1.push_back(plan_f1);
+  raster1.push_back(plan_c1);
+  raster1.push_back(plan_c2);
+  raster1.push_back(plan_c3);
+  raster1.push_back(plan_c4);
+  raster1.push_back(plan_c5);
   raster1.addCost(VelocitySmoothingComponent());
   program.push_back(raster1);
 
-  MoveInstruction move_f2(wp2, MoveInstructionType::FREESPACE);
-  move_f1.addConstraint(FixedComponent());
+  PlanInstruction plan_f2(wp2, PlanInstructionType::FREESPACE);
+  plan_f1.addConstraint(FixedComponent());
 
   CompositeInstruction raster2;
-  raster2.push_back(move_f2);
-  raster2.push_back(move_c1);
-  raster2.push_back(move_c2);
-  raster2.push_back(move_c3);
-  raster2.push_back(move_c4);
-  raster2.push_back(move_c5);
+  raster2.push_back(plan_f2);
+  raster2.push_back(plan_c1);
+  raster2.push_back(plan_c2);
+  raster2.push_back(plan_c3);
+  raster2.push_back(plan_c4);
+  raster2.push_back(plan_c5);
   raster2.addCost(VelocitySmoothingComponent());
   program.push_back(raster2);
 
-  MoveInstruction move_f3(wp2, MoveInstructionType::FREESPACE);
-  move_f1.addConstraint(FixedComponent());
+  PlanInstruction plan_f3(wp2, PlanInstructionType::FREESPACE);
+  plan_f1.addConstraint(FixedComponent());
 
   CompositeInstruction raster3;
-  raster3.push_back(move_f3);
-  raster3.push_back(move_c1);
-  raster3.push_back(move_c2);
-  raster3.push_back(move_c3);
-  raster3.push_back(move_c4);
-  raster3.push_back(move_c5);
+  raster3.push_back(plan_f3);
+  raster3.push_back(plan_c1);
+  raster3.push_back(plan_c2);
+  raster3.push_back(plan_c3);
+  raster3.push_back(plan_c4);
+  raster3.push_back(plan_c5);
   raster3.addCost(VelocitySmoothingComponent());
   program.push_back(raster3);
 
-  program.push_back(move_f3);
+  program.push_back(plan_f3);
 
 //  struct ProgramMetaData
 //  {

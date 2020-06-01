@@ -34,6 +34,8 @@ void CompositeInstruction::setDescription(const std::string& description) { desc
 
 bool CompositeInstruction::isComposite() const { return true; }
 
+bool CompositeInstruction::isPlan() const { return false; }
+
 bool CompositeInstruction::isMove() const { return false; }
 
 void CompositeInstruction::print() const  {}

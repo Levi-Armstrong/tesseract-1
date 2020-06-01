@@ -60,21 +60,18 @@ struct TrajOptPlannerUniversalConfig : public tesseract_motion_planners::TrajOpt
    */
   tesseract_planning::CompositeInstruction instructions;
 
-  /** @brief For a linear move instruction this is used to determine the number of states to be generated */
-  double longest_cartesian_translation_segment {0.05};
+  /**
+   * @brief This should be a one to one match with the instructions where the PlanInstruction is replaced with a
+   * composite instruction of MoveInstructions.
+   */
+  tesseract_planning::CompositeInstruction seed;
 
-  /** @brief For a linear move instruction this is used to determine the number of states to be generated */
-  double longest_cartesian_rotation_segment {0.05};
+//  /** @brief Selects the type of initialization used for raster path. If GIVEN_TRAJ, then the seed_trajectory_ must be
+//   * set */
+//  trajopt::InitInfo::Type init_type = trajopt::InitInfo::STATIONARY;
 
-  /** @brief For a joint move instruction this the number of states used */
-  int joint_move_num_states {20};
-
-  /** @brief Selects the type of initialization used for raster path. If GIVEN_TRAJ, then the seed_trajectory_ must be
-   * set */
-  trajopt::InitInfo::Type init_type = trajopt::InitInfo::STATIONARY;
-
-  /** @brief The trajectory used as the optimization seed when init_type_ is set to GIVEN_TRAJ */
-  trajopt::TrajArray seed_trajectory;
+//  /** @brief The trajectory used as the optimization seed when init_type_ is set to GIVEN_TRAJ */
+//  trajopt::TrajArray seed_trajectory;
 
 protected:
   bool checkUserInput() const;
