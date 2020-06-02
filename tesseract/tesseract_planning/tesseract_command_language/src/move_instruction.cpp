@@ -35,6 +35,8 @@ void MoveInstruction::setDescription(const std::string& description) { descripti
 
 bool MoveInstruction::isComposite() const { return false; }
 
+bool MoveInstruction::isPlan() const { return false; }
+
 bool MoveInstruction::isMove() const { return true; }
 
 void MoveInstruction::print() const { }

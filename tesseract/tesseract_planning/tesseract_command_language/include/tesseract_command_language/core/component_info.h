@@ -19,6 +19,8 @@ namespace tesseract_planning
 
     virtual int getType() const = 0;
 
+    virtual const std::string& getName() const = 0;
+
     virtual bool isCompositeInstructionSupported() const = 0;
 
     // This is not required for user defined implementation
@@ -48,6 +50,8 @@ namespace tesseract_planning
     }
 
     int getType() const override { return component_info_.getType(); }
+
+    const std::string& getName() const { return component_info_.getName(); }
 
     bool isCompositeInstructionSupported() const override { return component_info_.isCompositeInstructionSupported(); }
 
@@ -104,6 +108,8 @@ namespace tesseract_planning
     }
 
     int getType() const { return component_info_->getType(); }
+
+    const std::string& getName() const { return component_info_->getName(); }
 
     bool isCompositeInstructionSupported() const { return component_info_->isCompositeInstructionSupported(); }
 

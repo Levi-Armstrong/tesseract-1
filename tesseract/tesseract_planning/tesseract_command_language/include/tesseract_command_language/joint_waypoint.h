@@ -5,6 +5,7 @@
 TESSERACT_COMMON_IGNORE_WARNINGS_PUSH
 #include <Eigen/Core>
 #include <memory>
+#include <vector>
 TESSERACT_COMMON_IGNORE_WARNINGS_POP
 
 #include <tesseract_command_language/waypoint_type.h>
@@ -32,6 +33,8 @@ public:
   }
 
   int getType() const { return static_cast<int>(WaypointType::JOINT_WAYPOINT); }
+
+  std::vector<std::string> joint_names;
 };
 }
 
