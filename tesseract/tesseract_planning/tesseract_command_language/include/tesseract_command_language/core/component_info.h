@@ -19,6 +19,9 @@ namespace tesseract_planning
 
     virtual int getType() const = 0;
 
+    /** @brief This is to allow a mask for different planners */
+    virtual int getMask() const = 0;
+
     virtual const std::string& getName() const = 0;
 
     virtual bool isCompositeInstructionSupported() const = 0;
@@ -51,7 +54,9 @@ namespace tesseract_planning
 
     int getType() const override { return component_info_.getType(); }
 
-    const std::string& getName() const { return component_info_.getName(); }
+    int getMask() const override { return component_info_.getMask(); }
+
+    const std::string& getName() const override { return component_info_.getName(); }
 
     bool isCompositeInstructionSupported() const override { return component_info_.isCompositeInstructionSupported(); }
 
@@ -108,6 +113,8 @@ namespace tesseract_planning
     }
 
     int getType() const { return component_info_->getType(); }
+
+    int getMask() const { return component_info_->getMask(); }
 
     const std::string& getName() const { return component_info_->getName(); }
 

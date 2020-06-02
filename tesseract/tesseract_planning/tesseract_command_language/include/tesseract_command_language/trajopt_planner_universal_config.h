@@ -66,26 +66,9 @@ struct TrajOptPlannerUniversalConfig : public tesseract_motion_planners::TrajOpt
    */
   tesseract_planning::CompositeInstruction seed;
 
-//  /** @brief Selects the type of initialization used for raster path. If GIVEN_TRAJ, then the seed_trajectory_ must be
-//   * set */
-//  trajopt::InitInfo::Type init_type = trajopt::InitInfo::STATIONARY;
-
-//  /** @brief The trajectory used as the optimization seed when init_type_ is set to GIVEN_TRAJ */
-//  trajopt::TrajArray seed_trajectory;
-
 protected:
   bool checkUserInput() const;
-  bool addBasicInfo(trajopt::ProblemConstructionInfo& pci) const;
-  bool addInitTrajectory(trajopt::ProblemConstructionInfo& pci) const;
   void addInstructions(trajopt::ProblemConstructionInfo& pci, std::vector<int>& fixed_steps) const;
-  void addKinematicConfiguration(trajopt::ProblemConstructionInfo& pci, const std::vector<int>& fixed_steps) const;
-  void addCollisionCost(trajopt::ProblemConstructionInfo& pci, const std::vector<int>& fixed_steps) const;
-  void addCollisionConstraint(trajopt::ProblemConstructionInfo& pci, const std::vector<int>& fixed_steps) const;
-  void addVelocitySmoothing(trajopt::ProblemConstructionInfo& pci, const std::vector<int>& fixed_steps) const;
-  void addAccelerationSmoothing(trajopt::ProblemConstructionInfo& pci, const std::vector<int>& fixed_steps) const;
-  void addJerkSmoothing(trajopt::ProblemConstructionInfo& pci, const std::vector<int>& fixed_steps) const;
-  void addConstraintErrorFunctions(trajopt::ProblemConstructionInfo& pci, const std::vector<int>& fixed_steps) const;
-  void addAvoidSingularity(trajopt::ProblemConstructionInfo& pci, const std::vector<int>& fixed_steps) const;
 
   std::vector<std::pair<long, long>> instruction_to_trajectory_map_;
 };

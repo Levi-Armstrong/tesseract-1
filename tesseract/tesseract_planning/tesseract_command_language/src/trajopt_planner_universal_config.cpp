@@ -157,54 +157,6 @@ bool TrajOptPlannerUniversalConfig::checkUserInput() const
   return true;
 }
 
-bool TrajOptPlannerUniversalConfig::addBasicInfo(trajopt::ProblemConstructionInfo& pci) const
-{
-
-  return true;
-}
-
-bool TrajOptPlannerUniversalConfig::addInitTrajectory(trajopt::ProblemConstructionInfo& pci) const
-{
-//  // Populate Init Info
-//  pci.init_info.type = init_type;
-//  if (init_type == trajopt::InitInfo::GIVEN_TRAJ)
-//  {
-//    pci.init_info.data = seed_trajectory;
-
-//    // Add check to make sure if starts with joint waypoint that the seed trajectory also starts at this waypoint
-//    // If it does not start this causes issues in trajopt and it will never converge.
-//    if (isJointWaypointType(target_waypoints.front()->getType()))
-//    {
-//      const auto jwp = std::static_pointer_cast<JointWaypoint>(target_waypoints.front());
-//      const Eigen::VectorXd position = jwp->getPositions(pci.kin->getJointNames());
-//      for (int i = 0; i < static_cast<int>(pci.kin->numJoints()); ++i)
-//      {
-//        if (std::abs(position[i] - seed_trajectory(0, i)) > static_cast<double>(std::numeric_limits<float>::epsilon()))
-//        {
-//          std::stringstream ss;
-//          ss << "Seed trajectory start position does not match starting joint waypoint position!";
-//          ss << "    waypoint: " << position.transpose().matrix() << std::endl;
-//          ss << "  seed start: " << seed_trajectory.row(0).transpose().matrix() << std::endl;
-//          CONSOLE_BRIDGE_logError(ss.str().c_str());
-//          return false;
-//        }
-//      }
-//    }
-//  }
-//  if (init_type == trajopt::InitInfo::JOINT_INTERPOLATED)
-//  {
-//    if (seed_trajectory.size() != pci.kin->numJoints())
-//    {
-//      CONSOLE_BRIDGE_logError("Init type is set to JOINT_INTERPOLATED but seed_trajectory.size() != "
-//                              "pci.kin->numJoints().");
-//      return false;
-//    }
-//    pci.init_info.data = seed_trajectory;
-//  }
-
-//  return true;
-}
-
 trajopt::TermInfo::Ptr createNearJointStateTermInfo(const tesseract_planning::NearJointStateComponent& component,
                                                     const std::vector<std::string>& joint_names,
                                                     int index,
@@ -366,6 +318,27 @@ void createJointComponents(trajopt::ProblemConstructionInfo &pci,
   }
 }
 
+trajopt::TermInfo::Ptr createCollisionComponent(trajopt::ProblemConstructionInfo &pci,
+                                                const tesseract_planning::AvoidCollisionComponent& component,
+                                                int first_index,
+                                                int last_index,
+                                                trajopt::TermType type)
+{
+  int n_steps = (last_index - first_index) + 1;
+  std::shared_ptr<trajopt::CollisionTermInfo> collision = std::make_shared<trajopt::CollisionTermInfo>();
+  collision->name = "collision";
+  collision->term_type = type;
+  collision->evaluator_type = component.evaluator_type;
+  collision->use_weighted_sum = component.use_weighted_sum;
+  collision->first_step = first_index;
+  collision->last_step = last_index;
+  collision->contact_test_type = component.contact_test_type;
+  collision->longest_valid_segment_length = component.longest_valid_segment_length;
+  collision->info = trajopt::createSafetyMarginDataVector(n_steps, component.safety_margin, component.coeff);
+  collision->safety_margin_buffer = component.safety_margin_buffer;
+  return collision;
+}
+
 void createCompositeComponents(trajopt::ProblemConstructionInfo &pci,
                                const std::vector<ComponentInfo>& components,
                                trajopt::TermType type)
@@ -377,36 +350,43 @@ void createCompositeComponents(trajopt::ProblemConstructionInfo &pci,
     {
       case static_cast<int>(ComponentTypes::VELOCITY_SMOOTHING):
       {
-        const auto* vs = component.cast_const<VelocitySmoothingComponent>();
-        if (vs->coeff.size() == 0)
+        const auto* c = component.cast_const<VelocitySmoothingComponent>();
+        if (c->coeff.size() == 0)
           info = tesseract_motion_planners::createSmoothVelocityTermInfo(pci.basic_info.n_steps, static_cast<int>(pci.kin->numJoints()));
-        else if (vs->coeff.size() == 1)
-          info = tesseract_motion_planners::createSmoothVelocityTermInfo(pci.basic_info.n_steps, static_cast<int>(pci.kin->numJoints()), vs->coeff(0));
+        else if (c->coeff.size() == 1)
+          info = tesseract_motion_planners::createSmoothVelocityTermInfo(pci.basic_info.n_steps, static_cast<int>(pci.kin->numJoints()), c->coeff(0));
         else
-          info = tesseract_motion_planners::createSmoothVelocityTermInfo(pci.basic_info.n_steps, vs->coeff);
+          info = tesseract_motion_planners::createSmoothVelocityTermInfo(pci.basic_info.n_steps, c->coeff);
         break;
       }
       case static_cast<int>(ComponentTypes::ACCELERATION_SMOOTHING):
       {
-        const auto* vs = component.cast_const<AccelerationSmoothingComponent>();
-        if (vs->coeff.size() == 0)
+        const auto* c = component.cast_const<AccelerationSmoothingComponent>();
+        if (c->coeff.size() == 0)
           info = tesseract_motion_planners::createSmoothAccelerationTermInfo(pci.basic_info.n_steps, static_cast<int>(pci.kin->numJoints()));
-        else if (vs->coeff.size() == 1)
-          info = tesseract_motion_planners::createSmoothAccelerationTermInfo(pci.basic_info.n_steps, static_cast<int>(pci.kin->numJoints()), vs->coeff(0));
+        else if (c->coeff.size() == 1)
+          info = tesseract_motion_planners::createSmoothAccelerationTermInfo(pci.basic_info.n_steps, static_cast<int>(pci.kin->numJoints()), c->coeff(0));
         else
-          info = tesseract_motion_planners::createSmoothAccelerationTermInfo(pci.basic_info.n_steps, vs->coeff);
+          info = tesseract_motion_planners::createSmoothAccelerationTermInfo(pci.basic_info.n_steps, c->coeff);
 
         break;
       }
       case static_cast<int>(ComponentTypes::JERK_SMOOTHING):
       {
-        const auto* vs = component.cast_const<AccelerationSmoothingComponent>();
-        if (vs->coeff.size() == 0)
+        const auto* c = component.cast_const<AccelerationSmoothingComponent>();
+        if (c->coeff.size() == 0)
           info = tesseract_motion_planners::createSmoothJerkTermInfo(pci.basic_info.n_steps, static_cast<int>(pci.kin->numJoints()));
-        else if (vs->coeff.size() == 1)
-          info = tesseract_motion_planners::createSmoothJerkTermInfo(pci.basic_info.n_steps, static_cast<int>(pci.kin->numJoints()), vs->coeff(0));
+        else if (c->coeff.size() == 1)
+          info = tesseract_motion_planners::createSmoothJerkTermInfo(pci.basic_info.n_steps, static_cast<int>(pci.kin->numJoints()), c->coeff(0));
         else
-          info = tesseract_motion_planners::createSmoothJerkTermInfo(pci.basic_info.n_steps, vs->coeff);
+          info = tesseract_motion_planners::createSmoothJerkTermInfo(pci.basic_info.n_steps, c->coeff);
+
+        break;
+      }
+      case static_cast<int>(ComponentTypes::AVOID_COLLISION):
+      {
+        const auto* c = component.cast_const<AvoidCollisionComponent>();
+        info = createCollisionComponent(pci, *c, 0, pci.basic_info.n_steps - 1, type);
 
         break;
       }
@@ -425,7 +405,6 @@ void createCompositeComponents(trajopt::ProblemConstructionInfo &pci,
       throw std::runtime_error("Invalid trajopt term type!");
   }
 }
-
 
 void TrajOptPlannerUniversalConfig::addInstructions(trajopt::ProblemConstructionInfo &pci,
                                                     std::vector<int> &fixed_steps) const
@@ -608,9 +587,9 @@ void TrajOptPlannerUniversalConfig::addInstructions(trajopt::ProblemConstruction
   createCompositeComponents(pci, instructions.getConstraints(), trajopt::TT_CNT);
 }
 
-void TrajOptPlannerUniversalConfig::addCollisionCost(trajopt::ProblemConstructionInfo& pci,
-                                                   const std::vector<int>& fixed_steps) const
-{
+//void TrajOptPlannerUniversalConfig::addCollisionCost(trajopt::ProblemConstructionInfo& pci,
+//                                                   const std::vector<int>& fixed_steps) const
+//{
 //  // Calculate longest valid segment length
 //  const Eigen::MatrixX2d& limits = pci.kin->getLimits();
 //  double length = 0;
@@ -656,11 +635,11 @@ void TrajOptPlannerUniversalConfig::addCollisionCost(trajopt::ProblemConstructio
 //  ct->fixed_steps = fixed_steps;
 
 //  pci.cost_infos.push_back(ct);
-}
+//}
 
-void TrajOptPlannerUniversalConfig::addCollisionConstraint(trajopt::ProblemConstructionInfo& pci,
-                                                         const std::vector<int>& fixed_steps) const
-{
+//void TrajOptPlannerUniversalConfig::addCollisionConstraint(trajopt::ProblemConstructionInfo& pci,
+//                                                         const std::vector<int>& fixed_steps) const
+//{
 //  // Calculate longest valid segment length
 //  const Eigen::MatrixX2d& limits = pci.kin->getLimits();
 //  double length = 0;
@@ -706,11 +685,11 @@ void TrajOptPlannerUniversalConfig::addCollisionConstraint(trajopt::ProblemConst
 //  ct->fixed_steps = fixed_steps;
 
 //  pci.cnt_infos.push_back(ct);
-}
+//}
 
-void TrajOptPlannerUniversalConfig::addConstraintErrorFunctions(trajopt::ProblemConstructionInfo& pci,
-                                                              const std::vector<int>& fixed_steps) const
-{
+//void TrajOptPlannerUniversalConfig::addConstraintErrorFunctions(trajopt::ProblemConstructionInfo& pci,
+//                                                              const std::vector<int>& fixed_steps) const
+//{
 //  for (std::size_t i = 0; i < constraint_error_functions.size(); ++i)
 //  {
 //    auto& c = constraint_error_functions[i];
@@ -728,13 +707,13 @@ void TrajOptPlannerUniversalConfig::addConstraintErrorFunctions(trajopt::Problem
 
 //    pci.cnt_infos.push_back(ef);
 //  }
-}
+//}
 
-void TrajOptPlannerUniversalConfig::addAvoidSingularity(trajopt::ProblemConstructionInfo& pci,
-                                                      const std::vector<int>& /*fixed_steps*/) const
-{
+//void TrajOptPlannerUniversalConfig::addAvoidSingularity(trajopt::ProblemConstructionInfo& pci,
+//                                                      const std::vector<int>& /*fixed_steps*/) const
+//{
 //  trajopt::TermInfo::Ptr ti = createAvoidSingularityTermInfo(pci.basic_info.n_steps, link, avoid_singularity_coeff);
 //  pci.cost_infos.push_back(ti);
-}
+//}
 
 }  // namespace tesseract_motion_planners

@@ -3,6 +3,9 @@
 
 #include <Eigen/Geometry>
 #include <vector>
+#include <tesseract_collision/core/types.h>
+#include <trajopt/utils.hpp>
+#include <trajopt/problem_description.hpp>
 
 namespace tesseract_planning
 {
@@ -24,12 +27,14 @@ enum class ComponentTypes : int
   VELOCITY_SMOOTHING,
   ACCELERATION_SMOOTHING,
   JERK_SMOOTHING,
+  AVOID_COLLISION
 };
 
 class FixedComponent
 {
 public:
   int getType() const { return static_cast<int>(ComponentTypes::FIXED); }
+  int getMask() const { return mask; }
   const std::string& getName() const { return name; }
   bool isCompositeInstructionSupported() const { return false; }
 
@@ -38,12 +43,16 @@ public:
 
   /** @brief The name of the component */
   std::string name {"Fixed Component"};
+
+  /** @brief A mask to allow it to only be used for a certain planner */
+  int mask {-1};
 };
 
 class CartesianXTolComponent
 {
 public:
   int getType() const { return static_cast<int>(ComponentTypes::CARTESIAN_X_TOL); }
+  int getMask() const { return mask; }
   const std::string& getName() const { return name; }
   bool isCompositeInstructionSupported() const { return true; }
 
@@ -56,12 +65,16 @@ public:
 
   /** @brief The name of the component */
   std::string name {"Cartesian X Tolerance Component"};
+
+  /** @brief A mask to allow it to only be used for a certain planner */
+  int mask {-1};
 };
 
 class VelocityComponent
 {
 public:
   int getType() const { return static_cast<int>(ComponentTypes::VELOCITY_TOL); }
+  int getMask() const { return mask; }
   const std::string& getName() const { return name; }
   bool isCompositeInstructionSupported() const { return true; }
 
@@ -74,12 +87,16 @@ public:
 
   /** @brief The name of the component */
   std::string name {"Velocity Component"};
+
+  /** @brief A mask to allow it to only be used for a certain planner */
+  int mask {-1};
 };
 
 class VelocitySmoothingComponent
 {
 public:
   int getType() const { return static_cast<int>(ComponentTypes::VELOCITY_SMOOTHING); }
+  int getMask() const { return mask; }
   const std::string& getName() const { return name; }
   bool isCompositeInstructionSupported() const { return true; }
 
@@ -88,12 +105,16 @@ public:
 
   /** @brief The name of the component */
   std::string name {"Velocity Smoothing Component"};
+
+  /** @brief A mask to allow it to only be used for a certain planner */
+  int mask {-1};
 };
 
 class AccelerationSmoothingComponent
 {
 public:
   int getType() const { return static_cast<int>(ComponentTypes::ACCELERATION_SMOOTHING); }
+  int getMask() const { return mask; }
   const std::string& getName() const { return name; }
   bool isCompositeInstructionSupported() const { return true; }
 
@@ -102,12 +123,16 @@ public:
 
   /** @brief The name of the component */
   std::string name {"Acceleration Smoothing Component"};
+
+  /** @brief A mask to allow it to only be used for a certain planner */
+  int mask {-1};
 };
 
 class JerkSmoothingComponent
 {
 public:
   int getType() const { return static_cast<int>(ComponentTypes::JERK_SMOOTHING); }
+  int getMask() const { return mask; }
   const std::string& getName() const { return name; }
   bool isCompositeInstructionSupported() const { return true; }
 
@@ -116,6 +141,9 @@ public:
 
   /** @brief The name of the component */
   std::string name {"Jerk Smoothing Component"};
+
+  /** @brief A mask to allow it to only be used for a certain planner */
+  int mask {-1};
 };
 
 /** @brief This component tells the planner to avoid singularity for a given move instruction */
@@ -123,6 +151,7 @@ class AvoidSingularityComponent
 {
 public:
   int getType() const { return static_cast<int>(ComponentTypes::AVOID_SINGULARITY); }
+  int getMask() const { return mask; }
   const std::string& getName() const { return name; }
   bool isCompositeInstructionSupported() const { return true; }
 
@@ -131,6 +160,9 @@ public:
 
   /** @brief The name of the component */
   std::string name {"Avoid Singularity Component"};
+
+  /** @brief A mask to allow it to only be used for a certain planner */
+  int mask {-1};
 };
 
 /** @brief This component tells the planner to stay near a joint target for a given move instruction  */
@@ -138,6 +170,7 @@ class NearJointStateComponent
 {
 public:
   int getType() const { return static_cast<int>(ComponentTypes::NEAR_JOINT_STATE); }
+  int getMask() const { return mask; }
   const std::string& getName() const { return name; }
   bool isCompositeInstructionSupported() const { return true; }
 
@@ -152,6 +185,57 @@ public:
 
   /** @brief The name of the component */
   std::string name {"Near Joint State Component"};
+
+  /** @brief A mask to allow it to only be used for a certain planner */
+  int mask {-1};
+};
+
+/** @brief This component tells the planner to stay near a joint target for a given move instruction  */
+class AvoidCollisionComponent
+{
+public:
+  int getType() const { return static_cast<int>(ComponentTypes::AVOID_COLLISION); }
+  int getMask() const { return mask; }
+  const std::string& getName() const { return name; }
+  bool isCompositeInstructionSupported() const { return true; }
+
+  /** @brief Indicate the type of collision checking that should be used. */
+  trajopt::CollisionEvaluatorType evaluator_type {trajopt::CollisionEvaluatorType::SINGLE_TIMESTEP};
+
+  /**
+   * @brief Use the weighted sum for each link pair. This reduces the number equations added to the problem
+   * When enable it is good to start with a coefficient of 1 otherwise 20 is a good starting point.
+   */
+  bool use_weighted_sum {false};
+
+  /** @brief Set the resolution at which state validity needs to be verified in order for a motion between two states
+   * to be considered valid. If norm(state1 - state0) > longest_valid_segment_length.
+   *
+   * Note: This gets converted to longest_valid_segment_fraction.
+   *       longest_valid_segment_fraction = longest_valid_segment_length / state_space.getMaximumExtent()
+   */
+  double longest_valid_segment_length {0.5};
+
+  /** @brief Max distance in which collision constraints will be evaluated. */
+  double safety_margin {0.025};
+
+  /** @brief A buffer added to the collision margin distance. Contact results that are within the safety margin buffer
+  distance but greater than the safety margin distance (i.e. close but not in collision) will be evaluated but will not
+  contribute costs to the optimization problem. This helps keep the solution away from collision constraint conditions
+  when the safety margin distance is small.*/
+  double safety_margin_buffer {0.05};
+
+  /** @brief The collision coeff/weight */
+  double coeff {20};
+
+  /** @brief Set the contact test type that should be used. */
+  tesseract_collision::ContactTestType contact_test_type {tesseract_collision::ContactTestType::ALL};
+
+  /** @brief The name of the component */
+  std::string name {"Avoid Collision Component"};
+
+  /** @brief A mask to allow it to only be used for a certain planner */
+  int mask {-1};
 };
 }
 #endif // TESSERACT_COMMAND_LANGUAGE_COMPONENT_INFO_IMPL_H

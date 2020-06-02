@@ -163,6 +163,7 @@ int main (int argc, char *argv[])
   program.addCost(VelocitySmoothingComponent());
   program.addCost(AccelerationSmoothingComponent());
   program.addCost(JerkSmoothingComponent());
+  program.addCost(AvoidCollisionComponent());
 
   auto config = std::make_shared<tesseract_planning::TrajOptPlannerUniversalConfig>(tesseract, "manipulator", "tool0", Eigen::Isometry3d::Identity());
   config->instructions = program;
