@@ -74,7 +74,7 @@ TrajOptPlannerUniversalConfig::TrajOptPlannerUniversalConfig(const tesseract::Te
 {
 }
 
-std::shared_ptr<trajopt::ProblemConstructionInfo> TrajOptPlannerUniversalConfig::generatePCI() const
+std::shared_ptr<trajopt::ProblemConstructionInfo> TrajOptPlannerUniversalConfig::generatePCI()
 {
   if (!checkUserInput())
     return nullptr;
@@ -83,36 +83,8 @@ std::shared_ptr<trajopt::ProblemConstructionInfo> TrajOptPlannerUniversalConfig:
   // -------------------------------------------
   trajopt::ProblemConstructionInfo pci(tesseract);
 
-
-//  if (!addInitTrajectory(pci))
-//    return nullptr;
-
   std::vector<int> fixed_steps;
   addInstructions(pci, fixed_steps);
-
-//  if (collision_constraint_config.enabled)
-//    addCollisionConstraint(pci, fixed_steps);
-
-//  if (collision_cost_config.enabled)
-//    addCollisionCost(pci, fixed_steps);
-
-//  if (smooth_velocities)
-//    addVelocitySmoothing(pci, fixed_steps);
-
-//  if (smooth_accelerations)
-//    addAccelerationSmoothing(pci, fixed_steps);
-
-//  if (smooth_jerks)
-//    addJerkSmoothing(pci, fixed_steps);
-
-//  if (configuration != nullptr)
-//    addKinematicConfiguration(pci, fixed_steps);
-
-//  if (!constraint_error_functions.empty())
-//    addConstraintErrorFunctions(pci, fixed_steps);
-
-//  if (avoid_singularity)
-//    addAvoidSingularity(pci, fixed_steps);
 
   return std::make_shared<trajopt::ProblemConstructionInfo>(pci);
 }
@@ -157,7 +129,7 @@ bool TrajOptPlannerUniversalConfig::checkUserInput() const
   return true;
 }
 
-trajopt::TermInfo::Ptr createNearJointStateTermInfo(const tesseract_planning::NearJointStateComponent& component,
+trajopt::TermInfo::Ptr createNearJointStateTermInfo(const tesseract_planning::NearJointStateComponentInfo& component,
                                                     const std::vector<std::string>& joint_names,
                                                     int index,
                                                     trajopt::TermType type)
@@ -232,13 +204,13 @@ void createCartesianComponents(trajopt::ProblemConstructionInfo &pci,
     {
       case static_cast<int>(ComponentTypes::FIXED):
       {
-        const auto* local = component.cast_const<FixedComponent>();
+        const auto* local = component.cast_const<FixedComponentInfo>();
         info = createCartesianWaypoint(c_wp, index, working_frame, tcp, local->coeff, link, type);
         break;
       }
       case static_cast<int>(ComponentTypes::NEAR_JOINT_STATE):
       {
-        const auto* local = component.cast_const<NearJointStateComponent>();
+        const auto* local = component.cast_const<NearJointStateComponentInfo>();
         info = createNearJointStateTermInfo(*local, pci.kin->getJointNames(), index, type);
         break;
       }
@@ -293,13 +265,13 @@ void createJointComponents(trajopt::ProblemConstructionInfo &pci,
     {
       case static_cast<int>(ComponentTypes::FIXED):
       {
-        const auto* local = component.cast_const<FixedComponent>();
+        const auto* local = component.cast_const<FixedComponentInfo>();
         info = createJointWaypoint(j_wp, index, Eigen::Isometry3d::Identity(), local->coeff, link, type);
         break;
       }
       case static_cast<int>(ComponentTypes::NEAR_JOINT_STATE):
       {
-        const auto* local = component.cast_const<NearJointStateComponent>();
+        const auto* local = component.cast_const<NearJointStateComponentInfo>();
         info = createNearJointStateTermInfo(*local, pci.kin->getJointNames(), index, type);
         break;
       }
@@ -319,7 +291,7 @@ void createJointComponents(trajopt::ProblemConstructionInfo &pci,
 }
 
 trajopt::TermInfo::Ptr createCollisionComponent(trajopt::ProblemConstructionInfo &pci,
-                                                const tesseract_planning::AvoidCollisionComponent& component,
+                                                const tesseract_planning::AvoidCollisionComponentInfo& component,
                                                 int first_index,
                                                 int last_index,
                                                 trajopt::TermType type)
@@ -350,7 +322,7 @@ void createCompositeComponents(trajopt::ProblemConstructionInfo &pci,
     {
       case static_cast<int>(ComponentTypes::VELOCITY_SMOOTHING):
       {
-        const auto* c = component.cast_const<VelocitySmoothingComponent>();
+        const auto* c = component.cast_const<VelocitySmoothingComponentInfo>();
         if (c->coeff.size() == 0)
           info = tesseract_motion_planners::createSmoothVelocityTermInfo(pci.basic_info.n_steps, static_cast<int>(pci.kin->numJoints()));
         else if (c->coeff.size() == 1)
@@ -361,7 +333,7 @@ void createCompositeComponents(trajopt::ProblemConstructionInfo &pci,
       }
       case static_cast<int>(ComponentTypes::ACCELERATION_SMOOTHING):
       {
-        const auto* c = component.cast_const<AccelerationSmoothingComponent>();
+        const auto* c = component.cast_const<AccelerationSmoothingComponentInfo>();
         if (c->coeff.size() == 0)
           info = tesseract_motion_planners::createSmoothAccelerationTermInfo(pci.basic_info.n_steps, static_cast<int>(pci.kin->numJoints()));
         else if (c->coeff.size() == 1)
@@ -373,7 +345,7 @@ void createCompositeComponents(trajopt::ProblemConstructionInfo &pci,
       }
       case static_cast<int>(ComponentTypes::JERK_SMOOTHING):
       {
-        const auto* c = component.cast_const<AccelerationSmoothingComponent>();
+        const auto* c = component.cast_const<AccelerationSmoothingComponentInfo>();
         if (c->coeff.size() == 0)
           info = tesseract_motion_planners::createSmoothJerkTermInfo(pci.basic_info.n_steps, static_cast<int>(pci.kin->numJoints()));
         else if (c->coeff.size() == 1)
@@ -385,7 +357,7 @@ void createCompositeComponents(trajopt::ProblemConstructionInfo &pci,
       }
       case static_cast<int>(ComponentTypes::AVOID_COLLISION):
       {
-        const auto* c = component.cast_const<AvoidCollisionComponent>();
+        const auto* c = component.cast_const<AvoidCollisionComponentInfo>();
         info = createCollisionComponent(pci, *c, 0, pci.basic_info.n_steps - 1, type);
 
         break;
@@ -406,8 +378,24 @@ void createCompositeComponents(trajopt::ProblemConstructionInfo &pci,
   }
 }
 
-void TrajOptPlannerUniversalConfig::addInstructions(trajopt::ProblemConstructionInfo &pci,
-                                                    std::vector<int> &fixed_steps) const
+/** @brief This is used to process the results into the seed trajectory
+ *
+ * This is currently required because the base class is not aware of instruction
+ *
+ */
+void TrajOptPlannerUniversalConfig::processResults(const tesseract_common::JointTrajectory& trajectory)
+{
+  int index = 0;
+  for (const auto& plan_index : plan_instruction_indices_)
+  {
+    assert(seed[plan_index].isComposite());
+    auto* move_instructions = seed[plan_index].cast<CompositeInstruction>();
+    for (auto& instruction : *move_instructions)
+      instruction.cast<MoveInstruction>()->setPosition(trajectory.trajectory.col(index++));
+  }
+}
+
+void TrajOptPlannerUniversalConfig::addInstructions(trajopt::ProblemConstructionInfo &pci, std::vector<int> &fixed_steps)
 {
   // Assign Kinematics object
   pci.kin = pci.getManipulator(manipulator);
@@ -448,6 +436,9 @@ void TrajOptPlannerUniversalConfig::addInstructions(trajopt::ProblemConstruction
     const auto& instruction = instructions[i];
     if (instruction.isPlan())
     {
+      // Save plan index for process trajectory
+      plan_instruction_indices_.push_back(i);
+
       assert(instruction.getType() == static_cast<int>(InstructionType::PLAN_INSTRUCTION));
       const auto* plan_instruction = instruction.cast_const<PlanInstruction>();
       const Waypoint& wp = plan_instruction->getWaypoint();
@@ -485,10 +476,7 @@ void TrajOptPlannerUniversalConfig::addInstructions(trajopt::ProblemConstruction
             // Add seed state
             assert(seed_composite->at(p - 1).isMove());
             const auto* seed_instruction = seed_composite->at(p - 1).cast_const<tesseract_planning::MoveInstruction>();
-
-            assert(isJointWaypoint(seed_instruction->getWaypoint().getType()));
-            const auto* seed_wp = seed_instruction->getWaypoint().cast_const<tesseract_planning::JointWaypoint>();
-            seed_states.push_back(*seed_wp);
+            seed_states.push_back(seed_instruction->getPosition());
 
             ++index;
           }
@@ -509,10 +497,7 @@ void TrajOptPlannerUniversalConfig::addInstructions(trajopt::ProblemConstruction
         // Add seed state
         assert(seed_composite->back().isMove());
         const auto* seed_instruction = seed_composite->back().cast_const<tesseract_planning::MoveInstruction>();
-
-        assert(isJointWaypoint(seed_instruction->getWaypoint().getType()));
-        const auto* seed_wp = seed_instruction->getWaypoint().cast_const<tesseract_planning::JointWaypoint>();
-        seed_states.push_back(*seed_wp);
+        seed_states.push_back(seed_instruction->getPosition());
 
         ++index;
         prev_plan_instruction = plan_instruction;
@@ -537,10 +522,7 @@ void TrajOptPlannerUniversalConfig::addInstructions(trajopt::ProblemConstruction
             // Add seed state
             assert(seed_composite->at(static_cast<std::size_t>(s - 1)).isMove());
             const auto* seed_instruction = seed_composite->at(static_cast<std::size_t>(s - 1)).cast_const<tesseract_planning::MoveInstruction>();
-
-            assert(isJointWaypoint(seed_instruction->getWaypoint().getType()));
-            const auto* seed_wp = seed_instruction->getWaypoint().cast_const<tesseract_planning::JointWaypoint>();
-            seed_states.push_back(*seed_wp);
+            seed_states.push_back(seed_instruction->getPosition());
 
             ++index;
           }
@@ -553,10 +535,7 @@ void TrajOptPlannerUniversalConfig::addInstructions(trajopt::ProblemConstruction
         // Add seed state
         assert(seed_composite->back().isMove());
         const auto* seed_instruction = seed_composite->back().cast_const<tesseract_planning::MoveInstruction>();
-
-        assert(isJointWaypoint(seed_instruction->getWaypoint().getType()));
-        const auto* seed_wp = seed_instruction->getWaypoint().cast_const<tesseract_planning::JointWaypoint>();
-        seed_states.push_back(*seed_wp);
+        seed_states.push_back(seed_instruction->getPosition());
 
         ++index;
       }

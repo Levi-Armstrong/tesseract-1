@@ -15,6 +15,9 @@ const Eigen::Isometry3d& MoveInstruction::getTCP() const { return tcp_; }
 void MoveInstruction::setWorkingFrame(std::string working_frame) { working_frame_ = working_frame; }
 const std::string& MoveInstruction::getWorkingFrame() const { return working_frame_; }
 
+void MoveInstruction::setPosition(Eigen::VectorXd position) { position_ = position; }
+const Eigen::VectorXd& MoveInstruction::getPosition() const { return position_; }
+
 void MoveInstruction::setVelocity(Eigen::VectorXd velocity) { velocity_ = velocity; }
 const Eigen::VectorXd& MoveInstruction::getVelocity() const { return velocity_; }
 

@@ -30,7 +30,7 @@ enum class ComponentTypes : int
   AVOID_COLLISION
 };
 
-class FixedComponent
+class FixedComponentInfo
 {
 public:
   int getType() const { return static_cast<int>(ComponentTypes::FIXED); }
@@ -48,7 +48,7 @@ public:
   int mask {-1};
 };
 
-class CartesianXTolComponent
+class CartesianXTolComponentInfo
 {
 public:
   int getType() const { return static_cast<int>(ComponentTypes::CARTESIAN_X_TOL); }
@@ -70,7 +70,7 @@ public:
   int mask {-1};
 };
 
-class VelocityComponent
+class VelocityComponentInfo
 {
 public:
   int getType() const { return static_cast<int>(ComponentTypes::VELOCITY_TOL); }
@@ -92,7 +92,7 @@ public:
   int mask {-1};
 };
 
-class VelocitySmoothingComponent
+class VelocitySmoothingComponentInfo
 {
 public:
   int getType() const { return static_cast<int>(ComponentTypes::VELOCITY_SMOOTHING); }
@@ -110,7 +110,7 @@ public:
   int mask {-1};
 };
 
-class AccelerationSmoothingComponent
+class AccelerationSmoothingComponentInfo
 {
 public:
   int getType() const { return static_cast<int>(ComponentTypes::ACCELERATION_SMOOTHING); }
@@ -128,7 +128,7 @@ public:
   int mask {-1};
 };
 
-class JerkSmoothingComponent
+class JerkSmoothingComponentInfo
 {
 public:
   int getType() const { return static_cast<int>(ComponentTypes::JERK_SMOOTHING); }
@@ -147,7 +147,7 @@ public:
 };
 
 /** @brief This component tells the planner to avoid singularity for a given move instruction */
-class AvoidSingularityComponent
+class AvoidSingularityComponentInfo
 {
 public:
   int getType() const { return static_cast<int>(ComponentTypes::AVOID_SINGULARITY); }
@@ -166,7 +166,7 @@ public:
 };
 
 /** @brief This component tells the planner to stay near a joint target for a given move instruction  */
-class NearJointStateComponent
+class NearJointStateComponentInfo
 {
 public:
   int getType() const { return static_cast<int>(ComponentTypes::NEAR_JOINT_STATE); }
@@ -191,7 +191,7 @@ public:
 };
 
 /** @brief This component tells the planner to stay near a joint target for a given move instruction  */
-class AvoidCollisionComponent
+class AvoidCollisionComponentInfo
 {
 public:
   int getType() const { return static_cast<int>(ComponentTypes::AVOID_COLLISION); }

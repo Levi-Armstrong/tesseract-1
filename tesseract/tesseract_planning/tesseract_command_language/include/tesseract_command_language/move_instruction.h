@@ -34,6 +34,9 @@ public:
   void setWorkingFrame(std::string working_frame);
   const std::string& getWorkingFrame() const;
 
+  void setPosition(Eigen::VectorXd position);
+  const Eigen::VectorXd& getPosition() const;
+
   void setVelocity(Eigen::VectorXd velocity);
   const Eigen::VectorXd& getVelocity() const;
 
@@ -80,6 +83,15 @@ private:
 
   /** @brief The working frame the waypoint is relative to */
   std::string working_frame_;
+
+  /**
+   * @brief The joint position at the waypoint
+   *
+   * This is different from waypoint because it can be cartesian or joint and this stores the joint position solved
+   * for the planned waypoint. This also can be used for determining the robot configuration if provided a cartesian
+   * waypoint for generating a native robot program.
+   */
+  Eigen::VectorXd position_;
 
   /** @brief The velocity at the waypoint */
   Eigen::VectorXd velocity_;

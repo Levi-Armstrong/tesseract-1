@@ -33,10 +33,17 @@ struct TrajOptPlannerUniversalConfig : public tesseract_motion_planners::TrajOpt
                                 const Eigen::Isometry3d& tcp_);
 
   /** @brief Function for creating a ProblemConstructionInfo from the planner configuration */
-  virtual std::shared_ptr<trajopt::ProblemConstructionInfo> generatePCI() const;
+  std::shared_ptr<trajopt::ProblemConstructionInfo> generatePCI();
 
   /** @brief Generates the TrajOpt problem and saves the result internally */
   bool generate() override;
+
+  /** @brief This is used to process the results into the seed trajectory
+   *
+   * This is currently required because the base class is not aware of instruction
+   *
+   */
+  void processResults(const tesseract_common::JointTrajectory& trajectory);
 
   /** @brief Tesseract object. ***REQUIRED*** */
   tesseract::Tesseract::ConstPtr tesseract;
@@ -68,9 +75,9 @@ struct TrajOptPlannerUniversalConfig : public tesseract_motion_planners::TrajOpt
 
 protected:
   bool checkUserInput() const;
-  void addInstructions(trajopt::ProblemConstructionInfo& pci, std::vector<int>& fixed_steps) const;
+  void addInstructions(trajopt::ProblemConstructionInfo& pci, std::vector<int>& fixed_steps);
 
-  std::vector<std::pair<long, long>> instruction_to_trajectory_map_;
+  std::vector<std::size_t> plan_instruction_indices_;
 };
 
 }

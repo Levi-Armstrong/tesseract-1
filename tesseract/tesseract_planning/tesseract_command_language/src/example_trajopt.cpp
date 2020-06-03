@@ -66,7 +66,8 @@ tesseract_planning::CompositeInstruction generateSeed(const tesseract_planning::
           tesseract_common::VectorIsometry3d poses = tesseract_motion_planners::interpolate(*pre_cwp, *cur_cwp, 10);
           for (std::size_t p = 1; p < poses.size(); ++p)
           {
-            tesseract_planning::MoveInstruction move_instruction(current_jwp, tesseract_planning::MoveInstructionType::LINEAR);
+            tesseract_planning::MoveInstruction move_instruction(tesseract_planning::CartesianWaypoint(poses[p]), tesseract_planning::MoveInstructionType::LINEAR);
+            move_instruction.setPosition(current_state);
             move_instruction.setTCP(plan_instruction->getTCP());
             move_instruction.setWorkingFrame(plan_instruction->getWorkingFrame());
             move_instruction.setDescription(plan_instruction->getDescription());
@@ -75,7 +76,7 @@ tesseract_planning::CompositeInstruction generateSeed(const tesseract_planning::
         }
         else
         {
-          tesseract_planning::MoveInstruction move_instruction(current_jwp, tesseract_planning::MoveInstructionType::LINEAR);
+          tesseract_planning::MoveInstruction move_instruction(plan_instruction->getWaypoint(), tesseract_planning::MoveInstructionType::LINEAR);
           move_instruction.setTCP(plan_instruction->getTCP());
           move_instruction.setWorkingFrame(plan_instruction->getWorkingFrame());
           move_instruction.setDescription(plan_instruction->getDescription());
@@ -96,6 +97,7 @@ tesseract_planning::CompositeInstruction generateSeed(const tesseract_planning::
           for (long i = 1; i < states.cols(); ++i)
           {
             tesseract_planning::MoveInstruction move_instruction(tesseract_planning::JointWaypoint(states.col(i)), tesseract_planning::MoveInstructionType::FREESPACE);
+            move_instruction.setPosition(states.col(i));
             move_instruction.setTCP(plan_instruction->getTCP());
             move_instruction.setWorkingFrame(plan_instruction->getWorkingFrame());
             move_instruction.setDescription(plan_instruction->getDescription());
@@ -105,6 +107,7 @@ tesseract_planning::CompositeInstruction generateSeed(const tesseract_planning::
         else
         {
           tesseract_planning::MoveInstruction move_instruction(plan_instruction->getWaypoint(), tesseract_planning::MoveInstructionType::FREESPACE);
+          move_instruction.setPosition(*(plan_instruction->getWaypoint().cast_const<tesseract_planning::JointWaypoint>()));
           move_instruction.setTCP(plan_instruction->getTCP());
           move_instruction.setWorkingFrame(plan_instruction->getWorkingFrame());
           move_instruction.setDescription(plan_instruction->getDescription());
@@ -150,20 +153,20 @@ int main (int argc, char *argv[])
 
   // Define Start State
   PlanInstruction plan_f0(wp0, PlanInstructionType::FREESPACE);
-  plan_f0.addConstraint(FixedComponent());
+  plan_f0.addConstraint(FixedComponentInfo());
 
   // Define freespace move instruction
   PlanInstruction plan_f1(wp1, PlanInstructionType::FREESPACE);
-  plan_f1.addConstraint(FixedComponent());
+  plan_f1.addConstraint(FixedComponentInfo());
 
   // Create a program
   CompositeInstruction program;
   program.push_back(plan_f0);
   program.push_back(plan_f1);
-  program.addCost(VelocitySmoothingComponent());
-  program.addCost(AccelerationSmoothingComponent());
-  program.addCost(JerkSmoothingComponent());
-  program.addCost(AvoidCollisionComponent());
+  program.addCost(VelocitySmoothingComponentInfo());
+  program.addCost(AccelerationSmoothingComponentInfo());
+  program.addCost(JerkSmoothingComponentInfo());
+  program.addCost(AvoidCollisionComponentInfo());
 
   auto config = std::make_shared<tesseract_planning::TrajOptPlannerUniversalConfig>(tesseract, "manipulator", "tool0", Eigen::Isometry3d::Identity());
   config->instructions = program;
@@ -175,6 +178,9 @@ int main (int argc, char *argv[])
   tesseract_motion_planners::PlannerResponse response;
   auto post_check_type = tesseract_motion_planners::PostPlanCheckType::DISCRETE_CONTINUOUS_COLLISION;
   auto status = planner.solve(response, post_check_type, true);
+
+  if (status)
+    config->processResults(response.joint_trajectory);
 
   std::cout << status.message() << std::endl;
 }
