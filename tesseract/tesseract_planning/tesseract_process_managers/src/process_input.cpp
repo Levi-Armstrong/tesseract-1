@@ -39,36 +39,37 @@ TESSERACT_COMMON_IGNORE_WARNINGS_POP
 namespace tesseract_planning
 {
 ProcessInput::ProcessInput(tesseract::Tesseract::ConstPtr tesseract,
-                           const Instruction *instruction,
+                           const Instruction &instruction,
                            const ManipulatorInfo& manip_info,
-                           Instruction *seed)
-  : tesseract(std::move(tesseract)), instruction(instruction), manip_info(manip_info), results(seed)
+                           Instruction &seed)
+  : tesseract(std::move(tesseract))
+  , instruction(instruction)
+  , manip_info(manip_info)
+  , results(seed)
+  , null_instruction_(NullInstruction())
 {
 }
 
 ProcessInput ProcessInput::operator[](std::size_t index)
 {
-  if (isCompositeInstruction(*instruction))
+  if (isCompositeInstruction(instruction))
   {
-    const auto* composite_instruction = instruction->cast_const<CompositeInstruction>();
-    auto* composite_seed = results->cast<CompositeInstruction>();
-    return ProcessInput(tesseract, &(composite_instruction->at(index)), manip_info, &((*composite_seed)[index]));
+    const auto* composite_instruction = instruction.cast_const<CompositeInstruction>();
+    auto* composite_seed = results.cast<CompositeInstruction>();
+    return ProcessInput(tesseract, composite_instruction->at(index), manip_info, (*composite_seed)[index]);
   }
 
   if (index > 0)
     CONSOLE_BRIDGE_logWarn("ProcessInput[] called with index > 0 when component instructions are not "
                            "CompositeInstructions");
 
-  return ProcessInput(tesseract, nullptr, manip_info, nullptr);
+  return ProcessInput(tesseract, null_instruction_, manip_info, null_instruction_);
 }
 
 std::size_t ProcessInput::size()
 {
-  //  if (isCompositeInstruction(instruction) && isCompositeInstruction(results))
-  //    assert(instruction.cast_const<CompositeInstruction>()->size() == results.cast<CompositeInstruction>()->size());
-
-  if (isCompositeInstruction(*instruction))
-    return instruction->cast_const<CompositeInstruction>()->size();
+  if (isCompositeInstruction(instruction))
+    return instruction.cast_const<CompositeInstruction>()->size();
 
   return 0;
 }

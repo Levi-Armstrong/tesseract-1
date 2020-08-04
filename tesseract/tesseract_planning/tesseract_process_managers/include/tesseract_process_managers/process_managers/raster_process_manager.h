@@ -115,6 +115,7 @@ private:
   tf::Taskflow taskflow_;
   std::vector<tf::Task> freespace_tasks_;
   std::vector<tf::Task> raster_tasks_;
+  Instruction null_instruction_ { NullInstruction() };
 };
 
 }  // namespace tesseract_planning

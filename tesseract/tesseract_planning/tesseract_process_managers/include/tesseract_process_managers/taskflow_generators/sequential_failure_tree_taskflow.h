@@ -50,25 +50,9 @@ public:
                                  std::function<void()> done_cb,
                                  std::function<void()> error_cb) override;
 
-//  tf::Taskflow& generateTaskflowS(ProcessInput input,
-//                                  const Instruction& start_instruction,
-//                                  std::function<void()> done_cb,
-//                                  std::function<void()> error_cb);
-
-//  tf::Taskflow& generateTaskflowE(ProcessInput input,
-//                                  const Instruction& end_instruction,
-//                                  std::function<void()> done_cb,
-//                                  std::function<void()> error_cb);
-
   tf::Taskflow& generateTaskflow(ProcessInput input,
-                                 const Instruction* start_instruction,
-                                 const Instruction* end_instruction,
-                                 std::function<void()> done_cb,
-                                 std::function<void()> error_cb);
-
-  tf::Taskflow& generateTaskflow(ProcessInput input,
-                                 Instruction start_instruction,
-                                 Instruction end_instruction,
+                                 const Instruction& start_instruction,
+                                 const Instruction& end_instruction,
                                  std::function<void()> done_cb,
                                  std::function<void()> error_cb);
   /**
@@ -85,7 +69,7 @@ private:
   std::vector<std::shared_ptr<tf::Taskflow>> sequential_failure_trees_;
   std::vector<tf::Task> process_tasks_;
 
-  Instruction null_instruction{ NullInstruction() };
+  Instruction null_instruction_ { NullInstruction() };
 };
 
 }  // namespace tesseract_planning

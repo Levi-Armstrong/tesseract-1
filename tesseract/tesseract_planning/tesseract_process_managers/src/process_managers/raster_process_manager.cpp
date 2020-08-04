@@ -79,37 +79,42 @@ bool RasterProcessManager::init(ProcessInput input)
     // Rasters can have multiple steps (e.g. approach, process, departure), but they are all flattened
 
     // Get Start Plan Instruction
-    Instruction start_instruction = NullInstruction();
     if (idx == 1)
     {
-      assert(isCompositeInstruction(*(input[0].instruction)));
-      const auto* ci = input[0].instruction->cast_const<CompositeInstruction>();
+      assert(isCompositeInstruction(input[0].instruction));
+      const auto* ci = input[0].instruction.cast_const<CompositeInstruction>();
       const auto* li = getLastPlanInstruction(*ci);
       assert(li != nullptr);
-      start_instruction = *li;
+
+      auto raster_step = taskflow_
+                             .composed_of(raster_taskflow_generator_.generateTaskflow(
+                                 input[idx],
+                                 *li,
+                                 null_instruction_,
+                                 std::bind(&RasterProcessManager::successCallback, this),
+                                 std::bind(&RasterProcessManager::failureCallback, this)))
+                             .name("raster_" + std::to_string(idx));
+      raster_tasks_.push_back(raster_step);
     }
     else
     {
-      assert(isCompositeInstruction(*(input[idx - 1].instruction)));
-      const auto* tci = input[idx - 1].instruction->cast_const<CompositeInstruction>();
+      assert(isCompositeInstruction(input[idx - 1].instruction));
+      const auto* tci = input[idx - 1].instruction.cast_const<CompositeInstruction>();
       assert(isCompositeInstruction((*tci)[0]));
       const auto* ci = (*tci)[0].cast_const<CompositeInstruction>();
-      auto* li = getLastPlanInstruction(*ci);
+      const auto* li = getLastPlanInstruction(*ci);
       assert(li != nullptr);
-      start_instruction = *li;
+
+      auto raster_step = taskflow_
+                             .composed_of(raster_taskflow_generator_.generateTaskflow(
+                                 input[idx],
+                                 *li,
+                                 null_instruction_,
+                                 std::bind(&RasterProcessManager::successCallback, this),
+                                 std::bind(&RasterProcessManager::failureCallback, this)))
+                             .name("raster_" + std::to_string(idx));
+      raster_tasks_.push_back(raster_step);
     }
-
-    start_instruction.cast<PlanInstruction>()->setPlanType(PlanInstructionType::START);
-
-    auto raster_step = taskflow_
-                           .composed_of(raster_taskflow_generator_.generateTaskflow(
-                               input[idx],
-                               start_instruction,
-                               NullInstruction(),
-                               std::bind(&RasterProcessManager::successCallback, this),
-                               std::bind(&RasterProcessManager::failureCallback, this)))
-                           .name("raster_" + std::to_string(idx));
-    raster_tasks_.push_back(raster_step);
   }
 
   // Loop over all transitions
@@ -147,7 +152,7 @@ bool RasterProcessManager::init(ProcessInput input)
   auto from_start = taskflow_
                         .composed_of(freespace_taskflow_generator_.generateTaskflow(
                             input[0],
-                            nullptr,
+                            null_instruction_,
                             input[1].results,
                             std::bind(&RasterProcessManager::successCallback, this),
                             std::bind(&RasterProcessManager::failureCallback, this)))
@@ -160,7 +165,7 @@ bool RasterProcessManager::init(ProcessInput input)
                     .composed_of(freespace_taskflow_generator_.generateTaskflow(
                         input[input.size() - 1],
                         input[input.size() - 2].results,
-                        nullptr,
+                        null_instruction_,
                         std::bind(&RasterProcessManager::successCallback, this),
                         std::bind(&RasterProcessManager::failureCallback, this)))
                     .name("to_end");
@@ -231,12 +236,12 @@ bool RasterProcessManager::checkProcessInput(const tesseract_planning::ProcessIn
   }
 
   // Check the overall input
-  if (!isCompositeInstruction(*(input.instruction)))
+  if (!isCompositeInstruction(input.instruction))
   {
     CONSOLE_BRIDGE_logError("ProcessInput Invalid: input.instructions should be a composite");
     return false;
   }
-  const auto* composite = input.instruction->cast_const<CompositeInstruction>();
+  const auto* composite = input.instruction.cast_const<CompositeInstruction>();
 
   // Check from_start
   if (!isCompositeInstruction(composite->at(0)))

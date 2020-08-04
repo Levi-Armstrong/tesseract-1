@@ -32,6 +32,10 @@
 
 namespace tesseract_planning
 {
+
+/** @brief This is used for filtering only what you want in the vector **/
+using flattenFilter = std::function<bool(const Instruction&)>;
+
 /**
  * @brief Get the first Plan Instruction in a Composite Instruction
  * This does consider the start instruction in the composite instruction
@@ -137,9 +141,6 @@ long getPlanInstructionsCount(const CompositeInstruction& composite_instruction,
  * @return The joint position
  */
 const Eigen::VectorXd& getJointPosition(const Waypoint& waypoint);
-
-/** @brief This is used for filtering only what you want in the vector **/
-using flattenFilter = std::function<bool(const Instruction&)>;
 
 /**
  * @brief Flattens a CompositeInstruction into a vector of Instruction&
