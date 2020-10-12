@@ -1,0 +1,38 @@
+name: Windows-Build
+
+on:
+  push:
+    branches:
+      - master
+      - feature/CommandLanguage
+  pull_request:
+  schedule:
+    - cron: '0 5 * * *'
+
+jobs:
+  windows_ci:
+    name: Melodic
+    runs-on: windows-latest
+    env:
+      ROS_DISTRO: melodic
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        submodules: recursive
+        path: src/tesseract
+    - name: Build
+      shell: cmd
+      run: |
+        choco sources add -n=roswin -s https://aka.ms/ros/public --priority 1
+        choco install ros-%ROS_DISTRO%-desktop_full -y --no-progress
+
+        call "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\Common7\Tools\VsDevCmd.bat" -arch=amd64 -host_arch=amd64
+        call "C:\opt\ros\%ROS_DISTRO%\x64\setup.bat"
+
+        choco install console_bridge -y --no-progress
+        choco install clapack -y --no-progress
+        choco install openblas -y --no-progress
+
+        vcs import --input "${{ github.workspace }}/src/tesseract/dependencies.rosinstall" src/
+
+        catkin_make_isolated --install --only-pkg-with-deps tesseract tesseract_collision tesseract_common tesseract_environment tesseract_geometry tesseract_kinematics tesseract_scene_graph tesseract_support tesseract_urdf tesseract_visualization --cmake-args -DCMAKE_BUILD_TYPE=Release -DTESSERACT_ENABLE_TESTING=ON -DTESSERACT_ENABLE_RUN_TESTING=ON
