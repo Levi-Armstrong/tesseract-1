@@ -27,15 +27,15 @@
 // clang-format off
 #if defined _WIN32 || defined __CYGWIN__
   #ifdef __GNUC__
-    #define TESSERACT_MOTION_PLANNERS_OMPL_PUBLIC __attribute__ ((dllexport))
+    #define TESSERACT_MOTION_PLANNERS_OMPL_EXPORT __attribute__ ((dllexport))
     #define TESSERACT_MOTION_PLANNERS_OMPL_IMPORT __attribute__ ((dllimport))
   #else
-    #define TESSERACT_MOTION_PLANNERS_OMPL_PUBLIC __declspec(dllexport)
+    #define TESSERACT_MOTION_PLANNERS_OMPL_EXPORT __declspec(dllexport)
     #define TESSERACT_MOTION_PLANNERS_OMPL_IMPORT __declspec(dllimport)
   #endif
   #ifndef TESSERACT_MOTION_PLANNERS_OMPL_STATIC_LIBRARY
     #ifdef TESSERACT_MOTION_PLANNERS_OMPL_LIBRARY_SHARED
-      #define TESSERACT_MOTION_PLANNERS_OMPL_PUBLIC TESSERACT_MOTION_PLANNERS_OMPL_PUBLIC
+      #define TESSERACT_MOTION_PLANNERS_OMPL_PUBLIC TESSERACT_MOTION_PLANNERS_OMPL_EXPORT
     #else
       #define TESSERACT_MOTION_PLANNERS_OMPL_PUBLIC TESSERACT_MOTION_PLANNERS_OMPL_IMPORT
     #endif
@@ -45,7 +45,7 @@
   #define TESSERACT_MOTION_PLANNERS_OMPL_PUBLIC_TYPE TESSERACT_MOTION_PLANNERS_OMPL_PUBLIC
   #define TESSERACT_MOTION_PLANNERS_OMPL_LOCAL
 #else
-  #define TESSERACT_MOTION_PLANNERS_OMPL_PUBLIC __attribute__ ((visibility("default")))
+  #define TESSERACT_MOTION_PLANNERS_OMPL_EXPORT __attribute__ ((visibility("default")))
   #define TESSERACT_MOTION_PLANNERS_OMPL_IMPORT
   #if __GNUC__ >= 4
     #define TESSERACT_MOTION_PLANNERS_OMPL_PUBLIC __attribute__ ((visibility("default")))

@@ -4,6 +4,10 @@ project(tesseract_scene_graph VERSION 0.1.0 LANGUAGES CXX)
 set(CMAKE_CXX_VISIBILITY_PRESET hidden)
 set(CMAKE_VISIBILITY_INLINES_HIDDEN 1)
 
+#if(WIN32)
+#  set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS ON)
+#endif()
+
 find_package(Boost REQUIRED)
 find_package(Eigen3 REQUIRED)
 find_package(console_bridge REQUIRED)

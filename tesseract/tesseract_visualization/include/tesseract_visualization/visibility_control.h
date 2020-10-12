@@ -27,15 +27,15 @@
 // clang-format off
 #if defined _WIN32 || defined __CYGWIN__
   #ifdef __GNUC__
-    #define TESSERACT_VISUALIZATION_PUBLIC __attribute__ ((dllexport))
+    #define TESSERACT_VISUALIZATION_EXPORT __attribute__ ((dllexport))
     #define TESSERACT_VISUALIZATION_IMPORT __attribute__ ((dllimport))
   #else
-    #define TESSERACT_VISUALIZATION_PUBLIC __declspec(dllexport)
+    #define TESSERACT_VISUALIZATION_EXPORT __declspec(dllexport)
     #define TESSERACT_VISUALIZATION_IMPORT __declspec(dllimport)
   #endif
   #ifndef TESSERACT_VISUALIZATION_STATIC_LIBRARY
     #ifdef TESSERACT_VISUALIZATION_LIBRARY_SHARED
-      #define TESSERACT_VISUALIZATION_PUBLIC TESSERACT_VISUALIZATION_PUBLIC
+      #define TESSERACT_VISUALIZATION_PUBLIC TESSERACT_VISUALIZATION_EXPORT
     #else
       #define TESSERACT_VISUALIZATION_PUBLIC TESSERACT_VISUALIZATION_IMPORT
     #endif
@@ -45,7 +45,7 @@
   #define TESSERACT_VISUALIZATION_PUBLIC_TYPE TESSERACT_VISUALIZATION_PUBLIC
   #define TESSERACT_VISUALIZATION_LOCAL
 #else
-  #define TESSERACT_VISUALIZATION_PUBLIC __attribute__ ((visibility("default")))
+  #define TESSERACT_VISUALIZATION_EXPORT __attribute__ ((visibility("default")))
   #define TESSERACT_VISUALIZATION_IMPORT
   #if __GNUC__ >= 4
     #define TESSERACT_VISUALIZATION_PUBLIC __attribute__ ((visibility("default")))

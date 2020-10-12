@@ -107,7 +107,7 @@ public:
     }
   }
 
-  struct CreateFunc : public btCollisionAlgorithmCreateFunc
+  struct TESSERACT_COLLISION_BULLET_LOCAL CreateFunc : public btCollisionAlgorithmCreateFunc
   {
     btCollisionAlgorithm* CreateCollisionAlgorithm(btCollisionAlgorithmConstructionInfo& ci,
                                                    const btCollisionObjectWrapper* body0Wrap,
@@ -118,7 +118,7 @@ public:
     }
   };
 
-  struct SwappedCreateFunc : public btCollisionAlgorithmCreateFunc
+  struct TESSERACT_COLLISION_BULLET_LOCAL SwappedCreateFunc : public btCollisionAlgorithmCreateFunc
   {
     btCollisionAlgorithm* CreateCollisionAlgorithm(btCollisionAlgorithmConstructionInfo& ci,
                                                    const btCollisionObjectWrapper* body0Wrap,

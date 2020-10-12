@@ -10,12 +10,21 @@ find_package(tesseract_common REQUIRED)
 find_package(octomap REQUIRED)
 find_package(cmake_common_scripts REQUIRED)
 
-find_package(ASSIMP QUIET)
-if (NOT ASSIMP_FOUND)
+# Find assimp using PkgConfig because cmake config is broken https://github.com/assimp/assimp/issues/2247
+find_package(assimp REQUIRED)
+if (assimp_VERSION VERSION_LESS "5.0.0")
   find_package(PkgConfig REQUIRED)
-  # assimp is required, so REQUIRE the second attempt
   pkg_check_modules(ASSIMP REQUIRED assimp)
+  find_path(PC_ASSIMP_INCLUDE_DIRS assimp/scene.h
+      HINTS ${ASSIMP_INCLUDE_DIRS}
+      PATHS "${CMAKE_INSTALL_PREFIX}/include")
+
+  add_library(assimp::assimp INTERFACE IMPORTED)
+  set_target_properties(assimp::assimp PROPERTIES INTERFACE_INCLUDE_DIRECTORIES "${PC_ASSIMP_INCLUDE_DIRS}")
+  set_target_properties(assimp::assimp PROPERTIES INTERFACE_LINK_LIBRARIES "${ASSIMP_LIBRARIES}")
 endif()
+link_directories(${ASSIMP_LIBRARY_DIRS})
+link_directories(${ASSIMP_LIBDIR})
 
 # These targets are necessary for 16.04 builds. Remove when Kinetic support is dropped
 if(NOT TARGET octomap)
@@ -38,7 +47,7 @@ tesseract_variables()
 
 add_library(${PROJECT_NAME} INTERFACE)
 target_process_export(${PROJECT_NAME} INTERFACE)
-target_link_libraries(${PROJECT_NAME} INTERFACE tesseract::tesseract_common console_bridge octomap octomath ${ASSIMP_LIBRARIES})
+target_link_libraries(${PROJECT_NAME} INTERFACE tesseract::tesseract_common console_bridge octomap octomath assimp::assimp)
 target_compile_options(${PROJECT_NAME} INTERFACE ${TESSERACT_COMPILE_OPTIONS})
 target_compile_definitions(${PROJECT_NAME} INTERFACE ${TESSERACT_COMPILE_DEFINITIONS})
 target_clang_tidy(${PROJECT_NAME} ARGUMENTS ${TESSERACT_CLANG_TIDY_ARGS} ENABLE ${TESSERACT_ENABLE_CLANG_TIDY})

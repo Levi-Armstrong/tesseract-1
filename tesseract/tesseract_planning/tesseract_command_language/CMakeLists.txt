@@ -8,6 +8,7 @@ find_package(console_bridge REQUIRED)
 find_package(tesseract_common REQUIRED)
 find_package(Eigen3 REQUIRED)
 find_package(cmake_common_scripts REQUIRED)
+find_package(Boost REQUIRED)
 
 set(COVERAGE_EXCLUDE /usr/* /opt/* ${CMAKE_CURRENT_LIST_DIR}/test/* /*/gtest/*)
 
@@ -31,7 +32,7 @@ add_library(${PROJECT_NAME}
   src/utils/get_instruction_utils.cpp
   src/utils/utils.cpp)
 target_process_export(${PROJECT_NAME})
-target_link_libraries(${PROJECT_NAME} PUBLIC console_bridge tesseract::tesseract_common)
+target_link_libraries(${PROJECT_NAME} PUBLIC console_bridge tesseract::tesseract_common ${Boost_LIBRARIES})
 target_compile_options(${PROJECT_NAME} PRIVATE ${TESSERACT_COMPILE_OPTIONS})
 target_compile_definitions(${PROJECT_NAME} PUBLIC ${TESSERACT_COMPILE_DEFINITIONS})
 target_clang_tidy(${PROJECT_NAME} ARGUMENTS ${TESSERACT_CLANG_TIDY_ARGS} ENABLE ${TESSERACT_ENABLE_CLANG_TIDY})
@@ -41,7 +42,8 @@ target_include_directories(${PROJECT_NAME} PUBLIC
     "$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>"
     "$<INSTALL_INTERFACE:include>")
 target_include_directories(${PROJECT_NAME} SYSTEM PUBLIC
- 	${EIGEN3_INCLUDE_DIRS})
+    ${Boost_INCLUDE_DIRS}
+    ${EIGEN3_INCLUDE_DIRS})
    
 configure_package(NAMESPACE tesseract TARGETS ${PROJECT_NAME})
 

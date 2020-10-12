@@ -122,7 +122,7 @@ public:
 
   const btPersistentManifold* getManifold() { return m_manifoldPtr; }
 
-  struct CreateFunc : public btCollisionAlgorithmCreateFunc
+  struct TESSERACT_COLLISION_BULLET_LOCAL CreateFunc : public btCollisionAlgorithmCreateFunc
   {
     btConvexPenetrationDepthSolver* m_pdSolver;
     int m_numPerturbationIterations;

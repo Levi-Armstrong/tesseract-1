@@ -104,7 +104,7 @@ target_include_directories(${PROJECT_NAME}_fcl SYSTEM PUBLIC
 
 # Create target for creating convex hull's from meshes
 add_executable(create_convex_hull src/create_convex_hull.cpp)
-target_link_libraries(create_convex_hull PUBLIC tesseract::tesseract_common tesseract::tesseract_geometry console_bridge PkgConfig::bullet ${Boost_LIBRARIES} octomap octomath)
+target_link_libraries(create_convex_hull PUBLIC ${Boost_LIBRARIES} tesseract::tesseract_common tesseract::tesseract_geometry console_bridge PkgConfig::bullet octomap octomath)
 target_compile_options(create_convex_hull PRIVATE ${TESSERACT_COMPILE_OPTIONS})
 target_compile_definitions(create_convex_hull PRIVATE ${TESSERACT_COMPILE_DEFINITIONS})
 target_clang_tidy(create_convex_hull ARGUMENTS ${TESSERACT_CLANG_TIDY_ARGS} ENABLE ${TESSERACT_ENABLE_CLANG_TIDY})

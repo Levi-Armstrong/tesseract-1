@@ -14,6 +14,14 @@ TESSERACT_COMMON_IGNORE_WARNINGS_POP
 
 namespace tesseract_scene_graph
 {
+using LinkNamesPair = std::pair<std::string, std::string>;
+struct TESSERACT_SCENE_GRAPH_PUBLIC PairHash
+{
+  std::size_t operator()(const LinkNamesPair& pair) const { return std::hash<std::string>()(pair.first + pair.second); }
+};
+
+using AllowedCollisionEntries = std::unordered_map<LinkNamesPair, std::string, PairHash>;
+
 class TESSERACT_SCENE_GRAPH_PUBLIC AllowedCollisionMatrix
 {
 public:
@@ -21,16 +29,6 @@ public:
 
   using Ptr = std::shared_ptr<AllowedCollisionMatrix>;
   using ConstPtr = std::shared_ptr<const AllowedCollisionMatrix>;
-
-  using LinkNamesPair = std::pair<const std::string, const std::string>;
-  struct PairHash
-  {
-    std::size_t operator()(const LinkNamesPair& pair) const
-    {
-      return std::hash<std::string>()(pair.first + pair.second);
-    }
-  };
-  using AllowedCollisionEntries = std::unordered_map<LinkNamesPair, std::string, PairHash>;
 
   AllowedCollisionMatrix() = default;
   virtual ~AllowedCollisionMatrix() = default;

@@ -27,15 +27,15 @@
 // clang-format off
 #if defined _WIN32 || defined __CYGWIN__
   #ifdef __GNUC__
-    #define TESSERACT_PROCESS_MANAGERS_PUBLIC __attribute__ ((dllexport))
+    #define TESSERACT_PROCESS_MANAGERS_EXPORT __attribute__ ((dllexport))
     #define TESSERACT_PROCESS_MANAGERS_IMPORT __attribute__ ((dllimport))
   #else
-    #define TESSERACT_PROCESS_MANAGERS_PUBLIC __declspec(dllexport)
+    #define TESSERACT_PROCESS_MANAGERS_EXPORT __declspec(dllexport)
     #define TESSERACT_PROCESS_MANAGERS_IMPORT __declspec(dllimport)
   #endif
   #ifndef TESSERACT_PROCESS_MANAGERS_STATIC_LIBRARY
     #ifdef TESSERACT_PROCESS_MANAGERS_LIBRARY_SHARED
-      #define TESSERACT_PROCESS_MANAGERS_PUBLIC TESSERACT_PROCESS_MANAGERS_PUBLIC
+      #define TESSERACT_PROCESS_MANAGERS_PUBLIC TESSERACT_PROCESS_MANAGERS_EXPORT
     #else
       #define TESSERACT_PROCESS_MANAGERS_PUBLIC TESSERACT_PROCESS_MANAGERS_IMPORT
     #endif
@@ -45,7 +45,7 @@
   #define TESSERACT_PROCESS_MANAGERS_PUBLIC_TYPE TESSERACT_PROCESS_MANAGERS_PUBLIC
   #define TESSERACT_PROCESS_MANAGERS_LOCAL
 #else
-  #define TESSERACT_PROCESS_MANAGERS_PUBLIC __attribute__ ((visibility("default")))
+  #define TESSERACT_PROCESS_MANAGERS_EXPORT __attribute__ ((visibility("default")))
   #define TESSERACT_PROCESS_MANAGERS_IMPORT
   #if __GNUC__ >= 4
     #define TESSERACT_PROCESS_MANAGERS_PUBLIC __attribute__ ((visibility("default")))

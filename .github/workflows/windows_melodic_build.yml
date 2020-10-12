@@ -14,7 +14,7 @@ jobs:
     name: Melodic
     runs-on: windows-latest
     env:
-      ROS_DISTRO: melodic
+      ROS_DISTRO: noetic
     steps:
     - uses: actions/checkout@v2
       with:
@@ -33,6 +33,11 @@ jobs:
         choco install clapack -y --no-progress
         choco install openblas -y --no-progress
 
+        set PATH=C:\opt\rosdeps\x64\bin;C:\opt\rosdeps\x64\lib;%PATH%
+        set LD_LIBRARY_PATH=%LD_LIBRARY_PATH%;C:\opt\rosdeps\x64\lib
+        set CMAKE_PREFIX_PATH=C:\opt\rosdeps\x64;%CMAKE_PREFIX_PATH%
+        set PKG_CONFIG_PATH=%PKG_CONFIG_PATH%;C:\opt\rosdeps\x64\lib\pkgconfig
+
         vcs import --input "${{ github.workspace }}/src/tesseract/dependencies.rosinstall" src/
 
-        catkin_make_isolated --install --only-pkg-with-deps tesseract tesseract_collision tesseract_common tesseract_environment tesseract_geometry tesseract_kinematics tesseract_scene_graph tesseract_support tesseract_urdf tesseract_visualization --cmake-args -DCMAKE_BUILD_TYPE=Release -DTESSERACT_ENABLE_TESTING=ON -DTESSERACT_ENABLE_RUN_TESTING=ON
+        catkin_make_isolated --install --force-cmake --only-pkg-with-deps tesseract tesseract_collision tesseract_common tesseract_environment tesseract_geometry tesseract_kinematics tesseract_scene_graph tesseract_support tesseract_urdf tesseract_visualization --cmake-args -DCMAKE_BUILD_TYPE=Release
