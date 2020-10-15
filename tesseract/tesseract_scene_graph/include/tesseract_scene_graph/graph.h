@@ -34,6 +34,7 @@ TESSERACT_COMMON_IGNORE_WARNINGS_PUSH
 #include <boost/graph/depth_first_search.hpp>
 #include <boost/graph/breadth_first_search.hpp>
 #include <string>
+#include <list>
 #include <unordered_map>
 TESSERACT_COMMON_IGNORE_WARNINGS_POP
 
@@ -93,7 +94,7 @@ using VertexProperty = boost::property<
 using EdgeProperty = boost::property<boost::edge_joint_t, Joint::Ptr, boost::property<boost::edge_weight_t, double>>;
 
 using Graph = boost::
-    adjacency_list<boost::listS, boost::listS, boost::bidirectionalS, VertexProperty, EdgeProperty, GraphProperty>;
+    adjacency_list<boost::setS, boost::setS, boost::bidirectionalS, VertexProperty, EdgeProperty, GraphProperty>;
 
 class TESSERACT_SCENE_GRAPH_PUBLIC SceneGraph : public Graph
 {
