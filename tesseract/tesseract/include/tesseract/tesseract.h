@@ -97,6 +97,9 @@ public:
   /** @brief reset to initialized state */
   bool reset();
 
+  /** @brief clear content and uninitialize */
+  void clear();
+
   tesseract_environment::Environment::Ptr getEnvironment();
   tesseract_environment::Environment::ConstPtr getEnvironment() const;
 
@@ -135,8 +138,6 @@ private:
   std::vector<FindTCPCallbackFn> find_tcp_cb_;
 
   bool registerDefaultContactManagers();
-
-  void clear();
 };
 }  // namespace tesseract
 #endif  // TESSERACT_TESSERACT_H
