@@ -29,8 +29,7 @@ jobs:
         call "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\Common7\Tools\VsDevCmd.bat" -arch=amd64 -host_arch=amd64
         call "C:\opt\ros\%ROS_DISTRO%\x64\setup.bat"
 
-        cd "C:/opt/ros/noetic/x64/lib"
-        dir
+        dir /s /b c:\opt\ros\noetic\*assimp*
 
         choco install console_bridge -y --no-progress
         choco install clapack -y --no-progress
