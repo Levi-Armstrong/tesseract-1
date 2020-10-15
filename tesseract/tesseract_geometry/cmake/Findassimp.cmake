@@ -4,9 +4,7 @@ elseif(CMAKE_SIZEOF_VOID_P EQUAL 4)
   set(ASSIMP_ARCHITECTURE "32")
 endif(CMAKE_SIZEOF_VOID_P EQUAL 8)
 
-if(WIN32)
-  set(ASSIMP_ROOT_DIR CACHE PATH "ASSIMP root directory")
-
+if(MSVC)
   find_package(PkgConfig REQUIRED)
   # assimp is required, so REQUIRE the second attempt
   pkg_check_modules(PC_ASSIMP REQUIRED assimp)
@@ -27,43 +25,47 @@ if(WIN32)
   endif(MSVC_TOOLSET_VERSION)
 
   # Find path of each library
-  find_path(ASSIMP_INCLUDE_DIR NAMES assimp/anim.h HINTS ${PC_ASSIMP_INCLUDEDIR})
-  find_path(ASSIMP_LIBRARY_DIR NAMES assimp-${ASSIMP_MSVC_VERSION}-mt.lib HINTS ${PC_ASSIMP_LIBDIR} "${PC_ASSIMP_PREFIX}/Lib" REQUIRED)
-  find_library(ASSIMP_LIBRARIES NAMES assimp-${ASSIMP_MSVC_VERSION}-mt.lib PATHS ${ASSIMP_LIBRARY_DIR} REQUIRED)
+  find_path(assimp_INCLUDE_DIR NAMES assimp/anim.h HINTS ${PC_ASSIMP_INCLUDEDIR} REQUIRED)
+  find_path(assimp_LIBRARY_DIR NAMES assimp-${ASSIMP_MSVC_VERSION}-mt.lib HINTS ${PC_ASSIMP_LIBDIR} "${PC_ASSIMP_PREFIX}/Lib" REQUIRED)
+  find_library(assimp_LIBRARY NAMES assimp-${ASSIMP_MSVC_VERSION}-mt.lib PATHS ${assimp_LIBRARY_DIR} REQUIRED)
 
-  message(AUTHOR_WARNING "ASIMP INCLUDE DIR (FIND PATH): ${ASSIMP_INCLUDE_DIR}")
-  message(AUTHOR_WARNING "ASIMP LIBRARY DIR (FIND LIBRARY): ${ASSIMP_LIBRARY_DIR}")
-  message(AUTHOR_WARNING "ASIMP LIBRARIES: ${ASSIMP_LIBRARIES}")
-
-else(WIN32)
+  message(AUTHOR_WARNING "ASIMP INCLUDE DIR (FIND PATH): ${assimp_INCLUDE_DIR}")
+  message(AUTHOR_WARNING "ASIMP LIBRARY DIR (FIND PATH): ${assimp_LIBRARY_DIR}")
+  message(AUTHOR_WARNING "ASIMP LIBRARIES (FIND LIBRARY): ${assimp_LIBRARY}")
+else(MSVC)
 
   find_path(
-    assimp_INCLUDE_DIRS
+    assimp_INCLUDE_DIR
     NAMES assimp/postprocess.h assimp/scene.h assimp/version.h assimp/config.h assimp/cimport.h
     PATHS /usr/local/include
     PATHS /usr/include/
+    REQUIRED
   )
 
   find_library(
-    assimp_LIBRARIES
+    assimp_LIBRARY
     NAMES assimp
     PATHS /usr/local/lib/
     PATHS /usr/lib64/
     PATHS /usr/lib/
+    REQUIRED
   )
+  message(AUTHOR_WARNING "ASIMP INCLUDE DIR (FIND PATH): ${assimp_INCLUDE_DIR}")
+  message(AUTHOR_WARNING "ASIMP LIBRARIES (FIND LIBRARY): ${assimp_LIBRARY}")
+endif(MSVC)
 
-  if (assimp_INCLUDE_DIRS AND assimp_LIBRARIES)
-    SET(assimp_FOUND TRUE)
-  ENDIF (assimp_INCLUDE_DIRS AND assimp_LIBRARIES)
+mark_as_advanced(assimp_INCLUDE_DIR assimp_LIBRARY assimp_LIBRARY_DIR)
 
-  if (assimp_FOUND)
-    if (NOT assimp_FIND_QUIETLY)
-          message(STATUS "Found asset importer library: ${assimp_LIBRARIES}")
-    endif (NOT assimp_FIND_QUIETLY)
-  else (assimp_FOUND)
-    if (assimp_FIND_REQUIRED)
-          message(FATAL_ERROR "Could not find asset importer library")
-    endif (assimp_FIND_REQUIRED)
-  endif (assimp_FOUND)
+# Output variables generation
+include(FindPackageHandleStandardArgs)
+if(MSVC)
+  find_package_handle_standard_args(assimp REQUIRED_VARS assimp_INCLUDE_DIR assimp_LIBRARY assimp_LIBRARY_DIR)
+else(MSVC)
+  find_package_handle_standard_args(assimp REQUIRED_VARS assimp_INCLUDE_DIR assimp_LIBRARY)
+endif(MSVC)
 
-endif(WIN32)
+if (assimp_FOUND)
+  set(assimp_INCLUDE_DIRS ${assimp_INCLUDE_DIR})
+  set(assimp_LIBRARIES ${assimp_LIBRARY})
+  set(assimp_LIBRARY_DIRS ${assimp_LIBRARY_DIR})
+endif()
