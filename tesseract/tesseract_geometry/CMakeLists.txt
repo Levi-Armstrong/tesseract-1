@@ -4,7 +4,7 @@ project(tesseract_geometry VERSION 0.1.0 LANGUAGES CXX)
 set(CMAKE_CXX_VISIBILITY_PRESET hidden)
 set(CMAKE_VISIBILITY_INLINES_HIDDEN 1)
 
-list(PREPEND CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}/cmake/")
+list(APPEND CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}/cmake/")
 
 find_package(Eigen3 REQUIRED)
 find_package(console_bridge REQUIRED)
