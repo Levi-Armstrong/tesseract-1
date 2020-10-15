@@ -138,3 +138,11 @@ cd gh_pages
 sphinx-build . output
 ```
 Now open gh_pages/output/index.rst and remove *output* directory before commiting changes.
+
+## Debugging Windows Build
+
+- Search Directories CI
+  - dir /s /b c:\opt\ros\noetic\*assimp*
+- Location of ROS Windows Builds
+  - https://ros-win.visualstudio.com/ros-win/_build
+  - https://ros-win.visualstudio.com/ros-win/_build/results?buildId=8711&view=artifacts&type=publishedArtifacts
