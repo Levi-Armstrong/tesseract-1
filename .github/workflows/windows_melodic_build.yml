@@ -32,7 +32,6 @@ jobs:
         choco install console_bridge -y --no-progress
         choco install clapack -y --no-progress
         choco install openblas -y --no-progress
-        choco install assimp -y --no-progress
 
         choco search assimp --by-id-only -v
         choco list
