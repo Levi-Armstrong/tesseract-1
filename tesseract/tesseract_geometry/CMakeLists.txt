@@ -14,10 +14,6 @@ find_package(cmake_common_scripts REQUIRED)
 find_package(assimp REQUIRED)
 link_directories(${assimp_LIBRARY_DIRS})
 
-message(AUTHOR_WARNING "TG ASIMP INCLUDE DIR (FIND PATH): ${assimp_INCLUDE_DIRS}")
-message(AUTHOR_WARNING "TG ASIMP LIBRARY DIR (FIND LIBRARY): ${assimp_LIBRARY_DIRS}")
-message(AUTHOR_WARNING "TG ASIMP LIBRARIES: ${assimp_LIBRARIES}")
-
 # These targets are necessary for 16.04 builds. Remove when Kinetic support is dropped
 if(NOT TARGET octomap)
   add_library(octomap INTERFACE IMPORTED)
