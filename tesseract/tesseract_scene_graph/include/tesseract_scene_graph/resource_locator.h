@@ -36,8 +36,14 @@ TESSERACT_COMMON_IGNORE_WARNINGS_POP
 
 #include <tesseract_scene_graph/visibility_control.h>
 
+//namespace tesseract_common
+//{
+//  class TESSERACT_SCENE_GRAPH_PUBLIC Resource;
+//}
+
 namespace tesseract_scene_graph
 {
+
 /**
  * @brief Abstract class for resource loaders
  *
@@ -48,12 +54,7 @@ public:
   using Ptr = std::shared_ptr<ResourceLocator>;
   using ConstPtr = std::shared_ptr<const ResourceLocator>;
 
-  ResourceLocator() = default;
   virtual ~ResourceLocator() = default;
-  ResourceLocator(const ResourceLocator&) = default;
-  ResourceLocator& operator=(const ResourceLocator&) = default;
-  ResourceLocator(ResourceLocator&&) = default;
-  ResourceLocator& operator=(ResourceLocator&&) = default;
 
   /**
    * @brief Locate a resource based on a URL
@@ -82,6 +83,11 @@ public:
    * @param locator_function Function to use to resolve resource file paths from URLs
    */
   SimpleResourceLocator(ResourceLocatorFn locator_function);
+  virtual ~SimpleResourceLocator() override = default;
+  SimpleResourceLocator(const SimpleResourceLocator&) = default;
+  SimpleResourceLocator& operator=(const SimpleResourceLocator&) = default;
+  SimpleResourceLocator(SimpleResourceLocator&&) = default;
+  SimpleResourceLocator& operator=(SimpleResourceLocator&&) = default;
 
   tesseract_common::Resource::Ptr locateResource(const std::string& url) override;
 

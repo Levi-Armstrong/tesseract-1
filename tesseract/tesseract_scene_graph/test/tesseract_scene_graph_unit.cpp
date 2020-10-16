@@ -151,7 +151,7 @@ TEST(TesseractSceneGraphUnit, TesseractSceneGraphUnit)  // NOLINT
   checkSceneGraph(g);
 
   Joint joint_5("joint_5");
-  joint_5.parent_to_joint_origin_transform.translation()(1) = 1.25;
+  joint_5.parent_to_joint_origin_transform.translation()(1) = 1.5;
   joint_5.parent_link_name = "link_5";
   joint_5.child_link_name = "link_4";
   joint_5.type = JointType::CONTINUOUS;

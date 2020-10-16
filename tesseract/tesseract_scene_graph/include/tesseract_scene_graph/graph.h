@@ -576,11 +576,6 @@ private:
   }
 };
 
-//inline bool operator == (const boost::graph_traits<SceneGraph>::edge_descriptor &/*lhs*/, const boost::graph_traits<SceneGraph>::edge_descriptor &/*rhs*/)
-//{
-//    return (true);
-//}
-
 inline std::ostream& operator<<(std::ostream& os, const SceneGraph::Path& path)
 {
   os << "Links:" << std::endl;
