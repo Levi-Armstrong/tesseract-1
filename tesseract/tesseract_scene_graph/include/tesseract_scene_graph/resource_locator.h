@@ -43,10 +43,8 @@ TESSERACT_COMMON_IGNORE_WARNINGS_POP
 
 namespace tesseract_scene_graph
 {
-/**
- * @brief Abstract class for resource loaders
- *
- */
+
+/** @brief Abstract class for resource loaders */
 class TESSERACT_SCENE_GRAPH_PUBLIC ResourceLocator
 {
 public:
@@ -69,10 +67,7 @@ public:
   virtual tesseract_common::Resource::Ptr locateResource(const std::string& url) = 0;
 };
 
-/**
- * @brief Resource locator implementation using a provided function to locate file resources
- *
- */
+/** @brief Resource locator implementation using a provided function to locate file resources */
 class TESSERACT_SCENE_GRAPH_PUBLIC SimpleResourceLocator : public ResourceLocator
 {
 public:

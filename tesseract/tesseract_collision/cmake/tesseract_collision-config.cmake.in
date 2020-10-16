@@ -18,10 +18,15 @@ find_dependency(tesseract_geometry)
 find_dependency(tesseract_support)
 find_dependency(fcl)
 find_dependency(ccd)
+find_dependency(Bullet3)
 
-# Find Bullet using PkgConfig which is the recommended way
-find_dependency(PkgConfig)
-pkg_check_modules(bullet REQUIRED IMPORTED_TARGET bullet)
+if (NOT TARGET bullet::bullet3)
+  add_library(bullet::bullet3 INTERFACE IMPORTED)
+  set_target_properties(bullet::bullet3 PROPERTIES INTERFACE_INCLUDE_DIRECTORIES "${BULLET_INCLUDE_DIRS}")
+  set_target_properties(bullet::bullet3 PROPERTIES INTERFACE_LINK_LIBRARIES "${BULLET_LIBRARIES}")
+  set_target_properties(bullet::bullet3 PROPERTIES INTERFACE_COMPILE_DEFINITIONS "${BULLET_DEFINITIONS}")
+endif()
+link_directories(${BULLET_LIBRARY_DIRS})
 
 # These targets are necessary for 16.04 builds. Remove when Kinetic support is dropped
 if(NOT TARGET octomap)
