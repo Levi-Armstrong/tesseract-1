@@ -107,19 +107,21 @@ target_include_directories(${PROJECT_NAME}_fcl SYSTEM PUBLIC
     ${EIGEN3_INCLUDE_DIRS}
     ${Boost_INCLUDE_DIRS})
 
-# Create target for creating convex hull's from meshes
-add_executable(create_convex_hull src/create_convex_hull.cpp)
-target_link_libraries(create_convex_hull PUBLIC ${PROJECT_NAME}_core ${Boost_LIBRARIES} tesseract::tesseract_common tesseract::tesseract_geometry console_bridge ${BULLET_LIBRARIES} octomap octomath)
-target_compile_options(create_convex_hull PRIVATE ${TESSERACT_COMPILE_OPTIONS})
-target_compile_definitions(create_convex_hull PRIVATE ${TESSERACT_COMPILE_DEFINITIONS} ${BULLET_DEFINITIONS})
-target_clang_tidy(create_convex_hull ARGUMENTS ${TESSERACT_CLANG_TIDY_ARGS} ENABLE ${TESSERACT_ENABLE_CLANG_TIDY})
-target_cxx_version(create_convex_hull PRIVATE VERSION ${TESSERACT_CXX_VERSION})
-target_include_directories(create_convex_hull PUBLIC "$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>")
-target_include_directories(create_convex_hull SYSTEM PUBLIC
-    "${BULLET_ROOT_DIR}/${BULLET_INCLUDE_DIRS}"
-    ${EIGEN3_INCLUDE_DIRS}
-    ${LIBFCL_INCLUDE_DIRS}
-    ${Boost_INCLUDE_DIRS})
+if (NOT MSVC)
+  # Create target for creating convex hull's from meshes
+  add_executable(create_convex_hull src/create_convex_hull.cpp)
+  target_link_libraries(create_convex_hull PUBLIC ${PROJECT_NAME}_core ${Boost_LIBRARIES} tesseract::tesseract_common tesseract::tesseract_geometry console_bridge ${BULLET_LIBRARIES} octomap octomath)
+  target_compile_options(create_convex_hull PRIVATE ${TESSERACT_COMPILE_OPTIONS})
+  target_compile_definitions(create_convex_hull PRIVATE ${TESSERACT_COMPILE_DEFINITIONS} ${BULLET_DEFINITIONS})
+  target_clang_tidy(create_convex_hull ARGUMENTS ${TESSERACT_CLANG_TIDY_ARGS} ENABLE ${TESSERACT_ENABLE_CLANG_TIDY})
+  target_cxx_version(create_convex_hull PRIVATE VERSION ${TESSERACT_CXX_VERSION})
+  target_include_directories(create_convex_hull PUBLIC "$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>")
+  target_include_directories(create_convex_hull SYSTEM PUBLIC
+      "${BULLET_ROOT_DIR}/${BULLET_INCLUDE_DIRS}"
+      ${EIGEN3_INCLUDE_DIRS}
+      ${LIBFCL_INCLUDE_DIRS}
+      ${Boost_INCLUDE_DIRS})
+endif()
 
 # Create test suite interface
 add_library(${PROJECT_NAME}_test_suite INTERFACE)
