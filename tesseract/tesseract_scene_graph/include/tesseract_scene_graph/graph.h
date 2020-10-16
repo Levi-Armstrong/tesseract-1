@@ -93,8 +93,14 @@ using VertexProperty = boost::property<
  */
 using EdgeProperty = boost::property<boost::edge_joint_t, Joint::Ptr, boost::property<boost::edge_weight_t, double>>;
 
+// This is just to get windows to build but is not a solution because hash_map invalidate iterators on add/delete
+#ifdef (MSVC)
 using Graph = boost::
     adjacency_list<boost::hash_mapS, boost::listS, boost::bidirectionalS, VertexProperty, EdgeProperty, GraphProperty>;
+#else(MSVC)
+using Graph = boost::
+    adjacency_list<boost::listS, boost::listS, boost::bidirectionalS, VertexProperty, EdgeProperty, GraphProperty>;
+#endif(MSVC)
 
 class TESSERACT_SCENE_GRAPH_PUBLIC SceneGraph : public Graph
 {
