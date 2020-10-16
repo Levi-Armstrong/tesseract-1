@@ -94,7 +94,7 @@ using VertexProperty = boost::property<
 using EdgeProperty = boost::property<boost::edge_joint_t, Joint::Ptr, boost::property<boost::edge_weight_t, double>>;
 
 using Graph = boost::
-    adjacency_list<boost::listS, boost::listS, boost::bidirectionalS, VertexProperty, EdgeProperty, GraphProperty>;
+    adjacency_list<boost::hash_mapS, boost::listS, boost::bidirectionalS, VertexProperty, EdgeProperty, GraphProperty>;
 
 class TESSERACT_SCENE_GRAPH_PUBLIC SceneGraph : public Graph
 {
@@ -576,10 +576,10 @@ private:
   }
 };
 
-inline bool operator == (const boost::graph_traits<SceneGraph>::edge_descriptor &/*lhs*/, const boost::graph_traits<SceneGraph>::edge_descriptor &/*rhs*/)
-{
-    return (true);
-}
+//inline bool operator == (const boost::graph_traits<SceneGraph>::edge_descriptor &/*lhs*/, const boost::graph_traits<SceneGraph>::edge_descriptor &/*rhs*/)
+//{
+//    return (true);
+//}
 
 inline std::ostream& operator<<(std::ostream& os, const SceneGraph::Path& path)
 {
