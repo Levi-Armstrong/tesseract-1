@@ -445,7 +445,6 @@ public:
   bool insertSceneGraph(const tesseract_scene_graph::SceneGraph& scene_graph,
                         tesseract_scene_graph::Joint joint,
                         const std::string& prefix = "");
-
 protected:
   /**
    * @brief Adds a link to the graph
@@ -577,6 +576,11 @@ private:
   }
 };
 
+inline bool operator == (const boost::graph_traits<SceneGraph>::edge_descriptor &/*lhs*/, const boost::graph_traits<SceneGraph>::edge_descriptor &/*rhs*/)
+{
+    return (true);
+}
+
 inline std::ostream& operator<<(std::ostream& os, const SceneGraph::Path& path)
 {
   os << "Links:" << std::endl;
@@ -590,15 +594,7 @@ inline std::ostream& operator<<(std::ostream& os, const SceneGraph::Path& path)
   return os;
 }
 
-inline bool operator == (const VertexProperty &lhs, const VertexProperty &rhs)
-{
-    return (lhs.m_value == rhs.m_value);
-}
 
-inline bool operator== (const EdgeProperty &lhs, const EdgeProperty &rhs)
-{
-    return (lhs.m_value == rhs.m_value);
-}
 }  // namespace tesseract_scene_graph
 
 
