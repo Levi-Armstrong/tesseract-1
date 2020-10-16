@@ -33,6 +33,7 @@ TESSERACT_COMMON_IGNORE_WARNINGS_PUSH
 #include <vector>
 #include <memory>
 #include <map>
+#include <array>
 #include <unordered_map>
 #include <functional>
 #include <boost/bind.hpp>
