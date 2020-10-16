@@ -36,14 +36,13 @@ TESSERACT_COMMON_IGNORE_WARNINGS_POP
 
 #include <tesseract_scene_graph/visibility_control.h>
 
-//namespace tesseract_common
+// namespace tesseract_common
 //{
 //  class TESSERACT_SCENE_GRAPH_PUBLIC Resource;
 //}
 
 namespace tesseract_scene_graph
 {
-
 /**
  * @brief Abstract class for resource loaders
  *
@@ -54,7 +53,12 @@ public:
   using Ptr = std::shared_ptr<ResourceLocator>;
   using ConstPtr = std::shared_ptr<const ResourceLocator>;
 
+  ResourceLocator() = default;
   virtual ~ResourceLocator() = default;
+  ResourceLocator(const ResourceLocator&) = delete;
+  ResourceLocator& operator=(const ResourceLocator&) = delete;
+  ResourceLocator(ResourceLocator&&) = delete;
+  ResourceLocator& operator=(ResourceLocator&&) = delete;
 
   /**
    * @brief Locate a resource based on a URL
@@ -83,7 +87,7 @@ public:
    * @param locator_function Function to use to resolve resource file paths from URLs
    */
   SimpleResourceLocator(ResourceLocatorFn locator_function);
-  virtual ~SimpleResourceLocator() override = default;
+  ~SimpleResourceLocator() override = default;
   SimpleResourceLocator(const SimpleResourceLocator&) = default;
   SimpleResourceLocator& operator=(const SimpleResourceLocator&) = default;
   SimpleResourceLocator(SimpleResourceLocator&&) = default;
@@ -95,10 +99,7 @@ protected:
   ResourceLocatorFn locator_function_;
 };
 
-/**
- * @brief Resource implementation for a local file
- *
- */
+/** @brief Resource implementation for a local file */
 class TESSERACT_SCENE_GRAPH_PUBLIC SimpleLocatedResource : public tesseract_common::Resource
 {
 public:
@@ -106,6 +107,11 @@ public:
   using ConstPtr = std::shared_ptr<const SimpleLocatedResource>;
 
   SimpleLocatedResource(const std::string& url, const std::string& filename);
+  ~SimpleLocatedResource() override = default;
+  SimpleLocatedResource(const SimpleLocatedResource&) = default;
+  SimpleLocatedResource& operator=(const SimpleLocatedResource&) = default;
+  SimpleLocatedResource(SimpleLocatedResource&&) = default;
+  SimpleLocatedResource& operator=(SimpleLocatedResource&&) = default;
 
   bool isFile() override;
 

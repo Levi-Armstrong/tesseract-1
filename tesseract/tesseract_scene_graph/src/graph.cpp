@@ -27,9 +27,6 @@
 #include <tesseract_common/macros.h>
 TESSERACT_COMMON_IGNORE_WARNINGS_PUSH
 #include <boost/graph/dijkstra_shortest_paths.hpp>
-#include <boost/concept/assert.hpp>
-#include <boost/concept/detail/concept_def.hpp>
-#include <boost/concept_check.hpp>
 #include <fstream>
 #include <queue>
 #include <console_bridge/console.h>
@@ -37,20 +34,11 @@ TESSERACT_COMMON_IGNORE_WARNINGS_POP
 
 #include <tesseract_scene_graph/graph.h>
 
-
 namespace tesseract_scene_graph
 {
 SceneGraph::SceneGraph(const std::string& name) : acm_(std::make_shared<AllowedCollisionMatrix>())
 {
   boost::set_property(static_cast<Graph&>(*this), boost::graph_name, name);
-
-  BOOST_CONCEPT_ASSERT((boost::DefaultConstructible<vertex_descriptor>));
-  BOOST_CONCEPT_ASSERT((boost::EqualityComparable<vertex_descriptor>));
-  BOOST_CONCEPT_ASSERT((boost::Assignable<vertex_descriptor>));
-//  BOOST_CONCEPT_ASSERT((boost::Convertible<traversal_category, incidence_graph_tag>));
-  BOOST_CONCEPT_ASSERT((boost::concepts::MultiPassInputIterator<out_edge_iterator>));
-  BOOST_CONCEPT_ASSERT((boost::concepts::MultiPassInputIterator<in_edge_iterator>));
-//  BOOST_CONCEPT_ASSERT((boost::Convertible<traversal_category, bidirectional_graph_tag>));
 }
 
 SceneGraph::Ptr SceneGraph::clone() const

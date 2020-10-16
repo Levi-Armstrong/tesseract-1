@@ -445,6 +445,7 @@ public:
   bool insertSceneGraph(const tesseract_scene_graph::SceneGraph& scene_graph,
                         tesseract_scene_graph::Joint joint,
                         const std::string& prefix = "");
+
 protected:
   /**
    * @brief Adds a link to the graph
@@ -589,8 +590,6 @@ inline std::ostream& operator<<(std::ostream& os, const SceneGraph::Path& path)
   return os;
 }
 
-
 }  // namespace tesseract_scene_graph
-
 
 #endif  // TESSERACT_SCENE_GRAPH_GRAPH_H
