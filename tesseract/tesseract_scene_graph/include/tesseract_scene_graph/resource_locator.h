@@ -88,10 +88,10 @@ public:
    */
   SimpleResourceLocator(ResourceLocatorFn locator_function);
   ~SimpleResourceLocator() override = default;
-  SimpleResourceLocator(const SimpleResourceLocator&) = default;
-  SimpleResourceLocator& operator=(const SimpleResourceLocator&) = default;
-  SimpleResourceLocator(SimpleResourceLocator&&) = default;
-  SimpleResourceLocator& operator=(SimpleResourceLocator&&) = default;
+  SimpleResourceLocator(const SimpleResourceLocator&) = delete;
+  SimpleResourceLocator& operator=(const SimpleResourceLocator&) = delete;
+  SimpleResourceLocator(SimpleResourceLocator&&) = delete;
+  SimpleResourceLocator& operator=(SimpleResourceLocator&&) = delete;
 
   tesseract_common::Resource::Ptr locateResource(const std::string& url) override;
 
@@ -108,10 +108,10 @@ public:
 
   SimpleLocatedResource(const std::string& url, const std::string& filename);
   ~SimpleLocatedResource() override = default;
-  SimpleLocatedResource(const SimpleLocatedResource&) = default;
-  SimpleLocatedResource& operator=(const SimpleLocatedResource&) = default;
-  SimpleLocatedResource(SimpleLocatedResource&&) = default;
-  SimpleLocatedResource& operator=(SimpleLocatedResource&&) = default;
+  SimpleLocatedResource(const SimpleLocatedResource&) = delete;
+  SimpleLocatedResource& operator=(const SimpleLocatedResource&) = delete;
+  SimpleLocatedResource(SimpleLocatedResource&&) = delete;
+  SimpleLocatedResource& operator=(SimpleLocatedResource&&) = delete;
 
   bool isFile() override;
 

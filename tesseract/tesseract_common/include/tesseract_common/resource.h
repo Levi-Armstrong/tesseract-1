@@ -106,10 +106,10 @@ public:
     bytes_ = std::vector<uint8_t>(bytes, bytes + bytes_len);
   }
   ~BytesResource() override = default;
-  BytesResource(const BytesResource&) = default;
-  BytesResource& operator=(const BytesResource&) = default;
-  BytesResource(BytesResource&&) = default;
-  BytesResource& operator=(BytesResource&&) = default;
+  BytesResource(const BytesResource&) = delete;
+  BytesResource& operator=(const BytesResource&) = delete;
+  BytesResource(BytesResource&&) = delete;
+  BytesResource& operator=(BytesResource&&) = delete;
 
   bool isFile() override { return false; }
   std::string getUrl() override { return url_; }

@@ -1,8 +1,12 @@
 cmake_minimum_required(VERSION 3.5.0)
 project(tesseract_common VERSION 0.1.0 LANGUAGES CXX)
 
-set(CMAKE_CXX_VISIBILITY_PRESET hidden)
-set(CMAKE_VISIBILITY_INLINES_HIDDEN 1)
+#set(CMAKE_CXX_VISIBILITY_PRESET hidden)
+#set(CMAKE_VISIBILITY_INLINES_HIDDEN 1)
+
+if(WIN32)
+  set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS ON)
+endif()
 
 include(cmake/tesseract_macros.cmake)
 list(APPEND CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}/cmake/")
