@@ -18,7 +18,7 @@ find_dependency(tesseract_geometry)
 find_dependency(tesseract_support)
 find_dependency(fcl)
 find_dependency(ccd)
-find_dependency(Bullet3)
+find_dependency(Bullet)
 
 if (NOT TARGET bullet::bullet3)
   add_library(bullet::bullet3 INTERFACE IMPORTED)

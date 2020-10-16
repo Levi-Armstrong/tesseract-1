@@ -21,7 +21,7 @@ find_package(cmake_common_scripts REQUIRED)
 # We need to find ccd ourselves because FCL doesn't do it in their fclConfig.cmake
 find_package(ccd REQUIRED)
 
-find_package(Bullet3 REQUIRED)
+find_package(Bullet REQUIRED)
 if (NOT TARGET bullet::bullet3)
   add_library(bullet::bullet3 INTERFACE IMPORTED)
   set_target_properties(bullet::bullet3 PROPERTIES INTERFACE_INCLUDE_DIRECTORIES "${BULLET_INCLUDE_DIRS}")
