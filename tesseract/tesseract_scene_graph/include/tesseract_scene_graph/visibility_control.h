@@ -24,38 +24,39 @@
 // This logic was borrowed (then namespaced) from the examples on the gcc wiki:
 //     https://gcc.gnu.org/wiki/Visibility
 
-// clang-format off
-#if defined _WIN32 || defined __CYGWIN__
-  #ifdef __GNUC__
-    #define TESSERACT_SCENE_GRAPH_EXPORT __attribute__ ((dllexport))
-    #define TESSERACT_SCENE_GRAPH_IMPORT __attribute__ ((dllimport))
-  #else
-    #define TESSERACT_SCENE_GRAPH_EXPORT __declspec(dllexport)
-    #define TESSERACT_SCENE_GRAPH_IMPORT __declspec(dllimport)
-  #endif
-  #ifndef TESSERACT_SCENE_GRAPH_STATIC_LIBRARY
-    #ifdef TESSERACT_SCENE_GRAPH_LIBRARY_SHARED
-      #define TESSERACT_SCENE_GRAPH_PUBLIC TESSERACT_SCENE_GRAPH_EXPORT
-    #else
-      #define TESSERACT_SCENE_GRAPH_PUBLIC TESSERACT_SCENE_GRAPH_IMPORT
-    #endif
-  #else
-    #define TESSERACT_SCENE_GRAPH_PUBLIC
-  #endif
-  #define TESSERACT_SCENE_GRAPH_PUBLIC_TYPE TESSERACT_SCENE_GRAPH_PUBLIC
-  #define TESSERACT_SCENE_GRAPH_LOCAL
-#else
-  #define TESSERACT_SCENE_GRAPH_EXPORT __attribute__ ((visibility("default")))
-  #define TESSERACT_SCENE_GRAPH_IMPORT
-  #if __GNUC__ >= 4
-    #define TESSERACT_SCENE_GRAPH_PUBLIC __attribute__ ((visibility("default")))
-    #define TESSERACT_SCENE_GRAPH_LOCAL  __attribute__ ((visibility("hidden")))
-  #else
-    #define TESSERACT_SCENE_GRAPH_PUBLIC
-    #define TESSERACT_SCENE_GRAPH_LOCAL
-  #endif
-  #define TESSERACT_SCENE_GRAPH_PUBLIC_TYPE
-#endif
-// clang-format on
-
+//// clang-format off
+//#if defined _WIN32 || defined __CYGWIN__
+//  #ifdef __GNUC__
+//    #define TESSERACT_SCENE_GRAPH_EXPORT __attribute__ ((dllexport))
+//    #define TESSERACT_SCENE_GRAPH_IMPORT __attribute__ ((dllimport))
+//  #else
+//    #define TESSERACT_SCENE_GRAPH_EXPORT __declspec(dllexport)
+//    #define TESSERACT_SCENE_GRAPH_IMPORT __declspec(dllimport)
+//  #endif
+//  #ifndef TESSERACT_SCENE_GRAPH_STATIC_LIBRARY
+//    #ifdef TESSERACT_SCENE_GRAPH_LIBRARY_SHARED
+//      #define TESSERACT_SCENE_GRAPH_PUBLIC TESSERACT_SCENE_GRAPH_EXPORT
+//    #else
+//      #define TESSERACT_SCENE_GRAPH_PUBLIC TESSERACT_SCENE_GRAPH_IMPORT
+//    #endif
+//  #else
+//    #define TESSERACT_SCENE_GRAPH_PUBLIC
+//  #endif
+//  #define TESSERACT_SCENE_GRAPH_PUBLIC_TYPE TESSERACT_SCENE_GRAPH_PUBLIC
+//  #define TESSERACT_SCENE_GRAPH_LOCAL
+//#else
+//  #define TESSERACT_SCENE_GRAPH_EXPORT __attribute__ ((visibility("default")))
+//  #define TESSERACT_SCENE_GRAPH_IMPORT
+//  #if __GNUC__ >= 4
+//    #define TESSERACT_SCENE_GRAPH_PUBLIC __attribute__ ((visibility("default")))
+//    #define TESSERACT_SCENE_GRAPH_LOCAL  __attribute__ ((visibility("hidden")))
+//  #else
+//    #define TESSERACT_SCENE_GRAPH_PUBLIC
+//    #define TESSERACT_SCENE_GRAPH_LOCAL
+//  #endif
+//  #define TESSERACT_SCENE_GRAPH_PUBLIC_TYPE
+//#endif
+//// clang-format on
+#define TESSERACT_SCENE_GRAPH_PUBLIC
+#define TESSERACT_SCENE_GRAPH_LOCAL
 #endif  // TESSERACT_SCENE_GRAPH_VISIBILITY_CONTROL_H
