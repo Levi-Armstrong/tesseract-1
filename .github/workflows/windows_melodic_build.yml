@@ -45,4 +45,4 @@ jobs:
 
         vcs import --input "${{ github.workspace }}/src/tesseract/dependencies.rosinstall" src/
 
-        catkin_make_isolated --install --force-cmake --only-pkg-with-deps tesseract tesseract_collision tesseract_common tesseract_environment tesseract_geometry tesseract_kinematics tesseract_scene_graph tesseract_support tesseract_urdf tesseract_visualization --cmake-args -DCMAKE_BUILD_TYPE=Release
+        catkin_make_isolated --install --force-cmake --only-pkg-with-deps tesseract tesseract_collision tesseract_common tesseract_environment tesseract_geometry tesseract_kinematics tesseract_scene_graph tesseract_support tesseract_urdf tesseract_visualization --cmake-args -DCMAKE_BUILD_TYPE=Release -DCMAKE_WINDOWS_EXPORT_ALL_SYMBOLS=ON
