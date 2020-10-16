@@ -25,37 +25,40 @@
 //     https://gcc.gnu.org/wiki/Visibility
 
 // clang-format off
-#if defined _WIN32 || defined __CYGWIN__
-  #ifdef __GNUC__
-    #define TESSERACT_COMMON_EXPORT __attribute__ ((dllexport))
-    #define TESSERACT_COMMON_IMPORT __attribute__ ((dllimport))
-  #else
-    #define TESSERACT_COMMON_EXPORT __declspec(dllexport)
-    #define TESSERACT_COMMON_IMPORT __declspec(dllimport)
-  #endif
-  #ifndef TESSERACT_COMMON_STATIC_LIBRARY
-    #ifdef TESSERACT_COMMON_LIBRARY_SHARED
-      #define TESSERACT_COMMON_PUBLIC TESSERACT_COMMON_EXPORT
-    #else
-      #define TESSERACT_COMMON_PUBLIC TESSERACT_COMMON_IMPORT
-    #endif
-  #else
-    #define TESSERACT_COMMON_PUBLIC
-  #endif
-  #define TESSERACT_COMMON_PUBLIC_TYPE TESSERACT_COMMON_PUBLIC
-  #define TESSERACT_COMMON_LOCAL
-#else
-  #define TESSERACT_COMMON_EXPORT __attribute__ ((visibility("default")))
-  #define TESSERACT_COMMON_IMPORT
-  #if __GNUC__ >= 4
-    #define TESSERACT_COMMON_PUBLIC __attribute__ ((visibility("default")))
-    #define TESSERACT_COMMON_LOCAL  __attribute__ ((visibility("hidden")))
-  #else
-    #define TESSERACT_COMMON_PUBLIC
-    #define TESSERACT_COMMON_LOCAL
-  #endif
-  #define TESSERACT_COMMON_PUBLIC_TYPE
-#endif
+//#if defined _WIN32 || defined __CYGWIN__
+//  #ifdef __GNUC__
+//    #define TESSERACT_COMMON_EXPORT __attribute__ ((dllexport))
+//    #define TESSERACT_COMMON_IMPORT __attribute__ ((dllimport))
+//  #else
+//    #define TESSERACT_COMMON_EXPORT __declspec(dllexport)
+//    #define TESSERACT_COMMON_IMPORT __declspec(dllimport)
+//  #endif
+//  #ifndef TESSERACT_COMMON_STATIC_LIBRARY
+//    #ifdef TESSERACT_COMMON_LIBRARY_SHARED
+//      #define TESSERACT_COMMON_PUBLIC TESSERACT_COMMON_EXPORT
+//    #else
+//      #define TESSERACT_COMMON_PUBLIC TESSERACT_COMMON_IMPORT
+//    #endif
+//  #else
+//    #define TESSERACT_COMMON_PUBLIC
+//  #endif
+//  #define TESSERACT_COMMON_PUBLIC_TYPE TESSERACT_COMMON_PUBLIC
+//  #define TESSERACT_COMMON_LOCAL
+//#else
+//  #define TESSERACT_COMMON_EXPORT __attribute__ ((visibility("default")))
+//  #define TESSERACT_COMMON_IMPORT
+//  #if __GNUC__ >= 4
+//    #define TESSERACT_COMMON_PUBLIC __attribute__ ((visibility("default")))
+//    #define TESSERACT_COMMON_LOCAL  __attribute__ ((visibility("hidden")))
+//  #else
+//    #define TESSERACT_COMMON_PUBLIC
+//    #define TESSERACT_COMMON_LOCAL
+//  #endif
+//  #define TESSERACT_COMMON_PUBLIC_TYPE
+//#endif
+#define TESSERACT_COMMON_PUBLIC
+#define TESSERACT_COMMON_LOCAL
 // clang-format on
+
 
 #endif  // TESSERACT_COMMON_VISIBILITY_CONTROL_H
