@@ -364,6 +364,7 @@ void OFKTStateSolver::onEnvironmentChanged(const Commands& commands)
       case tesseract_environment::CommandType::ADD_ALLOWED_COLLISION:
       case tesseract_environment::CommandType::REMOVE_ALLOWED_COLLISION:
       case tesseract_environment::CommandType::REMOVE_ALLOWED_COLLISION_LINK:
+      case tesseract_environment::CommandType::ADD_KINEMATICS_INFORMATION:
       {
         break;
       }
