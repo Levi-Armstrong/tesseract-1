@@ -51,16 +51,25 @@ TrajectoryInterpolator::TrajectoryInterpolator(tesseract_planning::CompositeInst
   for (auto& mi : flattened_program_)
     waypoints_.emplace_back(mi.get().cast<tesseract_planning::MoveInstruction>()->getWaypoint());
 
-  double last_time = 0;
-  double current_time = 0;
-  double total_time = 0;
-  for (auto& waypoint : waypoints_)
+  if (waypoints_.empty())
+    return;
+
+  double current_time = waypoints_.front().get().cast<tesseract_planning::StateWaypoint>()->time;
+  double last_time = current_time;
+  double total_time = current_time;
+  bool last_swp_zero = tesseract_common::almostEqualRelativeAndAbs(last_time, 0.0, 1e-5);
+
+  for (std::size_t w = 1; w < waypoints_.size(); ++w)
   {
-    auto* swp = waypoint.get().cast<tesseract_planning::StateWaypoint>();
+    auto* swp = waypoints_[w].get().cast<tesseract_planning::StateWaypoint>();
     current_time = swp->time;
 
-    // It is possible for sub composites to start back from zero, this accounts for it
-    if (current_time < last_time)
+    bool swp_zero = tesseract_common::almostEqualRelativeAndAbs(current_time, 0.0, 1e-5);
+    if (swp_zero && last_swp_zero)
+      current_time =
+          last_time + 1;  // It is possible to have a trajectory with no time so this is to handle that condition
+    else if (current_time < last_time)  // It is possible for sub composites to start back from zero, this accounts for
+                                        // it
       last_time = 0;
 
     double dt = current_time - last_time;
@@ -68,6 +77,7 @@ TrajectoryInterpolator::TrajectoryInterpolator(tesseract_planning::CompositeInst
     duration_from_previous_.push_back(dt);
     swp->time = total_time;
     last_time = current_time;
+    last_swp_zero = swp_zero;
   }
 }
 
