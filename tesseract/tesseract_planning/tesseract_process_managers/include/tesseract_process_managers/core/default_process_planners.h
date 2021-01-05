@@ -86,6 +86,10 @@ TaskflowGenerator::UPtr createRasterGlobalCTGenerator();
 
 /** @brief Create Raster Only Global with Cartesian Transitions Process Pipeline */
 TaskflowGenerator::UPtr createRasterOnlyGlobalCTGenerator();
+
+/** @brief Create Tool Pickup Process Pipeline */
+TaskflowGenerator::UPtr createToolPickupGenerator();
+
 }  // namespace tesseract_planning
 
 #endif  // TESSERACT_PROCESS_MANAGERS_DEFAULT_PROCESS_PLANNERS_H

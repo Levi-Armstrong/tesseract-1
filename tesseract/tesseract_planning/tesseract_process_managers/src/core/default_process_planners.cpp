@@ -37,6 +37,7 @@
 #include <tesseract_process_managers/taskflow_generators/raster_dt_taskflow.h>
 #include <tesseract_process_managers/taskflow_generators/raster_waad_taskflow.h>
 #include <tesseract_process_managers/taskflow_generators/raster_waad_dt_taskflow.h>
+#include <tesseract_process_managers/taskflow_generators/tool_pickup_taskflow.h>
 
 namespace tesseract_planning
 {
@@ -286,5 +287,24 @@ TaskflowGenerator::UPtr createRasterOnlyGlobalCTGenerator()
 
   return std::make_unique<RasterOnlyGlobalTaskflow>(
       std::move(global_task), std::move(transition_task), std::move(raster_task));
+}
+
+TaskflowGenerator::UPtr createToolPickupGenerator()
+{
+  DescartesTaskflowParams global_params;
+  global_params.enable_post_contact_discrete_check = false;
+  global_params.enable_post_contact_continuous_check = false;
+  global_params.enable_time_parameterization = false;
+  TaskflowGenerator::UPtr global_task = std::make_unique<DescartesTaskflow>(global_params);
+
+  FreespaceTaskflowParams freespace_params;
+  freespace_params.type = FreespaceTaskflowType::TRAJOPT_FIRST;
+  TaskflowGenerator::UPtr freespace_task = std::make_unique<FreespaceTaskflow>(freespace_params);
+
+  TrajOptTaskflowParams cartesian_params;
+  TaskflowGenerator::UPtr cartesian_task = std::make_unique<TrajOptTaskflow>(cartesian_params);
+
+  return std::make_unique<ToolPickupTaskflow>(
+      std::move(global_task), std::move(freespace_task), std::move(cartesian_task));
 }
 }  // namespace tesseract_planning

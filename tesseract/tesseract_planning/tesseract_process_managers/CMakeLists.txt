@@ -72,7 +72,8 @@ add_library(${PROJECT_NAME}
     src/taskflow_generators/ompl_taskflow.cpp
     src/taskflow_generators/trajopt_taskflow.cpp
     src/taskflow_generators/cartesian_taskflow.cpp
-    src/taskflow_generators/freespace_taskflow.cpp)
+    src/taskflow_generators/freespace_taskflow.cpp
+    src/taskflow_generators/tool_pickup_taskflow.cpp)
 target_link_libraries(${PROJECT_NAME} PUBLIC
     console_bridge::console_bridge
     Taskflow::Taskflow

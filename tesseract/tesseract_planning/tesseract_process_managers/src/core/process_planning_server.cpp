@@ -90,6 +90,7 @@ void ProcessPlanningServer::loadDefaultProcessPlanners()
   registerProcessPlanner(process_planner_names::RASTER_CT_WAAD_DT_PLANNER_NAME, createRasterCTWAADDTGenerator());
   registerProcessPlanner(process_planner_names::RASTER_G_CT_PLANNER_NAME, createRasterGlobalCTGenerator());
   registerProcessPlanner(process_planner_names::RASTER_O_G_CT_PLANNER_NAME, createRasterOnlyGlobalCTGenerator());
+  registerProcessPlanner(process_planner_names::TOOL_PICKUP_PLANNER_NAME, createToolPickupGenerator());
 }
 
 bool ProcessPlanningServer::hasProcessPlanner(const std::string& name) const

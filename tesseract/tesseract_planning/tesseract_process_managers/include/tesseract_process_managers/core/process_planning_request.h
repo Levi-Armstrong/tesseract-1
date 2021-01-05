@@ -134,6 +134,10 @@ static const std::string RASTER_O_G_FT_PLANNER_NAME = "RasterOGFTPlanner";
 
 /** @brief Raster only planner performs global plan first then macro planning using cartesian planner for transitions */
 static const std::string RASTER_O_G_CT_PLANNER_NAME = "RasterOGCTPlanner";
+
+/** @brief Tool Pickup planner performs global plan first then macro planning using freespace and cartesian planner */
+static const std::string TOOL_PICKUP_PLANNER_NAME = "ToolPickupPlanner";
+
 }  // namespace process_planner_names
 }  // namespace tesseract_planning
 #endif  // TESSERACT_PROCESS_MANAGERS_PROCESS_PLANNING_REQUEST_H
