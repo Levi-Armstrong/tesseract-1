@@ -6,10 +6,26 @@
 {\ttfamily \#include $<$trajopt\+\_\+sco/modeling.\+hpp$>$}\newline
 {\ttfamily \#include $<$trajopt/collision\+\_\+terms.\+hpp$>$}\newline
 {\ttfamily \#include $<$trajopt/problem\+\_\+description.\+hpp$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+environment/core/environment.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+environment/ofkt/ofkt\+\_\+state\+\_\+solver.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+command\+\_\+language/plan\+\_\+instruction.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+command\+\_\+language/composite\+\_\+instruction.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+command\+\_\+language/joint\+\_\+waypoint.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+command\+\_\+language/cartesian\+\_\+waypoint.\+h$>$}\newline
 {\ttfamily \#include $<$tesseract\+\_\+motion\+\_\+planners/trajopt/trajopt\+\_\+motion\+\_\+planner.\+h$>$}\newline
-{\ttfamily \#include $<$tesseract\+\_\+motion\+\_\+planners/trajopt/config/trajopt\+\_\+planner\+\_\+default\+\_\+config.\+h$>$}\newline
-{\ttfamily \#include $<$tesseract\+\_\+motion\+\_\+planners/trajopt/config/trajopt\+\_\+planner\+\_\+freespace\+\_\+config.\+h$>$}\newline
-{\ttfamily \#include $<$urdf\+\_\+parser/urdf\+\_\+parser.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+motion\+\_\+planners/trajopt/profile/trajopt\+\_\+default\+\_\+plan\+\_\+profile.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+motion\+\_\+planners/trajopt/profile/trajopt\+\_\+default\+\_\+composite\+\_\+profile.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+motion\+\_\+planners/core/utils.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+motion\+\_\+planners/trajopt/problem\+\_\+generators/default\+\_\+problem\+\_\+generator.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+motion\+\_\+planners/interface\+\_\+utils.\+h$>$}\newline
+Include dependency graph for trajopt\+\_\+planner\+\_\+tests.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d0/dc3/trajopt__planner__tests_8cpp__incl}
+\end{center}
+\end{figure}
 \doxysubsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
@@ -29,30 +45,28 @@ std\+::string \mbox{\hyperlink{trajopt__planner__tests_8cpp_ad43b67aac2fb3de014c
 \begin{DoxyCompactList}\small\item\em Checks if the vector of base class types contains at least one instance of the Derived type. \end{DoxyCompactList}\item 
 {\footnotesize template$<$class Base , class Derived $>$ }\\bool \mbox{\hyperlink{namespacetesseract__tests_a09e47f149b4157d2e19cf2cd3455fa81}{tesseract\+\_\+tests\+::object\+Is\+Type}} (Base unit)
 \begin{DoxyCompactList}\small\item\em Checks if the object passed in is of the derived type. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{trajopt__planner__tests_8cpp_ae66f37ff0029b304a736bbb365889d1d}{T\+E\+S\+T\+\_\+F}} (\mbox{\hyperlink{classTesseractPlanningTrajoptUnit}{Tesseract\+Planning\+Trajopt\+Unit}}, Trajopt\+Freespace\+Planner0)
+\mbox{\hyperlink{trajopt__planner__tests_8cpp_a13f72fc2196437b3df8e7147e25c3e11}{TEST\+\_\+F}} (\mbox{\hyperlink{classTesseractPlanningTrajoptUnit}{Tesseract\+Planning\+Trajopt\+Unit}}, Trajopt\+Planner\+Boolean\+Flags\+Joint\+Joint)
 \item 
-\mbox{\hyperlink{trajopt__planner__tests_8cpp_a84cf1e582ebca7ae05032d933b102e94}{T\+E\+S\+T\+\_\+F}} (\mbox{\hyperlink{classTesseractPlanningTrajoptUnit}{Tesseract\+Planning\+Trajopt\+Unit}}, Trajopt\+Freespace\+Planner1)
+\mbox{\hyperlink{trajopt__planner__tests_8cpp_a005bcf838e8591afd251d8f1181371a2}{TEST\+\_\+F}} (\mbox{\hyperlink{classTesseractPlanningTrajoptUnit}{Tesseract\+Planning\+Trajopt\+Unit}}, Trajopt\+Freespace\+Joint\+Joint)
 \item 
-\mbox{\hyperlink{trajopt__planner__tests_8cpp_a0409fefee20d49a56dc6da025f221f26}{T\+E\+S\+T\+\_\+F}} (\mbox{\hyperlink{classTesseractPlanningTrajoptUnit}{Tesseract\+Planning\+Trajopt\+Unit}}, Trajopt\+Freespace\+Planner2)
+\mbox{\hyperlink{trajopt__planner__tests_8cpp_a2837911f27424011b0894e9115f95290}{TEST\+\_\+F}} (\mbox{\hyperlink{classTesseractPlanningTrajoptUnit}{Tesseract\+Planning\+Trajopt\+Unit}}, Trajopt\+Freespace\+Joint\+Cart)
 \item 
-\mbox{\hyperlink{trajopt__planner__tests_8cpp_aa69ef7f0643165911dab5748c77a7a7f}{T\+E\+S\+T\+\_\+F}} (\mbox{\hyperlink{classTesseractPlanningTrajoptUnit}{Tesseract\+Planning\+Trajopt\+Unit}}, Trajopt\+Freespace\+Planner3)
+\mbox{\hyperlink{trajopt__planner__tests_8cpp_ab626b45ce8d883bdd43396efd37f2db5}{TEST\+\_\+F}} (\mbox{\hyperlink{classTesseractPlanningTrajoptUnit}{Tesseract\+Planning\+Trajopt\+Unit}}, Trajopt\+Freespace\+Cart\+Joint)
 \item 
-\mbox{\hyperlink{trajopt__planner__tests_8cpp_ab7aefb72fb2df4586e4d6c6502d77e4b}{T\+E\+S\+T\+\_\+F}} (\mbox{\hyperlink{classTesseractPlanningTrajoptUnit}{Tesseract\+Planning\+Trajopt\+Unit}}, Trajopt\+Freespace\+Planner4)
+\mbox{\hyperlink{trajopt__planner__tests_8cpp_aceb5a74bd3a9a88f15d56f7ca67382c3}{TEST\+\_\+F}} (\mbox{\hyperlink{classTesseractPlanningTrajoptUnit}{Tesseract\+Planning\+Trajopt\+Unit}}, Trajopt\+Freespace\+Cart\+Cart)
 \item 
-\mbox{\hyperlink{trajopt__planner__tests_8cpp_a28546ec84914913600296404c6728370}{T\+E\+S\+T\+\_\+F}} (\mbox{\hyperlink{classTesseractPlanningTrajoptUnit}{Tesseract\+Planning\+Trajopt\+Unit}}, Trajopt\+Array\+Planner0)
+\mbox{\hyperlink{trajopt__planner__tests_8cpp_a07385b15790c5ee82d04713c417b7c23}{TEST\+\_\+F}} (\mbox{\hyperlink{classTesseractPlanningTrajoptUnit}{Tesseract\+Planning\+Trajopt\+Unit}}, Trajopt\+Planner\+Boolean\+Flags\+Cart\+Cart)
 \item 
-\mbox{\hyperlink{trajopt__planner__tests_8cpp_a8e7a9ad32819dd9b938812a8e108724f}{T\+E\+S\+T\+\_\+F}} (\mbox{\hyperlink{classTesseractPlanningTrajoptUnit}{Tesseract\+Planning\+Trajopt\+Unit}}, Trajopt\+Array\+Planner1)
+\mbox{\hyperlink{trajopt__planner__tests_8cpp_ac7378e7269e2444b45b4af5b318361c2}{TEST\+\_\+F}} (\mbox{\hyperlink{classTesseractPlanningTrajoptUnit}{Tesseract\+Planning\+Trajopt\+Unit}}, Trajopt\+Array\+Joint\+Constraint)
 \item 
-\mbox{\hyperlink{trajopt__planner__tests_8cpp_ae8c1eb4f5fccc4252dc1ed320cd4335d}{T\+E\+S\+T\+\_\+F}} (\mbox{\hyperlink{classTesseractPlanningTrajoptUnit}{Tesseract\+Planning\+Trajopt\+Unit}}, Trajopt\+Array\+Planner2)
-\item 
-\mbox{\hyperlink{trajopt__planner__tests_8cpp_afe4bb72d2a19caddbd3822f64fa24e70}{T\+E\+S\+T\+\_\+F}} (\mbox{\hyperlink{classTesseractPlanningTrajoptUnit}{Tesseract\+Planning\+Trajopt\+Unit}}, Trajopt\+Array\+Planner3)
+\mbox{\hyperlink{trajopt__planner__tests_8cpp_a40fd4d384c4fa349ea33a59cbbe8de0b}{TEST\+\_\+F}} (\mbox{\hyperlink{classTesseractPlanningTrajoptUnit}{Tesseract\+Planning\+Trajopt\+Unit}}, Trajopt\+Array\+Joint\+Cost)
 \item 
 int \mbox{\hyperlink{trajopt__planner__tests_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (int argc, char $\ast$$\ast$argv)
 \end{DoxyCompactItemize}
 \doxysubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{macros_8h_a8cc0e3c6a3382c5c0b19eb9e676fc2db}{T\+E\+S\+S\+E\+R\+A\+C\+T\+\_\+\+C\+O\+M\+M\+O\+N\+\_\+\+I\+G\+N\+O\+R\+E\+\_\+\+W\+A\+R\+N\+I\+N\+G\+S\+\_\+\+P\+U\+SH}} \mbox{\hyperlink{macros_8h_a7af8561cf52519e9896b0697095c1b8b}{T\+E\+S\+S\+E\+R\+A\+C\+T\+\_\+\+C\+O\+M\+M\+O\+N\+\_\+\+I\+G\+N\+O\+R\+E\+\_\+\+W\+A\+R\+N\+I\+N\+G\+S\+\_\+\+P\+OP}} const int \mbox{\hyperlink{trajopt__planner__tests_8cpp_a4d6c526d87c61a326efd3362c55c44be}{N\+U\+M\+\_\+\+S\+T\+E\+PS}} = 7
+\mbox{\hyperlink{macros_8h_a8cc0e3c6a3382c5c0b19eb9e676fc2db}{TESSERACT\+\_\+\+COMMON\+\_\+\+IGNORE\+\_\+\+WARNINGS\+\_\+\+PUSH}} \mbox{\hyperlink{macros_8h_a7af8561cf52519e9896b0697095c1b8b}{TESSERACT\+\_\+\+COMMON\+\_\+\+IGNORE\+\_\+\+WARNINGS\+\_\+\+POP}} const int \mbox{\hyperlink{trajopt__planner__tests_8cpp_a4d6c526d87c61a326efd3362c55c44be}{NUM\+\_\+\+STEPS}} = 7
 \end{DoxyCompactItemize}
 
 
@@ -69,59 +83,53 @@ int \mbox{\hyperlink{trajopt__planner__tests_8cpp_a3c04138a5bfe5d72780bb7e82a18e
 \doxysubsubsection{\texorpdfstring{main()}{main()}}
 {\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{trajopt__planner__tests_8cpp_a28546ec84914913600296404c6728370}\label{trajopt__planner__tests_8cpp_a28546ec84914913600296404c6728370}} 
+\mbox{\Hypertarget{trajopt__planner__tests_8cpp_ac7378e7269e2444b45b4af5b318361c2}\label{trajopt__planner__tests_8cpp_ac7378e7269e2444b45b4af5b318361c2}} 
 \index{trajopt\_planner\_tests.cpp@{trajopt\_planner\_tests.cpp}!TEST\_F@{TEST\_F}}
 \index{TEST\_F@{TEST\_F}!trajopt\_planner\_tests.cpp@{trajopt\_planner\_tests.cpp}}
-\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [1/9]}}
-{\footnotesize\ttfamily T\+E\+S\+T\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTesseractPlanningTrajoptUnit}{Tesseract\+Planning\+Trajopt\+Unit}}}]{,  }\item[{Trajopt\+Array\+Planner0}]{ }\end{DoxyParamCaption})}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [1/8]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTesseractPlanningTrajoptUnit}{Tesseract\+Planning\+Trajopt\+Unit}}}]{,  }\item[{Trajopt\+Array\+Joint\+Constraint}]{ }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{trajopt__planner__tests_8cpp_a8e7a9ad32819dd9b938812a8e108724f}\label{trajopt__planner__tests_8cpp_a8e7a9ad32819dd9b938812a8e108724f}} 
+\mbox{\Hypertarget{trajopt__planner__tests_8cpp_a40fd4d384c4fa349ea33a59cbbe8de0b}\label{trajopt__planner__tests_8cpp_a40fd4d384c4fa349ea33a59cbbe8de0b}} 
 \index{trajopt\_planner\_tests.cpp@{trajopt\_planner\_tests.cpp}!TEST\_F@{TEST\_F}}
 \index{TEST\_F@{TEST\_F}!trajopt\_planner\_tests.cpp@{trajopt\_planner\_tests.cpp}}
-\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [2/9]}}
-{\footnotesize\ttfamily T\+E\+S\+T\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTesseractPlanningTrajoptUnit}{Tesseract\+Planning\+Trajopt\+Unit}}}]{,  }\item[{Trajopt\+Array\+Planner1}]{ }\end{DoxyParamCaption})}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [2/8]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTesseractPlanningTrajoptUnit}{Tesseract\+Planning\+Trajopt\+Unit}}}]{,  }\item[{Trajopt\+Array\+Joint\+Cost}]{ }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{trajopt__planner__tests_8cpp_ae8c1eb4f5fccc4252dc1ed320cd4335d}\label{trajopt__planner__tests_8cpp_ae8c1eb4f5fccc4252dc1ed320cd4335d}} 
+\mbox{\Hypertarget{trajopt__planner__tests_8cpp_aceb5a74bd3a9a88f15d56f7ca67382c3}\label{trajopt__planner__tests_8cpp_aceb5a74bd3a9a88f15d56f7ca67382c3}} 
 \index{trajopt\_planner\_tests.cpp@{trajopt\_planner\_tests.cpp}!TEST\_F@{TEST\_F}}
 \index{TEST\_F@{TEST\_F}!trajopt\_planner\_tests.cpp@{trajopt\_planner\_tests.cpp}}
-\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [3/9]}}
-{\footnotesize\ttfamily T\+E\+S\+T\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTesseractPlanningTrajoptUnit}{Tesseract\+Planning\+Trajopt\+Unit}}}]{,  }\item[{Trajopt\+Array\+Planner2}]{ }\end{DoxyParamCaption})}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [3/8]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTesseractPlanningTrajoptUnit}{Tesseract\+Planning\+Trajopt\+Unit}}}]{,  }\item[{Trajopt\+Freespace\+Cart\+Cart}]{ }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{trajopt__planner__tests_8cpp_afe4bb72d2a19caddbd3822f64fa24e70}\label{trajopt__planner__tests_8cpp_afe4bb72d2a19caddbd3822f64fa24e70}} 
+\mbox{\Hypertarget{trajopt__planner__tests_8cpp_ab626b45ce8d883bdd43396efd37f2db5}\label{trajopt__planner__tests_8cpp_ab626b45ce8d883bdd43396efd37f2db5}} 
 \index{trajopt\_planner\_tests.cpp@{trajopt\_planner\_tests.cpp}!TEST\_F@{TEST\_F}}
 \index{TEST\_F@{TEST\_F}!trajopt\_planner\_tests.cpp@{trajopt\_planner\_tests.cpp}}
-\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [4/9]}}
-{\footnotesize\ttfamily T\+E\+S\+T\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTesseractPlanningTrajoptUnit}{Tesseract\+Planning\+Trajopt\+Unit}}}]{,  }\item[{Trajopt\+Array\+Planner3}]{ }\end{DoxyParamCaption})}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [4/8]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTesseractPlanningTrajoptUnit}{Tesseract\+Planning\+Trajopt\+Unit}}}]{,  }\item[{Trajopt\+Freespace\+Cart\+Joint}]{ }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{trajopt__planner__tests_8cpp_ae66f37ff0029b304a736bbb365889d1d}\label{trajopt__planner__tests_8cpp_ae66f37ff0029b304a736bbb365889d1d}} 
+\mbox{\Hypertarget{trajopt__planner__tests_8cpp_a2837911f27424011b0894e9115f95290}\label{trajopt__planner__tests_8cpp_a2837911f27424011b0894e9115f95290}} 
 \index{trajopt\_planner\_tests.cpp@{trajopt\_planner\_tests.cpp}!TEST\_F@{TEST\_F}}
 \index{TEST\_F@{TEST\_F}!trajopt\_planner\_tests.cpp@{trajopt\_planner\_tests.cpp}}
-\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [5/9]}}
-{\footnotesize\ttfamily T\+E\+S\+T\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTesseractPlanningTrajoptUnit}{Tesseract\+Planning\+Trajopt\+Unit}}}]{,  }\item[{Trajopt\+Freespace\+Planner0}]{ }\end{DoxyParamCaption})}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [5/8]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTesseractPlanningTrajoptUnit}{Tesseract\+Planning\+Trajopt\+Unit}}}]{,  }\item[{Trajopt\+Freespace\+Joint\+Cart}]{ }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{trajopt__planner__tests_8cpp_a84cf1e582ebca7ae05032d933b102e94}\label{trajopt__planner__tests_8cpp_a84cf1e582ebca7ae05032d933b102e94}} 
+\mbox{\Hypertarget{trajopt__planner__tests_8cpp_a005bcf838e8591afd251d8f1181371a2}\label{trajopt__planner__tests_8cpp_a005bcf838e8591afd251d8f1181371a2}} 
 \index{trajopt\_planner\_tests.cpp@{trajopt\_planner\_tests.cpp}!TEST\_F@{TEST\_F}}
 \index{TEST\_F@{TEST\_F}!trajopt\_planner\_tests.cpp@{trajopt\_planner\_tests.cpp}}
-\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [6/9]}}
-{\footnotesize\ttfamily T\+E\+S\+T\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTesseractPlanningTrajoptUnit}{Tesseract\+Planning\+Trajopt\+Unit}}}]{,  }\item[{Trajopt\+Freespace\+Planner1}]{ }\end{DoxyParamCaption})}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [6/8]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTesseractPlanningTrajoptUnit}{Tesseract\+Planning\+Trajopt\+Unit}}}]{,  }\item[{Trajopt\+Freespace\+Joint\+Joint}]{ }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{trajopt__planner__tests_8cpp_a0409fefee20d49a56dc6da025f221f26}\label{trajopt__planner__tests_8cpp_a0409fefee20d49a56dc6da025f221f26}} 
+\mbox{\Hypertarget{trajopt__planner__tests_8cpp_a07385b15790c5ee82d04713c417b7c23}\label{trajopt__planner__tests_8cpp_a07385b15790c5ee82d04713c417b7c23}} 
 \index{trajopt\_planner\_tests.cpp@{trajopt\_planner\_tests.cpp}!TEST\_F@{TEST\_F}}
 \index{TEST\_F@{TEST\_F}!trajopt\_planner\_tests.cpp@{trajopt\_planner\_tests.cpp}}
-\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [7/9]}}
-{\footnotesize\ttfamily T\+E\+S\+T\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTesseractPlanningTrajoptUnit}{Tesseract\+Planning\+Trajopt\+Unit}}}]{,  }\item[{Trajopt\+Freespace\+Planner2}]{ }\end{DoxyParamCaption})}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [7/8]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTesseractPlanningTrajoptUnit}{Tesseract\+Planning\+Trajopt\+Unit}}}]{,  }\item[{Trajopt\+Planner\+Boolean\+Flags\+Cart\+Cart}]{ }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{trajopt__planner__tests_8cpp_aa69ef7f0643165911dab5748c77a7a7f}\label{trajopt__planner__tests_8cpp_aa69ef7f0643165911dab5748c77a7a7f}} 
+\mbox{\Hypertarget{trajopt__planner__tests_8cpp_a13f72fc2196437b3df8e7147e25c3e11}\label{trajopt__planner__tests_8cpp_a13f72fc2196437b3df8e7147e25c3e11}} 
 \index{trajopt\_planner\_tests.cpp@{trajopt\_planner\_tests.cpp}!TEST\_F@{TEST\_F}}
 \index{TEST\_F@{TEST\_F}!trajopt\_planner\_tests.cpp@{trajopt\_planner\_tests.cpp}}
-\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [8/9]}}
-{\footnotesize\ttfamily T\+E\+S\+T\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTesseractPlanningTrajoptUnit}{Tesseract\+Planning\+Trajopt\+Unit}}}]{,  }\item[{Trajopt\+Freespace\+Planner3}]{ }\end{DoxyParamCaption})}
-
-\mbox{\Hypertarget{trajopt__planner__tests_8cpp_ab7aefb72fb2df4586e4d6c6502d77e4b}\label{trajopt__planner__tests_8cpp_ab7aefb72fb2df4586e4d6c6502d77e4b}} 
-\index{trajopt\_planner\_tests.cpp@{trajopt\_planner\_tests.cpp}!TEST\_F@{TEST\_F}}
-\index{TEST\_F@{TEST\_F}!trajopt\_planner\_tests.cpp@{trajopt\_planner\_tests.cpp}}
-\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [9/9]}}
-{\footnotesize\ttfamily T\+E\+S\+T\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTesseractPlanningTrajoptUnit}{Tesseract\+Planning\+Trajopt\+Unit}}}]{,  }\item[{Trajopt\+Freespace\+Planner4}]{ }\end{DoxyParamCaption})}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [8/8]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTesseractPlanningTrajoptUnit}{Tesseract\+Planning\+Trajopt\+Unit}}}]{,  }\item[{Trajopt\+Planner\+Boolean\+Flags\+Joint\+Joint}]{ }\end{DoxyParamCaption})}
 
 
 
@@ -130,7 +138,7 @@ int \mbox{\hyperlink{trajopt__planner__tests_8cpp_a3c04138a5bfe5d72780bb7e82a18e
 \index{trajopt\_planner\_tests.cpp@{trajopt\_planner\_tests.cpp}!NUM\_STEPS@{NUM\_STEPS}}
 \index{NUM\_STEPS@{NUM\_STEPS}!trajopt\_planner\_tests.cpp@{trajopt\_planner\_tests.cpp}}
 \doxysubsubsection{\texorpdfstring{NUM\_STEPS}{NUM\_STEPS}}
-{\footnotesize\ttfamily \mbox{\hyperlink{macros_8h_a8cc0e3c6a3382c5c0b19eb9e676fc2db}{T\+E\+S\+S\+E\+R\+A\+C\+T\+\_\+\+C\+O\+M\+M\+O\+N\+\_\+\+I\+G\+N\+O\+R\+E\+\_\+\+W\+A\+R\+N\+I\+N\+G\+S\+\_\+\+P\+U\+SH}} \mbox{\hyperlink{macros_8h_a7af8561cf52519e9896b0697095c1b8b}{T\+E\+S\+S\+E\+R\+A\+C\+T\+\_\+\+C\+O\+M\+M\+O\+N\+\_\+\+I\+G\+N\+O\+R\+E\+\_\+\+W\+A\+R\+N\+I\+N\+G\+S\+\_\+\+P\+OP}} const int N\+U\+M\+\_\+\+S\+T\+E\+PS = 7}
+{\footnotesize\ttfamily \mbox{\hyperlink{macros_8h_a8cc0e3c6a3382c5c0b19eb9e676fc2db}{TESSERACT\+\_\+\+COMMON\+\_\+\+IGNORE\+\_\+\+WARNINGS\+\_\+\+PUSH}} \mbox{\hyperlink{macros_8h_a7af8561cf52519e9896b0697095c1b8b}{TESSERACT\+\_\+\+COMMON\+\_\+\+IGNORE\+\_\+\+WARNINGS\+\_\+\+POP}} const int NUM\+\_\+\+STEPS = 7}
 
 These tests test the Traj\+Opt\+Array\+Planner and the Traj\+Opt\+Freespace\+Planner. They primarily check that the correct types of costs and constraints are added when the flags like smooth\+\_\+velocity are specified. However they are not foolproof. They only check that at least one term of the correct type is in the cost or constraint vector. If there should be more than one, then it might not be caught. This could be improved in the future, but it is better than nothing.
 

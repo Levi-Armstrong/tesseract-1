@@ -1,0 +1,6 @@
+<map id="tesseract_collision::CollisionCheckConfig" name="tesseract_collision::CollisionCheckConfig">
+<area shape="rect" id="node1" title="This is a high level structure containing common information that collision checking utilities need...." alt="" coords="664,37,815,79"/>
+<area shape="rect" id="node2" href="$da/df6/structtesseract__collision_1_1ContactRequest.html" title="The ContactRequest struct." alt="" coords="350,5,481,47"/>
+<area shape="rect" id="node3" href="$d3/da1/structtesseract__collision_1_1CollisionMarginData.html" title="Stores information about how the margins allowed between collision objects." alt="" coords="344,71,487,112"/>
+<area shape="rect" id="node4" title=" " alt="" coords="5,56,212,127"/>
+</map>

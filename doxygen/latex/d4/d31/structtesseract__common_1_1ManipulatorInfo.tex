@@ -1,0 +1,168 @@
+\hypertarget{structtesseract__common_1_1ManipulatorInfo}{}\doxysection{tesseract\+\_\+common\+::Manipulator\+Info Struct Reference}
+\label{structtesseract__common_1_1ManipulatorInfo}\index{tesseract\_common::ManipulatorInfo@{tesseract\_common::ManipulatorInfo}}
+
+
+Contains information about a robot manipulator.  
+
+
+
+
+{\ttfamily \#include $<$manipulator\+\_\+info.\+h$>$}
+
+
+
+Collaboration diagram for tesseract\+\_\+common\+::Manipulator\+Info\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/dc5/structtesseract__common_1_1ManipulatorInfo__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+EIGEN\+\_\+\+MAKE\+\_\+\+ALIGNED\+\_\+\+OPERATOR\+\_\+\+NEW \mbox{\hyperlink{structtesseract__common_1_1ManipulatorInfo_ae3a5fb1060b979532c639ed77d38d9eb}{Manipulator\+Info}} ()=default
+\item 
+\mbox{\hyperlink{structtesseract__common_1_1ManipulatorInfo_afd0bfa5fb44531b699bb135f71a4b62b}{Manipulator\+Info}} (std\+::string \mbox{\hyperlink{structtesseract__common_1_1ManipulatorInfo_a01a307e8b4b478b5129294157ad344fd}{manipulator}})
+\item 
+\mbox{\hyperlink{structtesseract__common_1_1ManipulatorInfo_aa28c7a1e0c281d2e3ae3dee514b3b4b2}{Manipulator\+Info}} (const tinyxml2\+::\+XMLElement \&xml\+\_\+element)
+\item 
+\mbox{\hyperlink{structtesseract__common_1_1ManipulatorInfo}{Manipulator\+Info}} \mbox{\hyperlink{structtesseract__common_1_1ManipulatorInfo_afcf7745a4e3ea769fef1122af8cc1fb1}{get\+Combined}} (const \mbox{\hyperlink{structtesseract__common_1_1ManipulatorInfo}{Manipulator\+Info}} \&manip\+\_\+info\+\_\+override) const
+\begin{DoxyCompactList}\small\item\em If the provided manipulator information member is not empty it will override this and return a new manipualtor information with the combined results. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structtesseract__common_1_1ManipulatorInfo_a7e57927da4742bb782eeacbe803e556d}{empty}} () const
+\begin{DoxyCompactList}\small\item\em Check if any data is current being stored. \end{DoxyCompactList}\item 
+tinyxml2\+::\+XMLElement $\ast$ \mbox{\hyperlink{structtesseract__common_1_1ManipulatorInfo_ae578d6281a7a48a12e973a434dfa5648}{to\+XML}} (tinyxml2\+::\+XMLDocument \&doc) const
+\item 
+bool \mbox{\hyperlink{structtesseract__common_1_1ManipulatorInfo_a9c2c47999e664503a4f5b99787d86b57}{operator==}} (const \mbox{\hyperlink{structtesseract__common_1_1ManipulatorInfo}{Manipulator\+Info}} \&other) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{structtesseract__common_1_1ManipulatorInfo_a01a307e8b4b478b5129294157ad344fd}{manipulator}}
+\begin{DoxyCompactList}\small\item\em Name of the manipulator group. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{structtesseract__common_1_1ManipulatorInfo_a9ab227eae3c22eea4d68b7284313eab2}{manipulator\+\_\+ik\+\_\+solver}}
+\begin{DoxyCompactList}\small\item\em (Optional) IK Solver to be used \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classtesseract__common_1_1ToolCenterPoint}{Tool\+Center\+Point}} \mbox{\hyperlink{structtesseract__common_1_1ManipulatorInfo_af64e5a3496ec957da16feec23d3557b8}{tcp}}
+\begin{DoxyCompactList}\small\item\em (Optional) The tool center point, if of type bool it is empty \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{structtesseract__common_1_1ManipulatorInfo_a256f01ba9f28a07c7681dd85cb6bf631}{working\+\_\+frame}}
+\begin{DoxyCompactList}\small\item\em (Optional) The working frame to which waypoints are relative. If empty the base link of the environment is used \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Contains information about a robot manipulator. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structtesseract__common_1_1ManipulatorInfo_ae3a5fb1060b979532c639ed77d38d9eb}\label{structtesseract__common_1_1ManipulatorInfo_ae3a5fb1060b979532c639ed77d38d9eb}} 
+\index{tesseract\_common::ManipulatorInfo@{tesseract\_common::ManipulatorInfo}!ManipulatorInfo@{ManipulatorInfo}}
+\index{ManipulatorInfo@{ManipulatorInfo}!tesseract\_common::ManipulatorInfo@{tesseract\_common::ManipulatorInfo}}
+\doxysubsubsection{\texorpdfstring{ManipulatorInfo()}{ManipulatorInfo()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily EIGEN\+\_\+\+MAKE\+\_\+\+ALIGNED\+\_\+\+OPERATOR\+\_\+\+NEW tesseract\+\_\+common\+::\+Manipulator\+Info\+::\+Manipulator\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{structtesseract__common_1_1ManipulatorInfo_afd0bfa5fb44531b699bb135f71a4b62b}\label{structtesseract__common_1_1ManipulatorInfo_afd0bfa5fb44531b699bb135f71a4b62b}} 
+\index{tesseract\_common::ManipulatorInfo@{tesseract\_common::ManipulatorInfo}!ManipulatorInfo@{ManipulatorInfo}}
+\index{ManipulatorInfo@{ManipulatorInfo}!tesseract\_common::ManipulatorInfo@{tesseract\_common::ManipulatorInfo}}
+\doxysubsubsection{\texorpdfstring{ManipulatorInfo()}{ManipulatorInfo()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily tesseract\+\_\+common\+::\+Manipulator\+Info\+::\+Manipulator\+Info (\begin{DoxyParamCaption}\item[{std\+::string}]{manipulator }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structtesseract__common_1_1ManipulatorInfo_aa28c7a1e0c281d2e3ae3dee514b3b4b2}\label{structtesseract__common_1_1ManipulatorInfo_aa28c7a1e0c281d2e3ae3dee514b3b4b2}} 
+\index{tesseract\_common::ManipulatorInfo@{tesseract\_common::ManipulatorInfo}!ManipulatorInfo@{ManipulatorInfo}}
+\index{ManipulatorInfo@{ManipulatorInfo}!tesseract\_common::ManipulatorInfo@{tesseract\_common::ManipulatorInfo}}
+\doxysubsubsection{\texorpdfstring{ManipulatorInfo()}{ManipulatorInfo()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily tesseract\+\_\+common\+::\+Manipulator\+Info\+::\+Manipulator\+Info (\begin{DoxyParamCaption}\item[{const tinyxml2\+::\+XMLElement \&}]{xml\+\_\+element }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structtesseract__common_1_1ManipulatorInfo_a7e57927da4742bb782eeacbe803e556d}\label{structtesseract__common_1_1ManipulatorInfo_a7e57927da4742bb782eeacbe803e556d}} 
+\index{tesseract\_common::ManipulatorInfo@{tesseract\_common::ManipulatorInfo}!empty@{empty}}
+\index{empty@{empty}!tesseract\_common::ManipulatorInfo@{tesseract\_common::ManipulatorInfo}}
+\doxysubsubsection{\texorpdfstring{empty()}{empty()}}
+{\footnotesize\ttfamily bool tesseract\+\_\+common\+::\+Manipulator\+Info\+::empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Check if any data is current being stored. 
+
+\begin{DoxyReturn}{Returns}
+True if empty otherwise false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structtesseract__common_1_1ManipulatorInfo_afcf7745a4e3ea769fef1122af8cc1fb1}\label{structtesseract__common_1_1ManipulatorInfo_afcf7745a4e3ea769fef1122af8cc1fb1}} 
+\index{tesseract\_common::ManipulatorInfo@{tesseract\_common::ManipulatorInfo}!getCombined@{getCombined}}
+\index{getCombined@{getCombined}!tesseract\_common::ManipulatorInfo@{tesseract\_common::ManipulatorInfo}}
+\doxysubsubsection{\texorpdfstring{getCombined()}{getCombined()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structtesseract__common_1_1ManipulatorInfo}{Manipulator\+Info}} tesseract\+\_\+common\+::\+Manipulator\+Info\+::get\+Combined (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structtesseract__common_1_1ManipulatorInfo}{Manipulator\+Info}} \&}]{manip\+\_\+info\+\_\+override }\end{DoxyParamCaption}) const}
+
+
+
+If the provided manipulator information member is not empty it will override this and return a new manipualtor information with the combined results. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em manip\+\_\+info\+\_\+override} & The manipulator information to check for overrides \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The combined manipulator information 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structtesseract__common_1_1ManipulatorInfo_a9c2c47999e664503a4f5b99787d86b57}\label{structtesseract__common_1_1ManipulatorInfo_a9c2c47999e664503a4f5b99787d86b57}} 
+\index{tesseract\_common::ManipulatorInfo@{tesseract\_common::ManipulatorInfo}!operator==@{operator==}}
+\index{operator==@{operator==}!tesseract\_common::ManipulatorInfo@{tesseract\_common::ManipulatorInfo}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool tesseract\+\_\+common\+::\+Manipulator\+Info\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structtesseract__common_1_1ManipulatorInfo}{Manipulator\+Info}} \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structtesseract__common_1_1ManipulatorInfo_ae578d6281a7a48a12e973a434dfa5648}\label{structtesseract__common_1_1ManipulatorInfo_ae578d6281a7a48a12e973a434dfa5648}} 
+\index{tesseract\_common::ManipulatorInfo@{tesseract\_common::ManipulatorInfo}!toXML@{toXML}}
+\index{toXML@{toXML}!tesseract\_common::ManipulatorInfo@{tesseract\_common::ManipulatorInfo}}
+\doxysubsubsection{\texorpdfstring{toXML()}{toXML()}}
+{\footnotesize\ttfamily tinyxml2\+::\+XMLElement $\ast$ tesseract\+\_\+common\+::\+Manipulator\+Info\+::to\+XML (\begin{DoxyParamCaption}\item[{tinyxml2\+::\+XMLDocument \&}]{doc }\end{DoxyParamCaption}) const}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structtesseract__common_1_1ManipulatorInfo_a01a307e8b4b478b5129294157ad344fd}\label{structtesseract__common_1_1ManipulatorInfo_a01a307e8b4b478b5129294157ad344fd}} 
+\index{tesseract\_common::ManipulatorInfo@{tesseract\_common::ManipulatorInfo}!manipulator@{manipulator}}
+\index{manipulator@{manipulator}!tesseract\_common::ManipulatorInfo@{tesseract\_common::ManipulatorInfo}}
+\doxysubsubsection{\texorpdfstring{manipulator}{manipulator}}
+{\footnotesize\ttfamily std\+::string tesseract\+\_\+common\+::\+Manipulator\+Info\+::manipulator}
+
+
+
+Name of the manipulator group. 
+
+\mbox{\Hypertarget{structtesseract__common_1_1ManipulatorInfo_a9ab227eae3c22eea4d68b7284313eab2}\label{structtesseract__common_1_1ManipulatorInfo_a9ab227eae3c22eea4d68b7284313eab2}} 
+\index{tesseract\_common::ManipulatorInfo@{tesseract\_common::ManipulatorInfo}!manipulator\_ik\_solver@{manipulator\_ik\_solver}}
+\index{manipulator\_ik\_solver@{manipulator\_ik\_solver}!tesseract\_common::ManipulatorInfo@{tesseract\_common::ManipulatorInfo}}
+\doxysubsubsection{\texorpdfstring{manipulator\_ik\_solver}{manipulator\_ik\_solver}}
+{\footnotesize\ttfamily std\+::string tesseract\+\_\+common\+::\+Manipulator\+Info\+::manipulator\+\_\+ik\+\_\+solver}
+
+
+
+(Optional) IK Solver to be used 
+
+\mbox{\Hypertarget{structtesseract__common_1_1ManipulatorInfo_af64e5a3496ec957da16feec23d3557b8}\label{structtesseract__common_1_1ManipulatorInfo_af64e5a3496ec957da16feec23d3557b8}} 
+\index{tesseract\_common::ManipulatorInfo@{tesseract\_common::ManipulatorInfo}!tcp@{tcp}}
+\index{tcp@{tcp}!tesseract\_common::ManipulatorInfo@{tesseract\_common::ManipulatorInfo}}
+\doxysubsubsection{\texorpdfstring{tcp}{tcp}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__common_1_1ToolCenterPoint}{Tool\+Center\+Point}} tesseract\+\_\+common\+::\+Manipulator\+Info\+::tcp}
+
+
+
+(Optional) The tool center point, if of type bool it is empty 
+
+\mbox{\Hypertarget{structtesseract__common_1_1ManipulatorInfo_a256f01ba9f28a07c7681dd85cb6bf631}\label{structtesseract__common_1_1ManipulatorInfo_a256f01ba9f28a07c7681dd85cb6bf631}} 
+\index{tesseract\_common::ManipulatorInfo@{tesseract\_common::ManipulatorInfo}!working\_frame@{working\_frame}}
+\index{working\_frame@{working\_frame}!tesseract\_common::ManipulatorInfo@{tesseract\_common::ManipulatorInfo}}
+\doxysubsubsection{\texorpdfstring{working\_frame}{working\_frame}}
+{\footnotesize\ttfamily std\+::string tesseract\+\_\+common\+::\+Manipulator\+Info\+::working\+\_\+frame}
+
+
+
+(Optional) The working frame to which waypoints are relative. If empty the base link of the environment is used 
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+tesseract/tesseract\+\_\+common/include/tesseract\+\_\+common/\mbox{\hyperlink{manipulator__info_8h}{manipulator\+\_\+info.\+h}}\item 
+tesseract/tesseract\+\_\+common/src/\mbox{\hyperlink{manipulator__info_8cpp}{manipulator\+\_\+info.\+cpp}}\end{DoxyCompactItemize}

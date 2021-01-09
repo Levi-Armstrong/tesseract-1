@@ -12,12 +12,6 @@
 \doxysubsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
-struct \mbox{\hyperlink{structtesseract__collision_1_1ContactRequest}{Contact\+Request}}
-\begin{DoxyCompactList}\small\item\em The \mbox{\hyperlink{structtesseract__collision_1_1ContactRequest}{Contact\+Request}} struct. \end{DoxyCompactList}\item 
-struct \mbox{\hyperlink{structtesseract__collision_1_1ContactResult}{Contact\+Result}}
-\item 
-struct \mbox{\hyperlink{structtesseract__collision_1_1ContactTestData}{Contact\+Test\+Data}}
-\begin{DoxyCompactList}\small\item\em This data is intended only to be used internal to the collision checkers as a container and should not be externally used by other libraries or packages. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classtesseract__collision_1_1ContinuousContactManager}{Continuous\+Contact\+Manager}}
 \item 
 class \mbox{\hyperlink{classtesseract__collision_1_1ContinuousContactManagerFactory}{Continuous\+Contact\+Manager\+Factory}}
@@ -25,11 +19,25 @@ class \mbox{\hyperlink{classtesseract__collision_1_1ContinuousContactManagerFact
 class \mbox{\hyperlink{classtesseract__collision_1_1DiscreteContactManager}{Discrete\+Contact\+Manager}}
 \item 
 class \mbox{\hyperlink{classtesseract__collision_1_1DiscreteContactManagerFactory}{Discrete\+Contact\+Manager\+Factory}}
-\end{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structtesseract__collision_1_1ContactResult}{Contact\+Result}}
+\item 
+struct \mbox{\hyperlink{structtesseract__collision_1_1ContactRequest}{Contact\+Request}}
+\begin{DoxyCompactList}\small\item\em The \mbox{\hyperlink{structtesseract__collision_1_1ContactRequest}{Contact\+Request}} struct. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structtesseract__collision_1_1CollisionMarginData}{Collision\+Margin\+Data}}
+\begin{DoxyCompactList}\small\item\em Stores information about how the margins allowed between collision objects. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structtesseract__collision_1_1ContactTestData}{Contact\+Test\+Data}}
+\begin{DoxyCompactList}\small\item\em This data is intended only to be used internal to the collision checkers as a container and should not be externally used by other libraries or packages. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structtesseract__collision_1_1CollisionCheckConfig}{Collision\+Check\+Config}}
+\begin{DoxyCompactList}\small\item\em This is a high level structure containing common information that collision checking utilities need. The goal of this config is to allow all collision checking utilities and planners to use the same datastructure. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Typedefs}
 \begin{DoxyCompactItemize}
 \item 
 using \mbox{\hyperlink{namespacetesseract__collision_af5926355228f0196ddf51e6951dbe491}{Object\+Pair\+Key}} = std\+::pair$<$ std\+::string, std\+::string $>$
+\item 
+using \mbox{\hyperlink{namespacetesseract__collision_a194ae98558bcbf09354127d37d74161f}{Continuous\+Contact\+Manager\+Factory\+Create\+Method}} = std\+::function$<$ \mbox{\hyperlink{classtesseract__collision_1_1ContinuousContactManager_a60778058b979eafd448a6a9bec7ff02b}{Continuous\+Contact\+Manager\+::\+Ptr}}()$>$
+\item 
+using \mbox{\hyperlink{namespacetesseract__collision_a52199bae8c798554e1be2fbe83d4070d}{Discrete\+Contact\+Manager\+Factory\+Create\+Method}} = std\+::function$<$ \mbox{\hyperlink{classtesseract__collision_1_1DiscreteContactManager_a108295071670971e81fe3c34794db427}{Discrete\+Contact\+Manager\+::\+Ptr}}()$>$
 \item 
 using \mbox{\hyperlink{namespacetesseract__collision_a2472107aae8174a30873bb0a955c3cb4}{Collision\+Shapes\+Const}} = std\+::vector$<$ \mbox{\hyperlink{classtesseract__geometry_1_1Geometry_a755a973394d2ccb45ad53a5e11ff03c7}{tesseract\+\_\+geometry\+::\+Geometry\+::\+Const\+Ptr}} $>$
 \item 
@@ -48,18 +56,27 @@ using \mbox{\hyperlink{namespacetesseract__collision_a66fd355f5026f0f64424a756a3
 \doxysubsection*{Enumerations}
 \begin{DoxyCompactItemize}
 \item 
-enum \mbox{\hyperlink{namespacetesseract__collision_a267c740fd3b446222ba19cbaa56dab5e}{Continuous\+Collision\+Type}} \{ \mbox{\hyperlink{namespacetesseract__collision_a267c740fd3b446222ba19cbaa56dab5ea79e497b3f5d3d8b23ea29c9370354bb6}{Continuous\+Collision\+Type\+::\+C\+C\+Type\+\_\+\+None}}, 
-\mbox{\hyperlink{namespacetesseract__collision_a267c740fd3b446222ba19cbaa56dab5eaf8c51e6d7c61aa31897c3dd7b0719093}{Continuous\+Collision\+Type\+::\+C\+C\+Type\+\_\+\+Time0}}, 
-\mbox{\hyperlink{namespacetesseract__collision_a267c740fd3b446222ba19cbaa56dab5ea333ec902092c850b7f23cf437d0fac01}{Continuous\+Collision\+Type\+::\+C\+C\+Type\+\_\+\+Time1}}, 
-\mbox{\hyperlink{namespacetesseract__collision_a267c740fd3b446222ba19cbaa56dab5ea1101988a82b0cd8a2e2c5ee5fda455eb}{Continuous\+Collision\+Type\+::\+C\+C\+Type\+\_\+\+Between}}
+enum class \mbox{\hyperlink{namespacetesseract__collision_a267c740fd3b446222ba19cbaa56dab5e}{Continuous\+Collision\+Type}} \{ \mbox{\hyperlink{namespacetesseract__collision_a267c740fd3b446222ba19cbaa56dab5ea79e497b3f5d3d8b23ea29c9370354bb6}{CCType\+\_\+\+None}}
+, \mbox{\hyperlink{namespacetesseract__collision_a267c740fd3b446222ba19cbaa56dab5eaf8c51e6d7c61aa31897c3dd7b0719093}{CCType\+\_\+\+Time0}}
+, \mbox{\hyperlink{namespacetesseract__collision_a267c740fd3b446222ba19cbaa56dab5ea333ec902092c850b7f23cf437d0fac01}{CCType\+\_\+\+Time1}}
+, \mbox{\hyperlink{namespacetesseract__collision_a267c740fd3b446222ba19cbaa56dab5ea1101988a82b0cd8a2e2c5ee5fda455eb}{CCType\+\_\+\+Between}}
  \}
 \item 
-enum \mbox{\hyperlink{namespacetesseract__collision_ac3da4f46ae16e86ba4f1dfd2935eb80c}{Contact\+Test\+Type}} \{ \mbox{\hyperlink{namespacetesseract__collision_ac3da4f46ae16e86ba4f1dfd2935eb80ca2c2624a5059934a947d6e25fe8332ade}{Contact\+Test\+Type\+::\+F\+I\+R\+ST}} = 0, 
-\mbox{\hyperlink{namespacetesseract__collision_ac3da4f46ae16e86ba4f1dfd2935eb80cae9c32f09a44ae1ae34e42d53502fab77}{Contact\+Test\+Type\+::\+C\+L\+O\+S\+E\+ST}} = 1, 
-\mbox{\hyperlink{namespacetesseract__collision_ac3da4f46ae16e86ba4f1dfd2935eb80ca5fb1f955b45e38e31789286a1790398d}{Contact\+Test\+Type\+::\+A\+LL}} = 2, 
-\mbox{\hyperlink{namespacetesseract__collision_ac3da4f46ae16e86ba4f1dfd2935eb80cad9e0d83abd8b9bb4c1998be68831922c}{Contact\+Test\+Type\+::\+L\+I\+M\+I\+T\+ED}} = 3
+enum class \mbox{\hyperlink{namespacetesseract__collision_ac3da4f46ae16e86ba4f1dfd2935eb80c}{Contact\+Test\+Type}} \{ \mbox{\hyperlink{namespacetesseract__collision_ac3da4f46ae16e86ba4f1dfd2935eb80ca2c2624a5059934a947d6e25fe8332ade}{FIRST}} = 0
+, \mbox{\hyperlink{namespacetesseract__collision_ac3da4f46ae16e86ba4f1dfd2935eb80cae9c32f09a44ae1ae34e42d53502fab77}{CLOSEST}} = 1
+, \mbox{\hyperlink{namespacetesseract__collision_ac3da4f46ae16e86ba4f1dfd2935eb80ca5fb1f955b45e38e31789286a1790398d}{ALL}} = 2
+, \mbox{\hyperlink{namespacetesseract__collision_ac3da4f46ae16e86ba4f1dfd2935eb80cad9e0d83abd8b9bb4c1998be68831922c}{LIMITED}} = 3
  \}
-\end{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{namespacetesseract__collision_af17e8ee8632a40cf4b6ed1ba1aec41ac}{Collision\+Evaluator\+Type}} \{ \newline
+\mbox{\hyperlink{namespacetesseract__collision_af17e8ee8632a40cf4b6ed1ba1aec41acab50339a10e1de285ac99d4c3990b8693}{NONE}}
+, \mbox{\hyperlink{namespacetesseract__collision_af17e8ee8632a40cf4b6ed1ba1aec41aca947436f2927405d3b5997a9ffbaee5c1}{DISCRETE}}
+, \mbox{\hyperlink{namespacetesseract__collision_af17e8ee8632a40cf4b6ed1ba1aec41aca4afe53b9adb97f1374fa3e05dd7a1be1}{LVS\+\_\+\+DISCRETE}}
+, \mbox{\hyperlink{namespacetesseract__collision_af17e8ee8632a40cf4b6ed1ba1aec41acab1fa9dd3af034b3ef4291579aa673c07}{CONTINUOUS}}
+, \newline
+\mbox{\hyperlink{namespacetesseract__collision_af17e8ee8632a40cf4b6ed1ba1aec41acab8bde735baca78a8b98c00e1a0a50239}{LVS\+\_\+\+CONTINUOUS}}
+ \}
+\begin{DoxyCompactList}\small\item\em High level descriptor used in planners and utilities to specify what kind of collision check is desired. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -70,7 +87,7 @@ bool \mbox{\hyperlink{namespacetesseract__collision_ab6cce1ce95e96f38382f53976bb
 bool \mbox{\hyperlink{namespacetesseract__collision_a1d5b1daf53ea0152f87f4ab565643478}{is\+Contact\+Allowed}} (const std\+::string \&name1, const std\+::string \&name2, const \mbox{\hyperlink{namespacetesseract__collision_abe7752ce161fbd1139533ac566fec1cb}{Is\+Contact\+Allowed\+Fn}} \&acm, bool verbose=false)
 \begin{DoxyCompactList}\small\item\em Determine if contact is allowed between two objects. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{structtesseract__collision_1_1ContactResult}{Contact\+Result}} $\ast$ \mbox{\hyperlink{namespacetesseract__collision_a6e40c6a2976671ddb907584a16760b6f}{process\+Result}} (\mbox{\hyperlink{structtesseract__collision_1_1ContactTestData}{Contact\+Test\+Data}} \&cdata, \mbox{\hyperlink{structtesseract__collision_1_1ContactResult}{Contact\+Result}} \&contact, const std\+::pair$<$ std\+::string, std\+::string $>$ \&key, bool found)
-\item 
+\begin{DoxyCompactList}\small\item\em process\+Result Processes the \mbox{\hyperlink{structtesseract__collision_1_1ContactResult}{Contact\+Result}} based on the information in the \mbox{\hyperlink{structtesseract__collision_1_1ContactTestData}{Contact\+Test\+Data}} \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{namespacetesseract__collision_ac97bc1eb96f0aa2e1d3033d7e7758849}{create\+Convex\+Hull}} (\mbox{\hyperlink{namespacetesseract__common_af89ed6517f4c84bdb2b037bb40f7d9d9}{tesseract\+\_\+common\+::\+Vector\+Vector3d}} \&vertices, Eigen\+::\+Vector\+Xi \&faces, const \mbox{\hyperlink{namespacetesseract__common_af89ed6517f4c84bdb2b037bb40f7d9d9}{tesseract\+\_\+common\+::\+Vector\+Vector3d}} \&input, double shrink=-\/1, double shrink\+Clamp=-\/1)
 \begin{DoxyCompactList}\small\item\em Create a convex hull from vertices using Bullet Convex Hull Computer. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classtesseract__geometry_1_1ConvexMesh_aecd145c5f75117ff7a3bab1fb921e4c0}{tesseract\+\_\+geometry\+::\+Convex\+Mesh\+::\+Ptr}} \mbox{\hyperlink{namespacetesseract__collision_ad17b98123f412bcc30207daa6931cbb2}{make\+Convex\+Mesh}} (const \mbox{\hyperlink{classtesseract__geometry_1_1Mesh}{tesseract\+\_\+geometry\+::\+Mesh}} \&mesh)
@@ -125,6 +142,18 @@ static const std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{namespacetesser
 \doxysubsubsection{\texorpdfstring{ContactResultVector}{ContactResultVector}}
 {\footnotesize\ttfamily using \mbox{\hyperlink{namespacetesseract__collision_a96d77f62b7c26962d1090f0a2f00419b}{tesseract\+\_\+collision\+::\+Contact\+Result\+Vector}} = typedef \mbox{\hyperlink{namespacetesseract__common_a000d15c3ab8d8ba4ebdaae64153b053a}{tesseract\+\_\+common\+::\+Aligned\+Vector}}$<$\mbox{\hyperlink{structtesseract__collision_1_1ContactResult}{Contact\+Result}}$>$}
 
+\mbox{\Hypertarget{namespacetesseract__collision_a194ae98558bcbf09354127d37d74161f}\label{namespacetesseract__collision_a194ae98558bcbf09354127d37d74161f}} 
+\index{tesseract\_collision@{tesseract\_collision}!ContinuousContactManagerFactoryCreateMethod@{ContinuousContactManagerFactoryCreateMethod}}
+\index{ContinuousContactManagerFactoryCreateMethod@{ContinuousContactManagerFactoryCreateMethod}!tesseract\_collision@{tesseract\_collision}}
+\doxysubsubsection{\texorpdfstring{ContinuousContactManagerFactoryCreateMethod}{ContinuousContactManagerFactoryCreateMethod}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{namespacetesseract__collision_a194ae98558bcbf09354127d37d74161f}{tesseract\+\_\+collision\+::\+Continuous\+Contact\+Manager\+Factory\+Create\+Method}} = typedef std\+::function$<$\mbox{\hyperlink{classtesseract__collision_1_1ContinuousContactManager_a60778058b979eafd448a6a9bec7ff02b}{Continuous\+Contact\+Manager\+::\+Ptr}}()$>$}
+
+\mbox{\Hypertarget{namespacetesseract__collision_a52199bae8c798554e1be2fbe83d4070d}\label{namespacetesseract__collision_a52199bae8c798554e1be2fbe83d4070d}} 
+\index{tesseract\_collision@{tesseract\_collision}!DiscreteContactManagerFactoryCreateMethod@{DiscreteContactManagerFactoryCreateMethod}}
+\index{DiscreteContactManagerFactoryCreateMethod@{DiscreteContactManagerFactoryCreateMethod}!tesseract\_collision@{tesseract\_collision}}
+\doxysubsubsection{\texorpdfstring{DiscreteContactManagerFactoryCreateMethod}{DiscreteContactManagerFactoryCreateMethod}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{namespacetesseract__collision_a52199bae8c798554e1be2fbe83d4070d}{tesseract\+\_\+collision\+::\+Discrete\+Contact\+Manager\+Factory\+Create\+Method}} = typedef std\+::function$<$\mbox{\hyperlink{classtesseract__collision_1_1DiscreteContactManager_a108295071670971e81fe3c34794db427}{Discrete\+Contact\+Manager\+::\+Ptr}}()$>$}
+
 \mbox{\Hypertarget{namespacetesseract__collision_abe7752ce161fbd1139533ac566fec1cb}\label{namespacetesseract__collision_abe7752ce161fbd1139533ac566fec1cb}} 
 \index{tesseract\_collision@{tesseract\_collision}!IsContactAllowedFn@{IsContactAllowedFn}}
 \index{IsContactAllowedFn@{IsContactAllowedFn}!tesseract\_collision@{tesseract\_collision}}
@@ -154,6 +183,38 @@ This is used so users may provide a callback to reject/approve collision results
 
 
 \doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{namespacetesseract__collision_af17e8ee8632a40cf4b6ed1ba1aec41ac}\label{namespacetesseract__collision_af17e8ee8632a40cf4b6ed1ba1aec41ac}} 
+\index{tesseract\_collision@{tesseract\_collision}!CollisionEvaluatorType@{CollisionEvaluatorType}}
+\index{CollisionEvaluatorType@{CollisionEvaluatorType}!tesseract\_collision@{tesseract\_collision}}
+\doxysubsubsection{\texorpdfstring{CollisionEvaluatorType}{CollisionEvaluatorType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespacetesseract__collision_af17e8ee8632a40cf4b6ed1ba1aec41ac}{tesseract\+\_\+collision\+::\+Collision\+Evaluator\+Type}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+High level descriptor used in planners and utilities to specify what kind of collision check is desired. 
+
+DISCRETE -\/ Discrete contact manager using only steps specified LVS\+\_\+\+DISCRETE -\/ Discrete contact manager interpolating using longest valid segment CONTINUOUS -\/ Continuous contact manager using only steps specified LVS\+\_\+\+CONTINUOUS -\/ Continuous contact manager interpolating using longest valid segment \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NONE@{NONE}!tesseract\_collision@{tesseract\_collision}}\index{tesseract\_collision@{tesseract\_collision}!NONE@{NONE}}}\mbox{\Hypertarget{namespacetesseract__collision_af17e8ee8632a40cf4b6ed1ba1aec41acab50339a10e1de285ac99d4c3990b8693}\label{namespacetesseract__collision_af17e8ee8632a40cf4b6ed1ba1aec41acab50339a10e1de285ac99d4c3990b8693}} 
+NONE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DISCRETE@{DISCRETE}!tesseract\_collision@{tesseract\_collision}}\index{tesseract\_collision@{tesseract\_collision}!DISCRETE@{DISCRETE}}}\mbox{\Hypertarget{namespacetesseract__collision_af17e8ee8632a40cf4b6ed1ba1aec41aca947436f2927405d3b5997a9ffbaee5c1}\label{namespacetesseract__collision_af17e8ee8632a40cf4b6ed1ba1aec41aca947436f2927405d3b5997a9ffbaee5c1}} 
+DISCRETE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LVS\_DISCRETE@{LVS\_DISCRETE}!tesseract\_collision@{tesseract\_collision}}\index{tesseract\_collision@{tesseract\_collision}!LVS\_DISCRETE@{LVS\_DISCRETE}}}\mbox{\Hypertarget{namespacetesseract__collision_af17e8ee8632a40cf4b6ed1ba1aec41aca4afe53b9adb97f1374fa3e05dd7a1be1}\label{namespacetesseract__collision_af17e8ee8632a40cf4b6ed1ba1aec41aca4afe53b9adb97f1374fa3e05dd7a1be1}} 
+LVS\+\_\+\+DISCRETE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CONTINUOUS@{CONTINUOUS}!tesseract\_collision@{tesseract\_collision}}\index{tesseract\_collision@{tesseract\_collision}!CONTINUOUS@{CONTINUOUS}}}\mbox{\Hypertarget{namespacetesseract__collision_af17e8ee8632a40cf4b6ed1ba1aec41acab1fa9dd3af034b3ef4291579aa673c07}\label{namespacetesseract__collision_af17e8ee8632a40cf4b6ed1ba1aec41acab1fa9dd3af034b3ef4291579aa673c07}} 
+CONTINUOUS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LVS\_CONTINUOUS@{LVS\_CONTINUOUS}!tesseract\_collision@{tesseract\_collision}}\index{tesseract\_collision@{tesseract\_collision}!LVS\_CONTINUOUS@{LVS\_CONTINUOUS}}}\mbox{\Hypertarget{namespacetesseract__collision_af17e8ee8632a40cf4b6ed1ba1aec41acab8bde735baca78a8b98c00e1a0a50239}\label{namespacetesseract__collision_af17e8ee8632a40cf4b6ed1ba1aec41acab8bde735baca78a8b98c00e1a0a50239}} 
+LVS\+\_\+\+CONTINUOUS&\\
+\hline
+
+\end{DoxyEnumFields}
 \mbox{\Hypertarget{namespacetesseract__collision_ac3da4f46ae16e86ba4f1dfd2935eb80c}\label{namespacetesseract__collision_ac3da4f46ae16e86ba4f1dfd2935eb80c}} 
 \index{tesseract\_collision@{tesseract\_collision}!ContactTestType@{ContactTestType}}
 \index{ContactTestType@{ContactTestType}!tesseract\_collision@{tesseract\_collision}}
@@ -162,19 +223,19 @@ This is used so users may provide a callback to reject/approve collision results
 
 \begin{DoxyEnumFields}{Enumerator}
 \raisebox{\heightof{T}}[0pt][0pt]{\index{FIRST@{FIRST}!tesseract\_collision@{tesseract\_collision}}\index{tesseract\_collision@{tesseract\_collision}!FIRST@{FIRST}}}\mbox{\Hypertarget{namespacetesseract__collision_ac3da4f46ae16e86ba4f1dfd2935eb80ca2c2624a5059934a947d6e25fe8332ade}\label{namespacetesseract__collision_ac3da4f46ae16e86ba4f1dfd2935eb80ca2c2624a5059934a947d6e25fe8332ade}} 
-F\+I\+R\+ST&Return at first contact for any pair of objects \\
+FIRST&Return at first contact for any pair of objects \\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{CLOSEST@{CLOSEST}!tesseract\_collision@{tesseract\_collision}}\index{tesseract\_collision@{tesseract\_collision}!CLOSEST@{CLOSEST}}}\mbox{\Hypertarget{namespacetesseract__collision_ac3da4f46ae16e86ba4f1dfd2935eb80cae9c32f09a44ae1ae34e42d53502fab77}\label{namespacetesseract__collision_ac3da4f46ae16e86ba4f1dfd2935eb80cae9c32f09a44ae1ae34e42d53502fab77}} 
-C\+L\+O\+S\+E\+ST&Return the global minimum for a pair of objects \\
+CLOSEST&Return the global minimum for a pair of objects \\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{ALL@{ALL}!tesseract\_collision@{tesseract\_collision}}\index{tesseract\_collision@{tesseract\_collision}!ALL@{ALL}}}\mbox{\Hypertarget{namespacetesseract__collision_ac3da4f46ae16e86ba4f1dfd2935eb80ca5fb1f955b45e38e31789286a1790398d}\label{namespacetesseract__collision_ac3da4f46ae16e86ba4f1dfd2935eb80ca5fb1f955b45e38e31789286a1790398d}} 
-A\+LL&Return all contacts for a pair of objects \\
+ALL&Return all contacts for a pair of objects \\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{LIMITED@{LIMITED}!tesseract\_collision@{tesseract\_collision}}\index{tesseract\_collision@{tesseract\_collision}!LIMITED@{LIMITED}}}\mbox{\Hypertarget{namespacetesseract__collision_ac3da4f46ae16e86ba4f1dfd2935eb80cad9e0d83abd8b9bb4c1998be68831922c}\label{namespacetesseract__collision_ac3da4f46ae16e86ba4f1dfd2935eb80cad9e0d83abd8b9bb4c1998be68831922c}} 
-L\+I\+M\+I\+T\+ED&Return limited set of contacts for a pair of objects \\
+LIMITED&Return limited set of contacts for a pair of objects \\
 \hline
 
 \end{DoxyEnumFields}
@@ -186,19 +247,19 @@ L\+I\+M\+I\+T\+ED&Return limited set of contacts for a pair of objects \\
 
 \begin{DoxyEnumFields}{Enumerator}
 \raisebox{\heightof{T}}[0pt][0pt]{\index{CCType\_None@{CCType\_None}!tesseract\_collision@{tesseract\_collision}}\index{tesseract\_collision@{tesseract\_collision}!CCType\_None@{CCType\_None}}}\mbox{\Hypertarget{namespacetesseract__collision_a267c740fd3b446222ba19cbaa56dab5ea79e497b3f5d3d8b23ea29c9370354bb6}\label{namespacetesseract__collision_a267c740fd3b446222ba19cbaa56dab5ea79e497b3f5d3d8b23ea29c9370354bb6}} 
-C\+C\+Type\+\_\+\+None&\\
+CCType\+\_\+\+None&\\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{CCType\_Time0@{CCType\_Time0}!tesseract\_collision@{tesseract\_collision}}\index{tesseract\_collision@{tesseract\_collision}!CCType\_Time0@{CCType\_Time0}}}\mbox{\Hypertarget{namespacetesseract__collision_a267c740fd3b446222ba19cbaa56dab5eaf8c51e6d7c61aa31897c3dd7b0719093}\label{namespacetesseract__collision_a267c740fd3b446222ba19cbaa56dab5eaf8c51e6d7c61aa31897c3dd7b0719093}} 
-C\+C\+Type\+\_\+\+Time0&\\
+CCType\+\_\+\+Time0&\\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{CCType\_Time1@{CCType\_Time1}!tesseract\_collision@{tesseract\_collision}}\index{tesseract\_collision@{tesseract\_collision}!CCType\_Time1@{CCType\_Time1}}}\mbox{\Hypertarget{namespacetesseract__collision_a267c740fd3b446222ba19cbaa56dab5ea333ec902092c850b7f23cf437d0fac01}\label{namespacetesseract__collision_a267c740fd3b446222ba19cbaa56dab5ea333ec902092c850b7f23cf437d0fac01}} 
-C\+C\+Type\+\_\+\+Time1&\\
+CCType\+\_\+\+Time1&\\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{CCType\_Between@{CCType\_Between}!tesseract\_collision@{tesseract\_collision}}\index{tesseract\_collision@{tesseract\_collision}!CCType\_Between@{CCType\_Between}}}\mbox{\Hypertarget{namespacetesseract__collision_a267c740fd3b446222ba19cbaa56dab5ea1101988a82b0cd8a2e2c5ee5fda455eb}\label{namespacetesseract__collision_a267c740fd3b446222ba19cbaa56dab5ea1101988a82b0cd8a2e2c5ee5fda455eb}} 
-C\+C\+Type\+\_\+\+Between&\\
+CCType\+\_\+\+Between&\\
 \hline
 
 \end{DoxyEnumFields}
@@ -346,6 +407,24 @@ Number of faces, If returned 0 it failed to load.
 \doxysubsubsection{\texorpdfstring{processResult()}{processResult()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{structtesseract__collision_1_1ContactResult}{Contact\+Result}}$\ast$ tesseract\+\_\+collision\+::process\+Result (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtesseract__collision_1_1ContactTestData}{Contact\+Test\+Data}} \&}]{cdata,  }\item[{\mbox{\hyperlink{structtesseract__collision_1_1ContactResult}{Contact\+Result}} \&}]{contact,  }\item[{const std\+::pair$<$ std\+::string, std\+::string $>$ \&}]{key,  }\item[{bool}]{found }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
+
+
+process\+Result Processes the \mbox{\hyperlink{structtesseract__collision_1_1ContactResult}{Contact\+Result}} based on the information in the \mbox{\hyperlink{structtesseract__collision_1_1ContactTestData}{Contact\+Test\+Data}} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cdata} & Information used to process the results \\
+\hline
+{\em contact} & Contacts from the collision checkers that will be processed \\
+\hline
+{\em key} & Link pair used as a key to look up pair specific settings \\
+\hline
+{\em found} & Specifies whether or not a collision has already been found \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the \mbox{\hyperlink{structtesseract__collision_1_1ContactResult}{Contact\+Result}}. 
+\end{DoxyReturn}
 \mbox{\Hypertarget{namespacetesseract__collision_ab322b688c8e598e590e5a9af30084272}\label{namespacetesseract__collision_ab322b688c8e598e590e5a9af30084272}} 
 \index{tesseract\_collision@{tesseract\_collision}!writeSimplePlyFile@{writeSimplePlyFile}}
 \index{writeSimplePlyFile@{writeSimplePlyFile}!tesseract\_collision@{tesseract\_collision}}
@@ -408,10 +487,10 @@ False if failed to write file, otherwise true
 {\bfseries Initial value\+:}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{= \{}
-\DoxyCodeLine{  \textcolor{stringliteral}{"FIRST"},}
-\DoxyCodeLine{  \textcolor{stringliteral}{"CLOSEST"},}
-\DoxyCodeLine{  \textcolor{stringliteral}{"ALL"},}
-\DoxyCodeLine{  \textcolor{stringliteral}{"LIMITED"},}
+\DoxyCodeLine{  \textcolor{stringliteral}{"{}FIRST"{}},}
+\DoxyCodeLine{  \textcolor{stringliteral}{"{}CLOSEST"{}},}
+\DoxyCodeLine{  \textcolor{stringliteral}{"{}ALL"{}},}
+\DoxyCodeLine{  \textcolor{stringliteral}{"{}LIMITED"{}},}
 \DoxyCodeLine{\}}
 
 \end{DoxyCode}

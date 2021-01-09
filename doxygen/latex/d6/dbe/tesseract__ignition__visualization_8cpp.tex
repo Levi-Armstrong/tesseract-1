@@ -1,0 +1,120 @@
+\hypertarget{tesseract__ignition__visualization_8cpp}{}\doxysection{tesseract/tesseract\+\_\+visualization/src/ignition/tesseract\+\_\+ignition\+\_\+visualization.cpp File Reference}
+\label{tesseract__ignition__visualization_8cpp}\index{tesseract/tesseract\_visualization/src/ignition/tesseract\_ignition\_visualization.cpp@{tesseract/tesseract\_visualization/src/ignition/tesseract\_ignition\_visualization.cpp}}
+{\ttfamily \#include $<$tesseract\+\_\+common/macros.\+h$>$}\newline
+{\ttfamily \#include $<$ignition/msgs/\+Message\+Types.\+hh$>$}\newline
+{\ttfamily \#include $<$ignition/common/\+Console.\+hh$>$}\newline
+{\ttfamily \#include $<$ignition/math/eigen3/\+Conversions.\+hh$>$}\newline
+{\ttfamily \#include $<$chrono$>$}\newline
+{\ttfamily \#include $<$numeric$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+visualization/ignition/tesseract\+\_\+ignition\+\_\+visualization.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+visualization/ignition/conversions.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+visualization/trajectory\+\_\+player.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+command\+\_\+language/command\+\_\+language.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+command\+\_\+language/utils/flatten\+\_\+utils.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+command\+\_\+language/utils/filter\+\_\+functions.\+h$>$}\newline
+Include dependency graph for tesseract\+\_\+ignition\+\_\+visualization.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/dc9/tesseract__ignition__visualization_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{tesseract__ignition__visualization_8cpp_a3725a89477817bd59c9a7d412d9de248}{add\+Arrow}} (\mbox{\hyperlink{classtesseract__visualization_1_1EntityManager}{Entity\+Manager}} \&entity\+\_\+manager, ignition\+::msgs\+::\+Link \&link, long \&sub\+\_\+index, const std\+::string \&parent\+\_\+name, const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector3d $>$ \&pt1, const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector3d $>$ \&pt2, const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector4d $>$ \&rgba, double radius)
+\item 
+void \mbox{\hyperlink{tesseract__ignition__visualization_8cpp_aa84adfd840f6dfeb2131d46ba023db58}{add\+Cylinder}} (\mbox{\hyperlink{classtesseract__visualization_1_1EntityManager}{Entity\+Manager}} \&entity\+\_\+manager, ignition\+::msgs\+::\+Link \&link, long \&sub\+\_\+index, const std\+::string \&parent\+\_\+name, const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector3d $>$ \&pt1, const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector3d $>$ \&pt2, const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector4d $>$ \&rgba, double radius)
+\item 
+void \mbox{\hyperlink{tesseract__ignition__visualization_8cpp_aeda69756664de4e5180bebccf715252b}{add\+Axis}} (\mbox{\hyperlink{classtesseract__visualization_1_1EntityManager}{Entity\+Manager}} \&entity\+\_\+manager, ignition\+::msgs\+::\+Link \&link, long \&sub\+\_\+index, const std\+::string \&parent\+\_\+name, const Eigen\+::\+Isometry3d \&axis, double scale)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{macros_8h_a8cc0e3c6a3382c5c0b19eb9e676fc2db}{TESSERACT\+\_\+\+COMMON\+\_\+\+IGNORE\+\_\+\+WARNINGS\+\_\+\+PUSH}} static \mbox{\hyperlink{macros_8h_a7af8561cf52519e9896b0697095c1b8b}{TESSERACT\+\_\+\+COMMON\+\_\+\+IGNORE\+\_\+\+WARNINGS\+\_\+\+POP}} const std\+::string \mbox{\hyperlink{tesseract__ignition__visualization_8cpp_aa2f916ffa18e2a1ab6d704776db8c9ed}{DEFAULT\+\_\+\+SCENE\+\_\+\+TOPIC\+\_\+\+NAME}} = \char`\"{}/tesseract\+\_\+ignition/topic/scene\char`\"{}
+\item 
+static const std\+::string \mbox{\hyperlink{tesseract__ignition__visualization_8cpp_ab3850b11a46d43dbb5bd19c599e7f981}{DEFAULT\+\_\+\+POSE\+\_\+\+TOPIC\+\_\+\+NAME}} = \char`\"{}/tesseract\+\_\+ignition/topic/pose\char`\"{}
+\item 
+static const std\+::string \mbox{\hyperlink{tesseract__ignition__visualization_8cpp_a3e7b365d3d81fa9db1c0d70af0b83a99}{DEFAULT\+\_\+\+DELETION\+\_\+\+TOPIC\+\_\+\+NAME}}
+\item 
+static const std\+::string \mbox{\hyperlink{tesseract__ignition__visualization_8cpp_aca231af2057032b8977e7a23ac09f560}{COLLISION\+\_\+\+RESULTS\+\_\+\+MODEL\+\_\+\+NAME}} = \char`\"{}tesseract\+\_\+collision\+\_\+results\+\_\+model\char`\"{}
+\item 
+static const std\+::string \mbox{\hyperlink{tesseract__ignition__visualization_8cpp_a018ce160acb9b45cca32cd2af7061adc}{AXES\+\_\+\+MODEL\+\_\+\+NAME}} = \char`\"{}tesseract\+\_\+axes\+\_\+model\char`\"{}
+\item 
+static const std\+::string \mbox{\hyperlink{tesseract__ignition__visualization_8cpp_afcfeb00838c9af30cc751b3cd769f963}{ARROW\+\_\+\+MODEL\+\_\+\+NAME}} = \char`\"{}tesseract\+\_\+arrow\+\_\+model\char`\"{}
+\item 
+static const std\+::string \mbox{\hyperlink{tesseract__ignition__visualization_8cpp_a2946b948eb3e63d49a749b8fd5408c1b}{TOOL\+\_\+\+PATH\+\_\+\+MODEL\+\_\+\+NAME}} = \char`\"{}tesseract\+\_\+tool\+\_\+path\+\_\+model\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{tesseract__ignition__visualization_8cpp_a3725a89477817bd59c9a7d412d9de248}\label{tesseract__ignition__visualization_8cpp_a3725a89477817bd59c9a7d412d9de248}} 
+\index{tesseract\_ignition\_visualization.cpp@{tesseract\_ignition\_visualization.cpp}!addArrow@{addArrow}}
+\index{addArrow@{addArrow}!tesseract\_ignition\_visualization.cpp@{tesseract\_ignition\_visualization.cpp}}
+\doxysubsubsection{\texorpdfstring{addArrow()}{addArrow()}}
+{\footnotesize\ttfamily void add\+Arrow (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtesseract__visualization_1_1EntityManager}{Entity\+Manager}} \&}]{entity\+\_\+manager,  }\item[{ignition\+::msgs\+::\+Link \&}]{link,  }\item[{long \&}]{sub\+\_\+index,  }\item[{const std\+::string \&}]{parent\+\_\+name,  }\item[{const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector3d $>$ \&}]{pt1,  }\item[{const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector3d $>$ \&}]{pt2,  }\item[{const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector4d $>$ \&}]{rgba,  }\item[{double}]{radius }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{tesseract__ignition__visualization_8cpp_aeda69756664de4e5180bebccf715252b}\label{tesseract__ignition__visualization_8cpp_aeda69756664de4e5180bebccf715252b}} 
+\index{tesseract\_ignition\_visualization.cpp@{tesseract\_ignition\_visualization.cpp}!addAxis@{addAxis}}
+\index{addAxis@{addAxis}!tesseract\_ignition\_visualization.cpp@{tesseract\_ignition\_visualization.cpp}}
+\doxysubsubsection{\texorpdfstring{addAxis()}{addAxis()}}
+{\footnotesize\ttfamily void add\+Axis (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtesseract__visualization_1_1EntityManager}{Entity\+Manager}} \&}]{entity\+\_\+manager,  }\item[{ignition\+::msgs\+::\+Link \&}]{link,  }\item[{long \&}]{sub\+\_\+index,  }\item[{const std\+::string \&}]{parent\+\_\+name,  }\item[{const Eigen\+::\+Isometry3d \&}]{axis,  }\item[{double}]{scale }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{tesseract__ignition__visualization_8cpp_aa84adfd840f6dfeb2131d46ba023db58}\label{tesseract__ignition__visualization_8cpp_aa84adfd840f6dfeb2131d46ba023db58}} 
+\index{tesseract\_ignition\_visualization.cpp@{tesseract\_ignition\_visualization.cpp}!addCylinder@{addCylinder}}
+\index{addCylinder@{addCylinder}!tesseract\_ignition\_visualization.cpp@{tesseract\_ignition\_visualization.cpp}}
+\doxysubsubsection{\texorpdfstring{addCylinder()}{addCylinder()}}
+{\footnotesize\ttfamily void add\+Cylinder (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtesseract__visualization_1_1EntityManager}{Entity\+Manager}} \&}]{entity\+\_\+manager,  }\item[{ignition\+::msgs\+::\+Link \&}]{link,  }\item[{long \&}]{sub\+\_\+index,  }\item[{const std\+::string \&}]{parent\+\_\+name,  }\item[{const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector3d $>$ \&}]{pt1,  }\item[{const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector3d $>$ \&}]{pt2,  }\item[{const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector4d $>$ \&}]{rgba,  }\item[{double}]{radius }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{tesseract__ignition__visualization_8cpp_afcfeb00838c9af30cc751b3cd769f963}\label{tesseract__ignition__visualization_8cpp_afcfeb00838c9af30cc751b3cd769f963}} 
+\index{tesseract\_ignition\_visualization.cpp@{tesseract\_ignition\_visualization.cpp}!ARROW\_MODEL\_NAME@{ARROW\_MODEL\_NAME}}
+\index{ARROW\_MODEL\_NAME@{ARROW\_MODEL\_NAME}!tesseract\_ignition\_visualization.cpp@{tesseract\_ignition\_visualization.cpp}}
+\doxysubsubsection{\texorpdfstring{ARROW\_MODEL\_NAME}{ARROW\_MODEL\_NAME}}
+{\footnotesize\ttfamily const std\+::string ARROW\+\_\+\+MODEL\+\_\+\+NAME = \char`\"{}tesseract\+\_\+arrow\+\_\+model\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{tesseract__ignition__visualization_8cpp_a018ce160acb9b45cca32cd2af7061adc}\label{tesseract__ignition__visualization_8cpp_a018ce160acb9b45cca32cd2af7061adc}} 
+\index{tesseract\_ignition\_visualization.cpp@{tesseract\_ignition\_visualization.cpp}!AXES\_MODEL\_NAME@{AXES\_MODEL\_NAME}}
+\index{AXES\_MODEL\_NAME@{AXES\_MODEL\_NAME}!tesseract\_ignition\_visualization.cpp@{tesseract\_ignition\_visualization.cpp}}
+\doxysubsubsection{\texorpdfstring{AXES\_MODEL\_NAME}{AXES\_MODEL\_NAME}}
+{\footnotesize\ttfamily const std\+::string AXES\+\_\+\+MODEL\+\_\+\+NAME = \char`\"{}tesseract\+\_\+axes\+\_\+model\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{tesseract__ignition__visualization_8cpp_aca231af2057032b8977e7a23ac09f560}\label{tesseract__ignition__visualization_8cpp_aca231af2057032b8977e7a23ac09f560}} 
+\index{tesseract\_ignition\_visualization.cpp@{tesseract\_ignition\_visualization.cpp}!COLLISION\_RESULTS\_MODEL\_NAME@{COLLISION\_RESULTS\_MODEL\_NAME}}
+\index{COLLISION\_RESULTS\_MODEL\_NAME@{COLLISION\_RESULTS\_MODEL\_NAME}!tesseract\_ignition\_visualization.cpp@{tesseract\_ignition\_visualization.cpp}}
+\doxysubsubsection{\texorpdfstring{COLLISION\_RESULTS\_MODEL\_NAME}{COLLISION\_RESULTS\_MODEL\_NAME}}
+{\footnotesize\ttfamily const std\+::string COLLISION\+\_\+\+RESULTS\+\_\+\+MODEL\+\_\+\+NAME = \char`\"{}tesseract\+\_\+collision\+\_\+results\+\_\+model\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{tesseract__ignition__visualization_8cpp_a3e7b365d3d81fa9db1c0d70af0b83a99}\label{tesseract__ignition__visualization_8cpp_a3e7b365d3d81fa9db1c0d70af0b83a99}} 
+\index{tesseract\_ignition\_visualization.cpp@{tesseract\_ignition\_visualization.cpp}!DEFAULT\_DELETION\_TOPIC\_NAME@{DEFAULT\_DELETION\_TOPIC\_NAME}}
+\index{DEFAULT\_DELETION\_TOPIC\_NAME@{DEFAULT\_DELETION\_TOPIC\_NAME}!tesseract\_ignition\_visualization.cpp@{tesseract\_ignition\_visualization.cpp}}
+\doxysubsubsection{\texorpdfstring{DEFAULT\_DELETION\_TOPIC\_NAME}{DEFAULT\_DELETION\_TOPIC\_NAME}}
+{\footnotesize\ttfamily const std\+::string DEFAULT\+\_\+\+DELETION\+\_\+\+TOPIC\+\_\+\+NAME\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=}
+\DoxyCodeLine{    \textcolor{stringliteral}{"{}/tesseract\_ignition/topic/deletion"{}}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{tesseract__ignition__visualization_8cpp_ab3850b11a46d43dbb5bd19c599e7f981}\label{tesseract__ignition__visualization_8cpp_ab3850b11a46d43dbb5bd19c599e7f981}} 
+\index{tesseract\_ignition\_visualization.cpp@{tesseract\_ignition\_visualization.cpp}!DEFAULT\_POSE\_TOPIC\_NAME@{DEFAULT\_POSE\_TOPIC\_NAME}}
+\index{DEFAULT\_POSE\_TOPIC\_NAME@{DEFAULT\_POSE\_TOPIC\_NAME}!tesseract\_ignition\_visualization.cpp@{tesseract\_ignition\_visualization.cpp}}
+\doxysubsubsection{\texorpdfstring{DEFAULT\_POSE\_TOPIC\_NAME}{DEFAULT\_POSE\_TOPIC\_NAME}}
+{\footnotesize\ttfamily const std\+::string DEFAULT\+\_\+\+POSE\+\_\+\+TOPIC\+\_\+\+NAME = \char`\"{}/tesseract\+\_\+ignition/topic/pose\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{tesseract__ignition__visualization_8cpp_aa2f916ffa18e2a1ab6d704776db8c9ed}\label{tesseract__ignition__visualization_8cpp_aa2f916ffa18e2a1ab6d704776db8c9ed}} 
+\index{tesseract\_ignition\_visualization.cpp@{tesseract\_ignition\_visualization.cpp}!DEFAULT\_SCENE\_TOPIC\_NAME@{DEFAULT\_SCENE\_TOPIC\_NAME}}
+\index{DEFAULT\_SCENE\_TOPIC\_NAME@{DEFAULT\_SCENE\_TOPIC\_NAME}!tesseract\_ignition\_visualization.cpp@{tesseract\_ignition\_visualization.cpp}}
+\doxysubsubsection{\texorpdfstring{DEFAULT\_SCENE\_TOPIC\_NAME}{DEFAULT\_SCENE\_TOPIC\_NAME}}
+{\footnotesize\ttfamily \mbox{\hyperlink{macros_8h_a8cc0e3c6a3382c5c0b19eb9e676fc2db}{TESSERACT\+\_\+\+COMMON\+\_\+\+IGNORE\+\_\+\+WARNINGS\+\_\+\+PUSH}} static \mbox{\hyperlink{macros_8h_a7af8561cf52519e9896b0697095c1b8b}{TESSERACT\+\_\+\+COMMON\+\_\+\+IGNORE\+\_\+\+WARNINGS\+\_\+\+POP}} const std\+::string DEFAULT\+\_\+\+SCENE\+\_\+\+TOPIC\+\_\+\+NAME = \char`\"{}/tesseract\+\_\+ignition/topic/scene\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{tesseract__ignition__visualization_8cpp_a2946b948eb3e63d49a749b8fd5408c1b}\label{tesseract__ignition__visualization_8cpp_a2946b948eb3e63d49a749b8fd5408c1b}} 
+\index{tesseract\_ignition\_visualization.cpp@{tesseract\_ignition\_visualization.cpp}!TOOL\_PATH\_MODEL\_NAME@{TOOL\_PATH\_MODEL\_NAME}}
+\index{TOOL\_PATH\_MODEL\_NAME@{TOOL\_PATH\_MODEL\_NAME}!tesseract\_ignition\_visualization.cpp@{tesseract\_ignition\_visualization.cpp}}
+\doxysubsubsection{\texorpdfstring{TOOL\_PATH\_MODEL\_NAME}{TOOL\_PATH\_MODEL\_NAME}}
+{\footnotesize\ttfamily const std\+::string TOOL\+\_\+\+PATH\+\_\+\+MODEL\+\_\+\+NAME = \char`\"{}tesseract\+\_\+tool\+\_\+path\+\_\+model\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
+

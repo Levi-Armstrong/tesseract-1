@@ -9,10 +9,14 @@ The discrete solutions are returned in this structure.
 
 {\ttfamily \#include $<$ikfast.\+h$>$}
 
-Inheritance diagram for ikfast\+::Ik\+Solution\+Base$<$ T $>$\+:\begin{figure}[H]
+
+
+Inheritance diagram for ikfast\+::Ik\+Solution\+Base$<$ T $>$\+:
+\nopagebreak
+\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=2.000000cm]{de/d5a/classikfast_1_1IkSolutionBase}
+\includegraphics[width=214pt]{d3/d67/classikfast_1_1IkSolutionBase__inherit__graph}
 \end{center}
 \end{figure}
 \doxysubsection*{Public Member Functions}
@@ -26,7 +30,7 @@ virtual void \mbox{\hyperlink{classikfast_1_1IkSolutionBase_a4e8afdc564a90aeed59
 \begin{DoxyCompactList}\small\item\em std\+::vector version of \mbox{\hyperlink{classikfast_1_1IkSolutionBase_a9405530feb49f12f56c3175e7150c66f}{Get\+Solution}} \end{DoxyCompactList}\item 
 virtual const std\+::vector$<$ int $>$ \& \mbox{\hyperlink{classikfast_1_1IkSolutionBase_a2693ede66be937b7c4c1c949284282ca}{Get\+Free}} () const =0
 \begin{DoxyCompactList}\small\item\em Gets the indices of the configuration space that have to be preset before a full solution can be returned. \end{DoxyCompactList}\item 
-virtual const int \mbox{\hyperlink{classikfast_1_1IkSolutionBase_aac54f54aa69b27991651b0ba2a21208c}{Get\+D\+OF}} () const =0
+virtual int \mbox{\hyperlink{classikfast_1_1IkSolutionBase_a94ac1496405343f4c7ad2a3c07b375cc}{Get\+DOF}} () const =0
 \begin{DoxyCompactList}\small\item\em the dof of the solution \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -49,12 +53,12 @@ virtual \mbox{\hyperlink{classikfast_1_1IkSolutionBase}{ikfast\+::\+Ik\+Solution
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{classikfast_1_1IkSolutionBase_aac54f54aa69b27991651b0ba2a21208c}\label{classikfast_1_1IkSolutionBase_aac54f54aa69b27991651b0ba2a21208c}} 
+\mbox{\Hypertarget{classikfast_1_1IkSolutionBase_a94ac1496405343f4c7ad2a3c07b375cc}\label{classikfast_1_1IkSolutionBase_a94ac1496405343f4c7ad2a3c07b375cc}} 
 \index{ikfast::IkSolutionBase$<$ T $>$@{ikfast::IkSolutionBase$<$ T $>$}!GetDOF@{GetDOF}}
 \index{GetDOF@{GetDOF}!ikfast::IkSolutionBase$<$ T $>$@{ikfast::IkSolutionBase$<$ T $>$}}
 \doxysubsubsection{\texorpdfstring{GetDOF()}{GetDOF()}}
 {\footnotesize\ttfamily template$<$typename T $>$ \\
-virtual const int \mbox{\hyperlink{classikfast_1_1IkSolutionBase}{ikfast\+::\+Ik\+Solution\+Base}}$<$ T $>$\+::Get\+D\+OF (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+virtual int \mbox{\hyperlink{classikfast_1_1IkSolutionBase}{ikfast\+::\+Ik\+Solution\+Base}}$<$ T $>$\+::Get\+DOF (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
@@ -62,7 +66,7 @@ the dof of the solution
 
 
 
-Implemented in \mbox{\hyperlink{classikfast_1_1IkSolution_a1505a20d0cc38c7d85204f96e2785467}{ikfast\+::\+Ik\+Solution$<$ T $>$}}.
+Implemented in \mbox{\hyperlink{classikfast_1_1IkSolution_a38374e5c362498812fdbb86bdd77ee42}{ikfast\+::\+Ik\+Solution$<$ T $>$}}.
 
 \mbox{\Hypertarget{classikfast_1_1IkSolutionBase_a2693ede66be937b7c4c1c949284282ca}\label{classikfast_1_1IkSolutionBase_a2693ede66be937b7c4c1c949284282ca}} 
 \index{ikfast::IkSolutionBase$<$ T $>$@{ikfast::IkSolutionBase$<$ T $>$}!GetFree@{GetFree}}

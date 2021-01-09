@@ -1,38 +1,82 @@
-\hypertarget{waypoint_8h}{}\doxysection{tesseract/tesseract\+\_\+planning/tesseract\+\_\+motion\+\_\+planners/include/tesseract\+\_\+motion\+\_\+planners/core/waypoint.h File Reference}
-\label{waypoint_8h}\index{tesseract/tesseract\_planning/tesseract\_motion\_planners/include/tesseract\_motion\_planners/core/waypoint.h@{tesseract/tesseract\_planning/tesseract\_motion\_planners/include/tesseract\_motion\_planners/core/waypoint.h}}
+\hypertarget{waypoint_8h}{}\doxysection{tesseract/tesseract\+\_\+command\+\_\+language/include/tesseract\+\_\+command\+\_\+language/core/waypoint.h File Reference}
+\label{waypoint_8h}\index{tesseract/tesseract\_command\_language/include/tesseract\_command\_language/core/waypoint.h@{tesseract/tesseract\_command\_language/include/tesseract\_command\_language/core/waypoint.h}}
 {\ttfamily \#include $<$tesseract\+\_\+common/macros.\+h$>$}\newline
-{\ttfamily \#include $<$Eigen/\+Dense$>$}\newline
 {\ttfamily \#include $<$memory$>$}\newline
-{\ttfamily \#include $<$vector$>$}\newline
-{\ttfamily \#include $<$unordered\+\_\+map$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$tinyxml2.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+common/sfinae\+\_\+utils.\+h$>$}\newline
+Include dependency graph for waypoint.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/d0f/waypoint_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/dca/waypoint_8h__dep__incl}
+\end{center}
+\end{figure}
 \doxysubsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
-class \mbox{\hyperlink{classtesseract__motion__planners_1_1Waypoint}{tesseract\+\_\+motion\+\_\+planners\+::\+Waypoint}}
-\begin{DoxyCompactList}\small\item\em Defines a generic way of sending waypoints to a Tesseract Planner. \end{DoxyCompactList}\item 
-class \mbox{\hyperlink{classtesseract__motion__planners_1_1JointWaypoint}{tesseract\+\_\+motion\+\_\+planners\+::\+Joint\+Waypoint}}
-\begin{DoxyCompactList}\small\item\em Defines a joint position waypoint for use with Tesseract Planners. \end{DoxyCompactList}\item 
-class \mbox{\hyperlink{classtesseract__motion__planners_1_1CartesianWaypoint}{tesseract\+\_\+motion\+\_\+planners\+::\+Cartesian\+Waypoint}}
-\begin{DoxyCompactList}\small\item\em Defines a cartesian position waypoint for use with Tesseract Planners. \end{DoxyCompactList}\item 
-class \mbox{\hyperlink{classtesseract__motion__planners_1_1JointTolerancedWaypoint}{tesseract\+\_\+motion\+\_\+planners\+::\+Joint\+Toleranced\+Waypoint}}
-\begin{DoxyCompactList}\small\item\em Defines a joint toleranced position waypoint for use with Tesseract Planners. \end{DoxyCompactList}\end{DoxyCompactItemize}
+struct \mbox{\hyperlink{structtesseract__planning_1_1detail__waypoint_1_1WaypointInnerBase}{tesseract\+\_\+planning\+::detail\+\_\+waypoint\+::\+Waypoint\+Inner\+Base}}
+\item 
+struct \mbox{\hyperlink{structtesseract__planning_1_1detail__waypoint_1_1WaypointInner}{tesseract\+\_\+planning\+::detail\+\_\+waypoint\+::\+Waypoint\+Inner$<$ T $>$}}
+\item 
+class \mbox{\hyperlink{classtesseract__planning_1_1Waypoint}{tesseract\+\_\+planning\+::\+Waypoint}}
+\end{DoxyCompactItemize}
 \doxysubsection*{Namespaces}
 \begin{DoxyCompactItemize}
 \item 
- \mbox{\hyperlink{namespacetesseract__motion__planners}{tesseract\+\_\+motion\+\_\+planners}}
-\end{DoxyCompactItemize}
-\doxysubsection*{Enumerations}
-\begin{DoxyCompactItemize}
+ \mbox{\hyperlink{namespacetesseract__planning}{tesseract\+\_\+planning}}
 \item 
-enum \mbox{\hyperlink{namespacetesseract__motion__planners_a2728817d18262a01963b2e860643ad99}{tesseract\+\_\+motion\+\_\+planners\+::\+Waypoint\+Type}} \{ \mbox{\hyperlink{namespacetesseract__motion__planners_a2728817d18262a01963b2e860643ad99abbff404565b92c7fb482703b27957bcb}{tesseract\+\_\+motion\+\_\+planners\+::\+Waypoint\+Type\+::\+J\+O\+I\+N\+T\+\_\+\+W\+A\+Y\+P\+O\+I\+NT}}, 
-\mbox{\hyperlink{namespacetesseract__motion__planners_a2728817d18262a01963b2e860643ad99adc324c4585bb221462ef618083d40039}{tesseract\+\_\+motion\+\_\+planners\+::\+Waypoint\+Type\+::\+J\+O\+I\+N\+T\+\_\+\+T\+O\+L\+E\+R\+A\+N\+C\+E\+D\+\_\+\+W\+A\+Y\+P\+O\+I\+NT}}, 
-\mbox{\hyperlink{namespacetesseract__motion__planners_a2728817d18262a01963b2e860643ad99af5be5aaa51c6045e474deaaa2456e227}{tesseract\+\_\+motion\+\_\+planners\+::\+Waypoint\+Type\+::\+C\+A\+R\+T\+E\+S\+I\+A\+N\+\_\+\+W\+A\+Y\+P\+O\+I\+NT}}
- \}
-\begin{DoxyCompactList}\small\item\em Used to specify the type of waypoint. Corresponds to a derived class of Waypoint. \end{DoxyCompactList}\end{DoxyCompactItemize}
+ \mbox{\hyperlink{namespacetesseract__planning_1_1detail__waypoint}{tesseract\+\_\+planning\+::detail\+\_\+waypoint}}
+\end{DoxyCompactItemize}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-bool \mbox{\hyperlink{namespacetesseract__motion__planners_aa7cf5729cb53614262c16b3ff6927f79}{tesseract\+\_\+motion\+\_\+planners\+::is\+Cartesian\+Waypoint\+Type}} (Waypoint\+Type type)
+\mbox{\hyperlink{namespacetesseract__planning_1_1detail__waypoint_abb0c28c1f3aed5ea52bd457f98632569}{tesseract\+\_\+planning\+::detail\+\_\+waypoint\+::\+CREATE\+\_\+\+MEMBER\+\_\+\+CHECK}} (get\+Type)
 \item 
-bool \mbox{\hyperlink{namespacetesseract__motion__planners_a8341293850b4dd6da1a927fa83d9c289}{tesseract\+\_\+motion\+\_\+planners\+::is\+Joint\+Waypoint\+Type}} (Waypoint\+Type type)
+\mbox{\hyperlink{namespacetesseract__planning_1_1detail__waypoint_aeb4b2095e38318bdeb0b7f6f1464f2a0}{tesseract\+\_\+planning\+::detail\+\_\+waypoint\+::\+CREATE\+\_\+\+MEMBER\+\_\+\+CHECK}} (print)
+\item 
+\mbox{\hyperlink{namespacetesseract__planning_1_1detail__waypoint_ad09f6692c241c8171fe93d95fcafe8fd}{tesseract\+\_\+planning\+::detail\+\_\+waypoint\+::\+CREATE\+\_\+\+MEMBER\+\_\+\+CHECK}} (to\+XML)
+\item 
+\mbox{\hyperlink{namespacetesseract__planning_1_1detail__waypoint_a19228fb3aff7a7478c2e18531257a312}{tesseract\+\_\+planning\+::detail\+\_\+waypoint\+::\+CREATE\+\_\+\+MEMBER\+\_\+\+FUNC\+\_\+\+SIGNATURE\+\_\+\+NOARGS\+\_\+\+CHECK}} (get\+Type, int)
+\item 
+\mbox{\hyperlink{namespacetesseract__planning_1_1detail__waypoint_aee4cafa219303554570b0d3b13607d26}{tesseract\+\_\+planning\+::detail\+\_\+waypoint\+::\+CREATE\+\_\+\+MEMBER\+\_\+\+FUNC\+\_\+\+SIGNATURE\+\_\+\+CHECK}} (print, void, std\+::string)
+\item 
+\mbox{\hyperlink{namespacetesseract__planning_1_1detail__waypoint_aece11d15e63b3902d456f3379f7772c9}{tesseract\+\_\+planning\+::detail\+\_\+waypoint\+::\+CREATE\+\_\+\+MEMBER\+\_\+\+FUNC\+\_\+\+SIGNATURE\+\_\+\+CHECK}} (to\+XML, tinyxml2\+::\+XMLElement $\ast$, tinyxml2\+::\+XMLDocument \&)
 \end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+Levi Armstrong 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+June 15, 2020 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+TODO 
+\end{DoxyVersion}
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000030}{Bug}}]No known bugs\end{DoxyRefDesc}
+
+
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2020, Southwest Research Institute
+\end{DoxyCopyright}
+\begin{DoxyParagraph}{License}
+Software License Agreement (Apache License) 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+Licensed under the Apache License, Version 2.\+0 (the \char`\"{}\+License\char`\"{}); you may not use this file except in compliance with the License. You may obtain a copy of the License at \href{http://www.apache.org/licenses/LICENSE-2.0}{\texttt{ http\+://www.\+apache.\+org/licenses/\+LICENSE-\/2.\+0}} 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \char`\"{}\+AS IS\char`\"{} BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. 
+\end{DoxyParagraph}

@@ -1,0 +1,186 @@
+\hypertarget{structtesseract__scene__graph_1_1KinematicsInformation}{}\doxysection{tesseract\+\_\+scene\+\_\+graph\+::Kinematics\+Information Struct Reference}
+\label{structtesseract__scene__graph_1_1KinematicsInformation}\index{tesseract\_scene\_graph::KinematicsInformation@{tesseract\_scene\_graph::KinematicsInformation}}
+
+
+This hold the kinematics information used to create the SRDF and is the data container for the manipulator manager.  
+
+
+
+
+{\ttfamily \#include $<$kinematics\+\_\+information.\+h$>$}
+
+
+
+Collaboration diagram for tesseract\+\_\+scene\+\_\+graph\+::Kinematics\+Information\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/d8a/structtesseract__scene__graph_1_1KinematicsInformation__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{structtesseract__scene__graph_1_1KinematicsInformation_aba79648088f5904d13ac4f1b4df85168}{clear}} ()
+\begin{DoxyCompactList}\small\item\em Clear the kinematics information. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+EIGEN\+\_\+\+MAKE\+\_\+\+ALIGNED\+\_\+\+OPERATOR\+\_\+\+NEW std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{structtesseract__scene__graph_1_1KinematicsInformation_af360af2481b7508d203e6f4f2e5ca1af}{group\+\_\+names}}
+\begin{DoxyCompactList}\small\item\em A vector of group names. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacetesseract__scene__graph_a3abd6411aec87a44d780401c2cb30cf9}{Chain\+Groups}} \mbox{\hyperlink{structtesseract__scene__graph_1_1KinematicsInformation_adccd6768a8e938c4ede8e95de1fc52d5}{chain\+\_\+groups}}
+\begin{DoxyCompactList}\small\item\em A map of chains groups. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacetesseract__scene__graph_a242ffd70ca004aa3b080ce297aff77d4}{Joint\+Groups}} \mbox{\hyperlink{structtesseract__scene__graph_1_1KinematicsInformation_a4744d0d81384903ab1b60d9b328d6345}{joint\+\_\+groups}}
+\begin{DoxyCompactList}\small\item\em A map of joint groups. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacetesseract__scene__graph_ab616c56edf955298f1d2c550edb9548f}{Link\+Groups}} \mbox{\hyperlink{structtesseract__scene__graph_1_1KinematicsInformation_a3f80ab330eb2a3fef444ab062aebd046}{link\+\_\+groups}}
+\begin{DoxyCompactList}\small\item\em A map of link groups. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacetesseract__scene__graph_ab80a8d02a40b16de527327ba2487ffb8}{Group\+Joint\+States}} \mbox{\hyperlink{structtesseract__scene__graph_1_1KinematicsInformation_ac4ac61817fdc92d7bb81004ef444d80e}{group\+\_\+states}}
+\begin{DoxyCompactList}\small\item\em A map of group states. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacetesseract__scene__graph_aeee0af01091daa5112d3a5e167c09951}{Group\+TCPs}} \mbox{\hyperlink{structtesseract__scene__graph_1_1KinematicsInformation_aa51ef85fbefbb143e6ca523fb81800d6}{group\+\_\+tcps}}
+\begin{DoxyCompactList}\small\item\em A map of group tool center points. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacetesseract__scene__graph_a33353003fc3c590f3f10a9a1dab84b77}{Group\+OPWKinematics}} \mbox{\hyperlink{structtesseract__scene__graph_1_1KinematicsInformation_afed7ba31c24c7994fd25d576243e7d78}{group\+\_\+opw\+\_\+kinematics}}
+\begin{DoxyCompactList}\small\item\em A map of group opw kinematics data. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacetesseract__scene__graph_a78f17c9d34861d2c993d97cc82a1e657}{Group\+ROPKinematics}} \mbox{\hyperlink{structtesseract__scene__graph_1_1KinematicsInformation_af3033af9e1b01930fd4f10e2c6623be8}{group\+\_\+rop\+\_\+kinematics}}
+\begin{DoxyCompactList}\small\item\em A map of robot on positioner groups. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacetesseract__scene__graph_acc7a2b9aba7513de98222c5b680baa97}{Group\+REPKinematics}} \mbox{\hyperlink{structtesseract__scene__graph_1_1KinematicsInformation_a45b36ec4295d28ad04e895520504d681}{group\+\_\+rep\+\_\+kinematics}}
+\begin{DoxyCompactList}\small\item\em A map of robot with external positioner groups. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacetesseract__scene__graph_a63a923da37f74c71d5a0497ea61c29c4}{Group\+Default\+Kinematics\+Solver}} \mbox{\hyperlink{structtesseract__scene__graph_1_1KinematicsInformation_ad84e54746d91c64fe3d20b84c29ab77a}{group\+\_\+default\+\_\+fwd\+\_\+kin}}
+\begin{DoxyCompactList}\small\item\em A map of group default forward kinematics solvers. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacetesseract__scene__graph_a63a923da37f74c71d5a0497ea61c29c4}{Group\+Default\+Kinematics\+Solver}} \mbox{\hyperlink{structtesseract__scene__graph_1_1KinematicsInformation_a1db47ade708d60d1eaf6e54439775210}{group\+\_\+default\+\_\+inv\+\_\+kin}}
+\begin{DoxyCompactList}\small\item\em A map of group default forward kinematics solvers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This hold the kinematics information used to create the SRDF and is the data container for the manipulator manager. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structtesseract__scene__graph_1_1KinematicsInformation_aba79648088f5904d13ac4f1b4df85168}\label{structtesseract__scene__graph_1_1KinematicsInformation_aba79648088f5904d13ac4f1b4df85168}} 
+\index{tesseract\_scene\_graph::KinematicsInformation@{tesseract\_scene\_graph::KinematicsInformation}!clear@{clear}}
+\index{clear@{clear}!tesseract\_scene\_graph::KinematicsInformation@{tesseract\_scene\_graph::KinematicsInformation}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily void tesseract\+\_\+scene\+\_\+graph\+::\+Kinematics\+Information\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Clear the kinematics information. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structtesseract__scene__graph_1_1KinematicsInformation_adccd6768a8e938c4ede8e95de1fc52d5}\label{structtesseract__scene__graph_1_1KinematicsInformation_adccd6768a8e938c4ede8e95de1fc52d5}} 
+\index{tesseract\_scene\_graph::KinematicsInformation@{tesseract\_scene\_graph::KinematicsInformation}!chain\_groups@{chain\_groups}}
+\index{chain\_groups@{chain\_groups}!tesseract\_scene\_graph::KinematicsInformation@{tesseract\_scene\_graph::KinematicsInformation}}
+\doxysubsubsection{\texorpdfstring{chain\_groups}{chain\_groups}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacetesseract__scene__graph_a3abd6411aec87a44d780401c2cb30cf9}{Chain\+Groups}} tesseract\+\_\+scene\+\_\+graph\+::\+Kinematics\+Information\+::chain\+\_\+groups}
+
+
+
+A map of chains groups. 
+
+\mbox{\Hypertarget{structtesseract__scene__graph_1_1KinematicsInformation_ad84e54746d91c64fe3d20b84c29ab77a}\label{structtesseract__scene__graph_1_1KinematicsInformation_ad84e54746d91c64fe3d20b84c29ab77a}} 
+\index{tesseract\_scene\_graph::KinematicsInformation@{tesseract\_scene\_graph::KinematicsInformation}!group\_default\_fwd\_kin@{group\_default\_fwd\_kin}}
+\index{group\_default\_fwd\_kin@{group\_default\_fwd\_kin}!tesseract\_scene\_graph::KinematicsInformation@{tesseract\_scene\_graph::KinematicsInformation}}
+\doxysubsubsection{\texorpdfstring{group\_default\_fwd\_kin}{group\_default\_fwd\_kin}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacetesseract__scene__graph_a63a923da37f74c71d5a0497ea61c29c4}{Group\+Default\+Kinematics\+Solver}} tesseract\+\_\+scene\+\_\+graph\+::\+Kinematics\+Information\+::group\+\_\+default\+\_\+fwd\+\_\+kin}
+
+
+
+A map of group default forward kinematics solvers. 
+
+\mbox{\Hypertarget{structtesseract__scene__graph_1_1KinematicsInformation_a1db47ade708d60d1eaf6e54439775210}\label{structtesseract__scene__graph_1_1KinematicsInformation_a1db47ade708d60d1eaf6e54439775210}} 
+\index{tesseract\_scene\_graph::KinematicsInformation@{tesseract\_scene\_graph::KinematicsInformation}!group\_default\_inv\_kin@{group\_default\_inv\_kin}}
+\index{group\_default\_inv\_kin@{group\_default\_inv\_kin}!tesseract\_scene\_graph::KinematicsInformation@{tesseract\_scene\_graph::KinematicsInformation}}
+\doxysubsubsection{\texorpdfstring{group\_default\_inv\_kin}{group\_default\_inv\_kin}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacetesseract__scene__graph_a63a923da37f74c71d5a0497ea61c29c4}{Group\+Default\+Kinematics\+Solver}} tesseract\+\_\+scene\+\_\+graph\+::\+Kinematics\+Information\+::group\+\_\+default\+\_\+inv\+\_\+kin}
+
+
+
+A map of group default forward kinematics solvers. 
+
+\mbox{\Hypertarget{structtesseract__scene__graph_1_1KinematicsInformation_af360af2481b7508d203e6f4f2e5ca1af}\label{structtesseract__scene__graph_1_1KinematicsInformation_af360af2481b7508d203e6f4f2e5ca1af}} 
+\index{tesseract\_scene\_graph::KinematicsInformation@{tesseract\_scene\_graph::KinematicsInformation}!group\_names@{group\_names}}
+\index{group\_names@{group\_names}!tesseract\_scene\_graph::KinematicsInformation@{tesseract\_scene\_graph::KinematicsInformation}}
+\doxysubsubsection{\texorpdfstring{group\_names}{group\_names}}
+{\footnotesize\ttfamily EIGEN\+\_\+\+MAKE\+\_\+\+ALIGNED\+\_\+\+OPERATOR\+\_\+\+NEW std\+::vector$<$std\+::string$>$ tesseract\+\_\+scene\+\_\+graph\+::\+Kinematics\+Information\+::group\+\_\+names}
+
+
+
+A vector of group names. 
+
+\mbox{\Hypertarget{structtesseract__scene__graph_1_1KinematicsInformation_afed7ba31c24c7994fd25d576243e7d78}\label{structtesseract__scene__graph_1_1KinematicsInformation_afed7ba31c24c7994fd25d576243e7d78}} 
+\index{tesseract\_scene\_graph::KinematicsInformation@{tesseract\_scene\_graph::KinematicsInformation}!group\_opw\_kinematics@{group\_opw\_kinematics}}
+\index{group\_opw\_kinematics@{group\_opw\_kinematics}!tesseract\_scene\_graph::KinematicsInformation@{tesseract\_scene\_graph::KinematicsInformation}}
+\doxysubsubsection{\texorpdfstring{group\_opw\_kinematics}{group\_opw\_kinematics}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacetesseract__scene__graph_a33353003fc3c590f3f10a9a1dab84b77}{Group\+OPWKinematics}} tesseract\+\_\+scene\+\_\+graph\+::\+Kinematics\+Information\+::group\+\_\+opw\+\_\+kinematics}
+
+
+
+A map of group opw kinematics data. 
+
+\mbox{\Hypertarget{structtesseract__scene__graph_1_1KinematicsInformation_a45b36ec4295d28ad04e895520504d681}\label{structtesseract__scene__graph_1_1KinematicsInformation_a45b36ec4295d28ad04e895520504d681}} 
+\index{tesseract\_scene\_graph::KinematicsInformation@{tesseract\_scene\_graph::KinematicsInformation}!group\_rep\_kinematics@{group\_rep\_kinematics}}
+\index{group\_rep\_kinematics@{group\_rep\_kinematics}!tesseract\_scene\_graph::KinematicsInformation@{tesseract\_scene\_graph::KinematicsInformation}}
+\doxysubsubsection{\texorpdfstring{group\_rep\_kinematics}{group\_rep\_kinematics}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacetesseract__scene__graph_acc7a2b9aba7513de98222c5b680baa97}{Group\+REPKinematics}} tesseract\+\_\+scene\+\_\+graph\+::\+Kinematics\+Information\+::group\+\_\+rep\+\_\+kinematics}
+
+
+
+A map of robot with external positioner groups. 
+
+\mbox{\Hypertarget{structtesseract__scene__graph_1_1KinematicsInformation_af3033af9e1b01930fd4f10e2c6623be8}\label{structtesseract__scene__graph_1_1KinematicsInformation_af3033af9e1b01930fd4f10e2c6623be8}} 
+\index{tesseract\_scene\_graph::KinematicsInformation@{tesseract\_scene\_graph::KinematicsInformation}!group\_rop\_kinematics@{group\_rop\_kinematics}}
+\index{group\_rop\_kinematics@{group\_rop\_kinematics}!tesseract\_scene\_graph::KinematicsInformation@{tesseract\_scene\_graph::KinematicsInformation}}
+\doxysubsubsection{\texorpdfstring{group\_rop\_kinematics}{group\_rop\_kinematics}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacetesseract__scene__graph_a78f17c9d34861d2c993d97cc82a1e657}{Group\+ROPKinematics}} tesseract\+\_\+scene\+\_\+graph\+::\+Kinematics\+Information\+::group\+\_\+rop\+\_\+kinematics}
+
+
+
+A map of robot on positioner groups. 
+
+\mbox{\Hypertarget{structtesseract__scene__graph_1_1KinematicsInformation_ac4ac61817fdc92d7bb81004ef444d80e}\label{structtesseract__scene__graph_1_1KinematicsInformation_ac4ac61817fdc92d7bb81004ef444d80e}} 
+\index{tesseract\_scene\_graph::KinematicsInformation@{tesseract\_scene\_graph::KinematicsInformation}!group\_states@{group\_states}}
+\index{group\_states@{group\_states}!tesseract\_scene\_graph::KinematicsInformation@{tesseract\_scene\_graph::KinematicsInformation}}
+\doxysubsubsection{\texorpdfstring{group\_states}{group\_states}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacetesseract__scene__graph_ab80a8d02a40b16de527327ba2487ffb8}{Group\+Joint\+States}} tesseract\+\_\+scene\+\_\+graph\+::\+Kinematics\+Information\+::group\+\_\+states}
+
+
+
+A map of group states. 
+
+\mbox{\Hypertarget{structtesseract__scene__graph_1_1KinematicsInformation_aa51ef85fbefbb143e6ca523fb81800d6}\label{structtesseract__scene__graph_1_1KinematicsInformation_aa51ef85fbefbb143e6ca523fb81800d6}} 
+\index{tesseract\_scene\_graph::KinematicsInformation@{tesseract\_scene\_graph::KinematicsInformation}!group\_tcps@{group\_tcps}}
+\index{group\_tcps@{group\_tcps}!tesseract\_scene\_graph::KinematicsInformation@{tesseract\_scene\_graph::KinematicsInformation}}
+\doxysubsubsection{\texorpdfstring{group\_tcps}{group\_tcps}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacetesseract__scene__graph_aeee0af01091daa5112d3a5e167c09951}{Group\+TCPs}} tesseract\+\_\+scene\+\_\+graph\+::\+Kinematics\+Information\+::group\+\_\+tcps}
+
+
+
+A map of group tool center points. 
+
+\mbox{\Hypertarget{structtesseract__scene__graph_1_1KinematicsInformation_a4744d0d81384903ab1b60d9b328d6345}\label{structtesseract__scene__graph_1_1KinematicsInformation_a4744d0d81384903ab1b60d9b328d6345}} 
+\index{tesseract\_scene\_graph::KinematicsInformation@{tesseract\_scene\_graph::KinematicsInformation}!joint\_groups@{joint\_groups}}
+\index{joint\_groups@{joint\_groups}!tesseract\_scene\_graph::KinematicsInformation@{tesseract\_scene\_graph::KinematicsInformation}}
+\doxysubsubsection{\texorpdfstring{joint\_groups}{joint\_groups}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacetesseract__scene__graph_a242ffd70ca004aa3b080ce297aff77d4}{Joint\+Groups}} tesseract\+\_\+scene\+\_\+graph\+::\+Kinematics\+Information\+::joint\+\_\+groups}
+
+
+
+A map of joint groups. 
+
+\mbox{\Hypertarget{structtesseract__scene__graph_1_1KinematicsInformation_a3f80ab330eb2a3fef444ab062aebd046}\label{structtesseract__scene__graph_1_1KinematicsInformation_a3f80ab330eb2a3fef444ab062aebd046}} 
+\index{tesseract\_scene\_graph::KinematicsInformation@{tesseract\_scene\_graph::KinematicsInformation}!link\_groups@{link\_groups}}
+\index{link\_groups@{link\_groups}!tesseract\_scene\_graph::KinematicsInformation@{tesseract\_scene\_graph::KinematicsInformation}}
+\doxysubsubsection{\texorpdfstring{link\_groups}{link\_groups}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacetesseract__scene__graph_ab616c56edf955298f1d2c550edb9548f}{Link\+Groups}} tesseract\+\_\+scene\+\_\+graph\+::\+Kinematics\+Information\+::link\+\_\+groups}
+
+
+
+A map of link groups. 
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+tesseract/tesseract\+\_\+scene\+\_\+graph/include/tesseract\+\_\+scene\+\_\+graph/\mbox{\hyperlink{kinematics__information_8h}{kinematics\+\_\+information.\+h}}\item 
+tesseract/tesseract\+\_\+scene\+\_\+graph/src/\mbox{\hyperlink{kinematics__information_8cpp}{kinematics\+\_\+information.\+cpp}}\end{DoxyCompactItemize}

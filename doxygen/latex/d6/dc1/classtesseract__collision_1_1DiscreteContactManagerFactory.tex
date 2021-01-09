@@ -4,34 +4,34 @@
 
 {\ttfamily \#include $<$discrete\+\_\+contact\+\_\+manager\+\_\+factory.\+h$>$}
 
-\doxysubsection*{Public Types}
-\begin{DoxyCompactItemize}
-\item 
-using \mbox{\hyperlink{classtesseract__collision_1_1DiscreteContactManagerFactory_a96a5ff6ce552b3e2aa75a2d1febc08cf}{Create\+Method}} = std\+::function$<$ \mbox{\hyperlink{classtesseract__collision_1_1DiscreteContactManager_a108295071670971e81fe3c34794db427}{Discrete\+Contact\+Manager\+::\+Ptr}}()$>$
-\end{DoxyCompactItemize}
+
+
+Collaboration diagram for tesseract\+\_\+collision\+::Discrete\+Contact\+Manager\+Factory\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/dfc/classtesseract__collision_1_1DiscreteContactManagerFactory__coll__graph}
+\end{center}
+\end{figure}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classtesseract__collision_1_1DiscreteContactManagerFactory_a2901b1725bc52cdb743ada1b42f70ee4}{Discrete\+Contact\+Manager\+Factory}} ()=default
 \item 
-bool \mbox{\hyperlink{classtesseract__collision_1_1DiscreteContactManagerFactory_a4f7c5ce6b2875273a0fb2a4cc39e0066}{registar}} (const std\+::string \&name, \mbox{\hyperlink{classtesseract__collision_1_1DiscreteContactManagerFactory_a96a5ff6ce552b3e2aa75a2d1febc08cf}{Create\+Method}} create\+\_\+function)
+bool \mbox{\hyperlink{classtesseract__collision_1_1DiscreteContactManagerFactory_aecd7dd3f335d716b9f0f9730d55da795}{registar}} (const std\+::string \&name, \mbox{\hyperlink{namespacetesseract__collision_a52199bae8c798554e1be2fbe83d4070d}{Discrete\+Contact\+Manager\+Factory\+Create\+Method}} create\+\_\+function)
 \item 
 \mbox{\hyperlink{classtesseract__collision_1_1DiscreteContactManager_a108295071670971e81fe3c34794db427}{Discrete\+Contact\+Manager\+::\+Ptr}} \mbox{\hyperlink{classtesseract__collision_1_1DiscreteContactManagerFactory_a1b5d5c5a9fd3eaf28038efb53ca618d7}{create}} (const std\+::string \&name) const
+\item 
+const std\+::vector$<$ std\+::string $>$ \& \mbox{\hyperlink{classtesseract__collision_1_1DiscreteContactManagerFactory_a9caae008fdd62cc241ca0be901e29b90}{get\+Available\+Managers}} () const
 \end{DoxyCompactItemize}
 \doxysubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
-std\+::unordered\+\_\+map$<$ std\+::string, \mbox{\hyperlink{classtesseract__collision_1_1DiscreteContactManagerFactory_a96a5ff6ce552b3e2aa75a2d1febc08cf}{Create\+Method}} $>$ \mbox{\hyperlink{classtesseract__collision_1_1DiscreteContactManagerFactory_a087373b26c3f501fac9c27d3c36d6fb0}{discrete\+\_\+types}}
+std\+::unordered\+\_\+map$<$ std\+::string, \mbox{\hyperlink{namespacetesseract__collision_a52199bae8c798554e1be2fbe83d4070d}{Discrete\+Contact\+Manager\+Factory\+Create\+Method}} $>$ \mbox{\hyperlink{classtesseract__collision_1_1DiscreteContactManagerFactory_a5938a2731249169e08e865051afd8a59}{discrete\+\_\+types}}
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classtesseract__collision_1_1DiscreteContactManagerFactory_aa1e0386b53bf9d5330b01b4e1684345d}{keys\+\_\+}}
 \end{DoxyCompactItemize}
-
-
-\doxysubsection{Member Typedef Documentation}
-\mbox{\Hypertarget{classtesseract__collision_1_1DiscreteContactManagerFactory_a96a5ff6ce552b3e2aa75a2d1febc08cf}\label{classtesseract__collision_1_1DiscreteContactManagerFactory_a96a5ff6ce552b3e2aa75a2d1febc08cf}} 
-\index{tesseract\_collision::DiscreteContactManagerFactory@{tesseract\_collision::DiscreteContactManagerFactory}!CreateMethod@{CreateMethod}}
-\index{CreateMethod@{CreateMethod}!tesseract\_collision::DiscreteContactManagerFactory@{tesseract\_collision::DiscreteContactManagerFactory}}
-\doxysubsubsection{\texorpdfstring{CreateMethod}{CreateMethod}}
-{\footnotesize\ttfamily using \mbox{\hyperlink{classtesseract__collision_1_1DiscreteContactManagerFactory_a96a5ff6ce552b3e2aa75a2d1febc08cf}{tesseract\+\_\+collision\+::\+Discrete\+Contact\+Manager\+Factory\+::\+Create\+Method}} =  std\+::function$<$\mbox{\hyperlink{classtesseract__collision_1_1DiscreteContactManager_a108295071670971e81fe3c34794db427}{Discrete\+Contact\+Manager\+::\+Ptr}}()$>$}
-
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
@@ -50,20 +50,32 @@ std\+::unordered\+\_\+map$<$ std\+::string, \mbox{\hyperlink{classtesseract__col
 \doxysubsubsection{\texorpdfstring{create()}{create()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__collision_1_1DiscreteContactManager_a108295071670971e81fe3c34794db427}{Discrete\+Contact\+Manager\+::\+Ptr}} tesseract\+\_\+collision\+::\+Discrete\+Contact\+Manager\+Factory\+::create (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
-\mbox{\Hypertarget{classtesseract__collision_1_1DiscreteContactManagerFactory_a4f7c5ce6b2875273a0fb2a4cc39e0066}\label{classtesseract__collision_1_1DiscreteContactManagerFactory_a4f7c5ce6b2875273a0fb2a4cc39e0066}} 
+\mbox{\Hypertarget{classtesseract__collision_1_1DiscreteContactManagerFactory_a9caae008fdd62cc241ca0be901e29b90}\label{classtesseract__collision_1_1DiscreteContactManagerFactory_a9caae008fdd62cc241ca0be901e29b90}} 
+\index{tesseract\_collision::DiscreteContactManagerFactory@{tesseract\_collision::DiscreteContactManagerFactory}!getAvailableManagers@{getAvailableManagers}}
+\index{getAvailableManagers@{getAvailableManagers}!tesseract\_collision::DiscreteContactManagerFactory@{tesseract\_collision::DiscreteContactManagerFactory}}
+\doxysubsubsection{\texorpdfstring{getAvailableManagers()}{getAvailableManagers()}}
+{\footnotesize\ttfamily const std\+::vector$<$std\+::string$>$\& tesseract\+\_\+collision\+::\+Discrete\+Contact\+Manager\+Factory\+::get\+Available\+Managers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classtesseract__collision_1_1DiscreteContactManagerFactory_aecd7dd3f335d716b9f0f9730d55da795}\label{classtesseract__collision_1_1DiscreteContactManagerFactory_aecd7dd3f335d716b9f0f9730d55da795}} 
 \index{tesseract\_collision::DiscreteContactManagerFactory@{tesseract\_collision::DiscreteContactManagerFactory}!registar@{registar}}
 \index{registar@{registar}!tesseract\_collision::DiscreteContactManagerFactory@{tesseract\_collision::DiscreteContactManagerFactory}}
 \doxysubsubsection{\texorpdfstring{registar()}{registar()}}
-{\footnotesize\ttfamily bool tesseract\+\_\+collision\+::\+Discrete\+Contact\+Manager\+Factory\+::registar (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{\mbox{\hyperlink{classtesseract__collision_1_1DiscreteContactManagerFactory_a96a5ff6ce552b3e2aa75a2d1febc08cf}{Create\+Method}}}]{create\+\_\+function }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily bool tesseract\+\_\+collision\+::\+Discrete\+Contact\+Manager\+Factory\+::registar (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{\mbox{\hyperlink{namespacetesseract__collision_a52199bae8c798554e1be2fbe83d4070d}{Discrete\+Contact\+Manager\+Factory\+Create\+Method}}}]{create\+\_\+function }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
 \doxysubsection{Member Data Documentation}
-\mbox{\Hypertarget{classtesseract__collision_1_1DiscreteContactManagerFactory_a087373b26c3f501fac9c27d3c36d6fb0}\label{classtesseract__collision_1_1DiscreteContactManagerFactory_a087373b26c3f501fac9c27d3c36d6fb0}} 
+\mbox{\Hypertarget{classtesseract__collision_1_1DiscreteContactManagerFactory_a5938a2731249169e08e865051afd8a59}\label{classtesseract__collision_1_1DiscreteContactManagerFactory_a5938a2731249169e08e865051afd8a59}} 
 \index{tesseract\_collision::DiscreteContactManagerFactory@{tesseract\_collision::DiscreteContactManagerFactory}!discrete\_types@{discrete\_types}}
 \index{discrete\_types@{discrete\_types}!tesseract\_collision::DiscreteContactManagerFactory@{tesseract\_collision::DiscreteContactManagerFactory}}
 \doxysubsubsection{\texorpdfstring{discrete\_types}{discrete\_types}}
-{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$std\+::string, \mbox{\hyperlink{classtesseract__collision_1_1DiscreteContactManagerFactory_a96a5ff6ce552b3e2aa75a2d1febc08cf}{Create\+Method}}$>$ tesseract\+\_\+collision\+::\+Discrete\+Contact\+Manager\+Factory\+::discrete\+\_\+types\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$std\+::string, \mbox{\hyperlink{namespacetesseract__collision_a52199bae8c798554e1be2fbe83d4070d}{Discrete\+Contact\+Manager\+Factory\+Create\+Method}}$>$ tesseract\+\_\+collision\+::\+Discrete\+Contact\+Manager\+Factory\+::discrete\+\_\+types\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classtesseract__collision_1_1DiscreteContactManagerFactory_aa1e0386b53bf9d5330b01b4e1684345d}\label{classtesseract__collision_1_1DiscreteContactManagerFactory_aa1e0386b53bf9d5330b01b4e1684345d}} 
+\index{tesseract\_collision::DiscreteContactManagerFactory@{tesseract\_collision::DiscreteContactManagerFactory}!keys\_@{keys\_}}
+\index{keys\_@{keys\_}!tesseract\_collision::DiscreteContactManagerFactory@{tesseract\_collision::DiscreteContactManagerFactory}}
+\doxysubsubsection{\texorpdfstring{keys\_}{keys\_}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::string$>$ tesseract\+\_\+collision\+::\+Discrete\+Contact\+Manager\+Factory\+::keys\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
 
 
 

@@ -1,0 +1,12 @@
+<map id="tesseract_collision::ContactTestData" name="tesseract_collision::ContactTestData">
+<area shape="rect" id="node1" title="This data is intended only to be used internal to the collision checkers as a container and should no..." alt="" coords="855,106,985,147"/>
+<area shape="rect" id="node2" title=" " alt="" coords="539,31,656,57"/>
+<area shape="rect" id="node3" title=" " alt="" coords="263,5,301,32"/>
+<area shape="rect" id="node4" title=" " alt="" coords="263,56,301,83"/>
+<area shape="rect" id="node5" href="$da/df6/structtesseract__collision_1_1ContactRequest.html" title="The ContactRequest struct." alt="" coords="532,82,663,123"/>
+<area shape="rect" id="node6" href="$d3/da1/structtesseract__collision_1_1CollisionMarginData.html" title="Stores information about how the margins allowed between collision objects." alt="" coords="526,147,669,189"/>
+<area shape="rect" id="node7" title=" " alt="" coords="179,131,385,202"/>
+<area shape="rect" id="node8" title=" " alt="" coords="517,217,677,244"/>
+<area shape="rect" id="node9" title=" " alt="" coords="243,227,321,253"/>
+<area shape="rect" id="node10" title=" " alt="" coords="5,219,129,261"/>
+</map>

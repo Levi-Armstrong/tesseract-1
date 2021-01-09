@@ -4,6 +4,16 @@
 
 {\ttfamily \#include $<$joint.\+h$>$}
 
+
+
+Collaboration diagram for tesseract\+\_\+scene\+\_\+graph\+::Joint\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d3/dfc/classtesseract__scene__graph_1_1Joint__coll__graph}
+\end{center}
+\end{figure}
 \doxysubsection*{Public Types}
 \begin{DoxyCompactItemize}
 \item 
@@ -30,12 +40,14 @@ const std\+::string \& \mbox{\hyperlink{classtesseract__scene__graph_1_1Joint_a2
 \item 
 void \mbox{\hyperlink{classtesseract__scene__graph_1_1Joint_a9163c57c91f4a19161b8bc1fa51f0dd8}{clear}} ()
 \item 
+\mbox{\hyperlink{classtesseract__scene__graph_1_1Joint}{Joint}} \mbox{\hyperlink{classtesseract__scene__graph_1_1Joint_a97f37f38d2827c7edfcc083cc6dfe5d9}{clone}} () const
+\begin{DoxyCompactList}\small\item\em Clone the joint keeping the name. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classtesseract__scene__graph_1_1Joint}{Joint}} \mbox{\hyperlink{classtesseract__scene__graph_1_1Joint_a6352a8bf4e972768c9fd3226edf8498e}{clone}} (const std\+::string \&name) const
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{namespacetesseract__scene__graph_ade43fa945a554b6e0c703e38e6a8cf16}{Joint\+Type}} \mbox{\hyperlink{classtesseract__scene__graph_1_1Joint_a1318902e89f9397b84cfaecdc007348c}{type}}
+\mbox{\hyperlink{namespacetesseract__scene__graph_ade43fa945a554b6e0c703e38e6a8cf16}{Joint\+Type}} \mbox{\hyperlink{classtesseract__scene__graph_1_1Joint_a1318902e89f9397b84cfaecdc007348c}{type}} \{ \mbox{\hyperlink{namespacetesseract__scene__graph_ade43fa945a554b6e0c703e38e6a8cf16a696b031073e74bf2cb98e5ef201d4aa3}{Joint\+Type\+::\+UNKNOWN}} \}
 \begin{DoxyCompactList}\small\item\em The type of joint. \end{DoxyCompactList}\item 
 Eigen\+::\+Vector3d \mbox{\hyperlink{classtesseract__scene__graph_1_1Joint_a72603a0c12785105007cce1bbe322081}{axis}}
 \item 
@@ -43,7 +55,7 @@ std\+::string \mbox{\hyperlink{classtesseract__scene__graph_1_1Joint_ad1771eb552
 \item 
 std\+::string \mbox{\hyperlink{classtesseract__scene__graph_1_1Joint_acddba7745bf86f4f93099afef9a3b1fe}{parent\+\_\+link\+\_\+name}}
 \item 
-Eigen\+::\+Isometry3d \mbox{\hyperlink{classtesseract__scene__graph_1_1Joint_a94b4442bad0bb1e6f3f9e78bff4eecd3}{parent\+\_\+to\+\_\+joint\+\_\+origin\+\_\+transform}}
+Eigen\+::\+Isometry3d \mbox{\hyperlink{classtesseract__scene__graph_1_1Joint_a94b4442bad0bb1e6f3f9e78bff4eecd3}{parent\+\_\+to\+\_\+joint\+\_\+origin\+\_\+transform}} \{ Eigen\+::\+Isometry3d\+::\+Identity() \}
 \begin{DoxyCompactList}\small\item\em transform from Parent \mbox{\hyperlink{classtesseract__scene__graph_1_1Link}{Link}} frame to \mbox{\hyperlink{classtesseract__scene__graph_1_1Joint}{Joint}} frame \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classtesseract__scene__graph_1_1JointDynamics_a75a32aabe15d1209b3ce4e9628cef854}{Joint\+Dynamics\+::\+Ptr}} \mbox{\hyperlink{classtesseract__scene__graph_1_1Joint_aec2a847ba6a4a562c3fede80d4fb4b9e}{dynamics}}
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classtesseract__scene__graph_1_1Joint}{Joint}} Dynamics. \end{DoxyCompactList}\item 
@@ -111,10 +123,23 @@ std\+::string \mbox{\hyperlink{classtesseract__scene__graph_1_1Joint_a8cfde2b003
 \doxysubsubsection{\texorpdfstring{clear()}{clear()}}
 {\footnotesize\ttfamily void tesseract\+\_\+scene\+\_\+graph\+::\+Joint\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
+\mbox{\Hypertarget{classtesseract__scene__graph_1_1Joint_a97f37f38d2827c7edfcc083cc6dfe5d9}\label{classtesseract__scene__graph_1_1Joint_a97f37f38d2827c7edfcc083cc6dfe5d9}} 
+\index{tesseract\_scene\_graph::Joint@{tesseract\_scene\_graph::Joint}!clone@{clone}}
+\index{clone@{clone}!tesseract\_scene\_graph::Joint@{tesseract\_scene\_graph::Joint}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__scene__graph_1_1Joint}{Joint}} tesseract\+\_\+scene\+\_\+graph\+::\+Joint\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Clone the joint keeping the name. 
+
+\begin{DoxyReturn}{Returns}
+Cloned joint 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classtesseract__scene__graph_1_1Joint_a6352a8bf4e972768c9fd3226edf8498e}\label{classtesseract__scene__graph_1_1Joint_a6352a8bf4e972768c9fd3226edf8498e}} 
 \index{tesseract\_scene\_graph::Joint@{tesseract\_scene\_graph::Joint}!clone@{clone}}
 \index{clone@{clone}!tesseract\_scene\_graph::Joint@{tesseract\_scene\_graph::Joint}}
-\doxysubsubsection{\texorpdfstring{clone()}{clone()}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__scene__graph_1_1Joint}{Joint}} tesseract\+\_\+scene\+\_\+graph\+::\+Joint\+::clone (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
 \mbox{\Hypertarget{classtesseract__scene__graph_1_1Joint_a2baa7d2078cbd072ec4aabeeb8c2d93a}\label{classtesseract__scene__graph_1_1Joint_a2baa7d2078cbd072ec4aabeeb8c2d93a}} 
@@ -144,8 +169,8 @@ std\+::string \mbox{\hyperlink{classtesseract__scene__graph_1_1Joint_a8cfde2b003
 \doxysubsubsection{\texorpdfstring{axis}{axis}}
 {\footnotesize\ttfamily Eigen\+::\+Vector3d tesseract\+\_\+scene\+\_\+graph\+::\+Joint\+::axis}
 
-\hypertarget{classtesseract__scene__graph_1_1Joint_autotoc_md10}{}\doxysubsubsection{\textbackslash{}brief     type\+\_\+       meaning of axis\+\_\+}\label{classtesseract__scene__graph_1_1Joint_autotoc_md10}
-U\+N\+K\+N\+O\+WN unknown type R\+E\+V\+O\+L\+U\+TE rotation axis P\+R\+I\+S\+M\+A\+T\+IC translation axis F\+L\+O\+A\+T\+I\+NG N/A P\+L\+A\+N\+AR plane normal axis F\+I\+X\+ED N/A \mbox{\Hypertarget{classtesseract__scene__graph_1_1Joint_aa24646ecaad55a4804955e48e1e057bf}\label{classtesseract__scene__graph_1_1Joint_aa24646ecaad55a4804955e48e1e057bf}} 
+\hypertarget{classtesseract__scene__graph_1_1Joint_autotoc_md20}{}\doxysubsubsection{\textbackslash{}brief     type\+\_\+       meaning of axis\+\_\+}\label{classtesseract__scene__graph_1_1Joint_autotoc_md20}
+UNKNOWN unknown type REVOLUTE rotation axis PRISMATIC translation axis FLOATING N/A PLANAR plane normal axis FIXED N/A \mbox{\Hypertarget{classtesseract__scene__graph_1_1Joint_aa24646ecaad55a4804955e48e1e057bf}\label{classtesseract__scene__graph_1_1Joint_aa24646ecaad55a4804955e48e1e057bf}} 
 \index{tesseract\_scene\_graph::Joint@{tesseract\_scene\_graph::Joint}!calibration@{calibration}}
 \index{calibration@{calibration}!tesseract\_scene\_graph::Joint@{tesseract\_scene\_graph::Joint}}
 \doxysubsubsection{\texorpdfstring{calibration}{calibration}}
@@ -207,7 +232,7 @@ parent \mbox{\hyperlink{classtesseract__scene__graph_1_1Link}{Link}} element ori
 \index{tesseract\_scene\_graph::Joint@{tesseract\_scene\_graph::Joint}!parent\_to\_joint\_origin\_transform@{parent\_to\_joint\_origin\_transform}}
 \index{parent\_to\_joint\_origin\_transform@{parent\_to\_joint\_origin\_transform}!tesseract\_scene\_graph::Joint@{tesseract\_scene\_graph::Joint}}
 \doxysubsubsection{\texorpdfstring{parent\_to\_joint\_origin\_transform}{parent\_to\_joint\_origin\_transform}}
-{\footnotesize\ttfamily Eigen\+::\+Isometry3d tesseract\+\_\+scene\+\_\+graph\+::\+Joint\+::parent\+\_\+to\+\_\+joint\+\_\+origin\+\_\+transform}
+{\footnotesize\ttfamily Eigen\+::\+Isometry3d tesseract\+\_\+scene\+\_\+graph\+::\+Joint\+::parent\+\_\+to\+\_\+joint\+\_\+origin\+\_\+transform \{ Eigen\+::\+Isometry3d\+::\+Identity() \}}
 
 
 
@@ -227,7 +252,7 @@ Unsupported Hidden Feature.
 \index{tesseract\_scene\_graph::Joint@{tesseract\_scene\_graph::Joint}!type@{type}}
 \index{type@{type}!tesseract\_scene\_graph::Joint@{tesseract\_scene\_graph::Joint}}
 \doxysubsubsection{\texorpdfstring{type}{type}}
-{\footnotesize\ttfamily \mbox{\hyperlink{namespacetesseract__scene__graph_ade43fa945a554b6e0c703e38e6a8cf16}{Joint\+Type}} tesseract\+\_\+scene\+\_\+graph\+::\+Joint\+::type}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacetesseract__scene__graph_ade43fa945a554b6e0c703e38e6a8cf16}{Joint\+Type}} tesseract\+\_\+scene\+\_\+graph\+::\+Joint\+::type \{ \mbox{\hyperlink{namespacetesseract__scene__graph_ade43fa945a554b6e0c703e38e6a8cf16a696b031073e74bf2cb98e5ef201d4aa3}{Joint\+Type\+::\+UNKNOWN}} \}}
 
 
 

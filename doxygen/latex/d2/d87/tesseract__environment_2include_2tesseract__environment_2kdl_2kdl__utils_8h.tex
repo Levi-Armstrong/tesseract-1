@@ -2,7 +2,7 @@
 \label{tesseract__environment_2include_2tesseract__environment_2kdl_2kdl__utils_8h}\index{tesseract/tesseract\_environment/include/tesseract\_environment/kdl/kdl\_utils.h@{tesseract/tesseract\_environment/include/tesseract\_environment/kdl/kdl\_utils.h}}
 
 
-Tesseract Environment K\+DL utility functions.  
+Tesseract Environment KDL utility functions.  
 
 
 {\ttfamily \#include $<$tesseract\+\_\+common/macros.\+h$>$}\newline
@@ -13,6 +13,22 @@ Tesseract Environment K\+DL utility functions.
 {\ttfamily \#include $<$tesseract\+\_\+collision/core/common.\+h$>$}\newline
 {\ttfamily \#include $<$tesseract\+\_\+scene\+\_\+graph/graph.\+h$>$}\newline
 {\ttfamily \#include $<$tesseract\+\_\+environment/core/utils.\+h$>$}\newline
+Include dependency graph for kdl\+\_\+utils.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/dba/tesseract__environment_2include_2tesseract__environment_2kdl_2kdl__utils_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=199pt]{da/d99/tesseract__environment_2include_2tesseract__environment_2kdl_2kdl__utils_8h__dep__incl}
+\end{center}
+\end{figure}
 \doxysubsection*{Namespaces}
 \begin{DoxyCompactItemize}
 \item 
@@ -21,20 +37,20 @@ Tesseract Environment K\+DL utility functions.
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{namespacetesseract__environment_a4ad0bc2bae5144d405dbdb2480d3044a}{tesseract\+\_\+environment\+::\+K\+D\+L\+To\+Eigen}} (const K\+D\+L\+::\+Frame \&frame, Eigen\+::\+Isometry3d \&transform)
-\begin{DoxyCompactList}\small\item\em Convert K\+D\+L\+::\+Frame to Eigen\+::\+Isometry3d. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{namespacetesseract__environment_a711cd848d639d59118d0d2b0e168eee2}{tesseract\+\_\+environment\+::\+Eigen\+To\+K\+DL}} (const Eigen\+::\+Isometry3d \&transform, K\+D\+L\+::\+Frame \&frame)
-\begin{DoxyCompactList}\small\item\em Convert Eigen\+::\+Isometry3d to K\+D\+L\+::\+Frame. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{namespacetesseract__environment_a8377849b093e0383f21ced934f19ecff}{tesseract\+\_\+environment\+::\+K\+D\+L\+To\+Eigen}} (const K\+D\+L\+::\+Jacobian \&jacobian, Eigen\+::\+Ref$<$ Eigen\+::\+Matrix\+Xd $>$ matrix)
-\begin{DoxyCompactList}\small\item\em Convert K\+D\+L\+::\+Jacobian to Eigen\+::\+Matrix. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{namespacetesseract__environment_ab60a94bf5d9e2101cb42c6d604b4bc30}{tesseract\+\_\+environment\+::\+K\+D\+L\+To\+Eigen}} (const K\+D\+L\+::\+Jacobian \&jacobian, const std\+::vector$<$ int $>$ \&q\+\_\+nrs, Eigen\+::\+Ref$<$ Eigen\+::\+Matrix\+Xd $>$ matrix)
-\begin{DoxyCompactList}\small\item\em Convert a subset of K\+D\+L\+::\+Jacobian to Eigen\+::\+Matrix. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{namespacetesseract__environment_a6d4c018fdb13173a79616c41d08650ad}{tesseract\+\_\+environment\+::\+Eigen\+To\+K\+DL}} (const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector\+Xd $>$ \&vec, K\+D\+L\+::\+Jnt\+Array \&joints)
-\begin{DoxyCompactList}\small\item\em Convert Eigen\+::\+Vector to K\+D\+L\+::\+Jnt\+Array. \end{DoxyCompactList}\end{DoxyCompactItemize}
+void \mbox{\hyperlink{namespacetesseract__environment_a4ad0bc2bae5144d405dbdb2480d3044a}{tesseract\+\_\+environment\+::\+KDLTo\+Eigen}} (const KDL\+::\+Frame \&frame, Eigen\+::\+Isometry3d \&transform)
+\begin{DoxyCompactList}\small\item\em Convert KDL\+::\+Frame to Eigen\+::\+Isometry3d. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespacetesseract__environment_a711cd848d639d59118d0d2b0e168eee2}{tesseract\+\_\+environment\+::\+Eigen\+To\+KDL}} (const Eigen\+::\+Isometry3d \&transform, KDL\+::\+Frame \&frame)
+\begin{DoxyCompactList}\small\item\em Convert Eigen\+::\+Isometry3d to KDL\+::\+Frame. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespacetesseract__environment_a8377849b093e0383f21ced934f19ecff}{tesseract\+\_\+environment\+::\+KDLTo\+Eigen}} (const KDL\+::\+Jacobian \&jacobian, Eigen\+::\+Ref$<$ Eigen\+::\+Matrix\+Xd $>$ matrix)
+\begin{DoxyCompactList}\small\item\em Convert KDL\+::\+Jacobian to Eigen\+::\+Matrix. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespacetesseract__environment_ab60a94bf5d9e2101cb42c6d604b4bc30}{tesseract\+\_\+environment\+::\+KDLTo\+Eigen}} (const KDL\+::\+Jacobian \&jacobian, const std\+::vector$<$ int $>$ \&q\+\_\+nrs, Eigen\+::\+Ref$<$ Eigen\+::\+Matrix\+Xd $>$ matrix)
+\begin{DoxyCompactList}\small\item\em Convert a subset of KDL\+::\+Jacobian to Eigen\+::\+Matrix. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespacetesseract__environment_a6d4c018fdb13173a79616c41d08650ad}{tesseract\+\_\+environment\+::\+Eigen\+To\+KDL}} (const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector\+Xd $>$ \&vec, KDL\+::\+Jnt\+Array \&joints)
+\begin{DoxyCompactList}\small\item\em Convert Eigen\+::\+Vector to KDL\+::\+Jnt\+Array. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-Tesseract Environment K\+DL utility functions. 
+Tesseract Environment KDL utility functions. 
 
 \begin{DoxyAuthor}{Author}
 Levi Armstrong 
@@ -43,10 +59,10 @@ Levi Armstrong
 May 27, 2018 
 \end{DoxyDate}
 \begin{DoxyVersion}{Version}
-T\+O\+DO 
+TODO 
 \end{DoxyVersion}
 \begin{DoxyRefDesc}{Bug}
-\item[\mbox{\hyperlink{bug__bug000042}{Bug}}]No known bugs\end{DoxyRefDesc}
+\item[\mbox{\hyperlink{bug__bug000077}{Bug}}]No known bugs\end{DoxyRefDesc}
 
 
 \begin{DoxyCopyright}{Copyright}
@@ -56,8 +72,8 @@ Copyright (c) 2017, Southwest Research Institute
 Software License Agreement (Apache License) 
 \end{DoxyParagraph}
 \begin{DoxyParagraph}{}
-Licensed under the Apache License, Version 2.\+0 (the \char`\"{}\+License\char`\"{}); you may not use this file except in compliance with the License. You may obtain a copy of the License at \href{http://www.apache.org/licenses/LICENSE-2.0}{\texttt{ http\+://www.\+apache.\+org/licenses/\+L\+I\+C\+E\+N\+S\+E-\/2.\+0}} 
+Licensed under the Apache License, Version 2.\+0 (the \char`\"{}\+License\char`\"{}); you may not use this file except in compliance with the License. You may obtain a copy of the License at \href{http://www.apache.org/licenses/LICENSE-2.0}{\texttt{ http\+://www.\+apache.\+org/licenses/\+LICENSE-\/2.\+0}} 
 \end{DoxyParagraph}
 \begin{DoxyParagraph}{}
-Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \char`\"{}\+A\+S I\+S\char`\"{} B\+A\+S\+IS, W\+I\+T\+H\+O\+UT W\+A\+R\+R\+A\+N\+T\+I\+ES OR C\+O\+N\+D\+I\+T\+I\+O\+NS OF A\+NY K\+I\+ND, either express or implied. See the License for the specific language governing permissions and limitations under the License. 
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \char`\"{}\+AS IS\char`\"{} BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. 
 \end{DoxyParagraph}

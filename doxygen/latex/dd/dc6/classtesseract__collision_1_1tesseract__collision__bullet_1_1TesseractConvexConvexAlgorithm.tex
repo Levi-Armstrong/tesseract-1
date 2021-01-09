@@ -9,10 +9,24 @@ This is a modifed Convex to Convex collision algorithm.
 
 {\ttfamily \#include $<$tesseract\+\_\+convex\+\_\+convex\+\_\+algorithm.\+h$>$}
 
-Inheritance diagram for tesseract\+\_\+collision\+::tesseract\+\_\+collision\+\_\+bullet\+::Tesseract\+Convex\+Convex\+Algorithm\+:\begin{figure}[H]
+
+
+Inheritance diagram for tesseract\+\_\+collision\+::tesseract\+\_\+collision\+\_\+bullet\+::Tesseract\+Convex\+Convex\+Algorithm\+:
+\nopagebreak
+\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=2.000000cm]{dd/dc6/classtesseract__collision_1_1tesseract__collision__bullet_1_1TesseractConvexConvexAlgorithm}
+\includegraphics[width=238pt]{d6/d26/classtesseract__collision_1_1tesseract__collision__bullet_1_1TesseractConvexConvexAlgorithm__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for tesseract\+\_\+collision\+::tesseract\+\_\+collision\+\_\+bullet\+::Tesseract\+Convex\+Convex\+Algorithm\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d10/classtesseract__collision_1_1tesseract__collision__bullet_1_1TesseractConvexConvexAlgorithm__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsection*{Classes}
@@ -71,7 +85,9 @@ int \mbox{\hyperlink{classtesseract__collision_1_1tesseract__collision__bullet_1
 \doxysubsection{Detailed Description}
 This is a modifed Convex to Convex collision algorithm. 
 
-Enabling U\+S\+E\+\_\+\+S\+E\+P\+D\+I\+S\+T\+A\+N\+C\+E\+\_\+\+U\+T\+I\+L2 requires 100\% reliable distance computation. However, when using large size ratios G\+JK can be imprecise so the distance is not conservative. In that case, enabling this U\+S\+E\+\_\+\+S\+E\+P\+D\+I\+S\+T\+A\+N\+C\+E\+\_\+\+U\+T\+I\+L2 would result in failing/missing collisions. Either improve G\+JK for large size ratios (testing a 100 units versus a 0.\+1 unit object) or only enable the util for certain pairs that have a small size ratio The convex\+Convex\+Algorithm collision algorithm implements time of impact, convex closest points and penetration depth calculations between two convex objects. Multiple contact points are calculated by perturbing the orientation of the smallest object orthogonal to the separating normal. This idea was described by Gino van den Bergen in this forum topic \href{http://www.bulletphysics.com/Bullet/phpBB3/viewtopic.php?f=4&t=288&p=888\#p888}{\texttt{ http\+://www.\+bulletphysics.\+com/\+Bullet/php\+B\+B3/viewtopic.\+php?f=4\&t=288\&p=888\#p888}} This was modified to leverage the Tesseract contact request to enable and disable different parts of the algorithm. The algorithm first does a quick binary check if the two objects are in collision. If in collision it runs the penetration algorithm to get the nearest points and penetration depths. If not in collision it runs the an algorithm to get the nearest points and distance. The Tesseract contact request allow you to now decide if you need all three. Example, in the case of O\+M\+PL if you have a contact distance of zero you can get a performance increase, by disabling the penetration and distance calculation because they add no value.
+Enabling USE\+\_\+\+SEPDISTANCE\+\_\+\+UTIL2 requires 100\% reliable distance computation. However, when using large size ratios GJK can be imprecise so the distance is not conservative. In that case, enabling this USE\+\_\+\+SEPDISTANCE\+\_\+\+UTIL2 would result in failing/missing collisions. Either improve GJK for large size ratios (testing a 100 units versus a 0.\+1 unit object) or only enable the util for certain pairs that have a small size ratio The convex\+Convex\+Algorithm collision algorithm implements time of impact, convex closest points and penetration depth calculations between two convex objects. Multiple contact points are calculated by perturbing the orientation of the smallest object orthogonal to the separating normal. This idea was described by Gino van den Bergen in this forum topic \href{http://www.bulletphysics.com/Bullet/phpBB3/viewtopic.php?f=4&t=288&p=888\#p888}{\texttt{ http\+://www.\+bulletphysics.\+com/\+Bullet/php\+BB3/viewtopic.\+php?f=4\&t=288\&p=888\#p888}}
+
+This was modified to leverage the Tesseract contact request to enable and disable different parts of the algorithm. The algorithm first does a quick binary check if the two objects are in collision. If in collision it runs the penetration algorithm to get the nearest points and penetration depths. If not in collision it runs the an algorithm to get the nearest points and distance. The Tesseract contact request allow you to now decide if you need all three. Example, in the case of OMPL if you have a contact distance of zero you can get a performance increase, by disabling the penetration and distance calculation because they add no value.
 
 Note\+: This will not be able to be removed. 
 
@@ -113,7 +129,7 @@ cache separating vector to speedup collision detection
 \doxysubsubsection{\texorpdfstring{calculateTimeOfImpact()}{calculateTimeOfImpact()}}
 {\footnotesize\ttfamily bt\+Scalar tesseract\+\_\+collision\+::tesseract\+\_\+collision\+\_\+bullet\+::\+Tesseract\+Convex\+Convex\+Algorithm\+::calculate\+Time\+Of\+Impact (\begin{DoxyParamCaption}\item[{bt\+Collision\+Object $\ast$}]{body0,  }\item[{bt\+Collision\+Object $\ast$}]{body1,  }\item[{const bt\+Dispatcher\+Info \&}]{dispatch\+Info,  }\item[{bt\+Manifold\+Result $\ast$}]{result\+Out }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
 
-Rather then checking A\+LL pairs, only calculate T\+OI when motion exceeds threshold
+Rather then checking ALL pairs, only calculate TOI when motion exceeds threshold
 
 Linear motion for one of objects needs to exceed m\+\_\+ccd\+Square\+Motion\+Threshold col0-\/$>$m\+\_\+world\+Transform,
 
@@ -153,7 +169,7 @@ should we use m\+\_\+own\+Manifold to avoid adding duplicates?\mbox{\Hypertarget
 \doxysubsubsection{\texorpdfstring{processCollision()}{processCollision()}}
 {\footnotesize\ttfamily void tesseract\+\_\+collision\+::tesseract\+\_\+collision\+\_\+bullet\+::\+Tesseract\+Convex\+Convex\+Algorithm\+::process\+Collision (\begin{DoxyParamCaption}\item[{const bt\+Collision\+Object\+Wrapper $\ast$}]{body0\+Wrap,  }\item[{const bt\+Collision\+Object\+Wrapper $\ast$}]{body1\+Wrap,  }\item[{const bt\+Dispatcher\+Info \&}]{dispatch\+Info,  }\item[{bt\+Manifold\+Result $\ast$}]{result\+Out }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
 
-bt\+Box\+Shape is an exception\+: its vertices are created W\+I\+TH margin so don\textquotesingle{}t subtract it\mbox{\Hypertarget{classtesseract__collision_1_1tesseract__collision__bullet_1_1TesseractConvexConvexAlgorithm_a0ca8b86980c40a772f93e05c29769b88}\label{classtesseract__collision_1_1tesseract__collision__bullet_1_1TesseractConvexConvexAlgorithm_a0ca8b86980c40a772f93e05c29769b88}} 
+bt\+Box\+Shape is an exception\+: its vertices are created WITH margin so don\textquotesingle{}t subtract it\mbox{\Hypertarget{classtesseract__collision_1_1tesseract__collision__bullet_1_1TesseractConvexConvexAlgorithm_a0ca8b86980c40a772f93e05c29769b88}\label{classtesseract__collision_1_1tesseract__collision__bullet_1_1TesseractConvexConvexAlgorithm_a0ca8b86980c40a772f93e05c29769b88}} 
 \index{tesseract\_collision::tesseract\_collision\_bullet::TesseractConvexConvexAlgorithm@{tesseract\_collision::tesseract\_collision\_bullet::TesseractConvexConvexAlgorithm}!setLowLevelOfDetail@{setLowLevelOfDetail}}
 \index{setLowLevelOfDetail@{setLowLevelOfDetail}!tesseract\_collision::tesseract\_collision\_bullet::TesseractConvexConvexAlgorithm@{tesseract\_collision::tesseract\_collision\_bullet::TesseractConvexConvexAlgorithm}}
 \doxysubsubsection{\texorpdfstring{setLowLevelOfDetail()}{setLowLevelOfDetail()}}

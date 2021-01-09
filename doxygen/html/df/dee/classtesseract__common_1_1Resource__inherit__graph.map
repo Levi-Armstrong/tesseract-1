@@ -1,0 +1,5 @@
+<map id="tesseract_common::Resource" name="tesseract_common::Resource">
+<area shape="rect" id="node1" title="Represents resource data available from a file or url." alt="" coords="132,5,327,32"/>
+<area shape="rect" id="node2" href="$d5/dca/classtesseract__common_1_1BytesResource.html" title=" " alt="" coords="5,87,232,114"/>
+<area shape="rect" id="node3" href="$d6/dc7/classtesseract__scene__graph_1_1SimpleLocatedResource.html" title="Resource implementation for a local file." alt="" coords="256,80,427,121"/>
+</map>

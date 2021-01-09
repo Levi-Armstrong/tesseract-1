@@ -9,10 +9,24 @@ Supports collision between Compound\+Collision\+Shapes and other collision shape
 
 {\ttfamily \#include $<$tesseract\+\_\+compound\+\_\+collision\+\_\+algorithm.\+h$>$}
 
-Inheritance diagram for tesseract\+\_\+collision\+::tesseract\+\_\+collision\+\_\+bullet\+::Tesseract\+Compound\+Collision\+Algorithm\+:\begin{figure}[H]
+
+
+Inheritance diagram for tesseract\+\_\+collision\+::tesseract\+\_\+collision\+\_\+bullet\+::Tesseract\+Compound\+Collision\+Algorithm\+:
+\nopagebreak
+\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=3.000000cm]{d8/dba/classtesseract__collision_1_1tesseract__collision__bullet_1_1TesseractCompoundCollisionAlgorithm}
+\includegraphics[width=350pt]{da/dd5/classtesseract__collision_1_1tesseract__collision__bullet_1_1TesseractCompoundCollisionAlgorithm__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for tesseract\+\_\+collision\+::tesseract\+\_\+collision\+\_\+bullet\+::Tesseract\+Compound\+Collision\+Algorithm\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=256pt]{d0/d86/classtesseract__collision_1_1tesseract__collision__bullet_1_1TesseractCompoundCollisionAlgorithm__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsection*{Classes}
@@ -28,6 +42,14 @@ struct \mbox{\hyperlink{structtesseract__collision_1_1tesseract__collision__bull
 \mbox{\hyperlink{classtesseract__collision_1_1tesseract__collision__bullet_1_1TesseractCompoundCollisionAlgorithm_a2ed705174aa37af8778dd07e809d412a}{Tesseract\+Compound\+Collision\+Algorithm}} (const bt\+Collision\+Algorithm\+Construction\+Info \&ci, const bt\+Collision\+Object\+Wrapper $\ast$body0\+Wrap, const bt\+Collision\+Object\+Wrapper $\ast$body1\+Wrap, bool is\+Swapped)
 \item 
 \mbox{\hyperlink{classtesseract__collision_1_1tesseract__collision__bullet_1_1TesseractCompoundCollisionAlgorithm_a36a2a26831c3f87b3625015986e784d8}{$\sim$\+Tesseract\+Compound\+Collision\+Algorithm}} () override
+\item 
+\mbox{\hyperlink{classtesseract__collision_1_1tesseract__collision__bullet_1_1TesseractCompoundCollisionAlgorithm_a236362e4f2ea77937c5fc4c91c66a712}{Tesseract\+Compound\+Collision\+Algorithm}} (const \mbox{\hyperlink{classtesseract__collision_1_1tesseract__collision__bullet_1_1TesseractCompoundCollisionAlgorithm}{Tesseract\+Compound\+Collision\+Algorithm}} \&)=default
+\item 
+\mbox{\hyperlink{classtesseract__collision_1_1tesseract__collision__bullet_1_1TesseractCompoundCollisionAlgorithm}{Tesseract\+Compound\+Collision\+Algorithm}} \& \mbox{\hyperlink{classtesseract__collision_1_1tesseract__collision__bullet_1_1TesseractCompoundCollisionAlgorithm_a7f4383d69b77f6f788f3e9a4b9a53514}{operator=}} (const \mbox{\hyperlink{classtesseract__collision_1_1tesseract__collision__bullet_1_1TesseractCompoundCollisionAlgorithm}{Tesseract\+Compound\+Collision\+Algorithm}} \&)=default
+\item 
+\mbox{\hyperlink{classtesseract__collision_1_1tesseract__collision__bullet_1_1TesseractCompoundCollisionAlgorithm_a2b4f53d0c409416c9efdf099f1fffe99}{Tesseract\+Compound\+Collision\+Algorithm}} (\mbox{\hyperlink{classtesseract__collision_1_1tesseract__collision__bullet_1_1TesseractCompoundCollisionAlgorithm}{Tesseract\+Compound\+Collision\+Algorithm}} \&\&)=default
+\item 
+\mbox{\hyperlink{classtesseract__collision_1_1tesseract__collision__bullet_1_1TesseractCompoundCollisionAlgorithm}{Tesseract\+Compound\+Collision\+Algorithm}} \& \mbox{\hyperlink{classtesseract__collision_1_1tesseract__collision__bullet_1_1TesseractCompoundCollisionAlgorithm_a22388991357082ddc89f546a18446e39}{operator=}} (\mbox{\hyperlink{classtesseract__collision_1_1tesseract__collision__bullet_1_1TesseractCompoundCollisionAlgorithm}{Tesseract\+Compound\+Collision\+Algorithm}} \&\&)=default
 \item 
 bt\+Collision\+Algorithm $\ast$ \mbox{\hyperlink{classtesseract__collision_1_1tesseract__collision__bullet_1_1TesseractCompoundCollisionAlgorithm_a4f99be1726e70bcc0a05f000772ca0d5}{get\+Child\+Algorithm}} (int n) const
 \item 
@@ -69,7 +91,7 @@ bt\+Manifold\+Array \mbox{\hyperlink{classtesseract__collision_1_1tesseract__col
 \doxysubsection{Detailed Description}
 Supports collision between Compound\+Collision\+Shapes and other collision shapes. 
 
-The original implementation would check all collision objects before exiting the bvh of the compound shape. The original code had a callback, but it only passed in the collision shape and no the collision object which is where the user data is located. This was modifed to check if collision is done for the contact test type F\+I\+R\+ST during the internal broadphase of the compound shapes and exit early.
+The original implementation would check all collision objects before exiting the bvh of the compound shape. The original code had a callback, but it only passed in the collision shape and no the collision object which is where the user data is located. This was modifed to check if collision is done for the contact test type FIRST during the internal broadphase of the compound shapes and exit early.
 
 Note\+: This could be removed in the future but the callback need to be modifed to accept the collision object along with the collision shape. I don\textquotesingle{}t believe this will be an issue since all of the other callback in Bullet accept both. 
 
@@ -77,7 +99,7 @@ Note\+: This could be removed in the future but the callback need to be modifed 
 \mbox{\Hypertarget{classtesseract__collision_1_1tesseract__collision__bullet_1_1TesseractCompoundCollisionAlgorithm_a2ed705174aa37af8778dd07e809d412a}\label{classtesseract__collision_1_1tesseract__collision__bullet_1_1TesseractCompoundCollisionAlgorithm_a2ed705174aa37af8778dd07e809d412a}} 
 \index{tesseract\_collision::tesseract\_collision\_bullet::TesseractCompoundCollisionAlgorithm@{tesseract\_collision::tesseract\_collision\_bullet::TesseractCompoundCollisionAlgorithm}!TesseractCompoundCollisionAlgorithm@{TesseractCompoundCollisionAlgorithm}}
 \index{TesseractCompoundCollisionAlgorithm@{TesseractCompoundCollisionAlgorithm}!tesseract\_collision::tesseract\_collision\_bullet::TesseractCompoundCollisionAlgorithm@{tesseract\_collision::tesseract\_collision\_bullet::TesseractCompoundCollisionAlgorithm}}
-\doxysubsubsection{\texorpdfstring{TesseractCompoundCollisionAlgorithm()}{TesseractCompoundCollisionAlgorithm()}}
+\doxysubsubsection{\texorpdfstring{TesseractCompoundCollisionAlgorithm()}{TesseractCompoundCollisionAlgorithm()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
 {\footnotesize\ttfamily tesseract\+\_\+collision\+::tesseract\+\_\+collision\+\_\+bullet\+::\+Tesseract\+Compound\+Collision\+Algorithm\+::\+Tesseract\+Compound\+Collision\+Algorithm (\begin{DoxyParamCaption}\item[{const bt\+Collision\+Algorithm\+Construction\+Info \&}]{ci,  }\item[{const bt\+Collision\+Object\+Wrapper $\ast$}]{body0\+Wrap,  }\item[{const bt\+Collision\+Object\+Wrapper $\ast$}]{body1\+Wrap,  }\item[{bool}]{is\+Swapped }\end{DoxyParamCaption})}
 
 \mbox{\Hypertarget{classtesseract__collision_1_1tesseract__collision__bullet_1_1TesseractCompoundCollisionAlgorithm_a36a2a26831c3f87b3625015986e784d8}\label{classtesseract__collision_1_1tesseract__collision__bullet_1_1TesseractCompoundCollisionAlgorithm_a36a2a26831c3f87b3625015986e784d8}} 
@@ -85,6 +107,18 @@ Note\+: This could be removed in the future but the callback need to be modifed 
 \index{````~TesseractCompoundCollisionAlgorithm@{$\sim$TesseractCompoundCollisionAlgorithm}!tesseract\_collision::tesseract\_collision\_bullet::TesseractCompoundCollisionAlgorithm@{tesseract\_collision::tesseract\_collision\_bullet::TesseractCompoundCollisionAlgorithm}}
 \doxysubsubsection{\texorpdfstring{$\sim$TesseractCompoundCollisionAlgorithm()}{~TesseractCompoundCollisionAlgorithm()}}
 {\footnotesize\ttfamily tesseract\+\_\+collision\+::tesseract\+\_\+collision\+\_\+bullet\+::\+Tesseract\+Compound\+Collision\+Algorithm\+::$\sim$\+Tesseract\+Compound\+Collision\+Algorithm (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+\mbox{\Hypertarget{classtesseract__collision_1_1tesseract__collision__bullet_1_1TesseractCompoundCollisionAlgorithm_a236362e4f2ea77937c5fc4c91c66a712}\label{classtesseract__collision_1_1tesseract__collision__bullet_1_1TesseractCompoundCollisionAlgorithm_a236362e4f2ea77937c5fc4c91c66a712}} 
+\index{tesseract\_collision::tesseract\_collision\_bullet::TesseractCompoundCollisionAlgorithm@{tesseract\_collision::tesseract\_collision\_bullet::TesseractCompoundCollisionAlgorithm}!TesseractCompoundCollisionAlgorithm@{TesseractCompoundCollisionAlgorithm}}
+\index{TesseractCompoundCollisionAlgorithm@{TesseractCompoundCollisionAlgorithm}!tesseract\_collision::tesseract\_collision\_bullet::TesseractCompoundCollisionAlgorithm@{tesseract\_collision::tesseract\_collision\_bullet::TesseractCompoundCollisionAlgorithm}}
+\doxysubsubsection{\texorpdfstring{TesseractCompoundCollisionAlgorithm()}{TesseractCompoundCollisionAlgorithm()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily tesseract\+\_\+collision\+::tesseract\+\_\+collision\+\_\+bullet\+::\+Tesseract\+Compound\+Collision\+Algorithm\+::\+Tesseract\+Compound\+Collision\+Algorithm (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtesseract__collision_1_1tesseract__collision__bullet_1_1TesseractCompoundCollisionAlgorithm}{Tesseract\+Compound\+Collision\+Algorithm}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classtesseract__collision_1_1tesseract__collision__bullet_1_1TesseractCompoundCollisionAlgorithm_a2b4f53d0c409416c9efdf099f1fffe99}\label{classtesseract__collision_1_1tesseract__collision__bullet_1_1TesseractCompoundCollisionAlgorithm_a2b4f53d0c409416c9efdf099f1fffe99}} 
+\index{tesseract\_collision::tesseract\_collision\_bullet::TesseractCompoundCollisionAlgorithm@{tesseract\_collision::tesseract\_collision\_bullet::TesseractCompoundCollisionAlgorithm}!TesseractCompoundCollisionAlgorithm@{TesseractCompoundCollisionAlgorithm}}
+\index{TesseractCompoundCollisionAlgorithm@{TesseractCompoundCollisionAlgorithm}!tesseract\_collision::tesseract\_collision\_bullet::TesseractCompoundCollisionAlgorithm@{tesseract\_collision::tesseract\_collision\_bullet::TesseractCompoundCollisionAlgorithm}}
+\doxysubsubsection{\texorpdfstring{TesseractCompoundCollisionAlgorithm()}{TesseractCompoundCollisionAlgorithm()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily tesseract\+\_\+collision\+::tesseract\+\_\+collision\+\_\+bullet\+::\+Tesseract\+Compound\+Collision\+Algorithm\+::\+Tesseract\+Compound\+Collision\+Algorithm (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtesseract__collision_1_1tesseract__collision__bullet_1_1TesseractCompoundCollisionAlgorithm}{Tesseract\+Compound\+Collision\+Algorithm}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
 
 
 
@@ -106,6 +140,18 @@ Note\+: This could be removed in the future but the callback need to be modifed 
 \index{getChildAlgorithm@{getChildAlgorithm}!tesseract\_collision::tesseract\_collision\_bullet::TesseractCompoundCollisionAlgorithm@{tesseract\_collision::tesseract\_collision\_bullet::TesseractCompoundCollisionAlgorithm}}
 \doxysubsubsection{\texorpdfstring{getChildAlgorithm()}{getChildAlgorithm()}}
 {\footnotesize\ttfamily bt\+Collision\+Algorithm$\ast$ tesseract\+\_\+collision\+::tesseract\+\_\+collision\+\_\+bullet\+::\+Tesseract\+Compound\+Collision\+Algorithm\+::get\+Child\+Algorithm (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classtesseract__collision_1_1tesseract__collision__bullet_1_1TesseractCompoundCollisionAlgorithm_a7f4383d69b77f6f788f3e9a4b9a53514}\label{classtesseract__collision_1_1tesseract__collision__bullet_1_1TesseractCompoundCollisionAlgorithm_a7f4383d69b77f6f788f3e9a4b9a53514}} 
+\index{tesseract\_collision::tesseract\_collision\_bullet::TesseractCompoundCollisionAlgorithm@{tesseract\_collision::tesseract\_collision\_bullet::TesseractCompoundCollisionAlgorithm}!operator=@{operator=}}
+\index{operator=@{operator=}!tesseract\_collision::tesseract\_collision\_bullet::TesseractCompoundCollisionAlgorithm@{tesseract\_collision::tesseract\_collision\_bullet::TesseractCompoundCollisionAlgorithm}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__collision_1_1tesseract__collision__bullet_1_1TesseractCompoundCollisionAlgorithm}{Tesseract\+Compound\+Collision\+Algorithm}}\& tesseract\+\_\+collision\+::tesseract\+\_\+collision\+\_\+bullet\+::\+Tesseract\+Compound\+Collision\+Algorithm\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtesseract__collision_1_1tesseract__collision__bullet_1_1TesseractCompoundCollisionAlgorithm}{Tesseract\+Compound\+Collision\+Algorithm}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classtesseract__collision_1_1tesseract__collision__bullet_1_1TesseractCompoundCollisionAlgorithm_a22388991357082ddc89f546a18446e39}\label{classtesseract__collision_1_1tesseract__collision__bullet_1_1TesseractCompoundCollisionAlgorithm_a22388991357082ddc89f546a18446e39}} 
+\index{tesseract\_collision::tesseract\_collision\_bullet::TesseractCompoundCollisionAlgorithm@{tesseract\_collision::tesseract\_collision\_bullet::TesseractCompoundCollisionAlgorithm}!operator=@{operator=}}
+\index{operator=@{operator=}!tesseract\_collision::tesseract\_collision\_bullet::TesseractCompoundCollisionAlgorithm@{tesseract\_collision::tesseract\_collision\_bullet::TesseractCompoundCollisionAlgorithm}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__collision_1_1tesseract__collision__bullet_1_1TesseractCompoundCollisionAlgorithm}{Tesseract\+Compound\+Collision\+Algorithm}}\& tesseract\+\_\+collision\+::tesseract\+\_\+collision\+\_\+bullet\+::\+Tesseract\+Compound\+Collision\+Algorithm\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtesseract__collision_1_1tesseract__collision__bullet_1_1TesseractCompoundCollisionAlgorithm}{Tesseract\+Compound\+Collision\+Algorithm}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
 
 \mbox{\Hypertarget{classtesseract__collision_1_1tesseract__collision__bullet_1_1TesseractCompoundCollisionAlgorithm_a8527a87018bf96660329ef4ec0325a77}\label{classtesseract__collision_1_1tesseract__collision__bullet_1_1TesseractCompoundCollisionAlgorithm_a8527a87018bf96660329ef4ec0325a77}} 
 \index{tesseract\_collision::tesseract\_collision\_bullet::TesseractCompoundCollisionAlgorithm@{tesseract\_collision::tesseract\_collision\_bullet::TesseractCompoundCollisionAlgorithm}!preallocateChildAlgorithms@{preallocateChildAlgorithms}}

@@ -9,16 +9,30 @@ Default implementation of \mbox{\hyperlink{classikfast_1_1IkSolutionBase}{Ik\+So
 
 {\ttfamily \#include $<$ikfast.\+h$>$}
 
-Inheritance diagram for ikfast\+::Ik\+Solution$<$ T $>$\+:\begin{figure}[H]
+
+
+Inheritance diagram for ikfast\+::Ik\+Solution$<$ T $>$\+:
+\nopagebreak
+\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=2.000000cm]{de/ddb/classikfast_1_1IkSolution}
+\includegraphics[width=214pt]{d7/dff/classikfast_1_1IkSolution__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for ikfast\+::Ik\+Solution$<$ T $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d4/d5c/classikfast_1_1IkSolution__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classikfast_1_1IkSolution_a6b76af506a24ba4b78b1c9d3dc110a72}{Ik\+Solution}} (const std\+::vector$<$ \mbox{\hyperlink{classikfast_1_1IkSingleDOFSolutionBase}{Ik\+Single\+D\+O\+F\+Solution\+Base}}$<$ T $>$ $>$ \&vinfos, const std\+::vector$<$ int $>$ \&vfree)
+\mbox{\hyperlink{classikfast_1_1IkSolution_a6b76af506a24ba4b78b1c9d3dc110a72}{Ik\+Solution}} (const std\+::vector$<$ \mbox{\hyperlink{classikfast_1_1IkSingleDOFSolutionBase}{Ik\+Single\+DOFSolution\+Base}}$<$ T $>$ $>$ \&vinfos, const std\+::vector$<$ int $>$ \&vfree)
 \item 
 virtual void \mbox{\hyperlink{classikfast_1_1IkSolution_ae8891fda83002a94c74a80ab9784679e}{Get\+Solution}} (T $\ast$solution, const T $\ast$freevalues) const
 \begin{DoxyCompactList}\small\item\em gets a concrete solution \end{DoxyCompactList}\item 
@@ -26,7 +40,7 @@ virtual void \mbox{\hyperlink{classikfast_1_1IkSolution_ab0258a9b42c720194e13953
 \begin{DoxyCompactList}\small\item\em std\+::vector version of \mbox{\hyperlink{classikfast_1_1IkSolution_ae8891fda83002a94c74a80ab9784679e}{Get\+Solution}} \end{DoxyCompactList}\item 
 virtual const std\+::vector$<$ int $>$ \& \mbox{\hyperlink{classikfast_1_1IkSolution_a6565d27370b7fe391efaa64a18e87afc}{Get\+Free}} () const
 \begin{DoxyCompactList}\small\item\em Gets the indices of the configuration space that have to be preset before a full solution can be returned. \end{DoxyCompactList}\item 
-virtual const int \mbox{\hyperlink{classikfast_1_1IkSolution_a1505a20d0cc38c7d85204f96e2785467}{Get\+D\+OF}} () const
+virtual int \mbox{\hyperlink{classikfast_1_1IkSolution_a38374e5c362498812fdbb86bdd77ee42}{Get\+DOF}} () const
 \begin{DoxyCompactList}\small\item\em the dof of the solution \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{classikfast_1_1IkSolution_a138ee9ab2e290a1ae2ee4c7aa23dab41}{Validate}} () const
 \item 
@@ -35,7 +49,7 @@ virtual void \mbox{\hyperlink{classikfast_1_1IkSolution_a62c0808de0ffde44a96539d
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-std\+::vector$<$ \mbox{\hyperlink{classikfast_1_1IkSingleDOFSolutionBase}{Ik\+Single\+D\+O\+F\+Solution\+Base}}$<$ T $>$ $>$ \mbox{\hyperlink{classikfast_1_1IkSolution_a823a44ea0a199929967ce1646792a50c}{\+\_\+vbasesol}}
+std\+::vector$<$ \mbox{\hyperlink{classikfast_1_1IkSingleDOFSolutionBase}{Ik\+Single\+DOFSolution\+Base}}$<$ T $>$ $>$ \mbox{\hyperlink{classikfast_1_1IkSolution_a823a44ea0a199929967ce1646792a50c}{\+\_\+vbasesol}}
 \begin{DoxyCompactList}\small\item\em solution and their offsets if joints are mimiced \end{DoxyCompactList}\item 
 std\+::vector$<$ int $>$ \mbox{\hyperlink{classikfast_1_1IkSolution_a3c552543a66e39e127bed5a5c085b1bb}{\+\_\+vfree}}
 \end{DoxyCompactItemize}
@@ -53,17 +67,17 @@ Default implementation of \mbox{\hyperlink{classikfast_1_1IkSolutionBase}{Ik\+So
 \index{IkSolution@{IkSolution}!ikfast::IkSolution$<$ T $>$@{ikfast::IkSolution$<$ T $>$}}
 \doxysubsubsection{\texorpdfstring{IkSolution()}{IkSolution()}}
 {\footnotesize\ttfamily template$<$typename T $>$ \\
-\mbox{\hyperlink{classikfast_1_1IkSolution}{ikfast\+::\+Ik\+Solution}}$<$ T $>$\+::\mbox{\hyperlink{classikfast_1_1IkSolution}{Ik\+Solution}} (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{classikfast_1_1IkSingleDOFSolutionBase}{Ik\+Single\+D\+O\+F\+Solution\+Base}}$<$ T $>$ $>$ \&}]{vinfos,  }\item[{const std\+::vector$<$ int $>$ \&}]{vfree }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\mbox{\hyperlink{classikfast_1_1IkSolution}{ikfast\+::\+Ik\+Solution}}$<$ T $>$\+::\mbox{\hyperlink{classikfast_1_1IkSolution}{Ik\+Solution}} (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{classikfast_1_1IkSingleDOFSolutionBase}{Ik\+Single\+DOFSolution\+Base}}$<$ T $>$ $>$ \&}]{vinfos,  }\item[{const std\+::vector$<$ int $>$ \&}]{vfree }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{classikfast_1_1IkSolution_a1505a20d0cc38c7d85204f96e2785467}\label{classikfast_1_1IkSolution_a1505a20d0cc38c7d85204f96e2785467}} 
+\mbox{\Hypertarget{classikfast_1_1IkSolution_a38374e5c362498812fdbb86bdd77ee42}\label{classikfast_1_1IkSolution_a38374e5c362498812fdbb86bdd77ee42}} 
 \index{ikfast::IkSolution$<$ T $>$@{ikfast::IkSolution$<$ T $>$}!GetDOF@{GetDOF}}
 \index{GetDOF@{GetDOF}!ikfast::IkSolution$<$ T $>$@{ikfast::IkSolution$<$ T $>$}}
 \doxysubsubsection{\texorpdfstring{GetDOF()}{GetDOF()}}
 {\footnotesize\ttfamily template$<$typename T $>$ \\
-virtual const int \mbox{\hyperlink{classikfast_1_1IkSolution}{ikfast\+::\+Ik\+Solution}}$<$ T $>$\+::Get\+D\+OF (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+virtual int \mbox{\hyperlink{classikfast_1_1IkSolution}{ikfast\+::\+Ik\+Solution}}$<$ T $>$\+::Get\+DOF (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
 
 
 
@@ -71,7 +85,7 @@ the dof of the solution
 
 
 
-Implements \mbox{\hyperlink{classikfast_1_1IkSolutionBase_aac54f54aa69b27991651b0ba2a21208c}{ikfast\+::\+Ik\+Solution\+Base$<$ T $>$}}.
+Implements \mbox{\hyperlink{classikfast_1_1IkSolutionBase_a94ac1496405343f4c7ad2a3c07b375cc}{ikfast\+::\+Ik\+Solution\+Base$<$ T $>$}}.
 
 \mbox{\Hypertarget{classikfast_1_1IkSolution_a6565d27370b7fe391efaa64a18e87afc}\label{classikfast_1_1IkSolution_a6565d27370b7fe391efaa64a18e87afc}} 
 \index{ikfast::IkSolution$<$ T $>$@{ikfast::IkSolution$<$ T $>$}!GetFree@{GetFree}}
@@ -150,7 +164,7 @@ virtual void \mbox{\hyperlink{classikfast_1_1IkSolution}{ikfast\+::\+Ik\+Solutio
 \index{\_vbasesol@{\_vbasesol}!ikfast::IkSolution$<$ T $>$@{ikfast::IkSolution$<$ T $>$}}
 \doxysubsubsection{\texorpdfstring{\_vbasesol}{\_vbasesol}}
 {\footnotesize\ttfamily template$<$typename T $>$ \\
-std\+::vector$<$\mbox{\hyperlink{classikfast_1_1IkSingleDOFSolutionBase}{Ik\+Single\+D\+O\+F\+Solution\+Base}}$<$T$>$ $>$ \mbox{\hyperlink{classikfast_1_1IkSolution}{ikfast\+::\+Ik\+Solution}}$<$ T $>$\+::\+\_\+vbasesol}
+std\+::vector$<$\mbox{\hyperlink{classikfast_1_1IkSingleDOFSolutionBase}{Ik\+Single\+DOFSolution\+Base}}$<$T$>$ $>$ \mbox{\hyperlink{classikfast_1_1IkSolution}{ikfast\+::\+Ik\+Solution}}$<$ T $>$\+::\+\_\+vbasesol}
 
 
 

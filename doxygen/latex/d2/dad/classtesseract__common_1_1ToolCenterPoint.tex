@@ -1,0 +1,276 @@
+\hypertarget{classtesseract__common_1_1ToolCenterPoint}{}\doxysection{tesseract\+\_\+common\+::Tool\+Center\+Point Class Reference}
+\label{classtesseract__common_1_1ToolCenterPoint}\index{tesseract\_common::ToolCenterPoint@{tesseract\_common::ToolCenterPoint}}
+
+
+Manipulator Info Tool Center Point Definition.  
+
+
+
+
+{\ttfamily \#include $<$manipulator\+\_\+info.\+h$>$}
+
+
+
+Collaboration diagram for tesseract\+\_\+common\+::Tool\+Center\+Point\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=232pt]{d6/dbb/classtesseract__common_1_1ToolCenterPoint__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+EIGEN\+\_\+\+MAKE\+\_\+\+ALIGNED\+\_\+\+OPERATOR\+\_\+\+NEW \mbox{\hyperlink{classtesseract__common_1_1ToolCenterPoint_a7b7d64737d302a587d44e765eee61ca3}{Tool\+Center\+Point}} ()=default
+\item 
+\mbox{\hyperlink{classtesseract__common_1_1ToolCenterPoint_ae08d0dffe947abf069c90a02ad47bcc4}{Tool\+Center\+Point}} (const std\+::string \&name, bool external=false)
+\begin{DoxyCompactList}\small\item\em Tool Center Point Defined by name. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classtesseract__common_1_1ToolCenterPoint_aaa09aa205d42a0881f6a4b1894a9d0d6}{Tool\+Center\+Point}} (const Eigen\+::\+Isometry3d \&transform, bool external=false, std\+::string external\+\_\+frame=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em Tool Center Point Defined by transform. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classtesseract__common_1_1ToolCenterPoint_aeb1e5b1ca7f85d14fd8f659f00ceeae2}{empty}} () const
+\begin{DoxyCompactList}\small\item\em The Tool Center Point is empty. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classtesseract__common_1_1ToolCenterPoint_ab930baa1aaa0319cb5930a4ae42407ca}{is\+String}} () const
+\begin{DoxyCompactList}\small\item\em Check if tool center point is defined by name. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classtesseract__common_1_1ToolCenterPoint_a5cb38602ea303974a2a25daf4d6733d5}{is\+Transform}} () const
+\begin{DoxyCompactList}\small\item\em Check if tool center point is defined by transform. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classtesseract__common_1_1ToolCenterPoint_ab490d1b31cf4e6d1cb1eba7b5287a1fd}{is\+External}} () const
+\begin{DoxyCompactList}\small\item\em Check if tool center point is and external tcp which mean it is not defined. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classtesseract__common_1_1ToolCenterPoint_acb12b6edb74d43702136af70f8dcce16}{set\+External}} (bool value, std\+::string external\+\_\+frame)
+\begin{DoxyCompactList}\small\item\em Set the external property. \end{DoxyCompactList}\item 
+const std\+::string \& \mbox{\hyperlink{classtesseract__common_1_1ToolCenterPoint_a9a69710f4090e7ee957ef12ffc54e64e}{get\+External\+Frame}} () const
+\begin{DoxyCompactList}\small\item\em If an external tcp was defined as an Isometry then an external frame can be provided. If empty assumed relative to world. \end{DoxyCompactList}\item 
+const std\+::string \& \mbox{\hyperlink{classtesseract__common_1_1ToolCenterPoint_ae3e1dce6b531018c84f08eea439ee957}{get\+String}} () const
+\begin{DoxyCompactList}\small\item\em Get the tool center point name. \end{DoxyCompactList}\item 
+const Eigen\+::\+Isometry3d \& \mbox{\hyperlink{classtesseract__common_1_1ToolCenterPoint_ac206b7b243793abe72d4692da7c28c19}{get\+Transform}} () const
+\begin{DoxyCompactList}\small\item\em Get the tool center point transform. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classtesseract__common_1_1ToolCenterPoint_a26259ffce09c0d505c3300c8600b6788}{operator==}} (const \mbox{\hyperlink{classtesseract__common_1_1ToolCenterPoint}{Tool\+Center\+Point}} \&other) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classtesseract__common_1_1ToolCenterPoint_a118383acddf449e3a0caf5e681fd5a22}{type\+\_\+}} \{ 0 \}
+\item 
+std\+::string \mbox{\hyperlink{classtesseract__common_1_1ToolCenterPoint_a54146cdb8c7a98dca4e86254747a9c33}{name\+\_\+}}
+\item 
+Eigen\+::\+Isometry3d \mbox{\hyperlink{classtesseract__common_1_1ToolCenterPoint_a63a9146826d1b93736bb155dac2f5c1c}{transform\+\_\+}}
+\item 
+bool \mbox{\hyperlink{classtesseract__common_1_1ToolCenterPoint_a090a3fff3a757612e1adc33dfa3d159e}{external\+\_\+}} \{ false \}
+\begin{DoxyCompactList}\small\item\em The external TCP is used when the robot is holding the part versus the tool. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classtesseract__common_1_1ToolCenterPoint_aff21e2a7af841ce0da176244bf41ad45}{external\+\_\+frame\+\_\+}}
+\begin{DoxyCompactList}\small\item\em If an external tcp was defined as an Isometry then an external can be provided. If empty assumed relative to world. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Manipulator Info Tool Center Point Definition. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtesseract__common_1_1ToolCenterPoint_a7b7d64737d302a587d44e765eee61ca3}\label{classtesseract__common_1_1ToolCenterPoint_a7b7d64737d302a587d44e765eee61ca3}} 
+\index{tesseract\_common::ToolCenterPoint@{tesseract\_common::ToolCenterPoint}!ToolCenterPoint@{ToolCenterPoint}}
+\index{ToolCenterPoint@{ToolCenterPoint}!tesseract\_common::ToolCenterPoint@{tesseract\_common::ToolCenterPoint}}
+\doxysubsubsection{\texorpdfstring{ToolCenterPoint()}{ToolCenterPoint()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily EIGEN\+\_\+\+MAKE\+\_\+\+ALIGNED\+\_\+\+OPERATOR\+\_\+\+NEW tesseract\+\_\+common\+::\+Tool\+Center\+Point\+::\+Tool\+Center\+Point (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classtesseract__common_1_1ToolCenterPoint_ae08d0dffe947abf069c90a02ad47bcc4}\label{classtesseract__common_1_1ToolCenterPoint_ae08d0dffe947abf069c90a02ad47bcc4}} 
+\index{tesseract\_common::ToolCenterPoint@{tesseract\_common::ToolCenterPoint}!ToolCenterPoint@{ToolCenterPoint}}
+\index{ToolCenterPoint@{ToolCenterPoint}!tesseract\_common::ToolCenterPoint@{tesseract\_common::ToolCenterPoint}}
+\doxysubsubsection{\texorpdfstring{ToolCenterPoint()}{ToolCenterPoint()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily tesseract\+\_\+common\+::\+Tool\+Center\+Point\+::\+Tool\+Center\+Point (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{bool}]{external = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Tool Center Point Defined by name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The tool center point name \\
+\hline
+{\em external} & The external TCP is used when the robot is holding the part versus the tool. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+External should also be set to true when your kinematic object includes a robot and positioner, where the positioner has the tool and the robot is holding the part. Basically anytime the tool is not attached to the tip link of the kinematic chain. 
+\end{DoxyNote}
+\mbox{\Hypertarget{classtesseract__common_1_1ToolCenterPoint_aaa09aa205d42a0881f6a4b1894a9d0d6}\label{classtesseract__common_1_1ToolCenterPoint_aaa09aa205d42a0881f6a4b1894a9d0d6}} 
+\index{tesseract\_common::ToolCenterPoint@{tesseract\_common::ToolCenterPoint}!ToolCenterPoint@{ToolCenterPoint}}
+\index{ToolCenterPoint@{ToolCenterPoint}!tesseract\_common::ToolCenterPoint@{tesseract\_common::ToolCenterPoint}}
+\doxysubsubsection{\texorpdfstring{ToolCenterPoint()}{ToolCenterPoint()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily tesseract\+\_\+common\+::\+Tool\+Center\+Point\+::\+Tool\+Center\+Point (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Isometry3d \&}]{transform,  }\item[{bool}]{external = {\ttfamily false},  }\item[{std\+::string}]{external\+\_\+frame = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+
+
+
+Tool Center Point Defined by transform. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em transform} & The tool center point transform \\
+\hline
+{\em external} & The external TCP is used when the robot is holding the part versus the tool. \\
+\hline
+{\em external\+\_\+frame} & If empty assumed relative to world, otherwise the provided tcp is relative to this link. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+External should also be set to true when your kinematic object includes a robot and positioner, where the positioner has the tool and the robot is holding the part. Basically anytime the tool is not attached to the tip link of the kinematic chain. 
+\end{DoxyNote}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtesseract__common_1_1ToolCenterPoint_aeb1e5b1ca7f85d14fd8f659f00ceeae2}\label{classtesseract__common_1_1ToolCenterPoint_aeb1e5b1ca7f85d14fd8f659f00ceeae2}} 
+\index{tesseract\_common::ToolCenterPoint@{tesseract\_common::ToolCenterPoint}!empty@{empty}}
+\index{empty@{empty}!tesseract\_common::ToolCenterPoint@{tesseract\_common::ToolCenterPoint}}
+\doxysubsubsection{\texorpdfstring{empty()}{empty()}}
+{\footnotesize\ttfamily bool tesseract\+\_\+common\+::\+Tool\+Center\+Point\+::empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+The Tool Center Point is empty. 
+
+\begin{DoxyReturn}{Returns}
+True if empty otherwise false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtesseract__common_1_1ToolCenterPoint_a9a69710f4090e7ee957ef12ffc54e64e}\label{classtesseract__common_1_1ToolCenterPoint_a9a69710f4090e7ee957ef12ffc54e64e}} 
+\index{tesseract\_common::ToolCenterPoint@{tesseract\_common::ToolCenterPoint}!getExternalFrame@{getExternalFrame}}
+\index{getExternalFrame@{getExternalFrame}!tesseract\_common::ToolCenterPoint@{tesseract\_common::ToolCenterPoint}}
+\doxysubsubsection{\texorpdfstring{getExternalFrame()}{getExternalFrame()}}
+{\footnotesize\ttfamily const std\+::string \& tesseract\+\_\+common\+::\+Tool\+Center\+Point\+::get\+External\+Frame (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+If an external tcp was defined as an Isometry then an external frame can be provided. If empty assumed relative to world. 
+
+\mbox{\Hypertarget{classtesseract__common_1_1ToolCenterPoint_ae3e1dce6b531018c84f08eea439ee957}\label{classtesseract__common_1_1ToolCenterPoint_ae3e1dce6b531018c84f08eea439ee957}} 
+\index{tesseract\_common::ToolCenterPoint@{tesseract\_common::ToolCenterPoint}!getString@{getString}}
+\index{getString@{getString}!tesseract\_common::ToolCenterPoint@{tesseract\_common::ToolCenterPoint}}
+\doxysubsubsection{\texorpdfstring{getString()}{getString()}}
+{\footnotesize\ttfamily const std\+::string \& tesseract\+\_\+common\+::\+Tool\+Center\+Point\+::get\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the tool center point name. 
+
+\begin{DoxyReturn}{Returns}
+Name 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtesseract__common_1_1ToolCenterPoint_ac206b7b243793abe72d4692da7c28c19}\label{classtesseract__common_1_1ToolCenterPoint_ac206b7b243793abe72d4692da7c28c19}} 
+\index{tesseract\_common::ToolCenterPoint@{tesseract\_common::ToolCenterPoint}!getTransform@{getTransform}}
+\index{getTransform@{getTransform}!tesseract\_common::ToolCenterPoint@{tesseract\_common::ToolCenterPoint}}
+\doxysubsubsection{\texorpdfstring{getTransform()}{getTransform()}}
+{\footnotesize\ttfamily const Eigen\+::\+Isometry3d \& tesseract\+\_\+common\+::\+Tool\+Center\+Point\+::get\+Transform (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the tool center point transform. 
+
+\begin{DoxyReturn}{Returns}
+Transform 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtesseract__common_1_1ToolCenterPoint_ab490d1b31cf4e6d1cb1eba7b5287a1fd}\label{classtesseract__common_1_1ToolCenterPoint_ab490d1b31cf4e6d1cb1eba7b5287a1fd}} 
+\index{tesseract\_common::ToolCenterPoint@{tesseract\_common::ToolCenterPoint}!isExternal@{isExternal}}
+\index{isExternal@{isExternal}!tesseract\_common::ToolCenterPoint@{tesseract\_common::ToolCenterPoint}}
+\doxysubsubsection{\texorpdfstring{isExternal()}{isExternal()}}
+{\footnotesize\ttfamily bool tesseract\+\_\+common\+::\+Tool\+Center\+Point\+::is\+External (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Check if tool center point is and external tcp which mean it is not defined. 
+
+The external TCP is used when the robot is holding the part versus the tool. External should also be set to true when your kinematic object includes a robot and positioner, where the positioner has the tool and the robot is holding the part. Basically anytime the tool is not attached to the tip link of the kinematic chain. \begin{DoxyReturn}{Returns}
+True if and external TCP, otherwise the false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtesseract__common_1_1ToolCenterPoint_ab930baa1aaa0319cb5930a4ae42407ca}\label{classtesseract__common_1_1ToolCenterPoint_ab930baa1aaa0319cb5930a4ae42407ca}} 
+\index{tesseract\_common::ToolCenterPoint@{tesseract\_common::ToolCenterPoint}!isString@{isString}}
+\index{isString@{isString}!tesseract\_common::ToolCenterPoint@{tesseract\_common::ToolCenterPoint}}
+\doxysubsubsection{\texorpdfstring{isString()}{isString()}}
+{\footnotesize\ttfamily bool tesseract\+\_\+common\+::\+Tool\+Center\+Point\+::is\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Check if tool center point is defined by name. 
+
+\begin{DoxyReturn}{Returns}
+True if constructed with name otherwise false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtesseract__common_1_1ToolCenterPoint_a5cb38602ea303974a2a25daf4d6733d5}\label{classtesseract__common_1_1ToolCenterPoint_a5cb38602ea303974a2a25daf4d6733d5}} 
+\index{tesseract\_common::ToolCenterPoint@{tesseract\_common::ToolCenterPoint}!isTransform@{isTransform}}
+\index{isTransform@{isTransform}!tesseract\_common::ToolCenterPoint@{tesseract\_common::ToolCenterPoint}}
+\doxysubsubsection{\texorpdfstring{isTransform()}{isTransform()}}
+{\footnotesize\ttfamily bool tesseract\+\_\+common\+::\+Tool\+Center\+Point\+::is\+Transform (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Check if tool center point is defined by transform. 
+
+\begin{DoxyReturn}{Returns}
+True if constructed with transform otherwise false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtesseract__common_1_1ToolCenterPoint_a26259ffce09c0d505c3300c8600b6788}\label{classtesseract__common_1_1ToolCenterPoint_a26259ffce09c0d505c3300c8600b6788}} 
+\index{tesseract\_common::ToolCenterPoint@{tesseract\_common::ToolCenterPoint}!operator==@{operator==}}
+\index{operator==@{operator==}!tesseract\_common::ToolCenterPoint@{tesseract\_common::ToolCenterPoint}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool tesseract\+\_\+common\+::\+Tool\+Center\+Point\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtesseract__common_1_1ToolCenterPoint}{Tool\+Center\+Point}} \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classtesseract__common_1_1ToolCenterPoint_acb12b6edb74d43702136af70f8dcce16}\label{classtesseract__common_1_1ToolCenterPoint_acb12b6edb74d43702136af70f8dcce16}} 
+\index{tesseract\_common::ToolCenterPoint@{tesseract\_common::ToolCenterPoint}!setExternal@{setExternal}}
+\index{setExternal@{setExternal}!tesseract\_common::ToolCenterPoint@{tesseract\_common::ToolCenterPoint}}
+\doxysubsubsection{\texorpdfstring{setExternal()}{setExternal()}}
+{\footnotesize\ttfamily void tesseract\+\_\+common\+::\+Tool\+Center\+Point\+::set\+External (\begin{DoxyParamCaption}\item[{bool}]{value,  }\item[{std\+::string}]{external\+\_\+frame }\end{DoxyParamCaption})}
+
+
+
+Set the external property. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & True if external tool center point, otherwise false \\
+\hline
+{\em external\+\_\+frame} & If an external tcp was defined as an Isometry then an external can be provided. If empty assumed relative to world. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classtesseract__common_1_1ToolCenterPoint_a090a3fff3a757612e1adc33dfa3d159e}\label{classtesseract__common_1_1ToolCenterPoint_a090a3fff3a757612e1adc33dfa3d159e}} 
+\index{tesseract\_common::ToolCenterPoint@{tesseract\_common::ToolCenterPoint}!external\_@{external\_}}
+\index{external\_@{external\_}!tesseract\_common::ToolCenterPoint@{tesseract\_common::ToolCenterPoint}}
+\doxysubsubsection{\texorpdfstring{external\_}{external\_}}
+{\footnotesize\ttfamily bool tesseract\+\_\+common\+::\+Tool\+Center\+Point\+::external\+\_\+ \{ false \}\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The external TCP is used when the robot is holding the part versus the tool. 
+
+External should also be set to true when your kinematic object includes a robot and positioner, where the positioner has the tool and the robot is holding the part. Basically anytime the tool is not attached to the tip link of the kinematic chain. \mbox{\Hypertarget{classtesseract__common_1_1ToolCenterPoint_aff21e2a7af841ce0da176244bf41ad45}\label{classtesseract__common_1_1ToolCenterPoint_aff21e2a7af841ce0da176244bf41ad45}} 
+\index{tesseract\_common::ToolCenterPoint@{tesseract\_common::ToolCenterPoint}!external\_frame\_@{external\_frame\_}}
+\index{external\_frame\_@{external\_frame\_}!tesseract\_common::ToolCenterPoint@{tesseract\_common::ToolCenterPoint}}
+\doxysubsubsection{\texorpdfstring{external\_frame\_}{external\_frame\_}}
+{\footnotesize\ttfamily std\+::string tesseract\+\_\+common\+::\+Tool\+Center\+Point\+::external\+\_\+frame\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+If an external tcp was defined as an Isometry then an external can be provided. If empty assumed relative to world. 
+
+\mbox{\Hypertarget{classtesseract__common_1_1ToolCenterPoint_a54146cdb8c7a98dca4e86254747a9c33}\label{classtesseract__common_1_1ToolCenterPoint_a54146cdb8c7a98dca4e86254747a9c33}} 
+\index{tesseract\_common::ToolCenterPoint@{tesseract\_common::ToolCenterPoint}!name\_@{name\_}}
+\index{name\_@{name\_}!tesseract\_common::ToolCenterPoint@{tesseract\_common::ToolCenterPoint}}
+\doxysubsubsection{\texorpdfstring{name\_}{name\_}}
+{\footnotesize\ttfamily std\+::string tesseract\+\_\+common\+::\+Tool\+Center\+Point\+::name\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classtesseract__common_1_1ToolCenterPoint_a63a9146826d1b93736bb155dac2f5c1c}\label{classtesseract__common_1_1ToolCenterPoint_a63a9146826d1b93736bb155dac2f5c1c}} 
+\index{tesseract\_common::ToolCenterPoint@{tesseract\_common::ToolCenterPoint}!transform\_@{transform\_}}
+\index{transform\_@{transform\_}!tesseract\_common::ToolCenterPoint@{tesseract\_common::ToolCenterPoint}}
+\doxysubsubsection{\texorpdfstring{transform\_}{transform\_}}
+{\footnotesize\ttfamily Eigen\+::\+Isometry3d tesseract\+\_\+common\+::\+Tool\+Center\+Point\+::transform\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classtesseract__common_1_1ToolCenterPoint_a118383acddf449e3a0caf5e681fd5a22}\label{classtesseract__common_1_1ToolCenterPoint_a118383acddf449e3a0caf5e681fd5a22}} 
+\index{tesseract\_common::ToolCenterPoint@{tesseract\_common::ToolCenterPoint}!type\_@{type\_}}
+\index{type\_@{type\_}!tesseract\_common::ToolCenterPoint@{tesseract\_common::ToolCenterPoint}}
+\doxysubsubsection{\texorpdfstring{type\_}{type\_}}
+{\footnotesize\ttfamily int tesseract\+\_\+common\+::\+Tool\+Center\+Point\+::type\+\_\+ \{ 0 \}\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+tesseract/tesseract\+\_\+common/include/tesseract\+\_\+common/\mbox{\hyperlink{manipulator__info_8h}{manipulator\+\_\+info.\+h}}\item 
+tesseract/tesseract\+\_\+common/src/\mbox{\hyperlink{manipulator__info_8cpp}{manipulator\+\_\+info.\+cpp}}\end{DoxyCompactItemize}

@@ -3,10 +3,26 @@
 {\ttfamily \#include $<$vector$>$}\newline
 {\ttfamily \#include $<$list$>$}\newline
 {\ttfamily \#include $<$stdexcept$>$}\newline
+Include dependency graph for ikfast.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=248pt]{d2/dd7/ikfast_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=195pt]{d7/d79/ikfast_8h__dep__incl}
+\end{center}
+\end{figure}
 \doxysubsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
-class \mbox{\hyperlink{classikfast_1_1IkSingleDOFSolutionBase}{ikfast\+::\+Ik\+Single\+D\+O\+F\+Solution\+Base$<$ T $>$}}
+class \mbox{\hyperlink{classikfast_1_1IkSingleDOFSolutionBase}{ikfast\+::\+Ik\+Single\+DOFSolution\+Base$<$ T $>$}}
 \begin{DoxyCompactList}\small\item\em holds the solution for a single dof \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classikfast_1_1IkSolutionBase}{ikfast\+::\+Ik\+Solution\+Base$<$ T $>$}}
 \begin{DoxyCompactList}\small\item\em The discrete solutions are returned in this structure. \end{DoxyCompactList}\item 
@@ -26,7 +42,7 @@ class \mbox{\hyperlink{classikfast_1_1IkSolutionList}{ikfast\+::\+Ik\+Solution\+
 \doxysubsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
-\#define \mbox{\hyperlink{ikfast_8h_afb507c47cee8d15d0241aa894bef5a67}{I\+K\+F\+A\+S\+T\+\_\+\+V\+E\+R\+S\+I\+ON}}~61
+\#define \mbox{\hyperlink{ikfast_8h_afb507c47cee8d15d0241aa894bef5a67}{IKFAST\+\_\+\+VERSION}}~61
 \begin{DoxyCompactList}\small\item\em Header file for all ikfast c++ files/shared objects. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -35,13 +51,13 @@ class \mbox{\hyperlink{classikfast_1_1IkSolutionList}{ikfast\+::\+Ik\+Solution\+
 \index{ikfast.h@{ikfast.h}!IKFAST\_VERSION@{IKFAST\_VERSION}}
 \index{IKFAST\_VERSION@{IKFAST\_VERSION}!ikfast.h@{ikfast.h}}
 \doxysubsubsection{\texorpdfstring{IKFAST\_VERSION}{IKFAST\_VERSION}}
-{\footnotesize\ttfamily \#define I\+K\+F\+A\+S\+T\+\_\+\+V\+E\+R\+S\+I\+ON~61}
+{\footnotesize\ttfamily \#define IKFAST\+\_\+\+VERSION~61}
 
 
 
 Header file for all ikfast c++ files/shared objects. 
 
-The ikfast inverse kinematics compiler is part of Open\+R\+A\+VE.
+The ikfast inverse kinematics compiler is part of Open\+RAVE.
 
 The file is divided into two sections\+:
 \begin{DoxyItemize}
@@ -53,11 +69,11 @@ The defines are as follows, they are also used for the ikfast C++ class\+:
 
 
 \begin{DoxyItemize}
-\item I\+K\+F\+A\+S\+T\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+C\+O\+M\+M\+ON -\/ common classes
-\item I\+K\+F\+A\+S\+T\+\_\+\+H\+A\+S\+\_\+\+L\+I\+B\+R\+A\+RY -\/ if defined, will include library-\/specific functions. by default this is off
-\item I\+K\+F\+A\+S\+T\+\_\+\+C\+L\+I\+B\+R\+A\+RY -\/ Define this linking statically or dynamically to get correct visibility.
-\item I\+K\+F\+A\+S\+T\+\_\+\+N\+O\+\_\+\+M\+A\+IN -\/ Remove the {\ttfamily main} function, usually used with I\+K\+F\+A\+S\+T\+\_\+\+C\+L\+I\+B\+R\+A\+RY
-\item I\+K\+F\+A\+S\+T\+\_\+\+A\+S\+S\+E\+RT -\/ Define in order to get a custom assert called when Na\+Ns, divides by zero, and other invalid conditions are detected.
-\item I\+K\+F\+A\+S\+T\+\_\+\+R\+E\+AL -\/ Use to force a custom real number type for Ik\+Real.
-\item I\+K\+F\+A\+S\+T\+\_\+\+N\+A\+M\+E\+S\+P\+A\+CE -\/ Enclose all functions and classes in this namespace, the {\ttfamily main} function is excluded. should be the same as ikfast.\+\_\+\+\_\+version\+\_\+\+\_\+ 
+\item IKFAST\+\_\+\+HEADER\+\_\+\+COMMON -\/ common classes
+\item IKFAST\+\_\+\+HAS\+\_\+\+LIBRARY -\/ if defined, will include library-\/specific functions. by default this is off
+\item IKFAST\+\_\+\+CLIBRARY -\/ Define this linking statically or dynamically to get correct visibility.
+\item IKFAST\+\_\+\+NO\+\_\+\+MAIN -\/ Remove the {\ttfamily main} function, usually used with IKFAST\+\_\+\+CLIBRARY
+\item IKFAST\+\_\+\+ASSERT -\/ Define in order to get a custom assert called when Na\+Ns, divides by zero, and other invalid conditions are detected.
+\item IKFAST\+\_\+\+REAL -\/ Use to force a custom real number type for Ik\+Real.
+\item IKFAST\+\_\+\+NAMESPACE -\/ Enclose all functions and classes in this namespace, the {\ttfamily main} function is excluded. should be the same as ikfast.\+\_\+\+\_\+version\+\_\+\+\_\+ 
 \end{DoxyItemize}

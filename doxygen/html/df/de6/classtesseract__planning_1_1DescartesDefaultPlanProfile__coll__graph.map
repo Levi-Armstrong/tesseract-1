@@ -1,0 +1,8 @@
+<map id="tesseract_planning::DescartesDefaultPlanProfile&lt; FloatType &gt;" name="tesseract_planning::DescartesDefaultPlanProfile&lt; FloatType &gt;">
+<area shape="rect" id="node1" title=" " alt="" coords="991,45,1181,101"/>
+<area shape="rect" id="node2" href="$d5/dd7/classtesseract__planning_1_1DescartesPlanProfile.html" title=" " alt="" coords="665,5,814,61"/>
+<area shape="rect" id="node3" href="$d9/d2c/structtesseract__collision_1_1CollisionCheckConfig.html" title="This is a high level structure containing common information that collision checking utilities need...." alt="" coords="664,91,815,133"/>
+<area shape="rect" id="node4" href="$da/df6/structtesseract__collision_1_1ContactRequest.html" title="The ContactRequest struct." alt="" coords="350,59,481,101"/>
+<area shape="rect" id="node5" href="$d3/da1/structtesseract__collision_1_1CollisionMarginData.html" title="Stores information about how the margins allowed between collision objects." alt="" coords="344,125,487,166"/>
+<area shape="rect" id="node6" title=" " alt="" coords="5,110,212,181"/>
+</map>

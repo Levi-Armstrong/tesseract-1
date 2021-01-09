@@ -1,0 +1,139 @@
+\hypertarget{classtesseract__environment_1_1OFKTPrismaticNode}{}\doxysection{tesseract\+\_\+environment\+::OFKTPrismatic\+Node Class Reference}
+\label{classtesseract__environment_1_1OFKTPrismaticNode}\index{tesseract\_environment::OFKTPrismaticNode@{tesseract\_environment::OFKTPrismaticNode}}
+
+
+{\ttfamily \#include $<$ofkt\+\_\+nodes.\+h$>$}
+
+
+
+Inheritance diagram for tesseract\+\_\+environment\+::OFKTPrismatic\+Node\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=196pt]{de/d0e/classtesseract__environment_1_1OFKTPrismaticNode__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for tesseract\+\_\+environment\+::OFKTPrismatic\+Node\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/dc8/classtesseract__environment_1_1OFKTPrismaticNode__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+EIGEN\+\_\+\+MAKE\+\_\+\+ALIGNED\+\_\+\+OPERATOR\+\_\+\+NEW \mbox{\hyperlink{classtesseract__environment_1_1OFKTPrismaticNode_a77cd264a14cee712014e10b1dffa0d5d}{OFKTPrismatic\+Node}} (\mbox{\hyperlink{classtesseract__environment_1_1OFKTNode}{OFKTNode}} $\ast$parent, std\+::string link\+\_\+name, std\+::string joint\+\_\+name, Eigen\+::\+Isometry3d static\+\_\+tf, Eigen\+::\+Vector3d axis)
+\item 
+void \mbox{\hyperlink{classtesseract__environment_1_1OFKTPrismaticNode_a7812f18c3da4d9b9a273517fae209625}{compute\+And\+Store\+Local\+Transformation}} () override
+\begin{DoxyCompactList}\small\item\em Compute and save the local transformation \textquotesingle{}L = S $\ast$ J(\+Joint Value)\textquotesingle{}. \end{DoxyCompactList}\item 
+Eigen\+::\+Isometry3d \mbox{\hyperlink{classtesseract__environment_1_1OFKTPrismaticNode_ab82d53c77b4dd15cb66bb17f4272799b}{compute\+Local\+Transformation}} (double joint\+\_\+value) const override
+\begin{DoxyCompactList}\small\item\em Compute the local tranformation but do not save. \end{DoxyCompactList}\item 
+const Eigen\+::\+Vector3d \& \mbox{\hyperlink{classtesseract__environment_1_1OFKTPrismaticNode_aaffaf96cf00f81dabba28395ead94450}{get\+Axis}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classtesseract__environment_1_1OFKTPrismaticNode_a0db1e102cdad646222a61849caa93ed8}{compute\+And\+Store\+Local\+Transformation\+Impl}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Eigen\+::\+Vector3d \mbox{\hyperlink{classtesseract__environment_1_1OFKTPrismaticNode_a0d31f256b8eda3c829221d4793d1d20e}{axis\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classtesseract__environment_1_1OFKTPrismaticNode_a04c5cec13fafb90debd7afa7a3c833c4}{OFKTState\+Solver}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtesseract__environment_1_1OFKTPrismaticNode_a77cd264a14cee712014e10b1dffa0d5d}\label{classtesseract__environment_1_1OFKTPrismaticNode_a77cd264a14cee712014e10b1dffa0d5d}} 
+\index{tesseract\_environment::OFKTPrismaticNode@{tesseract\_environment::OFKTPrismaticNode}!OFKTPrismaticNode@{OFKTPrismaticNode}}
+\index{OFKTPrismaticNode@{OFKTPrismaticNode}!tesseract\_environment::OFKTPrismaticNode@{tesseract\_environment::OFKTPrismaticNode}}
+\doxysubsubsection{\texorpdfstring{OFKTPrismaticNode()}{OFKTPrismaticNode()}}
+{\footnotesize\ttfamily tesseract\+\_\+environment\+::\+OFKTPrismatic\+Node\+::\+OFKTPrismatic\+Node (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtesseract__environment_1_1OFKTNode}{OFKTNode}} $\ast$}]{parent,  }\item[{std\+::string}]{link\+\_\+name,  }\item[{std\+::string}]{joint\+\_\+name,  }\item[{Eigen\+::\+Isometry3d}]{static\+\_\+tf,  }\item[{Eigen\+::\+Vector3d}]{axis }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtesseract__environment_1_1OFKTPrismaticNode_a7812f18c3da4d9b9a273517fae209625}\label{classtesseract__environment_1_1OFKTPrismaticNode_a7812f18c3da4d9b9a273517fae209625}} 
+\index{tesseract\_environment::OFKTPrismaticNode@{tesseract\_environment::OFKTPrismaticNode}!computeAndStoreLocalTransformation@{computeAndStoreLocalTransformation}}
+\index{computeAndStoreLocalTransformation@{computeAndStoreLocalTransformation}!tesseract\_environment::OFKTPrismaticNode@{tesseract\_environment::OFKTPrismaticNode}}
+\doxysubsubsection{\texorpdfstring{computeAndStoreLocalTransformation()}{computeAndStoreLocalTransformation()}}
+{\footnotesize\ttfamily void tesseract\+\_\+environment\+::\+OFKTPrismatic\+Node\+::compute\+And\+Store\+Local\+Transformation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Compute and save the local transformation \textquotesingle{}L = S $\ast$ J(\+Joint Value)\textquotesingle{}. 
+
+This should reset the flag such that \mbox{\hyperlink{classtesseract__environment_1_1OFKTBaseNode_ae03a183dc4eb9491658cc2e9ff28a532}{has\+Joint\+Value\+Changed()}} returns false 
+
+Implements \mbox{\hyperlink{classtesseract__environment_1_1OFKTNode_ac942911a7192357352c87bec1bb27f68}{tesseract\+\_\+environment\+::\+OFKTNode}}.
+
+\mbox{\Hypertarget{classtesseract__environment_1_1OFKTPrismaticNode_a0db1e102cdad646222a61849caa93ed8}\label{classtesseract__environment_1_1OFKTPrismaticNode_a0db1e102cdad646222a61849caa93ed8}} 
+\index{tesseract\_environment::OFKTPrismaticNode@{tesseract\_environment::OFKTPrismaticNode}!computeAndStoreLocalTransformationImpl@{computeAndStoreLocalTransformationImpl}}
+\index{computeAndStoreLocalTransformationImpl@{computeAndStoreLocalTransformationImpl}!tesseract\_environment::OFKTPrismaticNode@{tesseract\_environment::OFKTPrismaticNode}}
+\doxysubsubsection{\texorpdfstring{computeAndStoreLocalTransformationImpl()}{computeAndStoreLocalTransformationImpl()}}
+{\footnotesize\ttfamily void tesseract\+\_\+environment\+::\+OFKTPrismatic\+Node\+::compute\+And\+Store\+Local\+Transformation\+Impl (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classtesseract__environment_1_1OFKTPrismaticNode_ab82d53c77b4dd15cb66bb17f4272799b}\label{classtesseract__environment_1_1OFKTPrismaticNode_ab82d53c77b4dd15cb66bb17f4272799b}} 
+\index{tesseract\_environment::OFKTPrismaticNode@{tesseract\_environment::OFKTPrismaticNode}!computeLocalTransformation@{computeLocalTransformation}}
+\index{computeLocalTransformation@{computeLocalTransformation}!tesseract\_environment::OFKTPrismaticNode@{tesseract\_environment::OFKTPrismaticNode}}
+\doxysubsubsection{\texorpdfstring{computeLocalTransformation()}{computeLocalTransformation()}}
+{\footnotesize\ttfamily Eigen\+::\+Isometry3d tesseract\+\_\+environment\+::\+OFKTPrismatic\+Node\+::compute\+Local\+Transformation (\begin{DoxyParamCaption}\item[{double}]{joint\+\_\+value }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Compute the local tranformation but do not save. 
+
+This provides a const method for computing the local transform.
+
+
+\begin{DoxyParams}{Parameters}
+{\em joint\+\_\+value} & The joint value for calculating the local transformation \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The local transformation for the provided joint value 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classtesseract__environment_1_1OFKTBaseNode_af1a62d46ecd588ef9e7c59d90afaab7c}{tesseract\+\_\+environment\+::\+OFKTBase\+Node}}.
+
+\mbox{\Hypertarget{classtesseract__environment_1_1OFKTPrismaticNode_aaffaf96cf00f81dabba28395ead94450}\label{classtesseract__environment_1_1OFKTPrismaticNode_aaffaf96cf00f81dabba28395ead94450}} 
+\index{tesseract\_environment::OFKTPrismaticNode@{tesseract\_environment::OFKTPrismaticNode}!getAxis@{getAxis}}
+\index{getAxis@{getAxis}!tesseract\_environment::OFKTPrismaticNode@{tesseract\_environment::OFKTPrismaticNode}}
+\doxysubsubsection{\texorpdfstring{getAxis()}{getAxis()}}
+{\footnotesize\ttfamily const Eigen\+::\+Vector3d \& tesseract\+\_\+environment\+::\+OFKTPrismatic\+Node\+::get\+Axis (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classtesseract__environment_1_1OFKTPrismaticNode_a04c5cec13fafb90debd7afa7a3c833c4}\label{classtesseract__environment_1_1OFKTPrismaticNode_a04c5cec13fafb90debd7afa7a3c833c4}} 
+\index{tesseract\_environment::OFKTPrismaticNode@{tesseract\_environment::OFKTPrismaticNode}!OFKTStateSolver@{OFKTStateSolver}}
+\index{OFKTStateSolver@{OFKTStateSolver}!tesseract\_environment::OFKTPrismaticNode@{tesseract\_environment::OFKTPrismaticNode}}
+\doxysubsubsection{\texorpdfstring{OFKTStateSolver}{OFKTStateSolver}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{classtesseract__environment_1_1OFKTStateSolver}{OFKTState\+Solver}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classtesseract__environment_1_1OFKTPrismaticNode_a0d31f256b8eda3c829221d4793d1d20e}\label{classtesseract__environment_1_1OFKTPrismaticNode_a0d31f256b8eda3c829221d4793d1d20e}} 
+\index{tesseract\_environment::OFKTPrismaticNode@{tesseract\_environment::OFKTPrismaticNode}!axis\_@{axis\_}}
+\index{axis\_@{axis\_}!tesseract\_environment::OFKTPrismaticNode@{tesseract\_environment::OFKTPrismaticNode}}
+\doxysubsubsection{\texorpdfstring{axis\_}{axis\_}}
+{\footnotesize\ttfamily Eigen\+::\+Vector3d tesseract\+\_\+environment\+::\+OFKTPrismatic\+Node\+::axis\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+tesseract/tesseract\+\_\+environment/include/tesseract\+\_\+environment/ofkt/\mbox{\hyperlink{ofkt__nodes_8h}{ofkt\+\_\+nodes.\+h}}\item 
+tesseract/tesseract\+\_\+environment/src/ofkt/\mbox{\hyperlink{ofkt__nodes_8cpp}{ofkt\+\_\+nodes.\+cpp}}\end{DoxyCompactItemize}

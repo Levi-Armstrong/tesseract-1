@@ -12,6 +12,22 @@ Kinematics utility functions.
 {\ttfamily \#include $<$tesseract\+\_\+scene\+\_\+graph/srdf\+\_\+model.\+h$>$}\newline
 {\ttfamily \#include $<$tesseract\+\_\+scene\+\_\+graph/graph.\+h$>$}\newline
 {\ttfamily \#include $<$tesseract\+\_\+kinematics/core/forward\+\_\+kinematics.\+h$>$}\newline
+Include dependency graph for utils.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/d59/tesseract__kinematics_2include_2tesseract__kinematics_2core_2utils_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/dc0/tesseract__kinematics_2include_2tesseract__kinematics_2core_2utils_8h__dep__incl}
+\end{center}
+\end{figure}
 \doxysubsection*{Namespaces}
 \begin{DoxyCompactItemize}
 \item 
@@ -26,11 +42,11 @@ static void \mbox{\hyperlink{namespacetesseract__kinematics_a6b45261aabf9d9c3c6b
 \begin{DoxyCompactList}\small\item\em Change the reference point of the jacobian. \end{DoxyCompactList}\item 
 static void \mbox{\hyperlink{namespacetesseract__kinematics_a43f562948ca86e1cd531b12a92191334}{tesseract\+\_\+kinematics\+::numerical\+Jacobian}} (Eigen\+::\+Ref$<$ Eigen\+::\+Matrix\+Xd $>$ jacobian, const Eigen\+::\+Isometry3d \&change\+\_\+base, const \mbox{\hyperlink{classtesseract__kinematics_1_1ForwardKinematics}{tesseract\+\_\+kinematics\+::\+Forward\+Kinematics}} \&kin, const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector\+Xd $>$ \&joint\+\_\+values, const std\+::string \&link\+\_\+name, const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector3d $>$ \&link\+\_\+point)
 \begin{DoxyCompactList}\small\item\em Numerically calculate a jacobian. This is mainly used for testing. \end{DoxyCompactList}\item 
-static bool \mbox{\hyperlink{namespacetesseract__kinematics_a7c0f58b6ad5f6ccb2f3887684f3760f0}{tesseract\+\_\+kinematics\+::solve\+P\+Inv}} (const Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix\+Xd $>$ \&A, const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector\+Xd $>$ \&b, Eigen\+::\+Ref$<$ Eigen\+::\+Vector\+Xd $>$ x)
-\begin{DoxyCompactList}\small\item\em Solve equation Ax=b for x Use this S\+VD to compute A+ (pseudoinverse of A). Weighting still T\+BD. \end{DoxyCompactList}\item 
-static bool \mbox{\hyperlink{namespacetesseract__kinematics_a1645b1b27fd8279b5f0289dfd1f662c7}{tesseract\+\_\+kinematics\+::damped\+P\+Inv}} (const Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix\+Xd $>$ \&A, Eigen\+::\+Ref$<$ Eigen\+::\+Matrix\+Xd $>$ P, const double eps=0.\+011, const double lambda=0.\+01)
-\begin{DoxyCompactList}\small\item\em Calculate Damped Pseudoinverse Use this S\+VD to compute A+ (pseudoinverse of A). Weighting still T\+BD. \end{DoxyCompactList}\item 
-{\footnotesize template$<$class Chain\+\_\+T , class Tree\+\_\+T $>$ }\\Forward\+Kinematics\+Const\+Ptr\+Map \mbox{\hyperlink{namespacetesseract__kinematics_a8d0c3784eead5a9caa02f56659baac76}{tesseract\+\_\+kinematics\+::create\+Kinematics\+Map}} (const \mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph_a9ee303b2514bfedd8c914d09551b00ff}{tesseract\+\_\+scene\+\_\+graph\+::\+Scene\+Graph\+::\+Const\+Ptr}} \&scene\+\_\+graph, const \mbox{\hyperlink{classtesseract__scene__graph_1_1SRDFModel}{tesseract\+\_\+scene\+\_\+graph\+::\+S\+R\+D\+F\+Model}} \&srdf\+\_\+model)
+static bool \mbox{\hyperlink{namespacetesseract__kinematics_a7c0f58b6ad5f6ccb2f3887684f3760f0}{tesseract\+\_\+kinematics\+::solve\+PInv}} (const Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix\+Xd $>$ \&A, const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector\+Xd $>$ \&b, Eigen\+::\+Ref$<$ Eigen\+::\+Vector\+Xd $>$ x)
+\begin{DoxyCompactList}\small\item\em Solve equation Ax=b for x Use this SVD to compute A+ (pseudoinverse of A). Weighting still TBD. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{namespacetesseract__kinematics_a1645b1b27fd8279b5f0289dfd1f662c7}{tesseract\+\_\+kinematics\+::damped\+PInv}} (const Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix\+Xd $>$ \&A, Eigen\+::\+Ref$<$ Eigen\+::\+Matrix\+Xd $>$ P, const double eps=0.\+011, const double lambda=0.\+01)
+\begin{DoxyCompactList}\small\item\em Calculate Damped Pseudoinverse Use this SVD to compute A+ (pseudoinverse of A). Weighting still TBD. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Chain\+\_\+T , class Tree\+\_\+T $>$ }\\Forward\+Kinematics\+Const\+Ptr\+Map \mbox{\hyperlink{namespacetesseract__kinematics_a8c5e79830b1da0e1e83fb6f765e77cd4}{tesseract\+\_\+kinematics\+::create\+Kinematics\+Map}} (const \mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph_a9ee303b2514bfedd8c914d09551b00ff}{tesseract\+\_\+scene\+\_\+graph\+::\+Scene\+Graph\+::\+Const\+Ptr}} \&scene\+\_\+graph, const \mbox{\hyperlink{structtesseract__scene__graph_1_1KinematicsInformation}{tesseract\+\_\+scene\+\_\+graph\+::\+Kinematics\+Information}} \&kinematics\+\_\+information)
 \begin{DoxyCompactList}\small\item\em Create a kinematics map from the srdf model. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename Float\+Type $>$ }\\static bool \mbox{\hyperlink{namespacetesseract__kinematics_ae2c4eddced530b2ee14d2be64aca24b7}{tesseract\+\_\+kinematics\+::is\+Within\+Limits}} (const Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix$<$ Float\+Type, Eigen\+::\+Dynamic, 1 $>$ $>$ \&joint\+\_\+values, const Eigen\+::\+Matrix\+X2d \&limits)
 \begin{DoxyCompactList}\small\item\em This will check if the provided joint values are within the privided limits. \end{DoxyCompactList}\item 
@@ -52,10 +68,10 @@ Levi Armstrong
 April 15, 2018 
 \end{DoxyDate}
 \begin{DoxyVersion}{Version}
-T\+O\+DO 
+TODO 
 \end{DoxyVersion}
 \begin{DoxyRefDesc}{Bug}
-\item[\mbox{\hyperlink{bug__bug000064}{Bug}}]No known bugs\end{DoxyRefDesc}
+\item[\mbox{\hyperlink{bug__bug000106}{Bug}}]No known bugs\end{DoxyRefDesc}
 
 
 \begin{DoxyCopyright}{Copyright}
@@ -65,8 +81,8 @@ Copyright (c) 2013, Southwest Research Institute
 Software License Agreement (Apache License) 
 \end{DoxyParagraph}
 \begin{DoxyParagraph}{}
-Licensed under the Apache License, Version 2.\+0 (the \char`\"{}\+License\char`\"{}); you may not use this file except in compliance with the License. You may obtain a copy of the License at \href{http://www.apache.org/licenses/LICENSE-2.0}{\texttt{ http\+://www.\+apache.\+org/licenses/\+L\+I\+C\+E\+N\+S\+E-\/2.\+0}} 
+Licensed under the Apache License, Version 2.\+0 (the \char`\"{}\+License\char`\"{}); you may not use this file except in compliance with the License. You may obtain a copy of the License at \href{http://www.apache.org/licenses/LICENSE-2.0}{\texttt{ http\+://www.\+apache.\+org/licenses/\+LICENSE-\/2.\+0}} 
 \end{DoxyParagraph}
 \begin{DoxyParagraph}{}
-Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \char`\"{}\+A\+S I\+S\char`\"{} B\+A\+S\+IS, W\+I\+T\+H\+O\+UT W\+A\+R\+R\+A\+N\+T\+I\+ES OR C\+O\+N\+D\+I\+T\+I\+O\+NS OF A\+NY K\+I\+ND, either express or implied. See the License for the specific language governing permissions and limitations under the License. 
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \char`\"{}\+AS IS\char`\"{} BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. 
 \end{DoxyParagraph}

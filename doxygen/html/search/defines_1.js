@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['ikfast_5fhas_5flibrary_4360',['IKFAST_HAS_LIBRARY',['../db/d22/ikfast__inv__kin_8hpp.html#aa9b5df21ca9479bf3deaa7da9845cd6c',1,'ikfast_inv_kin.hpp']]],
-  ['ikfast_5fno_5fmain_4361',['IKFAST_NO_MAIN',['../db/d22/ikfast__inv__kin_8hpp.html#a2acf0f2516ebf5481d4db7f86f4d0da6',1,'ikfast_inv_kin.hpp']]],
-  ['ikfast_5fversion_4362',['IKFAST_VERSION',['../d9/d35/ikfast_8h.html#afb507c47cee8d15d0241aa894bef5a67',1,'ikfast.h']]]
+  ['deprecated_6708',['DEPRECATED',['../de/d3c/macros_8h.html#af67a6ff1a54b41b2a6e4bd36bc47b118',1,'macros.h']]]
 ];

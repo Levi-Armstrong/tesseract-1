@@ -4,10 +4,14 @@
 
 {\ttfamily \#include $<$state\+\_\+solver.\+h$>$}
 
-Inheritance diagram for tesseract\+\_\+environment\+::State\+Solver\+:\begin{figure}[H]
+
+
+Inheritance diagram for tesseract\+\_\+environment\+::State\+Solver\+:
+\nopagebreak
+\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=2.000000cm]{d9/d75/classtesseract__environment_1_1StateSolver}
+\includegraphics[width=330pt]{d5/d3c/classtesseract__environment_1_1StateSolver__inherit__graph}
 \end{center}
 \end{figure}
 \doxysubsection*{Public Types}
@@ -50,8 +54,8 @@ virtual \mbox{\hyperlink{structtesseract__environment_1_1EnvState_a670d57a48a695
 \begin{DoxyCompactList}\small\item\em Get the current state of the environment. \end{DoxyCompactList}\item 
 virtual \mbox{\hyperlink{structtesseract__environment_1_1EnvState_a6a9f30b8418e9cb943125008c62b1d39}{Env\+State\+::\+Ptr}} \mbox{\hyperlink{classtesseract__environment_1_1StateSolver_a0c35ca2883218ffe84123c121a907c36}{get\+Random\+State}} () const =0
 \begin{DoxyCompactList}\small\item\em Get the random state of the environment. \end{DoxyCompactList}\item 
-virtual const Eigen\+::\+Matrix\+X2d \& \mbox{\hyperlink{classtesseract__environment_1_1StateSolver_a1978de013e354a44e3e352d0f6e5f182}{get\+Limits}} () const =0
-\begin{DoxyCompactList}\small\item\em Getter for joint\+\_\+limits\+\_\+. \end{DoxyCompactList}\item 
+virtual const \mbox{\hyperlink{structtesseract__common_1_1KinematicLimits}{tesseract\+\_\+common\+::\+Kinematic\+Limits}} \& \mbox{\hyperlink{classtesseract__environment_1_1StateSolver_ab3a86d112f60f8d5ccb8f299429c9128}{get\+Limits}} () const =0
+\begin{DoxyCompactList}\small\item\em Getter for kinematic limits. \end{DoxyCompactList}\item 
 virtual \mbox{\hyperlink{classtesseract__environment_1_1StateSolver_aa3ff331ff46017f494dfeccf22ca80b6}{Ptr}} \mbox{\hyperlink{classtesseract__environment_1_1StateSolver_a7bdea42edcac9fe4041c02f7a6ef6a80}{clone}} () const =0
 \begin{DoxyCompactList}\small\item\em This should clone the object so it may be used in a multi threaded application where each thread would clone the solver. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Protected Member Functions}
@@ -124,7 +128,7 @@ A clone of the object.
 \end{DoxyReturn}
 
 
-Implemented in \mbox{\hyperlink{classtesseract__environment_1_1KDLStateSolver_ad5edddf2a7a85bf2206e5393b88d8f98}{tesseract\+\_\+environment\+::\+K\+D\+L\+State\+Solver}}.
+Implemented in \mbox{\hyperlink{classtesseract__environment_1_1OFKTStateSolver_a7923c9cf37c5ffd2d507b8d62aefc7de}{tesseract\+\_\+environment\+::\+OFKTState\+Solver}}, and \mbox{\hyperlink{classtesseract__environment_1_1KDLStateSolver_ad5edddf2a7a85bf2206e5393b88d8f98}{tesseract\+\_\+environment\+::\+KDLState\+Solver}}.
 
 \mbox{\Hypertarget{classtesseract__environment_1_1StateSolver_a403f2c5b7b8fd3c85a2f04719ce64eed}\label{classtesseract__environment_1_1StateSolver_a403f2c5b7b8fd3c85a2f04719ce64eed}} 
 \index{tesseract\_environment::StateSolver@{tesseract\_environment::StateSolver}!getCurrentState@{getCurrentState}}
@@ -141,24 +145,24 @@ Get the current state of the environment.
 \end{DoxyReturn}
 
 
-Implemented in \mbox{\hyperlink{classtesseract__environment_1_1KDLStateSolver_a08001f031f72185d2d8dfab2edf7675e}{tesseract\+\_\+environment\+::\+K\+D\+L\+State\+Solver}}.
+Implemented in \mbox{\hyperlink{classtesseract__environment_1_1OFKTStateSolver_a0e3a4fd13db61923043144e9c0a79d48}{tesseract\+\_\+environment\+::\+OFKTState\+Solver}}, and \mbox{\hyperlink{classtesseract__environment_1_1KDLStateSolver_a08001f031f72185d2d8dfab2edf7675e}{tesseract\+\_\+environment\+::\+KDLState\+Solver}}.
 
-\mbox{\Hypertarget{classtesseract__environment_1_1StateSolver_a1978de013e354a44e3e352d0f6e5f182}\label{classtesseract__environment_1_1StateSolver_a1978de013e354a44e3e352d0f6e5f182}} 
+\mbox{\Hypertarget{classtesseract__environment_1_1StateSolver_ab3a86d112f60f8d5ccb8f299429c9128}\label{classtesseract__environment_1_1StateSolver_ab3a86d112f60f8d5ccb8f299429c9128}} 
 \index{tesseract\_environment::StateSolver@{tesseract\_environment::StateSolver}!getLimits@{getLimits}}
 \index{getLimits@{getLimits}!tesseract\_environment::StateSolver@{tesseract\_environment::StateSolver}}
 \doxysubsubsection{\texorpdfstring{getLimits()}{getLimits()}}
-{\footnotesize\ttfamily virtual const Eigen\+::\+Matrix\+X2d\& tesseract\+\_\+environment\+::\+State\+Solver\+::get\+Limits (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+{\footnotesize\ttfamily virtual const \mbox{\hyperlink{structtesseract__common_1_1KinematicLimits}{tesseract\+\_\+common\+::\+Kinematic\+Limits}}\& tesseract\+\_\+environment\+::\+State\+Solver\+::get\+Limits (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
-Getter for joint\+\_\+limits\+\_\+. 
+Getter for kinematic limits. 
 
 \begin{DoxyReturn}{Returns}
-Matrix of joint limits 
+The kinematic limits 
 \end{DoxyReturn}
 
 
-Implemented in \mbox{\hyperlink{classtesseract__environment_1_1KDLStateSolver_a2c48773c0fd965540736209b0fbddcd2}{tesseract\+\_\+environment\+::\+K\+D\+L\+State\+Solver}}.
+Implemented in \mbox{\hyperlink{classtesseract__environment_1_1OFKTStateSolver_abdc33f6c92e0ec61f673fd47d13c0bb5}{tesseract\+\_\+environment\+::\+OFKTState\+Solver}}, and \mbox{\hyperlink{classtesseract__environment_1_1KDLStateSolver_adf9af771490f9277acd5a283110c115f}{tesseract\+\_\+environment\+::\+KDLState\+Solver}}.
 
 \mbox{\Hypertarget{classtesseract__environment_1_1StateSolver_a0c35ca2883218ffe84123c121a907c36}\label{classtesseract__environment_1_1StateSolver_a0c35ca2883218ffe84123c121a907c36}} 
 \index{tesseract\_environment::StateSolver@{tesseract\_environment::StateSolver}!getRandomState@{getRandomState}}
@@ -175,7 +179,7 @@ Get the random state of the environment.
 \end{DoxyReturn}
 
 
-Implemented in \mbox{\hyperlink{classtesseract__environment_1_1KDLStateSolver_a78bab04647b84e87fa576d23777cb0fd}{tesseract\+\_\+environment\+::\+K\+D\+L\+State\+Solver}}.
+Implemented in \mbox{\hyperlink{classtesseract__environment_1_1OFKTStateSolver_a71c98e34d41205be9a4f0d8e570e983c}{tesseract\+\_\+environment\+::\+OFKTState\+Solver}}, and \mbox{\hyperlink{classtesseract__environment_1_1KDLStateSolver_a78bab04647b84e87fa576d23777cb0fd}{tesseract\+\_\+environment\+::\+KDLState\+Solver}}.
 
 \mbox{\Hypertarget{classtesseract__environment_1_1StateSolver_a4180351b8bfd2597b4660d0fce5cd9dc}\label{classtesseract__environment_1_1StateSolver_a4180351b8bfd2597b4660d0fce5cd9dc}} 
 \index{tesseract\_environment::StateSolver@{tesseract\_environment::StateSolver}!getState@{getState}}
@@ -199,7 +203,7 @@ A the state of the environment
 \end{DoxyReturn}
 
 
-Implemented in \mbox{\hyperlink{classtesseract__environment_1_1KDLStateSolver_a413537b36af42e6ccbfe5a2135534818}{tesseract\+\_\+environment\+::\+K\+D\+L\+State\+Solver}}.
+Implemented in \mbox{\hyperlink{classtesseract__environment_1_1OFKTStateSolver_a51a0244e9e3c192e0270c8da9df8823e}{tesseract\+\_\+environment\+::\+OFKTState\+Solver}}, and \mbox{\hyperlink{classtesseract__environment_1_1KDLStateSolver_a413537b36af42e6ccbfe5a2135534818}{tesseract\+\_\+environment\+::\+KDLState\+Solver}}.
 
 \mbox{\Hypertarget{classtesseract__environment_1_1StateSolver_a4d20189ccce383288a2f30132283dd74}\label{classtesseract__environment_1_1StateSolver_a4d20189ccce383288a2f30132283dd74}} 
 \index{tesseract\_environment::StateSolver@{tesseract\_environment::StateSolver}!getState@{getState}}
@@ -209,7 +213,7 @@ Implemented in \mbox{\hyperlink{classtesseract__environment_1_1KDLStateSolver_a4
 
 
 
-Implemented in \mbox{\hyperlink{classtesseract__environment_1_1KDLStateSolver_a38a45baf4666f579fc7869a638d6e1b1}{tesseract\+\_\+environment\+::\+K\+D\+L\+State\+Solver}}.
+Implemented in \mbox{\hyperlink{classtesseract__environment_1_1OFKTStateSolver_a7e4afac12b45bdae7ee77ca4961ecdce}{tesseract\+\_\+environment\+::\+OFKTState\+Solver}}, and \mbox{\hyperlink{classtesseract__environment_1_1KDLStateSolver_a38a45baf4666f579fc7869a638d6e1b1}{tesseract\+\_\+environment\+::\+KDLState\+Solver}}.
 
 \mbox{\Hypertarget{classtesseract__environment_1_1StateSolver_ae8bb022f52faa7a8012fe817ce39d352}\label{classtesseract__environment_1_1StateSolver_ae8bb022f52faa7a8012fe817ce39d352}} 
 \index{tesseract\_environment::StateSolver@{tesseract\_environment::StateSolver}!getState@{getState}}
@@ -219,7 +223,7 @@ Implemented in \mbox{\hyperlink{classtesseract__environment_1_1KDLStateSolver_a3
 
 
 
-Implemented in \mbox{\hyperlink{classtesseract__environment_1_1KDLStateSolver_aba6d8be2479077f0833285af60f87d1a}{tesseract\+\_\+environment\+::\+K\+D\+L\+State\+Solver}}.
+Implemented in \mbox{\hyperlink{classtesseract__environment_1_1OFKTStateSolver_a10e73565cbf208f7b9d1c11acbc871a9}{tesseract\+\_\+environment\+::\+OFKTState\+Solver}}, and \mbox{\hyperlink{classtesseract__environment_1_1KDLStateSolver_aba6d8be2479077f0833285af60f87d1a}{tesseract\+\_\+environment\+::\+KDLState\+Solver}}.
 
 \mbox{\Hypertarget{classtesseract__environment_1_1StateSolver_a54e3b7cb54219931985c04cc697543c4}\label{classtesseract__environment_1_1StateSolver_a54e3b7cb54219931985c04cc697543c4}} 
 \index{tesseract\_environment::StateSolver@{tesseract\_environment::StateSolver}!init@{init}}
@@ -229,7 +233,7 @@ Implemented in \mbox{\hyperlink{classtesseract__environment_1_1KDLStateSolver_ab
 
 
 
-Implemented in \mbox{\hyperlink{classtesseract__environment_1_1KDLStateSolver_a36399263d5f891655241767a6290866d}{tesseract\+\_\+environment\+::\+K\+D\+L\+State\+Solver}}.
+Implemented in \mbox{\hyperlink{classtesseract__environment_1_1OFKTStateSolver_a3013c5ef3fcfea8cbb8dbd689376c7cd}{tesseract\+\_\+environment\+::\+OFKTState\+Solver}}, and \mbox{\hyperlink{classtesseract__environment_1_1KDLStateSolver_a36399263d5f891655241767a6290866d}{tesseract\+\_\+environment\+::\+KDLState\+Solver}}.
 
 \mbox{\Hypertarget{classtesseract__environment_1_1StateSolver_a5cb95153affac8ef7f53d7e730a3a0cb}\label{classtesseract__environment_1_1StateSolver_a5cb95153affac8ef7f53d7e730a3a0cb}} 
 \index{tesseract\_environment::StateSolver@{tesseract\_environment::StateSolver}!onEnvironmentChanged@{onEnvironmentChanged}}
@@ -248,7 +252,7 @@ This is to only be used by the environment.
 \end{DoxyParams}
 
 
-Implemented in \mbox{\hyperlink{classtesseract__environment_1_1KDLStateSolver_a269b1a8f31ce5628d43b74e42dd17614}{tesseract\+\_\+environment\+::\+K\+D\+L\+State\+Solver}}.
+Implemented in \mbox{\hyperlink{classtesseract__environment_1_1OFKTStateSolver_ab4bb1d8d91934b057e8841c41cbee452}{tesseract\+\_\+environment\+::\+OFKTState\+Solver}}, and \mbox{\hyperlink{classtesseract__environment_1_1KDLStateSolver_a269b1a8f31ce5628d43b74e42dd17614}{tesseract\+\_\+environment\+::\+KDLState\+Solver}}.
 
 \mbox{\Hypertarget{classtesseract__environment_1_1StateSolver_a1db6f71993a2e92133f6d881a007819a}\label{classtesseract__environment_1_1StateSolver_a1db6f71993a2e92133f6d881a007819a}} 
 \index{tesseract\_environment::StateSolver@{tesseract\_environment::StateSolver}!operator=@{operator=}}
@@ -274,7 +278,7 @@ Set the current state of the solver.
 
 After updating the current state these function must call current\+State\+Changed() which will update the contact managers transforms 
 
-Implemented in \mbox{\hyperlink{classtesseract__environment_1_1KDLStateSolver_a525c34034ecc569d7aa9b3cf2c4cae14}{tesseract\+\_\+environment\+::\+K\+D\+L\+State\+Solver}}.
+Implemented in \mbox{\hyperlink{classtesseract__environment_1_1OFKTStateSolver_a73e45c4706518a1a1759ae94e27c4e55}{tesseract\+\_\+environment\+::\+OFKTState\+Solver}}, and \mbox{\hyperlink{classtesseract__environment_1_1KDLStateSolver_a525c34034ecc569d7aa9b3cf2c4cae14}{tesseract\+\_\+environment\+::\+KDLState\+Solver}}.
 
 \mbox{\Hypertarget{classtesseract__environment_1_1StateSolver_ab0c42c90d51e0e0e736a7f4b6635d439}\label{classtesseract__environment_1_1StateSolver_ab0c42c90d51e0e0e736a7f4b6635d439}} 
 \index{tesseract\_environment::StateSolver@{tesseract\_environment::StateSolver}!setState@{setState}}
@@ -284,7 +288,7 @@ Implemented in \mbox{\hyperlink{classtesseract__environment_1_1KDLStateSolver_a5
 
 
 
-Implemented in \mbox{\hyperlink{classtesseract__environment_1_1KDLStateSolver_ab14ade8ff24f166800f29d3343361167}{tesseract\+\_\+environment\+::\+K\+D\+L\+State\+Solver}}.
+Implemented in \mbox{\hyperlink{classtesseract__environment_1_1OFKTStateSolver_ae3b228a16dc0ce7ea7f9d4629061abdc}{tesseract\+\_\+environment\+::\+OFKTState\+Solver}}, and \mbox{\hyperlink{classtesseract__environment_1_1KDLStateSolver_ab14ade8ff24f166800f29d3343361167}{tesseract\+\_\+environment\+::\+KDLState\+Solver}}.
 
 \mbox{\Hypertarget{classtesseract__environment_1_1StateSolver_a631569cab37ef10fd8f7645e9461d259}\label{classtesseract__environment_1_1StateSolver_a631569cab37ef10fd8f7645e9461d259}} 
 \index{tesseract\_environment::StateSolver@{tesseract\_environment::StateSolver}!setState@{setState}}
@@ -294,7 +298,7 @@ Implemented in \mbox{\hyperlink{classtesseract__environment_1_1KDLStateSolver_ab
 
 
 
-Implemented in \mbox{\hyperlink{classtesseract__environment_1_1KDLStateSolver_ae0c326c1969982514099a1f9f6eaf7c2}{tesseract\+\_\+environment\+::\+K\+D\+L\+State\+Solver}}.
+Implemented in \mbox{\hyperlink{classtesseract__environment_1_1OFKTStateSolver_afa491668bae296733fff1a6fe1f5bbbf}{tesseract\+\_\+environment\+::\+OFKTState\+Solver}}, and \mbox{\hyperlink{classtesseract__environment_1_1KDLStateSolver_ae0c326c1969982514099a1f9f6eaf7c2}{tesseract\+\_\+environment\+::\+KDLState\+Solver}}.
 
 
 

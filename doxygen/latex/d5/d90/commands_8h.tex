@@ -5,10 +5,30 @@
 This contains classes for recording operations applied to the environment for tracking changes. This is mainly support distributed systems to keep multiple instances up-\/to-\/date.  
 
 
+{\ttfamily \#include $<$tesseract\+\_\+common/macros.\+h$>$}\newline
 {\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include $<$Eigen/\+Geometry$>$}\newline
 {\ttfamily \#include $<$tesseract\+\_\+scene\+\_\+graph/joint.\+h$>$}\newline
 {\ttfamily \#include $<$tesseract\+\_\+scene\+\_\+graph/link.\+h$>$}\newline
-{\ttfamily \#include $<$Eigen/\+Geometry$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+scene\+\_\+graph/graph.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+scene\+\_\+graph/kinematics\+\_\+information.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+collision/core/types.\+h$>$}\newline
+Include dependency graph for commands.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/d1b/commands_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d0/d92/commands_8h__dep__incl}
+\end{center}
+\end{figure}
 \doxysubsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
@@ -37,6 +57,20 @@ class \mbox{\hyperlink{classtesseract__environment_1_1AddAllowedCollisionCommand
 class \mbox{\hyperlink{classtesseract__environment_1_1RemoveAllowedCollisionCommand}{tesseract\+\_\+environment\+::\+Remove\+Allowed\+Collision\+Command}}
 \item 
 class \mbox{\hyperlink{classtesseract__environment_1_1RemoveAllowedCollisionLinkCommand}{tesseract\+\_\+environment\+::\+Remove\+Allowed\+Collision\+Link\+Command}}
+\item 
+class \mbox{\hyperlink{classtesseract__environment_1_1AddSceneGraphCommand}{tesseract\+\_\+environment\+::\+Add\+Scene\+Graph\+Command}}
+\item 
+class \mbox{\hyperlink{classtesseract__environment_1_1AddKinematicsInformationCommand}{tesseract\+\_\+environment\+::\+Add\+Kinematics\+Information\+Command}}
+\item 
+class \mbox{\hyperlink{classtesseract__environment_1_1ChangeJointPositionLimitsCommand}{tesseract\+\_\+environment\+::\+Change\+Joint\+Position\+Limits\+Command}}
+\item 
+class \mbox{\hyperlink{classtesseract__environment_1_1ChangeJointVelocityLimitsCommand}{tesseract\+\_\+environment\+::\+Change\+Joint\+Velocity\+Limits\+Command}}
+\item 
+class \mbox{\hyperlink{classtesseract__environment_1_1ChangeJointAccelerationLimitsCommand}{tesseract\+\_\+environment\+::\+Change\+Joint\+Acceleration\+Limits\+Command}}
+\item 
+class \mbox{\hyperlink{classtesseract__environment_1_1ChangeDefaultContactMarginCommand}{tesseract\+\_\+environment\+::\+Change\+Default\+Contact\+Margin\+Command}}
+\item 
+class \mbox{\hyperlink{classtesseract__environment_1_1ChangePairContactMarginCommand}{tesseract\+\_\+environment\+::\+Change\+Pair\+Contact\+Margin\+Command}}
 \end{DoxyCompactItemize}
 \doxysubsection*{Namespaces}
 \begin{DoxyCompactItemize}
@@ -51,21 +85,30 @@ using \mbox{\hyperlink{namespacetesseract__environment_acb95740502ec41d80a94a763
 \doxysubsection*{Enumerations}
 \begin{DoxyCompactItemize}
 \item 
-enum \mbox{\hyperlink{namespacetesseract__environment_afc00c1aecb519acba3afc24dbd367029}{tesseract\+\_\+environment\+::\+Command\+Type}} \{ \newline
-\mbox{\hyperlink{namespacetesseract__environment_afc00c1aecb519acba3afc24dbd367029a9eeb52badb613229884838847294b90d}{tesseract\+\_\+environment\+::\+Command\+Type\+::\+A\+DD}} = 0, 
-\mbox{\hyperlink{namespacetesseract__environment_afc00c1aecb519acba3afc24dbd367029a0c4617d6ea17eb456b514b9bc9ddaaec}{tesseract\+\_\+environment\+::\+Command\+Type\+::\+M\+O\+V\+E\+\_\+\+L\+I\+NK}} = 1, 
-\mbox{\hyperlink{namespacetesseract__environment_afc00c1aecb519acba3afc24dbd367029a4ca2d320bdf40df7e6f465d21e268ec4}{tesseract\+\_\+environment\+::\+Command\+Type\+::\+M\+O\+V\+E\+\_\+\+J\+O\+I\+NT}} = 2, 
-\mbox{\hyperlink{namespacetesseract__environment_afc00c1aecb519acba3afc24dbd367029afff7bebecead86441476e38b94b3bc05}{tesseract\+\_\+environment\+::\+Command\+Type\+::\+R\+E\+M\+O\+V\+E\+\_\+\+L\+I\+NK}} = 3, 
-\newline
-\mbox{\hyperlink{namespacetesseract__environment_afc00c1aecb519acba3afc24dbd367029a6721b27017cd21a598f1740481167224}{tesseract\+\_\+environment\+::\+Command\+Type\+::\+R\+E\+M\+O\+V\+E\+\_\+\+J\+O\+I\+NT}} = 4, 
-\mbox{\hyperlink{namespacetesseract__environment_afc00c1aecb519acba3afc24dbd367029a5556c1986a9b58c054c0038a8c73cab9}{tesseract\+\_\+environment\+::\+Command\+Type\+::\+C\+H\+A\+N\+G\+E\+\_\+\+L\+I\+N\+K\+\_\+\+O\+R\+I\+G\+IN}} = 5, 
-\mbox{\hyperlink{namespacetesseract__environment_afc00c1aecb519acba3afc24dbd367029a9e520d728925baf2b87146d99a20d8ba}{tesseract\+\_\+environment\+::\+Command\+Type\+::\+C\+H\+A\+N\+G\+E\+\_\+\+J\+O\+I\+N\+T\+\_\+\+O\+R\+I\+G\+IN}} = 6, 
-\mbox{\hyperlink{namespacetesseract__environment_afc00c1aecb519acba3afc24dbd367029a12a8518522948e345cab8fefd0235008}{tesseract\+\_\+environment\+::\+Command\+Type\+::\+C\+H\+A\+N\+G\+E\+\_\+\+L\+I\+N\+K\+\_\+\+C\+O\+L\+L\+I\+S\+I\+O\+N\+\_\+\+E\+N\+A\+B\+L\+ED}} = 7, 
-\newline
-\mbox{\hyperlink{namespacetesseract__environment_afc00c1aecb519acba3afc24dbd367029aaa5732dcc51c06b4e9af6373e937e4a1}{tesseract\+\_\+environment\+::\+Command\+Type\+::\+C\+H\+A\+N\+G\+E\+\_\+\+L\+I\+N\+K\+\_\+\+V\+I\+S\+I\+B\+I\+L\+I\+TY}} = 8, 
-\mbox{\hyperlink{namespacetesseract__environment_afc00c1aecb519acba3afc24dbd367029ab2889e5decae30347cb29cdeb282d664}{tesseract\+\_\+environment\+::\+Command\+Type\+::\+A\+D\+D\+\_\+\+A\+L\+L\+O\+W\+E\+D\+\_\+\+C\+O\+L\+L\+I\+S\+I\+ON}} = 9, 
-\mbox{\hyperlink{namespacetesseract__environment_afc00c1aecb519acba3afc24dbd367029a6944181c71015e5537d5271cb1c432f3}{tesseract\+\_\+environment\+::\+Command\+Type\+::\+R\+E\+M\+O\+V\+E\+\_\+\+A\+L\+L\+O\+W\+E\+D\+\_\+\+C\+O\+L\+L\+I\+S\+I\+ON}} = 10, 
-\mbox{\hyperlink{namespacetesseract__environment_afc00c1aecb519acba3afc24dbd367029ac40ca000ef4f65a27cf7998ef4f020a0}{tesseract\+\_\+environment\+::\+Command\+Type\+::\+R\+E\+M\+O\+V\+E\+\_\+\+A\+L\+L\+O\+W\+E\+D\+\_\+\+C\+O\+L\+L\+I\+S\+I\+O\+N\+\_\+\+L\+I\+NK}} = 11
+enum class \mbox{\hyperlink{namespacetesseract__environment_afc00c1aecb519acba3afc24dbd367029}{tesseract\+\_\+environment\+::\+Command\+Type}} \{ \newline
+\mbox{\hyperlink{namespacetesseract__environment_afc00c1aecb519acba3afc24dbd367029a9eeb52badb613229884838847294b90d}{tesseract\+\_\+environment\+::\+ADD}} = 0
+, \mbox{\hyperlink{namespacetesseract__environment_afc00c1aecb519acba3afc24dbd367029a0c4617d6ea17eb456b514b9bc9ddaaec}{tesseract\+\_\+environment\+::\+MOVE\+\_\+\+LINK}} = 1
+, \mbox{\hyperlink{namespacetesseract__environment_afc00c1aecb519acba3afc24dbd367029a4ca2d320bdf40df7e6f465d21e268ec4}{tesseract\+\_\+environment\+::\+MOVE\+\_\+\+JOINT}} = 2
+, \mbox{\hyperlink{namespacetesseract__environment_afc00c1aecb519acba3afc24dbd367029afff7bebecead86441476e38b94b3bc05}{tesseract\+\_\+environment\+::\+REMOVE\+\_\+\+LINK}} = 3
+, \newline
+\mbox{\hyperlink{namespacetesseract__environment_afc00c1aecb519acba3afc24dbd367029a6721b27017cd21a598f1740481167224}{tesseract\+\_\+environment\+::\+REMOVE\+\_\+\+JOINT}} = 4
+, \mbox{\hyperlink{namespacetesseract__environment_afc00c1aecb519acba3afc24dbd367029a5556c1986a9b58c054c0038a8c73cab9}{tesseract\+\_\+environment\+::\+CHANGE\+\_\+\+LINK\+\_\+\+ORIGIN}} = 5
+, \mbox{\hyperlink{namespacetesseract__environment_afc00c1aecb519acba3afc24dbd367029a9e520d728925baf2b87146d99a20d8ba}{tesseract\+\_\+environment\+::\+CHANGE\+\_\+\+JOINT\+\_\+\+ORIGIN}} = 6
+, \mbox{\hyperlink{namespacetesseract__environment_afc00c1aecb519acba3afc24dbd367029a12a8518522948e345cab8fefd0235008}{tesseract\+\_\+environment\+::\+CHANGE\+\_\+\+LINK\+\_\+\+COLLISION\+\_\+\+ENABLED}} = 7
+, \newline
+\mbox{\hyperlink{namespacetesseract__environment_afc00c1aecb519acba3afc24dbd367029aaa5732dcc51c06b4e9af6373e937e4a1}{tesseract\+\_\+environment\+::\+CHANGE\+\_\+\+LINK\+\_\+\+VISIBILITY}} = 8
+, \mbox{\hyperlink{namespacetesseract__environment_afc00c1aecb519acba3afc24dbd367029ab2889e5decae30347cb29cdeb282d664}{tesseract\+\_\+environment\+::\+ADD\+\_\+\+ALLOWED\+\_\+\+COLLISION}} = 9
+, \mbox{\hyperlink{namespacetesseract__environment_afc00c1aecb519acba3afc24dbd367029a6944181c71015e5537d5271cb1c432f3}{tesseract\+\_\+environment\+::\+REMOVE\+\_\+\+ALLOWED\+\_\+\+COLLISION}} = 10
+, \mbox{\hyperlink{namespacetesseract__environment_afc00c1aecb519acba3afc24dbd367029ac40ca000ef4f65a27cf7998ef4f020a0}{tesseract\+\_\+environment\+::\+REMOVE\+\_\+\+ALLOWED\+\_\+\+COLLISION\+\_\+\+LINK}} = 11
+, \newline
+\mbox{\hyperlink{namespacetesseract__environment_afc00c1aecb519acba3afc24dbd367029abad512ee301f85596f24ccb211411856}{tesseract\+\_\+environment\+::\+ADD\+\_\+\+SCENE\+\_\+\+GRAPH}} = 12
+, \mbox{\hyperlink{namespacetesseract__environment_afc00c1aecb519acba3afc24dbd367029a45b7ca4cbdf3997ccbb8e81e45c25c0f}{tesseract\+\_\+environment\+::\+CHANGE\+\_\+\+JOINT\+\_\+\+POSITION\+\_\+\+LIMITS}} = 13
+, \mbox{\hyperlink{namespacetesseract__environment_afc00c1aecb519acba3afc24dbd367029aea4ee03591d62742fc798bd6d07914dd}{tesseract\+\_\+environment\+::\+CHANGE\+\_\+\+JOINT\+\_\+\+VELOCITY\+\_\+\+LIMITS}} = 14
+, \mbox{\hyperlink{namespacetesseract__environment_afc00c1aecb519acba3afc24dbd367029a0e622edebb918e58a2e50f37f48ec6be}{tesseract\+\_\+environment\+::\+CHANGE\+\_\+\+JOINT\+\_\+\+ACCELERATION\+\_\+\+LIMITS}} = 15
+, \newline
+\mbox{\hyperlink{namespacetesseract__environment_afc00c1aecb519acba3afc24dbd367029a6f820e76663d877e0103c6aea1616b1b}{tesseract\+\_\+environment\+::\+ADD\+\_\+\+KINEMATICS\+\_\+\+INFORMATION}} = 16
+, \mbox{\hyperlink{namespacetesseract__environment_afc00c1aecb519acba3afc24dbd367029a57762920e9d0b5db119a64c74ecb0bea}{tesseract\+\_\+environment\+::\+CHANGE\+\_\+\+DEFAULT\+\_\+\+CONTACT\+\_\+\+MARGIN}} = 17
+, \mbox{\hyperlink{namespacetesseract__environment_afc00c1aecb519acba3afc24dbd367029a330b999d14606191ac7b92db4c782632}{tesseract\+\_\+environment\+::\+CHANGE\+\_\+\+PAIR\+\_\+\+CONTACT\+\_\+\+MARGIN}} = 18
  \}
 \end{DoxyCompactItemize}
 
@@ -80,10 +123,10 @@ Levi Armstrong
 Dec 18, 2017 
 \end{DoxyDate}
 \begin{DoxyVersion}{Version}
-T\+O\+DO 
+TODO 
 \end{DoxyVersion}
 \begin{DoxyRefDesc}{Bug}
-\item[\mbox{\hyperlink{bug__bug000036}{Bug}}]No known bugs\end{DoxyRefDesc}
+\item[\mbox{\hyperlink{bug__bug000071}{Bug}}]No known bugs\end{DoxyRefDesc}
 
 
 \begin{DoxyCopyright}{Copyright}
@@ -93,8 +136,8 @@ Copyright (c) 2017, Southwest Research Institute
 Software License Agreement (Apache License) 
 \end{DoxyParagraph}
 \begin{DoxyParagraph}{}
-Licensed under the Apache License, Version 2.\+0 (the \char`\"{}\+License\char`\"{}); you may not use this file except in compliance with the License. You may obtain a copy of the License at \href{http://www.apache.org/licenses/LICENSE-2.0}{\texttt{ http\+://www.\+apache.\+org/licenses/\+L\+I\+C\+E\+N\+S\+E-\/2.\+0}} 
+Licensed under the Apache License, Version 2.\+0 (the \char`\"{}\+License\char`\"{}); you may not use this file except in compliance with the License. You may obtain a copy of the License at \href{http://www.apache.org/licenses/LICENSE-2.0}{\texttt{ http\+://www.\+apache.\+org/licenses/\+LICENSE-\/2.\+0}} 
 \end{DoxyParagraph}
 \begin{DoxyParagraph}{}
-Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \char`\"{}\+A\+S I\+S\char`\"{} B\+A\+S\+IS, W\+I\+T\+H\+O\+UT W\+A\+R\+R\+A\+N\+T\+I\+ES OR C\+O\+N\+D\+I\+T\+I\+O\+NS OF A\+NY K\+I\+ND, either express or implied. See the License for the specific language governing permissions and limitations under the License. 
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \char`\"{}\+AS IS\char`\"{} BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. 
 \end{DoxyParagraph}

@@ -1,20 +1,30 @@
-\hypertarget{structtesseract__kinematics_1_1KDLChainData}{}\doxysection{tesseract\+\_\+kinematics\+::K\+D\+L\+Chain\+Data Struct Reference}
+\hypertarget{structtesseract__kinematics_1_1KDLChainData}{}\doxysection{tesseract\+\_\+kinematics\+::KDLChain\+Data Struct Reference}
 \label{structtesseract__kinematics_1_1KDLChainData}\index{tesseract\_kinematics::KDLChainData@{tesseract\_kinematics::KDLChainData}}
 
 
-The \mbox{\hyperlink{structtesseract__kinematics_1_1KDLChainData}{K\+D\+L\+Chain\+Data}} struct.  
+The \mbox{\hyperlink{structtesseract__kinematics_1_1KDLChainData}{KDLChain\+Data}} struct.  
 
 
 
 
 {\ttfamily \#include $<$kdl\+\_\+utils.\+h$>$}
 
+
+
+Collaboration diagram for tesseract\+\_\+kinematics\+::KDLChain\+Data\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/d58/structtesseract__kinematics_1_1KDLChainData__coll__graph}
+\end{center}
+\end{figure}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-K\+D\+L\+::\+Chain \mbox{\hyperlink{structtesseract__kinematics_1_1KDLChainData_a33f8aa6387d9ac8769d098752e21821c}{robot\+\_\+chain}}
+KDL\+::\+Chain \mbox{\hyperlink{structtesseract__kinematics_1_1KDLChainData_a33f8aa6387d9ac8769d098752e21821c}{robot\+\_\+chain}}
 \item 
-K\+D\+L\+::\+Tree \mbox{\hyperlink{structtesseract__kinematics_1_1KDLChainData_a29524a06ef9a86b84be189362f472335}{kdl\+\_\+tree}}
+KDL\+::\+Tree \mbox{\hyperlink{structtesseract__kinematics_1_1KDLChainData_a29524a06ef9a86b84be189362f472335}{kdl\+\_\+tree}}
 \item 
 std\+::string \mbox{\hyperlink{structtesseract__kinematics_1_1KDLChainData_a5364789d5b1e852102261a24c51a7006}{base\+\_\+name}}
 \item 
@@ -26,7 +36,7 @@ std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{structtesseract__kinematics_
 \item 
 std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{structtesseract__kinematics_1_1KDLChainData_a8a06ec0d9894a11365034807e52be7ed}{active\+\_\+link\+\_\+list}}
 \item 
-Eigen\+::\+Matrix\+X2d \mbox{\hyperlink{structtesseract__kinematics_1_1KDLChainData_a52bb5952a03faecbeee7beca838f2ef4}{joint\+\_\+limits}}
+\mbox{\hyperlink{structtesseract__common_1_1KinematicLimits}{tesseract\+\_\+common\+::\+Kinematic\+Limits}} \mbox{\hyperlink{structtesseract__kinematics_1_1KDLChainData_abf8849e5bfa5c150c124e9787e2aabb1}{limits}}
 \item 
 std\+::map$<$ std\+::string, int $>$ \mbox{\hyperlink{structtesseract__kinematics_1_1KDLChainData_a7f54eb0a5b65c26ed684c5bf9d9173c7}{segment\+\_\+index}}
 \item 
@@ -35,7 +45,7 @@ std\+::vector$<$ std\+::pair$<$ std\+::string, std\+::string $>$ $>$ \mbox{\hype
 
 
 \doxysubsection{Detailed Description}
-The \mbox{\hyperlink{structtesseract__kinematics_1_1KDLChainData}{K\+D\+L\+Chain\+Data}} struct. 
+The \mbox{\hyperlink{structtesseract__kinematics_1_1KDLChainData}{KDLChain\+Data}} struct. 
 
 This contains common data extracted when parsing a kdl chain from the scene graph 
 
@@ -44,61 +54,61 @@ This contains common data extracted when parsing a kdl chain from the scene grap
 \index{tesseract\_kinematics::KDLChainData@{tesseract\_kinematics::KDLChainData}!active\_link\_list@{active\_link\_list}}
 \index{active\_link\_list@{active\_link\_list}!tesseract\_kinematics::KDLChainData@{tesseract\_kinematics::KDLChainData}}
 \doxysubsubsection{\texorpdfstring{active\_link\_list}{active\_link\_list}}
-{\footnotesize\ttfamily std\+::vector$<$std\+::string$>$ tesseract\+\_\+kinematics\+::\+K\+D\+L\+Chain\+Data\+::active\+\_\+link\+\_\+list}
+{\footnotesize\ttfamily std\+::vector$<$std\+::string$>$ tesseract\+\_\+kinematics\+::\+KDLChain\+Data\+::active\+\_\+link\+\_\+list}
 
 List of link names that move with changes in joint values \mbox{\Hypertarget{structtesseract__kinematics_1_1KDLChainData_a5364789d5b1e852102261a24c51a7006}\label{structtesseract__kinematics_1_1KDLChainData_a5364789d5b1e852102261a24c51a7006}} 
 \index{tesseract\_kinematics::KDLChainData@{tesseract\_kinematics::KDLChainData}!base\_name@{base\_name}}
 \index{base\_name@{base\_name}!tesseract\_kinematics::KDLChainData@{tesseract\_kinematics::KDLChainData}}
 \doxysubsubsection{\texorpdfstring{base\_name}{base\_name}}
-{\footnotesize\ttfamily std\+::string tesseract\+\_\+kinematics\+::\+K\+D\+L\+Chain\+Data\+::base\+\_\+name}
+{\footnotesize\ttfamily std\+::string tesseract\+\_\+kinematics\+::\+KDLChain\+Data\+::base\+\_\+name}
 
 Link name of first link in the kinematic chain \mbox{\Hypertarget{structtesseract__kinematics_1_1KDLChainData_a51f4e72eef74eef26ad5d56480fc39f7}\label{structtesseract__kinematics_1_1KDLChainData_a51f4e72eef74eef26ad5d56480fc39f7}} 
 \index{tesseract\_kinematics::KDLChainData@{tesseract\_kinematics::KDLChainData}!chains@{chains}}
 \index{chains@{chains}!tesseract\_kinematics::KDLChainData@{tesseract\_kinematics::KDLChainData}}
 \doxysubsubsection{\texorpdfstring{chains}{chains}}
-{\footnotesize\ttfamily std\+::vector$<$std\+::pair$<$std\+::string, std\+::string$>$ $>$ tesseract\+\_\+kinematics\+::\+K\+D\+L\+Chain\+Data\+::chains}
+{\footnotesize\ttfamily std\+::vector$<$std\+::pair$<$std\+::string, std\+::string$>$ $>$ tesseract\+\_\+kinematics\+::\+KDLChain\+Data\+::chains}
 
-The chains used to create the object \mbox{\Hypertarget{structtesseract__kinematics_1_1KDLChainData_a52bb5952a03faecbeee7beca838f2ef4}\label{structtesseract__kinematics_1_1KDLChainData_a52bb5952a03faecbeee7beca838f2ef4}} 
-\index{tesseract\_kinematics::KDLChainData@{tesseract\_kinematics::KDLChainData}!joint\_limits@{joint\_limits}}
-\index{joint\_limits@{joint\_limits}!tesseract\_kinematics::KDLChainData@{tesseract\_kinematics::KDLChainData}}
-\doxysubsubsection{\texorpdfstring{joint\_limits}{joint\_limits}}
-{\footnotesize\ttfamily Eigen\+::\+Matrix\+X2d tesseract\+\_\+kinematics\+::\+K\+D\+L\+Chain\+Data\+::joint\+\_\+limits}
-
-Joint limits \mbox{\Hypertarget{structtesseract__kinematics_1_1KDLChainData_a28cbc4ef6b6c833f26e32c4e1acecb48}\label{structtesseract__kinematics_1_1KDLChainData_a28cbc4ef6b6c833f26e32c4e1acecb48}} 
+The chains used to create the object \mbox{\Hypertarget{structtesseract__kinematics_1_1KDLChainData_a28cbc4ef6b6c833f26e32c4e1acecb48}\label{structtesseract__kinematics_1_1KDLChainData_a28cbc4ef6b6c833f26e32c4e1acecb48}} 
 \index{tesseract\_kinematics::KDLChainData@{tesseract\_kinematics::KDLChainData}!joint\_list@{joint\_list}}
 \index{joint\_list@{joint\_list}!tesseract\_kinematics::KDLChainData@{tesseract\_kinematics::KDLChainData}}
 \doxysubsubsection{\texorpdfstring{joint\_list}{joint\_list}}
-{\footnotesize\ttfamily std\+::vector$<$std\+::string$>$ tesseract\+\_\+kinematics\+::\+K\+D\+L\+Chain\+Data\+::joint\+\_\+list}
+{\footnotesize\ttfamily std\+::vector$<$std\+::string$>$ tesseract\+\_\+kinematics\+::\+KDLChain\+Data\+::joint\+\_\+list}
 
 List of joint names \mbox{\Hypertarget{structtesseract__kinematics_1_1KDLChainData_a29524a06ef9a86b84be189362f472335}\label{structtesseract__kinematics_1_1KDLChainData_a29524a06ef9a86b84be189362f472335}} 
 \index{tesseract\_kinematics::KDLChainData@{tesseract\_kinematics::KDLChainData}!kdl\_tree@{kdl\_tree}}
 \index{kdl\_tree@{kdl\_tree}!tesseract\_kinematics::KDLChainData@{tesseract\_kinematics::KDLChainData}}
 \doxysubsubsection{\texorpdfstring{kdl\_tree}{kdl\_tree}}
-{\footnotesize\ttfamily K\+D\+L\+::\+Tree tesseract\+\_\+kinematics\+::\+K\+D\+L\+Chain\+Data\+::kdl\+\_\+tree}
+{\footnotesize\ttfamily KDL\+::\+Tree tesseract\+\_\+kinematics\+::\+KDLChain\+Data\+::kdl\+\_\+tree}
 
-K\+DL tree object \mbox{\Hypertarget{structtesseract__kinematics_1_1KDLChainData_af22e77c6eee5aa714216918bb3f85158}\label{structtesseract__kinematics_1_1KDLChainData_af22e77c6eee5aa714216918bb3f85158}} 
+KDL tree object \mbox{\Hypertarget{structtesseract__kinematics_1_1KDLChainData_abf8849e5bfa5c150c124e9787e2aabb1}\label{structtesseract__kinematics_1_1KDLChainData_abf8849e5bfa5c150c124e9787e2aabb1}} 
+\index{tesseract\_kinematics::KDLChainData@{tesseract\_kinematics::KDLChainData}!limits@{limits}}
+\index{limits@{limits}!tesseract\_kinematics::KDLChainData@{tesseract\_kinematics::KDLChainData}}
+\doxysubsubsection{\texorpdfstring{limits}{limits}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structtesseract__common_1_1KinematicLimits}{tesseract\+\_\+common\+::\+Kinematic\+Limits}} tesseract\+\_\+kinematics\+::\+KDLChain\+Data\+::limits}
+
+Joint limits, velocity limits, and acceleration limits \mbox{\Hypertarget{structtesseract__kinematics_1_1KDLChainData_af22e77c6eee5aa714216918bb3f85158}\label{structtesseract__kinematics_1_1KDLChainData_af22e77c6eee5aa714216918bb3f85158}} 
 \index{tesseract\_kinematics::KDLChainData@{tesseract\_kinematics::KDLChainData}!link\_list@{link\_list}}
 \index{link\_list@{link\_list}!tesseract\_kinematics::KDLChainData@{tesseract\_kinematics::KDLChainData}}
 \doxysubsubsection{\texorpdfstring{link\_list}{link\_list}}
-{\footnotesize\ttfamily std\+::vector$<$std\+::string$>$ tesseract\+\_\+kinematics\+::\+K\+D\+L\+Chain\+Data\+::link\+\_\+list}
+{\footnotesize\ttfamily std\+::vector$<$std\+::string$>$ tesseract\+\_\+kinematics\+::\+KDLChain\+Data\+::link\+\_\+list}
 
 List of link names \mbox{\Hypertarget{structtesseract__kinematics_1_1KDLChainData_a33f8aa6387d9ac8769d098752e21821c}\label{structtesseract__kinematics_1_1KDLChainData_a33f8aa6387d9ac8769d098752e21821c}} 
 \index{tesseract\_kinematics::KDLChainData@{tesseract\_kinematics::KDLChainData}!robot\_chain@{robot\_chain}}
 \index{robot\_chain@{robot\_chain}!tesseract\_kinematics::KDLChainData@{tesseract\_kinematics::KDLChainData}}
 \doxysubsubsection{\texorpdfstring{robot\_chain}{robot\_chain}}
-{\footnotesize\ttfamily K\+D\+L\+::\+Chain tesseract\+\_\+kinematics\+::\+K\+D\+L\+Chain\+Data\+::robot\+\_\+chain}
+{\footnotesize\ttfamily KDL\+::\+Chain tesseract\+\_\+kinematics\+::\+KDLChain\+Data\+::robot\+\_\+chain}
 
-K\+DL Chain object \mbox{\Hypertarget{structtesseract__kinematics_1_1KDLChainData_a7f54eb0a5b65c26ed684c5bf9d9173c7}\label{structtesseract__kinematics_1_1KDLChainData_a7f54eb0a5b65c26ed684c5bf9d9173c7}} 
+KDL Chain object \mbox{\Hypertarget{structtesseract__kinematics_1_1KDLChainData_a7f54eb0a5b65c26ed684c5bf9d9173c7}\label{structtesseract__kinematics_1_1KDLChainData_a7f54eb0a5b65c26ed684c5bf9d9173c7}} 
 \index{tesseract\_kinematics::KDLChainData@{tesseract\_kinematics::KDLChainData}!segment\_index@{segment\_index}}
 \index{segment\_index@{segment\_index}!tesseract\_kinematics::KDLChainData@{tesseract\_kinematics::KDLChainData}}
 \doxysubsubsection{\texorpdfstring{segment\_index}{segment\_index}}
-{\footnotesize\ttfamily std\+::map$<$std\+::string, int$>$ tesseract\+\_\+kinematics\+::\+K\+D\+L\+Chain\+Data\+::segment\+\_\+index}
+{\footnotesize\ttfamily std\+::map$<$std\+::string, int$>$ tesseract\+\_\+kinematics\+::\+KDLChain\+Data\+::segment\+\_\+index}
 
 A map from chain link name to kdl chain segment number \mbox{\Hypertarget{structtesseract__kinematics_1_1KDLChainData_ad8cabb7b5c9ae7dd07247fdcf5e72939}\label{structtesseract__kinematics_1_1KDLChainData_ad8cabb7b5c9ae7dd07247fdcf5e72939}} 
 \index{tesseract\_kinematics::KDLChainData@{tesseract\_kinematics::KDLChainData}!tip\_name@{tip\_name}}
 \index{tip\_name@{tip\_name}!tesseract\_kinematics::KDLChainData@{tesseract\_kinematics::KDLChainData}}
 \doxysubsubsection{\texorpdfstring{tip\_name}{tip\_name}}
-{\footnotesize\ttfamily std\+::string tesseract\+\_\+kinematics\+::\+K\+D\+L\+Chain\+Data\+::tip\+\_\+name}
+{\footnotesize\ttfamily std\+::string tesseract\+\_\+kinematics\+::\+KDLChain\+Data\+::tip\+\_\+name}
 
 Link name of last kink in the kinematic chain 
 

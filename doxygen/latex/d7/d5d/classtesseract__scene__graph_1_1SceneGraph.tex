@@ -4,10 +4,24 @@
 
 {\ttfamily \#include $<$graph.\+h$>$}
 
-Inheritance diagram for tesseract\+\_\+scene\+\_\+graph\+::Scene\+Graph\+:\begin{figure}[H]
+
+
+Inheritance diagram for tesseract\+\_\+scene\+\_\+graph\+::Scene\+Graph\+:
+\nopagebreak
+\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=2.000000cm]{d7/d5d/classtesseract__scene__graph_1_1SceneGraph}
+\includegraphics[width=198pt]{dd/d91/classtesseract__scene__graph_1_1SceneGraph__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for tesseract\+\_\+scene\+\_\+graph\+::Scene\+Graph\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d3/df9/classtesseract__scene__graph_1_1SceneGraph__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsection*{Classes}
@@ -35,7 +49,7 @@ using \mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph_a9ee303b2514bf
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph_aa1fb8de6bcea6e9c6568ee5a191456d6}{Scene\+Graph}} ()
+\mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph_a2c8b1a3c657957ffa480de88b53973c1}{Scene\+Graph}} (const std\+::string \&name=\char`\"{}\char`\"{})
 \item 
 \mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph_a340e75c583d4ce53c14a62816bfeb04b}{$\sim$\+Scene\+Graph}} ()=default
 \item 
@@ -47,6 +61,10 @@ using \mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph_a9ee303b2514bf
 \item 
 \mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph}{Scene\+Graph}} \& \mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph_a3e5148e1a2b1b1aa04e10855bd91176b}{operator=}} (\mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph}{Scene\+Graph}} \&\&other)=default
 \item 
+\mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph_a4421b8568bd664cf203613a054e1847b}{Scene\+Graph\+::\+Ptr}} \mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph_ac15a199549c8788add93355be9f25c5d}{clone}} () const
+\begin{DoxyCompactList}\small\item\em Clone the scene graph. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph_acdff43e8b869efe078de1302bafa13c6}{clear}} ()
+\begin{DoxyCompactList}\small\item\em Clear the scene graph. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph_a02300a712229aa617b49311696b4f50b}{set\+Name}} (const std\+::string \&name)
 \begin{DoxyCompactList}\small\item\em Sets the graph name. \end{DoxyCompactList}\item 
 const std\+::string \& \mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph_ab00164727a93a5be539462b2213e066a}{get\+Name}} () const
@@ -57,6 +75,8 @@ const std\+::string \& \mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGra
 \begin{DoxyCompactList}\small\item\em Gets the root link name (aka. World Coordinate Frame) \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph_a4936cb3431f23f8b321bf87a4927eb78}{add\+Link}} (\mbox{\hyperlink{classtesseract__scene__graph_1_1Link}{Link}} link)
 \begin{DoxyCompactList}\small\item\em Adds a link to the graph. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph_abf456033d5eaf28bb13ecbff0fa3aa82}{add\+Link}} (\mbox{\hyperlink{classtesseract__scene__graph_1_1Link}{Link}} link, \mbox{\hyperlink{classtesseract__scene__graph_1_1Joint}{Joint}} joint)
+\begin{DoxyCompactList}\small\item\em Adds a link/joint to the graph. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classtesseract__scene__graph_1_1Link_afad1873344245e2223664b6b7f846f1c}{Link\+::\+Const\+Ptr}} \mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph_ad856a3d997c1d029a433df10079219db}{get\+Link}} (const std\+::string \&name) const
 \begin{DoxyCompactList}\small\item\em Get a link in the graph. \end{DoxyCompactList}\item 
 std\+::vector$<$ \mbox{\hyperlink{classtesseract__scene__graph_1_1Link_afad1873344245e2223664b6b7f846f1c}{Link\+::\+Const\+Ptr}} $>$ \mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph_a6fd542bb79a24631eacccc5190684c82}{get\+Links}} () const
@@ -83,6 +103,10 @@ std\+::vector$<$ \mbox{\hyperlink{classtesseract__scene__graph_1_1Joint_a705d1f0
 \begin{DoxyCompactList}\small\item\em Get a vector joints in the scene graph. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph_a51b95d1318f90851c5bf9038e4e0e8e6}{change\+Joint\+Origin}} (const std\+::string \&name, const Eigen\+::\+Isometry3d \&new\+\_\+origin)
 \begin{DoxyCompactList}\small\item\em Changes the \char`\"{}origin\char`\"{} transform of the joint and recomputes the associated edge. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph_ace8d54305156f1e7c06e3bae5e92fc93}{change\+Joint\+Limits}} (const std\+::string \&name, const \mbox{\hyperlink{classtesseract__scene__graph_1_1JointLimits}{Joint\+Limits}} \&limits)
+\begin{DoxyCompactList}\small\item\em Changes the limits of a joint. The \mbox{\hyperlink{classtesseract__scene__graph_1_1JointLimits_ae7a57e2963d8bee2e62ace22ff6bcdd0}{Joint\+Limits\+::\+Ptr}} remains the same, but the values passed in are assigned. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classtesseract__scene__graph_1_1JointLimits_abbdeeb05eed0eb0696da5019186ab3c8}{Joint\+Limits\+::\+Const\+Ptr}} \mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph_abec03187115b18eddce60bb64828fc20}{get\+Joint\+Limits}} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Gets the limits of the joint specified by name. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph_a73b5741af489a134704e835140fa47ef}{add\+Allowed\+Collision}} (const std\+::string \&link\+\_\+name1, const std\+::string \&link\+\_\+name2, const std\+::string \&reason)
 \begin{DoxyCompactList}\small\item\em Disable collision between two collision objects. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph_af1a2af88cda0e21645073ee3b496a682}{remove\+Allowed\+Collision}} (const std\+::string \&link\+\_\+name1, const std\+::string \&link\+\_\+name2)
@@ -109,6 +133,8 @@ bool \mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph_a8efe96953d9452
 \begin{DoxyCompactList}\small\item\em Determine if the graph contains cycles. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph_ad5aed9eb11c8f813e4ffc96df141c266}{is\+Tree}} () const
 \begin{DoxyCompactList}\small\item\em Determine if the graph is a tree. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph_aa62fdc275ae30f76de570af39ceec91c}{is\+Empty}} () const
+\begin{DoxyCompactList}\small\item\em Check if the graph is empty. \end{DoxyCompactList}\item 
 std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph_afe2b210c0fdabf81fe35cb780877b4f1}{get\+Adjacent\+Link\+Names}} (const std\+::string \&name) const
 \begin{DoxyCompactList}\small\item\em Get a vector of adjacent link names provided a link name. \end{DoxyCompactList}\item 
 std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph_af562f7de6cb6e4f4d98574bd256963a7}{get\+Inv\+Adjacent\+Link\+Names}} (const std\+::string \&name) const
@@ -117,14 +143,18 @@ std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classtesseract__scene__graph
 \begin{DoxyCompactList}\small\item\em Get all children for a given link name. \end{DoxyCompactList}\item 
 std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph_a49181c7620534014b9db93dbb0a1f94a}{get\+Joint\+Children\+Names}} (const std\+::string \&name) const
 \begin{DoxyCompactList}\small\item\em Get all children for a given link name. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph_af17eed8edf2055f30506eff82849dba7}{save\+D\+OT}} (const std\+::string \&path) const
-\begin{DoxyCompactList}\small\item\em Saves Graph as Graph Description Language (D\+OT) \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph_a52654d2ec93d3faa655f811c4bc72bed}{Path}} \mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph_ab43b345276d14965d2d0d7afa4e699af}{get\+Shortest\+Path}} (const std\+::string \&root, const std\+::string \&tip)
-\item 
+void \mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph_af17eed8edf2055f30506eff82849dba7}{save\+DOT}} (const std\+::string \&path) const
+\begin{DoxyCompactList}\small\item\em Saves Graph as Graph Description Language (DOT) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph_a52654d2ec93d3faa655f811c4bc72bed}{Path}} \mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph_ae04be4990ddce87ffee478354484dd36}{get\+Shortest\+Path}} (const std\+::string \&root, const std\+::string \&tip) const
+\begin{DoxyCompactList}\small\item\em Get the shortest path between two links. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph_ac86f6f12f2ad6d9c96da0fa20fd3df68}{Vertex}} \mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph_acc06c85a479b1c17e30aa3c29fc1af3e}{get\+Vertex}} (const std\+::string \&name) const
 \begin{DoxyCompactList}\small\item\em Get the graph vertex by name. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph_a672cca11486cfaff6c0ce0794eca7220}{Edge}} \mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph_a4a13218305d9a974ed20610f3903fb2b}{get\+Edge}} (const std\+::string \&name) const
-\begin{DoxyCompactList}\small\item\em Get the graph edge by name. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Get the graph edge by name. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph_aaeb63ca3be667ae2271f99c5c060337f}{insert\+Scene\+Graph}} (const \mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph}{tesseract\+\_\+scene\+\_\+graph\+::\+Scene\+Graph}} \&scene\+\_\+graph, const std\+::string \&prefix=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em Merge a graph into the current graph. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph_a58a71df86b1f78623b262591deded379}{insert\+Scene\+Graph}} (const \mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph}{tesseract\+\_\+scene\+\_\+graph\+::\+Scene\+Graph}} \&scene\+\_\+graph, \mbox{\hyperlink{classtesseract__scene__graph_1_1Joint}{tesseract\+\_\+scene\+\_\+graph\+::\+Joint}} joint, const std\+::string \&prefix=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em Merge a graph into the current environment. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -186,11 +216,11 @@ The first vector is a list of links along the shortest path The second vector is
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{classtesseract__scene__graph_1_1SceneGraph_aa1fb8de6bcea6e9c6568ee5a191456d6}\label{classtesseract__scene__graph_1_1SceneGraph_aa1fb8de6bcea6e9c6568ee5a191456d6}} 
+\mbox{\Hypertarget{classtesseract__scene__graph_1_1SceneGraph_a2c8b1a3c657957ffa480de88b53973c1}\label{classtesseract__scene__graph_1_1SceneGraph_a2c8b1a3c657957ffa480de88b53973c1}} 
 \index{tesseract\_scene\_graph::SceneGraph@{tesseract\_scene\_graph::SceneGraph}!SceneGraph@{SceneGraph}}
 \index{SceneGraph@{SceneGraph}!tesseract\_scene\_graph::SceneGraph@{tesseract\_scene\_graph::SceneGraph}}
 \doxysubsubsection{\texorpdfstring{SceneGraph()}{SceneGraph()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
-{\footnotesize\ttfamily tesseract\+\_\+scene\+\_\+graph\+::\+Scene\+Graph\+::\+Scene\+Graph (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily tesseract\+\_\+scene\+\_\+graph\+::\+Scene\+Graph\+::\+Scene\+Graph (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
 
 \mbox{\Hypertarget{classtesseract__scene__graph_1_1SceneGraph_a340e75c583d4ce53c14a62816bfeb04b}\label{classtesseract__scene__graph_1_1SceneGraph_a340e75c583d4ce53c14a62816bfeb04b}} 
 \index{tesseract\_scene\_graph::SceneGraph@{tesseract\_scene\_graph::SceneGraph}!````~SceneGraph@{$\sim$SceneGraph}}
@@ -271,7 +301,7 @@ Return False if parent or child link does not exists and if joint name already e
 \mbox{\Hypertarget{classtesseract__scene__graph_1_1SceneGraph_a4936cb3431f23f8b321bf87a4927eb78}\label{classtesseract__scene__graph_1_1SceneGraph_a4936cb3431f23f8b321bf87a4927eb78}} 
 \index{tesseract\_scene\_graph::SceneGraph@{tesseract\_scene\_graph::SceneGraph}!addLink@{addLink}}
 \index{addLink@{addLink}!tesseract\_scene\_graph::SceneGraph@{tesseract\_scene\_graph::SceneGraph}}
-\doxysubsubsection{\texorpdfstring{addLink()}{addLink()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+\doxysubsubsection{\texorpdfstring{addLink()}{addLink()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
 {\footnotesize\ttfamily bool tesseract\+\_\+scene\+\_\+graph\+::\+Scene\+Graph\+::add\+Link (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtesseract__scene__graph_1_1Link}{Link}}}]{link }\end{DoxyParamCaption})}
 
 
@@ -288,10 +318,32 @@ The first link added to the graph is set as the root by default. Use set\+Root t
 \begin{DoxyReturn}{Returns}
 Return False if a link with the same name allready exists, otherwise true 
 \end{DoxyReturn}
+\mbox{\Hypertarget{classtesseract__scene__graph_1_1SceneGraph_abf456033d5eaf28bb13ecbff0fa3aa82}\label{classtesseract__scene__graph_1_1SceneGraph_abf456033d5eaf28bb13ecbff0fa3aa82}} 
+\index{tesseract\_scene\_graph::SceneGraph@{tesseract\_scene\_graph::SceneGraph}!addLink@{addLink}}
+\index{addLink@{addLink}!tesseract\_scene\_graph::SceneGraph@{tesseract\_scene\_graph::SceneGraph}}
+\doxysubsubsection{\texorpdfstring{addLink()}{addLink()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily bool tesseract\+\_\+scene\+\_\+graph\+::\+Scene\+Graph\+::add\+Link (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtesseract__scene__graph_1_1Link}{Link}}}]{link,  }\item[{\mbox{\hyperlink{classtesseract__scene__graph_1_1Joint}{Joint}}}]{joint }\end{DoxyParamCaption})}
+
+
+
+Adds a link/joint to the graph. 
+
+The first link added to the graph is set as the root by default. Use set\+Root to change the root link of the graph.
+
+
+\begin{DoxyParams}{Parameters}
+{\em link} & The link to be added to the graph \\
+\hline
+{\em joint} & The associated joint to be added to the graph \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return False if a link with the same name allready exists, otherwise true 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classtesseract__scene__graph_1_1SceneGraph_a950f5e5dc92f72911fd562ab7ad90b05}\label{classtesseract__scene__graph_1_1SceneGraph_a950f5e5dc92f72911fd562ab7ad90b05}} 
 \index{tesseract\_scene\_graph::SceneGraph@{tesseract\_scene\_graph::SceneGraph}!addLink@{addLink}}
 \index{addLink@{addLink}!tesseract\_scene\_graph::SceneGraph@{tesseract\_scene\_graph::SceneGraph}}
-\doxysubsubsection{\texorpdfstring{addLink()}{addLink()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+\doxysubsubsection{\texorpdfstring{addLink()}{addLink()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
 {\footnotesize\ttfamily bool tesseract\+\_\+scene\+\_\+graph\+::\+Scene\+Graph\+::add\+Link (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtesseract__scene__graph_1_1Link_a424c06b5c02fe0b92fee449ef1190bf0}{Link\+::\+Ptr}}}]{link\+\_\+ptr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
 
 
@@ -307,6 +359,26 @@ The first link added to the graph is set as the root by default. Use set\+Root t
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 Return False if a link with the same name allready exists, otherwise true 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtesseract__scene__graph_1_1SceneGraph_ace8d54305156f1e7c06e3bae5e92fc93}\label{classtesseract__scene__graph_1_1SceneGraph_ace8d54305156f1e7c06e3bae5e92fc93}} 
+\index{tesseract\_scene\_graph::SceneGraph@{tesseract\_scene\_graph::SceneGraph}!changeJointLimits@{changeJointLimits}}
+\index{changeJointLimits@{changeJointLimits}!tesseract\_scene\_graph::SceneGraph@{tesseract\_scene\_graph::SceneGraph}}
+\doxysubsubsection{\texorpdfstring{changeJointLimits()}{changeJointLimits()}}
+{\footnotesize\ttfamily bool tesseract\+\_\+scene\+\_\+graph\+::\+Scene\+Graph\+::change\+Joint\+Limits (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{const \mbox{\hyperlink{classtesseract__scene__graph_1_1JointLimits}{Joint\+Limits}} \&}]{limits }\end{DoxyParamCaption})}
+
+
+
+Changes the limits of a joint. The \mbox{\hyperlink{classtesseract__scene__graph_1_1JointLimits_ae7a57e2963d8bee2e62ace22ff6bcdd0}{Joint\+Limits\+::\+Ptr}} remains the same, but the values passed in are assigned. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of the joint to be changed \\
+\hline
+{\em limits} & The new limits associated with the joint \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if successful. 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classtesseract__scene__graph_1_1SceneGraph_a51b95d1318f90851c5bf9038e4e0e8e6}\label{classtesseract__scene__graph_1_1SceneGraph_a51b95d1318f90851c5bf9038e4e0e8e6}} 
 \index{tesseract\_scene\_graph::SceneGraph@{tesseract\_scene\_graph::SceneGraph}!changeJointOrigin@{changeJointOrigin}}
@@ -326,8 +398,18 @@ Changes the \char`\"{}origin\char`\"{} transform of the joint and recomputes the
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-
+True if successful. 
 \end{DoxyReturn}
+\mbox{\Hypertarget{classtesseract__scene__graph_1_1SceneGraph_acdff43e8b869efe078de1302bafa13c6}\label{classtesseract__scene__graph_1_1SceneGraph_acdff43e8b869efe078de1302bafa13c6}} 
+\index{tesseract\_scene\_graph::SceneGraph@{tesseract\_scene\_graph::SceneGraph}!clear@{clear}}
+\index{clear@{clear}!tesseract\_scene\_graph::SceneGraph@{tesseract\_scene\_graph::SceneGraph}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily void tesseract\+\_\+scene\+\_\+graph\+::\+Scene\+Graph\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Clear the scene graph. 
+
 \mbox{\Hypertarget{classtesseract__scene__graph_1_1SceneGraph_a35a98a9af77a16762a2570a6ce13505c}\label{classtesseract__scene__graph_1_1SceneGraph_a35a98a9af77a16762a2570a6ce13505c}} 
 \index{tesseract\_scene\_graph::SceneGraph@{tesseract\_scene\_graph::SceneGraph}!clearAllowedCollisions@{clearAllowedCollisions}}
 \index{clearAllowedCollisions@{clearAllowedCollisions}!tesseract\_scene\_graph::SceneGraph@{tesseract\_scene\_graph::SceneGraph}}
@@ -338,6 +420,19 @@ Changes the \char`\"{}origin\char`\"{} transform of the joint and recomputes the
 
 Remove all allowed collisions. 
 
+\mbox{\Hypertarget{classtesseract__scene__graph_1_1SceneGraph_ac15a199549c8788add93355be9f25c5d}\label{classtesseract__scene__graph_1_1SceneGraph_ac15a199549c8788add93355be9f25c5d}} 
+\index{tesseract\_scene\_graph::SceneGraph@{tesseract\_scene\_graph::SceneGraph}!clone@{clone}}
+\index{clone@{clone}!tesseract\_scene\_graph::SceneGraph@{tesseract\_scene\_graph::SceneGraph}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph_a4421b8568bd664cf203613a054e1847b}{Scene\+Graph\+::\+Ptr}} tesseract\+\_\+scene\+\_\+graph\+::\+Scene\+Graph\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Clone the scene graph. 
+
+\begin{DoxyReturn}{Returns}
+The cloned scene graph 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classtesseract__scene__graph_1_1SceneGraph_afe2b210c0fdabf81fe35cb780877b4f1}\label{classtesseract__scene__graph_1_1SceneGraph_afe2b210c0fdabf81fe35cb780877b4f1}} 
 \index{tesseract\_scene\_graph::SceneGraph@{tesseract\_scene\_graph::SceneGraph}!getAdjacentLinkNames@{getAdjacentLinkNames}}
 \index{getAdjacentLinkNames@{getAdjacentLinkNames}!tesseract\_scene\_graph::SceneGraph@{tesseract\_scene\_graph::SceneGraph}}
@@ -473,6 +568,24 @@ Get all children for a given link name.
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 A vector of child link names 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtesseract__scene__graph_1_1SceneGraph_abec03187115b18eddce60bb64828fc20}\label{classtesseract__scene__graph_1_1SceneGraph_abec03187115b18eddce60bb64828fc20}} 
+\index{tesseract\_scene\_graph::SceneGraph@{tesseract\_scene\_graph::SceneGraph}!getJointLimits@{getJointLimits}}
+\index{getJointLimits@{getJointLimits}!tesseract\_scene\_graph::SceneGraph@{tesseract\_scene\_graph::SceneGraph}}
+\doxysubsubsection{\texorpdfstring{getJointLimits()}{getJointLimits()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__scene__graph_1_1JointLimits_abbdeeb05eed0eb0696da5019186ab3c8}{Joint\+Limits\+::\+Const\+Ptr}} tesseract\+\_\+scene\+\_\+graph\+::\+Scene\+Graph\+::get\+Joint\+Limits (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})}
+
+
+
+Gets the limits of the joint specified by name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of the joint which limits will be retrieved \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Limits of the joint. Returns nullptr is joint is not found. 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classtesseract__scene__graph_1_1SceneGraph_ac2c22d98ef978ccb2a687babcd4945cb}\label{classtesseract__scene__graph_1_1SceneGraph_ac2c22d98ef978ccb2a687babcd4945cb}} 
 \index{tesseract\_scene\_graph::SceneGraph@{tesseract\_scene\_graph::SceneGraph}!getJoints@{getJoints}}
@@ -630,12 +743,26 @@ Gets the root link name (aka. World Coordinate Frame)
 \begin{DoxyReturn}{Returns}
 The root link name 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classtesseract__scene__graph_1_1SceneGraph_ab43b345276d14965d2d0d7afa4e699af}\label{classtesseract__scene__graph_1_1SceneGraph_ab43b345276d14965d2d0d7afa4e699af}} 
+\mbox{\Hypertarget{classtesseract__scene__graph_1_1SceneGraph_ae04be4990ddce87ffee478354484dd36}\label{classtesseract__scene__graph_1_1SceneGraph_ae04be4990ddce87ffee478354484dd36}} 
 \index{tesseract\_scene\_graph::SceneGraph@{tesseract\_scene\_graph::SceneGraph}!getShortestPath@{getShortestPath}}
 \index{getShortestPath@{getShortestPath}!tesseract\_scene\_graph::SceneGraph@{tesseract\_scene\_graph::SceneGraph}}
 \doxysubsubsection{\texorpdfstring{getShortestPath()}{getShortestPath()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph_a52654d2ec93d3faa655f811c4bc72bed}{Scene\+Graph\+::\+Path}} tesseract\+\_\+scene\+\_\+graph\+::\+Scene\+Graph\+::get\+Shortest\+Path (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{root,  }\item[{const std\+::string \&}]{tip }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph_a52654d2ec93d3faa655f811c4bc72bed}{Scene\+Graph\+::\+Path}} tesseract\+\_\+scene\+\_\+graph\+::\+Scene\+Graph\+::get\+Shortest\+Path (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{root,  }\item[{const std\+::string \&}]{tip }\end{DoxyParamCaption}) const}
 
+
+
+Get the shortest path between two links. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em root} & The base link \\
+\hline
+{\em tip} & The tip link \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The shortest path between the two links 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classtesseract__scene__graph_1_1SceneGraph_af389a336ba950cbe2584cdad56156148}\label{classtesseract__scene__graph_1_1SceneGraph_af389a336ba950cbe2584cdad56156148}} 
 \index{tesseract\_scene\_graph::SceneGraph@{tesseract\_scene\_graph::SceneGraph}!getSourceLink@{getSourceLink}}
 \index{getSourceLink@{getSourceLink}!tesseract\_scene\_graph::SceneGraph@{tesseract\_scene\_graph::SceneGraph}}
@@ -690,6 +817,48 @@ Get the graph vertex by name.
 \begin{DoxyReturn}{Returns}
 Graph Vertex 
 \end{DoxyReturn}
+\mbox{\Hypertarget{classtesseract__scene__graph_1_1SceneGraph_aaeb63ca3be667ae2271f99c5c060337f}\label{classtesseract__scene__graph_1_1SceneGraph_aaeb63ca3be667ae2271f99c5c060337f}} 
+\index{tesseract\_scene\_graph::SceneGraph@{tesseract\_scene\_graph::SceneGraph}!insertSceneGraph@{insertSceneGraph}}
+\index{insertSceneGraph@{insertSceneGraph}!tesseract\_scene\_graph::SceneGraph@{tesseract\_scene\_graph::SceneGraph}}
+\doxysubsubsection{\texorpdfstring{insertSceneGraph()}{insertSceneGraph()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool tesseract\+\_\+scene\+\_\+graph\+::\+Scene\+Graph\+::insert\+Scene\+Graph (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph}{tesseract\+\_\+scene\+\_\+graph\+::\+Scene\+Graph}} \&}]{scene\+\_\+graph,  }\item[{const std\+::string \&}]{prefix = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+
+
+
+Merge a graph into the current graph. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scene\+\_\+graph} & Const ref to the graph to be merged (said graph will be copied) \\
+\hline
+{\em prefix} & string Will be prepended to every link and joint of the merged graph \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return False if any link or joint name collides with current environment, otherwise True Merge a subgraph into the current environment, considering that the root of the merged graph is attached to the root of the environment by a fixed joint and no displacement. Every joint and link of the subgraph will be copied into the environment graph. The prefix argument is meant to allow adding multiple copies of the same subgraph with different names 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtesseract__scene__graph_1_1SceneGraph_a58a71df86b1f78623b262591deded379}\label{classtesseract__scene__graph_1_1SceneGraph_a58a71df86b1f78623b262591deded379}} 
+\index{tesseract\_scene\_graph::SceneGraph@{tesseract\_scene\_graph::SceneGraph}!insertSceneGraph@{insertSceneGraph}}
+\index{insertSceneGraph@{insertSceneGraph}!tesseract\_scene\_graph::SceneGraph@{tesseract\_scene\_graph::SceneGraph}}
+\doxysubsubsection{\texorpdfstring{insertSceneGraph()}{insertSceneGraph()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool tesseract\+\_\+scene\+\_\+graph\+::\+Scene\+Graph\+::insert\+Scene\+Graph (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph}{tesseract\+\_\+scene\+\_\+graph\+::\+Scene\+Graph}} \&}]{scene\+\_\+graph,  }\item[{\mbox{\hyperlink{classtesseract__scene__graph_1_1Joint}{tesseract\+\_\+scene\+\_\+graph\+::\+Joint}}}]{joint,  }\item[{const std\+::string \&}]{prefix = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+
+
+
+Merge a graph into the current environment. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scene\+\_\+graph} & Const ref to the graph to be merged (said graph will be copied) \\
+\hline
+{\em joint} & The joint that connects current environment with the inserted graph \\
+\hline
+{\em prefix} & string Will be prepended to every link and joint of the merged graph \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return False if any link or joint name collides with current environment, otherwise True Merge a subgraph into the current environment. Every joint and link of the subgraph will be copied into the environment graph. The prefix argument is meant to allow adding multiple copies of the same subgraph with different names 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classtesseract__scene__graph_1_1SceneGraph_a8efe96953d945296b9243ddc3860173c}\label{classtesseract__scene__graph_1_1SceneGraph_a8efe96953d945296b9243ddc3860173c}} 
 \index{tesseract\_scene\_graph::SceneGraph@{tesseract\_scene\_graph::SceneGraph}!isAcyclic@{isAcyclic}}
 \index{isAcyclic@{isAcyclic}!tesseract\_scene\_graph::SceneGraph@{tesseract\_scene\_graph::SceneGraph}}
@@ -722,6 +891,19 @@ Check if two links are allowed to be in collision.
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 True if the two links are allowed to be in collision, otherwise false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtesseract__scene__graph_1_1SceneGraph_aa62fdc275ae30f76de570af39ceec91c}\label{classtesseract__scene__graph_1_1SceneGraph_aa62fdc275ae30f76de570af39ceec91c}} 
+\index{tesseract\_scene\_graph::SceneGraph@{tesseract\_scene\_graph::SceneGraph}!isEmpty@{isEmpty}}
+\index{isEmpty@{isEmpty}!tesseract\_scene\_graph::SceneGraph@{tesseract\_scene\_graph::SceneGraph}}
+\doxysubsubsection{\texorpdfstring{isEmpty()}{isEmpty()}}
+{\footnotesize\ttfamily bool tesseract\+\_\+scene\+\_\+graph\+::\+Scene\+Graph\+::is\+Empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Check if the graph is empty. 
+
+\begin{DoxyReturn}{Returns}
+True if empty, otherwise false 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classtesseract__scene__graph_1_1SceneGraph_ad5aed9eb11c8f813e4ffc96df141c266}\label{classtesseract__scene__graph_1_1SceneGraph_ad5aed9eb11c8f813e4ffc96df141c266}} 
 \index{tesseract\_scene\_graph::SceneGraph@{tesseract\_scene\_graph::SceneGraph}!isTree@{isTree}}
@@ -842,11 +1024,11 @@ Return False if a link does not exists, otherwise true
 \index{tesseract\_scene\_graph::SceneGraph@{tesseract\_scene\_graph::SceneGraph}!saveDOT@{saveDOT}}
 \index{saveDOT@{saveDOT}!tesseract\_scene\_graph::SceneGraph@{tesseract\_scene\_graph::SceneGraph}}
 \doxysubsubsection{\texorpdfstring{saveDOT()}{saveDOT()}}
-{\footnotesize\ttfamily void tesseract\+\_\+scene\+\_\+graph\+::\+Scene\+Graph\+::save\+D\+OT (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{path }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily void tesseract\+\_\+scene\+\_\+graph\+::\+Scene\+Graph\+::save\+DOT (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{path }\end{DoxyParamCaption}) const}
 
 
 
-Saves Graph as Graph Description Language (D\+OT) 
+Saves Graph as Graph Description Language (DOT) 
 
 
 \begin{DoxyParams}{Parameters}

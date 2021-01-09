@@ -1,0 +1,507 @@
+\hypertarget{classtesseract__environment_1_1OFKTStateSolver}{}\doxysection{tesseract\+\_\+environment\+::OFKTState\+Solver Class Reference}
+\label{classtesseract__environment_1_1OFKTStateSolver}\index{tesseract\_environment::OFKTStateSolver@{tesseract\_environment::OFKTStateSolver}}
+
+
+An implementation of the Optimized Forward Kinematic Tree as a stat solver.  
+
+
+
+
+{\ttfamily \#include $<$ofkt\+\_\+state\+\_\+solver.\+h$>$}
+
+
+
+Inheritance diagram for tesseract\+\_\+environment\+::OFKTState\+Solver\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=196pt]{dc/daf/classtesseract__environment_1_1OFKTStateSolver__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for tesseract\+\_\+environment\+::OFKTState\+Solver\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d0/ddb/classtesseract__environment_1_1OFKTStateSolver__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classtesseract__environment_1_1OFKTStateSolver_a1f3d127e7b1b38df6c89a3a4c24dc657}{Ptr}} = std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classtesseract__environment_1_1OFKTStateSolver}{OFKTState\+Solver}} $>$
+\item 
+using \mbox{\hyperlink{classtesseract__environment_1_1OFKTStateSolver_a9c4bd4ffb415b429fd51cd500a1c760f}{Const\+Ptr}} = std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{classtesseract__environment_1_1OFKTStateSolver}{OFKTState\+Solver}} $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtesseract__environment_1_1OFKTStateSolver_a10e25e0011e01422433491aa1f5f0067}{OFKTState\+Solver}} ()=default
+\item 
+\mbox{\hyperlink{classtesseract__environment_1_1OFKTStateSolver_a9288efabd324d176fe77f34bd6557aec}{$\sim$\+OFKTState\+Solver}} () override=default
+\item 
+\mbox{\hyperlink{classtesseract__environment_1_1OFKTStateSolver_a10b9089acf3d2bc0c27e4496939113e3}{OFKTState\+Solver}} (const \mbox{\hyperlink{classtesseract__environment_1_1OFKTStateSolver}{OFKTState\+Solver}} \&)=delete
+\item 
+\mbox{\hyperlink{classtesseract__environment_1_1OFKTStateSolver}{OFKTState\+Solver}} \& \mbox{\hyperlink{classtesseract__environment_1_1OFKTStateSolver_acbf451a7f316f9b1abdbf1b4bfe3d05a}{operator=}} (const \mbox{\hyperlink{classtesseract__environment_1_1OFKTStateSolver}{OFKTState\+Solver}} \&)=delete
+\item 
+\mbox{\hyperlink{classtesseract__environment_1_1OFKTStateSolver_a0b4d30a6bbf3574d1c7bdc5b6831b1f0}{OFKTState\+Solver}} (\mbox{\hyperlink{classtesseract__environment_1_1OFKTStateSolver}{OFKTState\+Solver}} \&\&)=delete
+\item 
+\mbox{\hyperlink{classtesseract__environment_1_1OFKTStateSolver}{OFKTState\+Solver}} \& \mbox{\hyperlink{classtesseract__environment_1_1OFKTStateSolver_adff2e766d39c47d6783628132ec9460f}{operator=}} (\mbox{\hyperlink{classtesseract__environment_1_1OFKTStateSolver}{OFKTState\+Solver}} \&\&)=delete
+\item 
+\mbox{\hyperlink{classtesseract__environment_1_1StateSolver_aa3ff331ff46017f494dfeccf22ca80b6}{State\+Solver\+::\+Ptr}} \mbox{\hyperlink{classtesseract__environment_1_1OFKTStateSolver_a7923c9cf37c5ffd2d507b8d62aefc7de}{clone}} () const override
+\begin{DoxyCompactList}\small\item\em This should clone the object so it may be used in a multi threaded application where each thread would clone the solver. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classtesseract__environment_1_1OFKTStateSolver_a3013c5ef3fcfea8cbb8dbd689376c7cd}{init}} (\mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph_a9ee303b2514bfedd8c914d09551b00ff}{tesseract\+\_\+scene\+\_\+graph\+::\+Scene\+Graph\+::\+Const\+Ptr}} scene\+\_\+graph) override
+\item 
+void \mbox{\hyperlink{classtesseract__environment_1_1OFKTStateSolver_a73e45c4706518a1a1759ae94e27c4e55}{set\+State}} (const std\+::unordered\+\_\+map$<$ std\+::string, double $>$ \&joints) override
+\begin{DoxyCompactList}\small\item\em Set the current state of the solver. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classtesseract__environment_1_1OFKTStateSolver_afa491668bae296733fff1a6fe1f5bbbf}{set\+State}} (const std\+::vector$<$ std\+::string $>$ \&joint\+\_\+names, const std\+::vector$<$ double $>$ \&joint\+\_\+values) override
+\item 
+void \mbox{\hyperlink{classtesseract__environment_1_1OFKTStateSolver_ae3b228a16dc0ce7ea7f9d4629061abdc}{set\+State}} (const std\+::vector$<$ std\+::string $>$ \&joint\+\_\+names, const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector\+Xd $>$ \&joint\+\_\+values) override
+\item 
+\mbox{\hyperlink{structtesseract__environment_1_1EnvState_a6a9f30b8418e9cb943125008c62b1d39}{Env\+State\+::\+Ptr}} \mbox{\hyperlink{classtesseract__environment_1_1OFKTStateSolver_a51a0244e9e3c192e0270c8da9df8823e}{get\+State}} (const std\+::unordered\+\_\+map$<$ std\+::string, double $>$ \&joints) const override
+\begin{DoxyCompactList}\small\item\em Get the state of the environment for a given set or subset of joint values. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structtesseract__environment_1_1EnvState_a6a9f30b8418e9cb943125008c62b1d39}{Env\+State\+::\+Ptr}} \mbox{\hyperlink{classtesseract__environment_1_1OFKTStateSolver_a10e73565cbf208f7b9d1c11acbc871a9}{get\+State}} (const std\+::vector$<$ std\+::string $>$ \&joint\+\_\+names, const std\+::vector$<$ double $>$ \&joint\+\_\+values) const override
+\item 
+\mbox{\hyperlink{structtesseract__environment_1_1EnvState_a6a9f30b8418e9cb943125008c62b1d39}{Env\+State\+::\+Ptr}} \mbox{\hyperlink{classtesseract__environment_1_1OFKTStateSolver_a7e4afac12b45bdae7ee77ca4961ecdce}{get\+State}} (const std\+::vector$<$ std\+::string $>$ \&joint\+\_\+names, const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector\+Xd $>$ \&joint\+\_\+values) const override
+\item 
+\mbox{\hyperlink{structtesseract__environment_1_1EnvState_a670d57a48a695feea60020c81320a851}{Env\+State\+::\+Const\+Ptr}} \mbox{\hyperlink{classtesseract__environment_1_1OFKTStateSolver_a0e3a4fd13db61923043144e9c0a79d48}{get\+Current\+State}} () const override
+\begin{DoxyCompactList}\small\item\em Get the current state of the environment. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structtesseract__environment_1_1EnvState_a6a9f30b8418e9cb943125008c62b1d39}{Env\+State\+::\+Ptr}} \mbox{\hyperlink{classtesseract__environment_1_1OFKTStateSolver_a71c98e34d41205be9a4f0d8e570e983c}{get\+Random\+State}} () const override
+\begin{DoxyCompactList}\small\item\em Get the random state of the environment. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{structtesseract__common_1_1KinematicLimits}{tesseract\+\_\+common\+::\+Kinematic\+Limits}} \& \mbox{\hyperlink{classtesseract__environment_1_1OFKTStateSolver_abdc33f6c92e0ec61f673fd47d13c0bb5}{get\+Limits}} () const override
+\begin{DoxyCompactList}\small\item\em Getter for kinematic limits. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classtesseract__environment_1_1OFKTStateSolver_ab4bb1d8d91934b057e8841c41cbee452}{on\+Environment\+Changed}} (const \mbox{\hyperlink{namespacetesseract__environment_acb95740502ec41d80a94a7631d4b7a3c}{Commands}} \&commands) override
+\begin{DoxyCompactList}\small\item\em This is to only be used by the environment. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classtesseract__environment_1_1OFKTStateSolver_a6990e0621882a94277958680f3f58c5f}{update}} (\mbox{\hyperlink{classtesseract__environment_1_1OFKTNode}{OFKTNode}} $\ast$node, bool update\+\_\+required)
+\begin{DoxyCompactList}\small\item\em This update the local and world transforms. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classtesseract__environment_1_1OFKTStateSolver_a9e1b76eea93ff9d80373978e90b7f5c3}{update}} (\mbox{\hyperlink{structtesseract__environment_1_1EnvState}{Env\+State}} \&state, const \mbox{\hyperlink{classtesseract__environment_1_1OFKTNode}{OFKTNode}} $\ast$node, Eigen\+::\+Isometry3d parent\+\_\+world\+\_\+tf, bool update\+\_\+required) const
+\begin{DoxyCompactList}\small\item\em This is a const version of the function above. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classtesseract__environment_1_1OFKTStateSolver_a8c9d3d9a9ff443a5320035b210371902}{clone\+Helper}} (\mbox{\hyperlink{classtesseract__environment_1_1OFKTStateSolver}{OFKTState\+Solver}} \&cloned, const \mbox{\hyperlink{classtesseract__environment_1_1OFKTNode}{OFKTNode}} $\ast$node) const
+\begin{DoxyCompactList}\small\item\em A helper function used for cloning the \mbox{\hyperlink{classtesseract__environment_1_1OFKTStateSolver}{OFKTState\+Solver}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classtesseract__environment_1_1OFKTStateSolver_ad2a437d8a1633b1ddac428701cd14092}{add\+Node}} (const \mbox{\hyperlink{classtesseract__scene__graph_1_1Joint_a705d1f0a066833444550aa0c7f6d16b9}{tesseract\+\_\+scene\+\_\+graph\+::\+Joint\+::\+Const\+Ptr}} \&joint, const std\+::string \&joint\+\_\+name, const std\+::string \&parent\+\_\+link\+\_\+name, const std\+::string \&child\+\_\+link\+\_\+name, std\+::vector$<$ \mbox{\hyperlink{classtesseract__scene__graph_1_1Joint_a705d1f0a066833444550aa0c7f6d16b9}{tesseract\+\_\+scene\+\_\+graph\+::\+Joint\+::\+Const\+Ptr}} $>$ \&kinematic\+\_\+joints)
+\begin{DoxyCompactList}\small\item\em Add a node to the tree. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classtesseract__environment_1_1OFKTStateSolver_a667870d3bf34e8d76e7afa7cf71d8e06}{remove\+Node}} (\mbox{\hyperlink{classtesseract__environment_1_1OFKTNode}{OFKTNode}} $\ast$node, std\+::vector$<$ std\+::string $>$ \&removed\+\_\+joints, std\+::vector$<$ long $>$ \&removed\+\_\+joints\+\_\+indices)
+\begin{DoxyCompactList}\small\item\em Remove a node and all of its children. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structtesseract__environment_1_1EnvState_a6a9f30b8418e9cb943125008c62b1d39}{Env\+State\+::\+Ptr}} \mbox{\hyperlink{classtesseract__environment_1_1OFKTStateSolver_a05274949967188f9aa1f3b2ca3b72e9f}{current\+\_\+state\+\_\+}} \{ std\+::make\+\_\+shared$<$\mbox{\hyperlink{structtesseract__environment_1_1EnvState}{Env\+State}}$>$() \}
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classtesseract__environment_1_1OFKTStateSolver_a1cf190c02dda4ea185abe69ae6ae042f}{joint\+\_\+names\+\_\+}}
+\item 
+std\+::unordered\+\_\+map$<$ std\+::string, \mbox{\hyperlink{classtesseract__environment_1_1OFKTNode_ab224aceb9876d6312fc196b8a814248a}{OFKTNode\+::\+UPtr}} $>$ \mbox{\hyperlink{classtesseract__environment_1_1OFKTStateSolver_a9cd2f7e439aa3d0c3a0c74d71397f1f4}{nodes\+\_\+}}
+\item 
+std\+::unordered\+\_\+map$<$ std\+::string, \mbox{\hyperlink{classtesseract__environment_1_1OFKTNode}{OFKTNode}} $\ast$ $>$ \mbox{\hyperlink{classtesseract__environment_1_1OFKTStateSolver_ac8e76079d0cbd0b8f4bdbc58b889d28d}{link\+\_\+map\+\_\+}}
+\item 
+\mbox{\hyperlink{structtesseract__common_1_1KinematicLimits}{tesseract\+\_\+common\+::\+Kinematic\+Limits}} \mbox{\hyperlink{classtesseract__environment_1_1OFKTStateSolver_ad60920450cfe4a11d9aa8361226f820f}{limits\+\_\+}}
+\item 
+\mbox{\hyperlink{classtesseract__environment_1_1OFKTNode_ab224aceb9876d6312fc196b8a814248a}{OFKTNode\+::\+UPtr}} \mbox{\hyperlink{classtesseract__environment_1_1OFKTStateSolver_a08e343b6ae9b3cb702923b65648363b6}{root\+\_\+}}
+\item 
+int \mbox{\hyperlink{classtesseract__environment_1_1OFKTStateSolver_a5b8193960c543d8dda1bde548690b20c}{revision\+\_\+}} \{ 0 \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{classtesseract__environment_1_1OFKTStateSolver_adbb104f4da94ac1963c63a970ed9477d}{ofkt\+\_\+builder}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+An implementation of the Optimized Forward Kinematic Tree as a stat solver. 
+
+Starke, S., Hendrich, N., \& Zhang, J. (2018). A Forward Kinematics Data Structure for Efficient Evolutionary Inverse Kinematics. In Computational Kinematics (pp. 560-\/568). Springer, Cham. 
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classtesseract__environment_1_1OFKTStateSolver_a9c4bd4ffb415b429fd51cd500a1c760f}\label{classtesseract__environment_1_1OFKTStateSolver_a9c4bd4ffb415b429fd51cd500a1c760f}} 
+\index{tesseract\_environment::OFKTStateSolver@{tesseract\_environment::OFKTStateSolver}!ConstPtr@{ConstPtr}}
+\index{ConstPtr@{ConstPtr}!tesseract\_environment::OFKTStateSolver@{tesseract\_environment::OFKTStateSolver}}
+\doxysubsubsection{\texorpdfstring{ConstPtr}{ConstPtr}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classtesseract__environment_1_1OFKTStateSolver_a9c4bd4ffb415b429fd51cd500a1c760f}{tesseract\+\_\+environment\+::\+OFKTState\+Solver\+::\+Const\+Ptr}} =  std\+::shared\+\_\+ptr$<$const \mbox{\hyperlink{classtesseract__environment_1_1OFKTStateSolver}{OFKTState\+Solver}}$>$}
+
+\mbox{\Hypertarget{classtesseract__environment_1_1OFKTStateSolver_a1f3d127e7b1b38df6c89a3a4c24dc657}\label{classtesseract__environment_1_1OFKTStateSolver_a1f3d127e7b1b38df6c89a3a4c24dc657}} 
+\index{tesseract\_environment::OFKTStateSolver@{tesseract\_environment::OFKTStateSolver}!Ptr@{Ptr}}
+\index{Ptr@{Ptr}!tesseract\_environment::OFKTStateSolver@{tesseract\_environment::OFKTStateSolver}}
+\doxysubsubsection{\texorpdfstring{Ptr}{Ptr}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classtesseract__environment_1_1OFKTStateSolver_a1f3d127e7b1b38df6c89a3a4c24dc657}{tesseract\+\_\+environment\+::\+OFKTState\+Solver\+::\+Ptr}} =  std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classtesseract__environment_1_1OFKTStateSolver}{OFKTState\+Solver}}$>$}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtesseract__environment_1_1OFKTStateSolver_a10e25e0011e01422433491aa1f5f0067}\label{classtesseract__environment_1_1OFKTStateSolver_a10e25e0011e01422433491aa1f5f0067}} 
+\index{tesseract\_environment::OFKTStateSolver@{tesseract\_environment::OFKTStateSolver}!OFKTStateSolver@{OFKTStateSolver}}
+\index{OFKTStateSolver@{OFKTStateSolver}!tesseract\_environment::OFKTStateSolver@{tesseract\_environment::OFKTStateSolver}}
+\doxysubsubsection{\texorpdfstring{OFKTStateSolver()}{OFKTStateSolver()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily tesseract\+\_\+environment\+::\+OFKTState\+Solver\+::\+OFKTState\+Solver (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classtesseract__environment_1_1OFKTStateSolver_a9288efabd324d176fe77f34bd6557aec}\label{classtesseract__environment_1_1OFKTStateSolver_a9288efabd324d176fe77f34bd6557aec}} 
+\index{tesseract\_environment::OFKTStateSolver@{tesseract\_environment::OFKTStateSolver}!````~OFKTStateSolver@{$\sim$OFKTStateSolver}}
+\index{````~OFKTStateSolver@{$\sim$OFKTStateSolver}!tesseract\_environment::OFKTStateSolver@{tesseract\_environment::OFKTStateSolver}}
+\doxysubsubsection{\texorpdfstring{$\sim$OFKTStateSolver()}{~OFKTStateSolver()}}
+{\footnotesize\ttfamily tesseract\+\_\+environment\+::\+OFKTState\+Solver\+::$\sim$\+OFKTState\+Solver (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [default]}}
+
+\mbox{\Hypertarget{classtesseract__environment_1_1OFKTStateSolver_a10b9089acf3d2bc0c27e4496939113e3}\label{classtesseract__environment_1_1OFKTStateSolver_a10b9089acf3d2bc0c27e4496939113e3}} 
+\index{tesseract\_environment::OFKTStateSolver@{tesseract\_environment::OFKTStateSolver}!OFKTStateSolver@{OFKTStateSolver}}
+\index{OFKTStateSolver@{OFKTStateSolver}!tesseract\_environment::OFKTStateSolver@{tesseract\_environment::OFKTStateSolver}}
+\doxysubsubsection{\texorpdfstring{OFKTStateSolver()}{OFKTStateSolver()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily tesseract\+\_\+environment\+::\+OFKTState\+Solver\+::\+OFKTState\+Solver (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtesseract__environment_1_1OFKTStateSolver}{OFKTState\+Solver}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classtesseract__environment_1_1OFKTStateSolver_a0b4d30a6bbf3574d1c7bdc5b6831b1f0}\label{classtesseract__environment_1_1OFKTStateSolver_a0b4d30a6bbf3574d1c7bdc5b6831b1f0}} 
+\index{tesseract\_environment::OFKTStateSolver@{tesseract\_environment::OFKTStateSolver}!OFKTStateSolver@{OFKTStateSolver}}
+\index{OFKTStateSolver@{OFKTStateSolver}!tesseract\_environment::OFKTStateSolver@{tesseract\_environment::OFKTStateSolver}}
+\doxysubsubsection{\texorpdfstring{OFKTStateSolver()}{OFKTStateSolver()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily tesseract\+\_\+environment\+::\+OFKTState\+Solver\+::\+OFKTState\+Solver (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtesseract__environment_1_1OFKTStateSolver}{OFKTState\+Solver}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtesseract__environment_1_1OFKTStateSolver_ad2a437d8a1633b1ddac428701cd14092}\label{classtesseract__environment_1_1OFKTStateSolver_ad2a437d8a1633b1ddac428701cd14092}} 
+\index{tesseract\_environment::OFKTStateSolver@{tesseract\_environment::OFKTStateSolver}!addNode@{addNode}}
+\index{addNode@{addNode}!tesseract\_environment::OFKTStateSolver@{tesseract\_environment::OFKTStateSolver}}
+\doxysubsubsection{\texorpdfstring{addNode()}{addNode()}}
+{\footnotesize\ttfamily void tesseract\+\_\+environment\+::\+OFKTState\+Solver\+::add\+Node (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtesseract__scene__graph_1_1Joint_a705d1f0a066833444550aa0c7f6d16b9}{tesseract\+\_\+scene\+\_\+graph\+::\+Joint\+::\+Const\+Ptr}} \&}]{joint,  }\item[{const std\+::string \&}]{joint\+\_\+name,  }\item[{const std\+::string \&}]{parent\+\_\+link\+\_\+name,  }\item[{const std\+::string \&}]{child\+\_\+link\+\_\+name,  }\item[{std\+::vector$<$ \mbox{\hyperlink{classtesseract__scene__graph_1_1Joint_a705d1f0a066833444550aa0c7f6d16b9}{tesseract\+\_\+scene\+\_\+graph\+::\+Joint\+::\+Const\+Ptr}} $>$ \&}]{kinematic\+\_\+joints }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Add a node to the tree. 
+
+The reason that joint\+\_\+name, parent\+\_\+link\+\_\+name, child\+\_\+link\+\_\+name are required when joint is provided is to handle add a scene graph with a prefix.
+
+
+\begin{DoxyParams}{Parameters}
+{\em joint} & The joint being added to the tree \\
+\hline
+{\em joint\+\_\+name} & The joints name \\
+\hline
+{\em parent\+\_\+link\+\_\+name} & The joints parent link name \\
+\hline
+{\em child\+\_\+link\+\_\+name} & The joints child link name \\
+\hline
+{\em kinematic\+\_\+joints} & The vector to store new kinematic joints added to the solver \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classtesseract__environment_1_1OFKTStateSolver_a7923c9cf37c5ffd2d507b8d62aefc7de}\label{classtesseract__environment_1_1OFKTStateSolver_a7923c9cf37c5ffd2d507b8d62aefc7de}} 
+\index{tesseract\_environment::OFKTStateSolver@{tesseract\_environment::OFKTStateSolver}!clone@{clone}}
+\index{clone@{clone}!tesseract\_environment::OFKTStateSolver@{tesseract\_environment::OFKTStateSolver}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__environment_1_1StateSolver_aa3ff331ff46017f494dfeccf22ca80b6}{State\+Solver\+::\+Ptr}} tesseract\+\_\+environment\+::\+OFKTState\+Solver\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+This should clone the object so it may be used in a multi threaded application where each thread would clone the solver. 
+
+\begin{DoxyReturn}{Returns}
+A clone of the object. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classtesseract__environment_1_1StateSolver_a7bdea42edcac9fe4041c02f7a6ef6a80}{tesseract\+\_\+environment\+::\+State\+Solver}}.
+
+\mbox{\Hypertarget{classtesseract__environment_1_1OFKTStateSolver_a8c9d3d9a9ff443a5320035b210371902}\label{classtesseract__environment_1_1OFKTStateSolver_a8c9d3d9a9ff443a5320035b210371902}} 
+\index{tesseract\_environment::OFKTStateSolver@{tesseract\_environment::OFKTStateSolver}!cloneHelper@{cloneHelper}}
+\index{cloneHelper@{cloneHelper}!tesseract\_environment::OFKTStateSolver@{tesseract\_environment::OFKTStateSolver}}
+\doxysubsubsection{\texorpdfstring{cloneHelper()}{cloneHelper()}}
+{\footnotesize\ttfamily void tesseract\+\_\+environment\+::\+OFKTState\+Solver\+::clone\+Helper (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtesseract__environment_1_1OFKTStateSolver}{OFKTState\+Solver}} \&}]{cloned,  }\item[{const \mbox{\hyperlink{classtesseract__environment_1_1OFKTNode}{OFKTNode}} $\ast$}]{node }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+A helper function used for cloning the \mbox{\hyperlink{classtesseract__environment_1_1OFKTStateSolver}{OFKTState\+Solver}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cloned} & The cloned object \\
+\hline
+{\em node} & The node cloning \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classtesseract__environment_1_1OFKTStateSolver_a0e3a4fd13db61923043144e9c0a79d48}\label{classtesseract__environment_1_1OFKTStateSolver_a0e3a4fd13db61923043144e9c0a79d48}} 
+\index{tesseract\_environment::OFKTStateSolver@{tesseract\_environment::OFKTStateSolver}!getCurrentState@{getCurrentState}}
+\index{getCurrentState@{getCurrentState}!tesseract\_environment::OFKTStateSolver@{tesseract\_environment::OFKTStateSolver}}
+\doxysubsubsection{\texorpdfstring{getCurrentState()}{getCurrentState()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structtesseract__environment_1_1EnvState_a670d57a48a695feea60020c81320a851}{Env\+State\+::\+Const\+Ptr}} tesseract\+\_\+environment\+::\+OFKTState\+Solver\+::get\+Current\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get the current state of the environment. 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classtesseract__environment_1_1StateSolver_a403f2c5b7b8fd3c85a2f04719ce64eed}{tesseract\+\_\+environment\+::\+State\+Solver}}.
+
+\mbox{\Hypertarget{classtesseract__environment_1_1OFKTStateSolver_abdc33f6c92e0ec61f673fd47d13c0bb5}\label{classtesseract__environment_1_1OFKTStateSolver_abdc33f6c92e0ec61f673fd47d13c0bb5}} 
+\index{tesseract\_environment::OFKTStateSolver@{tesseract\_environment::OFKTStateSolver}!getLimits@{getLimits}}
+\index{getLimits@{getLimits}!tesseract\_environment::OFKTStateSolver@{tesseract\_environment::OFKTStateSolver}}
+\doxysubsubsection{\texorpdfstring{getLimits()}{getLimits()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structtesseract__common_1_1KinematicLimits}{tesseract\+\_\+common\+::\+Kinematic\+Limits}} \& tesseract\+\_\+environment\+::\+OFKTState\+Solver\+::get\+Limits (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Getter for kinematic limits. 
+
+\begin{DoxyReturn}{Returns}
+The kinematic limits 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classtesseract__environment_1_1StateSolver_ab3a86d112f60f8d5ccb8f299429c9128}{tesseract\+\_\+environment\+::\+State\+Solver}}.
+
+\mbox{\Hypertarget{classtesseract__environment_1_1OFKTStateSolver_a71c98e34d41205be9a4f0d8e570e983c}\label{classtesseract__environment_1_1OFKTStateSolver_a71c98e34d41205be9a4f0d8e570e983c}} 
+\index{tesseract\_environment::OFKTStateSolver@{tesseract\_environment::OFKTStateSolver}!getRandomState@{getRandomState}}
+\index{getRandomState@{getRandomState}!tesseract\_environment::OFKTStateSolver@{tesseract\_environment::OFKTStateSolver}}
+\doxysubsubsection{\texorpdfstring{getRandomState()}{getRandomState()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structtesseract__environment_1_1EnvState_a6a9f30b8418e9cb943125008c62b1d39}{Env\+State\+::\+Ptr}} tesseract\+\_\+environment\+::\+OFKTState\+Solver\+::get\+Random\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get the random state of the environment. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classtesseract__environment_1_1Environment}{Environment}} state 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classtesseract__environment_1_1StateSolver_a0c35ca2883218ffe84123c121a907c36}{tesseract\+\_\+environment\+::\+State\+Solver}}.
+
+\mbox{\Hypertarget{classtesseract__environment_1_1OFKTStateSolver_a51a0244e9e3c192e0270c8da9df8823e}\label{classtesseract__environment_1_1OFKTStateSolver_a51a0244e9e3c192e0270c8da9df8823e}} 
+\index{tesseract\_environment::OFKTStateSolver@{tesseract\_environment::OFKTStateSolver}!getState@{getState}}
+\index{getState@{getState}!tesseract\_environment::OFKTStateSolver@{tesseract\_environment::OFKTStateSolver}}
+\doxysubsubsection{\texorpdfstring{getState()}{getState()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structtesseract__environment_1_1EnvState_a6a9f30b8418e9cb943125008c62b1d39}{Env\+State\+::\+Ptr}} tesseract\+\_\+environment\+::\+OFKTState\+Solver\+::get\+State (\begin{DoxyParamCaption}\item[{const std\+::unordered\+\_\+map$<$ std\+::string, double $>$ \&}]{joints }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get the state of the environment for a given set or subset of joint values. 
+
+This does not change the internal state of the environment.
+
+
+\begin{DoxyParams}{Parameters}
+{\em joints} & A map of joint names to joint values to change. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A the state of the environment 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classtesseract__environment_1_1StateSolver_a4180351b8bfd2597b4660d0fce5cd9dc}{tesseract\+\_\+environment\+::\+State\+Solver}}.
+
+\mbox{\Hypertarget{classtesseract__environment_1_1OFKTStateSolver_a7e4afac12b45bdae7ee77ca4961ecdce}\label{classtesseract__environment_1_1OFKTStateSolver_a7e4afac12b45bdae7ee77ca4961ecdce}} 
+\index{tesseract\_environment::OFKTStateSolver@{tesseract\_environment::OFKTStateSolver}!getState@{getState}}
+\index{getState@{getState}!tesseract\_environment::OFKTStateSolver@{tesseract\_environment::OFKTStateSolver}}
+\doxysubsubsection{\texorpdfstring{getState()}{getState()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structtesseract__environment_1_1EnvState_a6a9f30b8418e9cb943125008c62b1d39}{Env\+State\+::\+Ptr}} tesseract\+\_\+environment\+::\+OFKTState\+Solver\+::get\+State (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::string $>$ \&}]{joint\+\_\+names,  }\item[{const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector\+Xd $>$ \&}]{joint\+\_\+values }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classtesseract__environment_1_1StateSolver_a4d20189ccce383288a2f30132283dd74}{tesseract\+\_\+environment\+::\+State\+Solver}}.
+
+\mbox{\Hypertarget{classtesseract__environment_1_1OFKTStateSolver_a10e73565cbf208f7b9d1c11acbc871a9}\label{classtesseract__environment_1_1OFKTStateSolver_a10e73565cbf208f7b9d1c11acbc871a9}} 
+\index{tesseract\_environment::OFKTStateSolver@{tesseract\_environment::OFKTStateSolver}!getState@{getState}}
+\index{getState@{getState}!tesseract\_environment::OFKTStateSolver@{tesseract\_environment::OFKTStateSolver}}
+\doxysubsubsection{\texorpdfstring{getState()}{getState()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structtesseract__environment_1_1EnvState_a6a9f30b8418e9cb943125008c62b1d39}{Env\+State\+::\+Ptr}} tesseract\+\_\+environment\+::\+OFKTState\+Solver\+::get\+State (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::string $>$ \&}]{joint\+\_\+names,  }\item[{const std\+::vector$<$ double $>$ \&}]{joint\+\_\+values }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classtesseract__environment_1_1StateSolver_ae8bb022f52faa7a8012fe817ce39d352}{tesseract\+\_\+environment\+::\+State\+Solver}}.
+
+\mbox{\Hypertarget{classtesseract__environment_1_1OFKTStateSolver_a3013c5ef3fcfea8cbb8dbd689376c7cd}\label{classtesseract__environment_1_1OFKTStateSolver_a3013c5ef3fcfea8cbb8dbd689376c7cd}} 
+\index{tesseract\_environment::OFKTStateSolver@{tesseract\_environment::OFKTStateSolver}!init@{init}}
+\index{init@{init}!tesseract\_environment::OFKTStateSolver@{tesseract\_environment::OFKTStateSolver}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily bool tesseract\+\_\+environment\+::\+OFKTState\+Solver\+::init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph_a9ee303b2514bfedd8c914d09551b00ff}{tesseract\+\_\+scene\+\_\+graph\+::\+Scene\+Graph\+::\+Const\+Ptr}}}]{scene\+\_\+graph }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classtesseract__environment_1_1StateSolver_a54e3b7cb54219931985c04cc697543c4}{tesseract\+\_\+environment\+::\+State\+Solver}}.
+
+\mbox{\Hypertarget{classtesseract__environment_1_1OFKTStateSolver_ab4bb1d8d91934b057e8841c41cbee452}\label{classtesseract__environment_1_1OFKTStateSolver_ab4bb1d8d91934b057e8841c41cbee452}} 
+\index{tesseract\_environment::OFKTStateSolver@{tesseract\_environment::OFKTStateSolver}!onEnvironmentChanged@{onEnvironmentChanged}}
+\index{onEnvironmentChanged@{onEnvironmentChanged}!tesseract\_environment::OFKTStateSolver@{tesseract\_environment::OFKTStateSolver}}
+\doxysubsubsection{\texorpdfstring{onEnvironmentChanged()}{onEnvironmentChanged()}}
+{\footnotesize\ttfamily void tesseract\+\_\+environment\+::\+OFKTState\+Solver\+::on\+Environment\+Changed (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacetesseract__environment_acb95740502ec41d80a94a7631d4b7a3c}{Commands}} \&}]{commands }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+This is to only be used by the environment. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em commands} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classtesseract__environment_1_1StateSolver_a5cb95153affac8ef7f53d7e730a3a0cb}{tesseract\+\_\+environment\+::\+State\+Solver}}.
+
+\mbox{\Hypertarget{classtesseract__environment_1_1OFKTStateSolver_acbf451a7f316f9b1abdbf1b4bfe3d05a}\label{classtesseract__environment_1_1OFKTStateSolver_acbf451a7f316f9b1abdbf1b4bfe3d05a}} 
+\index{tesseract\_environment::OFKTStateSolver@{tesseract\_environment::OFKTStateSolver}!operator=@{operator=}}
+\index{operator=@{operator=}!tesseract\_environment::OFKTStateSolver@{tesseract\_environment::OFKTStateSolver}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__environment_1_1OFKTStateSolver}{OFKTState\+Solver}}\& tesseract\+\_\+environment\+::\+OFKTState\+Solver\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtesseract__environment_1_1OFKTStateSolver}{OFKTState\+Solver}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classtesseract__environment_1_1OFKTStateSolver_adff2e766d39c47d6783628132ec9460f}\label{classtesseract__environment_1_1OFKTStateSolver_adff2e766d39c47d6783628132ec9460f}} 
+\index{tesseract\_environment::OFKTStateSolver@{tesseract\_environment::OFKTStateSolver}!operator=@{operator=}}
+\index{operator=@{operator=}!tesseract\_environment::OFKTStateSolver@{tesseract\_environment::OFKTStateSolver}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__environment_1_1OFKTStateSolver}{OFKTState\+Solver}}\& tesseract\+\_\+environment\+::\+OFKTState\+Solver\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtesseract__environment_1_1OFKTStateSolver}{OFKTState\+Solver}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classtesseract__environment_1_1OFKTStateSolver_a667870d3bf34e8d76e7afa7cf71d8e06}\label{classtesseract__environment_1_1OFKTStateSolver_a667870d3bf34e8d76e7afa7cf71d8e06}} 
+\index{tesseract\_environment::OFKTStateSolver@{tesseract\_environment::OFKTStateSolver}!removeNode@{removeNode}}
+\index{removeNode@{removeNode}!tesseract\_environment::OFKTStateSolver@{tesseract\_environment::OFKTStateSolver}}
+\doxysubsubsection{\texorpdfstring{removeNode()}{removeNode()}}
+{\footnotesize\ttfamily void tesseract\+\_\+environment\+::\+OFKTState\+Solver\+::remove\+Node (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtesseract__environment_1_1OFKTNode}{OFKTNode}} $\ast$}]{node,  }\item[{std\+::vector$<$ std\+::string $>$ \&}]{removed\+\_\+joints,  }\item[{std\+::vector$<$ long $>$ \&}]{removed\+\_\+joints\+\_\+indices }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Remove a node and all of its children. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node} & The node to remove \\
+\hline
+{\em removed\+\_\+joints} & The removed joint names container \\
+\hline
+{\em removed\+\_\+joints\+\_\+indices} & The removed joint names indices container \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classtesseract__environment_1_1OFKTStateSolver_a73e45c4706518a1a1759ae94e27c4e55}\label{classtesseract__environment_1_1OFKTStateSolver_a73e45c4706518a1a1759ae94e27c4e55}} 
+\index{tesseract\_environment::OFKTStateSolver@{tesseract\_environment::OFKTStateSolver}!setState@{setState}}
+\index{setState@{setState}!tesseract\_environment::OFKTStateSolver@{tesseract\_environment::OFKTStateSolver}}
+\doxysubsubsection{\texorpdfstring{setState()}{setState()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily void tesseract\+\_\+environment\+::\+OFKTState\+Solver\+::set\+State (\begin{DoxyParamCaption}\item[{const std\+::unordered\+\_\+map$<$ std\+::string, double $>$ \&}]{joints }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Set the current state of the solver. 
+
+After updating the current state these function must call current\+State\+Changed() which will update the contact managers transforms 
+
+Implements \mbox{\hyperlink{classtesseract__environment_1_1StateSolver_a8fb58459075f088b79954a5677a8f09d}{tesseract\+\_\+environment\+::\+State\+Solver}}.
+
+\mbox{\Hypertarget{classtesseract__environment_1_1OFKTStateSolver_ae3b228a16dc0ce7ea7f9d4629061abdc}\label{classtesseract__environment_1_1OFKTStateSolver_ae3b228a16dc0ce7ea7f9d4629061abdc}} 
+\index{tesseract\_environment::OFKTStateSolver@{tesseract\_environment::OFKTStateSolver}!setState@{setState}}
+\index{setState@{setState}!tesseract\_environment::OFKTStateSolver@{tesseract\_environment::OFKTStateSolver}}
+\doxysubsubsection{\texorpdfstring{setState()}{setState()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily void tesseract\+\_\+environment\+::\+OFKTState\+Solver\+::set\+State (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::string $>$ \&}]{joint\+\_\+names,  }\item[{const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector\+Xd $>$ \&}]{joint\+\_\+values }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classtesseract__environment_1_1StateSolver_ab0c42c90d51e0e0e736a7f4b6635d439}{tesseract\+\_\+environment\+::\+State\+Solver}}.
+
+\mbox{\Hypertarget{classtesseract__environment_1_1OFKTStateSolver_afa491668bae296733fff1a6fe1f5bbbf}\label{classtesseract__environment_1_1OFKTStateSolver_afa491668bae296733fff1a6fe1f5bbbf}} 
+\index{tesseract\_environment::OFKTStateSolver@{tesseract\_environment::OFKTStateSolver}!setState@{setState}}
+\index{setState@{setState}!tesseract\_environment::OFKTStateSolver@{tesseract\_environment::OFKTStateSolver}}
+\doxysubsubsection{\texorpdfstring{setState()}{setState()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily void tesseract\+\_\+environment\+::\+OFKTState\+Solver\+::set\+State (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::string $>$ \&}]{joint\+\_\+names,  }\item[{const std\+::vector$<$ double $>$ \&}]{joint\+\_\+values }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classtesseract__environment_1_1StateSolver_a631569cab37ef10fd8f7645e9461d259}{tesseract\+\_\+environment\+::\+State\+Solver}}.
+
+\mbox{\Hypertarget{classtesseract__environment_1_1OFKTStateSolver_a9e1b76eea93ff9d80373978e90b7f5c3}\label{classtesseract__environment_1_1OFKTStateSolver_a9e1b76eea93ff9d80373978e90b7f5c3}} 
+\index{tesseract\_environment::OFKTStateSolver@{tesseract\_environment::OFKTStateSolver}!update@{update}}
+\index{update@{update}!tesseract\_environment::OFKTStateSolver@{tesseract\_environment::OFKTStateSolver}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void tesseract\+\_\+environment\+::\+OFKTState\+Solver\+::update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtesseract__environment_1_1EnvState}{Env\+State}} \&}]{state,  }\item[{const \mbox{\hyperlink{classtesseract__environment_1_1OFKTNode}{OFKTNode}} $\ast$}]{node,  }\item[{Eigen\+::\+Isometry3d}]{parent\+\_\+world\+\_\+tf,  }\item[{bool}]{update\+\_\+required }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+This is a const version of the function above. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node} & The node to start from \\
+\hline
+{\em parent\+\_\+world\+\_\+tf} & The nodes parent\textquotesingle{}s world transformaiton \\
+\hline
+{\em update\+\_\+required} & Indicates if work transform update is required \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classtesseract__environment_1_1OFKTStateSolver_a6990e0621882a94277958680f3f58c5f}\label{classtesseract__environment_1_1OFKTStateSolver_a6990e0621882a94277958680f3f58c5f}} 
+\index{tesseract\_environment::OFKTStateSolver@{tesseract\_environment::OFKTStateSolver}!update@{update}}
+\index{update@{update}!tesseract\_environment::OFKTStateSolver@{tesseract\_environment::OFKTStateSolver}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void tesseract\+\_\+environment\+::\+OFKTState\+Solver\+::update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtesseract__environment_1_1OFKTNode}{OFKTNode}} $\ast$}]{node,  }\item[{bool}]{update\+\_\+required }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+This update the local and world transforms. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node} & The node to start from \\
+\hline
+{\em update\+\_\+required} & Indicates if work transform update is required \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classtesseract__environment_1_1OFKTStateSolver_adbb104f4da94ac1963c63a970ed9477d}\label{classtesseract__environment_1_1OFKTStateSolver_adbb104f4da94ac1963c63a970ed9477d}} 
+\index{tesseract\_environment::OFKTStateSolver@{tesseract\_environment::OFKTStateSolver}!ofkt\_builder@{ofkt\_builder}}
+\index{ofkt\_builder@{ofkt\_builder}!tesseract\_environment::OFKTStateSolver@{tesseract\_environment::OFKTStateSolver}}
+\doxysubsubsection{\texorpdfstring{ofkt\_builder}{ofkt\_builder}}
+{\footnotesize\ttfamily friend struct \mbox{\hyperlink{structtesseract__environment_1_1ofkt__builder}{ofkt\+\_\+builder}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classtesseract__environment_1_1OFKTStateSolver_a05274949967188f9aa1f3b2ca3b72e9f}\label{classtesseract__environment_1_1OFKTStateSolver_a05274949967188f9aa1f3b2ca3b72e9f}} 
+\index{tesseract\_environment::OFKTStateSolver@{tesseract\_environment::OFKTStateSolver}!current\_state\_@{current\_state\_}}
+\index{current\_state\_@{current\_state\_}!tesseract\_environment::OFKTStateSolver@{tesseract\_environment::OFKTStateSolver}}
+\doxysubsubsection{\texorpdfstring{current\_state\_}{current\_state\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structtesseract__environment_1_1EnvState_a6a9f30b8418e9cb943125008c62b1d39}{Env\+State\+::\+Ptr}} tesseract\+\_\+environment\+::\+OFKTState\+Solver\+::current\+\_\+state\+\_\+ \{ std\+::make\+\_\+shared$<$\mbox{\hyperlink{structtesseract__environment_1_1EnvState}{Env\+State}}$>$() \}\hspace{0.3cm}{\ttfamily [private]}}
+
+Current state of the environment \mbox{\Hypertarget{classtesseract__environment_1_1OFKTStateSolver_a1cf190c02dda4ea185abe69ae6ae042f}\label{classtesseract__environment_1_1OFKTStateSolver_a1cf190c02dda4ea185abe69ae6ae042f}} 
+\index{tesseract\_environment::OFKTStateSolver@{tesseract\_environment::OFKTStateSolver}!joint\_names\_@{joint\_names\_}}
+\index{joint\_names\_@{joint\_names\_}!tesseract\_environment::OFKTStateSolver@{tesseract\_environment::OFKTStateSolver}}
+\doxysubsubsection{\texorpdfstring{joint\_names\_}{joint\_names\_}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::string$>$ tesseract\+\_\+environment\+::\+OFKTState\+Solver\+::joint\+\_\+names\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+The active joint names \mbox{\Hypertarget{classtesseract__environment_1_1OFKTStateSolver_ad60920450cfe4a11d9aa8361226f820f}\label{classtesseract__environment_1_1OFKTStateSolver_ad60920450cfe4a11d9aa8361226f820f}} 
+\index{tesseract\_environment::OFKTStateSolver@{tesseract\_environment::OFKTStateSolver}!limits\_@{limits\_}}
+\index{limits\_@{limits\_}!tesseract\_environment::OFKTStateSolver@{tesseract\_environment::OFKTStateSolver}}
+\doxysubsubsection{\texorpdfstring{limits\_}{limits\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structtesseract__common_1_1KinematicLimits}{tesseract\+\_\+common\+::\+Kinematic\+Limits}} tesseract\+\_\+environment\+::\+OFKTState\+Solver\+::limits\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+The kinematic limits \mbox{\Hypertarget{classtesseract__environment_1_1OFKTStateSolver_ac8e76079d0cbd0b8f4bdbc58b889d28d}\label{classtesseract__environment_1_1OFKTStateSolver_ac8e76079d0cbd0b8f4bdbc58b889d28d}} 
+\index{tesseract\_environment::OFKTStateSolver@{tesseract\_environment::OFKTStateSolver}!link\_map\_@{link\_map\_}}
+\index{link\_map\_@{link\_map\_}!tesseract\_environment::OFKTStateSolver@{tesseract\_environment::OFKTStateSolver}}
+\doxysubsubsection{\texorpdfstring{link\_map\_}{link\_map\_}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$std\+::string, \mbox{\hyperlink{classtesseract__environment_1_1OFKTNode}{OFKTNode}}$\ast$$>$ tesseract\+\_\+environment\+::\+OFKTState\+Solver\+::link\+\_\+map\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+The link name map to node \mbox{\Hypertarget{classtesseract__environment_1_1OFKTStateSolver_a9cd2f7e439aa3d0c3a0c74d71397f1f4}\label{classtesseract__environment_1_1OFKTStateSolver_a9cd2f7e439aa3d0c3a0c74d71397f1f4}} 
+\index{tesseract\_environment::OFKTStateSolver@{tesseract\_environment::OFKTStateSolver}!nodes\_@{nodes\_}}
+\index{nodes\_@{nodes\_}!tesseract\_environment::OFKTStateSolver@{tesseract\_environment::OFKTStateSolver}}
+\doxysubsubsection{\texorpdfstring{nodes\_}{nodes\_}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$std\+::string, \mbox{\hyperlink{classtesseract__environment_1_1OFKTNode_ab224aceb9876d6312fc196b8a814248a}{OFKTNode\+::\+UPtr}}$>$ tesseract\+\_\+environment\+::\+OFKTState\+Solver\+::nodes\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+The joint name map to node \mbox{\Hypertarget{classtesseract__environment_1_1OFKTStateSolver_a5b8193960c543d8dda1bde548690b20c}\label{classtesseract__environment_1_1OFKTStateSolver_a5b8193960c543d8dda1bde548690b20c}} 
+\index{tesseract\_environment::OFKTStateSolver@{tesseract\_environment::OFKTStateSolver}!revision\_@{revision\_}}
+\index{revision\_@{revision\_}!tesseract\_environment::OFKTStateSolver@{tesseract\_environment::OFKTStateSolver}}
+\doxysubsubsection{\texorpdfstring{revision\_}{revision\_}}
+{\footnotesize\ttfamily int tesseract\+\_\+environment\+::\+OFKTState\+Solver\+::revision\+\_\+ \{ 0 \}\hspace{0.3cm}{\ttfamily [private]}}
+
+The environment revision number \mbox{\Hypertarget{classtesseract__environment_1_1OFKTStateSolver_a08e343b6ae9b3cb702923b65648363b6}\label{classtesseract__environment_1_1OFKTStateSolver_a08e343b6ae9b3cb702923b65648363b6}} 
+\index{tesseract\_environment::OFKTStateSolver@{tesseract\_environment::OFKTStateSolver}!root\_@{root\_}}
+\index{root\_@{root\_}!tesseract\_environment::OFKTStateSolver@{tesseract\_environment::OFKTStateSolver}}
+\doxysubsubsection{\texorpdfstring{root\_}{root\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__environment_1_1OFKTNode_ab224aceb9876d6312fc196b8a814248a}{OFKTNode\+::\+UPtr}} tesseract\+\_\+environment\+::\+OFKTState\+Solver\+::root\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+The root node of the tree 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+tesseract/tesseract\+\_\+environment/include/tesseract\+\_\+environment/ofkt/\mbox{\hyperlink{ofkt__state__solver_8h}{ofkt\+\_\+state\+\_\+solver.\+h}}\item 
+tesseract/tesseract\+\_\+environment/src/ofkt/\mbox{\hyperlink{ofkt__state__solver_8cpp}{ofkt\+\_\+state\+\_\+solver.\+cpp}}\end{DoxyCompactItemize}

@@ -2,23 +2,90 @@
 \label{tesseract__common__unit_8cpp}\index{tesseract/tesseract\_common/test/tesseract\_common\_unit.cpp@{tesseract/tesseract\_common/test/tesseract\_common\_unit.cpp}}
 {\ttfamily \#include $<$tesseract\+\_\+common/macros.\+h$>$}\newline
 {\ttfamily \#include $<$gtest/gtest.\+h$>$}\newline
+{\ttfamily \#include $<$type\+\_\+traits$>$}\newline
 {\ttfamily \#include $<$tesseract\+\_\+common/utils.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+common/sfinae\+\_\+utils.\+h$>$}\newline
+Include dependency graph for tesseract\+\_\+common\+\_\+unit.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db/d2d/tesseract__common__unit_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structTestHasMemberFunction}{Test\+Has\+Member\+Function}}
+\item 
+struct \mbox{\hyperlink{structTestHasMemberWithArgFunction}{Test\+Has\+Member\+With\+Arg\+Function}}
+\item 
+struct \mbox{\hyperlink{structTestMissingMemberFunction}{Test\+Missing\+Member\+Function}}
+\end{DoxyCompactItemize}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{macros_8h_a8cc0e3c6a3382c5c0b19eb9e676fc2db}{T\+E\+S\+S\+E\+R\+A\+C\+T\+\_\+\+C\+O\+M\+M\+O\+N\+\_\+\+I\+G\+N\+O\+R\+E\+\_\+\+W\+A\+R\+N\+I\+N\+G\+S\+\_\+\+P\+U\+SH}} \mbox{\hyperlink{macros_8h_a7af8561cf52519e9896b0697095c1b8b}{T\+E\+S\+S\+E\+R\+A\+C\+T\+\_\+\+C\+O\+M\+M\+O\+N\+\_\+\+I\+G\+N\+O\+R\+E\+\_\+\+W\+A\+R\+N\+I\+N\+G\+S\+\_\+\+P\+OP}} \mbox{\hyperlink{tesseract__common__unit_8cpp_a4ee9f89205e3189fbbc69225c9ffa480}{T\+E\+ST}} (Tesseract\+Common\+Unit, is\+Numeric)
+\mbox{\hyperlink{macros_8h_a8cc0e3c6a3382c5c0b19eb9e676fc2db}{TESSERACT\+\_\+\+COMMON\+\_\+\+IGNORE\+\_\+\+WARNINGS\+\_\+\+PUSH}} \mbox{\hyperlink{macros_8h_a7af8561cf52519e9896b0697095c1b8b}{TESSERACT\+\_\+\+COMMON\+\_\+\+IGNORE\+\_\+\+WARNINGS\+\_\+\+POP}} \mbox{\hyperlink{tesseract__common__unit_8cpp_a4ee9f89205e3189fbbc69225c9ffa480}{TEST}} (Tesseract\+Common\+Unit, is\+Numeric)
 \item 
-\mbox{\hyperlink{tesseract__common__unit_8cpp_a20a25b012fd4ab6e7f625333e2d0eeba}{T\+E\+ST}} (Tesseract\+Common\+Unit, to\+Numeric)
+\mbox{\hyperlink{tesseract__common__unit_8cpp_a20a25b012fd4ab6e7f625333e2d0eeba}{TEST}} (Tesseract\+Common\+Unit, to\+Numeric)
 \item 
-\mbox{\hyperlink{tesseract__common__unit_8cpp_ab15d4eabef420158cb3a7390b0861426}{T\+E\+ST}} (Tesseract\+Common\+Unit, generate\+Random\+Number)
+\mbox{\hyperlink{tesseract__common__unit_8cpp_ab15d4eabef420158cb3a7390b0861426}{TEST}} (Tesseract\+Common\+Unit, generate\+Random\+Number)
 \item 
-\mbox{\hyperlink{tesseract__common__unit_8cpp_aa3c12b1a2b48bb2fbf3d08cd69796003}{T\+E\+ST}} (Tesseract\+Common\+Unit, trim)
+\mbox{\hyperlink{tesseract__common__unit_8cpp_aa3c12b1a2b48bb2fbf3d08cd69796003}{TEST}} (Tesseract\+Common\+Unit, trim)
+\item 
+\mbox{\hyperlink{tesseract__common__unit_8cpp_af618f08573169c84afacaaf4bcfa640a}{CREATE\+\_\+\+MEMBER\+\_\+\+CHECK}} (update)
+\item 
+\mbox{\hyperlink{tesseract__common__unit_8cpp_aea783c8f02243a1bc17fa79e775b3481}{CREATE\+\_\+\+MEMBER\+\_\+\+FUNC\+\_\+\+INVOCABLE\+\_\+\+CHECK}} (update, std\+::shared\+\_\+ptr$<$ T $>$ \&)
+\item 
+\mbox{\hyperlink{tesseract__common__unit_8cpp_a6d9c9261c10c6afb5a56795f1883facd}{CREATE\+\_\+\+MEMBER\+\_\+\+FUNC\+\_\+\+INVOCABLE\+\_\+\+CHECK}} (add, double, double)
+\item 
+\mbox{\hyperlink{tesseract__common__unit_8cpp_ad22e871490d628130ef16de9490eee07}{CREATE\+\_\+\+MEMBER\+\_\+\+FUNC\+\_\+\+RETURN\+\_\+\+TYPE\+\_\+\+CHECK}} (add, int, int)
+\item 
+\mbox{\hyperlink{tesseract__common__unit_8cpp_acf8fb18f477901832f88b0a7055d3880}{CREATE\+\_\+\+MEMBER\+\_\+\+FUNC\+\_\+\+SIGNATURE\+\_\+\+CHECK}} (add, double, double, double)
+\item 
+\mbox{\hyperlink{tesseract__common__unit_8cpp_aac7797f1e35eb1fb251f0b94ffcb191e}{TEST}} (Tesseract\+Common\+Unit, sfinae\+Has\+Member\+Function)
+\item 
+\mbox{\hyperlink{tesseract__common__unit_8cpp_ad76c7581b75d7a5fe5ff6e844c7ca157}{TEST}} (Tesseract\+Common\+Unit, sfinae\+Has\+Member\+Function\+Invocable)
+\item 
+\mbox{\hyperlink{tesseract__common__unit_8cpp_acb6852824276253bd2bf866572713dee}{TEST}} (Tesseract\+Common\+Unit, sfinae\+Has\+Member\+Function\+With\+Return\+Type)
+\item 
+\mbox{\hyperlink{tesseract__common__unit_8cpp_a634523f4a47d7f3ec3280dcd13e32897}{TEST}} (Tesseract\+Common\+Unit, sfinae\+Has\+Member\+Function\+Signature)
 \item 
 int \mbox{\hyperlink{tesseract__common__unit_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (int argc, char $\ast$$\ast$argv)
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Function Documentation}
+\mbox{\Hypertarget{tesseract__common__unit_8cpp_af618f08573169c84afacaaf4bcfa640a}\label{tesseract__common__unit_8cpp_af618f08573169c84afacaaf4bcfa640a}} 
+\index{tesseract\_common\_unit.cpp@{tesseract\_common\_unit.cpp}!CREATE\_MEMBER\_CHECK@{CREATE\_MEMBER\_CHECK}}
+\index{CREATE\_MEMBER\_CHECK@{CREATE\_MEMBER\_CHECK}!tesseract\_common\_unit.cpp@{tesseract\_common\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{CREATE\_MEMBER\_CHECK()}{CREATE\_MEMBER\_CHECK()}}
+{\footnotesize\ttfamily CREATE\+\_\+\+MEMBER\+\_\+\+CHECK (\begin{DoxyParamCaption}\item[{update}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{tesseract__common__unit_8cpp_a6d9c9261c10c6afb5a56795f1883facd}\label{tesseract__common__unit_8cpp_a6d9c9261c10c6afb5a56795f1883facd}} 
+\index{tesseract\_common\_unit.cpp@{tesseract\_common\_unit.cpp}!CREATE\_MEMBER\_FUNC\_INVOCABLE\_CHECK@{CREATE\_MEMBER\_FUNC\_INVOCABLE\_CHECK}}
+\index{CREATE\_MEMBER\_FUNC\_INVOCABLE\_CHECK@{CREATE\_MEMBER\_FUNC\_INVOCABLE\_CHECK}!tesseract\_common\_unit.cpp@{tesseract\_common\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{CREATE\_MEMBER\_FUNC\_INVOCABLE\_CHECK()}{CREATE\_MEMBER\_FUNC\_INVOCABLE\_CHECK()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily CREATE\+\_\+\+MEMBER\+\_\+\+FUNC\+\_\+\+INVOCABLE\+\_\+\+CHECK (\begin{DoxyParamCaption}\item[{add}]{,  }\item[{double}]{,  }\item[{double}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{tesseract__common__unit_8cpp_aea783c8f02243a1bc17fa79e775b3481}\label{tesseract__common__unit_8cpp_aea783c8f02243a1bc17fa79e775b3481}} 
+\index{tesseract\_common\_unit.cpp@{tesseract\_common\_unit.cpp}!CREATE\_MEMBER\_FUNC\_INVOCABLE\_CHECK@{CREATE\_MEMBER\_FUNC\_INVOCABLE\_CHECK}}
+\index{CREATE\_MEMBER\_FUNC\_INVOCABLE\_CHECK@{CREATE\_MEMBER\_FUNC\_INVOCABLE\_CHECK}!tesseract\_common\_unit.cpp@{tesseract\_common\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{CREATE\_MEMBER\_FUNC\_INVOCABLE\_CHECK()}{CREATE\_MEMBER\_FUNC\_INVOCABLE\_CHECK()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily CREATE\+\_\+\+MEMBER\+\_\+\+FUNC\+\_\+\+INVOCABLE\+\_\+\+CHECK (\begin{DoxyParamCaption}\item[{update}]{,  }\item[{std\+::shared\+\_\+ptr$<$ T $>$ \&}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{tesseract__common__unit_8cpp_ad22e871490d628130ef16de9490eee07}\label{tesseract__common__unit_8cpp_ad22e871490d628130ef16de9490eee07}} 
+\index{tesseract\_common\_unit.cpp@{tesseract\_common\_unit.cpp}!CREATE\_MEMBER\_FUNC\_RETURN\_TYPE\_CHECK@{CREATE\_MEMBER\_FUNC\_RETURN\_TYPE\_CHECK}}
+\index{CREATE\_MEMBER\_FUNC\_RETURN\_TYPE\_CHECK@{CREATE\_MEMBER\_FUNC\_RETURN\_TYPE\_CHECK}!tesseract\_common\_unit.cpp@{tesseract\_common\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{CREATE\_MEMBER\_FUNC\_RETURN\_TYPE\_CHECK()}{CREATE\_MEMBER\_FUNC\_RETURN\_TYPE\_CHECK()}}
+{\footnotesize\ttfamily CREATE\+\_\+\+MEMBER\+\_\+\+FUNC\+\_\+\+RETURN\+\_\+\+TYPE\+\_\+\+CHECK (\begin{DoxyParamCaption}\item[{add}]{,  }\item[{int}]{,  }\item[{int}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{tesseract__common__unit_8cpp_acf8fb18f477901832f88b0a7055d3880}\label{tesseract__common__unit_8cpp_acf8fb18f477901832f88b0a7055d3880}} 
+\index{tesseract\_common\_unit.cpp@{tesseract\_common\_unit.cpp}!CREATE\_MEMBER\_FUNC\_SIGNATURE\_CHECK@{CREATE\_MEMBER\_FUNC\_SIGNATURE\_CHECK}}
+\index{CREATE\_MEMBER\_FUNC\_SIGNATURE\_CHECK@{CREATE\_MEMBER\_FUNC\_SIGNATURE\_CHECK}!tesseract\_common\_unit.cpp@{tesseract\_common\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{CREATE\_MEMBER\_FUNC\_SIGNATURE\_CHECK()}{CREATE\_MEMBER\_FUNC\_SIGNATURE\_CHECK()}}
+{\footnotesize\ttfamily CREATE\+\_\+\+MEMBER\+\_\+\+FUNC\+\_\+\+SIGNATURE\+\_\+\+CHECK (\begin{DoxyParamCaption}\item[{add}]{,  }\item[{double}]{,  }\item[{double}]{,  }\item[{double}]{ }\end{DoxyParamCaption})}
+
 \mbox{\Hypertarget{tesseract__common__unit_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}\label{tesseract__common__unit_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}} 
 \index{tesseract\_common\_unit.cpp@{tesseract\_common\_unit.cpp}!main@{main}}
 \index{main@{main}!tesseract\_common\_unit.cpp@{tesseract\_common\_unit.cpp}}
@@ -28,24 +95,48 @@ int \mbox{\hyperlink{tesseract__common__unit_8cpp_a3c04138a5bfe5d72780bb7e82a18e
 \mbox{\Hypertarget{tesseract__common__unit_8cpp_ab15d4eabef420158cb3a7390b0861426}\label{tesseract__common__unit_8cpp_ab15d4eabef420158cb3a7390b0861426}} 
 \index{tesseract\_common\_unit.cpp@{tesseract\_common\_unit.cpp}!TEST@{TEST}}
 \index{TEST@{TEST}!tesseract\_common\_unit.cpp@{tesseract\_common\_unit.cpp}}
-\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
-{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{Tesseract\+Common\+Unit}]{,  }\item[{generate\+Random\+Number}]{ }\end{DoxyParamCaption})}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [1/8]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Tesseract\+Common\+Unit}]{,  }\item[{generate\+Random\+Number}]{ }\end{DoxyParamCaption})}
 
 \mbox{\Hypertarget{tesseract__common__unit_8cpp_a4ee9f89205e3189fbbc69225c9ffa480}\label{tesseract__common__unit_8cpp_a4ee9f89205e3189fbbc69225c9ffa480}} 
 \index{tesseract\_common\_unit.cpp@{tesseract\_common\_unit.cpp}!TEST@{TEST}}
 \index{TEST@{TEST}!tesseract\_common\_unit.cpp@{tesseract\_common\_unit.cpp}}
-\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
-{\footnotesize\ttfamily \mbox{\hyperlink{macros_8h_a8cc0e3c6a3382c5c0b19eb9e676fc2db}{T\+E\+S\+S\+E\+R\+A\+C\+T\+\_\+\+C\+O\+M\+M\+O\+N\+\_\+\+I\+G\+N\+O\+R\+E\+\_\+\+W\+A\+R\+N\+I\+N\+G\+S\+\_\+\+P\+U\+SH}} \mbox{\hyperlink{macros_8h_a7af8561cf52519e9896b0697095c1b8b}{T\+E\+S\+S\+E\+R\+A\+C\+T\+\_\+\+C\+O\+M\+M\+O\+N\+\_\+\+I\+G\+N\+O\+R\+E\+\_\+\+W\+A\+R\+N\+I\+N\+G\+S\+\_\+\+P\+OP}} T\+E\+ST (\begin{DoxyParamCaption}\item[{Tesseract\+Common\+Unit}]{,  }\item[{is\+Numeric}]{ }\end{DoxyParamCaption})}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [2/8]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{macros_8h_a8cc0e3c6a3382c5c0b19eb9e676fc2db}{TESSERACT\+\_\+\+COMMON\+\_\+\+IGNORE\+\_\+\+WARNINGS\+\_\+\+PUSH}} \mbox{\hyperlink{macros_8h_a7af8561cf52519e9896b0697095c1b8b}{TESSERACT\+\_\+\+COMMON\+\_\+\+IGNORE\+\_\+\+WARNINGS\+\_\+\+POP}} TEST (\begin{DoxyParamCaption}\item[{Tesseract\+Common\+Unit}]{,  }\item[{is\+Numeric}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{tesseract__common__unit_8cpp_aac7797f1e35eb1fb251f0b94ffcb191e}\label{tesseract__common__unit_8cpp_aac7797f1e35eb1fb251f0b94ffcb191e}} 
+\index{tesseract\_common\_unit.cpp@{tesseract\_common\_unit.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!tesseract\_common\_unit.cpp@{tesseract\_common\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [3/8]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Tesseract\+Common\+Unit}]{,  }\item[{sfinae\+Has\+Member\+Function}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{tesseract__common__unit_8cpp_ad76c7581b75d7a5fe5ff6e844c7ca157}\label{tesseract__common__unit_8cpp_ad76c7581b75d7a5fe5ff6e844c7ca157}} 
+\index{tesseract\_common\_unit.cpp@{tesseract\_common\_unit.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!tesseract\_common\_unit.cpp@{tesseract\_common\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [4/8]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Tesseract\+Common\+Unit}]{,  }\item[{sfinae\+Has\+Member\+Function\+Invocable}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{tesseract__common__unit_8cpp_a634523f4a47d7f3ec3280dcd13e32897}\label{tesseract__common__unit_8cpp_a634523f4a47d7f3ec3280dcd13e32897}} 
+\index{tesseract\_common\_unit.cpp@{tesseract\_common\_unit.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!tesseract\_common\_unit.cpp@{tesseract\_common\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [5/8]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Tesseract\+Common\+Unit}]{,  }\item[{sfinae\+Has\+Member\+Function\+Signature}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{tesseract__common__unit_8cpp_acb6852824276253bd2bf866572713dee}\label{tesseract__common__unit_8cpp_acb6852824276253bd2bf866572713dee}} 
+\index{tesseract\_common\_unit.cpp@{tesseract\_common\_unit.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!tesseract\_common\_unit.cpp@{tesseract\_common\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [6/8]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Tesseract\+Common\+Unit}]{,  }\item[{sfinae\+Has\+Member\+Function\+With\+Return\+Type}]{ }\end{DoxyParamCaption})}
 
 \mbox{\Hypertarget{tesseract__common__unit_8cpp_a20a25b012fd4ab6e7f625333e2d0eeba}\label{tesseract__common__unit_8cpp_a20a25b012fd4ab6e7f625333e2d0eeba}} 
 \index{tesseract\_common\_unit.cpp@{tesseract\_common\_unit.cpp}!TEST@{TEST}}
 \index{TEST@{TEST}!tesseract\_common\_unit.cpp@{tesseract\_common\_unit.cpp}}
-\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
-{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{Tesseract\+Common\+Unit}]{,  }\item[{to\+Numeric}]{ }\end{DoxyParamCaption})}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [7/8]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Tesseract\+Common\+Unit}]{,  }\item[{to\+Numeric}]{ }\end{DoxyParamCaption})}
 
 \mbox{\Hypertarget{tesseract__common__unit_8cpp_aa3c12b1a2b48bb2fbf3d08cd69796003}\label{tesseract__common__unit_8cpp_aa3c12b1a2b48bb2fbf3d08cd69796003}} 
 \index{tesseract\_common\_unit.cpp@{tesseract\_common\_unit.cpp}!TEST@{TEST}}
 \index{TEST@{TEST}!tesseract\_common\_unit.cpp@{tesseract\_common\_unit.cpp}}
-\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
-{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{Tesseract\+Common\+Unit}]{,  }\item[{trim}]{ }\end{DoxyParamCaption})}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [8/8]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Tesseract\+Common\+Unit}]{,  }\item[{trim}]{ }\end{DoxyParamCaption})}
 

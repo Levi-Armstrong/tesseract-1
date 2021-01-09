@@ -11,12 +11,22 @@ Common Tesseract Utility Functions.
 {\ttfamily \#include $<$sstream$>$}\newline
 {\ttfamily \#include $<$stdexcept$>$}\newline
 {\ttfamily \#include $<$random$>$}\newline
+{\ttfamily \#include $<$iomanip$>$}\newline
 {\ttfamily \#include $<$ctime$>$}\newline
 {\ttfamily \#include $<$Eigen/\+Geometry$>$}\newline
 {\ttfamily \#include $<$iostream$>$}\newline
 {\ttfamily \#include $<$algorithm$>$}\newline
 {\ttfamily \#include $<$tinyxml2.\+h$>$}\newline
+{\ttfamily \#include $<$boost/filesystem.\+hpp$>$}\newline
 {\ttfamily \#include $<$console\+\_\+bridge/console.\+h$>$}\newline
+Include dependency graph for utils.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/db7/tesseract__common_2include_2tesseract__common_2utils_8h__incl}
+\end{center}
+\end{figure}
 \doxysubsection*{Namespaces}
 \begin{DoxyCompactItemize}
 \item 
@@ -25,13 +35,15 @@ Common Tesseract Utility Functions.
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
+std\+::string \mbox{\hyperlink{namespacetesseract__common_a58ecad04db85855fa9e4de21084598ca}{tesseract\+\_\+common\+::get\+Temp\+Path}} ()
+\begin{DoxyCompactList}\small\item\em Get the host temp directory path. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{namespacetesseract__common_a1dc3a9525efbe582991edd4eedc26079}{tesseract\+\_\+common\+::is\+Numeric}} (const std\+::string \&s)
 \begin{DoxyCompactList}\small\item\em Determine if a string is a number. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{namespacetesseract__common_a0db40f06dba7e6be18a2c4f098ad7a00}{tesseract\+\_\+common\+::is\+Numeric}} (const std\+::vector$<$ std\+::string $>$ \&sv)
 \item 
 {\footnotesize template$<$typename Float\+Type $>$ }\\bool \mbox{\hyperlink{namespacetesseract__common_a00bc131acfeba0eba8fe7ff7cd944860}{tesseract\+\_\+common\+::to\+Numeric}} (const std\+::string \&s, Float\+Type \&value)
 \begin{DoxyCompactList}\small\item\em Convert a string to a numeric value type. \end{DoxyCompactList}\item 
-Eigen\+::\+Vector\+Xd \mbox{\hyperlink{namespacetesseract__common_a34ad923beec11899b02c5b3e7a5eb16e}{tesseract\+\_\+common\+::generate\+Random\+Number}} (Eigen\+::\+Matrix\+X2d limits)
+Eigen\+::\+Vector\+Xd \mbox{\hyperlink{namespacetesseract__common_aa14552337385ce1de42da699506f8b03}{tesseract\+\_\+common\+::generate\+Random\+Number}} (const Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix\+X2d $>$ \&limits)
 \begin{DoxyCompactList}\small\item\em Given a set of limits it will generate a vector of randon numbers between the limit. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{namespacetesseract__common_af46edf9701e45b20e95a5abfac500b8f}{tesseract\+\_\+common\+::ltrim}} (std\+::string \&s)
 \begin{DoxyCompactList}\small\item\em Left trim string. \end{DoxyCompactList}\item 
@@ -39,18 +51,26 @@ void \mbox{\hyperlink{namespacetesseract__common_aa86a4f0e5ca9d2b1f5abc3f34735d8
 \begin{DoxyCompactList}\small\item\em Right trim string. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{namespacetesseract__common_aeacd629bcf585286917aafa7b8e603bb}{tesseract\+\_\+common\+::trim}} (std\+::string \&s)
 \begin{DoxyCompactList}\small\item\em Trim left and right of string. \end{DoxyCompactList}\item 
-tinyxml2\+::\+X\+M\+L\+Error \mbox{\hyperlink{namespacetesseract__common_ae1a3ebd3610dce6d24cc7569606fd9ab}{tesseract\+\_\+common\+::\+Query\+String\+Value}} (const tinyxml2\+::\+X\+M\+L\+Element $\ast$xml\+\_\+element, std\+::string \&value)
+bool \mbox{\hyperlink{namespacetesseract__common_aaedf0e7043da047ab5a970a5669cf5d0}{tesseract\+\_\+common\+::is\+Identical}} (const std\+::vector$<$ std\+::string $>$ \&vec1, const std\+::vector$<$ std\+::string $>$ \&vec2, bool ordered=true)
+\begin{DoxyCompactList}\small\item\em Check if two vector of strings are identical. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{namespacetesseract__common_a1077809c98ad8bf5262e426cff6e63a3}{tesseract\+\_\+common\+::get\+Timestamp\+String}} ()
+\begin{DoxyCompactList}\small\item\em Get Timestamp string. \end{DoxyCompactList}\item 
+tinyxml2\+::\+XMLError \mbox{\hyperlink{namespacetesseract__common_ae1a3ebd3610dce6d24cc7569606fd9ab}{tesseract\+\_\+common\+::\+Query\+String\+Value}} (const tinyxml2\+::\+XMLElement $\ast$xml\+\_\+element, std\+::string \&value)
 \begin{DoxyCompactList}\small\item\em Query a string value from xml element. \end{DoxyCompactList}\item 
-tinyxml2\+::\+X\+M\+L\+Error \mbox{\hyperlink{namespacetesseract__common_ad3e6914a612484e89bf86c60198b6cdc}{tesseract\+\_\+common\+::\+Query\+String\+Value}} (const tinyxml2\+::\+X\+M\+L\+Attribute $\ast$xml\+\_\+attribute, std\+::string \&value)
+tinyxml2\+::\+XMLError \mbox{\hyperlink{namespacetesseract__common_ab95676b5418063a1d7c84fbba4ff1fe0}{tesseract\+\_\+common\+::\+Query\+String\+Text}} (const tinyxml2\+::\+XMLElement $\ast$xml\+\_\+element, std\+::string \&text)
+\begin{DoxyCompactList}\small\item\em Query a string Text from xml element. \end{DoxyCompactList}\item 
+tinyxml2\+::\+XMLError \mbox{\hyperlink{namespacetesseract__common_ad3e6914a612484e89bf86c60198b6cdc}{tesseract\+\_\+common\+::\+Query\+String\+Value}} (const tinyxml2\+::\+XMLAttribute $\ast$xml\+\_\+attribute, std\+::string \&value)
 \begin{DoxyCompactList}\small\item\em Query a string value from xml attribute. \end{DoxyCompactList}\item 
-tinyxml2\+::\+X\+M\+L\+Error \mbox{\hyperlink{namespacetesseract__common_a22a4a1b896230ca84cce7aae2e21673a}{tesseract\+\_\+common\+::\+Query\+String\+Attribute}} (const tinyxml2\+::\+X\+M\+L\+Element $\ast$xml\+\_\+element, const char $\ast$name, std\+::string \&value)
+tinyxml2\+::\+XMLError \mbox{\hyperlink{namespacetesseract__common_a22a4a1b896230ca84cce7aae2e21673a}{tesseract\+\_\+common\+::\+Query\+String\+Attribute}} (const tinyxml2\+::\+XMLElement $\ast$xml\+\_\+element, const char $\ast$name, std\+::string \&value)
 \begin{DoxyCompactList}\small\item\em Query a string attribute from an xml element. \end{DoxyCompactList}\item 
-std\+::string \mbox{\hyperlink{namespacetesseract__common_aadfa4845aecc119ae62b37e59c6ee168}{tesseract\+\_\+common\+::\+String\+Attribute}} (const tinyxml2\+::\+X\+M\+L\+Element $\ast$xml\+\_\+element, const char $\ast$name, std\+::string default\+\_\+value)
+std\+::string \mbox{\hyperlink{namespacetesseract__common_aadfa4845aecc119ae62b37e59c6ee168}{tesseract\+\_\+common\+::\+String\+Attribute}} (const tinyxml2\+::\+XMLElement $\ast$xml\+\_\+element, const char $\ast$name, std\+::string default\+\_\+value)
 \begin{DoxyCompactList}\small\item\em Get string attribute if exist. If it does not exist it returns the default value. \end{DoxyCompactList}\item 
-tinyxml2\+::\+X\+M\+L\+Error \mbox{\hyperlink{namespacetesseract__common_a609734264f8b63f5c7815871c40b231f}{tesseract\+\_\+common\+::\+Query\+String\+Attribute\+Required}} (const tinyxml2\+::\+X\+M\+L\+Element $\ast$xml\+\_\+element, const char $\ast$name, std\+::string \&value)
+tinyxml2\+::\+XMLError \mbox{\hyperlink{namespacetesseract__common_a609734264f8b63f5c7815871c40b231f}{tesseract\+\_\+common\+::\+Query\+String\+Attribute\+Required}} (const tinyxml2\+::\+XMLElement $\ast$xml\+\_\+element, const char $\ast$name, std\+::string \&value)
 \begin{DoxyCompactList}\small\item\em Query a string attribute from an xml element and print error log. \end{DoxyCompactList}\item 
-tinyxml2\+::\+X\+M\+L\+Error \mbox{\hyperlink{namespacetesseract__common_ab5ec94b62bea51b6e40598e0f8e7a6c3}{tesseract\+\_\+common\+::\+Query\+Double\+Attribute\+Required}} (const tinyxml2\+::\+X\+M\+L\+Element $\ast$xml\+\_\+element, const char $\ast$name, double \&value)
-\begin{DoxyCompactList}\small\item\em Query a double attribute from an xml element and print error log. \end{DoxyCompactList}\end{DoxyCompactItemize}
+tinyxml2\+::\+XMLError \mbox{\hyperlink{namespacetesseract__common_ab5ec94b62bea51b6e40598e0f8e7a6c3}{tesseract\+\_\+common\+::\+Query\+Double\+Attribute\+Required}} (const tinyxml2\+::\+XMLElement $\ast$xml\+\_\+element, const char $\ast$name, double \&value)
+\begin{DoxyCompactList}\small\item\em Query a double attribute from an xml element and print error log. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespacetesseract__common_a1ce86f1e809df1ac04fef0b5cf396fe2}{tesseract\+\_\+common\+::almost\+Equal\+Relative\+And\+Abs}} (double a, double b, double max\+\_\+diff, double max\+\_\+rel\+\_\+diff=std\+::numeric\+\_\+limits$<$ double $>$\+::epsilon())
+\begin{DoxyCompactList}\small\item\em Check if two double are relatively equal. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
@@ -68,10 +88,10 @@ Levi Armstrong
 January 18, 2018 
 \end{DoxyDate}
 \begin{DoxyVersion}{Version}
-T\+O\+DO 
+TODO 
 \end{DoxyVersion}
 \begin{DoxyRefDesc}{Bug}
-\item[\mbox{\hyperlink{bug__bug000035}{Bug}}]No known bugs\end{DoxyRefDesc}
+\item[\mbox{\hyperlink{bug__bug000069}{Bug}}]No known bugs\end{DoxyRefDesc}
 
 
 \begin{DoxyCopyright}{Copyright}
@@ -81,8 +101,8 @@ Copyright (c) 2017, Southwest Research Institute
 Software License Agreement (Apache License) 
 \end{DoxyParagraph}
 \begin{DoxyParagraph}{}
-Licensed under the Apache License, Version 2.\+0 (the \char`\"{}\+License\char`\"{}); you may not use this file except in compliance with the License. You may obtain a copy of the License at \href{http://www.apache.org/licenses/LICENSE-2.0}{\texttt{ http\+://www.\+apache.\+org/licenses/\+L\+I\+C\+E\+N\+S\+E-\/2.\+0}} 
+Licensed under the Apache License, Version 2.\+0 (the \char`\"{}\+License\char`\"{}); you may not use this file except in compliance with the License. You may obtain a copy of the License at \href{http://www.apache.org/licenses/LICENSE-2.0}{\texttt{ http\+://www.\+apache.\+org/licenses/\+LICENSE-\/2.\+0}} 
 \end{DoxyParagraph}
 \begin{DoxyParagraph}{}
-Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \char`\"{}\+A\+S I\+S\char`\"{} B\+A\+S\+IS, W\+I\+T\+H\+O\+UT W\+A\+R\+R\+A\+N\+T\+I\+ES OR C\+O\+N\+D\+I\+T\+I\+O\+NS OF A\+NY K\+I\+ND, either express or implied. See the License for the specific language governing permissions and limitations under the License. 
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \char`\"{}\+AS IS\char`\"{} BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. 
 \end{DoxyParagraph}

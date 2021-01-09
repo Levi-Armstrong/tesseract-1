@@ -1,0 +1,10 @@
+<map id="tesseract_planning::DiscreteContactCheckTaskGenerator" name="tesseract_planning::DiscreteContactCheckTaskGenerator">
+<area shape="rect" id="node1" title=" " alt="" coords="900,31,1087,87"/>
+<area shape="rect" id="node2" href="$d3/dd8/classtesseract__planning_1_1TaskGenerator.html" title="This is a base class for generating instances of processes as tasks such that they may be executed in..." alt="" coords="674,5,805,47"/>
+<area shape="rect" id="node3" title=" " alt="" coords="376,13,455,39"/>
+<area shape="rect" id="node4" title=" " alt="" coords="47,5,171,47"/>
+<area shape="rect" id="node5" href="$d9/d2c/structtesseract__collision_1_1CollisionCheckConfig.html" title="This is a high level structure containing common information that collision checking utilities need...." alt="" coords="664,71,815,112"/>
+<area shape="rect" id="node6" href="$da/df6/structtesseract__collision_1_1ContactRequest.html" title="The ContactRequest struct." alt="" coords="350,67,481,108"/>
+<area shape="rect" id="node7" href="$d3/da1/structtesseract__collision_1_1CollisionMarginData.html" title="Stores information about how the margins allowed between collision objects." alt="" coords="344,132,487,173"/>
+<area shape="rect" id="node8" title=" " alt="" coords="5,117,212,188"/>
+</map>

@@ -11,11 +11,28 @@ Tesseracts Collision Common Types.
 {\ttfamily \#include $<$vector$>$}\newline
 {\ttfamily \#include $<$memory$>$}\newline
 {\ttfamily \#include $<$map$>$}\newline
+{\ttfamily \#include $<$array$>$}\newline
 {\ttfamily \#include $<$unordered\+\_\+map$>$}\newline
 {\ttfamily \#include $<$functional$>$}\newline
 {\ttfamily \#include $<$boost/bind.\+hpp$>$}\newline
 {\ttfamily \#include $<$tesseract\+\_\+geometry/geometries.\+h$>$}\newline
 {\ttfamily \#include $<$tesseract\+\_\+common/types.\+h$>$}\newline
+Include dependency graph for types.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/d54/tesseract__collision_2include_2tesseract__collision_2core_2types_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/d7f/tesseract__collision_2include_2tesseract__collision_2core_2types_8h__dep__incl}
+\end{center}
+\end{figure}
 \doxysubsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
@@ -23,8 +40,12 @@ struct \mbox{\hyperlink{structtesseract__collision_1_1ContactResult}{tesseract\+
 \item 
 struct \mbox{\hyperlink{structtesseract__collision_1_1ContactRequest}{tesseract\+\_\+collision\+::\+Contact\+Request}}
 \begin{DoxyCompactList}\small\item\em The \mbox{\hyperlink{structtesseract__collision_1_1ContactRequest}{Contact\+Request}} struct. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structtesseract__collision_1_1CollisionMarginData}{tesseract\+\_\+collision\+::\+Collision\+Margin\+Data}}
+\begin{DoxyCompactList}\small\item\em Stores information about how the margins allowed between collision objects. \end{DoxyCompactList}\item 
 struct \mbox{\hyperlink{structtesseract__collision_1_1ContactTestData}{tesseract\+\_\+collision\+::\+Contact\+Test\+Data}}
-\begin{DoxyCompactList}\small\item\em This data is intended only to be used internal to the collision checkers as a container and should not be externally used by other libraries or packages. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em This data is intended only to be used internal to the collision checkers as a container and should not be externally used by other libraries or packages. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structtesseract__collision_1_1CollisionCheckConfig}{tesseract\+\_\+collision\+::\+Collision\+Check\+Config}}
+\begin{DoxyCompactList}\small\item\em This is a high level structure containing common information that collision checking utilities need. The goal of this config is to allow all collision checking utilities and planners to use the same datastructure. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Namespaces}
 \begin{DoxyCompactItemize}
 \item 
@@ -50,18 +71,27 @@ using \mbox{\hyperlink{namespacetesseract__collision_a66fd355f5026f0f64424a756a3
 \doxysubsection*{Enumerations}
 \begin{DoxyCompactItemize}
 \item 
-enum \mbox{\hyperlink{namespacetesseract__collision_a267c740fd3b446222ba19cbaa56dab5e}{tesseract\+\_\+collision\+::\+Continuous\+Collision\+Type}} \{ \mbox{\hyperlink{namespacetesseract__collision_a267c740fd3b446222ba19cbaa56dab5ea79e497b3f5d3d8b23ea29c9370354bb6}{tesseract\+\_\+collision\+::\+Continuous\+Collision\+Type\+::\+C\+C\+Type\+\_\+\+None}}, 
-\mbox{\hyperlink{namespacetesseract__collision_a267c740fd3b446222ba19cbaa56dab5eaf8c51e6d7c61aa31897c3dd7b0719093}{tesseract\+\_\+collision\+::\+Continuous\+Collision\+Type\+::\+C\+C\+Type\+\_\+\+Time0}}, 
-\mbox{\hyperlink{namespacetesseract__collision_a267c740fd3b446222ba19cbaa56dab5ea333ec902092c850b7f23cf437d0fac01}{tesseract\+\_\+collision\+::\+Continuous\+Collision\+Type\+::\+C\+C\+Type\+\_\+\+Time1}}, 
-\mbox{\hyperlink{namespacetesseract__collision_a267c740fd3b446222ba19cbaa56dab5ea1101988a82b0cd8a2e2c5ee5fda455eb}{tesseract\+\_\+collision\+::\+Continuous\+Collision\+Type\+::\+C\+C\+Type\+\_\+\+Between}}
+enum class \mbox{\hyperlink{namespacetesseract__collision_a267c740fd3b446222ba19cbaa56dab5e}{tesseract\+\_\+collision\+::\+Continuous\+Collision\+Type}} \{ \mbox{\hyperlink{namespacetesseract__collision_a267c740fd3b446222ba19cbaa56dab5ea79e497b3f5d3d8b23ea29c9370354bb6}{tesseract\+\_\+collision\+::\+CCType\+\_\+\+None}}
+, \mbox{\hyperlink{namespacetesseract__collision_a267c740fd3b446222ba19cbaa56dab5eaf8c51e6d7c61aa31897c3dd7b0719093}{tesseract\+\_\+collision\+::\+CCType\+\_\+\+Time0}}
+, \mbox{\hyperlink{namespacetesseract__collision_a267c740fd3b446222ba19cbaa56dab5ea333ec902092c850b7f23cf437d0fac01}{tesseract\+\_\+collision\+::\+CCType\+\_\+\+Time1}}
+, \mbox{\hyperlink{namespacetesseract__collision_a267c740fd3b446222ba19cbaa56dab5ea1101988a82b0cd8a2e2c5ee5fda455eb}{tesseract\+\_\+collision\+::\+CCType\+\_\+\+Between}}
  \}
 \item 
-enum \mbox{\hyperlink{namespacetesseract__collision_ac3da4f46ae16e86ba4f1dfd2935eb80c}{tesseract\+\_\+collision\+::\+Contact\+Test\+Type}} \{ \mbox{\hyperlink{namespacetesseract__collision_ac3da4f46ae16e86ba4f1dfd2935eb80ca2c2624a5059934a947d6e25fe8332ade}{tesseract\+\_\+collision\+::\+Contact\+Test\+Type\+::\+F\+I\+R\+ST}} = 0, 
-\mbox{\hyperlink{namespacetesseract__collision_ac3da4f46ae16e86ba4f1dfd2935eb80cae9c32f09a44ae1ae34e42d53502fab77}{tesseract\+\_\+collision\+::\+Contact\+Test\+Type\+::\+C\+L\+O\+S\+E\+ST}} = 1, 
-\mbox{\hyperlink{namespacetesseract__collision_ac3da4f46ae16e86ba4f1dfd2935eb80ca5fb1f955b45e38e31789286a1790398d}{tesseract\+\_\+collision\+::\+Contact\+Test\+Type\+::\+A\+LL}} = 2, 
-\mbox{\hyperlink{namespacetesseract__collision_ac3da4f46ae16e86ba4f1dfd2935eb80cad9e0d83abd8b9bb4c1998be68831922c}{tesseract\+\_\+collision\+::\+Contact\+Test\+Type\+::\+L\+I\+M\+I\+T\+ED}} = 3
+enum class \mbox{\hyperlink{namespacetesseract__collision_ac3da4f46ae16e86ba4f1dfd2935eb80c}{tesseract\+\_\+collision\+::\+Contact\+Test\+Type}} \{ \mbox{\hyperlink{namespacetesseract__collision_ac3da4f46ae16e86ba4f1dfd2935eb80ca2c2624a5059934a947d6e25fe8332ade}{tesseract\+\_\+collision\+::\+FIRST}} = 0
+, \mbox{\hyperlink{namespacetesseract__collision_ac3da4f46ae16e86ba4f1dfd2935eb80cae9c32f09a44ae1ae34e42d53502fab77}{tesseract\+\_\+collision\+::\+CLOSEST}} = 1
+, \mbox{\hyperlink{namespacetesseract__collision_ac3da4f46ae16e86ba4f1dfd2935eb80ca5fb1f955b45e38e31789286a1790398d}{tesseract\+\_\+collision\+::\+ALL}} = 2
+, \mbox{\hyperlink{namespacetesseract__collision_ac3da4f46ae16e86ba4f1dfd2935eb80cad9e0d83abd8b9bb4c1998be68831922c}{tesseract\+\_\+collision\+::\+LIMITED}} = 3
  \}
-\end{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{namespacetesseract__collision_af17e8ee8632a40cf4b6ed1ba1aec41ac}{tesseract\+\_\+collision\+::\+Collision\+Evaluator\+Type}} \{ \newline
+\mbox{\hyperlink{namespacetesseract__collision_af17e8ee8632a40cf4b6ed1ba1aec41acab50339a10e1de285ac99d4c3990b8693}{tesseract\+\_\+collision\+::\+NONE}}
+, \mbox{\hyperlink{namespacetesseract__collision_af17e8ee8632a40cf4b6ed1ba1aec41aca947436f2927405d3b5997a9ffbaee5c1}{tesseract\+\_\+collision\+::\+DISCRETE}}
+, \mbox{\hyperlink{namespacetesseract__collision_af17e8ee8632a40cf4b6ed1ba1aec41aca4afe53b9adb97f1374fa3e05dd7a1be1}{tesseract\+\_\+collision\+::\+LVS\+\_\+\+DISCRETE}}
+, \mbox{\hyperlink{namespacetesseract__collision_af17e8ee8632a40cf4b6ed1ba1aec41acab1fa9dd3af034b3ef4291579aa673c07}{tesseract\+\_\+collision\+::\+CONTINUOUS}}
+, \newline
+\mbox{\hyperlink{namespacetesseract__collision_af17e8ee8632a40cf4b6ed1ba1aec41acab8bde735baca78a8b98c00e1a0a50239}{tesseract\+\_\+collision\+::\+LVS\+\_\+\+CONTINUOUS}}
+ \}
+\begin{DoxyCompactList}\small\item\em High level descriptor used in planners and utilities to specify what kind of collision check is desired. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -88,10 +118,10 @@ Levi Armstrong
 January 18, 2018 
 \end{DoxyDate}
 \begin{DoxyVersion}{Version}
-T\+O\+DO 
+TODO 
 \end{DoxyVersion}
 \begin{DoxyRefDesc}{Bug}
-\item[\mbox{\hyperlink{bug__bug000017}{Bug}}]No known bugs\end{DoxyRefDesc}
+\item[\mbox{\hyperlink{bug__bug000012}{Bug}}]No known bugs\end{DoxyRefDesc}
 
 
 \begin{DoxyCopyright}{Copyright}
@@ -101,8 +131,8 @@ Copyright (c) 2017, Southwest Research Institute
 Software License Agreement (Apache License) 
 \end{DoxyParagraph}
 \begin{DoxyParagraph}{}
-Licensed under the Apache License, Version 2.\+0 (the \char`\"{}\+License\char`\"{}); you may not use this file except in compliance with the License. You may obtain a copy of the License at \href{http://www.apache.org/licenses/LICENSE-2.0}{\texttt{ http\+://www.\+apache.\+org/licenses/\+L\+I\+C\+E\+N\+S\+E-\/2.\+0}} 
+Licensed under the Apache License, Version 2.\+0 (the \char`\"{}\+License\char`\"{}); you may not use this file except in compliance with the License. You may obtain a copy of the License at \href{http://www.apache.org/licenses/LICENSE-2.0}{\texttt{ http\+://www.\+apache.\+org/licenses/\+LICENSE-\/2.\+0}} 
 \end{DoxyParagraph}
 \begin{DoxyParagraph}{}
-Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \char`\"{}\+A\+S I\+S\char`\"{} B\+A\+S\+IS, W\+I\+T\+H\+O\+UT W\+A\+R\+R\+A\+N\+T\+I\+ES OR C\+O\+N\+D\+I\+T\+I\+O\+NS OF A\+NY K\+I\+ND, either express or implied. See the License for the specific language governing permissions and limitations under the License. 
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \char`\"{}\+AS IS\char`\"{} BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. 
 \end{DoxyParagraph}

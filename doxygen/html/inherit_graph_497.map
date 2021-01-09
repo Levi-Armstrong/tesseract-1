@@ -1,0 +1,34 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$d3/d71/classtesseract__common_1_1StatusCategory.html" title=" " alt="" coords="5,1041,183,1083"/>
+<area shape="rect" id="node2" href="$d7/d1b/classtesseract__common_1_1GeneralStatusCategory.html" title=" " alt="" coords="258,5,442,47"/>
+<area shape="rect" id="node3" href="$d5/d4d/classtesseract__planning_1_1DescartesMotionPlannerStatusCategory.html" title="The Descartes motion planner status category." alt="" coords="246,70,454,126"/>
+<area shape="rect" id="node4" href="$dc/d7d/classtesseract__planning_1_1OMPLMotionPlannerStatusCategory.html" title=" " alt="" coords="231,149,469,191"/>
+<area shape="rect" id="node5" href="$d4/d70/classtesseract__planning_1_1SimpleMotionPlannerStatusCategory.html" title=" " alt="" coords="255,214,445,270"/>
+<area shape="rect" id="node6" href="$d3/d0f/classtesseract__planning_1_1TrajOptIfoptMotionPlannerStatusCategory.html" title=" " alt="" coords="260,294,440,350"/>
+<area shape="rect" id="node7" href="$db/db6/classtesseract__planning_1_1TrajOptMotionPlannerStatusCategory.html" title=" " alt="" coords="254,374,446,430"/>
+<area shape="rect" id="node8" href="$da/d26/classtesseract__urdf_1_1BoxStatusCategory.html" title=" " alt="" coords="265,453,435,495"/>
+<area shape="rect" id="node9" href="$d6/d1b/classtesseract__urdf_1_1CalibrationStatusCategory.html" title=" " alt="" coords="264,519,436,560"/>
+<area shape="rect" id="node10" href="$d9/d3a/classtesseract__urdf_1_1CapsuleStatusCategory.html" title=" " alt="" coords="252,584,448,625"/>
+<area shape="rect" id="node11" href="$df/da7/classtesseract__urdf_1_1CollisionStatusCategory.html" title=" " alt="" coords="270,649,430,691"/>
+<area shape="rect" id="node12" href="$d0/dee/classtesseract__urdf_1_1ConeStatusCategory.html" title=" " alt="" coords="261,715,439,756"/>
+<area shape="rect" id="node13" href="$d0/d6b/classtesseract__urdf_1_1ConvexMeshStatusCategory.html" title=" " alt="" coords="257,780,443,821"/>
+<area shape="rect" id="node14" href="$d8/d12/classtesseract__urdf_1_1CylinderStatusCategory.html" title=" " alt="" coords="271,845,429,887"/>
+<area shape="rect" id="node15" href="$de/d65/classtesseract__urdf_1_1DynamicsStatusCategory.html" title=" " alt="" coords="266,911,434,952"/>
+<area shape="rect" id="node16" href="$d1/df3/classtesseract__urdf_1_1GeometryStatusCategory.html" title=" " alt="" coords="267,976,433,1017"/>
+<area shape="rect" id="node17" href="$d7/dd2/classtesseract__urdf_1_1InertialStatusCategory.html" title=" " alt="" coords="275,1041,425,1083"/>
+<area shape="rect" id="node18" href="$d6/de6/classtesseract__urdf_1_1JointStatusCategory.html" title=" " alt="" coords="261,1107,439,1148"/>
+<area shape="rect" id="node19" href="$d2/d47/classtesseract__urdf_1_1LimitsStatusCategory.html" title=" " alt="" coords="257,1172,443,1213"/>
+<area shape="rect" id="node20" href="$d1/d62/classtesseract__urdf_1_1LinkStatusCategory.html" title=" " alt="" coords="263,1237,437,1279"/>
+<area shape="rect" id="node21" href="$d9/d1d/classtesseract__urdf_1_1MaterialStatusCategory.html" title=" " alt="" coords="271,1303,429,1344"/>
+<area shape="rect" id="node22" href="$df/d9e/classtesseract__urdf_1_1MeshStatusCategory.html" title=" " alt="" coords="259,1368,441,1409"/>
+<area shape="rect" id="node23" href="$d9/d80/classtesseract__urdf_1_1MimicStatusCategory.html" title=" " alt="" coords="258,1433,442,1475"/>
+<area shape="rect" id="node24" href="$d0/d56/classtesseract__urdf_1_1OctomapStatusCategory.html" title=" " alt="" coords="249,1499,451,1540"/>
+<area shape="rect" id="node25" href="$d2/d7f/classtesseract__urdf_1_1OctreeStatusCategory.html" title=" " alt="" coords="256,1564,444,1605"/>
+<area shape="rect" id="node26" href="$df/d7f/classtesseract__urdf_1_1OriginStatusCategory.html" title=" " alt="" coords="259,1629,441,1671"/>
+<area shape="rect" id="node27" href="$d9/dd5/classtesseract__urdf_1_1PointCloudStatusCategory.html" title=" " alt="" coords="263,1695,437,1736"/>
+<area shape="rect" id="node28" href="$d7/d1a/classtesseract__urdf_1_1SDFMeshStatusCategory.html" title=" " alt="" coords="247,1760,453,1801"/>
+<area shape="rect" id="node29" href="$d2/d6c/classtesseract__urdf_1_1SafetyStatusCategory.html" title=" " alt="" coords="257,1825,443,1867"/>
+<area shape="rect" id="node30" href="$d8/d95/classtesseract__urdf_1_1SphereStatusCategory.html" title=" " alt="" coords="255,1891,445,1932"/>
+<area shape="rect" id="node31" href="$d8/d2e/classtesseract__urdf_1_1URDFStatusCategory.html" title=" " alt="" coords="257,1956,443,1997"/>
+<area shape="rect" id="node32" href="$de/dcb/classtesseract__urdf_1_1VisualStatusCategory.html" title=" " alt="" coords="257,2021,443,2063"/>
+</map>

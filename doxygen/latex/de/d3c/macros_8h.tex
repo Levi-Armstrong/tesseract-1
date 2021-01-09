@@ -8,13 +8,13 @@ Common Tesseract Macros.
 \doxysubsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
-\#define \mbox{\hyperlink{macros_8h_af67a6ff1a54b41b2a6e4bd36bc47b118}{D\+E\+P\+R\+E\+C\+A\+T\+ED}}(X)
+\#define \mbox{\hyperlink{macros_8h_af67a6ff1a54b41b2a6e4bd36bc47b118}{DEPRECATED}}(X)
 \item 
-\#define \mbox{\hyperlink{macros_8h_a8cc0e3c6a3382c5c0b19eb9e676fc2db}{T\+E\+S\+S\+E\+R\+A\+C\+T\+\_\+\+C\+O\+M\+M\+O\+N\+\_\+\+I\+G\+N\+O\+R\+E\+\_\+\+W\+A\+R\+N\+I\+N\+G\+S\+\_\+\+P\+U\+SH}}
+\#define \mbox{\hyperlink{macros_8h_a8cc0e3c6a3382c5c0b19eb9e676fc2db}{TESSERACT\+\_\+\+COMMON\+\_\+\+IGNORE\+\_\+\+WARNINGS\+\_\+\+PUSH}}
 \item 
-\#define \mbox{\hyperlink{macros_8h_a7af8561cf52519e9896b0697095c1b8b}{T\+E\+S\+S\+E\+R\+A\+C\+T\+\_\+\+C\+O\+M\+M\+O\+N\+\_\+\+I\+G\+N\+O\+R\+E\+\_\+\+W\+A\+R\+N\+I\+N\+G\+S\+\_\+\+P\+OP}}~\+\_\+\+Pragma(\char`\"{}G\+CC diagnostic pop\char`\"{})
+\#define \mbox{\hyperlink{macros_8h_a7af8561cf52519e9896b0697095c1b8b}{TESSERACT\+\_\+\+COMMON\+\_\+\+IGNORE\+\_\+\+WARNINGS\+\_\+\+POP}}
 \item 
-\#define \mbox{\hyperlink{macros_8h_a86d500a34c624c2cae56bc25a31b12f3}{U\+N\+U\+S\+ED}}(x)~(void)(x)
+\#define \mbox{\hyperlink{macros_8h_a86d500a34c624c2cae56bc25a31b12f3}{UNUSED}}(x)~(void)(x)
 \end{DoxyCompactItemize}
 
 
@@ -28,10 +28,10 @@ Levi Armstrong
 January 18, 2018 
 \end{DoxyDate}
 \begin{DoxyVersion}{Version}
-T\+O\+DO 
+TODO 
 \end{DoxyVersion}
 \begin{DoxyRefDesc}{Bug}
-\item[\mbox{\hyperlink{bug__bug000031}{Bug}}]No known bugs\end{DoxyRefDesc}
+\item[\mbox{\hyperlink{bug__bug000064}{Bug}}]No known bugs\end{DoxyRefDesc}
 
 
 \begin{DoxyCopyright}{Copyright}
@@ -41,10 +41,10 @@ Copyright (c) 2017, Southwest Research Institute
 Software License Agreement (Apache License) 
 \end{DoxyParagraph}
 \begin{DoxyParagraph}{}
-Licensed under the Apache License, Version 2.\+0 (the \char`\"{}\+License\char`\"{}); you may not use this file except in compliance with the License. You may obtain a copy of the License at \href{http://www.apache.org/licenses/LICENSE-2.0}{\texttt{ http\+://www.\+apache.\+org/licenses/\+L\+I\+C\+E\+N\+S\+E-\/2.\+0}} 
+Licensed under the Apache License, Version 2.\+0 (the \char`\"{}\+License\char`\"{}); you may not use this file except in compliance with the License. You may obtain a copy of the License at \href{http://www.apache.org/licenses/LICENSE-2.0}{\texttt{ http\+://www.\+apache.\+org/licenses/\+LICENSE-\/2.\+0}} 
 \end{DoxyParagraph}
 \begin{DoxyParagraph}{}
-Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \char`\"{}\+A\+S I\+S\char`\"{} B\+A\+S\+IS, W\+I\+T\+H\+O\+UT W\+A\+R\+R\+A\+N\+T\+I\+ES OR C\+O\+N\+D\+I\+T\+I\+O\+NS OF A\+NY K\+I\+ND, either express or implied. See the License for the specific language governing permissions and limitations under the License. 
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \char`\"{}\+AS IS\char`\"{} BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. 
 \end{DoxyParagraph}
 
 
@@ -53,34 +53,23 @@ Unless required by applicable law or agreed to in writing, software distributed 
 \index{macros.h@{macros.h}!DEPRECATED@{DEPRECATED}}
 \index{DEPRECATED@{DEPRECATED}!macros.h@{macros.h}}
 \doxysubsubsection{\texorpdfstring{DEPRECATED}{DEPRECATED}}
-{\footnotesize\ttfamily \#define D\+E\+P\+R\+E\+C\+A\+T\+ED(\begin{DoxyParamCaption}\item[{}]{X }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \#define DEPRECATED(\begin{DoxyParamCaption}\item[{}]{X }\end{DoxyParamCaption})}
 
 \mbox{\Hypertarget{macros_8h_a7af8561cf52519e9896b0697095c1b8b}\label{macros_8h_a7af8561cf52519e9896b0697095c1b8b}} 
 \index{macros.h@{macros.h}!TESSERACT\_COMMON\_IGNORE\_WARNINGS\_POP@{TESSERACT\_COMMON\_IGNORE\_WARNINGS\_POP}}
 \index{TESSERACT\_COMMON\_IGNORE\_WARNINGS\_POP@{TESSERACT\_COMMON\_IGNORE\_WARNINGS\_POP}!macros.h@{macros.h}}
 \doxysubsubsection{\texorpdfstring{TESSERACT\_COMMON\_IGNORE\_WARNINGS\_POP}{TESSERACT\_COMMON\_IGNORE\_WARNINGS\_POP}}
-{\footnotesize\ttfamily \#define T\+E\+S\+S\+E\+R\+A\+C\+T\+\_\+\+C\+O\+M\+M\+O\+N\+\_\+\+I\+G\+N\+O\+R\+E\+\_\+\+W\+A\+R\+N\+I\+N\+G\+S\+\_\+\+P\+OP~\+\_\+\+Pragma(\char`\"{}G\+CC diagnostic pop\char`\"{})}
+{\footnotesize\ttfamily \#define TESSERACT\+\_\+\+COMMON\+\_\+\+IGNORE\+\_\+\+WARNINGS\+\_\+\+POP}
 
 \mbox{\Hypertarget{macros_8h_a8cc0e3c6a3382c5c0b19eb9e676fc2db}\label{macros_8h_a8cc0e3c6a3382c5c0b19eb9e676fc2db}} 
 \index{macros.h@{macros.h}!TESSERACT\_COMMON\_IGNORE\_WARNINGS\_PUSH@{TESSERACT\_COMMON\_IGNORE\_WARNINGS\_PUSH}}
 \index{TESSERACT\_COMMON\_IGNORE\_WARNINGS\_PUSH@{TESSERACT\_COMMON\_IGNORE\_WARNINGS\_PUSH}!macros.h@{macros.h}}
 \doxysubsubsection{\texorpdfstring{TESSERACT\_COMMON\_IGNORE\_WARNINGS\_PUSH}{TESSERACT\_COMMON\_IGNORE\_WARNINGS\_PUSH}}
-{\footnotesize\ttfamily \#define T\+E\+S\+S\+E\+R\+A\+C\+T\+\_\+\+C\+O\+M\+M\+O\+N\+\_\+\+I\+G\+N\+O\+R\+E\+\_\+\+W\+A\+R\+N\+I\+N\+G\+S\+\_\+\+P\+U\+SH}
+{\footnotesize\ttfamily \#define TESSERACT\+\_\+\+COMMON\+\_\+\+IGNORE\+\_\+\+WARNINGS\+\_\+\+PUSH}
 
-{\bfseries Value\+:}
-\begin{DoxyCode}{0}
-\DoxyCodeLine{  \_Pragma(\textcolor{stringliteral}{"GCC diagnostic push"}) \_Pragma("GCC diagnostic ignored \(\backslash\)"-\/Wall\(\backslash\)"")                                           \(\backslash\)}
-\DoxyCodeLine{      \_Pragma("GCC diagnostic ignored \(\backslash\)"-\/Wint-\/to-\/pointer-\/cast\(\backslash\)"")                                                      \(\backslash\)}
-\DoxyCodeLine{          \_Pragma("GCC diagnostic ignored \(\backslash\)"-\/Wunused-\/parameter\(\backslash\)"")                                                     \(\backslash\)}
-\DoxyCodeLine{              \_Pragma("GCC diagnostic ignored \(\backslash\)"-\/Wsuggest-\/override\(\backslash\)"")                                                 \(\backslash\)}
-\DoxyCodeLine{                  \_Pragma("GCC diagnostic ignored \(\backslash\)"-\/Wconversion\(\backslash\)"")                                                   \(\backslash\)}
-\DoxyCodeLine{                      \_Pragma("GCC diagnostic ignored \(\backslash\)"-\/Wfloat-\/conversion\(\backslash\)"")                                         \(\backslash\)}
-\DoxyCodeLine{                          \_Pragma("GCC diagnostic ignored \(\backslash\)"-\/Wsign-\/conversion\(\backslash\)"")}
-
-\end{DoxyCode}
 \mbox{\Hypertarget{macros_8h_a86d500a34c624c2cae56bc25a31b12f3}\label{macros_8h_a86d500a34c624c2cae56bc25a31b12f3}} 
 \index{macros.h@{macros.h}!UNUSED@{UNUSED}}
 \index{UNUSED@{UNUSED}!macros.h@{macros.h}}
 \doxysubsubsection{\texorpdfstring{UNUSED}{UNUSED}}
-{\footnotesize\ttfamily \#define U\+N\+U\+S\+ED(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~(void)(x)}
+{\footnotesize\ttfamily \#define UNUSED(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~(void)(x)}
 

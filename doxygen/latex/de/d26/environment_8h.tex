@@ -4,15 +4,37 @@
 {\ttfamily \#include $<$vector$>$}\newline
 {\ttfamily \#include $<$string$>$}\newline
 {\ttfamily \#include $<$mutex$>$}\newline
+{\ttfamily \#include $<$boost/filesystem/path.\+hpp$>$}\newline
 {\ttfamily \#include $<$console\+\_\+bridge/console.\+h$>$}\newline
 {\ttfamily \#include $<$tesseract\+\_\+environment/core/types.\+h$>$}\newline
 {\ttfamily \#include $<$tesseract\+\_\+environment/core/commands.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+environment/core/state\+\_\+solver.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+environment/core/manipulator\+\_\+manager.\+h$>$}\newline
 {\ttfamily \#include $<$tesseract\+\_\+collision/core/discrete\+\_\+contact\+\_\+manager.\+h$>$}\newline
 {\ttfamily \#include $<$tesseract\+\_\+collision/core/discrete\+\_\+contact\+\_\+manager\+\_\+factory.\+h$>$}\newline
 {\ttfamily \#include $<$tesseract\+\_\+collision/core/continuous\+\_\+contact\+\_\+manager.\+h$>$}\newline
 {\ttfamily \#include $<$tesseract\+\_\+collision/core/continuous\+\_\+contact\+\_\+manager\+\_\+factory.\+h$>$}\newline
 {\ttfamily \#include $<$tesseract\+\_\+scene\+\_\+graph/graph.\+h$>$}\newline
-{\ttfamily \#include $<$tesseract\+\_\+environment/core/state\+\_\+solver.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+scene\+\_\+graph/utils.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+scene\+\_\+graph/resource\+\_\+locator.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+urdf/urdf\+\_\+parser.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+common/manipulator\+\_\+info.\+h$>$}\newline
+Include dependency graph for environment.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/d65/environment_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/d9f/environment_8h__dep__incl}
+\end{center}
+\end{figure}
 \doxysubsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
@@ -23,3 +45,8 @@ class \mbox{\hyperlink{classtesseract__environment_1_1Environment}{tesseract\+\_
 \item 
  \mbox{\hyperlink{namespacetesseract__environment}{tesseract\+\_\+environment}}
 \end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{namespacetesseract__environment_aa8763a2800dd7dfe9b8350ce52312ee9}{tesseract\+\_\+environment\+::\+Find\+TCPCallback\+Fn}} = std\+::function$<$ Eigen\+::\+Isometry3d(const \mbox{\hyperlink{structtesseract__common_1_1ManipulatorInfo}{tesseract\+\_\+common\+::\+Manipulator\+Info}} \&)$>$
+\begin{DoxyCompactList}\small\item\em Function signature for adding additional callbacks for looking up TCP information. \end{DoxyCompactList}\end{DoxyCompactItemize}

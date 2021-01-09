@@ -3,5 +3,105 @@
 \doxysubsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
+class \mbox{\hyperlink{classtesseract__visualization_1_1EntityManager}{Entity\+Manager}}
+\item 
+class \mbox{\hyperlink{classtesseract__visualization_1_1TesseractIgnitionVisualization}{Tesseract\+Ignition\+Visualization}}
+\begin{DoxyCompactList}\small\item\em The Tesseract Ignition Vizualization class. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classtesseract__visualization_1_1TrajectoryInterpolator}{Trajectory\+Interpolator}}
+\item 
+class \mbox{\hyperlink{classtesseract__visualization_1_1TrajectoryPlayer}{Trajectory\+Player}}
+\begin{DoxyCompactList}\small\item\em Enables the ability to play a trajectory provided by the set program. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classtesseract__visualization_1_1Visualization}{Visualization}}
-\begin{DoxyCompactList}\small\item\em The Vizualization class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em The Vizualization class. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classtesseract__visualization_1_1VisualizationLoader}{Visualization\+Loader}}
+\begin{DoxyCompactList}\small\item\em This is used to dynamically load tesseract visualizer. This class must remain around for the life of the loaded visualization class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{namespacetesseract__visualization_a12376b06553445215c95f00b5fac42ea}{Entity\+ID}} = int
+\item 
+using \mbox{\hyperlink{namespacetesseract__visualization_a62add283f33a3eda80b1ffdc98e34261}{Entity\+Map}} = std\+::unordered\+\_\+map$<$ std\+::string, \mbox{\hyperlink{namespacetesseract__visualization_a12376b06553445215c95f00b5fac42ea}{Entity\+ID}} $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{namespacetesseract__visualization_a9624674b7c3c90b272fea01cce7d6ca5}{is\+Mesh\+With\+Color}} (const std\+::string \&file\+\_\+path)
+\item 
+bool \mbox{\hyperlink{namespacetesseract__visualization_a55aa23c44eca2d6d1f66ba18f4f1cf1a}{to\+Msg}} (ignition\+::msgs\+::\+Scene \&scene\+\_\+msg, \mbox{\hyperlink{classtesseract__visualization_1_1EntityManager}{Entity\+Manager}} \&entity\+\_\+manager, const \mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph}{tesseract\+\_\+scene\+\_\+graph\+::\+Scene\+Graph}} \&scene\+\_\+graph, const \mbox{\hyperlink{namespacetesseract__common_a67bde3cb7bb235f0f61c370ef8bc74d8}{tesseract\+\_\+common\+::\+Transform\+Map}} \&link\+\_\+transforms)
+\item 
+ignition\+::msgs\+::\+Material \mbox{\hyperlink{namespacetesseract__visualization_ac81c2fdd4e4336e6b2ae994381bddfe5}{convert}} (const Eigen\+::\+Vector4d \&rgba)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static const int \mbox{\hyperlink{namespacetesseract__visualization_a06a562dbdd5b945e34e0896aa06c74d1}{NULL\+\_\+\+ENTITY\+\_\+\+ID}} = -\/1
+\item 
+static \mbox{\hyperlink{namespacetesseract__planning_ac008e09ddce5c25c00e2c77ff18929e8}{tesseract\+\_\+planning\+::locate\+Filter\+Fn}} \mbox{\hyperlink{namespacetesseract__visualization_add8c32b18fb2acbdd70682c366b17a62}{move\+Filter}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{namespacetesseract__visualization_a12376b06553445215c95f00b5fac42ea}\label{namespacetesseract__visualization_a12376b06553445215c95f00b5fac42ea}} 
+\index{tesseract\_visualization@{tesseract\_visualization}!EntityID@{EntityID}}
+\index{EntityID@{EntityID}!tesseract\_visualization@{tesseract\_visualization}}
+\doxysubsubsection{\texorpdfstring{EntityID}{EntityID}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{namespacetesseract__visualization_a12376b06553445215c95f00b5fac42ea}{tesseract\+\_\+visualization\+::\+Entity\+ID}} = typedef int}
+
+\mbox{\Hypertarget{namespacetesseract__visualization_a62add283f33a3eda80b1ffdc98e34261}\label{namespacetesseract__visualization_a62add283f33a3eda80b1ffdc98e34261}} 
+\index{tesseract\_visualization@{tesseract\_visualization}!EntityMap@{EntityMap}}
+\index{EntityMap@{EntityMap}!tesseract\_visualization@{tesseract\_visualization}}
+\doxysubsubsection{\texorpdfstring{EntityMap}{EntityMap}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{namespacetesseract__visualization_a62add283f33a3eda80b1ffdc98e34261}{tesseract\+\_\+visualization\+::\+Entity\+Map}} = typedef std\+::unordered\+\_\+map$<$std\+::string, \mbox{\hyperlink{namespacetesseract__visualization_a12376b06553445215c95f00b5fac42ea}{Entity\+ID}}$>$}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacetesseract__visualization_ac81c2fdd4e4336e6b2ae994381bddfe5}\label{namespacetesseract__visualization_ac81c2fdd4e4336e6b2ae994381bddfe5}} 
+\index{tesseract\_visualization@{tesseract\_visualization}!convert@{convert}}
+\index{convert@{convert}!tesseract\_visualization@{tesseract\_visualization}}
+\doxysubsubsection{\texorpdfstring{convert()}{convert()}}
+{\footnotesize\ttfamily ignition\+::msgs\+::\+Material tesseract\+\_\+visualization\+::convert (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Vector4d \&}]{rgba }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacetesseract__visualization_a9624674b7c3c90b272fea01cce7d6ca5}\label{namespacetesseract__visualization_a9624674b7c3c90b272fea01cce7d6ca5}} 
+\index{tesseract\_visualization@{tesseract\_visualization}!isMeshWithColor@{isMeshWithColor}}
+\index{isMeshWithColor@{isMeshWithColor}!tesseract\_visualization@{tesseract\_visualization}}
+\doxysubsubsection{\texorpdfstring{isMeshWithColor()}{isMeshWithColor()}}
+{\footnotesize\ttfamily bool tesseract\+\_\+visualization\+::is\+Mesh\+With\+Color (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{file\+\_\+path }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacetesseract__visualization_a55aa23c44eca2d6d1f66ba18f4f1cf1a}\label{namespacetesseract__visualization_a55aa23c44eca2d6d1f66ba18f4f1cf1a}} 
+\index{tesseract\_visualization@{tesseract\_visualization}!toMsg@{toMsg}}
+\index{toMsg@{toMsg}!tesseract\_visualization@{tesseract\_visualization}}
+\doxysubsubsection{\texorpdfstring{toMsg()}{toMsg()}}
+{\footnotesize\ttfamily bool tesseract\+\_\+visualization\+::to\+Msg (\begin{DoxyParamCaption}\item[{ignition\+::msgs\+::\+Scene \&}]{scene\+\_\+msg,  }\item[{\mbox{\hyperlink{classtesseract__visualization_1_1EntityManager}{Entity\+Manager}} \&}]{entity\+\_\+manager,  }\item[{const \mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph}{tesseract\+\_\+scene\+\_\+graph\+::\+Scene\+Graph}} \&}]{scene\+\_\+graph,  }\item[{const \mbox{\hyperlink{namespacetesseract__common_a67bde3cb7bb235f0f61c370ef8bc74d8}{tesseract\+\_\+common\+::\+Transform\+Map}} \&}]{link\+\_\+transforms }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespacetesseract__visualization_add8c32b18fb2acbdd70682c366b17a62}\label{namespacetesseract__visualization_add8c32b18fb2acbdd70682c366b17a62}} 
+\index{tesseract\_visualization@{tesseract\_visualization}!moveFilter@{moveFilter}}
+\index{moveFilter@{moveFilter}!tesseract\_visualization@{tesseract\_visualization}}
+\doxysubsubsection{\texorpdfstring{moveFilter}{moveFilter}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacetesseract__planning_ac008e09ddce5c25c00e2c77ff18929e8}{tesseract\+\_\+planning\+::locate\+Filter\+Fn}} tesseract\+\_\+visualization\+::move\+Filter\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= [](\textcolor{keyword}{const} \mbox{\hyperlink{classtesseract__planning_1_1Instruction}{tesseract\_planning::Instruction}}\& i,}
+\DoxyCodeLine{                                                          \textcolor{keyword}{const} \mbox{\hyperlink{classtesseract__planning_1_1CompositeInstruction}{tesseract\_planning::CompositeInstruction}}\& ,}
+\DoxyCodeLine{                                                          \textcolor{keywordtype}{bool} parent\_is\_first\_composite) \{}
+\DoxyCodeLine{  \textcolor{keywordflow}{if} (\mbox{\hyperlink{namespacetesseract__planning_a2a1d26a1924d6b53c23630143a579436}{tesseract\_planning::isMoveInstruction}}(i))}
+\DoxyCodeLine{  \{}
+\DoxyCodeLine{    \textcolor{keywordflow}{if} (i.\mbox{\hyperlink{classtesseract__planning_1_1Instruction_a9ceeabb2bd557d47cdf8f5ca96e848f2}{cast\_const}}<\mbox{\hyperlink{classtesseract__planning_1_1MoveInstruction}{tesseract\_planning::MoveInstruction}}>()-\/>\mbox{\hyperlink{classtesseract__planning_1_1MoveInstruction_ad7ea2fb0fcfc4259ace79dafc6ac8179}{isStart}}())}
+\DoxyCodeLine{      \textcolor{keywordflow}{return} (parent\_is\_first\_composite);}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{  \}}
+\DoxyCodeLine{  \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacetesseract__visualization_a06a562dbdd5b945e34e0896aa06c74d1}\label{namespacetesseract__visualization_a06a562dbdd5b945e34e0896aa06c74d1}} 
+\index{tesseract\_visualization@{tesseract\_visualization}!NULL\_ENTITY\_ID@{NULL\_ENTITY\_ID}}
+\index{NULL\_ENTITY\_ID@{NULL\_ENTITY\_ID}!tesseract\_visualization@{tesseract\_visualization}}
+\doxysubsubsection{\texorpdfstring{NULL\_ENTITY\_ID}{NULL\_ENTITY\_ID}}
+{\footnotesize\ttfamily const int tesseract\+\_\+visualization\+::\+NULL\+\_\+\+ENTITY\+\_\+\+ID = -\/1\hspace{0.3cm}{\ttfamily [static]}}
+

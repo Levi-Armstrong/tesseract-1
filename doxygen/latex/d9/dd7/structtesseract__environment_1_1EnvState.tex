@@ -9,12 +9,27 @@ This holds a state of the environment.
 
 {\ttfamily \#include $<$types.\+h$>$}
 
+
+
+Collaboration diagram for tesseract\+\_\+environment\+::Env\+State\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=196pt]{d3/db2/structtesseract__environment_1_1EnvState__coll__graph}
+\end{center}
+\end{figure}
 \doxysubsection*{Public Types}
 \begin{DoxyCompactItemize}
 \item 
 using \mbox{\hyperlink{structtesseract__environment_1_1EnvState_a6a9f30b8418e9cb943125008c62b1d39}{Ptr}} = std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structtesseract__environment_1_1EnvState}{Env\+State}} $>$
 \item 
 using \mbox{\hyperlink{structtesseract__environment_1_1EnvState_a670d57a48a695feea60020c81320a851}{Const\+Ptr}} = std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{structtesseract__environment_1_1EnvState}{Env\+State}} $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Eigen\+::\+Vector\+Xd \mbox{\hyperlink{structtesseract__environment_1_1EnvState_a230c917d6e02257b01c4b8a13fc524bb}{get\+Joint\+Values}} (const std\+::vector$<$ std\+::string $>$ \&joint\+\_\+names) const
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
@@ -44,6 +59,15 @@ It provides a way to look up the location of a link/joint in world coordinates s
 \index{Ptr@{Ptr}!tesseract\_environment::EnvState@{tesseract\_environment::EnvState}}
 \doxysubsubsection{\texorpdfstring{Ptr}{Ptr}}
 {\footnotesize\ttfamily using \mbox{\hyperlink{structtesseract__environment_1_1EnvState_a6a9f30b8418e9cb943125008c62b1d39}{tesseract\+\_\+environment\+::\+Env\+State\+::\+Ptr}} =  std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{structtesseract__environment_1_1EnvState}{Env\+State}}$>$}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structtesseract__environment_1_1EnvState_a230c917d6e02257b01c4b8a13fc524bb}\label{structtesseract__environment_1_1EnvState_a230c917d6e02257b01c4b8a13fc524bb}} 
+\index{tesseract\_environment::EnvState@{tesseract\_environment::EnvState}!getJointValues@{getJointValues}}
+\index{getJointValues@{getJointValues}!tesseract\_environment::EnvState@{tesseract\_environment::EnvState}}
+\doxysubsubsection{\texorpdfstring{getJointValues()}{getJointValues()}}
+{\footnotesize\ttfamily Eigen\+::\+Vector\+Xd tesseract\+\_\+environment\+::\+Env\+State\+::get\+Joint\+Values (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::string $>$ \&}]{joint\+\_\+names }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 

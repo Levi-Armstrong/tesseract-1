@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['tesseract_4370',['Tesseract',['../index.html',1,'']]]
+  ['deprecated_20list_6719',['Deprecated List',['../da/d58/deprecated.html',1,'']]]
 ];

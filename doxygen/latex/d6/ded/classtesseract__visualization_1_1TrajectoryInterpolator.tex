@@ -1,0 +1,182 @@
+\hypertarget{classtesseract__visualization_1_1TrajectoryInterpolator}{}\doxysection{tesseract\+\_\+visualization\+::Trajectory\+Interpolator Class Reference}
+\label{classtesseract__visualization_1_1TrajectoryInterpolator}\index{tesseract\_visualization::TrajectoryInterpolator@{tesseract\_visualization::TrajectoryInterpolator}}
+
+
+{\ttfamily \#include $<$trajectory\+\_\+interpolator.\+h$>$}
+
+
+
+Collaboration diagram for tesseract\+\_\+visualization\+::Trajectory\+Interpolator\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d3/d71/classtesseract__visualization_1_1TrajectoryInterpolator__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classtesseract__visualization_1_1TrajectoryInterpolator_a85929854568e018c309906476e64b103}{UPtr}} = std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classtesseract__visualization_1_1TrajectoryInterpolator}{Trajectory\+Interpolator}} $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtesseract__visualization_1_1TrajectoryInterpolator_af1d23a868f13166e1f465635eec920f4}{Trajectory\+Interpolator}} (\mbox{\hyperlink{classtesseract__planning_1_1CompositeInstruction}{tesseract\+\_\+planning\+::\+Composite\+Instruction}} program)
+\item 
+virtual \mbox{\hyperlink{classtesseract__visualization_1_1TrajectoryInterpolator_ab621d8c7f7a3ed97541d15d0e97f7326}{$\sim$\+Trajectory\+Interpolator}} ()=default
+\item 
+\mbox{\hyperlink{classtesseract__visualization_1_1TrajectoryInterpolator_a8deb4edc680539f7978676b6ee9a4fb7}{Trajectory\+Interpolator}} (const \mbox{\hyperlink{classtesseract__visualization_1_1TrajectoryInterpolator}{Trajectory\+Interpolator}} \&)=delete
+\item 
+\mbox{\hyperlink{classtesseract__visualization_1_1TrajectoryInterpolator}{Trajectory\+Interpolator}} \& \mbox{\hyperlink{classtesseract__visualization_1_1TrajectoryInterpolator_a2c9a0c7b45c3475a4fc358ea2bd31dfb}{operator=}} (const \mbox{\hyperlink{classtesseract__visualization_1_1TrajectoryInterpolator}{Trajectory\+Interpolator}} \&)=delete
+\item 
+\mbox{\hyperlink{classtesseract__visualization_1_1TrajectoryInterpolator_ac67fcf9f682b1bb4e61e408775899eea}{Trajectory\+Interpolator}} (\mbox{\hyperlink{classtesseract__visualization_1_1TrajectoryInterpolator}{Trajectory\+Interpolator}} \&\&)=delete
+\item 
+\mbox{\hyperlink{classtesseract__visualization_1_1TrajectoryInterpolator}{Trajectory\+Interpolator}} \& \mbox{\hyperlink{classtesseract__visualization_1_1TrajectoryInterpolator_ab26877bfa6ed7fbd494c6bf924856065}{operator=}} (\mbox{\hyperlink{classtesseract__visualization_1_1TrajectoryInterpolator}{Trajectory\+Interpolator}} \&\&)=delete
+\item 
+\mbox{\hyperlink{classtesseract__planning_1_1MoveInstruction}{tesseract\+\_\+planning\+::\+Move\+Instruction}} \mbox{\hyperlink{classtesseract__visualization_1_1TrajectoryInterpolator_ad6fcb3f764968e563bafbfff612ab6fe}{get\+Move\+Instruction}} (double request\+\_\+duration) const
+\item 
+double \mbox{\hyperlink{classtesseract__visualization_1_1TrajectoryInterpolator_ad6623396fc57644c2cebaaefa1fbf75d}{get\+Move\+Instruction\+Duration}} (long index) const
+\item 
+long \mbox{\hyperlink{classtesseract__visualization_1_1TrajectoryInterpolator_a33e19f90418784edeb2e3de94f3082e8}{get\+Move\+Instruction\+Count}} () const
+\item 
+bool \mbox{\hyperlink{classtesseract__visualization_1_1TrajectoryInterpolator_a860ca6753f14bb4f794a7e10e3c7fbab}{empty}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classtesseract__visualization_1_1TrajectoryInterpolator_a5d1610275c3dc6fc7e50b481531f9b6c}{find\+Move\+Instruction\+Indices}} (const double \&duration, long \&before, long \&after, double \&blend) const
+\item 
+\mbox{\hyperlink{classtesseract__planning_1_1StateWaypoint}{tesseract\+\_\+planning\+::\+State\+Waypoint}} \mbox{\hyperlink{classtesseract__visualization_1_1TrajectoryInterpolator_ac3907064e541a48be23f0e10f5b1be1e}{interpolate}} (const \mbox{\hyperlink{classtesseract__planning_1_1StateWaypoint}{tesseract\+\_\+planning\+::\+State\+Waypoint}} \&start, const \mbox{\hyperlink{classtesseract__planning_1_1StateWaypoint}{tesseract\+\_\+planning\+::\+State\+Waypoint}} \&end, double t) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtesseract__planning_1_1CompositeInstruction}{tesseract\+\_\+planning\+::\+Composite\+Instruction}} \mbox{\hyperlink{classtesseract__visualization_1_1TrajectoryInterpolator_a2c4219e09502c4369e6270b1d7518793}{program\+\_\+}}
+\item 
+std\+::vector$<$ std\+::reference\+\_\+wrapper$<$ \mbox{\hyperlink{classtesseract__planning_1_1Instruction}{tesseract\+\_\+planning\+::\+Instruction}} $>$ $>$ \mbox{\hyperlink{classtesseract__visualization_1_1TrajectoryInterpolator_a026f95ff3fdf96831162acd60e1b09bf}{flattened\+\_\+program\+\_\+}}
+\item 
+std\+::vector$<$ std\+::reference\+\_\+wrapper$<$ \mbox{\hyperlink{classtesseract__planning_1_1Waypoint}{tesseract\+\_\+planning\+::\+Waypoint}} $>$ $>$ \mbox{\hyperlink{classtesseract__visualization_1_1TrajectoryInterpolator_a2bfe687a8618a15c9ff0cd661df53ad6}{waypoints\+\_\+}}
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classtesseract__visualization_1_1TrajectoryInterpolator_a9d16e40a7e52a7b1005e5ce1de9008f1}{duration\+\_\+from\+\_\+previous\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classtesseract__visualization_1_1TrajectoryInterpolator_a85929854568e018c309906476e64b103}\label{classtesseract__visualization_1_1TrajectoryInterpolator_a85929854568e018c309906476e64b103}} 
+\index{tesseract\_visualization::TrajectoryInterpolator@{tesseract\_visualization::TrajectoryInterpolator}!UPtr@{UPtr}}
+\index{UPtr@{UPtr}!tesseract\_visualization::TrajectoryInterpolator@{tesseract\_visualization::TrajectoryInterpolator}}
+\doxysubsubsection{\texorpdfstring{UPtr}{UPtr}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classtesseract__visualization_1_1TrajectoryInterpolator_a85929854568e018c309906476e64b103}{tesseract\+\_\+visualization\+::\+Trajectory\+Interpolator\+::\+UPtr}} =  std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classtesseract__visualization_1_1TrajectoryInterpolator}{Trajectory\+Interpolator}}$>$}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtesseract__visualization_1_1TrajectoryInterpolator_af1d23a868f13166e1f465635eec920f4}\label{classtesseract__visualization_1_1TrajectoryInterpolator_af1d23a868f13166e1f465635eec920f4}} 
+\index{tesseract\_visualization::TrajectoryInterpolator@{tesseract\_visualization::TrajectoryInterpolator}!TrajectoryInterpolator@{TrajectoryInterpolator}}
+\index{TrajectoryInterpolator@{TrajectoryInterpolator}!tesseract\_visualization::TrajectoryInterpolator@{tesseract\_visualization::TrajectoryInterpolator}}
+\doxysubsubsection{\texorpdfstring{TrajectoryInterpolator()}{TrajectoryInterpolator()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily tesseract\+\_\+visualization\+::\+Trajectory\+Interpolator\+::\+Trajectory\+Interpolator (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtesseract__planning_1_1CompositeInstruction}{tesseract\+\_\+planning\+::\+Composite\+Instruction}}}]{program }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classtesseract__visualization_1_1TrajectoryInterpolator_ab621d8c7f7a3ed97541d15d0e97f7326}\label{classtesseract__visualization_1_1TrajectoryInterpolator_ab621d8c7f7a3ed97541d15d0e97f7326}} 
+\index{tesseract\_visualization::TrajectoryInterpolator@{tesseract\_visualization::TrajectoryInterpolator}!````~TrajectoryInterpolator@{$\sim$TrajectoryInterpolator}}
+\index{````~TrajectoryInterpolator@{$\sim$TrajectoryInterpolator}!tesseract\_visualization::TrajectoryInterpolator@{tesseract\_visualization::TrajectoryInterpolator}}
+\doxysubsubsection{\texorpdfstring{$\sim$TrajectoryInterpolator()}{~TrajectoryInterpolator()}}
+{\footnotesize\ttfamily virtual tesseract\+\_\+visualization\+::\+Trajectory\+Interpolator\+::$\sim$\+Trajectory\+Interpolator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+\mbox{\Hypertarget{classtesseract__visualization_1_1TrajectoryInterpolator_a8deb4edc680539f7978676b6ee9a4fb7}\label{classtesseract__visualization_1_1TrajectoryInterpolator_a8deb4edc680539f7978676b6ee9a4fb7}} 
+\index{tesseract\_visualization::TrajectoryInterpolator@{tesseract\_visualization::TrajectoryInterpolator}!TrajectoryInterpolator@{TrajectoryInterpolator}}
+\index{TrajectoryInterpolator@{TrajectoryInterpolator}!tesseract\_visualization::TrajectoryInterpolator@{tesseract\_visualization::TrajectoryInterpolator}}
+\doxysubsubsection{\texorpdfstring{TrajectoryInterpolator()}{TrajectoryInterpolator()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily tesseract\+\_\+visualization\+::\+Trajectory\+Interpolator\+::\+Trajectory\+Interpolator (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtesseract__visualization_1_1TrajectoryInterpolator}{Trajectory\+Interpolator}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classtesseract__visualization_1_1TrajectoryInterpolator_ac67fcf9f682b1bb4e61e408775899eea}\label{classtesseract__visualization_1_1TrajectoryInterpolator_ac67fcf9f682b1bb4e61e408775899eea}} 
+\index{tesseract\_visualization::TrajectoryInterpolator@{tesseract\_visualization::TrajectoryInterpolator}!TrajectoryInterpolator@{TrajectoryInterpolator}}
+\index{TrajectoryInterpolator@{TrajectoryInterpolator}!tesseract\_visualization::TrajectoryInterpolator@{tesseract\_visualization::TrajectoryInterpolator}}
+\doxysubsubsection{\texorpdfstring{TrajectoryInterpolator()}{TrajectoryInterpolator()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily tesseract\+\_\+visualization\+::\+Trajectory\+Interpolator\+::\+Trajectory\+Interpolator (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtesseract__visualization_1_1TrajectoryInterpolator}{Trajectory\+Interpolator}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtesseract__visualization_1_1TrajectoryInterpolator_a860ca6753f14bb4f794a7e10e3c7fbab}\label{classtesseract__visualization_1_1TrajectoryInterpolator_a860ca6753f14bb4f794a7e10e3c7fbab}} 
+\index{tesseract\_visualization::TrajectoryInterpolator@{tesseract\_visualization::TrajectoryInterpolator}!empty@{empty}}
+\index{empty@{empty}!tesseract\_visualization::TrajectoryInterpolator@{tesseract\_visualization::TrajectoryInterpolator}}
+\doxysubsubsection{\texorpdfstring{empty()}{empty()}}
+{\footnotesize\ttfamily bool tesseract\+\_\+visualization\+::\+Trajectory\+Interpolator\+::empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classtesseract__visualization_1_1TrajectoryInterpolator_a5d1610275c3dc6fc7e50b481531f9b6c}\label{classtesseract__visualization_1_1TrajectoryInterpolator_a5d1610275c3dc6fc7e50b481531f9b6c}} 
+\index{tesseract\_visualization::TrajectoryInterpolator@{tesseract\_visualization::TrajectoryInterpolator}!findMoveInstructionIndices@{findMoveInstructionIndices}}
+\index{findMoveInstructionIndices@{findMoveInstructionIndices}!tesseract\_visualization::TrajectoryInterpolator@{tesseract\_visualization::TrajectoryInterpolator}}
+\doxysubsubsection{\texorpdfstring{findMoveInstructionIndices()}{findMoveInstructionIndices()}}
+{\footnotesize\ttfamily void tesseract\+\_\+visualization\+::\+Trajectory\+Interpolator\+::find\+Move\+Instruction\+Indices (\begin{DoxyParamCaption}\item[{const double \&}]{duration,  }\item[{long \&}]{before,  }\item[{long \&}]{after,  }\item[{double \&}]{blend }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classtesseract__visualization_1_1TrajectoryInterpolator_ad6fcb3f764968e563bafbfff612ab6fe}\label{classtesseract__visualization_1_1TrajectoryInterpolator_ad6fcb3f764968e563bafbfff612ab6fe}} 
+\index{tesseract\_visualization::TrajectoryInterpolator@{tesseract\_visualization::TrajectoryInterpolator}!getMoveInstruction@{getMoveInstruction}}
+\index{getMoveInstruction@{getMoveInstruction}!tesseract\_visualization::TrajectoryInterpolator@{tesseract\_visualization::TrajectoryInterpolator}}
+\doxysubsubsection{\texorpdfstring{getMoveInstruction()}{getMoveInstruction()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__planning_1_1MoveInstruction}{tesseract\+\_\+planning\+::\+Move\+Instruction}} tesseract\+\_\+visualization\+::\+Trajectory\+Interpolator\+::get\+Move\+Instruction (\begin{DoxyParamCaption}\item[{double}]{request\+\_\+duration }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classtesseract__visualization_1_1TrajectoryInterpolator_a33e19f90418784edeb2e3de94f3082e8}\label{classtesseract__visualization_1_1TrajectoryInterpolator_a33e19f90418784edeb2e3de94f3082e8}} 
+\index{tesseract\_visualization::TrajectoryInterpolator@{tesseract\_visualization::TrajectoryInterpolator}!getMoveInstructionCount@{getMoveInstructionCount}}
+\index{getMoveInstructionCount@{getMoveInstructionCount}!tesseract\_visualization::TrajectoryInterpolator@{tesseract\_visualization::TrajectoryInterpolator}}
+\doxysubsubsection{\texorpdfstring{getMoveInstructionCount()}{getMoveInstructionCount()}}
+{\footnotesize\ttfamily long tesseract\+\_\+visualization\+::\+Trajectory\+Interpolator\+::get\+Move\+Instruction\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classtesseract__visualization_1_1TrajectoryInterpolator_ad6623396fc57644c2cebaaefa1fbf75d}\label{classtesseract__visualization_1_1TrajectoryInterpolator_ad6623396fc57644c2cebaaefa1fbf75d}} 
+\index{tesseract\_visualization::TrajectoryInterpolator@{tesseract\_visualization::TrajectoryInterpolator}!getMoveInstructionDuration@{getMoveInstructionDuration}}
+\index{getMoveInstructionDuration@{getMoveInstructionDuration}!tesseract\_visualization::TrajectoryInterpolator@{tesseract\_visualization::TrajectoryInterpolator}}
+\doxysubsubsection{\texorpdfstring{getMoveInstructionDuration()}{getMoveInstructionDuration()}}
+{\footnotesize\ttfamily double tesseract\+\_\+visualization\+::\+Trajectory\+Interpolator\+::get\+Move\+Instruction\+Duration (\begin{DoxyParamCaption}\item[{long}]{index }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classtesseract__visualization_1_1TrajectoryInterpolator_ac3907064e541a48be23f0e10f5b1be1e}\label{classtesseract__visualization_1_1TrajectoryInterpolator_ac3907064e541a48be23f0e10f5b1be1e}} 
+\index{tesseract\_visualization::TrajectoryInterpolator@{tesseract\_visualization::TrajectoryInterpolator}!interpolate@{interpolate}}
+\index{interpolate@{interpolate}!tesseract\_visualization::TrajectoryInterpolator@{tesseract\_visualization::TrajectoryInterpolator}}
+\doxysubsubsection{\texorpdfstring{interpolate()}{interpolate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__planning_1_1StateWaypoint}{tesseract\+\_\+planning\+::\+State\+Waypoint}} tesseract\+\_\+visualization\+::\+Trajectory\+Interpolator\+::interpolate (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtesseract__planning_1_1StateWaypoint}{tesseract\+\_\+planning\+::\+State\+Waypoint}} \&}]{start,  }\item[{const \mbox{\hyperlink{classtesseract__planning_1_1StateWaypoint}{tesseract\+\_\+planning\+::\+State\+Waypoint}} \&}]{end,  }\item[{double}]{t }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classtesseract__visualization_1_1TrajectoryInterpolator_a2c9a0c7b45c3475a4fc358ea2bd31dfb}\label{classtesseract__visualization_1_1TrajectoryInterpolator_a2c9a0c7b45c3475a4fc358ea2bd31dfb}} 
+\index{tesseract\_visualization::TrajectoryInterpolator@{tesseract\_visualization::TrajectoryInterpolator}!operator=@{operator=}}
+\index{operator=@{operator=}!tesseract\_visualization::TrajectoryInterpolator@{tesseract\_visualization::TrajectoryInterpolator}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__visualization_1_1TrajectoryInterpolator}{Trajectory\+Interpolator}}\& tesseract\+\_\+visualization\+::\+Trajectory\+Interpolator\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtesseract__visualization_1_1TrajectoryInterpolator}{Trajectory\+Interpolator}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classtesseract__visualization_1_1TrajectoryInterpolator_ab26877bfa6ed7fbd494c6bf924856065}\label{classtesseract__visualization_1_1TrajectoryInterpolator_ab26877bfa6ed7fbd494c6bf924856065}} 
+\index{tesseract\_visualization::TrajectoryInterpolator@{tesseract\_visualization::TrajectoryInterpolator}!operator=@{operator=}}
+\index{operator=@{operator=}!tesseract\_visualization::TrajectoryInterpolator@{tesseract\_visualization::TrajectoryInterpolator}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__visualization_1_1TrajectoryInterpolator}{Trajectory\+Interpolator}}\& tesseract\+\_\+visualization\+::\+Trajectory\+Interpolator\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtesseract__visualization_1_1TrajectoryInterpolator}{Trajectory\+Interpolator}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classtesseract__visualization_1_1TrajectoryInterpolator_a9d16e40a7e52a7b1005e5ce1de9008f1}\label{classtesseract__visualization_1_1TrajectoryInterpolator_a9d16e40a7e52a7b1005e5ce1de9008f1}} 
+\index{tesseract\_visualization::TrajectoryInterpolator@{tesseract\_visualization::TrajectoryInterpolator}!duration\_from\_previous\_@{duration\_from\_previous\_}}
+\index{duration\_from\_previous\_@{duration\_from\_previous\_}!tesseract\_visualization::TrajectoryInterpolator@{tesseract\_visualization::TrajectoryInterpolator}}
+\doxysubsubsection{\texorpdfstring{duration\_from\_previous\_}{duration\_from\_previous\_}}
+{\footnotesize\ttfamily std\+::vector$<$double$>$ tesseract\+\_\+visualization\+::\+Trajectory\+Interpolator\+::duration\+\_\+from\+\_\+previous\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classtesseract__visualization_1_1TrajectoryInterpolator_a026f95ff3fdf96831162acd60e1b09bf}\label{classtesseract__visualization_1_1TrajectoryInterpolator_a026f95ff3fdf96831162acd60e1b09bf}} 
+\index{tesseract\_visualization::TrajectoryInterpolator@{tesseract\_visualization::TrajectoryInterpolator}!flattened\_program\_@{flattened\_program\_}}
+\index{flattened\_program\_@{flattened\_program\_}!tesseract\_visualization::TrajectoryInterpolator@{tesseract\_visualization::TrajectoryInterpolator}}
+\doxysubsubsection{\texorpdfstring{flattened\_program\_}{flattened\_program\_}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::reference\+\_\+wrapper$<$\mbox{\hyperlink{classtesseract__planning_1_1Instruction}{tesseract\+\_\+planning\+::\+Instruction}}$>$ $>$ tesseract\+\_\+visualization\+::\+Trajectory\+Interpolator\+::flattened\+\_\+program\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classtesseract__visualization_1_1TrajectoryInterpolator_a2c4219e09502c4369e6270b1d7518793}\label{classtesseract__visualization_1_1TrajectoryInterpolator_a2c4219e09502c4369e6270b1d7518793}} 
+\index{tesseract\_visualization::TrajectoryInterpolator@{tesseract\_visualization::TrajectoryInterpolator}!program\_@{program\_}}
+\index{program\_@{program\_}!tesseract\_visualization::TrajectoryInterpolator@{tesseract\_visualization::TrajectoryInterpolator}}
+\doxysubsubsection{\texorpdfstring{program\_}{program\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__planning_1_1CompositeInstruction}{tesseract\+\_\+planning\+::\+Composite\+Instruction}} tesseract\+\_\+visualization\+::\+Trajectory\+Interpolator\+::program\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classtesseract__visualization_1_1TrajectoryInterpolator_a2bfe687a8618a15c9ff0cd661df53ad6}\label{classtesseract__visualization_1_1TrajectoryInterpolator_a2bfe687a8618a15c9ff0cd661df53ad6}} 
+\index{tesseract\_visualization::TrajectoryInterpolator@{tesseract\_visualization::TrajectoryInterpolator}!waypoints\_@{waypoints\_}}
+\index{waypoints\_@{waypoints\_}!tesseract\_visualization::TrajectoryInterpolator@{tesseract\_visualization::TrajectoryInterpolator}}
+\doxysubsubsection{\texorpdfstring{waypoints\_}{waypoints\_}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::reference\+\_\+wrapper$<$\mbox{\hyperlink{classtesseract__planning_1_1Waypoint}{tesseract\+\_\+planning\+::\+Waypoint}}$>$ $>$ tesseract\+\_\+visualization\+::\+Trajectory\+Interpolator\+::waypoints\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+tesseract/tesseract\+\_\+visualization/include/tesseract\+\_\+visualization/\mbox{\hyperlink{trajectory__interpolator_8h}{trajectory\+\_\+interpolator.\+h}}\item 
+tesseract/tesseract\+\_\+visualization/src/\mbox{\hyperlink{trajectory__interpolator_8cpp}{trajectory\+\_\+interpolator.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,10 @@
+<map id="tesseract_planning::PlanInstruction" name="tesseract_planning::PlanInstruction">
+<area shape="rect" id="node1" title=" " alt="" coords="1204,89,1335,130"/>
+<area shape="rect" id="node2" title=" " alt="" coords="227,72,306,99"/>
+<area shape="rect" id="node7" href="$d4/d31/structtesseract__common_1_1ManipulatorInfo.html" title="Contains information about a robot manipulator." alt="" coords="823,96,1051,123"/>
+<area shape="rect" id="node8" href="$d2/dad/classtesseract__common_1_1ToolCenterPoint.html" title="Manipulator Info Tool Center Point Definition." alt="" coords="499,134,701,175"/>
+<area shape="rect" id="node3" title=" " alt="" coords="5,65,129,106"/>
+<area shape="rect" id="node4" href="$d0/d3a/classtesseract__planning_1_1Waypoint.html" title=" " alt="" coords="871,158,1002,199"/>
+<area shape="rect" id="node5" title=" " alt="" coords="514,199,686,255"/>
+<area shape="rect" id="node6" href="$dd/d8e/structtesseract__planning_1_1detail__waypoint_1_1WaypointInnerBase.html" title=" " alt="" coords="179,199,355,255"/>
+</map>

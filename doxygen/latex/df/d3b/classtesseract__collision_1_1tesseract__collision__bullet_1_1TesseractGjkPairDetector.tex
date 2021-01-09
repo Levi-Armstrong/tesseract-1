@@ -9,10 +9,24 @@ This is a modifed Convex to Convex collision algorithm.
 
 {\ttfamily \#include $<$tesseract\+\_\+gjk\+\_\+pair\+\_\+detector.\+h$>$}
 
-Inheritance diagram for tesseract\+\_\+collision\+::tesseract\+\_\+collision\+\_\+bullet\+::Tesseract\+Gjk\+Pair\+Detector\+:\begin{figure}[H]
+
+
+Inheritance diagram for tesseract\+\_\+collision\+::tesseract\+\_\+collision\+\_\+bullet\+::Tesseract\+Gjk\+Pair\+Detector\+:
+\nopagebreak
+\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=2.000000cm]{df/d3b/classtesseract__collision_1_1tesseract__collision__bullet_1_1TesseractGjkPairDetector}
+\includegraphics[width=242pt]{d4/ddd/classtesseract__collision_1_1tesseract__collision__bullet_1_1TesseractGjkPairDetector__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for tesseract\+\_\+collision\+::tesseract\+\_\+collision\+\_\+bullet\+::Tesseract\+Gjk\+Pair\+Detector\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/d7c/classtesseract__collision_1_1tesseract__collision__bullet_1_1TesseractGjkPairDetector__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsection*{Public Member Functions}
@@ -22,9 +36,9 @@ Inheritance diagram for tesseract\+\_\+collision\+::tesseract\+\_\+collision\+\_
 \item 
 \mbox{\hyperlink{classtesseract__collision_1_1tesseract__collision__bullet_1_1TesseractGjkPairDetector_a963f816875ccf160cc5c81471b92269e}{Tesseract\+Gjk\+Pair\+Detector}} (const bt\+Convex\+Shape $\ast$objectA, const bt\+Convex\+Shape $\ast$objectB, int shape\+TypeA, int shape\+TypeB, bt\+Scalar marginA, bt\+Scalar marginB, bt\+Simplex\+Solver\+Interface $\ast$simplex\+Solver, bt\+Convex\+Penetration\+Depth\+Solver $\ast$penetration\+Depth\+Solver, const \mbox{\hyperlink{structtesseract__collision_1_1ContactTestData}{Contact\+Test\+Data}} $\ast$cdata)
 \item 
-void \mbox{\hyperlink{classtesseract__collision_1_1tesseract__collision__bullet_1_1TesseractGjkPairDetector_a911486ad054d6df2ad4f0ff7f6fbef1b}{get\+Closest\+Points}} (const Closest\+Point\+Input \&input, Result \&output, class bt\+I\+Debug\+Draw $\ast$debug\+Draw, bool swap\+Results=false) override
+void \mbox{\hyperlink{classtesseract__collision_1_1tesseract__collision__bullet_1_1TesseractGjkPairDetector_a911486ad054d6df2ad4f0ff7f6fbef1b}{get\+Closest\+Points}} (const Closest\+Point\+Input \&input, Result \&output, class bt\+IDebug\+Draw $\ast$debug\+Draw, bool swap\+Results=false) override
 \item 
-void \mbox{\hyperlink{classtesseract__collision_1_1tesseract__collision__bullet_1_1TesseractGjkPairDetector_af4f3da9c2ea0a48933b3677fbc5e4a8a}{get\+Closest\+Points\+Non\+Virtual}} (const Closest\+Point\+Input \&input, Result \&output, class bt\+I\+Debug\+Draw $\ast$debug\+Draw)
+void \mbox{\hyperlink{classtesseract__collision_1_1tesseract__collision__bullet_1_1TesseractGjkPairDetector_af4f3da9c2ea0a48933b3677fbc5e4a8a}{get\+Closest\+Points\+Non\+Virtual}} (const Closest\+Point\+Input \&input, Result \&output, class bt\+IDebug\+Draw $\ast$debug\+Draw)
 \item 
 void \mbox{\hyperlink{classtesseract__collision_1_1tesseract__collision__bullet_1_1TesseractGjkPairDetector_a6dcdd3cc5df3eee3d104c830a495165d}{set\+MinkowskiA}} (const bt\+Convex\+Shape $\ast$minkA)
 \item 
@@ -85,7 +99,7 @@ const \mbox{\hyperlink{structtesseract__collision_1_1ContactTestData}{Contact\+T
 \doxysubsection{Detailed Description}
 This is a modifed Convex to Convex collision algorithm. 
 
-This was modified to leverage the Tesseract contact request to enable and disable different parts of the algorithm. The algorithm first does a quick binary check if the two objects are in collision. If in collision it runs the penetration algorithm to get the nearest points and penetration depths. If not in collision it runs the an algorithm to get the nearest points and distance. The Tesseract contact request allow you to now decide if you need all three. Example, in the case of O\+M\+PL if you have a contact distance of zero you can get a performance increase, by disabling the penetration and distance calculation because they add no value.
+This was modified to leverage the Tesseract contact request to enable and disable different parts of the algorithm. The algorithm first does a quick binary check if the two objects are in collision. If in collision it runs the penetration algorithm to get the nearest points and penetration depths. If not in collision it runs the an algorithm to get the nearest points and distance. The Tesseract contact request allow you to now decide if you need all three. Example, in the case of OMPL if you have a contact distance of zero you can get a performance increase, by disabling the penetration and distance calculation because they add no value.
 
 Note\+: This will not be able to be removed. 
 
@@ -121,17 +135,17 @@ Note\+: This will not be able to be removed.
 \index{tesseract\_collision::tesseract\_collision\_bullet::TesseractGjkPairDetector@{tesseract\_collision::tesseract\_collision\_bullet::TesseractGjkPairDetector}!getClosestPoints@{getClosestPoints}}
 \index{getClosestPoints@{getClosestPoints}!tesseract\_collision::tesseract\_collision\_bullet::TesseractGjkPairDetector@{tesseract\_collision::tesseract\_collision\_bullet::TesseractGjkPairDetector}}
 \doxysubsubsection{\texorpdfstring{getClosestPoints()}{getClosestPoints()}}
-{\footnotesize\ttfamily void tesseract\+\_\+collision\+::tesseract\+\_\+collision\+\_\+bullet\+::\+Tesseract\+Gjk\+Pair\+Detector\+::get\+Closest\+Points (\begin{DoxyParamCaption}\item[{const Closest\+Point\+Input \&}]{input,  }\item[{Result \&}]{output,  }\item[{class bt\+I\+Debug\+Draw $\ast$}]{debug\+Draw,  }\item[{bool}]{swap\+Results = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+{\footnotesize\ttfamily void tesseract\+\_\+collision\+::tesseract\+\_\+collision\+\_\+bullet\+::\+Tesseract\+Gjk\+Pair\+Detector\+::get\+Closest\+Points (\begin{DoxyParamCaption}\item[{const Closest\+Point\+Input \&}]{input,  }\item[{Result \&}]{output,  }\item[{class bt\+IDebug\+Draw $\ast$}]{debug\+Draw,  }\item[{bool}]{swap\+Results = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
 
 \mbox{\Hypertarget{classtesseract__collision_1_1tesseract__collision__bullet_1_1TesseractGjkPairDetector_af4f3da9c2ea0a48933b3677fbc5e4a8a}\label{classtesseract__collision_1_1tesseract__collision__bullet_1_1TesseractGjkPairDetector_af4f3da9c2ea0a48933b3677fbc5e4a8a}} 
 \index{tesseract\_collision::tesseract\_collision\_bullet::TesseractGjkPairDetector@{tesseract\_collision::tesseract\_collision\_bullet::TesseractGjkPairDetector}!getClosestPointsNonVirtual@{getClosestPointsNonVirtual}}
 \index{getClosestPointsNonVirtual@{getClosestPointsNonVirtual}!tesseract\_collision::tesseract\_collision\_bullet::TesseractGjkPairDetector@{tesseract\_collision::tesseract\_collision\_bullet::TesseractGjkPairDetector}}
 \doxysubsubsection{\texorpdfstring{getClosestPointsNonVirtual()}{getClosestPointsNonVirtual()}}
-{\footnotesize\ttfamily void tesseract\+\_\+collision\+::tesseract\+\_\+collision\+\_\+bullet\+::\+Tesseract\+Gjk\+Pair\+Detector\+::get\+Closest\+Points\+Non\+Virtual (\begin{DoxyParamCaption}\item[{const Closest\+Point\+Input \&}]{input,  }\item[{Result \&}]{output,  }\item[{class bt\+I\+Debug\+Draw $\ast$}]{debug\+Draw }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void tesseract\+\_\+collision\+::tesseract\+\_\+collision\+\_\+bullet\+::\+Tesseract\+Gjk\+Pair\+Detector\+::get\+Closest\+Points\+Non\+Virtual (\begin{DoxyParamCaption}\item[{const Closest\+Point\+Input \&}]{input,  }\item[{Result \&}]{output,  }\item[{class bt\+IDebug\+Draw $\ast$}]{debug\+Draw }\end{DoxyParamCaption})}
 
-this is another degenerate case, where the initial G\+JK calculation reports a degenerate case E\+PA reports no penetration, and the second G\+JK (using the supporting vector without margin) reports a valid positive distance. Use the results of the second G\+JK instead of failing. thanks to Jacob.\+Langford for the reproduction case \href{http://code.google.com/p/bullet/issues/detail?id=250}{\texttt{ http\+://code.\+google.\+com/p/bullet/issues/detail?id=250}}
+this is another degenerate case, where the initial GJK calculation reports a degenerate case EPA reports no penetration, and the second GJK (using the supporting vector without margin) reports a valid positive distance. Use the results of the second GJK instead of failing. thanks to Jacob.\+Langford for the reproduction case \href{http://code.google.com/p/bullet/issues/detail?id=250}{\texttt{ http\+://code.\+google.\+com/p/bullet/issues/detail?id=250}}
 
-todo\+: need to track down this E\+PA penetration solver degeneracy the penetration solver reports penetration but the contact normal connecting the contact points is pointing in the opposite direction until then, detect the issue and revert the normal\mbox{\Hypertarget{classtesseract__collision_1_1tesseract__collision__bullet_1_1TesseractGjkPairDetector_a3b6e7bc0b0b4d2e12f3f5190bfd2fd48}\label{classtesseract__collision_1_1tesseract__collision__bullet_1_1TesseractGjkPairDetector_a3b6e7bc0b0b4d2e12f3f5190bfd2fd48}} 
+todo\+: need to track down this EPA penetration solver degeneracy the penetration solver reports penetration but the contact normal connecting the contact points is pointing in the opposite direction until then, detect the issue and revert the normal\mbox{\Hypertarget{classtesseract__collision_1_1tesseract__collision__bullet_1_1TesseractGjkPairDetector_a3b6e7bc0b0b4d2e12f3f5190bfd2fd48}\label{classtesseract__collision_1_1tesseract__collision__bullet_1_1TesseractGjkPairDetector_a3b6e7bc0b0b4d2e12f3f5190bfd2fd48}} 
 \index{tesseract\_collision::tesseract\_collision\_bullet::TesseractGjkPairDetector@{tesseract\_collision::tesseract\_collision\_bullet::TesseractGjkPairDetector}!setCachedSeparatingAxis@{setCachedSeparatingAxis}}
 \index{setCachedSeparatingAxis@{setCachedSeparatingAxis}!tesseract\_collision::tesseract\_collision\_bullet::TesseractGjkPairDetector@{tesseract\_collision::tesseract\_collision\_bullet::TesseractGjkPairDetector}}
 \doxysubsubsection{\texorpdfstring{setCachedSeparatingAxis()}{setCachedSeparatingAxis()}}

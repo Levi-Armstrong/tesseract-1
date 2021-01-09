@@ -1,0 +1,8 @@
+<map id="tesseract_planning::FixStateCollisionProfile" name="tesseract_planning::FixStateCollisionProfile">
+<area shape="rect" id="node1" title=" " alt="" coords="1052,68,1213,109"/>
+<area shape="rect" id="node2" href="$d9/d2c/structtesseract__collision_1_1CollisionCheckConfig.html" title="This is a high level structure containing common information that collision checking utilities need...." alt="" coords="692,32,843,73"/>
+<area shape="rect" id="node3" href="$da/df6/structtesseract__collision_1_1ContactRequest.html" title="The ContactRequest struct." alt="" coords="350,5,481,47"/>
+<area shape="rect" id="node4" href="$d3/da1/structtesseract__collision_1_1CollisionMarginData.html" title="Stores information about how the margins allowed between collision objects." alt="" coords="344,71,487,112"/>
+<area shape="rect" id="node5" title=" " alt="" coords="5,56,212,127"/>
+<area shape="rect" id="node6" title=" " alt="" coords="664,98,871,125"/>
+</map>

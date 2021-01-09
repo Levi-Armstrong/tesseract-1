@@ -1,0 +1,4 @@
+<map id="tesseract_scene_graph::ResourceLocator" name="tesseract_scene_graph::ResourceLocator">
+<area shape="rect" id="node1" title="Abstract class for resource loaders." alt="" coords="10,5,167,47"/>
+<area shape="rect" id="node2" href="$dd/d67/classtesseract__scene__graph_1_1SimpleResourceLocator.html" title="Resource locator implementation using a provided function to locate file resources." alt="" coords="5,95,172,136"/>
+</map>

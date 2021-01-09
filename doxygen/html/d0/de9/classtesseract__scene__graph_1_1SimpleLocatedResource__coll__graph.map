@@ -1,0 +1,10 @@
+<map id="tesseract_scene_graph::SimpleLocatedResource" name="tesseract_scene_graph::SimpleLocatedResource">
+<area shape="rect" id="node1" title="Resource implementation for a local file." alt="" coords="843,57,1013,98"/>
+<area shape="rect" id="node2" href="$d8/def/classtesseract__common_1_1Resource.html" title="Represents resource data available from a file or url." alt="" coords="509,5,704,32"/>
+<area shape="rect" id="node3" title=" " alt="" coords="477,57,736,98"/>
+<area shape="rect" id="node4" href="$dd/d67/classtesseract__scene__graph_1_1SimpleResourceLocator.html" title="Resource locator implementation using a provided function to locate file resources." alt="" coords="244,55,411,97"/>
+<area shape="rect" id="node5" href="$dc/db5/classtesseract__scene__graph_1_1ResourceLocator.html" title="Abstract class for resource loaders." alt="" coords="21,19,179,61"/>
+<area shape="rect" id="node6" title=" " alt="" coords="5,84,195,140"/>
+<area shape="rect" id="node7" title=" " alt="" coords="567,125,646,152"/>
+<area shape="rect" id="node8" title=" " alt="" coords="265,121,389,162"/>
+</map>

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['motionvalidatorallocator_4128',['MotionValidatorAllocator',['../d5/db3/namespacetesseract__motion__planners.html#a8ddce55d257f10ec21ae126bfbde5a5b',1,'tesseract_motion_planners']]]
+  ['manipulatorinfo_6365',['ManipulatorInfo',['../d9/dcd/namespacetesseract__planning.html#aa96fe6a7234303baeef3b4a8afcedfc4',1,'tesseract_planning']]],
+  ['motionvalidatorallocator_6366',['MotionValidatorAllocator',['../d9/dcd/namespacetesseract__planning.html#a49e2e11b198d0aa7480130b9f18021d5',1,'tesseract_planning']]]
 ];

@@ -4,21 +4,22 @@
 
 {\ttfamily \#include $<$allowed\+\_\+collision\+\_\+matrix.\+h$>$}
 
-\doxysubsection*{Classes}
-\begin{DoxyCompactItemize}
-\item 
-struct \mbox{\hyperlink{structtesseract__scene__graph_1_1AllowedCollisionMatrix_1_1PairHash}{Pair\+Hash}}
-\end{DoxyCompactItemize}
+
+
+Collaboration diagram for tesseract\+\_\+scene\+\_\+graph\+::Allowed\+Collision\+Matrix\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d3/d3c/classtesseract__scene__graph_1_1AllowedCollisionMatrix__coll__graph}
+\end{center}
+\end{figure}
 \doxysubsection*{Public Types}
 \begin{DoxyCompactItemize}
 \item 
 using \mbox{\hyperlink{classtesseract__scene__graph_1_1AllowedCollisionMatrix_a1f0b8321e5c331794f8bd450b7ade791}{Ptr}} = std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classtesseract__scene__graph_1_1AllowedCollisionMatrix}{Allowed\+Collision\+Matrix}} $>$
 \item 
 using \mbox{\hyperlink{classtesseract__scene__graph_1_1AllowedCollisionMatrix_a8ff33cc8d3892d5338dba781b8440c66}{Const\+Ptr}} = std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{classtesseract__scene__graph_1_1AllowedCollisionMatrix}{Allowed\+Collision\+Matrix}} $>$
-\item 
-using \mbox{\hyperlink{classtesseract__scene__graph_1_1AllowedCollisionMatrix_a01cd86c750dda77daa4d9317ed7f91a4}{Link\+Names\+Pair}} = std\+::pair$<$ const std\+::string, const std\+::string $>$
-\item 
-using \mbox{\hyperlink{classtesseract__scene__graph_1_1AllowedCollisionMatrix_a13451a9f19ed0b78e896669bf3b1d487}{Allowed\+Collision\+Entries}} = std\+::unordered\+\_\+map$<$ \mbox{\hyperlink{classtesseract__scene__graph_1_1AllowedCollisionMatrix_a01cd86c750dda77daa4d9317ed7f91a4}{Link\+Names\+Pair}}, std\+::string, \mbox{\hyperlink{structtesseract__scene__graph_1_1AllowedCollisionMatrix_1_1PairHash}{Pair\+Hash}} $>$
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
@@ -37,7 +38,7 @@ virtual \mbox{\hyperlink{classtesseract__scene__graph_1_1AllowedCollisionMatrix_
 \item 
 virtual void \mbox{\hyperlink{classtesseract__scene__graph_1_1AllowedCollisionMatrix_a1f690ce0526a2f3859c323e783474429}{add\+Allowed\+Collision}} (const std\+::string \&link\+\_\+name1, const std\+::string \&link\+\_\+name2, const std\+::string \&reason)
 \begin{DoxyCompactList}\small\item\em Disable collision between two collision objects. \end{DoxyCompactList}\item 
-const \mbox{\hyperlink{classtesseract__scene__graph_1_1AllowedCollisionMatrix_a13451a9f19ed0b78e896669bf3b1d487}{Allowed\+Collision\+Entries}} \& \mbox{\hyperlink{classtesseract__scene__graph_1_1AllowedCollisionMatrix_af336e45edd84667323ef31dd04415c7a}{get\+All\+Allowed\+Collisions}} () const
+const \mbox{\hyperlink{namespacetesseract__scene__graph_a40a7b2e03fe5365f09dd8c309b6bcffb}{Allowed\+Collision\+Entries}} \& \mbox{\hyperlink{classtesseract__scene__graph_1_1AllowedCollisionMatrix_af336e45edd84667323ef31dd04415c7a}{get\+All\+Allowed\+Collisions}} () const
 \begin{DoxyCompactList}\small\item\em Get all of the entries in the allowed collision matrix. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{classtesseract__scene__graph_1_1AllowedCollisionMatrix_afda72d50bc956159cb8dc83aaf37956f}{remove\+Allowed\+Collision}} (const std\+::string \&link\+\_\+name1, const std\+::string \&link\+\_\+name2)
 \begin{DoxyCompactList}\small\item\em Remove disabled collision pair from allowed collision matrix. \end{DoxyCompactList}\item 
@@ -46,37 +47,27 @@ virtual void \mbox{\hyperlink{classtesseract__scene__graph_1_1AllowedCollisionMa
 virtual bool \mbox{\hyperlink{classtesseract__scene__graph_1_1AllowedCollisionMatrix_ab35f76f392ad96cb9c018ed7ec5c7b74}{is\+Collision\+Allowed}} (const std\+::string \&link\+\_\+name1, const std\+::string \&link\+\_\+name2) const
 \begin{DoxyCompactList}\small\item\em This checks if two links are allowed to be in collision. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classtesseract__scene__graph_1_1AllowedCollisionMatrix_ac72e79ddde3977f6aaef9f466def8732}{clear\+Allowed\+Collisions}} ()
-\begin{DoxyCompactList}\small\item\em Clears the list of allowed collisions, so that no collision will be allowed. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Static Private Member Functions}
-\begin{DoxyCompactItemize}
-\item 
-static \mbox{\hyperlink{classtesseract__scene__graph_1_1AllowedCollisionMatrix_a01cd86c750dda77daa4d9317ed7f91a4}{Link\+Names\+Pair}} \mbox{\hyperlink{classtesseract__scene__graph_1_1AllowedCollisionMatrix_a2da6a3eca643a24be0999b3f99fed57c}{make\+Ordered\+Link\+Pair}} (const std\+::string \&link\+\_\+name1, const std\+::string \&link\+\_\+name2)
-\begin{DoxyCompactList}\small\item\em Create a pair of strings, where the pair.\+first is always $<$= pair.\+second. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Clears the list of allowed collisions, so that no collision will be allowed. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classtesseract__scene__graph_1_1AllowedCollisionMatrix_acc2334b2e7f961a915662c47de17fd79}{insert\+Allowed\+Collision\+Matrix}} (const \mbox{\hyperlink{classtesseract__scene__graph_1_1AllowedCollisionMatrix}{Allowed\+Collision\+Matrix}} \&acm)
+\begin{DoxyCompactList}\small\item\em Inserts an allowable collision matrix ignoring duplicate pairs. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classtesseract__scene__graph_1_1AllowedCollisionMatrix_a13451a9f19ed0b78e896669bf3b1d487}{Allowed\+Collision\+Entries}} \mbox{\hyperlink{classtesseract__scene__graph_1_1AllowedCollisionMatrix_aced1919efa5ceedca589a06ed8b62391}{lookup\+\_\+table\+\_\+}}
+\mbox{\hyperlink{namespacetesseract__scene__graph_a40a7b2e03fe5365f09dd8c309b6bcffb}{Allowed\+Collision\+Entries}} \mbox{\hyperlink{classtesseract__scene__graph_1_1AllowedCollisionMatrix_aced1919efa5ceedca589a06ed8b62391}{lookup\+\_\+table\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{classtesseract__scene__graph_1_1AllowedCollisionMatrix_aca2a870e7b69f965593bd2d57124cf38}{operator$<$$<$}} (std\+::ostream \&os, const \mbox{\hyperlink{classtesseract__scene__graph_1_1AllowedCollisionMatrix}{Allowed\+Collision\+Matrix}} \&acm)
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Member Typedef Documentation}
-\mbox{\Hypertarget{classtesseract__scene__graph_1_1AllowedCollisionMatrix_a13451a9f19ed0b78e896669bf3b1d487}\label{classtesseract__scene__graph_1_1AllowedCollisionMatrix_a13451a9f19ed0b78e896669bf3b1d487}} 
-\index{tesseract\_scene\_graph::AllowedCollisionMatrix@{tesseract\_scene\_graph::AllowedCollisionMatrix}!AllowedCollisionEntries@{AllowedCollisionEntries}}
-\index{AllowedCollisionEntries@{AllowedCollisionEntries}!tesseract\_scene\_graph::AllowedCollisionMatrix@{tesseract\_scene\_graph::AllowedCollisionMatrix}}
-\doxysubsubsection{\texorpdfstring{AllowedCollisionEntries}{AllowedCollisionEntries}}
-{\footnotesize\ttfamily using \mbox{\hyperlink{classtesseract__scene__graph_1_1AllowedCollisionMatrix_a13451a9f19ed0b78e896669bf3b1d487}{tesseract\+\_\+scene\+\_\+graph\+::\+Allowed\+Collision\+Matrix\+::\+Allowed\+Collision\+Entries}} =  std\+::unordered\+\_\+map$<$\mbox{\hyperlink{classtesseract__scene__graph_1_1AllowedCollisionMatrix_a01cd86c750dda77daa4d9317ed7f91a4}{Link\+Names\+Pair}}, std\+::string, \mbox{\hyperlink{structtesseract__scene__graph_1_1AllowedCollisionMatrix_1_1PairHash}{Pair\+Hash}}$>$}
-
 \mbox{\Hypertarget{classtesseract__scene__graph_1_1AllowedCollisionMatrix_a8ff33cc8d3892d5338dba781b8440c66}\label{classtesseract__scene__graph_1_1AllowedCollisionMatrix_a8ff33cc8d3892d5338dba781b8440c66}} 
 \index{tesseract\_scene\_graph::AllowedCollisionMatrix@{tesseract\_scene\_graph::AllowedCollisionMatrix}!ConstPtr@{ConstPtr}}
 \index{ConstPtr@{ConstPtr}!tesseract\_scene\_graph::AllowedCollisionMatrix@{tesseract\_scene\_graph::AllowedCollisionMatrix}}
 \doxysubsubsection{\texorpdfstring{ConstPtr}{ConstPtr}}
 {\footnotesize\ttfamily using \mbox{\hyperlink{classtesseract__scene__graph_1_1AllowedCollisionMatrix_a8ff33cc8d3892d5338dba781b8440c66}{tesseract\+\_\+scene\+\_\+graph\+::\+Allowed\+Collision\+Matrix\+::\+Const\+Ptr}} =  std\+::shared\+\_\+ptr$<$const \mbox{\hyperlink{classtesseract__scene__graph_1_1AllowedCollisionMatrix}{Allowed\+Collision\+Matrix}}$>$}
-
-\mbox{\Hypertarget{classtesseract__scene__graph_1_1AllowedCollisionMatrix_a01cd86c750dda77daa4d9317ed7f91a4}\label{classtesseract__scene__graph_1_1AllowedCollisionMatrix_a01cd86c750dda77daa4d9317ed7f91a4}} 
-\index{tesseract\_scene\_graph::AllowedCollisionMatrix@{tesseract\_scene\_graph::AllowedCollisionMatrix}!LinkNamesPair@{LinkNamesPair}}
-\index{LinkNamesPair@{LinkNamesPair}!tesseract\_scene\_graph::AllowedCollisionMatrix@{tesseract\_scene\_graph::AllowedCollisionMatrix}}
-\doxysubsubsection{\texorpdfstring{LinkNamesPair}{LinkNamesPair}}
-{\footnotesize\ttfamily using \mbox{\hyperlink{classtesseract__scene__graph_1_1AllowedCollisionMatrix_a01cd86c750dda77daa4d9317ed7f91a4}{tesseract\+\_\+scene\+\_\+graph\+::\+Allowed\+Collision\+Matrix\+::\+Link\+Names\+Pair}} =  std\+::pair$<$const std\+::string, const std\+::string$>$}
 
 \mbox{\Hypertarget{classtesseract__scene__graph_1_1AllowedCollisionMatrix_a1f0b8321e5c331794f8bd450b7ade791}\label{classtesseract__scene__graph_1_1AllowedCollisionMatrix_a1f0b8321e5c331794f8bd450b7ade791}} 
 \index{tesseract\_scene\_graph::AllowedCollisionMatrix@{tesseract\_scene\_graph::AllowedCollisionMatrix}!Ptr@{Ptr}}
@@ -147,7 +138,7 @@ Clears the list of allowed collisions, so that no collision will be allowed.
 \index{tesseract\_scene\_graph::AllowedCollisionMatrix@{tesseract\_scene\_graph::AllowedCollisionMatrix}!getAllAllowedCollisions@{getAllAllowedCollisions}}
 \index{getAllAllowedCollisions@{getAllAllowedCollisions}!tesseract\_scene\_graph::AllowedCollisionMatrix@{tesseract\_scene\_graph::AllowedCollisionMatrix}}
 \doxysubsubsection{\texorpdfstring{getAllAllowedCollisions()}{getAllAllowedCollisions()}}
-{\footnotesize\ttfamily const \mbox{\hyperlink{classtesseract__scene__graph_1_1AllowedCollisionMatrix_a13451a9f19ed0b78e896669bf3b1d487}{Allowed\+Collision\+Entries}}\& tesseract\+\_\+scene\+\_\+graph\+::\+Allowed\+Collision\+Matrix\+::get\+All\+Allowed\+Collisions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{namespacetesseract__scene__graph_a40a7b2e03fe5365f09dd8c309b6bcffb}{Allowed\+Collision\+Entries}}\& tesseract\+\_\+scene\+\_\+graph\+::\+Allowed\+Collision\+Matrix\+::get\+All\+Allowed\+Collisions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -156,6 +147,21 @@ Get all of the entries in the allowed collision matrix.
 \begin{DoxyReturn}{Returns}
 Allowed\+Collision\+Entries an unordered map containing all allowed collision entries. The keys of the unordered map are a std\+::pair of the link names in the allowed collision pair. 
 \end{DoxyReturn}
+\mbox{\Hypertarget{classtesseract__scene__graph_1_1AllowedCollisionMatrix_acc2334b2e7f961a915662c47de17fd79}\label{classtesseract__scene__graph_1_1AllowedCollisionMatrix_acc2334b2e7f961a915662c47de17fd79}} 
+\index{tesseract\_scene\_graph::AllowedCollisionMatrix@{tesseract\_scene\_graph::AllowedCollisionMatrix}!insertAllowedCollisionMatrix@{insertAllowedCollisionMatrix}}
+\index{insertAllowedCollisionMatrix@{insertAllowedCollisionMatrix}!tesseract\_scene\_graph::AllowedCollisionMatrix@{tesseract\_scene\_graph::AllowedCollisionMatrix}}
+\doxysubsubsection{\texorpdfstring{insertAllowedCollisionMatrix()}{insertAllowedCollisionMatrix()}}
+{\footnotesize\ttfamily void tesseract\+\_\+scene\+\_\+graph\+::\+Allowed\+Collision\+Matrix\+::insert\+Allowed\+Collision\+Matrix (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtesseract__scene__graph_1_1AllowedCollisionMatrix}{Allowed\+Collision\+Matrix}} \&}]{acm }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Inserts an allowable collision matrix ignoring duplicate pairs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em acm} & ACM to be inserted \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{classtesseract__scene__graph_1_1AllowedCollisionMatrix_ab35f76f392ad96cb9c018ed7ec5c7b74}\label{classtesseract__scene__graph_1_1AllowedCollisionMatrix_ab35f76f392ad96cb9c018ed7ec5c7b74}} 
 \index{tesseract\_scene\_graph::AllowedCollisionMatrix@{tesseract\_scene\_graph::AllowedCollisionMatrix}!isCollisionAllowed@{isCollisionAllowed}}
 \index{isCollisionAllowed@{isCollisionAllowed}!tesseract\_scene\_graph::AllowedCollisionMatrix@{tesseract\_scene\_graph::AllowedCollisionMatrix}}
@@ -175,26 +181,6 @@ This checks if two links are allowed to be in collision.
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 True if allowed to be in collision, otherwise false 
-\end{DoxyReturn}
-\mbox{\Hypertarget{classtesseract__scene__graph_1_1AllowedCollisionMatrix_a2da6a3eca643a24be0999b3f99fed57c}\label{classtesseract__scene__graph_1_1AllowedCollisionMatrix_a2da6a3eca643a24be0999b3f99fed57c}} 
-\index{tesseract\_scene\_graph::AllowedCollisionMatrix@{tesseract\_scene\_graph::AllowedCollisionMatrix}!makeOrderedLinkPair@{makeOrderedLinkPair}}
-\index{makeOrderedLinkPair@{makeOrderedLinkPair}!tesseract\_scene\_graph::AllowedCollisionMatrix@{tesseract\_scene\_graph::AllowedCollisionMatrix}}
-\doxysubsubsection{\texorpdfstring{makeOrderedLinkPair()}{makeOrderedLinkPair()}}
-{\footnotesize\ttfamily static \mbox{\hyperlink{classtesseract__scene__graph_1_1AllowedCollisionMatrix_a01cd86c750dda77daa4d9317ed7f91a4}{Link\+Names\+Pair}} tesseract\+\_\+scene\+\_\+graph\+::\+Allowed\+Collision\+Matrix\+::make\+Ordered\+Link\+Pair (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{link\+\_\+name1,  }\item[{const std\+::string \&}]{link\+\_\+name2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
-
-
-
-Create a pair of strings, where the pair.\+first is always $<$= pair.\+second. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em link\+\_\+name1} & First link name \\
-\hline
-{\em link\+\_\+name2} & Second link anme \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-Link\+Names\+Pair a lexicographically sorted pair of strings 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classtesseract__scene__graph_1_1AllowedCollisionMatrix_ac4f122a16dc780ef0bb5b97cde72e405}\label{classtesseract__scene__graph_1_1AllowedCollisionMatrix_ac4f122a16dc780ef0bb5b97cde72e405}} 
 \index{tesseract\_scene\_graph::AllowedCollisionMatrix@{tesseract\_scene\_graph::AllowedCollisionMatrix}!operator=@{operator=}}
@@ -242,12 +228,21 @@ Remove disabled collision pair from allowed collision matrix.
 \end{DoxyParams}
 
 
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classtesseract__scene__graph_1_1AllowedCollisionMatrix_aca2a870e7b69f965593bd2d57124cf38}\label{classtesseract__scene__graph_1_1AllowedCollisionMatrix_aca2a870e7b69f965593bd2d57124cf38}} 
+\index{tesseract\_scene\_graph::AllowedCollisionMatrix@{tesseract\_scene\_graph::AllowedCollisionMatrix}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!tesseract\_scene\_graph::AllowedCollisionMatrix@{tesseract\_scene\_graph::AllowedCollisionMatrix}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \mbox{\hyperlink{classtesseract__scene__graph_1_1AllowedCollisionMatrix}{Allowed\+Collision\+Matrix}} \&}]{acm }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
 \doxysubsection{Member Data Documentation}
 \mbox{\Hypertarget{classtesseract__scene__graph_1_1AllowedCollisionMatrix_aced1919efa5ceedca589a06ed8b62391}\label{classtesseract__scene__graph_1_1AllowedCollisionMatrix_aced1919efa5ceedca589a06ed8b62391}} 
 \index{tesseract\_scene\_graph::AllowedCollisionMatrix@{tesseract\_scene\_graph::AllowedCollisionMatrix}!lookup\_table\_@{lookup\_table\_}}
 \index{lookup\_table\_@{lookup\_table\_}!tesseract\_scene\_graph::AllowedCollisionMatrix@{tesseract\_scene\_graph::AllowedCollisionMatrix}}
 \doxysubsubsection{\texorpdfstring{lookup\_table\_}{lookup\_table\_}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__scene__graph_1_1AllowedCollisionMatrix_a13451a9f19ed0b78e896669bf3b1d487}{Allowed\+Collision\+Entries}} tesseract\+\_\+scene\+\_\+graph\+::\+Allowed\+Collision\+Matrix\+::lookup\+\_\+table\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacetesseract__scene__graph_a40a7b2e03fe5365f09dd8c309b6bcffb}{Allowed\+Collision\+Entries}} tesseract\+\_\+scene\+\_\+graph\+::\+Allowed\+Collision\+Matrix\+::lookup\+\_\+table\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
