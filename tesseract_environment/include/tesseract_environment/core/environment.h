@@ -30,7 +30,7 @@ TESSERACT_COMMON_IGNORE_WARNINGS_PUSH
 #include <vector>
 #include <string>
 #include <mutex>
-#include <boost/filesystem/path.hpp>
+#include <filesystem>
 #include <console_bridge/console.h>
 TESSERACT_COMMON_IGNORE_WARNINGS_POP
 
@@ -64,7 +64,9 @@ using FindTCPCallbackFn = std::function<Eigen::Isometry3d(const tesseract_common
 class Environment
 {
 public:
+  // LCOV_EXCL_START
   EIGEN_MAKE_ALIGNED_OPERATOR_NEW
+  // LCOV_EXCL_STOP
 
   using Ptr = std::shared_ptr<Environment>;
   using ConstPtr = std::shared_ptr<const Environment>;
@@ -157,7 +159,7 @@ public:
   }
 
   template <typename S>
-  bool init(const boost::filesystem::path& urdf_path, const tesseract_scene_graph::ResourceLocator::Ptr& locator)
+  bool init(const std::filesystem::path& urdf_path, const tesseract_scene_graph::ResourceLocator::Ptr& locator)
   {
     resource_locator_ = locator;
 
@@ -174,8 +176,8 @@ public:
   }
 
   template <typename S>
-  bool init(const boost::filesystem::path& urdf_path,
-            const boost::filesystem::path& srdf_path,
+  bool init(const std::filesystem::path& urdf_path,
+            const std::filesystem::path& srdf_path,
             const tesseract_scene_graph::ResourceLocator::Ptr& locator)
   {
     resource_locator_ = locator;
@@ -226,7 +228,8 @@ public:
 
     for (std::size_t i = 1; i < commands.size(); ++i)
     {
-      if (!applyCommand(*(commands.at(i))))
+      /** @todo Levi fix */
+      if (!applyCommand(commands.at(i)))
       {
         CONSOLE_BRIDGE_logError("When initializing environment from command history it failed to apply a command!");
         return false;
@@ -263,7 +266,7 @@ public:
    * @brief Get Environment command history post initialization
    * @return List of commands
    */
-  const Commands& getCommandHistory() const;
+  Commands getCommandHistory() const;
 
   /**
    * @brief Applies the commands to the environment
@@ -274,20 +277,12 @@ public:
   bool applyCommands(const Commands& commands);
 
   /**
-   * @brief Applies the commands to the environment
-   * @param commands Commands to be applied to the environment
-   * @return true if successful. If returned false, then only a partial set of commands have been applied. Call
-   * getCommandHistory to check. Some commands are not checked for success
-   */
-  bool applyCommands(const std::vector<Command>& commands);
-
-  /**
    * @brief Apply command to the environment
    * @param command Command to be applied to the environment
    * @return true if successful. If returned false, then the command have not been applied.
    * Some type of Command are not checked for success
    */
-  bool applyCommand(const Command& command);
+  bool applyCommand(const Command::ConstPtr& command);
 
   /**
    * @brief Check if environment has been initialized
@@ -356,13 +351,6 @@ public:
    */
   tesseract_scene_graph::ResourceLocator::Ptr getResourceLocator() const;
 
-  /**
-   * @brief Add kinematics information to the environment
-   * @param kin_info The kinematics information
-   * @return true if successful, otherwise false
-   */
-  virtual bool addKinematicsInformation(const tesseract_scene_graph::KinematicsInformation& kin_info);
-
   /** @brief Give the environment a name */
   virtual void setName(const std::string& name);
 
@@ -401,46 +389,6 @@ public:
   /** @brief Get the current state of the environment */
   virtual EnvState::ConstPtr getCurrentState() const;
 
-#ifndef SWIG
-  /**
-   * @brief Adds a link to the environment
-   *
-   *        This method should attach the link to the root link with a fixed joint
-   *        with a joint name of joint_{link name}".
-   *
-   * @param link The link to be added to the graph
-   * @return Return False if a link with the same name allready exists, otherwise true
-   */
-  virtual bool addLink(tesseract_scene_graph::Link link);
-
-  /**
-   * @brief Adds a link to the environment
-   * @param link The link to be added to the graph
-   * @return Return False if a link with the same name allready exists, otherwise true
-   */
-  virtual bool addLink(tesseract_scene_graph::Link link, tesseract_scene_graph::Joint joint);
-#endif  // SWIG
-  /**
-   * @brief Removes a link from the environment
-   *
-   *        Parent joint and all child components (links/joints) should be removed
-   *
-   * @param name Name of the link to be removed
-   * @return Return False if a link does not exists, otherwise true
-   */
-  virtual bool removeLink(const std::string& name);
-
-#ifndef SWIG
-  /**
-   * @brief Move a link in the environment
-   *
-   *        This should delete the parent joint of the child link. All child links and joints follow.
-   *
-   * @param joint The new joint.
-   * @return Return False if a link does not exists or has no parent joint, otherwise true
-   */
-  virtual bool moveLink(tesseract_scene_graph::Joint joint);
-#endif  // SWIG
   /**
    * @brief Get a link in the environment
    * @param name The name of the link
@@ -454,6 +402,234 @@ public:
    * @return Joint Const Pointer
    */
   virtual tesseract_scene_graph::Joint::ConstPtr getJoint(const std::string& name) const;
+
+  /**
+   * @brief Gets the limits associated with a joint
+   * @param joint_name Name of the joint to be updated
+   * @return The joint limits set for the given joint
+   */
+  virtual tesseract_scene_graph::JointLimits::ConstPtr getJointLimits(const std::string& joint_name) const;
+
+  /**
+   * @brief Get whether a link should be considered during collision checking
+   * @return True if should be condisdered during collision checking, otherwise false
+   */
+  virtual bool getLinkCollisionEnabled(const std::string& name) const;
+
+  /**
+   * @brief Get a given links visibility setting
+   * @return True if should be visible, otherwise false
+   */
+  virtual bool getLinkVisibility(const std::string& name) const;
+
+  /**
+   * @brief Get the allowed collision matrix
+   * @return AllowedCollisionMatrixConstPtr
+   */
+  virtual tesseract_scene_graph::AllowedCollisionMatrix::ConstPtr getAllowedCollisionMatrix() const;
+
+  /**
+   * @brief Get a vector of joint names in the environment
+   * @return A vector of joint names
+   */
+  virtual std::vector<std::string> getJointNames() const;
+
+  /**
+   * @brief Get a vector of active joint names in the environment
+   * @return A vector of active joint names
+   */
+  virtual std::vector<std::string> getActiveJointNames() const;
+
+  /**
+   * @brief Get the current state of the environment
+   *
+   * Order should be the same as getActiveJointNames()
+   *
+   * @return A vector of joint values
+   */
+  virtual Eigen::VectorXd getCurrentJointValues() const;
+
+  /**
+   * @brief Get the current joint values for a vector of joints
+   *
+   * Order should be the same as the input vector
+   *
+   * @return A vector of joint values
+   */
+  virtual Eigen::VectorXd getCurrentJointValues(const std::vector<std::string>& joint_names) const;
+
+  /**
+   * @brief Get the root link name
+   * @return String
+   */
+  virtual const std::string& getRootLinkName() const;
+
+  /**
+   * @brief Get a vector of link names in the environment
+   * @return A vector of link names
+   */
+  virtual std::vector<std::string> getLinkNames() const;
+
+  /**
+   * @brief Get a vector of active link names in the environment
+   * @return A vector of active link names
+   */
+  virtual std::vector<std::string> getActiveLinkNames() const;
+
+  /**
+   * @brief Get all of the links transforms
+   *
+   * Order should be the same as getLinkNames()
+   *
+   * @return Get a vector of transforms for all links in the environment.
+   */
+  virtual tesseract_common::VectorIsometry3d getLinkTransforms() const;
+
+  /**
+   * @brief Get the transform corresponding to the link.
+   * @return Transform and is identity when no transform is available.
+   */
+  virtual const Eigen::Isometry3d& getLinkTransform(const std::string& link_name) const;
+
+  /**
+   * @brief Returns a clone of the environments state solver
+   *
+   * The Environment::getState contains mutex's which is may not be needed in all motion planners. This allows the user
+   * to get snap shot of the environment to calculate the state.
+   *
+   * @return A clone of the environments state solver
+   */
+  virtual StateSolver::Ptr getStateSolver() const;
+
+  /**
+   * @brief Set the active discrete contact manager
+   * @param name The name used to registar the contact manager
+   * @return True of name exists in DiscreteContactManagerFactory
+   */
+  virtual bool setActiveDiscreteContactManager(const std::string& name);
+
+  /** @brief Get a copy of the environments active discrete contact manager */
+  virtual tesseract_collision::DiscreteContactManager::Ptr getDiscreteContactManager() const;
+
+  /** @brief Get a copy of the environments available discrete contact manager by name */
+  virtual tesseract_collision::DiscreteContactManager::Ptr getDiscreteContactManager(const std::string& name) const;
+
+  /**
+   * @brief Set the active continuous contact manager
+   * @param name The name used to registar the contact manager
+   * @return True of name exists in ContinuousContactManagerFactory
+   */
+  virtual bool setActiveContinuousContactManager(const std::string& name);
+
+  /** @brief Get a copy of the environments active continuous contact manager */
+  virtual tesseract_collision::ContinuousContactManager::Ptr getContinuousContactManager() const;
+
+  /** @brief Get a copy of the environments available continuous contact manager by name */
+  virtual tesseract_collision::ContinuousContactManager::Ptr getContinuousContactManager(const std::string& name) const;
+
+  /**
+   * @brief Set the discrete contact manager
+   *
+   * This method should clear the contents of the manager and reload it with the objects
+   * in the environment.
+   */
+  bool registerDiscreteContactManager(const std::string& name,
+                                      tesseract_collision::DiscreteContactManagerFactoryCreateMethod create_function);
+
+  /**
+   * @brief Set the discrete contact manager
+   *
+   * This method should clear the contents of the manager and reload it with the objects
+   * in the environment.
+   */
+  bool
+  registerContinuousContactManager(const std::string& name,
+                                   tesseract_collision::ContinuousContactManagerFactoryCreateMethod create_function);
+
+  /**
+   * @brief Register Default Contact Managers
+   * @return True if successful, otherwis false
+   */
+  bool registerDefaultContactManagers();
+
+  /**
+   * @brief Add kinematics information to the environment
+   * @param kin_info The kinematics information
+   * @return true if successful, otherwise false
+   */
+  virtual bool addKinematicsInformation(const tesseract_scene_graph::KinematicsInformation& kin_info);
+
+  /**
+   * @brief Adds a link to the environment
+   *
+   *        This method should attach the link to the root link with a fixed joint
+   *        with a joint name of joint_{link name}".
+   *
+   * @param link The link to be added to the graph
+   * @return Return False if a link with the same name allready exists, otherwise true
+   */
+  virtual bool addLink(const tesseract_scene_graph::Link::ConstPtr& link);
+
+  /**
+   * @brief Adds a link to the environment
+   * @param link The link to be added to the graph
+   * @return Return False if a link with the same name allready exists, otherwise true
+   */
+  virtual bool addLink(const tesseract_scene_graph::Link::ConstPtr& link,
+                       const tesseract_scene_graph::Joint::ConstPtr& joint);
+
+  /**
+   * @brief Move a link in the environment
+   *
+   *        This should delete the parent joint of the child link. All child links and joints follow.
+   *
+   * @param joint The new joint.
+   * @return Return False if a link does not exists or has no parent joint, otherwise true
+   */
+  virtual bool moveLink(const tesseract_scene_graph::Joint::ConstPtr& joint);
+
+#ifndef SWIG
+  /**
+   * @brief Adds a link to the environment
+   *
+   *        This method should attach the link to the root link with a fixed joint
+   *        with a joint name of joint_{link name}".
+   *
+   * @param link The link to be added to the graph
+   * @return Return False if a link with the same name allready exists, otherwise true
+   */
+  DEPRECATED("Use shared pointer version.")
+  virtual bool addLink(tesseract_scene_graph::Link link);
+
+  /**
+   * @brief Adds a link to the environment
+   * @param link The link to be added to the graph
+   * @return Return False if a link with the same name allready exists, otherwise true
+   */
+  DEPRECATED("Use shared pointer version.")
+  virtual bool addLink(tesseract_scene_graph::Link link, tesseract_scene_graph::Joint joint);
+
+  /**
+   * @brief Move a link in the environment
+   *
+   *        This should delete the parent joint of the child link. All child links and joints follow.
+   *
+   * @param joint The new joint.
+   * @return Return False if a link does not exists or has no parent joint, otherwise true
+   */
+  DEPRECATED("Use shared pointer version.")
+  virtual bool moveLink(tesseract_scene_graph::Joint joint);
+#endif  // SWIG
+
+  /**
+   * @brief Removes a link from the environment
+   *
+   *        Parent joint and all child components (links/joints) should be removed
+   *
+   * @param name Name of the link to be removed
+   * @return Return False if a link does not exists, otherwise true
+   */
+  virtual bool removeLink(const std::string& name);
 
   /**
    * @brief Removes a joint from the environment
@@ -534,44 +710,13 @@ public:
   virtual bool changeJointAccelerationLimits(const std::unordered_map<std::string, double>& limits);
 
   /**
-   * @brief Gets the limits associated with a joint
-   * @param joint_name Name of the joint to be updated
-   * @return The joint limits set for the given joint
-   */
-  virtual tesseract_scene_graph::JointLimits::ConstPtr getJointLimits(const std::string& joint_name) const;
-
-  /**
-   * @brief Set whether a link should be considered during collision checking
-   * @param enabled True if should be condisdered during collision checking, otherwise false
-   */
-  virtual void setLinkCollisionEnabled(const std::string& name, bool enabled);
-
-  /**
-   * @brief Get whether a link should be considered during collision checking
-   * @return True if should be condisdered during collision checking, otherwise false
-   */
-  virtual bool getLinkCollisionEnabled(const std::string& name) const;
-
-  /**
-   * @brief Set a links visibility
-   * @param name The name of the link
-   * @param visibility True if should be visible, otherwise false
-   */
-  virtual void setLinkVisibility(const std::string& name, bool visibility);
-
-  /**
-   * @brief Get a given links visibility setting
-   * @return True if should be visible, otherwise false
-   */
-  virtual bool getLinkVisibility(const std::string& name) const;
-
-  /**
    * @brief Disable collision between two collision objects
    * @param link_name1 Collision object name
    * @param link_name2 Collision object name
    * @param reason The reason for disabling collison
+   * @return True if successful, otherwise false
    */
-  virtual void addAllowedCollision(const std::string& link_name1,
+  virtual bool addAllowedCollision(const std::string& link_name1,
                                    const std::string& link_name2,
                                    const std::string& reason);
 
@@ -579,144 +724,31 @@ public:
    * @brief Remove disabled collision pair from allowed collision matrix
    * @param link_name1 Collision object name
    * @param link_name2 Collision object name
+   * @return True if successful, otherwise false
    */
-  virtual void removeAllowedCollision(const std::string& link_name1, const std::string& link_name2);
+  virtual bool removeAllowedCollision(const std::string& link_name1, const std::string& link_name2);
 
   /**
    * @brief Remove disabled collision for any pair with link_name from allowed collision matrix
    * @param link_name Collision object name
+   * @return True if successful, otherwise false
    */
-  virtual void removeAllowedCollision(const std::string& link_name);
+  virtual bool removeAllowedCollision(const std::string& link_name);
 
   /**
-   * @brief Get the allowed collision matrix
-   * @return AllowedCollisionMatrixConstPtr
+   * @brief Set whether a link should be considered during collision checking
+   * @param enabled True if should be condisdered during collision checking, otherwise false
+   * @return True if successful, otherwise false
    */
-  virtual tesseract_scene_graph::AllowedCollisionMatrix::ConstPtr getAllowedCollisionMatrix() const;
+  virtual bool setLinkCollisionEnabled(const std::string& name, bool enabled);
 
   /**
-   * @brief Get a vector of joint names in the environment
-   * @return A vector of joint names
+   * @brief Set a links visibility
+   * @param name The name of the link
+   * @param visibility True if should be visible, otherwise false
+   * @return True if successful, otherwise false
    */
-  virtual std::vector<std::string> getJointNames() const { return joint_names_; }
-
-  /**
-   * @brief Get a vector of active joint names in the environment
-   * @return A vector of active joint names
-   */
-  virtual std::vector<std::string> getActiveJointNames() const { return active_joint_names_; }
-
-  /**
-   * @brief Get the current state of the environment
-   *
-   * Order should be the same as getActiveJointNames()
-   *
-   * @return A vector of joint values
-   */
-  virtual Eigen::VectorXd getCurrentJointValues() const;
-
-  /**
-   * @brief Get the current joint values for a vector of joints
-   *
-   * Order should be the same as the input vector
-   *
-   * @return A vector of joint values
-   */
-  virtual Eigen::VectorXd getCurrentJointValues(const std::vector<std::string>& joint_names) const;
-
-  /**
-   * @brief Get the root link name
-   * @return String
-   */
-  virtual const std::string& getRootLinkName() const { return scene_graph_->getRoot(); }
-
-  /**
-   * @brief Get a vector of link names in the environment
-   * @return A vector of link names
-   */
-  virtual std::vector<std::string> getLinkNames() const { return link_names_; }
-
-  /**
-   * @brief Get a vector of active link names in the environment
-   * @return A vector of active link names
-   */
-  virtual std::vector<std::string> getActiveLinkNames() const { return active_link_names_; }
-
-  /**
-   * @brief Get all of the links transforms
-   *
-   * Order should be the same as getLinkNames()
-   *
-   * @return Get a vector of transforms for all links in the environment.
-   */
-  virtual tesseract_common::VectorIsometry3d getLinkTransforms() const;
-
-  /**
-   * @brief Get the transform corresponding to the link.
-   * @return Transform and is identity when no transform is available.
-   */
-  virtual const Eigen::Isometry3d& getLinkTransform(const std::string& link_name) const;
-
-  /**
-   * @brief Returns a clone of the environments state solver
-   *
-   * The Environment::getState contains mutex's which is may not be needed in all motion planners. This allows the user
-   * to get snap shot of the environment to calculate the state.
-   *
-   * @return A clone of the environments state solver
-   */
-  virtual StateSolver::Ptr getStateSolver() const;
-
-  /**
-   * @brief Set the active discrete contact manager
-   * @param name The name used to registar the contact manager
-   * @return True of name exists in DiscreteContactManagerFactory
-   */
-  virtual bool setActiveDiscreteContactManager(const std::string& name);
-
-  /** @brief Get a copy of the environments active discrete contact manager */
-  virtual tesseract_collision::DiscreteContactManager::Ptr getDiscreteContactManager() const;
-
-  /** @brief Get a copy of the environments available discrete contact manager by name */
-  virtual tesseract_collision::DiscreteContactManager::Ptr getDiscreteContactManager(const std::string& name) const;
-
-  /**
-   * @brief Set the active continuous contact manager
-   * @param name The name used to registar the contact manager
-   * @return True of name exists in ContinuousContactManagerFactory
-   */
-  virtual bool setActiveContinuousContactManager(const std::string& name);
-
-  /** @brief Get a copy of the environments active continuous contact manager */
-  virtual tesseract_collision::ContinuousContactManager::Ptr getContinuousContactManager() const;
-
-  /** @brief Get a copy of the environments available continuous contact manager by name */
-  virtual tesseract_collision::ContinuousContactManager::Ptr getContinuousContactManager(const std::string& name) const;
-
-  /**
-   * @brief Set the discrete contact manager
-   *
-   * This method should clear the contents of the manager and reload it with the objects
-   * in the environment.
-   */
-  bool registerDiscreteContactManager(const std::string& name,
-                                      tesseract_collision::DiscreteContactManagerFactoryCreateMethod create_function);
-
-  /**
-   * @brief Set the discrete contact manager
-   *
-   * This method should clear the contents of the manager and reload it with the objects
-   * in the environment.
-   */
-  bool
-  registerContinuousContactManager(const std::string& name,
-                                   tesseract_collision::ContinuousContactManagerFactoryCreateMethod create_function);
-
-  /**
-   * @brief Register Default Contact Managers
-   * @return True if successful, otherwis false
-   */
-  bool registerDefaultContactManagers();
+  virtual bool setLinkVisibility(const std::string& name, bool visibility);
 
   /** @brief Merge a graph into the current environment
    * @param scene_graph Const ref to the graph to be merged (said graph will be copied)
@@ -728,6 +760,18 @@ public:
    * different names */
   virtual bool addSceneGraph(const tesseract_scene_graph::SceneGraph& scene_graph, const std::string& prefix = "");
 
+  /** @brief Merge a graph into the current environment
+   * @param scene_graph Const ref to the graph to be merged (said graph will be copied)
+   * @param root_joint Const ptr to the joint that connects current environment with root of the merged graph
+   * @param prefix string Will be prepended to every link and joint of the merged graph
+   * @return Return False if any link or joint name collides with current environment, otherwise True
+   * Merge a subgraph into the current environment. Every joint and link of the subgraph will be copied into the
+   * environment graph. The prefix argument is meant to allow adding multiple copies of the same subgraph with different
+   * names */
+  virtual bool addSceneGraph(const tesseract_scene_graph::SceneGraph& scene_graph,
+                             const tesseract_scene_graph::Joint::ConstPtr& joint,
+                             const std::string& prefix = "");
+
 #ifndef SWIG
   /** @brief Merge a graph into the current environment
    * @param scene_graph Const ref to the graph to be merged (said graph will be copied)
@@ -737,6 +781,7 @@ public:
    * Merge a subgraph into the current environment. Every joint and link of the subgraph will be copied into the
    * environment graph. The prefix argument is meant to allow adding multiple copies of the same subgraph with different
    * names */
+  DEPRECATED("Use shared pointer version.")
   virtual bool addSceneGraph(const tesseract_scene_graph::SceneGraph& scene_graph,
                              tesseract_scene_graph::Joint joint,
                              const std::string& prefix = "");
@@ -795,43 +840,31 @@ private:
 
   bool initHelper(const tesseract_scene_graph::SceneGraph& scene_graph,
                   const tesseract_scene_graph::SRDFModel::ConstPtr& srdf_model = nullptr);
+
+  // Command Helper function
+  bool applyAddCommand(AddCommand::ConstPtr cmd);
+  bool applyMoveLinkCommand(const MoveLinkCommand::ConstPtr& cmd);
+  bool applyMoveJointCommand(const MoveJointCommand::ConstPtr& cmd);
+  bool applyRemoveLinkCommand(const RemoveLinkCommand::ConstPtr& cmd);
+  bool applyRemoveJointCommand(const RemoveJointCommand::ConstPtr& cmd);
+  bool applyChangeLinkOriginCommand(const ChangeLinkOriginCommand::ConstPtr& cmd);
+  bool applyChangeJointOriginCommand(const ChangeJointOriginCommand::ConstPtr& cmd);
+  bool applyChangeLinkCollisionEnabledCommand(const ChangeLinkCollisionEnabledCommand::ConstPtr& cmd);
+  bool applyChangeLinkVisibilityCommand(const ChangeLinkVisibilityCommand::ConstPtr& cmd);
+  bool applyAddAllowedCollisionCommand(const AddAllowedCollisionCommand::ConstPtr& cmd);
+  bool applyRemoveAllowedCollisionCommand(const RemoveAllowedCollisionCommand::ConstPtr& cmd);
+  bool applyRemoveAllowedCollisionLinkCommand(const RemoveAllowedCollisionLinkCommand::ConstPtr& cmd);
+  bool applyAddSceneGraphCommand(AddSceneGraphCommand::ConstPtr cmd);
+  bool applyChangeJointPositionLimitsCommand(const ChangeJointPositionLimitsCommand::ConstPtr& cmd);
+  bool applyChangeJointVelocityLimitsCommand(const ChangeJointVelocityLimitsCommand::ConstPtr& cmd);
+  bool applyChangeJointAccelerationLimitsCommand(const ChangeJointAccelerationLimitsCommand::ConstPtr& cmd);
+  bool applyAddKinematicsInformationCommand(const AddKinematicsInformationCommand::ConstPtr& cmd);
+  bool applyChangeDefaultContactMarginCommand(const ChangeDefaultContactMarginCommand::ConstPtr& cmd);
+  bool applyChangePairContactMarginCommand(const ChangePairContactMarginCommand::ConstPtr& cmd);
 };
 }  // namespace tesseract_environment
 
 #ifdef SWIG
-%extend tesseract_environment::Environment
-{
-
-  bool addLink(tesseract_scene_graph::Link::Ptr link)
-  {
-    return $self->addLink(std::move(link->clone()));
-  }
-  
-  bool addLink(tesseract_scene_graph::Link::Ptr link, tesseract_scene_graph::Joint::Ptr joint)
-  {
-    return $self->addLink(std::move(link->clone()),std::move(joint->clone()));
-  }
-
-  bool moveLink(tesseract_scene_graph::Joint::Ptr joint)
-  {
-    return $self->moveLink(std::move(joint->clone()));
-  }
-
-  bool addSceneGraph(const tesseract_scene_graph::SceneGraph& scene_graph,
-                             tesseract_scene_graph::Joint::Ptr joint,
-                             const std::string& prefix = "")
-  {
-    return $self->addSceneGraph(scene_graph,std::move(joint->clone()),prefix);
-  }
-
-  /*bool init(const tesseract_scene_graph::SceneGraph& scene_graph,
-            const tesseract_scene_graph::SRDFModel::ConstPtr& srdf_model = nullptr)
-  {
-      return $self->init<tesseract_environment::KDLStateSolver>(scene_graph,srdf_model);
-  }*/
-
-}
-
 namespace tesseract_environment
 {
   class KDLStateSolver;
