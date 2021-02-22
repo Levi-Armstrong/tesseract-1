@@ -188,6 +188,12 @@ void RobotOnPositionerInvKin::setLimits(tesseract_common::KinematicLimits limits
   limits_ = std::move(limits);
 }
 
+void RobotOnPositionerInvKin::setInitialState(const std::unordered_map<std::string, double>& state)
+{
+  manip_inv_kin_->setInitialState(state);
+  positioner_fwd_kin_->setInitialState(state);
+}
+
 unsigned int RobotOnPositionerInvKin::numJoints() const { return dof_; }
 
 const std::string& RobotOnPositionerInvKin::getBaseLinkName() const { return positioner_fwd_kin_->getBaseLinkName(); }

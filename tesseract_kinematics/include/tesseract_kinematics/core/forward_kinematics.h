@@ -159,6 +159,14 @@ public:
   virtual void setLimits(tesseract_common::KinematicLimits limits) = 0;
 
   /**
+   * @brief This is used to set the initial state of the solver
+   * @details This is primarily used for kinematics trees and graphs where joint not part of the kinematics affect the
+   * kinematics objects.
+   * @param state The environment joint states
+   */
+  virtual void setInitialState(const std::unordered_map<std::string, double>& state) = 0;
+
+  /**
    * @brief Number of joints in robot
    * @return Number of joints in robot
    */

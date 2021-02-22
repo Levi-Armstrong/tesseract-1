@@ -131,6 +131,7 @@ void OPWInvKin::setLimits(tesseract_common::KinematicLimits limits)
   limits_ = std::move(limits);
 }
 
+void OPWInvKin::setInitialState(const std::unordered_map<std::string, double>& /*state*/) {}
 const std::string& OPWInvKin::getBaseLinkName() const { return base_link_name_; }
 const std::string& OPWInvKin::getTipLinkName() const { return tip_link_name_; }
 const std::string& OPWInvKin::getName() const { return name_; }

@@ -99,6 +99,8 @@ public:
 
   void setLimits(tesseract_common::KinematicLimits limits) override;
 
+  void setInitialState(const std::unordered_map<std::string, double>& state) override;
+
   unsigned int numJoints() const override;
 
   const std::string& getBaseLinkName() const override;

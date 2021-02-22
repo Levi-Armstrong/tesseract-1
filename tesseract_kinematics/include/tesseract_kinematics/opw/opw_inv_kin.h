@@ -75,6 +75,7 @@ public:
   const std::vector<std::string>& getActiveLinkNames() const override;
   const tesseract_common::KinematicLimits& getLimits() const override;
   void setLimits(tesseract_common::KinematicLimits limits) override;
+  void setInitialState(const std::unordered_map<std::string, double>& state) override;
   const std::string& getBaseLinkName() const override;
   const std::string& getTipLinkName() const override;
   const std::string& getName() const override;

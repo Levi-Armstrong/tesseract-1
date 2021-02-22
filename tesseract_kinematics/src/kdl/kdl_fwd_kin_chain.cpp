@@ -232,7 +232,7 @@ void KDLFwdKinChain::setLimits(tesseract_common::KinematicLimits limits)
   kdl_data_.limits = std::move(limits);
 }
 
-tesseract_scene_graph::SceneGraph::ConstPtr KDLFwdKinChain::getSceneGraph() const { return scene_graph_; }
+void KDLFwdKinChain::setInitialState(const std::unordered_map<std::string, double>& /*state*/) {}
 
 unsigned int KDLFwdKinChain::numJoints() const { return kdl_data_.robot_chain.getNrOfJoints(); }
 
@@ -243,6 +243,8 @@ const std::string& KDLFwdKinChain::getTipLinkName() const { return kdl_data_.tip
 const std::string& KDLFwdKinChain::getName() const { return name_; }
 
 const std::string& KDLFwdKinChain::getSolverName() const { return solver_name_; }
+
+tesseract_scene_graph::SceneGraph::ConstPtr KDLFwdKinChain::getSceneGraph() const { return scene_graph_; }
 
 bool KDLFwdKinChain::init(tesseract_scene_graph::SceneGraph::ConstPtr scene_graph,
                           const std::vector<std::pair<std::string, std::string>>& chains,

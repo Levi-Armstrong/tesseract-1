@@ -95,6 +95,8 @@ public:
 
   const tesseract_common::KinematicLimits& getLimits() const override;
 
+  void setInitialState(const std::unordered_map<std::string, double>& state) override;
+
   void setLimits(tesseract_common::KinematicLimits limits) override;
 
   unsigned int numJoints() const override;
@@ -152,9 +154,6 @@ private:
    * @return True if init() completes successfully
    */
   bool init(const KDLFwdKinTree& kin);
-
-  /** @brief Set the start state for all joints in the tree. */
-  void setStartState(std::unordered_map<std::string, double> start_state);
 
   /** @brief Get an updated kdl joint array */
   KDL::JntArray getKDLJntArray(const std::vector<std::string>& joint_names,

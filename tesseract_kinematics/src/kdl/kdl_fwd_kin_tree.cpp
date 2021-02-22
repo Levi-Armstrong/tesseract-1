@@ -59,17 +59,6 @@ KDL::JntArray KDLFwdKinTree::getKDLJntArray(const std::vector<std::string>& join
   return kdl_joints;
 }
 
-void KDLFwdKinTree::setStartState(std::unordered_map<std::string, double> start_state)
-{
-  input_start_state_ = start_state;
-  KDL::JntArray kdl_joints;
-  kdl_joints.resize(static_cast<unsigned>(start_state.size()));
-  for (const auto& jnt : start_state)
-    kdl_joints.data(joint_to_qnr_.at(jnt.first)) = jnt.second;
-
-  start_state_ = kdl_joints;
-}
-
 Eigen::Isometry3d KDLFwdKinTree::calcFwdKinHelper(const KDL::JntArray& kdl_joints, const std::string& link_name) const
 {
   KDL::Frame kdl_pose;
@@ -199,6 +188,17 @@ void KDLFwdKinTree::setLimits(tesseract_common::KinematicLimits limits)
   limits_ = std::move(limits);
 }
 
+void KDLFwdKinTree::setInitialState(const std::unordered_map<std::string, double>& state)
+{
+  input_start_state_ = state;
+  KDL::JntArray kdl_joints;
+  kdl_joints.resize(static_cast<unsigned>(joint_to_qnr_.size()));
+  for (const auto& jnt : state)
+    kdl_joints.data(joint_to_qnr_.at(jnt.first)) = jnt.second;
+
+  start_state_ = kdl_joints;
+}
+
 unsigned int KDLFwdKinTree::numJoints() const { return static_cast<unsigned>(joint_list_.size()); }
 
 const std::string& KDLFwdKinTree::getBaseLinkName() const { return scene_graph_->getRoot(); }
@@ -323,9 +323,9 @@ bool KDLFwdKinTree::init(tesseract_scene_graph::SceneGraph::ConstPtr scene_graph
   jac_solver_ = std::make_unique<KDL::TreeJntToJacSolver>(kdl_tree_);
 
   if (start_state.empty())
-    setStartState(start_state_zeros);
+    setInitialState(start_state_zeros);
   else
-    setStartState(start_state);
+    setInitialState(start_state);
 
   initialized_ = true;
   return initialized_;

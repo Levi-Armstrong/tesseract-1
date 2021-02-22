@@ -160,6 +160,8 @@ void KDLInvKinChainLMA::setLimits(tesseract_common::KinematicLimits limits)
   kdl_data_.limits = std::move(limits);
 }
 
+void KDLInvKinChainLMA::setInitialState(const std::unordered_map<std::string, double>& /*state*/) {}
+
 unsigned int KDLInvKinChainLMA::numJoints() const { return kdl_data_.robot_chain.getNrOfJoints(); }
 
 const std::string& KDLInvKinChainLMA::getBaseLinkName() const { return kdl_data_.base_name; }
