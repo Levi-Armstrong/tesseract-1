@@ -282,6 +282,21 @@ void BulletDiscreteBVHManager::contactTest(ContactResultMap& collisions, const C
   pairCache->processAllOverlappingPairs(&collisionCallback, dispatcher_.get());
 }
 
+void BulletDiscreteBVHManager::rayTest(RayResult& collisions, const RayRequest& request)
+{
+  ray_test_data_.res = &collisions;
+  ray_test_data_.req = request;
+  ray_test_data_.done = false;
+
+  broadphase_->calculateOverlappingPairs(dispatcher_.get());
+
+  RayCollisionCollector collector(ray_test_data_);
+
+  TesseractRayCallback cc(collector);
+
+  broadphase_->rayTest(convertEigenToBt(request.start), convertEigenToBt(request.end), cc);
+}
+
 void BulletDiscreteBVHManager::addCollisionObject(COW::Ptr cow)
 {
   cow->setUserPointer(&contact_test_data_);

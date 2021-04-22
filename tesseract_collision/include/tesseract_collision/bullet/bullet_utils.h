@@ -440,6 +440,60 @@ inline btScalar addDiscreteSingleResult(btManifoldPoint& cp,
   return 1;
 }
 
+inline btScalar addRaySingleResult(btCollisionWorld::LocalRayResult& rayResult,
+                                   bool normalInWorldSpace,
+                                   RayTestData& collisions)
+{
+//  assert(dynamic_cast<const CollisionObjectWrapper*>(colObj0Wrap->getCollisionObject()) != nullptr);
+//  assert(dynamic_cast<const CollisionObjectWrapper*>(colObj1Wrap->getCollisionObject()) != nullptr);
+//  const auto* cd0 = static_cast<const CollisionObjectWrapper*>(colObj0Wrap->getCollisionObject());
+//  const auto* cd1 = static_cast<const CollisionObjectWrapper*>(colObj1Wrap->getCollisionObject());
+
+//  ObjectPairKey pc = getObjectPairKey(cd0->getName(), cd1->getName());
+
+//  const auto& it = collisions.res->find(pc);
+//  bool found = (it != collisions.res->end());
+
+//  //    size_t l = 0;
+//  //    if (found)
+//  //    {
+//  //      l = it->second.size();
+//  //      if (m_collisions.req->type == DistanceRequestType::LIMITED && l >= m_collisions.req->max_contacts_per_body)
+//  //          return 0;
+
+//  //    }
+
+//  btTransform tf0 = getLinkTransformFromCOW(colObj0Wrap);
+//  btTransform tf1 = getLinkTransformFromCOW(colObj1Wrap);
+//  btTransform tf0_inv = tf0.inverse();
+//  btTransform tf1_inv = tf1.inverse();
+
+//  ContactResult contact;
+//  contact.link_names[0] = cd0->getName();
+//  contact.link_names[1] = cd1->getName();
+//  contact.shape_id[0] = colObj0Wrap->getCollisionShape()->getUserIndex();
+//  contact.shape_id[1] = colObj1Wrap->getCollisionShape()->getUserIndex();
+//  contact.subshape_id[0] = colObj0Wrap->m_index;
+//  contact.subshape_id[1] = colObj1Wrap->m_index;
+//  contact.nearest_points[0] = convertBtToEigen(cp.m_positionWorldOnA);
+//  contact.nearest_points[1] = convertBtToEigen(cp.m_positionWorldOnB);
+//  contact.nearest_points_local[0] = convertBtToEigen(tf0_inv * cp.m_positionWorldOnA);
+//  contact.nearest_points_local[1] = convertBtToEigen(tf1_inv * cp.m_positionWorldOnB);
+//  contact.transform[0] = convertBtToEigen(tf0);
+//  contact.transform[1] = convertBtToEigen(tf1);
+//  contact.type_id[0] = cd0->getTypeID();
+//  contact.type_id[1] = cd1->getTypeID();
+//  contact.distance = static_cast<double>(cp.m_distance1);
+//  contact.normal = convertBtToEigen(-1 * cp.m_normalWorldOnB);
+
+//  if (!processResult(collisions, contact, pc, found))
+//  {
+//    return 0;
+//  }
+
+//  return 1;
+}
+
 /**
  * @brief Calculate the continuous contact data for casted collision shape
  * @param col Contact results
@@ -720,6 +774,7 @@ struct DiscreteBroadphaseContactResultCallback : public BroadphaseContactResultC
     return addDiscreteSingleResult(cp, colObj0Wrap, colObj1Wrap, collisions_);
   }
 };
+
 
 struct CastBroadphaseContactResultCallback : public BroadphaseContactResultCallback
 {
@@ -1009,6 +1064,85 @@ struct CastCollisionCollector : public btCollisionWorld::ContactResultCallback
     return !collisions_.done &&
            needsCollisionCheck(
                *cow_, *(static_cast<CollisionObjectWrapper*>(proxy0->m_clientObject)), collisions_.fn, verbose_);
+  }
+};
+
+struct RayCollisionCollector : public btCollisionWorld::RayResultCallback
+{
+  RayTestData& collisions_;
+  bool verbose_;
+
+  RayCollisionCollector(RayTestData& collisions, bool verbose = false)
+    : collisions_(collisions), verbose_(verbose)
+  {
+  }
+
+  btScalar addSingleResult(btCollisionWorld::LocalRayResult& rayResult, bool normalInWorldSpace) override
+  {
+//    if (cp.m_distance1 > static_cast<btScalar>(contact_distance_))
+//      return 0;
+
+    return addRaySingleResult(rayResult, normalInWorldSpace, collisions_);
+  }
+
+  bool needsCollision(btBroadphaseProxy* proxy0) const override
+  {
+    return !collisions_.done;
+//    return !collisions_.done &&
+//           needsCollisionCheck(
+//               *cow_, *(static_cast<CollisionObjectWrapper*>(proxy0->m_clientObject)), collisions_.fn, verbose_);
+  }
+};
+
+struct TesseractRayCallback : public btBroadphaseRayCallback
+{
+  RayCollisionCollector& results_callback_;
+  btTransform ray_start_trans_;
+  btTransform ray_end_trans_;
+
+public:
+  TesseractRayCallback(RayCollisionCollector& results_callback)
+    : results_callback_(results_callback)
+  {
+    ray_start_trans_.setIdentity();
+    ray_start_trans_.setOrigin(convertEigenToBt(results_callback_.collisions_.req.start));
+    ray_end_trans_.setIdentity();
+    ray_end_trans_.setOrigin(convertEigenToBt(results_callback_.collisions_.req.end));
+
+    btVector3 rayDir = (ray_end_trans_.getOrigin() - ray_start_trans_.getOrigin());
+
+    rayDir.normalize();
+    ///what about division by zero? --> just set rayDirection[i] to INF/BT_LARGE_FLOAT
+    m_rayDirectionInverse[0] = rayDir[0] == btScalar(0.0) ? btScalar(BT_LARGE_FLOAT) : btScalar(1.0) / rayDir[0];
+    m_rayDirectionInverse[1] = rayDir[1] == btScalar(0.0) ? btScalar(BT_LARGE_FLOAT) : btScalar(1.0) / rayDir[1];
+    m_rayDirectionInverse[2] = rayDir[2] == btScalar(0.0) ? btScalar(BT_LARGE_FLOAT) : btScalar(1.0) / rayDir[2];
+    m_signs[0] = m_rayDirectionInverse[0] < 0.0;
+    m_signs[1] = m_rayDirectionInverse[1] < 0.0;
+    m_signs[2] = m_rayDirectionInverse[2] < 0.0;
+
+    m_lambda_max = rayDir.dot(ray_end_trans_.getOrigin() - ray_start_trans_.getOrigin());
+  }
+
+  bool process(const btBroadphaseProxy* proxy) override
+  {
+    ///terminate further ray tests, once the closestHitFraction reached zero
+    if (results_callback_.m_closestHitFraction == btScalar(0.f))
+      return false;
+
+    btCollisionObject* collisionObject = static_cast<btCollisionObject*>(proxy->m_clientObject);
+
+    //only perform raycast if filterMask matches
+    if (results_callback_.needsCollision(collisionObject->getBroadphaseHandle()))
+    {
+      btCollisionWorld::rayTestSingle(ray_start_trans_,
+                                      ray_end_trans_,
+                                      collisionObject,
+                                      collisionObject->getCollisionShape(),
+                                      collisionObject->getWorldTransform(),
+                                      results_callback_);
+    }
+
+    return true;
   }
 };
 

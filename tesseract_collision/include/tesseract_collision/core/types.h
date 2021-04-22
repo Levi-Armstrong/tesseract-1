@@ -265,6 +265,86 @@ struct ContactTestData
   /** @brief Indicate if search is finished */
   bool done = false;
 };
+
+struct RayRequest
+{
+  /** @brief This controls the exit condition for the contact test type */
+  ContactTestType type = ContactTestType::ALL;
+
+  Eigen::Vector3d start {Eigen::Vector3d::Zero()};
+
+  Eigen::Vector3d end {Eigen::Vector3d::Zero()};
+
+  RayRequest(ContactTestType type = ContactTestType::ALL) : type(type) {};
+}
+
+struct RayResult
+{
+  EIGEN_MAKE_ALIGNED_OPERATOR_NEW
+
+  /** @brief The distance between two links */
+  double distance;
+  /** @brief A user defined type id that is added to the contact shapes */
+  int type_id;
+  /** @brief The two links that are in contact */
+  std::string link_name;
+  /** @brief The two shapes that are in contact. Each link can be made up of multiple shapes */
+  int shape_id;
+  /** @brief Some shapes like octomap and mesh have subshape (boxes and triangles) */
+  int subshape_id;
+  /** @brief The nearest point on both links in world coordinates */
+  Eigen::Vector3d nearest_point;
+  /** @brief The nearest point on both links in local(link) coordinates */
+  Eigen::Vector3d nearest_point_local;
+  /** @brief The transform of link in world coordinates */
+  Eigen::Isometry3d transform;
+  /**
+   * @brief The normal vector to move the two objects out of contact in world coordinates
+   *
+   * @note This points from link_name[0] to link_name[1], so it shows the direction to move link_name[1] to avoid or get
+   *       out of collision with link_name[0].
+   */
+  Eigen::Vector3d normal;
+
+  RayResult() { clear(); }
+
+  /** @brief reset to default values */
+  void clear()
+  {
+    distance = std::numeric_limits<double>::max();
+    nearest_point.setZero();
+    nearest_point_local.setZero();
+    transform = Eigen::Isometry3d::Identity();
+    link_name = "";
+    shape_id = -1;
+    subshape_id = -1;
+    type_id = 0;
+    normal.setZero();
+  }
+};
+
+using RayResultVector = tesseract_common::AlignedVector<RayResult>;
+
+struct RayTestData
+{
+  EIGEN_MAKE_ALIGNED_OPERATOR_NEW
+
+  RayTestData() = default;
+  RayTestData(RayRequest req, RayResult& res)
+    : req(std::move(req))
+    , res(&res)
+  {
+  }
+
+  /** @brief The type of contact request data */
+  RayRequest req;
+
+  /** @brief Destance query results information */
+  RayResult* res = nullptr;
+
+  /** @brief Indicate if search is finished */
+  bool done = false;
+};
 #endif  // SWIG
 
 /**
