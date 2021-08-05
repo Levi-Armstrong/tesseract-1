@@ -13,7 +13,11 @@ ModelStateSolver::UPtr ModelStateSolver::clone() const
   return cloned_solver;
 }
 
-bool ModelStateSolver::init(const tesseract_scene_graph::SceneGraph& scene_graph) { return createKDETree(scene_graph); }
+bool ModelStateSolver::init(const tesseract_scene_graph::SceneGraph& scene_graph, ModelState* state)
+{
+  current_state_ = state;
+  return createKDETree(scene_graph);
+}
 
 void ModelStateSolver::setState(const VariableSet& variable_set)
 {
@@ -21,7 +25,7 @@ void ModelStateSolver::setState(const VariableSet& variable_set)
   {
     if (setJointValuesHelper(kdl_jnt_array_, joint.first, joint.second))
     {
-      current_state_->joints[joint.first] = joint.second;
+      current_state_->variables[joint.first] = joint.second;
     }
   }
 
@@ -40,7 +44,7 @@ ModelState::UPtr ModelStateSolver::getState(const VariableSet& variable_set) con
   {
     if (setJointValuesHelper(jnt_array, joint.first, joint.second))
     {
-      state->joints[joint.first] = joint.second;
+      state->variables[joint.first] = joint.second;
     }
   }
 
@@ -51,6 +55,7 @@ ModelState::UPtr ModelStateSolver::getState(const VariableSet& variable_set) con
 
 bool ModelStateSolver::createKDETree(const tesseract_scene_graph::SceneGraph& scene_graph)
 {
+  name_ = scene_graph.getName();
   root_name_ = scene_graph.getRoot();
   kdl_tree_ = KDL::Tree();
   if (!tesseract_scene_graph::parseSceneGraph(scene_graph, kdl_tree_))
@@ -59,8 +64,7 @@ bool ModelStateSolver::createKDETree(const tesseract_scene_graph::SceneGraph& sc
     return false;
   }
 
-  current_state_ = std::make_unique<ModelState>();
-  current_state_->name = scene_graph.getName();
+  current_state_->name = name_;
   kdl_jnt_array_.resize(kdl_tree_.getNrOfJoints());
   //  limits_.joint_limits.resize(static_cast<long int>(kdl_tree_.getNrOfJoints()), 2);
   //  limits_.velocity_limits.resize(static_cast<long int>(kdl_tree_.getNrOfJoints()));
@@ -77,7 +81,7 @@ bool ModelStateSolver::createKDETree(const tesseract_scene_graph::SceneGraph& sc
 
     joint_to_qnr_.insert(std::make_pair(jnt.getName(), seg.second.q_nr));
     kdl_jnt_array_(seg.second.q_nr) = 0.0;
-    current_state_->joints.insert(std::make_pair(jnt.getName(), 0.0));
+    current_state_->variables.insert(std::make_pair(jnt.getName(), 0.0));
     //    joint_names_[j] = jnt.getName();
 
     //    // Store joint limits.

@@ -10,6 +10,7 @@ TESSERACT_COMMON_IGNORE_WARNINGS_POP
 #include <tesseract_scene_graph/graph.h>
 #include <tesseract_scene_graph/utils.h>
 #include <tesseract_model_linked/model_state_solver.h>
+#include <tesseract_model_linked/model_state_set.h>
 
 namespace tesseract_model_linked
 {
@@ -35,7 +36,7 @@ public:
   Model(Model&&) = delete;
   Model& operator=(Model&&) = delete;
 
-  Model(tesseract_scene_graph::SceneGraph::UPtr scene_graph);
+  Model(tesseract_scene_graph::SceneGraph::UPtr scene_graph, ModelStateSet::Ptr state_set);
 
   void setParent(Model* parent_model, std::string parent_link_name);
   Parent getParent() const;
@@ -44,7 +45,7 @@ public:
   Children& getChildren();
   const Children& getChildren() const;
 
-  Model::UPtr clone() const;
+  Model::UPtr clone(VariableSets::Ptr variable_sets) const;
 
   void setState(const VariableSets& variable_sets);
   ModelState::UPtr getState() const;
@@ -61,6 +62,7 @@ public:
 
 protected:
   tesseract_scene_graph::SceneGraph::UPtr scene_graph_;
+  ModelStateSet::Ptr state_set_;
   Model* parent_model_;
   std::string parent_link_name_;
   Children children_;

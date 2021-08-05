@@ -25,9 +25,10 @@ void getModelActiveLinkNamesRecursive(std::vector<std::string>& active_links,
   }
 }
 
-Model::Model(tesseract_scene_graph::SceneGraph::UPtr scene_graph)
+Model::Model(tesseract_scene_graph::SceneGraph::UPtr scene_graph, ModelStateSet::Ptr state_set)
 {
   scene_graph_ = std::move(scene_graph);
+  state_set_ = std::move(state_set);
 
   // Update link names
   std::vector<tesseract_scene_graph::Link::ConstPtr> links = scene_graph_->getLinks();
@@ -56,6 +57,13 @@ Model::Model(tesseract_scene_graph::SceneGraph::UPtr scene_graph)
   active_link_names_.clear();
   getModelActiveLinkNamesRecursive(active_link_names_, *scene_graph_, scene_graph_->getRoot(), false);
 
+  // Assign Variables
+  VariableSet variable_set;
+  for (const auto& joint_name : active_joint_names_)
+    variable_set[joint_name] = 0;  // todo set middle of limits
+
+  variable_sets_->assignVariableSet(scene_graph_->getName(), variable_set);
+
   // If scene graph is tree create default state solver
   if (scene_graph_->isTree())
   {
@@ -80,13 +88,18 @@ void Model::addChild(Model::UPtr child_model, std::string attach_link_name)
 Model::Children& Model::getChildren() { return children_; }
 const Model::Children& Model::getChildren() const { return children_; }
 
-Model::UPtr Model::clone() const { return std::make_unique<Model>(scene_graph_->clone()); }
+Model::UPtr Model::clone(VariableSets::Ptr variable_sets) const
+{
+  return std::make_unique<Model>(scene_graph_->clone(), variable_sets);
+}
 
 void Model::setState(const VariableSets& variable_set)
 {
-  auto it = variable_set.find(getName());
-  if (it == variable_set.end())
+  auto it = variable_set.getVariableSets().find(getName());
+  if (it == variable_set.getVariableSets().end())
     return;
+
+  variable_sets_->updateVariableSet(getName(), it->second);
 
   state_solver_->setState(it->second);
 }
@@ -95,8 +108,8 @@ ModelState::UPtr Model::getState() const { return current_state_->clone(); }
 
 ModelState::UPtr Model::getState(const VariableSets& variable_sets) const
 {
-  auto it = variable_sets.find(getName());
-  if (it == variable_sets.end())
+  auto it = variable_sets.getVariableSets().find(getName());
+  if (it == variable_sets.getVariableSets().end())
     return current_state_->clone();
 
   return state_solver_->getState(it->second);

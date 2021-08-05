@@ -43,7 +43,8 @@ add_code_coverage_all_targets(EXCLUDE ${COVERAGE_EXCLUDE} ENABLE ${TESSERACT_ENA
 add_library(${PROJECT_NAME}
   src/model.cpp
   src/model_state.cpp
-  src/model_state_solver.cpp)
+  src/model_state_solver.cpp
+  src/variable_sets.cpp)
 target_link_libraries(
   ${PROJECT_NAME}
   PUBLIC Eigen3::Eigen

@@ -26,7 +26,6 @@ public:
 
   void setBaseTransform(const Eigen::Isometry3d& transform);
   void applyTransform(const Eigen::Isometry3d& transform);
-  VariableSets getVariableSets() const;
   TransformSets getLinkTransformSets() const;
   TransformSets getJointTransformSets() const;
   ModelState::UPtr clone() const;
@@ -35,8 +34,8 @@ public:
 
   Eigen::Isometry3d base_transform{ Eigen::Isometry3d::Identity() };
 
-  /**  @brief The joint values used for calculating the joint and link transforms */
-  VariableSet joints;
+  /** @brief The joint variable and values */
+  VariableSet variables;
 
   /** @brief The link transforms in world coordinate system */
   tesseract_common::TransformMap link_transforms;

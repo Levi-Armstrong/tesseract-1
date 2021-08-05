@@ -213,9 +213,10 @@ int main(int /*argc*/, char** /*argv*/)
   SceneGraph::UPtr iiwa_sg = getSceneGraphIIWA();
   SceneGraph::UPtr ur_sg = getSceneGraphUR();
 
-  auto world_model = std::make_unique<Model>(std::move(world_sg));
-  auto iiwa_model = std::make_unique<Model>(std::move(iiwa_sg));
-  auto ur_model = std::make_unique<Model>(std::move(ur_sg));
+  auto variable_sets = std::make_shared<VariableSets>();
+  auto world_model = std::make_unique<Model>(std::move(world_sg), variable_sets);
+  auto iiwa_model = std::make_unique<Model>(std::move(iiwa_sg), variable_sets);
+  auto ur_model = std::make_unique<Model>(std::move(ur_sg), variable_sets);
 
   std::string world_model_name = world_model->getName();
   std::string iiwa_model_name = iiwa_model->getName();
@@ -224,9 +225,9 @@ int main(int /*argc*/, char** /*argv*/)
   world_model->addChild(std::move(iiwa_model), "iiwa_attach_link");
   world_model->addChild(std::move(ur_model), "ur_attach_link");
 
-  ModelState::UPtr state = world_model->getState();
-  VariableSets variable_sets = state->getVariableSets();
-  VariableSet iiwa_variables = variable_sets[iiwa_model_name];
+  //  ModelState::UPtr state = world_model->getState();
+  //  VariableSets variable_sets = state->getVariableSets();
+  //  VariableSet iiwa_variables = variable_sets[iiwa_model_name];
 
   std::cout << "Model Name: " << world_model->getName() << std::endl;
 

@@ -38,6 +38,7 @@ TESSERACT_COMMON_IGNORE_WARNINGS_POP
 #include <tesseract_scene_graph/graph.h>
 #include <tesseract_model_linked/types.h>
 #include <tesseract_model_linked/model_state.h>
+#include <tesseract_model_linked/model_state_set.h>
 
 #ifdef SWIG
 %shared_ptr(tesseract_model_simple::StateSolver)
@@ -60,7 +61,7 @@ public:
   ModelStateSolver(ModelStateSolver&&) = delete;
   ModelStateSolver& operator=(ModelStateSolver&&) = delete;
 
-  virtual bool init(const tesseract_scene_graph::SceneGraph& scene_graph);
+  virtual bool init(const tesseract_scene_graph::SceneGraph& scene_graph, ModelState* state);
 
   virtual void setState(const VariableSet& variable_set);
   virtual ModelState::UPtr getState() const;
@@ -70,8 +71,9 @@ public:
   virtual UPtr clone() const;
 
 protected:
+  std::string name_;
   std::string root_name_;
-  ModelState::UPtr current_state_;
+  ModelState* current_state_;
   KDL::Tree kdl_tree_;                                         /**< KDL tree object */
   std::unordered_map<std::string, unsigned int> joint_to_qnr_; /**< Map between joint name and kdl q index */
   KDL::JntArray kdl_jnt_array_;                                /**< The kdl joint array */

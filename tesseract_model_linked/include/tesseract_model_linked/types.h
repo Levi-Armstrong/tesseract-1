@@ -12,8 +12,9 @@ TESSERACT_COMMON_IGNORE_WARNINGS_POP
 namespace tesseract_model_linked
 {
 using VariableSet = std::map<std::string, double>;
-using VariableSets = std::unordered_map<std::string, VariableSet>;
-using TransformSets = tesseract_common::AlignedMap<std::string, tesseract_common::TransformMap>;
+// using VariableSets = std::unordered_map<std::string, VariableSet>;
+using TransformSet = tesseract_common::TransformMap;
+using TransformSets = tesseract_common::AlignedMap<std::string, TransformSet>;
 
 }  // namespace tesseract_model_linked
 
