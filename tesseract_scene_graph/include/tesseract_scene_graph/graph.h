@@ -131,6 +131,8 @@ public:
 
   using Ptr = std::shared_ptr<SceneGraph>;
   using ConstPtr = std::shared_ptr<const SceneGraph>;
+  using UPtr = std::unique_ptr<SceneGraph>;
+  using ConstUPtr = std::unique_ptr<const SceneGraph>;
 
   SceneGraph(const std::string& name = "");
   ~SceneGraph() = default;
@@ -138,14 +140,15 @@ public:
   SceneGraph(const SceneGraph& other) = delete;
   SceneGraph& operator=(const SceneGraph& other) = delete;
 
-  SceneGraph(SceneGraph&& other) = default;
-  SceneGraph& operator=(SceneGraph&& other) = default;
+  // Things do not seem to work after using move constructor so deleting
+  SceneGraph(SceneGraph&& other) = delete;
+  SceneGraph& operator=(SceneGraph&& other) = delete;
 
   /**
    * @brief Clone the scene graph
    * @return The cloned scene graph
    */
-  SceneGraph::Ptr clone() const;
+  SceneGraph::UPtr clone() const;
 
   /** @brief Clear the scene graph */
   void clear();
