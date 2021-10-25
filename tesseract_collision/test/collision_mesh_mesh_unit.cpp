@@ -14,18 +14,21 @@ TEST(TesseractCollisionUnit, BulletDiscreteSimpleCollisionMeshMeshUnit)  // NOLI
 {
   tesseract_collision_bullet::BulletDiscreteSimpleManager checker;
   test_suite::runTest(checker);
+  test_suite::runTestIssue626(checker);
 }
 
 TEST(TesseractCollisionUnit, BulletDiscreteBVHCollisionMeshMeshUnit)  // NOLINT
 {
   tesseract_collision_bullet::BulletDiscreteBVHManager checker;
   test_suite::runTest(checker);
+  test_suite::runTestIssue626(checker);
 }
 
 TEST(TesseractCollisionUnit, FCLDiscreteBVHCollisionMeshMeshUnit)  // NOLINT
 {
   tesseract_collision_fcl::FCLDiscreteBVHManager checker;
   test_suite::runTest(checker);
+  test_suite::runTestIssue626(checker);
 }
 
 int main(int argc, char** argv)

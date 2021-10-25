@@ -4,6 +4,7 @@
 #include <tesseract_collision/core/discrete_contact_manager.h>
 #include <tesseract_collision/core/common.h>
 #include <tesseract_geometry/geometries.h>
+#include <tesseract_geometry/mesh_parser.h>
 
 namespace tesseract_collision
 {
@@ -212,6 +213,88 @@ inline void runTest(DiscreteContactManager& checker)
   EXPECT_NEAR(result_vector[0].nearest_points[0][2], result_vector[0].nearest_points[1][2], 0.001);
   EXPECT_GT((idx[2] * result_vector[0].normal).dot(Eigen::Vector3d(0, 1, 0)), 0.0);
   EXPECT_LT(std::abs(std::acos((idx[2] * result_vector[0].normal).dot(Eigen::Vector3d(0, 1, 0)))), 0.00001);
+}
+
+inline void runTestIssue626(DiscreteContactManager& checker)
+{
+  ////////////////////////////////////
+  // Add collision object 1 to checker
+  ////////////////////////////////////
+  std::string collision_obj_1_path = std::string(TESSERACT_SUPPORT_DIR) + "/meshes/collision_object_1_scaled.ply";
+  auto collision_obj_1 = tesseract_geometry::createMeshFromPath<tesseract_geometry::Mesh>(collision_obj_1_path,Eigen::Vector3d(1,1,1), true, true);
+  EXPECT_TRUE(collision_obj_1.size() == 1);
+
+  CollisionShapesConst obj1_shapes;
+  tesseract_common::VectorIsometry3d obj1_poses;
+  obj1_shapes.push_back(collision_obj_1.front());
+  obj1_poses.push_back(Eigen::Isometry3d::Identity());
+
+  checker.addCollisionObject("collision_object_1_link", 0, obj1_shapes, obj1_poses, false);
+  checker.enableCollisionObject("collision_object_1_link");
+
+  ////////////////////////////////////
+  // Add collision object 2 to checker
+  ////////////////////////////////////
+  std::string collision_obj_2_path = std::string(TESSERACT_SUPPORT_DIR) + "/meshes/collision_object_2_scaled.dae";
+  auto collision_obj_2 = tesseract_geometry::createMeshFromPath<tesseract_geometry::Mesh>(collision_obj_2_path,Eigen::Vector3d(1,1,1), true, true);
+  EXPECT_TRUE(collision_obj_2.size() == 1);
+
+  CollisionShapesConst obj2_shapes;
+  tesseract_common::VectorIsometry3d obj2_poses;
+  obj2_shapes.push_back(collision_obj_2.front());
+  obj2_poses.push_back(Eigen::Isometry3d::Identity());
+
+  checker.addCollisionObject("collision_object_2_link", 0, obj2_shapes, obj2_poses, false);
+  checker.enableCollisionObject("collision_object_2_link");
+
+  ///////////////////////////////////////////////////////////////////
+  // Test when object is in collision (Closest Feature Edge to Edge)
+  ///////////////////////////////////////////////////////////////////
+  checker.setActiveCollisionObjects({ "collision_object_1_link", "collision_object_2_link" });
+  checker.setCollisionMarginData(CollisionMarginData(0));
+  EXPECT_NEAR(checker.getCollisionMarginData().getMaxCollisionMargin(), 0.0, 1e-5);
+
+  { // Objects should be in collision
+    Eigen::Isometry3d collision_obj_1_pose {Eigen::Isometry3d::Identity()};
+    collision_obj_1_pose.linear() = Eigen::Quaterniond( -0.364023, -0.1207412, 0.065261, 0.9212219).toRotationMatrix(); // wxyz
+    collision_obj_1_pose.translation() = Eigen::Vector3d(0.970507782716257, -0.199022472197488, 0.0057890632254045);
+
+    Eigen::Isometry3d collision_obj_2_pose {Eigen::Isometry3d::Identity()};
+    collision_obj_2_pose.translation() = Eigen::Vector3d(1.750, 0.250, -0.020);
+
+    tesseract_common::TransformMap location;
+    location["collision_object_1_link"] = collision_obj_1_pose;
+    location["collision_object_2_link"] = collision_obj_2_pose;
+    checker.setCollisionObjectsTransform(location);
+
+    // Perform collision check
+    ContactResultMap result;
+    checker.contactTest(result, ContactRequest(ContactTestType::ALL));
+
+    ContactResultVector result_vector;
+    flattenResults(std::move(result), result_vector);
+
+    EXPECT_TRUE(!result_vector.empty());
+  }
+
+  { // Objects should not be in collision
+    Eigen::Isometry3d collision_obj_1_pose {Eigen::Isometry3d::Identity()};
+    collision_obj_1_pose.linear() = Eigen::Quaterniond( 0.017854, -0.3827401, 0.023661, 0.9233804).toRotationMatrix(); // wxyz
+    collision_obj_1_pose.translation() = Eigen::Vector3d(0.979239218615628, -0.0856723302587343, 0.518894463458944);
+
+    tesseract_common::TransformMap location;
+    location["collision_object_1_link"] = collision_obj_1_pose;
+    checker.setCollisionObjectsTransform(location);
+
+    // Perform collision check
+    ContactResultMap result;
+    checker.contactTest(result, ContactRequest(ContactTestType::ALL));
+
+    ContactResultVector result_vector;
+    flattenResults(std::move(result), result_vector);
+
+    EXPECT_TRUE(result_vector.empty());
+  }
 }
 }  // namespace test_suite
 }  // namespace tesseract_collision
