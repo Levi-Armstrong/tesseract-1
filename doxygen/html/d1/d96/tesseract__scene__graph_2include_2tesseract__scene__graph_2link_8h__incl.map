@@ -1,11 +1,11 @@
-<map id="tesseract/tesseract_scene_graph/include/tesseract_scene_graph/link.h" name="tesseract/tesseract_scene_graph/include/tesseract_scene_graph/link.h">
-<area shape="rect" id="node1" title=" " alt="" coords="271,5,432,76"/>
-<area shape="rect" id="node2" href="$de/d3c/macros_8h.html" title="Common Tesseract Macros." alt="" coords="84,213,275,240"/>
-<area shape="rect" id="node3" title=" " alt="" coords="5,213,60,240"/>
-<area shape="rect" id="node4" title=" " alt="" coords="299,213,358,240"/>
-<area shape="rect" id="node5" title=" " alt="" coords="615,131,661,158"/>
-<area shape="rect" id="node6" title=" " alt="" coords="383,213,451,240"/>
-<area shape="rect" id="node7" title=" " alt="" coords="503,213,594,240"/>
-<area shape="rect" id="node8" href="$d4/d6d/tesseract__scene__graph_2include_2tesseract__scene__graph_2joint_8h.html" title=" " alt="" coords="331,124,489,165"/>
-<area shape="rect" id="node9" href="$d0/da6/tesseract__geometry_2include_2tesseract__geometry_2geometry_8h.html" title="Tesseract Geometries." alt="" coords="121,124,257,165"/>
+<map id="tesseract_scene_graph/include/tesseract_scene_graph/link.h" name="tesseract_scene_graph/include/tesseract_scene_graph/link.h">
+<area shape="rect" id="node1" title=" " alt="" coords="268,5,435,61"/>
+<area shape="rect" id="node2" href="$de/d3c/macros_8h.html" title="Common Tesseract Macros." alt="" coords="84,199,275,225"/>
+<area shape="rect" id="node3" title=" " alt="" coords="5,199,60,225"/>
+<area shape="rect" id="node4" title=" " alt="" coords="299,199,358,225"/>
+<area shape="rect" id="node5" title=" " alt="" coords="615,117,661,143"/>
+<area shape="rect" id="node6" title=" " alt="" coords="383,199,451,225"/>
+<area shape="rect" id="node7" title=" " alt="" coords="503,199,594,225"/>
+<area shape="rect" id="node8" href="$d4/d6d/tesseract__scene__graph_2include_2tesseract__scene__graph_2joint_8h.html" title=" " alt="" coords="331,109,489,151"/>
+<area shape="rect" id="node9" href="$d0/da6/tesseract__geometry_2include_2tesseract__geometry_2geometry_8h.html" title="Tesseract Geometries." alt="" coords="121,109,257,151"/>
 </map>

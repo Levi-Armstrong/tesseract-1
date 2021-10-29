@@ -1,5 +1,5 @@
-\hypertarget{tesseract__common_2include_2tesseract__common_2utils_8h}{}\doxysection{tesseract/tesseract\+\_\+common/include/tesseract\+\_\+common/utils.h File Reference}
-\label{tesseract__common_2include_2tesseract__common_2utils_8h}\index{tesseract/tesseract\_common/include/tesseract\_common/utils.h@{tesseract/tesseract\_common/include/tesseract\_common/utils.h}}
+\hypertarget{tesseract__common_2include_2tesseract__common_2utils_8h}{}\doxysection{tesseract\+\_\+common/include/tesseract\+\_\+common/utils.h File Reference}
+\label{tesseract__common_2include_2tesseract__common_2utils_8h}\index{tesseract\_common/include/tesseract\_common/utils.h@{tesseract\_common/include/tesseract\_common/utils.h}}
 
 
 Common Tesseract Utility Functions.  
@@ -12,13 +12,10 @@ Common Tesseract Utility Functions.
 {\ttfamily \#include $<$stdexcept$>$}\newline
 {\ttfamily \#include $<$random$>$}\newline
 {\ttfamily \#include $<$iomanip$>$}\newline
-{\ttfamily \#include $<$ctime$>$}\newline
-{\ttfamily \#include $<$Eigen/\+Geometry$>$}\newline
+{\ttfamily \#include $<$Eigen/\+Core$>$}\newline
 {\ttfamily \#include $<$iostream$>$}\newline
-{\ttfamily \#include $<$algorithm$>$}\newline
 {\ttfamily \#include $<$tinyxml2.\+h$>$}\newline
-{\ttfamily \#include $<$boost/filesystem.\+hpp$>$}\newline
-{\ttfamily \#include $<$console\+\_\+bridge/console.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+common/types.\+h$>$}\newline
 Include dependency graph for utils.\+h\+:
 \nopagebreak
 \begin{figure}[H]
@@ -35,26 +32,48 @@ Include dependency graph for utils.\+h\+:
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
+{\footnotesize template$<$typename... Args$>$ }\\std\+::string \mbox{\hyperlink{namespacetesseract__common_a7f13ad2a741226ab5255302f6750ed4a}{tesseract\+\_\+common\+::str\+Format}} (const std\+::string \&format, Args... args)
+\item 
+void \mbox{\hyperlink{namespacetesseract__common_a4ed12ea384452e2d5d4f7a0854035384}{tesseract\+\_\+common\+::twist\+Change\+Ref\+Point}} (Eigen\+::\+Ref$<$ Eigen\+::\+Vector\+Xd $>$ twist, const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector3d $>$ \&ref\+\_\+point)
+\begin{DoxyCompactList}\small\item\em Change the reference point of the provided Twist. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespacetesseract__common_a98c27df906a6e17d088772d3d1c21a5d}{tesseract\+\_\+common\+::twist\+Change\+Base}} (Eigen\+::\+Ref$<$ Eigen\+::\+Vector\+Xd $>$ twist, const Eigen\+::\+Isometry3d \&change\+\_\+base)
+\begin{DoxyCompactList}\small\item\em Change the base coordinate system of the Twist. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespacetesseract__common_a9b00920e39050a4b9df5e3100aac7e55}{tesseract\+\_\+common\+::jacobian\+Change\+Base}} (Eigen\+::\+Ref$<$ Eigen\+::\+Matrix\+Xd $>$ jacobian, const Eigen\+::\+Isometry3d \&change\+\_\+base)
+\begin{DoxyCompactList}\small\item\em Change the base coordinate system of the jacobian. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespacetesseract__common_a5043afd3f3dbdd6655d543e09a7c9ea4}{tesseract\+\_\+common\+::jacobian\+Change\+Ref\+Point}} (Eigen\+::\+Ref$<$ Eigen\+::\+Matrix\+Xd $>$ jacobian, const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector3d $>$ \&ref\+\_\+point)
+\begin{DoxyCompactList}\small\item\em Change the reference point of the jacobian. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector\+Xd \mbox{\hyperlink{namespacetesseract__common_a757f1e4610f79b4e79e796c698a3c113}{tesseract\+\_\+common\+::concat}} (const Eigen\+::\+Vector\+Xd \&a, const Eigen\+::\+Vector\+Xd \&b)
+\begin{DoxyCompactList}\small\item\em Concatenate two vector. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector3d \mbox{\hyperlink{namespacetesseract__common_a715e8a56239e73ccfa00e82cda79a28c}{tesseract\+\_\+common\+::calc\+Rotational\+Error}} (const Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix3d $>$ \&R)
+\begin{DoxyCompactList}\small\item\em Calculate the rotation error vector given a rotation error matrix where the angle is between \mbox{[}-\/pi, pi\mbox{]}. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector3d \mbox{\hyperlink{namespacetesseract__common_a41a6314e5371fa9604c459b85f159afd}{tesseract\+\_\+common\+::calc\+Rotational\+Error2}} (const Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix3d $>$ \&R)
+\begin{DoxyCompactList}\small\item\em Calculate the rotation error vector given a rotation error matrix where the angle is between \mbox{[}0, 2 $\ast$ pi\mbox{]}. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector\+Xd \mbox{\hyperlink{namespacetesseract__common_a913b8ec499e3bfe779dc95bae54f39d4}{tesseract\+\_\+common\+::calc\+Transform\+Error}} (const Eigen\+::\+Isometry3d \&t1, const Eigen\+::\+Isometry3d \&t2)
+\begin{DoxyCompactList}\small\item\em Calculate error between two transforms expressed in t1 coordinate system. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector4d \mbox{\hyperlink{namespacetesseract__common_a0d105162c2cd10693e7387cb74d8318b}{tesseract\+\_\+common\+::compute\+Random\+Color}} ()
+\begin{DoxyCompactList}\small\item\em This computes a random color RGBA \mbox{[}0, 1\mbox{]} with alpha set to 1. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespacetesseract__common_ac4e9558332430365cd69cb2eec1784c8}{tesseract\+\_\+common\+::print\+Nested\+Exception}} (const std\+::exception \&e, int level=0)
+\begin{DoxyCompactList}\small\item\em Print a nested exception. \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{namespacetesseract__common_a58ecad04db85855fa9e4de21084598ca}{tesseract\+\_\+common\+::get\+Temp\+Path}} ()
 \begin{DoxyCompactList}\small\item\em Get the host temp directory path. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{namespacetesseract__common_a1dc3a9525efbe582991edd4eedc26079}{tesseract\+\_\+common\+::is\+Numeric}} (const std\+::string \&s)
 \begin{DoxyCompactList}\small\item\em Determine if a string is a number. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{namespacetesseract__common_a0db40f06dba7e6be18a2c4f098ad7a00}{tesseract\+\_\+common\+::is\+Numeric}} (const std\+::vector$<$ std\+::string $>$ \&sv)
-\item 
-{\footnotesize template$<$typename Float\+Type $>$ }\\bool \mbox{\hyperlink{namespacetesseract__common_a00bc131acfeba0eba8fe7ff7cd944860}{tesseract\+\_\+common\+::to\+Numeric}} (const std\+::string \&s, Float\+Type \&value)
-\begin{DoxyCompactList}\small\item\em Convert a string to a numeric value type. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespacetesseract__common_a0db40f06dba7e6be18a2c4f098ad7a00}{tesseract\+\_\+common\+::is\+Numeric}} (const \mbox{\hyperlink{vhacdRaycastMesh_8cpp_adcf134d50025cc52907d0c8ac798d89d}{std\+::vector}}$<$ std\+::string $>$ \&sv)
+\begin{DoxyCompactList}\small\item\em Determine if each string in vector is a number. \end{DoxyCompactList}\item 
 Eigen\+::\+Vector\+Xd \mbox{\hyperlink{namespacetesseract__common_aa14552337385ce1de42da699506f8b03}{tesseract\+\_\+common\+::generate\+Random\+Number}} (const Eigen\+::\+Ref$<$ const Eigen\+::\+Matrix\+X2d $>$ \&limits)
-\begin{DoxyCompactList}\small\item\em Given a set of limits it will generate a vector of randon numbers between the limit. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Given a set of limits it will generate a vector of random numbers between the limit. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{namespacetesseract__common_af46edf9701e45b20e95a5abfac500b8f}{tesseract\+\_\+common\+::ltrim}} (std\+::string \&s)
 \begin{DoxyCompactList}\small\item\em Left trim string. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{namespacetesseract__common_aa86a4f0e5ca9d2b1f5abc3f34735d85b}{tesseract\+\_\+common\+::rtrim}} (std\+::string \&s)
 \begin{DoxyCompactList}\small\item\em Right trim string. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{namespacetesseract__common_aeacd629bcf585286917aafa7b8e603bb}{tesseract\+\_\+common\+::trim}} (std\+::string \&s)
 \begin{DoxyCompactList}\small\item\em Trim left and right of string. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{namespacetesseract__common_aaedf0e7043da047ab5a970a5669cf5d0}{tesseract\+\_\+common\+::is\+Identical}} (const std\+::vector$<$ std\+::string $>$ \&vec1, const std\+::vector$<$ std\+::string $>$ \&vec2, bool ordered=true)
+{\footnotesize template$<$typename T $>$ }\\bool \mbox{\hyperlink{namespacetesseract__common_a988d90ea1a18bb1b94cf257a78bc5bc2}{tesseract\+\_\+common\+::is\+Identical}} (const \mbox{\hyperlink{vhacdRaycastMesh_8cpp_adcf134d50025cc52907d0c8ac798d89d}{std\+::vector}}$<$ T $>$ \&vec1, const \mbox{\hyperlink{vhacdRaycastMesh_8cpp_adcf134d50025cc52907d0c8ac798d89d}{std\+::vector}}$<$ T $>$ \&vec2, bool ordered=true)
 \begin{DoxyCompactList}\small\item\em Check if two vector of strings are identical. \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{namespacetesseract__common_a1077809c98ad8bf5262e426cff6e63a3}{tesseract\+\_\+common\+::get\+Timestamp\+String}} ()
 \begin{DoxyCompactList}\small\item\em Get Timestamp string. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespacetesseract__common_a7da14d8e3b6c20175711209343aafe2f}{tesseract\+\_\+common\+::reorder}} (Eigen\+::\+Ref$<$ Eigen\+::\+Vector\+Xd $>$ v, \mbox{\hyperlink{vhacdRaycastMesh_8cpp_adcf134d50025cc52907d0c8ac798d89d}{std\+::vector}}$<$ Eigen\+::\+Index $>$ order)
+\begin{DoxyCompactList}\small\item\em Reorder Eigen\+::\+Vector\+Xd implace given index list. \end{DoxyCompactList}\item 
 tinyxml2\+::\+XMLError \mbox{\hyperlink{namespacetesseract__common_ae1a3ebd3610dce6d24cc7569606fd9ab}{tesseract\+\_\+common\+::\+Query\+String\+Value}} (const tinyxml2\+::\+XMLElement $\ast$xml\+\_\+element, std\+::string \&value)
 \begin{DoxyCompactList}\small\item\em Query a string value from xml element. \end{DoxyCompactList}\item 
 tinyxml2\+::\+XMLError \mbox{\hyperlink{namespacetesseract__common_ab95676b5418063a1d7c84fbba4ff1fe0}{tesseract\+\_\+common\+::\+Query\+String\+Text}} (const tinyxml2\+::\+XMLElement $\ast$xml\+\_\+element, std\+::string \&text)
@@ -69,8 +88,14 @@ tinyxml2\+::\+XMLError \mbox{\hyperlink{namespacetesseract__common_a609734264f8b
 \begin{DoxyCompactList}\small\item\em Query a string attribute from an xml element and print error log. \end{DoxyCompactList}\item 
 tinyxml2\+::\+XMLError \mbox{\hyperlink{namespacetesseract__common_ab5ec94b62bea51b6e40598e0f8e7a6c3}{tesseract\+\_\+common\+::\+Query\+Double\+Attribute\+Required}} (const tinyxml2\+::\+XMLElement $\ast$xml\+\_\+element, const char $\ast$name, double \&value)
 \begin{DoxyCompactList}\small\item\em Query a double attribute from an xml element and print error log. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{namespacetesseract__common_a1ce86f1e809df1ac04fef0b5cf396fe2}{tesseract\+\_\+common\+::almost\+Equal\+Relative\+And\+Abs}} (double a, double b, double max\+\_\+diff, double max\+\_\+rel\+\_\+diff=std\+::numeric\+\_\+limits$<$ double $>$\+::epsilon())
-\begin{DoxyCompactList}\small\item\em Check if two double are relatively equal. \end{DoxyCompactList}\end{DoxyCompactItemize}
+tinyxml2\+::\+XMLError \mbox{\hyperlink{namespacetesseract__common_ad9a12946985d34fc3b1fcfb61b473f8b}{tesseract\+\_\+common\+::\+Query\+Int\+Attribute\+Required}} (const tinyxml2\+::\+XMLElement $\ast$xml\+\_\+element, const char $\ast$name, int \&value)
+\begin{DoxyCompactList}\small\item\em Query a int attribute from an xml element and print error log. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespacetesseract__common_ac9961ff2a5d322165a817241b7746f64}{tesseract\+\_\+common\+::almost\+Equal\+Relative\+And\+Abs}} (double a, double b, double max\+\_\+diff=1e-\/6, double max\+\_\+rel\+\_\+diff=std\+::numeric\+\_\+limits$<$ double $>$\+::epsilon())
+\begin{DoxyCompactList}\small\item\em Check if two double are relatively equal. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespacetesseract__common_a12eb899ec3967699e946431730eed959}{tesseract\+\_\+common\+::almost\+Equal\+Relative\+And\+Abs}} (const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector\+Xd $>$ \&v1, const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector\+Xd $>$ \&v2, double max\+\_\+diff=1e-\/6, double max\+\_\+rel\+\_\+diff=std\+::numeric\+\_\+limits$<$ double $>$\+::epsilon())
+\begin{DoxyCompactList}\small\item\em Check if two Eigen Vector\+Xd are relatively and absolute equal. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Float\+Type $>$ }\\bool \mbox{\hyperlink{namespacetesseract__common_a00bc131acfeba0eba8fe7ff7cd944860}{tesseract\+\_\+common\+::to\+Numeric}} (const std\+::string \&s, Float\+Type \&value)
+\begin{DoxyCompactList}\small\item\em Convert a string to a numeric value type. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
@@ -91,7 +116,7 @@ January 18, 2018
 TODO 
 \end{DoxyVersion}
 \begin{DoxyRefDesc}{Bug}
-\item[\mbox{\hyperlink{bug__bug000069}{Bug}}]No known bugs\end{DoxyRefDesc}
+\item[\mbox{\hyperlink{bug__bug000054}{Bug}}]No known bugs\end{DoxyRefDesc}
 
 
 \begin{DoxyCopyright}{Copyright}

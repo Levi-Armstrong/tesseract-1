@@ -1,0 +1,6 @@
+<map id="tesseract_environment::ChangeCollisionMarginsCommand" name="tesseract_environment::ChangeCollisionMarginsCommand">
+<area shape="rect" id="node1" title=" " alt="" coords="716,37,943,79"/>
+<area shape="rect" id="node2" href="$d0/d1c/classtesseract__environment_1_1Command.html" title=" " alt="" coords="361,5,515,47"/>
+<area shape="rect" id="node3" href="$d6/dc7/classtesseract__common_1_1CollisionMarginData.html" title="Stores information about how the margins allowed between collision objects." alt="" coords="344,71,532,112"/>
+<area shape="rect" id="node4" title=" " alt="" coords="5,56,212,127"/>
+</map>

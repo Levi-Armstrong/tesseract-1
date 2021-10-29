@@ -1,5 +1,5 @@
-\hypertarget{tesseract__urdf__origin__unit_8cpp}{}\doxysection{tesseract/tesseract\+\_\+urdf/test/tesseract\+\_\+urdf\+\_\+origin\+\_\+unit.cpp File Reference}
-\label{tesseract__urdf__origin__unit_8cpp}\index{tesseract/tesseract\_urdf/test/tesseract\_urdf\_origin\_unit.cpp@{tesseract/tesseract\_urdf/test/tesseract\_urdf\_origin\_unit.cpp}}
+\hypertarget{tesseract__urdf__origin__unit_8cpp}{}\doxysection{tesseract\+\_\+urdf/test/tesseract\+\_\+urdf\+\_\+origin\+\_\+unit.cpp File Reference}
+\label{tesseract__urdf__origin__unit_8cpp}\index{tesseract\_urdf/test/tesseract\_urdf\_origin\_unit.cpp@{tesseract\_urdf/test/tesseract\_urdf\_origin\_unit.cpp}}
 {\ttfamily \#include $<$tesseract\+\_\+common/macros.\+h$>$}\newline
 {\ttfamily \#include $<$gtest/gtest.\+h$>$}\newline
 {\ttfamily \#include $<$Eigen/\+Geometry$>$}\newline
@@ -19,6 +19,8 @@ Include dependency graph for tesseract\+\_\+urdf\+\_\+origin\+\_\+unit.\+cpp\+:
 \mbox{\hyperlink{macros_8h_a8cc0e3c6a3382c5c0b19eb9e676fc2db}{TESSERACT\+\_\+\+COMMON\+\_\+\+IGNORE\+\_\+\+WARNINGS\+\_\+\+PUSH}} \mbox{\hyperlink{macros_8h_a7af8561cf52519e9896b0697095c1b8b}{TESSERACT\+\_\+\+COMMON\+\_\+\+IGNORE\+\_\+\+WARNINGS\+\_\+\+POP}} Eigen\+::\+Quaterniond \mbox{\hyperlink{tesseract__urdf__origin__unit_8cpp_ab28306a9dd4a55cca7d941ec37299696}{from\+RPY}} (double roll, double pitch, double yaw)
 \begin{DoxyCompactList}\small\item\em This function was pulled from urdfdom library to verify that the method of using Eigen produces the same result. This is only used for this unit test and Eigen is used within the origin class to convert roll, pitch and yaw to a rotation matrix. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{tesseract__urdf__origin__unit_8cpp_a22c8480d1d78e726d3eef8c87779de63}{TEST}} (Tesseract\+URDFUnit, parse\+\_\+origin)
+\item 
+\mbox{\hyperlink{tesseract__urdf__origin__unit_8cpp_abeac0d66fbeca06051b92b1567bad1f4}{TEST}} (Tesseract\+URDFUnit, write\+\_\+origin)
 \end{DoxyCompactItemize}
 
 
@@ -36,6 +38,12 @@ This function was pulled from urdfdom library to verify that the method of using
 \mbox{\Hypertarget{tesseract__urdf__origin__unit_8cpp_a22c8480d1d78e726d3eef8c87779de63}\label{tesseract__urdf__origin__unit_8cpp_a22c8480d1d78e726d3eef8c87779de63}} 
 \index{tesseract\_urdf\_origin\_unit.cpp@{tesseract\_urdf\_origin\_unit.cpp}!TEST@{TEST}}
 \index{TEST@{TEST}!tesseract\_urdf\_origin\_unit.cpp@{tesseract\_urdf\_origin\_unit.cpp}}
-\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Tesseract\+URDFUnit}]{,  }\item[{parse\+\_\+origin}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{tesseract__urdf__origin__unit_8cpp_abeac0d66fbeca06051b92b1567bad1f4}\label{tesseract__urdf__origin__unit_8cpp_abeac0d66fbeca06051b92b1567bad1f4}} 
+\index{tesseract\_urdf\_origin\_unit.cpp@{tesseract\_urdf\_origin\_unit.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!tesseract\_urdf\_origin\_unit.cpp@{tesseract\_urdf\_origin\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Tesseract\+URDFUnit}]{,  }\item[{write\+\_\+origin}]{ }\end{DoxyParamCaption})}
 

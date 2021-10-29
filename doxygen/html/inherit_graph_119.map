@@ -1,3 +1,11 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$d6/dff/classmap_3_01std_1_1string_00_01COW_1_1Ptr_01_4_1_1reverse__iterator.html" title=" " alt="" coords="5,5,148,61"/>
+<area shape="rect" id="node1" href="$de/d1c/classtesseract__kinematics_1_1InverseKinematics.html" title="Inverse kinematics functions." alt="" coords="5,201,152,243"/>
+<area shape="rect" id="node2" href="$d5/df5/classtesseract__kinematics_1_1IKFastInvKin.html" title="IKFast Inverse Kinematics Implmentation." alt="" coords="203,5,349,47"/>
+<area shape="rect" id="node4" href="$d7/dc4/classtesseract__kinematics_1_1KDLInvKinChainLMA.html" title="KDL Inverse kinematic chain implementation." alt="" coords="200,71,352,112"/>
+<area shape="rect" id="node5" href="$d4/da0/classtesseract__kinematics_1_1KDLInvKinChainNR.html" title="KDL Inverse kinematic chain implementation." alt="" coords="203,136,349,177"/>
+<area shape="rect" id="node6" href="$d5/d52/classtesseract__kinematics_1_1OPWInvKin.html" title="OPW Inverse Kinematics Implementation." alt="" coords="203,201,349,243"/>
+<area shape="rect" id="node7" href="$d2/d54/classtesseract__kinematics_1_1REPInvKin.html" title="Robot With External Positioner Inverse kinematic implementation." alt="" coords="203,267,349,308"/>
+<area shape="rect" id="node8" href="$d8/d78/classtesseract__kinematics_1_1ROPInvKin.html" title="Robot on Positioner Inverse kinematic implementation." alt="" coords="203,332,349,373"/>
+<area shape="rect" id="node9" href="$d3/df6/classtesseract__kinematics_1_1URInvKin.html" title="Universal Robot Inverse Kinematics Implementation." alt="" coords="203,397,349,439"/>
+<area shape="rect" id="node3" href="$da/dbb/classtesseract__kinematics_1_1AbbIRB2400Kinematics.html" title=" " alt="" coords="400,5,567,47"/>
 </map>

@@ -1,0 +1,149 @@
+\hypertarget{any_8h}{}\doxysection{tesseract\+\_\+common/include/tesseract\+\_\+common/any.h File Reference}
+\label{any_8h}\index{tesseract\_common/include/tesseract\_common/any.h@{tesseract\_common/include/tesseract\_common/any.h}}
+
+
+This a boost serializable any.  
+
+
+{\ttfamily \#include $<$tesseract\+\_\+common/macros.\+h$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include $<$typeindex$>$}\newline
+{\ttfamily \#include $<$boost/serialization/base\+\_\+object.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/serialization/nvp.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/serialization/unique\+\_\+ptr.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/serialization/export.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/type\+\_\+traits/is\+\_\+virtual\+\_\+base\+\_\+of.\+hpp$>$}\newline
+Include dependency graph for any.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/ded/any_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=222pt]{df/d92/any_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structtesseract__common_1_1detail__any_1_1AnyInnerBase}{tesseract\+\_\+common\+::detail\+\_\+any\+::\+Any\+Inner\+Base}}
+\item 
+struct \mbox{\hyperlink{structtesseract__common_1_1detail__any_1_1AnyInner}{tesseract\+\_\+common\+::detail\+\_\+any\+::\+Any\+Inner$<$ T $>$}}
+\item 
+struct \mbox{\hyperlink{structboost_1_1is__virtual__base__of_3_01tesseract__common_1_1detail__any_1_1AnyInnerBase_00_01tac47434b92b7658b28e2dbc80d41c5f0}{boost\+::is\+\_\+virtual\+\_\+base\+\_\+of$<$ tesseract\+\_\+common\+::detail\+\_\+any\+::\+Any\+Inner\+Base, tesseract\+\_\+common\+::detail\+\_\+any\+::\+Any\+Inner$<$ T $>$ $>$}}
+\item 
+class \mbox{\hyperlink{classtesseract__common_1_1Any}{tesseract\+\_\+common\+::\+Any}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacetesseract__common}{tesseract\+\_\+common}}
+\item 
+ \mbox{\hyperlink{namespacetesseract__common_1_1detail__any}{tesseract\+\_\+common\+::detail\+\_\+any}}
+\item 
+ \mbox{\hyperlink{namespaceboost}{boost}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{any_8h_a2e797dbbe4d98ed91b40db9829dd9ca0}{TESSERACT\+\_\+\+ANY\+\_\+\+EXPORT\+\_\+\+KEY}}(any\+\_\+t)
+\begin{DoxyCompactList}\small\item\em If shared library, this must go in the header after the class definition. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{any_8h_abfb199b98abe6f8a2b37e8ad0a8738c8}{TESSERACT\+\_\+\+ANY\+\_\+\+EXPORT\+\_\+\+IMPLEMENT}}(any\+\_\+t)~  BOOST\+\_\+\+CLASS\+\_\+\+EXPORT\+\_\+\+IMPLEMENT(\mbox{\hyperlink{structtesseract__common_1_1detail__any_1_1AnyInner}{tesseract\+\_\+common\+::detail\+\_\+any\+::\+Any\+Inner}}$<$any\+\_\+t$>$)
+\begin{DoxyCompactList}\small\item\em If shared library, this must go in the cpp after the implicit instantiation of the serialize function. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{any_8h_acd44446dca736c7fb7886a3092f13869}{TESSERACT\+\_\+\+ANY\+\_\+\+EXPORT}}(any\+\_\+t)
+\begin{DoxyCompactList}\small\item\em This should not be used within shared libraries use the two above. If not in a shared library it can go in header or cpp. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{any_8h_aaec163e216269fcdb13a222b14cd4ccf}{BOOST\+\_\+\+CLASS\+\_\+\+TRACKING}} (\mbox{\hyperlink{classtesseract__common_1_1Any}{tesseract\+\_\+common\+::\+Any}}, boost\+::serialization\+::track\+\_\+never)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This a boost serializable any. 
+
+\begin{DoxyAuthor}{Author}
+Levi Armstrong 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+February 27, 2021 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+TODO 
+\end{DoxyVersion}
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000038}{Bug}}]No known bugs\end{DoxyRefDesc}
+
+
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2021, Southwest Research Institute
+\end{DoxyCopyright}
+\begin{DoxyParagraph}{License}
+Software License Agreement (Apache License) 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+Licensed under the Apache License, Version 2.\+0 (the \char`\"{}\+License\char`\"{}); you may not use this file except in compliance with the License. You may obtain a copy of the License at \href{http://www.apache.org/licenses/LICENSE-2.0}{\texttt{ http\+://www.\+apache.\+org/licenses/\+LICENSE-\/2.\+0}} 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \char`\"{}\+AS IS\char`\"{} BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. 
+\end{DoxyParagraph}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{any_8h_acd44446dca736c7fb7886a3092f13869}\label{any_8h_acd44446dca736c7fb7886a3092f13869}} 
+\index{any.h@{any.h}!TESSERACT\_ANY\_EXPORT@{TESSERACT\_ANY\_EXPORT}}
+\index{TESSERACT\_ANY\_EXPORT@{TESSERACT\_ANY\_EXPORT}!any.h@{any.h}}
+\doxysubsubsection{\texorpdfstring{TESSERACT\_ANY\_EXPORT}{TESSERACT\_ANY\_EXPORT}}
+{\footnotesize\ttfamily \#define TESSERACT\+\_\+\+ANY\+\_\+\+EXPORT(\begin{DoxyParamCaption}\item[{}]{any\+\_\+t }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  \mbox{\hyperlink{any_8h_a2e797dbbe4d98ed91b40db9829dd9ca0}{TESSERACT\_ANY\_EXPORT\_KEY}}(any\_t)                                                                                      \(\backslash\)}
+\DoxyCodeLine{  TESSERACT\_ANY\_EXPORT\_IMPLEMENT(any\_t)}
+
+\end{DoxyCode}
+
+
+This should not be used within shared libraries use the two above. If not in a shared library it can go in header or cpp. 
+
+\mbox{\Hypertarget{any_8h_abfb199b98abe6f8a2b37e8ad0a8738c8}\label{any_8h_abfb199b98abe6f8a2b37e8ad0a8738c8}} 
+\index{any.h@{any.h}!TESSERACT\_ANY\_EXPORT\_IMPLEMENT@{TESSERACT\_ANY\_EXPORT\_IMPLEMENT}}
+\index{TESSERACT\_ANY\_EXPORT\_IMPLEMENT@{TESSERACT\_ANY\_EXPORT\_IMPLEMENT}!any.h@{any.h}}
+\doxysubsubsection{\texorpdfstring{TESSERACT\_ANY\_EXPORT\_IMPLEMENT}{TESSERACT\_ANY\_EXPORT\_IMPLEMENT}}
+{\footnotesize\ttfamily \#define TESSERACT\+\_\+\+ANY\+\_\+\+EXPORT\+\_\+\+IMPLEMENT(\begin{DoxyParamCaption}\item[{}]{any\+\_\+t }\end{DoxyParamCaption})~  BOOST\+\_\+\+CLASS\+\_\+\+EXPORT\+\_\+\+IMPLEMENT(\mbox{\hyperlink{structtesseract__common_1_1detail__any_1_1AnyInner}{tesseract\+\_\+common\+::detail\+\_\+any\+::\+Any\+Inner}}$<$any\+\_\+t$>$)}
+
+
+
+If shared library, this must go in the cpp after the implicit instantiation of the serialize function. 
+
+\mbox{\Hypertarget{any_8h_a2e797dbbe4d98ed91b40db9829dd9ca0}\label{any_8h_a2e797dbbe4d98ed91b40db9829dd9ca0}} 
+\index{any.h@{any.h}!TESSERACT\_ANY\_EXPORT\_KEY@{TESSERACT\_ANY\_EXPORT\_KEY}}
+\index{TESSERACT\_ANY\_EXPORT\_KEY@{TESSERACT\_ANY\_EXPORT\_KEY}!any.h@{any.h}}
+\doxysubsubsection{\texorpdfstring{TESSERACT\_ANY\_EXPORT\_KEY}{TESSERACT\_ANY\_EXPORT\_KEY}}
+{\footnotesize\ttfamily \#define TESSERACT\+\_\+\+ANY\+\_\+\+EXPORT\+\_\+\+KEY(\begin{DoxyParamCaption}\item[{}]{any\+\_\+t }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  BOOST\_CLASS\_EXPORT\_KEY2(\mbox{\hyperlink{structtesseract__common_1_1detail__any_1_1AnyInner}{tesseract\_common::detail\_any::AnyInner<any\_t>}}, \#any\_t)                                       \(\backslash\)}
+\DoxyCodeLine{  BOOST\_CLASS\_TRACKING(\mbox{\hyperlink{structtesseract__common_1_1detail__any_1_1AnyInner}{tesseract\_common::detail\_any::AnyInner<any\_t>}}, boost::serialization::track\_never)}
+
+\end{DoxyCode}
+
+
+If shared library, this must go in the header after the class definition. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{any_8h_aaec163e216269fcdb13a222b14cd4ccf}\label{any_8h_aaec163e216269fcdb13a222b14cd4ccf}} 
+\index{any.h@{any.h}!BOOST\_CLASS\_TRACKING@{BOOST\_CLASS\_TRACKING}}
+\index{BOOST\_CLASS\_TRACKING@{BOOST\_CLASS\_TRACKING}!any.h@{any.h}}
+\doxysubsubsection{\texorpdfstring{BOOST\_CLASS\_TRACKING()}{BOOST\_CLASS\_TRACKING()}}
+{\footnotesize\ttfamily BOOST\+\_\+\+CLASS\+\_\+\+TRACKING (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtesseract__common_1_1Any}{tesseract\+\_\+common\+::\+Any}}}]{,  }\item[{boost\+::serialization\+::track\+\_\+never}]{ }\end{DoxyParamCaption})}
+

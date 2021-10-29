@@ -1,6 +1,6 @@
-<map id="tesseract/tesseract_visualization/include/tesseract_visualization/ignition/entity_manager.h" name="tesseract/tesseract_visualization/include/tesseract_visualization/ignition/entity_manager.h">
-<area shape="rect" id="node1" title="A entity manager for Tesseract components that get added to Ignition Scene." alt="" coords="163,5,332,76"/>
-<area shape="rect" id="node2" href="$de/d3c/macros_8h.html" title="Common Tesseract Macros." alt="" coords="5,124,196,151"/>
-<area shape="rect" id="node3" title=" " alt="" coords="220,124,275,151"/>
-<area shape="rect" id="node4" title=" " alt="" coords="299,124,409,151"/>
+<map id="tesseract_visualization/include/tesseract_visualization/ignition/entity_manager.h" name="tesseract_visualization/include/tesseract_visualization/ignition/entity_manager.h">
+<area shape="rect" id="node1" title="A entity manager for Tesseract components that get added to Ignition Scene." alt="" coords="146,5,349,61"/>
+<area shape="rect" id="node2" href="$de/d3c/macros_8h.html" title="Common Tesseract Macros." alt="" coords="5,109,196,136"/>
+<area shape="rect" id="node3" title=" " alt="" coords="220,109,275,136"/>
+<area shape="rect" id="node4" title=" " alt="" coords="299,109,409,136"/>
 </map>

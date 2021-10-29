@@ -1,0 +1,12 @@
+<map id="tesseract_kinematics::JointGroup" name="tesseract_kinematics::JointGroup">
+<area shape="rect" id="node1" title="A Joint Group is defined by a list of joint_names." alt="" coords="1083,162,1229,203"/>
+<area shape="rect" id="node2" href="$d2/d94/structtesseract__common_1_1KinematicLimits.html" title="Store kinematic limits." alt="" coords="716,14,913,55"/>
+<area shape="rect" id="node3" title=" " alt="" coords="397,21,473,48"/>
+<area shape="rect" id="node4" title=" " alt="" coords="717,80,913,107"/>
+<area shape="rect" id="node5" title=" " alt="" coords="752,131,877,173"/>
+<area shape="rect" id="node6" title=" " alt="" coords="179,279,257,305"/>
+<area shape="rect" id="node8" title=" " alt="" coords="532,279,692,305"/>
+<area shape="rect" id="node10" title=" " alt="" coords="363,333,508,374"/>
+<area shape="rect" id="node7" title=" " alt="" coords="5,271,129,313"/>
+<area shape="rect" id="node9" href="$d5/d12/structtesseract__scene__graph_1_1SceneState.html" title="This holds a state of the scene." alt="" coords="736,341,893,382"/>
+</map>

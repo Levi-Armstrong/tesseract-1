@@ -35,94 +35,64 @@ Collaboration diagram for tesseract\+\_\+kinematics\+::KDLFwd\+Kin\+Chain\+:
 using \mbox{\hyperlink{classtesseract__kinematics_1_1KDLFwdKinChain_a4861e97d66d579bba78b26af2ab63f08}{Ptr}} = std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classtesseract__kinematics_1_1KDLFwdKinChain}{KDLFwd\+Kin\+Chain}} $>$
 \item 
 using \mbox{\hyperlink{classtesseract__kinematics_1_1KDLFwdKinChain_a172d27433df2b90124de155ba4bccfde}{Const\+Ptr}} = std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{classtesseract__kinematics_1_1KDLFwdKinChain}{KDLFwd\+Kin\+Chain}} $>$
+\item 
+using \mbox{\hyperlink{classtesseract__kinematics_1_1KDLFwdKinChain_a4443d3995b345f8d205f9df2b7bbc64a}{UPtr}} = std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classtesseract__kinematics_1_1KDLFwdKinChain}{KDLFwd\+Kin\+Chain}} $>$
+\item 
+using \mbox{\hyperlink{classtesseract__kinematics_1_1KDLFwdKinChain_af7bd75376f94d570d6968bce64181c00}{Const\+UPtr}} = std\+::unique\+\_\+ptr$<$ const \mbox{\hyperlink{classtesseract__kinematics_1_1KDLFwdKinChain}{KDLFwd\+Kin\+Chain}} $>$
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classtesseract__kinematics_1_1KDLFwdKinChain_a540f76fa73688bf4c3a2622b79aa7249}{KDLFwd\+Kin\+Chain}} ()=default
-\item 
 \mbox{\hyperlink{classtesseract__kinematics_1_1KDLFwdKinChain_a8b9754cb080461156b67046cc66d4fbd}{$\sim$\+KDLFwd\+Kin\+Chain}} () override=default
 \item 
-\mbox{\hyperlink{classtesseract__kinematics_1_1KDLFwdKinChain_a25482a22e6a052dd14977d69f15b97f5}{KDLFwd\+Kin\+Chain}} (const \mbox{\hyperlink{classtesseract__kinematics_1_1KDLFwdKinChain}{KDLFwd\+Kin\+Chain}} \&)=delete
+\mbox{\hyperlink{classtesseract__kinematics_1_1KDLFwdKinChain_a9174771eb106b5ffc079e622ee72a21e}{KDLFwd\+Kin\+Chain}} (const \mbox{\hyperlink{classtesseract__kinematics_1_1KDLFwdKinChain}{KDLFwd\+Kin\+Chain}} \&other)
 \item 
-\mbox{\hyperlink{classtesseract__kinematics_1_1KDLFwdKinChain}{KDLFwd\+Kin\+Chain}} \& \mbox{\hyperlink{classtesseract__kinematics_1_1KDLFwdKinChain_a22d459ad418b231f121a9bd3957f676e}{operator=}} (const \mbox{\hyperlink{classtesseract__kinematics_1_1KDLFwdKinChain}{KDLFwd\+Kin\+Chain}} \&)=delete
+\mbox{\hyperlink{classtesseract__kinematics_1_1KDLFwdKinChain}{KDLFwd\+Kin\+Chain}} \& \mbox{\hyperlink{classtesseract__kinematics_1_1KDLFwdKinChain_a1e18ddbbca9206f741202d6b6e57f3a3}{operator=}} (const \mbox{\hyperlink{classtesseract__kinematics_1_1KDLFwdKinChain}{KDLFwd\+Kin\+Chain}} \&other)
 \item 
-\mbox{\hyperlink{classtesseract__kinematics_1_1KDLFwdKinChain_a77bd5348aa4b65ca6433652925fb4710}{KDLFwd\+Kin\+Chain}} (\mbox{\hyperlink{classtesseract__kinematics_1_1KDLFwdKinChain}{KDLFwd\+Kin\+Chain}} \&\&)=delete
+\mbox{\hyperlink{classtesseract__kinematics_1_1KDLFwdKinChain_a7e10afc2ffea67eb9b7f3939e1c6dbf9}{KDLFwd\+Kin\+Chain}} (\mbox{\hyperlink{classtesseract__kinematics_1_1KDLFwdKinChain}{KDLFwd\+Kin\+Chain}} \&\&)=default
 \item 
-\mbox{\hyperlink{classtesseract__kinematics_1_1KDLFwdKinChain}{KDLFwd\+Kin\+Chain}} \& \mbox{\hyperlink{classtesseract__kinematics_1_1KDLFwdKinChain_a03909a29a05f7ca6fb393fac290fe1a2}{operator=}} (\mbox{\hyperlink{classtesseract__kinematics_1_1KDLFwdKinChain}{KDLFwd\+Kin\+Chain}} \&\&)=delete
+\mbox{\hyperlink{classtesseract__kinematics_1_1KDLFwdKinChain}{KDLFwd\+Kin\+Chain}} \& \mbox{\hyperlink{classtesseract__kinematics_1_1KDLFwdKinChain_a1de7ce73b1c710db6ac93e7b2c8bbc6b}{operator=}} (\mbox{\hyperlink{classtesseract__kinematics_1_1KDLFwdKinChain}{KDLFwd\+Kin\+Chain}} \&\&)=default
 \item 
-\mbox{\hyperlink{classtesseract__kinematics_1_1ForwardKinematics_abdb52d493e8f0c584be778ddb193ed46}{Forward\+Kinematics\+::\+Ptr}} \mbox{\hyperlink{classtesseract__kinematics_1_1KDLFwdKinChain_ac7ad6ccfd5a4bc932a88ff234ec2427f}{clone}} () const override
-\begin{DoxyCompactList}\small\item\em Clone the forward kinematics object. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{classtesseract__kinematics_1_1KDLFwdKinChain_a1aff40f418e23a2bede59902a85ccb55}{update}} () override
-\begin{DoxyCompactList}\small\item\em Updates kinematics if kinematic parameters have changed. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{classtesseract__kinematics_1_1KDLFwdKinChain_ada4335da01795a796d9a6c2c87b54426}{calc\+Fwd\+Kin}} (Eigen\+::\+Isometry3d \&pose, const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector\+Xd $>$ \&joint\+\_\+angles) const override
-\begin{DoxyCompactList}\small\item\em Calculates tool pose of robot chain. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{classtesseract__kinematics_1_1KDLFwdKinChain_a06851f2309a1b19ba13b1e35d3090eac}{calc\+Fwd\+Kin}} (\mbox{\hyperlink{namespacetesseract__common_a94d9921fc7ed323609ac57d06f939cb6}{tesseract\+\_\+common\+::\+Vector\+Isometry3d}} \&poses, const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector\+Xd $>$ \&joint\+\_\+angles) const override
-\begin{DoxyCompactList}\small\item\em Calculates pose for all links of robot chain. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{classtesseract__kinematics_1_1KDLFwdKinChain_a433895d9f221d3978adb5b595f17b94b}{calc\+Fwd\+Kin}} (Eigen\+::\+Isometry3d \&pose, const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector\+Xd $>$ \&joint\+\_\+angles, const std\+::string \&link\+\_\+name) const override
-\begin{DoxyCompactList}\small\item\em Calculates pose for a given link. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{classtesseract__kinematics_1_1KDLFwdKinChain_a4489c74d2fcfc0ca6c202c912998d8d0}{calc\+Jacobian}} (Eigen\+::\+Ref$<$ Eigen\+::\+Matrix\+Xd $>$ jacobian, const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector\+Xd $>$ \&joint\+\_\+angles) const override
-\begin{DoxyCompactList}\small\item\em Calculated jacobian of robot given joint angles. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{classtesseract__kinematics_1_1KDLFwdKinChain_abba2827a6c334339a636ffb9d40c76da}{calc\+Jacobian}} (Eigen\+::\+Ref$<$ Eigen\+::\+Matrix\+Xd $>$ jacobian, const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector\+Xd $>$ \&joint\+\_\+angles, const std\+::string \&link\+\_\+name) const override
-\begin{DoxyCompactList}\small\item\em Calculated jacobian at a link given joint angles. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{classtesseract__kinematics_1_1KDLFwdKinChain_a4072df205da0dde68a56d7c26a8cd589}{check\+Joints}} (const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector\+Xd $>$ \&vec) const override
-\begin{DoxyCompactList}\small\item\em Check for consistency in \# and limits of joints. \end{DoxyCompactList}\item 
-const std\+::vector$<$ std\+::string $>$ \& \mbox{\hyperlink{classtesseract__kinematics_1_1KDLFwdKinChain_a5ccfdc2312e7d2b54233e8c7258dc638}{get\+Joint\+Names}} () const override
-\begin{DoxyCompactList}\small\item\em Get list of joint names for kinematic object. \end{DoxyCompactList}\item 
-const std\+::vector$<$ std\+::string $>$ \& \mbox{\hyperlink{classtesseract__kinematics_1_1KDLFwdKinChain_af08c0d7f1fc157d1b55ae66af0e6bf67}{get\+Link\+Names}} () const override
-\begin{DoxyCompactList}\small\item\em Get list of all link names (with and without geometry) for kinematic object. \end{DoxyCompactList}\item 
-const std\+::vector$<$ std\+::string $>$ \& \mbox{\hyperlink{classtesseract__kinematics_1_1KDLFwdKinChain_aac10091e929c114bfa0fb0c6eb0b7d15}{get\+Active\+Link\+Names}} () const override
-\begin{DoxyCompactList}\small\item\em Get list of active link names (with and without geometry) for kinematic object. \end{DoxyCompactList}\item 
-const \mbox{\hyperlink{structtesseract__common_1_1KinematicLimits}{tesseract\+\_\+common\+::\+Kinematic\+Limits}} \& \mbox{\hyperlink{classtesseract__kinematics_1_1KDLFwdKinChain_a118e57fb3f5328548c88d2eec937a770}{get\+Limits}} () const override
-\begin{DoxyCompactList}\small\item\em Getter for kinematic limits (joint, velocity, acceleration, etc.) \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classtesseract__kinematics_1_1KDLFwdKinChain_aef485507d80b799bab3d3d24fd84ef4c}{set\+Limits}} (\mbox{\hyperlink{structtesseract__common_1_1KinematicLimits}{tesseract\+\_\+common\+::\+Kinematic\+Limits}} limits) override
-\begin{DoxyCompactList}\small\item\em Setter for kinematic limits (joint, velocity, acceleration, etc.) \end{DoxyCompactList}\item 
-unsigned int \mbox{\hyperlink{classtesseract__kinematics_1_1KDLFwdKinChain_abd060b1f658d74139b9a0467d7730100}{num\+Joints}} () const override
-\begin{DoxyCompactList}\small\item\em Number of joints in robot. \end{DoxyCompactList}\item 
-const std\+::string \& \mbox{\hyperlink{classtesseract__kinematics_1_1KDLFwdKinChain_af727553c36673aaabfa37efa69e4ab76}{get\+Base\+Link\+Name}} () const override
-\begin{DoxyCompactList}\small\item\em getter for the robot base link name \end{DoxyCompactList}\item 
-const std\+::string \& \mbox{\hyperlink{classtesseract__kinematics_1_1KDLFwdKinChain_ae57a8e48e393b98bfc4e1941a871145d}{get\+Tip\+Link\+Name}} () const override
-\begin{DoxyCompactList}\small\item\em Get the tip link name. \end{DoxyCompactList}\item 
-const std\+::string \& \mbox{\hyperlink{classtesseract__kinematics_1_1KDLFwdKinChain_a43e0f94f761b2266d49e7bd2a8c8d277}{get\+Name}} () const override
-\begin{DoxyCompactList}\small\item\em Name of the maniputlator. \end{DoxyCompactList}\item 
-const std\+::string \& \mbox{\hyperlink{classtesseract__kinematics_1_1KDLFwdKinChain_af39706863e964746610e79b53bf3a02b}{get\+Solver\+Name}} () const override
-\begin{DoxyCompactList}\small\item\em Get the name of the solver. Recommned using the name of the class. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph_a9ee303b2514bfedd8c914d09551b00ff}{tesseract\+\_\+scene\+\_\+graph\+::\+Scene\+Graph\+::\+Const\+Ptr}} \mbox{\hyperlink{classtesseract__kinematics_1_1KDLFwdKinChain_adabc043e7fa6d28e3746f3d1bc7293d3}{get\+Scene\+Graph}} () const
-\item 
-bool \mbox{\hyperlink{classtesseract__kinematics_1_1KDLFwdKinChain_a3448d41eabcea5429737dd6c1a1f75ce}{init}} (\mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph_a9ee303b2514bfedd8c914d09551b00ff}{tesseract\+\_\+scene\+\_\+graph\+::\+Scene\+Graph\+::\+Const\+Ptr}} scene\+\_\+graph, const std\+::string \&base\+\_\+link, const std\+::string \&tip\+\_\+link, std\+::string name)
+\mbox{\hyperlink{classtesseract__kinematics_1_1KDLFwdKinChain_a429b3995288d75c883af9342139ab24d}{KDLFwd\+Kin\+Chain}} (const \mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph}{tesseract\+\_\+scene\+\_\+graph\+::\+Scene\+Graph}} \&scene\+\_\+graph, const std\+::string \&base\+\_\+link, const std\+::string \&tip\+\_\+link, std\+::string solver\+\_\+name=\mbox{\hyperlink{namespacetesseract__kinematics_a8e876d3d43f95a425ef08ad478bf6003}{KDL\+\_\+\+FWD\+\_\+\+KIN\+\_\+\+CHAIN\+\_\+\+SOLVER\+\_\+\+NAME}})
 \begin{DoxyCompactList}\small\item\em Initializes Forward Kinematics as chain Creates a forward kinematic chain object. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{classtesseract__kinematics_1_1KDLFwdKinChain_a26bc835255a27ea28e30a003e399aa4b}{init}} (\mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph_a9ee303b2514bfedd8c914d09551b00ff}{tesseract\+\_\+scene\+\_\+graph\+::\+Scene\+Graph\+::\+Const\+Ptr}} scene\+\_\+graph, const std\+::vector$<$ std\+::pair$<$ std\+::string, std\+::string $>$ $>$ \&chains, std\+::string name)
-\begin{DoxyCompactList}\small\item\em Initializes Forward Kinematics as chain Creates a forward kinematic chain object from sequential chains. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{classtesseract__kinematics_1_1KDLFwdKinChain_aeec967595c26db96cd848f2430f785fb}{check\+Initialized}} () const
-\begin{DoxyCompactList}\small\item\em Checks if kinematics has been initialized. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\mbox{\hyperlink{classtesseract__kinematics_1_1KDLFwdKinChain_ae1ff1d5a9e61fe1eb36aaeb5b7370c3d}{KDLFwd\+Kin\+Chain}} (const \mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph}{tesseract\+\_\+scene\+\_\+graph\+::\+Scene\+Graph}} \&scene\+\_\+graph, const \mbox{\hyperlink{vhacdRaycastMesh_8cpp_adcf134d50025cc52907d0c8ac798d89d}{std\+::vector}}$<$ std\+::pair$<$ std\+::string, std\+::string $>$ $>$ \&chains, std\+::string solver\+\_\+name=\mbox{\hyperlink{namespacetesseract__kinematics_a8e876d3d43f95a425ef08ad478bf6003}{KDL\+\_\+\+FWD\+\_\+\+KIN\+\_\+\+CHAIN\+\_\+\+SOLVER\+\_\+\+NAME}})
+\begin{DoxyCompactList}\small\item\em Construct Forward Kinematics as chain Creates a forward kinematic chain object from sequential chains. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacetesseract__common_a67bde3cb7bb235f0f61c370ef8bc74d8}{tesseract\+\_\+common\+::\+Transform\+Map}} \mbox{\hyperlink{classtesseract__kinematics_1_1KDLFwdKinChain_afb17d15670555f2539d19a12cf9236ec}{calc\+Fwd\+Kin}} (const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector\+Xd $>$ \&joint\+\_\+angles) const override final
+\begin{DoxyCompactList}\small\item\em Calculates the transform for each tip link in the kinematic group. \end{DoxyCompactList}\item 
+Eigen\+::\+Matrix\+Xd \mbox{\hyperlink{classtesseract__kinematics_1_1KDLFwdKinChain_a50288a017358532e49449b11febf8cb6}{calc\+Jacobian}} (const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector\+Xd $>$ \&joint\+\_\+angles, const std\+::string \&joint\+\_\+link\+\_\+name) const override final
+\begin{DoxyCompactList}\small\item\em Calculates the Jacobian matrix for a given joint state in the reference frame of the specified link. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classtesseract__kinematics_1_1KDLFwdKinChain_af516d87cd805acb7cb9ca76ca70eafe9}{get\+Base\+Link\+Name}} () const override final
+\begin{DoxyCompactList}\small\item\em Get the robot base link name. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{vhacdRaycastMesh_8cpp_adcf134d50025cc52907d0c8ac798d89d}{std\+::vector}}$<$ std\+::string $>$ \mbox{\hyperlink{classtesseract__kinematics_1_1KDLFwdKinChain_ad75175770ef2aef9d50876276ffe1c35}{get\+Joint\+Names}} () const override final
+\begin{DoxyCompactList}\small\item\em Get list of joint names for kinematic object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{vhacdRaycastMesh_8cpp_adcf134d50025cc52907d0c8ac798d89d}{std\+::vector}}$<$ std\+::string $>$ \mbox{\hyperlink{classtesseract__kinematics_1_1KDLFwdKinChain_ac6f53a9a6351c4a63877b34e6def9e91}{get\+Tip\+Link\+Names}} () const override final
+\begin{DoxyCompactList}\small\item\em Get list of tip link names for kinematic object. \end{DoxyCompactList}\item 
+Eigen\+::\+Index \mbox{\hyperlink{classtesseract__kinematics_1_1KDLFwdKinChain_aaf1edad98bb0287e8489776c6570ba3b}{num\+Joints}} () const override final
+\begin{DoxyCompactList}\small\item\em Number of joints in robot. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classtesseract__kinematics_1_1KDLFwdKinChain_a6e35dc7589fe183d30e71d9a934d280f}{get\+Solver\+Name}} () const override final
+\begin{DoxyCompactList}\small\item\em Get the name of the solver. Recommend using the name of the class. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classtesseract__kinematics_1_1ForwardKinematics_a53cb5fab19798d5afc20c259d4ffe1e3}{Forward\+Kinematics\+::\+UPtr}} \mbox{\hyperlink{classtesseract__kinematics_1_1KDLFwdKinChain_aac7e4b91ee6f7fa04f94c94ef3d0353e}{clone}} () const override final
+\begin{DoxyCompactList}\small\item\em Clone the forward kinematics object. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-bool \mbox{\hyperlink{classtesseract__kinematics_1_1KDLFwdKinChain_a1e1428e6399743dfd1738772fdfc0dff}{init}} (const \mbox{\hyperlink{classtesseract__kinematics_1_1KDLFwdKinChain}{KDLFwd\+Kin\+Chain}} \&kin)
-\begin{DoxyCompactList}\small\item\em This used by the clone method. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{classtesseract__kinematics_1_1KDLFwdKinChain_ad99e52d9b0c84da1c250464a50dd06f0}{calc\+Fwd\+Kin\+Helper}} (Eigen\+::\+Isometry3d \&pose, const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector\+Xd $>$ \&joint\+\_\+angles, int segment\+\_\+num=-\/1) const
-\begin{DoxyCompactList}\small\item\em calc\+Fwd\+Kin helper function \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{classtesseract__kinematics_1_1KDLFwdKinChain_a0c3262b92fd0e21f75949c9c37432f65}{calc\+Fwd\+Kin\+Helper}} (\mbox{\hyperlink{namespacetesseract__common_a94d9921fc7ed323609ac57d06f939cb6}{tesseract\+\_\+common\+::\+Vector\+Isometry3d}} \&poses, const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector\+Xd $>$ \&joint\+\_\+angles, int segment\+\_\+num=-\/1) const
+\mbox{\hyperlink{namespacetesseract__common_a67bde3cb7bb235f0f61c370ef8bc74d8}{tesseract\+\_\+common\+::\+Transform\+Map}} \mbox{\hyperlink{classtesseract__kinematics_1_1KDLFwdKinChain_af1d4f167fc5083dfb3a36b9a681c517c}{calc\+Fwd\+Kin\+Helper\+All}} (const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector\+Xd $>$ \&joint\+\_\+angles) const
 \begin{DoxyCompactList}\small\item\em calc\+Fwd\+Kin helper function \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classtesseract__kinematics_1_1KDLFwdKinChain_a09ca5c1015cd99e474a5491cc683d844}{calc\+Jacobian\+Helper}} (KDL\+::\+Jacobian \&jacobian, const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector\+Xd $>$ \&joint\+\_\+angles, int segment\+\_\+num=-\/1) const
 \begin{DoxyCompactList}\small\item\em calc\+Jacobian helper function \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
-bool \mbox{\hyperlink{classtesseract__kinematics_1_1KDLFwdKinChain_aabef57240fad5e1e6a385cb8b3e3b9fc}{initialized\+\_\+}} \{ false \}
-\item 
-\mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph_a9ee303b2514bfedd8c914d09551b00ff}{tesseract\+\_\+scene\+\_\+graph\+::\+Scene\+Graph\+::\+Const\+Ptr}} \mbox{\hyperlink{classtesseract__kinematics_1_1KDLFwdKinChain_a06e90c8d47812d73bbdcebda8ff20db1}{scene\+\_\+graph\+\_\+}}
-\item 
 \mbox{\hyperlink{structtesseract__kinematics_1_1KDLChainData}{KDLChain\+Data}} \mbox{\hyperlink{classtesseract__kinematics_1_1KDLFwdKinChain_a879f421a6896740cab1707a5edf5f5d6}{kdl\+\_\+data\+\_\+}}
 \item 
 std\+::string \mbox{\hyperlink{classtesseract__kinematics_1_1KDLFwdKinChain_abcf7021bd51b364ccba69c57714c6446}{name\+\_\+}}
 \item 
-std\+::string \mbox{\hyperlink{classtesseract__kinematics_1_1KDLFwdKinChain_a30f39a17195c4a1f668be3e429974f22}{solver\+\_\+name\+\_\+}} \{ \char`\"{}KDLFwd\+Kin\+Chain\char`\"{} \}
-\item 
 std\+::unique\+\_\+ptr$<$ KDL\+::\+Chain\+Fk\+Solver\+Pos\+\_\+recursive $>$ \mbox{\hyperlink{classtesseract__kinematics_1_1KDLFwdKinChain_a73d3beceabccc612da3d451a34d044d1}{fk\+\_\+solver\+\_\+}}
 \item 
 std\+::unique\+\_\+ptr$<$ KDL\+::\+Chain\+Jnt\+To\+Jac\+Solver $>$ \mbox{\hyperlink{classtesseract__kinematics_1_1KDLFwdKinChain_afa9f359d86e925f272b454e72cbc3310}{jac\+\_\+solver\+\_\+}}
-\end{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classtesseract__kinematics_1_1KDLFwdKinChain_a30f39a17195c4a1f668be3e429974f22}{solver\+\_\+name\+\_\+}} \{ \mbox{\hyperlink{namespacetesseract__kinematics_a8e876d3d43f95a425ef08ad478bf6003}{KDL\+\_\+\+FWD\+\_\+\+KIN\+\_\+\+CHAIN\+\_\+\+SOLVER\+\_\+\+NAME}} \}
+\begin{DoxyCompactList}\small\item\em Name of this solver. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -137,395 +107,50 @@ Typically, just wrappers around the equivalent KDL calls.
 \doxysubsubsection{\texorpdfstring{ConstPtr}{ConstPtr}}
 {\footnotesize\ttfamily using \mbox{\hyperlink{classtesseract__kinematics_1_1KDLFwdKinChain_a172d27433df2b90124de155ba4bccfde}{tesseract\+\_\+kinematics\+::\+KDLFwd\+Kin\+Chain\+::\+Const\+Ptr}} =  std\+::shared\+\_\+ptr$<$const \mbox{\hyperlink{classtesseract__kinematics_1_1KDLFwdKinChain}{KDLFwd\+Kin\+Chain}}$>$}
 
+\mbox{\Hypertarget{classtesseract__kinematics_1_1KDLFwdKinChain_af7bd75376f94d570d6968bce64181c00}\label{classtesseract__kinematics_1_1KDLFwdKinChain_af7bd75376f94d570d6968bce64181c00}} 
+\index{tesseract\_kinematics::KDLFwdKinChain@{tesseract\_kinematics::KDLFwdKinChain}!ConstUPtr@{ConstUPtr}}
+\index{ConstUPtr@{ConstUPtr}!tesseract\_kinematics::KDLFwdKinChain@{tesseract\_kinematics::KDLFwdKinChain}}
+\doxysubsubsection{\texorpdfstring{ConstUPtr}{ConstUPtr}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classtesseract__kinematics_1_1KDLFwdKinChain_af7bd75376f94d570d6968bce64181c00}{tesseract\+\_\+kinematics\+::\+KDLFwd\+Kin\+Chain\+::\+Const\+UPtr}} =  std\+::unique\+\_\+ptr$<$const \mbox{\hyperlink{classtesseract__kinematics_1_1KDLFwdKinChain}{KDLFwd\+Kin\+Chain}}$>$}
+
 \mbox{\Hypertarget{classtesseract__kinematics_1_1KDLFwdKinChain_a4861e97d66d579bba78b26af2ab63f08}\label{classtesseract__kinematics_1_1KDLFwdKinChain_a4861e97d66d579bba78b26af2ab63f08}} 
 \index{tesseract\_kinematics::KDLFwdKinChain@{tesseract\_kinematics::KDLFwdKinChain}!Ptr@{Ptr}}
 \index{Ptr@{Ptr}!tesseract\_kinematics::KDLFwdKinChain@{tesseract\_kinematics::KDLFwdKinChain}}
 \doxysubsubsection{\texorpdfstring{Ptr}{Ptr}}
 {\footnotesize\ttfamily using \mbox{\hyperlink{classtesseract__kinematics_1_1KDLFwdKinChain_a4861e97d66d579bba78b26af2ab63f08}{tesseract\+\_\+kinematics\+::\+KDLFwd\+Kin\+Chain\+::\+Ptr}} =  std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classtesseract__kinematics_1_1KDLFwdKinChain}{KDLFwd\+Kin\+Chain}}$>$}
 
+\mbox{\Hypertarget{classtesseract__kinematics_1_1KDLFwdKinChain_a4443d3995b345f8d205f9df2b7bbc64a}\label{classtesseract__kinematics_1_1KDLFwdKinChain_a4443d3995b345f8d205f9df2b7bbc64a}} 
+\index{tesseract\_kinematics::KDLFwdKinChain@{tesseract\_kinematics::KDLFwdKinChain}!UPtr@{UPtr}}
+\index{UPtr@{UPtr}!tesseract\_kinematics::KDLFwdKinChain@{tesseract\_kinematics::KDLFwdKinChain}}
+\doxysubsubsection{\texorpdfstring{UPtr}{UPtr}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classtesseract__kinematics_1_1KDLFwdKinChain_a4443d3995b345f8d205f9df2b7bbc64a}{tesseract\+\_\+kinematics\+::\+KDLFwd\+Kin\+Chain\+::\+UPtr}} =  std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classtesseract__kinematics_1_1KDLFwdKinChain}{KDLFwd\+Kin\+Chain}}$>$}
+
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{classtesseract__kinematics_1_1KDLFwdKinChain_a540f76fa73688bf4c3a2622b79aa7249}\label{classtesseract__kinematics_1_1KDLFwdKinChain_a540f76fa73688bf4c3a2622b79aa7249}} 
-\index{tesseract\_kinematics::KDLFwdKinChain@{tesseract\_kinematics::KDLFwdKinChain}!KDLFwdKinChain@{KDLFwdKinChain}}
-\index{KDLFwdKinChain@{KDLFwdKinChain}!tesseract\_kinematics::KDLFwdKinChain@{tesseract\_kinematics::KDLFwdKinChain}}
-\doxysubsubsection{\texorpdfstring{KDLFwdKinChain()}{KDLFwdKinChain()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
-{\footnotesize\ttfamily tesseract\+\_\+kinematics\+::\+KDLFwd\+Kin\+Chain\+::\+KDLFwd\+Kin\+Chain (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
-
 \mbox{\Hypertarget{classtesseract__kinematics_1_1KDLFwdKinChain_a8b9754cb080461156b67046cc66d4fbd}\label{classtesseract__kinematics_1_1KDLFwdKinChain_a8b9754cb080461156b67046cc66d4fbd}} 
 \index{tesseract\_kinematics::KDLFwdKinChain@{tesseract\_kinematics::KDLFwdKinChain}!````~KDLFwdKinChain@{$\sim$KDLFwdKinChain}}
 \index{````~KDLFwdKinChain@{$\sim$KDLFwdKinChain}!tesseract\_kinematics::KDLFwdKinChain@{tesseract\_kinematics::KDLFwdKinChain}}
 \doxysubsubsection{\texorpdfstring{$\sim$KDLFwdKinChain()}{~KDLFwdKinChain()}}
 {\footnotesize\ttfamily tesseract\+\_\+kinematics\+::\+KDLFwd\+Kin\+Chain\+::$\sim$\+KDLFwd\+Kin\+Chain (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [default]}}
 
-\mbox{\Hypertarget{classtesseract__kinematics_1_1KDLFwdKinChain_a25482a22e6a052dd14977d69f15b97f5}\label{classtesseract__kinematics_1_1KDLFwdKinChain_a25482a22e6a052dd14977d69f15b97f5}} 
+\mbox{\Hypertarget{classtesseract__kinematics_1_1KDLFwdKinChain_a9174771eb106b5ffc079e622ee72a21e}\label{classtesseract__kinematics_1_1KDLFwdKinChain_a9174771eb106b5ffc079e622ee72a21e}} 
 \index{tesseract\_kinematics::KDLFwdKinChain@{tesseract\_kinematics::KDLFwdKinChain}!KDLFwdKinChain@{KDLFwdKinChain}}
 \index{KDLFwdKinChain@{KDLFwdKinChain}!tesseract\_kinematics::KDLFwdKinChain@{tesseract\_kinematics::KDLFwdKinChain}}
-\doxysubsubsection{\texorpdfstring{KDLFwdKinChain()}{KDLFwdKinChain()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
-{\footnotesize\ttfamily tesseract\+\_\+kinematics\+::\+KDLFwd\+Kin\+Chain\+::\+KDLFwd\+Kin\+Chain (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtesseract__kinematics_1_1KDLFwdKinChain}{KDLFwd\+Kin\+Chain}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+\doxysubsubsection{\texorpdfstring{KDLFwdKinChain()}{KDLFwdKinChain()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily tesseract\+\_\+kinematics\+::\+KDLFwd\+Kin\+Chain\+::\+KDLFwd\+Kin\+Chain (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtesseract__kinematics_1_1KDLFwdKinChain}{KDLFwd\+Kin\+Chain}} \&}]{other }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{classtesseract__kinematics_1_1KDLFwdKinChain_a77bd5348aa4b65ca6433652925fb4710}\label{classtesseract__kinematics_1_1KDLFwdKinChain_a77bd5348aa4b65ca6433652925fb4710}} 
+\mbox{\Hypertarget{classtesseract__kinematics_1_1KDLFwdKinChain_a7e10afc2ffea67eb9b7f3939e1c6dbf9}\label{classtesseract__kinematics_1_1KDLFwdKinChain_a7e10afc2ffea67eb9b7f3939e1c6dbf9}} 
 \index{tesseract\_kinematics::KDLFwdKinChain@{tesseract\_kinematics::KDLFwdKinChain}!KDLFwdKinChain@{KDLFwdKinChain}}
 \index{KDLFwdKinChain@{KDLFwdKinChain}!tesseract\_kinematics::KDLFwdKinChain@{tesseract\_kinematics::KDLFwdKinChain}}
-\doxysubsubsection{\texorpdfstring{KDLFwdKinChain()}{KDLFwdKinChain()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
-{\footnotesize\ttfamily tesseract\+\_\+kinematics\+::\+KDLFwd\+Kin\+Chain\+::\+KDLFwd\+Kin\+Chain (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtesseract__kinematics_1_1KDLFwdKinChain}{KDLFwd\+Kin\+Chain}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
-
-
-
-\doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{classtesseract__kinematics_1_1KDLFwdKinChain_ada4335da01795a796d9a6c2c87b54426}\label{classtesseract__kinematics_1_1KDLFwdKinChain_ada4335da01795a796d9a6c2c87b54426}} 
-\index{tesseract\_kinematics::KDLFwdKinChain@{tesseract\_kinematics::KDLFwdKinChain}!calcFwdKin@{calcFwdKin}}
-\index{calcFwdKin@{calcFwdKin}!tesseract\_kinematics::KDLFwdKinChain@{tesseract\_kinematics::KDLFwdKinChain}}
-\doxysubsubsection{\texorpdfstring{calcFwdKin()}{calcFwdKin()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
-{\footnotesize\ttfamily bool tesseract\+\_\+kinematics\+::\+KDLFwd\+Kin\+Chain\+::calc\+Fwd\+Kin (\begin{DoxyParamCaption}\item[{Eigen\+::\+Isometry3d \&}]{pose,  }\item[{const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector\+Xd $>$ \&}]{joint\+\_\+angles }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
-
-
-
-Calculates tool pose of robot chain. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em pose} & Transform of end-\/of-\/tip relative to root \\
-\hline
-{\em joint\+\_\+angles} & Vector of joint angles (size must match number of joints in robot chain) \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-True if calculation successful, False if anything is wrong (including uninitialized Basic\+Kin) 
-\end{DoxyReturn}
-
-
-Implements \mbox{\hyperlink{classtesseract__kinematics_1_1ForwardKinematics_a9f85d051b41d7c082faf881e3c095b27}{tesseract\+\_\+kinematics\+::\+Forward\+Kinematics}}.
-
-\mbox{\Hypertarget{classtesseract__kinematics_1_1KDLFwdKinChain_a433895d9f221d3978adb5b595f17b94b}\label{classtesseract__kinematics_1_1KDLFwdKinChain_a433895d9f221d3978adb5b595f17b94b}} 
-\index{tesseract\_kinematics::KDLFwdKinChain@{tesseract\_kinematics::KDLFwdKinChain}!calcFwdKin@{calcFwdKin}}
-\index{calcFwdKin@{calcFwdKin}!tesseract\_kinematics::KDLFwdKinChain@{tesseract\_kinematics::KDLFwdKinChain}}
-\doxysubsubsection{\texorpdfstring{calcFwdKin()}{calcFwdKin()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
-{\footnotesize\ttfamily bool tesseract\+\_\+kinematics\+::\+KDLFwd\+Kin\+Chain\+::calc\+Fwd\+Kin (\begin{DoxyParamCaption}\item[{Eigen\+::\+Isometry3d \&}]{pose,  }\item[{const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector\+Xd $>$ \&}]{joint\+\_\+angles,  }\item[{const std\+::string \&}]{link\+\_\+name }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
-
-
-
-Calculates pose for a given link. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em pose} & Transform of link relative to root \\
-\hline
-{\em joint\+\_\+angles} & Vector of joint angles (size must match number of joints in robot chain) \\
-\hline
-{\em link\+\_\+name} & Name of link to calculate pose which is part of the kinematics \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-True if calculation successful, False if anything is wrong (including uninitialized Basic\+Kin) 
-\end{DoxyReturn}
-
-
-Implements \mbox{\hyperlink{classtesseract__kinematics_1_1ForwardKinematics_aeaeaa1a52df69e1afc65c2895fd48cca}{tesseract\+\_\+kinematics\+::\+Forward\+Kinematics}}.
-
-\mbox{\Hypertarget{classtesseract__kinematics_1_1KDLFwdKinChain_a06851f2309a1b19ba13b1e35d3090eac}\label{classtesseract__kinematics_1_1KDLFwdKinChain_a06851f2309a1b19ba13b1e35d3090eac}} 
-\index{tesseract\_kinematics::KDLFwdKinChain@{tesseract\_kinematics::KDLFwdKinChain}!calcFwdKin@{calcFwdKin}}
-\index{calcFwdKin@{calcFwdKin}!tesseract\_kinematics::KDLFwdKinChain@{tesseract\_kinematics::KDLFwdKinChain}}
-\doxysubsubsection{\texorpdfstring{calcFwdKin()}{calcFwdKin()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
-{\footnotesize\ttfamily \mbox{\hyperlink{macros_8h_a7af8561cf52519e9896b0697095c1b8b}{TESSERACT\+\_\+\+COMMON\+\_\+\+IGNORE\+\_\+\+WARNINGS\+\_\+\+POP}} bool tesseract\+\_\+kinematics\+::\+KDLFwd\+Kin\+Chain\+::calc\+Fwd\+Kin (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacetesseract__common_a94d9921fc7ed323609ac57d06f939cb6}{tesseract\+\_\+common\+::\+Vector\+Isometry3d}} \&}]{poses,  }\item[{const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector\+Xd $>$ \&}]{joint\+\_\+angles }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
-
-
-
-Calculates pose for all links of robot chain. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em poses} & Transform of each link relative to root. Same order as \mbox{\hyperlink{classtesseract__kinematics_1_1KDLFwdKinChain_af08c0d7f1fc157d1b55ae66af0e6bf67}{get\+Link\+Names()}} \\
-\hline
-{\em joint\+\_\+angles} & Vector of joint angles (size must match number of joints in robot chain) \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-True if calculation successful, False if anything is wrong (including uninitialized Basic\+Kin) 
-\end{DoxyReturn}
-
-
-Implements \mbox{\hyperlink{classtesseract__kinematics_1_1ForwardKinematics_ac67d1afaf30c94e22236fd57bd24a1b7}{tesseract\+\_\+kinematics\+::\+Forward\+Kinematics}}.
-
-\mbox{\Hypertarget{classtesseract__kinematics_1_1KDLFwdKinChain_ad99e52d9b0c84da1c250464a50dd06f0}\label{classtesseract__kinematics_1_1KDLFwdKinChain_ad99e52d9b0c84da1c250464a50dd06f0}} 
-\index{tesseract\_kinematics::KDLFwdKinChain@{tesseract\_kinematics::KDLFwdKinChain}!calcFwdKinHelper@{calcFwdKinHelper}}
-\index{calcFwdKinHelper@{calcFwdKinHelper}!tesseract\_kinematics::KDLFwdKinChain@{tesseract\_kinematics::KDLFwdKinChain}}
-\doxysubsubsection{\texorpdfstring{calcFwdKinHelper()}{calcFwdKinHelper()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily bool tesseract\+\_\+kinematics\+::\+KDLFwd\+Kin\+Chain\+::calc\+Fwd\+Kin\+Helper (\begin{DoxyParamCaption}\item[{Eigen\+::\+Isometry3d \&}]{pose,  }\item[{const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector\+Xd $>$ \&}]{joint\+\_\+angles,  }\item[{int}]{segment\+\_\+num = {\ttfamily -\/1} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
-
-
-
-calc\+Fwd\+Kin helper function 
-
-\mbox{\Hypertarget{classtesseract__kinematics_1_1KDLFwdKinChain_a0c3262b92fd0e21f75949c9c37432f65}\label{classtesseract__kinematics_1_1KDLFwdKinChain_a0c3262b92fd0e21f75949c9c37432f65}} 
-\index{tesseract\_kinematics::KDLFwdKinChain@{tesseract\_kinematics::KDLFwdKinChain}!calcFwdKinHelper@{calcFwdKinHelper}}
-\index{calcFwdKinHelper@{calcFwdKinHelper}!tesseract\_kinematics::KDLFwdKinChain@{tesseract\_kinematics::KDLFwdKinChain}}
-\doxysubsubsection{\texorpdfstring{calcFwdKinHelper()}{calcFwdKinHelper()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily \mbox{\hyperlink{macros_8h_a8cc0e3c6a3382c5c0b19eb9e676fc2db}{TESSERACT\+\_\+\+COMMON\+\_\+\+IGNORE\+\_\+\+WARNINGS\+\_\+\+PUSH}} bool tesseract\+\_\+kinematics\+::\+KDLFwd\+Kin\+Chain\+::calc\+Fwd\+Kin\+Helper (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacetesseract__common_a94d9921fc7ed323609ac57d06f939cb6}{tesseract\+\_\+common\+::\+Vector\+Isometry3d}} \&}]{poses,  }\item[{const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector\+Xd $>$ \&}]{joint\+\_\+angles,  }\item[{int}]{segment\+\_\+num = {\ttfamily -\/1} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
-
-
-
-calc\+Fwd\+Kin helper function 
-
-\mbox{\Hypertarget{classtesseract__kinematics_1_1KDLFwdKinChain_a4489c74d2fcfc0ca6c202c912998d8d0}\label{classtesseract__kinematics_1_1KDLFwdKinChain_a4489c74d2fcfc0ca6c202c912998d8d0}} 
-\index{tesseract\_kinematics::KDLFwdKinChain@{tesseract\_kinematics::KDLFwdKinChain}!calcJacobian@{calcJacobian}}
-\index{calcJacobian@{calcJacobian}!tesseract\_kinematics::KDLFwdKinChain@{tesseract\_kinematics::KDLFwdKinChain}}
-\doxysubsubsection{\texorpdfstring{calcJacobian()}{calcJacobian()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily bool tesseract\+\_\+kinematics\+::\+KDLFwd\+Kin\+Chain\+::calc\+Jacobian (\begin{DoxyParamCaption}\item[{Eigen\+::\+Ref$<$ Eigen\+::\+Matrix\+Xd $>$}]{jacobian,  }\item[{const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector\+Xd $>$ \&}]{joint\+\_\+angles }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
-
-
-
-Calculated jacobian of robot given joint angles. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em jacobian} & Output jacobian \\
-\hline
-{\em joint\+\_\+angles} & Input vector of joint angles \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-True if calculation successful, False if anything is wrong (including uninitialized Basic\+Kin) 
-\end{DoxyReturn}
-
-
-Implements \mbox{\hyperlink{classtesseract__kinematics_1_1ForwardKinematics_a27dfd3fa2f9752722bd98a1e2eb6ce66}{tesseract\+\_\+kinematics\+::\+Forward\+Kinematics}}.
-
-\mbox{\Hypertarget{classtesseract__kinematics_1_1KDLFwdKinChain_abba2827a6c334339a636ffb9d40c76da}\label{classtesseract__kinematics_1_1KDLFwdKinChain_abba2827a6c334339a636ffb9d40c76da}} 
-\index{tesseract\_kinematics::KDLFwdKinChain@{tesseract\_kinematics::KDLFwdKinChain}!calcJacobian@{calcJacobian}}
-\index{calcJacobian@{calcJacobian}!tesseract\_kinematics::KDLFwdKinChain@{tesseract\_kinematics::KDLFwdKinChain}}
-\doxysubsubsection{\texorpdfstring{calcJacobian()}{calcJacobian()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily bool tesseract\+\_\+kinematics\+::\+KDLFwd\+Kin\+Chain\+::calc\+Jacobian (\begin{DoxyParamCaption}\item[{Eigen\+::\+Ref$<$ Eigen\+::\+Matrix\+Xd $>$}]{jacobian,  }\item[{const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector\+Xd $>$ \&}]{joint\+\_\+angles,  }\item[{const std\+::string \&}]{link\+\_\+name }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
-
-
-
-Calculated jacobian at a link given joint angles. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em jacobian} & Output jacobian for a given link \\
-\hline
-{\em joint\+\_\+angles} & Input vector of joint angles \\
-\hline
-{\em link\+\_\+name} & Name of link to calculate jacobian \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-True if calculation successful, False if anything is wrong (including uninitialized Basic\+Kin) 
-\end{DoxyReturn}
-
-
-Implements \mbox{\hyperlink{classtesseract__kinematics_1_1ForwardKinematics_a4183364aa2adcdcd7612e27ab3c26d48}{tesseract\+\_\+kinematics\+::\+Forward\+Kinematics}}.
-
-\mbox{\Hypertarget{classtesseract__kinematics_1_1KDLFwdKinChain_a09ca5c1015cd99e474a5491cc683d844}\label{classtesseract__kinematics_1_1KDLFwdKinChain_a09ca5c1015cd99e474a5491cc683d844}} 
-\index{tesseract\_kinematics::KDLFwdKinChain@{tesseract\_kinematics::KDLFwdKinChain}!calcJacobianHelper@{calcJacobianHelper}}
-\index{calcJacobianHelper@{calcJacobianHelper}!tesseract\_kinematics::KDLFwdKinChain@{tesseract\_kinematics::KDLFwdKinChain}}
-\doxysubsubsection{\texorpdfstring{calcJacobianHelper()}{calcJacobianHelper()}}
-{\footnotesize\ttfamily bool tesseract\+\_\+kinematics\+::\+KDLFwd\+Kin\+Chain\+::calc\+Jacobian\+Helper (\begin{DoxyParamCaption}\item[{KDL\+::\+Jacobian \&}]{jacobian,  }\item[{const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector\+Xd $>$ \&}]{joint\+\_\+angles,  }\item[{int}]{segment\+\_\+num = {\ttfamily -\/1} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
-
-
-
-calc\+Jacobian helper function 
-
-\mbox{\Hypertarget{classtesseract__kinematics_1_1KDLFwdKinChain_aeec967595c26db96cd848f2430f785fb}\label{classtesseract__kinematics_1_1KDLFwdKinChain_aeec967595c26db96cd848f2430f785fb}} 
-\index{tesseract\_kinematics::KDLFwdKinChain@{tesseract\_kinematics::KDLFwdKinChain}!checkInitialized@{checkInitialized}}
-\index{checkInitialized@{checkInitialized}!tesseract\_kinematics::KDLFwdKinChain@{tesseract\_kinematics::KDLFwdKinChain}}
-\doxysubsubsection{\texorpdfstring{checkInitialized()}{checkInitialized()}}
-{\footnotesize\ttfamily bool tesseract\+\_\+kinematics\+::\+KDLFwd\+Kin\+Chain\+::check\+Initialized (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
-Checks if kinematics has been initialized. 
-
-\begin{DoxyReturn}{Returns}
-True if \mbox{\hyperlink{classtesseract__kinematics_1_1KDLFwdKinChain_a3448d41eabcea5429737dd6c1a1f75ce}{init()}} has completed successfully 
-\end{DoxyReturn}
-\mbox{\Hypertarget{classtesseract__kinematics_1_1KDLFwdKinChain_a4072df205da0dde68a56d7c26a8cd589}\label{classtesseract__kinematics_1_1KDLFwdKinChain_a4072df205da0dde68a56d7c26a8cd589}} 
-\index{tesseract\_kinematics::KDLFwdKinChain@{tesseract\_kinematics::KDLFwdKinChain}!checkJoints@{checkJoints}}
-\index{checkJoints@{checkJoints}!tesseract\_kinematics::KDLFwdKinChain@{tesseract\_kinematics::KDLFwdKinChain}}
-\doxysubsubsection{\texorpdfstring{checkJoints()}{checkJoints()}}
-{\footnotesize\ttfamily bool tesseract\+\_\+kinematics\+::\+KDLFwd\+Kin\+Chain\+::check\+Joints (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector\+Xd $>$ \&}]{vec }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
-
-
-
-Check for consistency in \# and limits of joints. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em vec} & Vector of joint values \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-True if size of vec matches \# of robot joints and all joints are within limits 
-\end{DoxyReturn}
-
-
-Implements \mbox{\hyperlink{classtesseract__kinematics_1_1ForwardKinematics_a41ad6a64db49a9a50e66fa037021c18a}{tesseract\+\_\+kinematics\+::\+Forward\+Kinematics}}.
-
-\mbox{\Hypertarget{classtesseract__kinematics_1_1KDLFwdKinChain_ac7ad6ccfd5a4bc932a88ff234ec2427f}\label{classtesseract__kinematics_1_1KDLFwdKinChain_ac7ad6ccfd5a4bc932a88ff234ec2427f}} 
-\index{tesseract\_kinematics::KDLFwdKinChain@{tesseract\_kinematics::KDLFwdKinChain}!clone@{clone}}
-\index{clone@{clone}!tesseract\_kinematics::KDLFwdKinChain@{tesseract\_kinematics::KDLFwdKinChain}}
-\doxysubsubsection{\texorpdfstring{clone()}{clone()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__kinematics_1_1ForwardKinematics_abdb52d493e8f0c584be778ddb193ed46}{Forward\+Kinematics\+::\+Ptr}} tesseract\+\_\+kinematics\+::\+KDLFwd\+Kin\+Chain\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
-
-
-
-Clone the forward kinematics object. 
-
-
-
-Implements \mbox{\hyperlink{classtesseract__kinematics_1_1ForwardKinematics_afb7e8849d3ae6ce763f97a012996f183}{tesseract\+\_\+kinematics\+::\+Forward\+Kinematics}}.
-
-\mbox{\Hypertarget{classtesseract__kinematics_1_1KDLFwdKinChain_aac10091e929c114bfa0fb0c6eb0b7d15}\label{classtesseract__kinematics_1_1KDLFwdKinChain_aac10091e929c114bfa0fb0c6eb0b7d15}} 
-\index{tesseract\_kinematics::KDLFwdKinChain@{tesseract\_kinematics::KDLFwdKinChain}!getActiveLinkNames@{getActiveLinkNames}}
-\index{getActiveLinkNames@{getActiveLinkNames}!tesseract\_kinematics::KDLFwdKinChain@{tesseract\_kinematics::KDLFwdKinChain}}
-\doxysubsubsection{\texorpdfstring{getActiveLinkNames()}{getActiveLinkNames()}}
-{\footnotesize\ttfamily const std\+::vector$<$ std\+::string $>$ \& tesseract\+\_\+kinematics\+::\+KDLFwd\+Kin\+Chain\+::get\+Active\+Link\+Names (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
-
-
-
-Get list of active link names (with and without geometry) for kinematic object. 
-
-Note\+: This only includes links that are children of the active joints
-
-\begin{DoxyReturn}{Returns}
-A vector of names, active\+\_\+link\+\_\+list\+\_\+ 
-\end{DoxyReturn}
-
-
-Implements \mbox{\hyperlink{classtesseract__kinematics_1_1ForwardKinematics_a8615a8c422bbb51cf3e65a332d021190}{tesseract\+\_\+kinematics\+::\+Forward\+Kinematics}}.
-
-\mbox{\Hypertarget{classtesseract__kinematics_1_1KDLFwdKinChain_af727553c36673aaabfa37efa69e4ab76}\label{classtesseract__kinematics_1_1KDLFwdKinChain_af727553c36673aaabfa37efa69e4ab76}} 
-\index{tesseract\_kinematics::KDLFwdKinChain@{tesseract\_kinematics::KDLFwdKinChain}!getBaseLinkName@{getBaseLinkName}}
-\index{getBaseLinkName@{getBaseLinkName}!tesseract\_kinematics::KDLFwdKinChain@{tesseract\_kinematics::KDLFwdKinChain}}
-\doxysubsubsection{\texorpdfstring{getBaseLinkName()}{getBaseLinkName()}}
-{\footnotesize\ttfamily const std\+::string \& tesseract\+\_\+kinematics\+::\+KDLFwd\+Kin\+Chain\+::get\+Base\+Link\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
-
-
-
-getter for the robot base link name 
-
-
-
-Implements \mbox{\hyperlink{classtesseract__kinematics_1_1ForwardKinematics_ae2465c4f7ab6cd9d9949e49d2e240db6}{tesseract\+\_\+kinematics\+::\+Forward\+Kinematics}}.
-
-\mbox{\Hypertarget{classtesseract__kinematics_1_1KDLFwdKinChain_a5ccfdc2312e7d2b54233e8c7258dc638}\label{classtesseract__kinematics_1_1KDLFwdKinChain_a5ccfdc2312e7d2b54233e8c7258dc638}} 
-\index{tesseract\_kinematics::KDLFwdKinChain@{tesseract\_kinematics::KDLFwdKinChain}!getJointNames@{getJointNames}}
-\index{getJointNames@{getJointNames}!tesseract\_kinematics::KDLFwdKinChain@{tesseract\_kinematics::KDLFwdKinChain}}
-\doxysubsubsection{\texorpdfstring{getJointNames()}{getJointNames()}}
-{\footnotesize\ttfamily const std\+::vector$<$ std\+::string $>$ \& tesseract\+\_\+kinematics\+::\+KDLFwd\+Kin\+Chain\+::get\+Joint\+Names (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
-
-
-
-Get list of joint names for kinematic object. 
-
-\begin{DoxyReturn}{Returns}
-A vector of joint names, joint\+\_\+list\+\_\+ 
-\end{DoxyReturn}
-
-
-Implements \mbox{\hyperlink{classtesseract__kinematics_1_1ForwardKinematics_a182a85138da7281825ee773504bd25d0}{tesseract\+\_\+kinematics\+::\+Forward\+Kinematics}}.
-
-\mbox{\Hypertarget{classtesseract__kinematics_1_1KDLFwdKinChain_a118e57fb3f5328548c88d2eec937a770}\label{classtesseract__kinematics_1_1KDLFwdKinChain_a118e57fb3f5328548c88d2eec937a770}} 
-\index{tesseract\_kinematics::KDLFwdKinChain@{tesseract\_kinematics::KDLFwdKinChain}!getLimits@{getLimits}}
-\index{getLimits@{getLimits}!tesseract\_kinematics::KDLFwdKinChain@{tesseract\_kinematics::KDLFwdKinChain}}
-\doxysubsubsection{\texorpdfstring{getLimits()}{getLimits()}}
-{\footnotesize\ttfamily const \mbox{\hyperlink{structtesseract__common_1_1KinematicLimits}{tesseract\+\_\+common\+::\+Kinematic\+Limits}} \& tesseract\+\_\+kinematics\+::\+KDLFwd\+Kin\+Chain\+::get\+Limits (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
-
-
-
-Getter for kinematic limits (joint, velocity, acceleration, etc.) 
-
-\begin{DoxyReturn}{Returns}
-Kinematic Limits 
-\end{DoxyReturn}
-
-
-Implements \mbox{\hyperlink{classtesseract__kinematics_1_1ForwardKinematics_a7ab632388e673744fbe5dfd1f02283e7}{tesseract\+\_\+kinematics\+::\+Forward\+Kinematics}}.
-
-\mbox{\Hypertarget{classtesseract__kinematics_1_1KDLFwdKinChain_af08c0d7f1fc157d1b55ae66af0e6bf67}\label{classtesseract__kinematics_1_1KDLFwdKinChain_af08c0d7f1fc157d1b55ae66af0e6bf67}} 
-\index{tesseract\_kinematics::KDLFwdKinChain@{tesseract\_kinematics::KDLFwdKinChain}!getLinkNames@{getLinkNames}}
-\index{getLinkNames@{getLinkNames}!tesseract\_kinematics::KDLFwdKinChain@{tesseract\_kinematics::KDLFwdKinChain}}
-\doxysubsubsection{\texorpdfstring{getLinkNames()}{getLinkNames()}}
-{\footnotesize\ttfamily const std\+::vector$<$ std\+::string $>$ \& tesseract\+\_\+kinematics\+::\+KDLFwd\+Kin\+Chain\+::get\+Link\+Names (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
-
-
-
-Get list of all link names (with and without geometry) for kinematic object. 
-
-\begin{DoxyReturn}{Returns}
-A vector of names, link\+\_\+list\+\_\+ 
-\end{DoxyReturn}
-
-
-Implements \mbox{\hyperlink{classtesseract__kinematics_1_1ForwardKinematics_a0f532da55d0c5ba41d5310096755a8bd}{tesseract\+\_\+kinematics\+::\+Forward\+Kinematics}}.
-
-\mbox{\Hypertarget{classtesseract__kinematics_1_1KDLFwdKinChain_a43e0f94f761b2266d49e7bd2a8c8d277}\label{classtesseract__kinematics_1_1KDLFwdKinChain_a43e0f94f761b2266d49e7bd2a8c8d277}} 
-\index{tesseract\_kinematics::KDLFwdKinChain@{tesseract\_kinematics::KDLFwdKinChain}!getName@{getName}}
-\index{getName@{getName}!tesseract\_kinematics::KDLFwdKinChain@{tesseract\_kinematics::KDLFwdKinChain}}
-\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
-{\footnotesize\ttfamily const std\+::string \& tesseract\+\_\+kinematics\+::\+KDLFwd\+Kin\+Chain\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
-
-
-
-Name of the maniputlator. 
-
-
-
-Implements \mbox{\hyperlink{classtesseract__kinematics_1_1ForwardKinematics_aa9293755f171185ec79a4e258c688df2}{tesseract\+\_\+kinematics\+::\+Forward\+Kinematics}}.
-
-\mbox{\Hypertarget{classtesseract__kinematics_1_1KDLFwdKinChain_adabc043e7fa6d28e3746f3d1bc7293d3}\label{classtesseract__kinematics_1_1KDLFwdKinChain_adabc043e7fa6d28e3746f3d1bc7293d3}} 
-\index{tesseract\_kinematics::KDLFwdKinChain@{tesseract\_kinematics::KDLFwdKinChain}!getSceneGraph@{getSceneGraph}}
-\index{getSceneGraph@{getSceneGraph}!tesseract\_kinematics::KDLFwdKinChain@{tesseract\_kinematics::KDLFwdKinChain}}
-\doxysubsubsection{\texorpdfstring{getSceneGraph()}{getSceneGraph()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph_a9ee303b2514bfedd8c914d09551b00ff}{tesseract\+\_\+scene\+\_\+graph\+::\+Scene\+Graph\+::\+Const\+Ptr}} tesseract\+\_\+kinematics\+::\+KDLFwd\+Kin\+Chain\+::get\+Scene\+Graph (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
-
-\mbox{\Hypertarget{classtesseract__kinematics_1_1KDLFwdKinChain_af39706863e964746610e79b53bf3a02b}\label{classtesseract__kinematics_1_1KDLFwdKinChain_af39706863e964746610e79b53bf3a02b}} 
-\index{tesseract\_kinematics::KDLFwdKinChain@{tesseract\_kinematics::KDLFwdKinChain}!getSolverName@{getSolverName}}
-\index{getSolverName@{getSolverName}!tesseract\_kinematics::KDLFwdKinChain@{tesseract\_kinematics::KDLFwdKinChain}}
-\doxysubsubsection{\texorpdfstring{getSolverName()}{getSolverName()}}
-{\footnotesize\ttfamily const std\+::string \& tesseract\+\_\+kinematics\+::\+KDLFwd\+Kin\+Chain\+::get\+Solver\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
-
-
-
-Get the name of the solver. Recommned using the name of the class. 
-
-
-
-Implements \mbox{\hyperlink{classtesseract__kinematics_1_1ForwardKinematics_a94e5462f23626e9486f31b12010b94c9}{tesseract\+\_\+kinematics\+::\+Forward\+Kinematics}}.
-
-\mbox{\Hypertarget{classtesseract__kinematics_1_1KDLFwdKinChain_ae57a8e48e393b98bfc4e1941a871145d}\label{classtesseract__kinematics_1_1KDLFwdKinChain_ae57a8e48e393b98bfc4e1941a871145d}} 
-\index{tesseract\_kinematics::KDLFwdKinChain@{tesseract\_kinematics::KDLFwdKinChain}!getTipLinkName@{getTipLinkName}}
-\index{getTipLinkName@{getTipLinkName}!tesseract\_kinematics::KDLFwdKinChain@{tesseract\_kinematics::KDLFwdKinChain}}
-\doxysubsubsection{\texorpdfstring{getTipLinkName()}{getTipLinkName()}}
-{\footnotesize\ttfamily const std\+::string \& tesseract\+\_\+kinematics\+::\+KDLFwd\+Kin\+Chain\+::get\+Tip\+Link\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
-
-
-
-Get the tip link name. 
-
-
-
-Implements \mbox{\hyperlink{classtesseract__kinematics_1_1ForwardKinematics_a57ae5fc89251e74ccf94d577d4993385}{tesseract\+\_\+kinematics\+::\+Forward\+Kinematics}}.
-
-\mbox{\Hypertarget{classtesseract__kinematics_1_1KDLFwdKinChain_a1e1428e6399743dfd1738772fdfc0dff}\label{classtesseract__kinematics_1_1KDLFwdKinChain_a1e1428e6399743dfd1738772fdfc0dff}} 
-\index{tesseract\_kinematics::KDLFwdKinChain@{tesseract\_kinematics::KDLFwdKinChain}!init@{init}}
-\index{init@{init}!tesseract\_kinematics::KDLFwdKinChain@{tesseract\_kinematics::KDLFwdKinChain}}
-\doxysubsubsection{\texorpdfstring{init()}{init()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
-{\footnotesize\ttfamily bool tesseract\+\_\+kinematics\+::\+KDLFwd\+Kin\+Chain\+::init (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtesseract__kinematics_1_1KDLFwdKinChain}{KDLFwd\+Kin\+Chain}} \&}]{kin }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
-
-
-
-This used by the clone method. 
-
-\begin{DoxyReturn}{Returns}
-True if \mbox{\hyperlink{classtesseract__kinematics_1_1KDLFwdKinChain_a3448d41eabcea5429737dd6c1a1f75ce}{init()}} completes successfully 
-\end{DoxyReturn}
-\mbox{\Hypertarget{classtesseract__kinematics_1_1KDLFwdKinChain_a3448d41eabcea5429737dd6c1a1f75ce}\label{classtesseract__kinematics_1_1KDLFwdKinChain_a3448d41eabcea5429737dd6c1a1f75ce}} 
-\index{tesseract\_kinematics::KDLFwdKinChain@{tesseract\_kinematics::KDLFwdKinChain}!init@{init}}
-\index{init@{init}!tesseract\_kinematics::KDLFwdKinChain@{tesseract\_kinematics::KDLFwdKinChain}}
-\doxysubsubsection{\texorpdfstring{init()}{init()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
-{\footnotesize\ttfamily bool tesseract\+\_\+kinematics\+::\+KDLFwd\+Kin\+Chain\+::init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph_a9ee303b2514bfedd8c914d09551b00ff}{tesseract\+\_\+scene\+\_\+graph\+::\+Scene\+Graph\+::\+Const\+Ptr}}}]{scene\+\_\+graph,  }\item[{const std\+::string \&}]{base\+\_\+link,  }\item[{const std\+::string \&}]{tip\+\_\+link,  }\item[{std\+::string}]{name }\end{DoxyParamCaption})}
+\doxysubsubsection{\texorpdfstring{KDLFwdKinChain()}{KDLFwdKinChain()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily tesseract\+\_\+kinematics\+::\+KDLFwd\+Kin\+Chain\+::\+KDLFwd\+Kin\+Chain (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtesseract__kinematics_1_1KDLFwdKinChain}{KDLFwd\+Kin\+Chain}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classtesseract__kinematics_1_1KDLFwdKinChain_a429b3995288d75c883af9342139ab24d}\label{classtesseract__kinematics_1_1KDLFwdKinChain_a429b3995288d75c883af9342139ab24d}} 
+\index{tesseract\_kinematics::KDLFwdKinChain@{tesseract\_kinematics::KDLFwdKinChain}!KDLFwdKinChain@{KDLFwdKinChain}}
+\index{KDLFwdKinChain@{KDLFwdKinChain}!tesseract\_kinematics::KDLFwdKinChain@{tesseract\_kinematics::KDLFwdKinChain}}
+\doxysubsubsection{\texorpdfstring{KDLFwdKinChain()}{KDLFwdKinChain()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily tesseract\+\_\+kinematics\+::\+KDLFwd\+Kin\+Chain\+::\+KDLFwd\+Kin\+Chain (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph}{tesseract\+\_\+scene\+\_\+graph\+::\+Scene\+Graph}} \&}]{scene\+\_\+graph,  }\item[{const std\+::string \&}]{base\+\_\+link,  }\item[{const std\+::string \&}]{tip\+\_\+link,  }\item[{std\+::string}]{solver\+\_\+name = {\ttfamily \mbox{\hyperlink{namespacetesseract__kinematics_a8e876d3d43f95a425ef08ad478bf6003}{KDL\+\_\+\+FWD\+\_\+\+KIN\+\_\+\+CHAIN\+\_\+\+SOLVER\+\_\+\+NAME}}} }\end{DoxyParamCaption})}
 
 
 
@@ -539,21 +164,18 @@ Initializes Forward Kinematics as chain Creates a forward kinematic chain object
 \hline
 {\em tip\+\_\+link} & The name of the tip link for the kinematic chain \\
 \hline
-{\em name} & The name of the kinematic chain \\
+{\em solver\+\_\+name} & The solver name of the kinematic chain \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-True if \mbox{\hyperlink{classtesseract__kinematics_1_1KDLFwdKinChain_a3448d41eabcea5429737dd6c1a1f75ce}{init()}} completes successfully 
-\end{DoxyReturn}
-\mbox{\Hypertarget{classtesseract__kinematics_1_1KDLFwdKinChain_a26bc835255a27ea28e30a003e399aa4b}\label{classtesseract__kinematics_1_1KDLFwdKinChain_a26bc835255a27ea28e30a003e399aa4b}} 
-\index{tesseract\_kinematics::KDLFwdKinChain@{tesseract\_kinematics::KDLFwdKinChain}!init@{init}}
-\index{init@{init}!tesseract\_kinematics::KDLFwdKinChain@{tesseract\_kinematics::KDLFwdKinChain}}
-\doxysubsubsection{\texorpdfstring{init()}{init()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
-{\footnotesize\ttfamily bool tesseract\+\_\+kinematics\+::\+KDLFwd\+Kin\+Chain\+::init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph_a9ee303b2514bfedd8c914d09551b00ff}{tesseract\+\_\+scene\+\_\+graph\+::\+Scene\+Graph\+::\+Const\+Ptr}}}]{scene\+\_\+graph,  }\item[{const std\+::vector$<$ std\+::pair$<$ std\+::string, std\+::string $>$ $>$ \&}]{chains,  }\item[{std\+::string}]{name }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{classtesseract__kinematics_1_1KDLFwdKinChain_ae1ff1d5a9e61fe1eb36aaeb5b7370c3d}\label{classtesseract__kinematics_1_1KDLFwdKinChain_ae1ff1d5a9e61fe1eb36aaeb5b7370c3d}} 
+\index{tesseract\_kinematics::KDLFwdKinChain@{tesseract\_kinematics::KDLFwdKinChain}!KDLFwdKinChain@{KDLFwdKinChain}}
+\index{KDLFwdKinChain@{KDLFwdKinChain}!tesseract\_kinematics::KDLFwdKinChain@{tesseract\_kinematics::KDLFwdKinChain}}
+\doxysubsubsection{\texorpdfstring{KDLFwdKinChain()}{KDLFwdKinChain()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily tesseract\+\_\+kinematics\+::\+KDLFwd\+Kin\+Chain\+::\+KDLFwd\+Kin\+Chain (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph}{tesseract\+\_\+scene\+\_\+graph\+::\+Scene\+Graph}} \&}]{scene\+\_\+graph,  }\item[{const \mbox{\hyperlink{vhacdRaycastMesh_8cpp_adcf134d50025cc52907d0c8ac798d89d}{std\+::vector}}$<$ std\+::pair$<$ std\+::string, std\+::string $>$ $>$ \&}]{chains,  }\item[{std\+::string}]{solver\+\_\+name = {\ttfamily \mbox{\hyperlink{namespacetesseract__kinematics_a8e876d3d43f95a425ef08ad478bf6003}{KDL\+\_\+\+FWD\+\_\+\+KIN\+\_\+\+CHAIN\+\_\+\+SOLVER\+\_\+\+NAME}}} }\end{DoxyParamCaption})}
 
 
 
-Initializes Forward Kinematics as chain Creates a forward kinematic chain object from sequential chains. 
+Construct Forward Kinematics as chain Creates a forward kinematic chain object from sequential chains. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -561,17 +183,159 @@ Initializes Forward Kinematics as chain Creates a forward kinematic chain object
 \hline
 {\em chains} & A vector of kinematics chains $<$base\+\_\+link, tip\+\_\+link$>$ that get concatenated \\
 \hline
-{\em name} & The name of the kinematic chain \\
+{\em solver\+\_\+name} & The solver name of the kinematic chain \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtesseract__kinematics_1_1KDLFwdKinChain_afb17d15670555f2539d19a12cf9236ec}\label{classtesseract__kinematics_1_1KDLFwdKinChain_afb17d15670555f2539d19a12cf9236ec}} 
+\index{tesseract\_kinematics::KDLFwdKinChain@{tesseract\_kinematics::KDLFwdKinChain}!calcFwdKin@{calcFwdKin}}
+\index{calcFwdKin@{calcFwdKin}!tesseract\_kinematics::KDLFwdKinChain@{tesseract\_kinematics::KDLFwdKinChain}}
+\doxysubsubsection{\texorpdfstring{calcFwdKin()}{calcFwdKin()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacetesseract__common_a67bde3cb7bb235f0f61c370ef8bc74d8}{tesseract\+\_\+common\+::\+Transform\+Map}} tesseract\+\_\+kinematics\+::\+KDLFwd\+Kin\+Chain\+::calc\+Fwd\+Kin (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector\+Xd $>$ \&}]{joint\+\_\+angles }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Calculates the transform for each tip link in the kinematic group. 
+
+This should return a transform for every link listed in \mbox{\hyperlink{classtesseract__kinematics_1_1KDLFwdKinChain_ac6f53a9a6351c4a63877b34e6def9e91}{get\+Tip\+Link\+Names()}} Throws an exception on failures (including uninitialized) 
+\begin{DoxyParams}{Parameters}
+{\em joint\+\_\+angles} & Vector of joint angles (size must match number of joints in robot chain) \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-True if \mbox{\hyperlink{classtesseract__kinematics_1_1KDLFwdKinChain_a3448d41eabcea5429737dd6c1a1f75ce}{init()}} completes successfully 
+A map of tip link names and transforms 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classtesseract__kinematics_1_1KDLFwdKinChain_abd060b1f658d74139b9a0467d7730100}\label{classtesseract__kinematics_1_1KDLFwdKinChain_abd060b1f658d74139b9a0467d7730100}} 
+
+
+Implements \mbox{\hyperlink{classtesseract__kinematics_1_1ForwardKinematics_a81f281915dbb7a3528f1ac2328b15c3c}{tesseract\+\_\+kinematics\+::\+Forward\+Kinematics}}.
+
+\mbox{\Hypertarget{classtesseract__kinematics_1_1KDLFwdKinChain_af1d4f167fc5083dfb3a36b9a681c517c}\label{classtesseract__kinematics_1_1KDLFwdKinChain_af1d4f167fc5083dfb3a36b9a681c517c}} 
+\index{tesseract\_kinematics::KDLFwdKinChain@{tesseract\_kinematics::KDLFwdKinChain}!calcFwdKinHelperAll@{calcFwdKinHelperAll}}
+\index{calcFwdKinHelperAll@{calcFwdKinHelperAll}!tesseract\_kinematics::KDLFwdKinChain@{tesseract\_kinematics::KDLFwdKinChain}}
+\doxysubsubsection{\texorpdfstring{calcFwdKinHelperAll()}{calcFwdKinHelperAll()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacetesseract__common_a67bde3cb7bb235f0f61c370ef8bc74d8}{tesseract\+\_\+common\+::\+Transform\+Map}} tesseract\+\_\+kinematics\+::\+KDLFwd\+Kin\+Chain\+::calc\+Fwd\+Kin\+Helper\+All (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector\+Xd $>$ \&}]{joint\+\_\+angles }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+calc\+Fwd\+Kin helper function 
+
+\mbox{\Hypertarget{classtesseract__kinematics_1_1KDLFwdKinChain_a50288a017358532e49449b11febf8cb6}\label{classtesseract__kinematics_1_1KDLFwdKinChain_a50288a017358532e49449b11febf8cb6}} 
+\index{tesseract\_kinematics::KDLFwdKinChain@{tesseract\_kinematics::KDLFwdKinChain}!calcJacobian@{calcJacobian}}
+\index{calcJacobian@{calcJacobian}!tesseract\_kinematics::KDLFwdKinChain@{tesseract\_kinematics::KDLFwdKinChain}}
+\doxysubsubsection{\texorpdfstring{calcJacobian()}{calcJacobian()}}
+{\footnotesize\ttfamily Eigen\+::\+Matrix\+Xd tesseract\+\_\+kinematics\+::\+KDLFwd\+Kin\+Chain\+::calc\+Jacobian (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector\+Xd $>$ \&}]{joint\+\_\+angles,  }\item[{const std\+::string \&}]{link\+\_\+name }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Calculates the Jacobian matrix for a given joint state in the reference frame of the specified link. 
+
+This should be able to return a jacobian given any link listed in \mbox{\hyperlink{classtesseract__kinematics_1_1KDLFwdKinChain_ac6f53a9a6351c4a63877b34e6def9e91}{get\+Tip\+Link\+Names()}} Throws an exception on failures (including uninitialized) 
+\begin{DoxyParams}{Parameters}
+{\em joint\+\_\+angles} & Input vector of joint angles \\
+\hline
+{\em link\+\_\+name} & The link name to calculate jacobian \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The jacobian at the provided link 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classtesseract__kinematics_1_1ForwardKinematics_a4b70df584a97c3504ea7326eecc2804f}{tesseract\+\_\+kinematics\+::\+Forward\+Kinematics}}.
+
+\mbox{\Hypertarget{classtesseract__kinematics_1_1KDLFwdKinChain_a09ca5c1015cd99e474a5491cc683d844}\label{classtesseract__kinematics_1_1KDLFwdKinChain_a09ca5c1015cd99e474a5491cc683d844}} 
+\index{tesseract\_kinematics::KDLFwdKinChain@{tesseract\_kinematics::KDLFwdKinChain}!calcJacobianHelper@{calcJacobianHelper}}
+\index{calcJacobianHelper@{calcJacobianHelper}!tesseract\_kinematics::KDLFwdKinChain@{tesseract\_kinematics::KDLFwdKinChain}}
+\doxysubsubsection{\texorpdfstring{calcJacobianHelper()}{calcJacobianHelper()}}
+{\footnotesize\ttfamily bool tesseract\+\_\+kinematics\+::\+KDLFwd\+Kin\+Chain\+::calc\+Jacobian\+Helper (\begin{DoxyParamCaption}\item[{KDL\+::\+Jacobian \&}]{jacobian,  }\item[{const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector\+Xd $>$ \&}]{joint\+\_\+angles,  }\item[{int}]{segment\+\_\+num = {\ttfamily -\/1} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+calc\+Jacobian helper function 
+
+\mbox{\Hypertarget{classtesseract__kinematics_1_1KDLFwdKinChain_aac7e4b91ee6f7fa04f94c94ef3d0353e}\label{classtesseract__kinematics_1_1KDLFwdKinChain_aac7e4b91ee6f7fa04f94c94ef3d0353e}} 
+\index{tesseract\_kinematics::KDLFwdKinChain@{tesseract\_kinematics::KDLFwdKinChain}!clone@{clone}}
+\index{clone@{clone}!tesseract\_kinematics::KDLFwdKinChain@{tesseract\_kinematics::KDLFwdKinChain}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__kinematics_1_1ForwardKinematics_a53cb5fab19798d5afc20c259d4ffe1e3}{Forward\+Kinematics\+::\+UPtr}} tesseract\+\_\+kinematics\+::\+KDLFwd\+Kin\+Chain\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Clone the forward kinematics object. 
+
+
+
+Implements \mbox{\hyperlink{classtesseract__kinematics_1_1ForwardKinematics_adc550b87a373f9f5cac4d2154b0c6c80}{tesseract\+\_\+kinematics\+::\+Forward\+Kinematics}}.
+
+\mbox{\Hypertarget{classtesseract__kinematics_1_1KDLFwdKinChain_af516d87cd805acb7cb9ca76ca70eafe9}\label{classtesseract__kinematics_1_1KDLFwdKinChain_af516d87cd805acb7cb9ca76ca70eafe9}} 
+\index{tesseract\_kinematics::KDLFwdKinChain@{tesseract\_kinematics::KDLFwdKinChain}!getBaseLinkName@{getBaseLinkName}}
+\index{getBaseLinkName@{getBaseLinkName}!tesseract\_kinematics::KDLFwdKinChain@{tesseract\_kinematics::KDLFwdKinChain}}
+\doxysubsubsection{\texorpdfstring{getBaseLinkName()}{getBaseLinkName()}}
+{\footnotesize\ttfamily std\+::string tesseract\+\_\+kinematics\+::\+KDLFwd\+Kin\+Chain\+::get\+Base\+Link\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get the robot base link name. 
+
+
+
+Implements \mbox{\hyperlink{classtesseract__kinematics_1_1ForwardKinematics_ab02a688b0b0034b62a68da5103d6cb3b}{tesseract\+\_\+kinematics\+::\+Forward\+Kinematics}}.
+
+\mbox{\Hypertarget{classtesseract__kinematics_1_1KDLFwdKinChain_ad75175770ef2aef9d50876276ffe1c35}\label{classtesseract__kinematics_1_1KDLFwdKinChain_ad75175770ef2aef9d50876276ffe1c35}} 
+\index{tesseract\_kinematics::KDLFwdKinChain@{tesseract\_kinematics::KDLFwdKinChain}!getJointNames@{getJointNames}}
+\index{getJointNames@{getJointNames}!tesseract\_kinematics::KDLFwdKinChain@{tesseract\_kinematics::KDLFwdKinChain}}
+\doxysubsubsection{\texorpdfstring{getJointNames()}{getJointNames()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{vhacdRaycastMesh_8cpp_adcf134d50025cc52907d0c8ac798d89d}{std\+::vector}}$<$ std\+::string $>$ tesseract\+\_\+kinematics\+::\+KDLFwd\+Kin\+Chain\+::get\+Joint\+Names (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get list of joint names for kinematic object. 
+
+\begin{DoxyReturn}{Returns}
+A vector of joint names 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classtesseract__kinematics_1_1ForwardKinematics_ac778c021775b42c51a1309eab210b10f}{tesseract\+\_\+kinematics\+::\+Forward\+Kinematics}}.
+
+\mbox{\Hypertarget{classtesseract__kinematics_1_1KDLFwdKinChain_a6e35dc7589fe183d30e71d9a934d280f}\label{classtesseract__kinematics_1_1KDLFwdKinChain_a6e35dc7589fe183d30e71d9a934d280f}} 
+\index{tesseract\_kinematics::KDLFwdKinChain@{tesseract\_kinematics::KDLFwdKinChain}!getSolverName@{getSolverName}}
+\index{getSolverName@{getSolverName}!tesseract\_kinematics::KDLFwdKinChain@{tesseract\_kinematics::KDLFwdKinChain}}
+\doxysubsubsection{\texorpdfstring{getSolverName()}{getSolverName()}}
+{\footnotesize\ttfamily std\+::string tesseract\+\_\+kinematics\+::\+KDLFwd\+Kin\+Chain\+::get\+Solver\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get the name of the solver. Recommend using the name of the class. 
+
+
+
+Implements \mbox{\hyperlink{classtesseract__kinematics_1_1ForwardKinematics_a8b09829842ef384b734a4bb28603f064}{tesseract\+\_\+kinematics\+::\+Forward\+Kinematics}}.
+
+\mbox{\Hypertarget{classtesseract__kinematics_1_1KDLFwdKinChain_ac6f53a9a6351c4a63877b34e6def9e91}\label{classtesseract__kinematics_1_1KDLFwdKinChain_ac6f53a9a6351c4a63877b34e6def9e91}} 
+\index{tesseract\_kinematics::KDLFwdKinChain@{tesseract\_kinematics::KDLFwdKinChain}!getTipLinkNames@{getTipLinkNames}}
+\index{getTipLinkNames@{getTipLinkNames}!tesseract\_kinematics::KDLFwdKinChain@{tesseract\_kinematics::KDLFwdKinChain}}
+\doxysubsubsection{\texorpdfstring{getTipLinkNames()}{getTipLinkNames()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{vhacdRaycastMesh_8cpp_adcf134d50025cc52907d0c8ac798d89d}{std\+::vector}}$<$ std\+::string $>$ tesseract\+\_\+kinematics\+::\+KDLFwd\+Kin\+Chain\+::get\+Tip\+Link\+Names (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get list of tip link names for kinematic object. 
+
+\begin{DoxyReturn}{Returns}
+A vector of link names 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classtesseract__kinematics_1_1ForwardKinematics_a7f172454f09ec01674f4c8727e60f6be}{tesseract\+\_\+kinematics\+::\+Forward\+Kinematics}}.
+
+\mbox{\Hypertarget{classtesseract__kinematics_1_1KDLFwdKinChain_aaf1edad98bb0287e8489776c6570ba3b}\label{classtesseract__kinematics_1_1KDLFwdKinChain_aaf1edad98bb0287e8489776c6570ba3b}} 
 \index{tesseract\_kinematics::KDLFwdKinChain@{tesseract\_kinematics::KDLFwdKinChain}!numJoints@{numJoints}}
 \index{numJoints@{numJoints}!tesseract\_kinematics::KDLFwdKinChain@{tesseract\_kinematics::KDLFwdKinChain}}
 \doxysubsubsection{\texorpdfstring{numJoints()}{numJoints()}}
-{\footnotesize\ttfamily unsigned int tesseract\+\_\+kinematics\+::\+KDLFwd\+Kin\+Chain\+::num\+Joints (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily Eigen\+::\+Index tesseract\+\_\+kinematics\+::\+KDLFwd\+Kin\+Chain\+::num\+Joints (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
@@ -582,55 +346,19 @@ Number of joints in robot
 \end{DoxyReturn}
 
 
-Implements \mbox{\hyperlink{classtesseract__kinematics_1_1ForwardKinematics_a31a790909b0173bd6a9a88720f417667}{tesseract\+\_\+kinematics\+::\+Forward\+Kinematics}}.
+Implements \mbox{\hyperlink{classtesseract__kinematics_1_1ForwardKinematics_afcdf8be4f70df99050080c7c0a5ca379}{tesseract\+\_\+kinematics\+::\+Forward\+Kinematics}}.
 
-\mbox{\Hypertarget{classtesseract__kinematics_1_1KDLFwdKinChain_a22d459ad418b231f121a9bd3957f676e}\label{classtesseract__kinematics_1_1KDLFwdKinChain_a22d459ad418b231f121a9bd3957f676e}} 
+\mbox{\Hypertarget{classtesseract__kinematics_1_1KDLFwdKinChain_a1e18ddbbca9206f741202d6b6e57f3a3}\label{classtesseract__kinematics_1_1KDLFwdKinChain_a1e18ddbbca9206f741202d6b6e57f3a3}} 
 \index{tesseract\_kinematics::KDLFwdKinChain@{tesseract\_kinematics::KDLFwdKinChain}!operator=@{operator=}}
 \index{operator=@{operator=}!tesseract\_kinematics::KDLFwdKinChain@{tesseract\_kinematics::KDLFwdKinChain}}
 \doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__kinematics_1_1KDLFwdKinChain}{KDLFwd\+Kin\+Chain}}\& tesseract\+\_\+kinematics\+::\+KDLFwd\+Kin\+Chain\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtesseract__kinematics_1_1KDLFwdKinChain}{KDLFwd\+Kin\+Chain}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__kinematics_1_1KDLFwdKinChain}{KDLFwd\+Kin\+Chain}} \& tesseract\+\_\+kinematics\+::\+KDLFwd\+Kin\+Chain\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtesseract__kinematics_1_1KDLFwdKinChain}{KDLFwd\+Kin\+Chain}} \&}]{other }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{classtesseract__kinematics_1_1KDLFwdKinChain_a03909a29a05f7ca6fb393fac290fe1a2}\label{classtesseract__kinematics_1_1KDLFwdKinChain_a03909a29a05f7ca6fb393fac290fe1a2}} 
+\mbox{\Hypertarget{classtesseract__kinematics_1_1KDLFwdKinChain_a1de7ce73b1c710db6ac93e7b2c8bbc6b}\label{classtesseract__kinematics_1_1KDLFwdKinChain_a1de7ce73b1c710db6ac93e7b2c8bbc6b}} 
 \index{tesseract\_kinematics::KDLFwdKinChain@{tesseract\_kinematics::KDLFwdKinChain}!operator=@{operator=}}
 \index{operator=@{operator=}!tesseract\_kinematics::KDLFwdKinChain@{tesseract\_kinematics::KDLFwdKinChain}}
 \doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__kinematics_1_1KDLFwdKinChain}{KDLFwd\+Kin\+Chain}}\& tesseract\+\_\+kinematics\+::\+KDLFwd\+Kin\+Chain\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtesseract__kinematics_1_1KDLFwdKinChain}{KDLFwd\+Kin\+Chain}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
-
-\mbox{\Hypertarget{classtesseract__kinematics_1_1KDLFwdKinChain_aef485507d80b799bab3d3d24fd84ef4c}\label{classtesseract__kinematics_1_1KDLFwdKinChain_aef485507d80b799bab3d3d24fd84ef4c}} 
-\index{tesseract\_kinematics::KDLFwdKinChain@{tesseract\_kinematics::KDLFwdKinChain}!setLimits@{setLimits}}
-\index{setLimits@{setLimits}!tesseract\_kinematics::KDLFwdKinChain@{tesseract\_kinematics::KDLFwdKinChain}}
-\doxysubsubsection{\texorpdfstring{setLimits()}{setLimits()}}
-{\footnotesize\ttfamily void tesseract\+\_\+kinematics\+::\+KDLFwd\+Kin\+Chain\+::set\+Limits (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtesseract__common_1_1KinematicLimits}{tesseract\+\_\+common\+::\+Kinematic\+Limits}}}]{limits }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
-
-
-
-Setter for kinematic limits (joint, velocity, acceleration, etc.) 
-
-
-\begin{DoxyParams}{Parameters}
-{\em Kinematic} & Limits \\
-\hline
-\end{DoxyParams}
-
-
-Implements \mbox{\hyperlink{classtesseract__kinematics_1_1ForwardKinematics_a430e25cbb3fe0a4e9a06c55a9f3763ec}{tesseract\+\_\+kinematics\+::\+Forward\+Kinematics}}.
-
-\mbox{\Hypertarget{classtesseract__kinematics_1_1KDLFwdKinChain_a1aff40f418e23a2bede59902a85ccb55}\label{classtesseract__kinematics_1_1KDLFwdKinChain_a1aff40f418e23a2bede59902a85ccb55}} 
-\index{tesseract\_kinematics::KDLFwdKinChain@{tesseract\_kinematics::KDLFwdKinChain}!update@{update}}
-\index{update@{update}!tesseract\_kinematics::KDLFwdKinChain@{tesseract\_kinematics::KDLFwdKinChain}}
-\doxysubsubsection{\texorpdfstring{update()}{update()}}
-{\footnotesize\ttfamily bool tesseract\+\_\+kinematics\+::\+KDLFwd\+Kin\+Chain\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
-
-
-
-Updates kinematics if kinematic parameters have changed. 
-
-\begin{DoxyReturn}{Returns}
-True if successful 
-\end{DoxyReturn}
-
-
-Implements \mbox{\hyperlink{classtesseract__kinematics_1_1ForwardKinematics_acb48633b5b749b3aece378177cd6d377}{tesseract\+\_\+kinematics\+::\+Forward\+Kinematics}}.
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__kinematics_1_1KDLFwdKinChain}{KDLFwd\+Kin\+Chain}}\& tesseract\+\_\+kinematics\+::\+KDLFwd\+Kin\+Chain\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtesseract__kinematics_1_1KDLFwdKinChain}{KDLFwd\+Kin\+Chain}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
 
 
 
@@ -641,13 +369,7 @@ Implements \mbox{\hyperlink{classtesseract__kinematics_1_1ForwardKinematics_acb4
 \doxysubsubsection{\texorpdfstring{fk\_solver\_}{fk\_solver\_}}
 {\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$KDL\+::\+Chain\+Fk\+Solver\+Pos\+\_\+recursive$>$ tesseract\+\_\+kinematics\+::\+KDLFwd\+Kin\+Chain\+::fk\+\_\+solver\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
 
-KDL Forward Kinematic Solver \mbox{\Hypertarget{classtesseract__kinematics_1_1KDLFwdKinChain_aabef57240fad5e1e6a385cb8b3e3b9fc}\label{classtesseract__kinematics_1_1KDLFwdKinChain_aabef57240fad5e1e6a385cb8b3e3b9fc}} 
-\index{tesseract\_kinematics::KDLFwdKinChain@{tesseract\_kinematics::KDLFwdKinChain}!initialized\_@{initialized\_}}
-\index{initialized\_@{initialized\_}!tesseract\_kinematics::KDLFwdKinChain@{tesseract\_kinematics::KDLFwdKinChain}}
-\doxysubsubsection{\texorpdfstring{initialized\_}{initialized\_}}
-{\footnotesize\ttfamily bool tesseract\+\_\+kinematics\+::\+KDLFwd\+Kin\+Chain\+::initialized\+\_\+ \{ false \}\hspace{0.3cm}{\ttfamily [private]}}
-
-Identifies if the object has been initialized \mbox{\Hypertarget{classtesseract__kinematics_1_1KDLFwdKinChain_afa9f359d86e925f272b454e72cbc3310}\label{classtesseract__kinematics_1_1KDLFwdKinChain_afa9f359d86e925f272b454e72cbc3310}} 
+KDL Forward Kinematic Solver \mbox{\Hypertarget{classtesseract__kinematics_1_1KDLFwdKinChain_afa9f359d86e925f272b454e72cbc3310}\label{classtesseract__kinematics_1_1KDLFwdKinChain_afa9f359d86e925f272b454e72cbc3310}} 
 \index{tesseract\_kinematics::KDLFwdKinChain@{tesseract\_kinematics::KDLFwdKinChain}!jac\_solver\_@{jac\_solver\_}}
 \index{jac\_solver\_@{jac\_solver\_}!tesseract\_kinematics::KDLFwdKinChain@{tesseract\_kinematics::KDLFwdKinChain}}
 \doxysubsubsection{\texorpdfstring{jac\_solver\_}{jac\_solver\_}}
@@ -665,21 +387,19 @@ KDL data parsed from Scene Graph \mbox{\Hypertarget{classtesseract__kinematics_1
 \doxysubsubsection{\texorpdfstring{name\_}{name\_}}
 {\footnotesize\ttfamily std\+::string tesseract\+\_\+kinematics\+::\+KDLFwd\+Kin\+Chain\+::name\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
 
-Name of the kinematic chain \mbox{\Hypertarget{classtesseract__kinematics_1_1KDLFwdKinChain_a06e90c8d47812d73bbdcebda8ff20db1}\label{classtesseract__kinematics_1_1KDLFwdKinChain_a06e90c8d47812d73bbdcebda8ff20db1}} 
-\index{tesseract\_kinematics::KDLFwdKinChain@{tesseract\_kinematics::KDLFwdKinChain}!scene\_graph\_@{scene\_graph\_}}
-\index{scene\_graph\_@{scene\_graph\_}!tesseract\_kinematics::KDLFwdKinChain@{tesseract\_kinematics::KDLFwdKinChain}}
-\doxysubsubsection{\texorpdfstring{scene\_graph\_}{scene\_graph\_}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph_a9ee303b2514bfedd8c914d09551b00ff}{tesseract\+\_\+scene\+\_\+graph\+::\+Scene\+Graph\+::\+Const\+Ptr}} tesseract\+\_\+kinematics\+::\+KDLFwd\+Kin\+Chain\+::scene\+\_\+graph\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
-
-Tesseract Scene Graph \mbox{\Hypertarget{classtesseract__kinematics_1_1KDLFwdKinChain_a30f39a17195c4a1f668be3e429974f22}\label{classtesseract__kinematics_1_1KDLFwdKinChain_a30f39a17195c4a1f668be3e429974f22}} 
+Name of the kinematic chain \mbox{\Hypertarget{classtesseract__kinematics_1_1KDLFwdKinChain_a30f39a17195c4a1f668be3e429974f22}\label{classtesseract__kinematics_1_1KDLFwdKinChain_a30f39a17195c4a1f668be3e429974f22}} 
 \index{tesseract\_kinematics::KDLFwdKinChain@{tesseract\_kinematics::KDLFwdKinChain}!solver\_name\_@{solver\_name\_}}
 \index{solver\_name\_@{solver\_name\_}!tesseract\_kinematics::KDLFwdKinChain@{tesseract\_kinematics::KDLFwdKinChain}}
 \doxysubsubsection{\texorpdfstring{solver\_name\_}{solver\_name\_}}
-{\footnotesize\ttfamily std\+::string tesseract\+\_\+kinematics\+::\+KDLFwd\+Kin\+Chain\+::solver\+\_\+name\+\_\+ \{ \char`\"{}KDLFwd\+Kin\+Chain\char`\"{} \}\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily std\+::string tesseract\+\_\+kinematics\+::\+KDLFwd\+Kin\+Chain\+::solver\+\_\+name\+\_\+ \{ \mbox{\hyperlink{namespacetesseract__kinematics_a8e876d3d43f95a425ef08ad478bf6003}{KDL\+\_\+\+FWD\+\_\+\+KIN\+\_\+\+CHAIN\+\_\+\+SOLVER\+\_\+\+NAME}} \}\hspace{0.3cm}{\ttfamily [private]}}
 
-Name of this solver 
+
+
+Name of this solver. 
+
+
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-tesseract/tesseract\+\_\+kinematics/include/tesseract\+\_\+kinematics/kdl/\mbox{\hyperlink{kdl__fwd__kin__chain_8h}{kdl\+\_\+fwd\+\_\+kin\+\_\+chain.\+h}}\item 
-tesseract/tesseract\+\_\+kinematics/src/kdl/\mbox{\hyperlink{kdl__fwd__kin__chain_8cpp}{kdl\+\_\+fwd\+\_\+kin\+\_\+chain.\+cpp}}\end{DoxyCompactItemize}
+tesseract\+\_\+kinematics/kdl/include/tesseract\+\_\+kinematics/kdl/\mbox{\hyperlink{kdl__fwd__kin__chain_8h}{kdl\+\_\+fwd\+\_\+kin\+\_\+chain.\+h}}\item 
+tesseract\+\_\+kinematics/kdl/src/\mbox{\hyperlink{kdl__fwd__kin__chain_8cpp}{kdl\+\_\+fwd\+\_\+kin\+\_\+chain.\+cpp}}\end{DoxyCompactItemize}

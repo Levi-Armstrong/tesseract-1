@@ -1,13 +1,17 @@
-\hypertarget{rep__kinematics__unit_8cpp}{}\doxysection{tesseract/tesseract\+\_\+kinematics/test/rep\+\_\+kinematics\+\_\+unit.cpp File Reference}
-\label{rep__kinematics__unit_8cpp}\index{tesseract/tesseract\_kinematics/test/rep\_kinematics\_unit.cpp@{tesseract/tesseract\_kinematics/test/rep\_kinematics\_unit.cpp}}
+\hypertarget{rep__kinematics__unit_8cpp}{}\doxysection{tesseract\+\_\+kinematics/test/rep\+\_\+kinematics\+\_\+unit.cpp File Reference}
+\label{rep__kinematics__unit_8cpp}\index{tesseract\_kinematics/test/rep\_kinematics\_unit.cpp@{tesseract\_kinematics/test/rep\_kinematics\_unit.cpp}}
 {\ttfamily \#include $<$tesseract\+\_\+common/macros.\+h$>$}\newline
 {\ttfamily \#include $<$gtest/gtest.\+h$>$}\newline
 {\ttfamily \#include $<$fstream$>$}\newline
 {\ttfamily \#include $<$tesseract\+\_\+urdf/urdf\+\_\+parser.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}kinematics\+\_\+test\+\_\+utils.\+h\char`\"{}}\newline
 {\ttfamily \#include $<$tesseract\+\_\+kinematics/kdl/kdl\+\_\+fwd\+\_\+kin\+\_\+chain.\+h$>$}\newline
-{\ttfamily \#include $<$tesseract\+\_\+kinematics/core/rep\+\_\+inverse\+\_\+kinematics.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+kinematics/core/rep\+\_\+inv\+\_\+kin.\+h$>$}\newline
 {\ttfamily \#include $<$tesseract\+\_\+kinematics/opw/opw\+\_\+inv\+\_\+kin.\+h$>$}\newline
 {\ttfamily \#include $<$tesseract\+\_\+kinematics/core/utils.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+kinematics/core/kinematic\+\_\+group.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+state\+\_\+solver/kdl/kdl\+\_\+state\+\_\+solver.\+h$>$}\newline
+{\ttfamily \#include $<$opw\+\_\+kinematics/opw\+\_\+parameters.\+h$>$}\newline
 Include dependency graph for rep\+\_\+kinematics\+\_\+unit.\+cpp\+:
 \nopagebreak
 \begin{figure}[H]
@@ -19,21 +23,15 @@ Include dependency graph for rep\+\_\+kinematics\+\_\+unit.\+cpp\+:
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{macros_8h_a8cc0e3c6a3382c5c0b19eb9e676fc2db}{TESSERACT\+\_\+\+COMMON\+\_\+\+IGNORE\+\_\+\+WARNINGS\+\_\+\+PUSH}} \mbox{\hyperlink{macros_8h_a7af8561cf52519e9896b0697095c1b8b}{TESSERACT\+\_\+\+COMMON\+\_\+\+IGNORE\+\_\+\+WARNINGS\+\_\+\+POP}} std\+::string \mbox{\hyperlink{rep__kinematics__unit_8cpp_a093896878775ab688c91d8ef6b92150d}{locate\+Resource}} (const std\+::string \&url)
+opw\+\_\+kinematics\+::\+Parameters$<$ double $>$ \mbox{\hyperlink{rep__kinematics__unit_8cpp_a87aa1c470622862e42cf9bda44156301}{get\+OPWKinematics\+Param\+ABB}} ()
 \item 
-\mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph_a4421b8568bd664cf203613a054e1847b}{tesseract\+\_\+scene\+\_\+graph\+::\+Scene\+Graph\+::\+Ptr}} \mbox{\hyperlink{rep__kinematics__unit_8cpp_a128edbf9b81a330ac08aa9440384d6e7}{get\+Scene\+Graph}} ()
+\mbox{\hyperlink{classtesseract__kinematics_1_1ForwardKinematics_a53cb5fab19798d5afc20c259d4ffe1e3}{Forward\+Kinematics\+::\+UPtr}} \mbox{\hyperlink{rep__kinematics__unit_8cpp_ac6889c842fc94df7ac5289451226d7c2}{get\+Robot\+Fwd\+Kinematics}} (const \mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph}{tesseract\+\_\+scene\+\_\+graph\+::\+Scene\+Graph}} \&scene\+\_\+graph)
 \item 
-\mbox{\hyperlink{classtesseract__kinematics_1_1ForwardKinematics_abdb52d493e8f0c584be778ddb193ed46}{tesseract\+\_\+kinematics\+::\+Forward\+Kinematics\+::\+Ptr}} \mbox{\hyperlink{rep__kinematics__unit_8cpp_a6716c2b3ea1249f70861b438b5e74966}{get\+Robot\+Fwd\+Kinematics}} (const \mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph_a4421b8568bd664cf203613a054e1847b}{tesseract\+\_\+scene\+\_\+graph\+::\+Scene\+Graph\+::\+Ptr}} \&scene\+\_\+graph)
+\mbox{\hyperlink{classtesseract__kinematics_1_1ForwardKinematics_a53cb5fab19798d5afc20c259d4ffe1e3}{Forward\+Kinematics\+::\+UPtr}} \mbox{\hyperlink{rep__kinematics__unit_8cpp_a2a0f0b4f5a7492232832dce1359cf149}{get\+Full\+Fwd\+Kinematics}} (const \mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph}{tesseract\+\_\+scene\+\_\+graph\+::\+Scene\+Graph}} \&scene\+\_\+graph)
 \item 
-\mbox{\hyperlink{classtesseract__kinematics_1_1ForwardKinematics_abdb52d493e8f0c584be778ddb193ed46}{tesseract\+\_\+kinematics\+::\+Forward\+Kinematics\+::\+Ptr}} \mbox{\hyperlink{rep__kinematics__unit_8cpp_abf2d948816c936fcb41d2cd144c51b7c}{get\+Full\+Fwd\+Kinematics}} (const \mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph_a4421b8568bd664cf203613a054e1847b}{tesseract\+\_\+scene\+\_\+graph\+::\+Scene\+Graph\+::\+Ptr}} \&scene\+\_\+graph)
+\mbox{\hyperlink{classtesseract__kinematics_1_1ForwardKinematics_a53cb5fab19798d5afc20c259d4ffe1e3}{Forward\+Kinematics\+::\+UPtr}} \mbox{\hyperlink{rep__kinematics__unit_8cpp_a079a50f714dc1d5575be71edc2f3fe8f}{get\+Positioner\+Fwd\+Kinematics}} (const \mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph}{tesseract\+\_\+scene\+\_\+graph\+::\+Scene\+Graph}} \&scene\+\_\+graph)
 \item 
-\mbox{\hyperlink{classtesseract__kinematics_1_1ForwardKinematics_abdb52d493e8f0c584be778ddb193ed46}{tesseract\+\_\+kinematics\+::\+Forward\+Kinematics\+::\+Ptr}} \mbox{\hyperlink{rep__kinematics__unit_8cpp_a9212a1ffc842f91d7801bb0148f9ec0e}{get\+Positioner\+Fwd\+Kinematics}} (const \mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph_a4421b8568bd664cf203613a054e1847b}{tesseract\+\_\+scene\+\_\+graph\+::\+Scene\+Graph\+::\+Ptr}} \&scene\+\_\+graph)
-\item 
-\mbox{\hyperlink{classtesseract__kinematics_1_1InverseKinematics_a189ebd423f38f83720d58a922d049688}{tesseract\+\_\+kinematics\+::\+Inverse\+Kinematics\+::\+Ptr}} \mbox{\hyperlink{rep__kinematics__unit_8cpp_ad0b57e1dd668ad0fc608849659f22e73}{get\+Full\+Inv\+Kinematics}} (const \mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph_a4421b8568bd664cf203613a054e1847b}{tesseract\+\_\+scene\+\_\+graph\+::\+Scene\+Graph\+::\+Ptr}} \&scene\+\_\+graph)
-\item 
-void \mbox{\hyperlink{rep__kinematics__unit_8cpp_afe90205ccb21ef7b9b6e6b1701b2e042}{run\+Inv\+Kin\+Test}} (const \mbox{\hyperlink{classtesseract__kinematics_1_1InverseKinematics}{tesseract\+\_\+kinematics\+::\+Inverse\+Kinematics}} \&inv\+\_\+kin, const \mbox{\hyperlink{classtesseract__kinematics_1_1ForwardKinematics}{tesseract\+\_\+kinematics\+::\+Forward\+Kinematics}} \&fwd\+\_\+kin)
-\item 
-void \mbox{\hyperlink{rep__kinematics__unit_8cpp_ae851b413dc09298273195bf1292a53df}{run\+Active\+Link\+Names\+Test}} (\mbox{\hyperlink{classtesseract__kinematics_1_1InverseKinematics}{tesseract\+\_\+kinematics\+::\+Inverse\+Kinematics}} \&kin)
+\mbox{\hyperlink{classtesseract__kinematics_1_1InverseKinematics_a68e526591337b0781c9ec91618d1d5f0}{Inverse\+Kinematics\+::\+UPtr}} \mbox{\hyperlink{rep__kinematics__unit_8cpp_a20ca5fbe7e49dee1fa5a2059ee84b6ed}{get\+Full\+Inv\+Kinematics}} (const \mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph}{tesseract\+\_\+scene\+\_\+graph\+::\+Scene\+Graph}} \&scene\+\_\+graph)
 \item 
 \mbox{\hyperlink{rep__kinematics__unit_8cpp_a5cdf94e34070c5432c1b136530ec07f6}{TEST}} (Tesseract\+Kinematics\+Unit, Robot\+With\+External\+Positioner\+Inverse\+Kinematic\+Unit)
 \item 
@@ -42,59 +40,41 @@ int \mbox{\hyperlink{rep__kinematics__unit_8cpp_a3c04138a5bfe5d72780bb7e82a18e62
 
 
 \doxysubsection{Function Documentation}
-\mbox{\Hypertarget{rep__kinematics__unit_8cpp_abf2d948816c936fcb41d2cd144c51b7c}\label{rep__kinematics__unit_8cpp_abf2d948816c936fcb41d2cd144c51b7c}} 
+\mbox{\Hypertarget{rep__kinematics__unit_8cpp_a2a0f0b4f5a7492232832dce1359cf149}\label{rep__kinematics__unit_8cpp_a2a0f0b4f5a7492232832dce1359cf149}} 
 \index{rep\_kinematics\_unit.cpp@{rep\_kinematics\_unit.cpp}!getFullFwdKinematics@{getFullFwdKinematics}}
 \index{getFullFwdKinematics@{getFullFwdKinematics}!rep\_kinematics\_unit.cpp@{rep\_kinematics\_unit.cpp}}
 \doxysubsubsection{\texorpdfstring{getFullFwdKinematics()}{getFullFwdKinematics()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__kinematics_1_1ForwardKinematics_abdb52d493e8f0c584be778ddb193ed46}{tesseract\+\_\+kinematics\+::\+Forward\+Kinematics\+::\+Ptr}} get\+Full\+Fwd\+Kinematics (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph_a4421b8568bd664cf203613a054e1847b}{tesseract\+\_\+scene\+\_\+graph\+::\+Scene\+Graph\+::\+Ptr}} \&}]{scene\+\_\+graph }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__kinematics_1_1ForwardKinematics_a53cb5fab19798d5afc20c259d4ffe1e3}{Forward\+Kinematics\+::\+UPtr}} get\+Full\+Fwd\+Kinematics (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph}{tesseract\+\_\+scene\+\_\+graph\+::\+Scene\+Graph}} \&}]{scene\+\_\+graph }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{rep__kinematics__unit_8cpp_ad0b57e1dd668ad0fc608849659f22e73}\label{rep__kinematics__unit_8cpp_ad0b57e1dd668ad0fc608849659f22e73}} 
+\mbox{\Hypertarget{rep__kinematics__unit_8cpp_a20ca5fbe7e49dee1fa5a2059ee84b6ed}\label{rep__kinematics__unit_8cpp_a20ca5fbe7e49dee1fa5a2059ee84b6ed}} 
 \index{rep\_kinematics\_unit.cpp@{rep\_kinematics\_unit.cpp}!getFullInvKinematics@{getFullInvKinematics}}
 \index{getFullInvKinematics@{getFullInvKinematics}!rep\_kinematics\_unit.cpp@{rep\_kinematics\_unit.cpp}}
 \doxysubsubsection{\texorpdfstring{getFullInvKinematics()}{getFullInvKinematics()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__kinematics_1_1InverseKinematics_a189ebd423f38f83720d58a922d049688}{tesseract\+\_\+kinematics\+::\+Inverse\+Kinematics\+::\+Ptr}} get\+Full\+Inv\+Kinematics (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph_a4421b8568bd664cf203613a054e1847b}{tesseract\+\_\+scene\+\_\+graph\+::\+Scene\+Graph\+::\+Ptr}} \&}]{scene\+\_\+graph }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__kinematics_1_1InverseKinematics_a68e526591337b0781c9ec91618d1d5f0}{Inverse\+Kinematics\+::\+UPtr}} get\+Full\+Inv\+Kinematics (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph}{tesseract\+\_\+scene\+\_\+graph\+::\+Scene\+Graph}} \&}]{scene\+\_\+graph }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{rep__kinematics__unit_8cpp_a9212a1ffc842f91d7801bb0148f9ec0e}\label{rep__kinematics__unit_8cpp_a9212a1ffc842f91d7801bb0148f9ec0e}} 
+\mbox{\Hypertarget{rep__kinematics__unit_8cpp_a87aa1c470622862e42cf9bda44156301}\label{rep__kinematics__unit_8cpp_a87aa1c470622862e42cf9bda44156301}} 
+\index{rep\_kinematics\_unit.cpp@{rep\_kinematics\_unit.cpp}!getOPWKinematicsParamABB@{getOPWKinematicsParamABB}}
+\index{getOPWKinematicsParamABB@{getOPWKinematicsParamABB}!rep\_kinematics\_unit.cpp@{rep\_kinematics\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{getOPWKinematicsParamABB()}{getOPWKinematicsParamABB()}}
+{\footnotesize\ttfamily opw\+\_\+kinematics\+::\+Parameters$<$double$>$ get\+OPWKinematics\+Param\+ABB (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{rep__kinematics__unit_8cpp_a079a50f714dc1d5575be71edc2f3fe8f}\label{rep__kinematics__unit_8cpp_a079a50f714dc1d5575be71edc2f3fe8f}} 
 \index{rep\_kinematics\_unit.cpp@{rep\_kinematics\_unit.cpp}!getPositionerFwdKinematics@{getPositionerFwdKinematics}}
 \index{getPositionerFwdKinematics@{getPositionerFwdKinematics}!rep\_kinematics\_unit.cpp@{rep\_kinematics\_unit.cpp}}
 \doxysubsubsection{\texorpdfstring{getPositionerFwdKinematics()}{getPositionerFwdKinematics()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__kinematics_1_1ForwardKinematics_abdb52d493e8f0c584be778ddb193ed46}{tesseract\+\_\+kinematics\+::\+Forward\+Kinematics\+::\+Ptr}} get\+Positioner\+Fwd\+Kinematics (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph_a4421b8568bd664cf203613a054e1847b}{tesseract\+\_\+scene\+\_\+graph\+::\+Scene\+Graph\+::\+Ptr}} \&}]{scene\+\_\+graph }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__kinematics_1_1ForwardKinematics_a53cb5fab19798d5afc20c259d4ffe1e3}{Forward\+Kinematics\+::\+UPtr}} get\+Positioner\+Fwd\+Kinematics (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph}{tesseract\+\_\+scene\+\_\+graph\+::\+Scene\+Graph}} \&}]{scene\+\_\+graph }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{rep__kinematics__unit_8cpp_a6716c2b3ea1249f70861b438b5e74966}\label{rep__kinematics__unit_8cpp_a6716c2b3ea1249f70861b438b5e74966}} 
+\mbox{\Hypertarget{rep__kinematics__unit_8cpp_ac6889c842fc94df7ac5289451226d7c2}\label{rep__kinematics__unit_8cpp_ac6889c842fc94df7ac5289451226d7c2}} 
 \index{rep\_kinematics\_unit.cpp@{rep\_kinematics\_unit.cpp}!getRobotFwdKinematics@{getRobotFwdKinematics}}
 \index{getRobotFwdKinematics@{getRobotFwdKinematics}!rep\_kinematics\_unit.cpp@{rep\_kinematics\_unit.cpp}}
 \doxysubsubsection{\texorpdfstring{getRobotFwdKinematics()}{getRobotFwdKinematics()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__kinematics_1_1ForwardKinematics_abdb52d493e8f0c584be778ddb193ed46}{tesseract\+\_\+kinematics\+::\+Forward\+Kinematics\+::\+Ptr}} get\+Robot\+Fwd\+Kinematics (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph_a4421b8568bd664cf203613a054e1847b}{tesseract\+\_\+scene\+\_\+graph\+::\+Scene\+Graph\+::\+Ptr}} \&}]{scene\+\_\+graph }\end{DoxyParamCaption})}
-
-\mbox{\Hypertarget{rep__kinematics__unit_8cpp_a128edbf9b81a330ac08aa9440384d6e7}\label{rep__kinematics__unit_8cpp_a128edbf9b81a330ac08aa9440384d6e7}} 
-\index{rep\_kinematics\_unit.cpp@{rep\_kinematics\_unit.cpp}!getSceneGraph@{getSceneGraph}}
-\index{getSceneGraph@{getSceneGraph}!rep\_kinematics\_unit.cpp@{rep\_kinematics\_unit.cpp}}
-\doxysubsubsection{\texorpdfstring{getSceneGraph()}{getSceneGraph()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph_a4421b8568bd664cf203613a054e1847b}{tesseract\+\_\+scene\+\_\+graph\+::\+Scene\+Graph\+::\+Ptr}} get\+Scene\+Graph (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-\mbox{\Hypertarget{rep__kinematics__unit_8cpp_a093896878775ab688c91d8ef6b92150d}\label{rep__kinematics__unit_8cpp_a093896878775ab688c91d8ef6b92150d}} 
-\index{rep\_kinematics\_unit.cpp@{rep\_kinematics\_unit.cpp}!locateResource@{locateResource}}
-\index{locateResource@{locateResource}!rep\_kinematics\_unit.cpp@{rep\_kinematics\_unit.cpp}}
-\doxysubsubsection{\texorpdfstring{locateResource()}{locateResource()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{macros_8h_a8cc0e3c6a3382c5c0b19eb9e676fc2db}{TESSERACT\+\_\+\+COMMON\+\_\+\+IGNORE\+\_\+\+WARNINGS\+\_\+\+PUSH}} \mbox{\hyperlink{macros_8h_a7af8561cf52519e9896b0697095c1b8b}{TESSERACT\+\_\+\+COMMON\+\_\+\+IGNORE\+\_\+\+WARNINGS\+\_\+\+POP}} std\+::string locate\+Resource (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{url }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__kinematics_1_1ForwardKinematics_a53cb5fab19798d5afc20c259d4ffe1e3}{Forward\+Kinematics\+::\+UPtr}} get\+Robot\+Fwd\+Kinematics (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph}{tesseract\+\_\+scene\+\_\+graph\+::\+Scene\+Graph}} \&}]{scene\+\_\+graph }\end{DoxyParamCaption})}
 
 \mbox{\Hypertarget{rep__kinematics__unit_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}\label{rep__kinematics__unit_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}} 
 \index{rep\_kinematics\_unit.cpp@{rep\_kinematics\_unit.cpp}!main@{main}}
 \index{main@{main}!rep\_kinematics\_unit.cpp@{rep\_kinematics\_unit.cpp}}
 \doxysubsubsection{\texorpdfstring{main()}{main()}}
 {\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
-
-\mbox{\Hypertarget{rep__kinematics__unit_8cpp_ae851b413dc09298273195bf1292a53df}\label{rep__kinematics__unit_8cpp_ae851b413dc09298273195bf1292a53df}} 
-\index{rep\_kinematics\_unit.cpp@{rep\_kinematics\_unit.cpp}!runActiveLinkNamesTest@{runActiveLinkNamesTest}}
-\index{runActiveLinkNamesTest@{runActiveLinkNamesTest}!rep\_kinematics\_unit.cpp@{rep\_kinematics\_unit.cpp}}
-\doxysubsubsection{\texorpdfstring{runActiveLinkNamesTest()}{runActiveLinkNamesTest()}}
-{\footnotesize\ttfamily void run\+Active\+Link\+Names\+Test (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtesseract__kinematics_1_1InverseKinematics}{tesseract\+\_\+kinematics\+::\+Inverse\+Kinematics}} \&}]{kin }\end{DoxyParamCaption})}
-
-\mbox{\Hypertarget{rep__kinematics__unit_8cpp_afe90205ccb21ef7b9b6e6b1701b2e042}\label{rep__kinematics__unit_8cpp_afe90205ccb21ef7b9b6e6b1701b2e042}} 
-\index{rep\_kinematics\_unit.cpp@{rep\_kinematics\_unit.cpp}!runInvKinTest@{runInvKinTest}}
-\index{runInvKinTest@{runInvKinTest}!rep\_kinematics\_unit.cpp@{rep\_kinematics\_unit.cpp}}
-\doxysubsubsection{\texorpdfstring{runInvKinTest()}{runInvKinTest()}}
-{\footnotesize\ttfamily void run\+Inv\+Kin\+Test (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtesseract__kinematics_1_1InverseKinematics}{tesseract\+\_\+kinematics\+::\+Inverse\+Kinematics}} \&}]{inv\+\_\+kin,  }\item[{const \mbox{\hyperlink{classtesseract__kinematics_1_1ForwardKinematics}{tesseract\+\_\+kinematics\+::\+Forward\+Kinematics}} \&}]{fwd\+\_\+kin }\end{DoxyParamCaption})}
 
 \mbox{\Hypertarget{rep__kinematics__unit_8cpp_a5cdf94e34070c5432c1b136530ec07f6}\label{rep__kinematics__unit_8cpp_a5cdf94e34070c5432c1b136530ec07f6}} 
 \index{rep\_kinematics\_unit.cpp@{rep\_kinematics\_unit.cpp}!TEST@{TEST}}

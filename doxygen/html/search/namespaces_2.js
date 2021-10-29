@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['conf_3552',['conf',['../d5/d89/namespaceconf.html',1,'']]]
+  ['mine_5fpackage_5finfo_3284',['mine_package_info',['../dd/d17/namespacemine__package__info.html',1,'']]]
 ];

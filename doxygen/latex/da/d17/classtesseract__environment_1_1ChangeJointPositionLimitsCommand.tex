@@ -2,7 +2,7 @@
 \label{classtesseract__environment_1_1ChangeJointPositionLimitsCommand}\index{tesseract\_environment::ChangeJointPositionLimitsCommand@{tesseract\_environment::ChangeJointPositionLimitsCommand}}
 
 
-{\ttfamily \#include $<$commands.\+h$>$}
+{\ttfamily \#include $<$change\+\_\+joint\+\_\+position\+\_\+limits\+\_\+command.\+h$>$}
 
 
 
@@ -24,12 +24,21 @@ Collaboration diagram for tesseract\+\_\+environment\+::Change\+Joint\+Position\
 \includegraphics[width=350pt]{dd/d79/classtesseract__environment_1_1ChangeJointPositionLimitsCommand__coll__graph}
 \end{center}
 \end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classtesseract__environment_1_1ChangeJointPositionLimitsCommand_af539ec74d28eb6bb736052ac1cc782eb}{Ptr}} = std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classtesseract__environment_1_1ChangeJointPositionLimitsCommand}{Change\+Joint\+Position\+Limits\+Command}} $>$
+\item 
+using \mbox{\hyperlink{classtesseract__environment_1_1ChangeJointPositionLimitsCommand_a5e7d4fd9d43c62f95eb954ccb6395a71}{Const\+Ptr}} = std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{classtesseract__environment_1_1ChangeJointPositionLimitsCommand}{Change\+Joint\+Position\+Limits\+Command}} $>$
+\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classtesseract__environment_1_1ChangeJointPositionLimitsCommand_ae23769965f48d3fc0f2045479b02c91d}{Change\+Joint\+Position\+Limits\+Command}} (std\+::string joint\+\_\+name, double lower, double upper)
-\item 
+\begin{DoxyCompactList}\small\item\em Changes the position limits associated with a joint. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classtesseract__environment_1_1ChangeJointPositionLimitsCommand_aabfe1a4e3bea06ceeefa0ca7dff75c80}{Change\+Joint\+Position\+Limits\+Command}} (std\+::unordered\+\_\+map$<$ std\+::string, std\+::pair$<$ double, double $>$$>$ limits)
+\begin{DoxyCompactList}\small\item\em Changes the position limits associated with one or more joints. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacetesseract__environment_afc00c1aecb519acba3afc24dbd367029}{Command\+Type}} \mbox{\hyperlink{classtesseract__environment_1_1ChangeJointPositionLimitsCommand_afe421287c2a77d40389b08ccf2ff06f3}{get\+Type}} () const final
 \item 
 const std\+::unordered\+\_\+map$<$ std\+::string, std\+::pair$<$ double, double $>$ $>$ \& \mbox{\hyperlink{classtesseract__environment_1_1ChangeJointPositionLimitsCommand_a451e5b25cac8fca3fad19a710e7ff2b3}{get\+Limits}} () const
 \end{DoxyCompactItemize}
@@ -38,7 +47,21 @@ const std\+::unordered\+\_\+map$<$ std\+::string, std\+::pair$<$ double, double 
 \item 
 std\+::unordered\+\_\+map$<$ std\+::string, std\+::pair$<$ double, double $>$ $>$ \mbox{\hyperlink{classtesseract__environment_1_1ChangeJointPositionLimitsCommand_ad31393e96902b6ab071b997ea86b1810}{limits\+\_\+}}
 \end{DoxyCompactItemize}
-\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classtesseract__environment_1_1ChangeJointPositionLimitsCommand_a5e7d4fd9d43c62f95eb954ccb6395a71}\label{classtesseract__environment_1_1ChangeJointPositionLimitsCommand_a5e7d4fd9d43c62f95eb954ccb6395a71}} 
+\index{tesseract\_environment::ChangeJointPositionLimitsCommand@{tesseract\_environment::ChangeJointPositionLimitsCommand}!ConstPtr@{ConstPtr}}
+\index{ConstPtr@{ConstPtr}!tesseract\_environment::ChangeJointPositionLimitsCommand@{tesseract\_environment::ChangeJointPositionLimitsCommand}}
+\doxysubsubsection{\texorpdfstring{ConstPtr}{ConstPtr}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classtesseract__environment_1_1ChangeJointPositionLimitsCommand_a5e7d4fd9d43c62f95eb954ccb6395a71}{tesseract\+\_\+environment\+::\+Change\+Joint\+Position\+Limits\+Command\+::\+Const\+Ptr}} =  std\+::shared\+\_\+ptr$<$const \mbox{\hyperlink{classtesseract__environment_1_1ChangeJointPositionLimitsCommand}{Change\+Joint\+Position\+Limits\+Command}}$>$}
+
+\mbox{\Hypertarget{classtesseract__environment_1_1ChangeJointPositionLimitsCommand_af539ec74d28eb6bb736052ac1cc782eb}\label{classtesseract__environment_1_1ChangeJointPositionLimitsCommand_af539ec74d28eb6bb736052ac1cc782eb}} 
+\index{tesseract\_environment::ChangeJointPositionLimitsCommand@{tesseract\_environment::ChangeJointPositionLimitsCommand}!Ptr@{Ptr}}
+\index{Ptr@{Ptr}!tesseract\_environment::ChangeJointPositionLimitsCommand@{tesseract\_environment::ChangeJointPositionLimitsCommand}}
+\doxysubsubsection{\texorpdfstring{Ptr}{Ptr}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classtesseract__environment_1_1ChangeJointPositionLimitsCommand_af539ec74d28eb6bb736052ac1cc782eb}{tesseract\+\_\+environment\+::\+Change\+Joint\+Position\+Limits\+Command\+::\+Ptr}} =  std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classtesseract__environment_1_1ChangeJointPositionLimitsCommand}{Change\+Joint\+Position\+Limits\+Command}}$>$}
+
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
@@ -48,6 +71,17 @@ std\+::unordered\+\_\+map$<$ std\+::string, std\+::pair$<$ double, double $>$ $>
 \doxysubsubsection{\texorpdfstring{ChangeJointPositionLimitsCommand()}{ChangeJointPositionLimitsCommand()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily tesseract\+\_\+environment\+::\+Change\+Joint\+Position\+Limits\+Command\+::\+Change\+Joint\+Position\+Limits\+Command (\begin{DoxyParamCaption}\item[{std\+::string}]{joint\+\_\+name,  }\item[{double}]{lower,  }\item[{double}]{upper }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
+
+
+Changes the position limits associated with a joint. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em joint\+\_\+name} & Name of the joint to be updated \\
+\hline
+{\em limits} & New position limits to be set as the joint limits \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{classtesseract__environment_1_1ChangeJointPositionLimitsCommand_aabfe1a4e3bea06ceeefa0ca7dff75c80}\label{classtesseract__environment_1_1ChangeJointPositionLimitsCommand_aabfe1a4e3bea06ceeefa0ca7dff75c80}} 
 \index{tesseract\_environment::ChangeJointPositionLimitsCommand@{tesseract\_environment::ChangeJointPositionLimitsCommand}!ChangeJointPositionLimitsCommand@{ChangeJointPositionLimitsCommand}}
 \index{ChangeJointPositionLimitsCommand@{ChangeJointPositionLimitsCommand}!tesseract\_environment::ChangeJointPositionLimitsCommand@{tesseract\_environment::ChangeJointPositionLimitsCommand}}
@@ -56,12 +90,31 @@ std\+::unordered\+\_\+map$<$ std\+::string, std\+::pair$<$ double, double $>$ $>
 
 
 
+Changes the position limits associated with one or more joints. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em limits} & A map of joint names to new position limits. For each limit pair, first is the lower limit second is the upper limit \\
+\hline
+\end{DoxyParams}
+
+
 \doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{classtesseract__environment_1_1ChangeJointPositionLimitsCommand_a451e5b25cac8fca3fad19a710e7ff2b3}\label{classtesseract__environment_1_1ChangeJointPositionLimitsCommand_a451e5b25cac8fca3fad19a710e7ff2b3}} 
 \index{tesseract\_environment::ChangeJointPositionLimitsCommand@{tesseract\_environment::ChangeJointPositionLimitsCommand}!getLimits@{getLimits}}
 \index{getLimits@{getLimits}!tesseract\_environment::ChangeJointPositionLimitsCommand@{tesseract\_environment::ChangeJointPositionLimitsCommand}}
 \doxysubsubsection{\texorpdfstring{getLimits()}{getLimits()}}
 {\footnotesize\ttfamily const std\+::unordered\+\_\+map$<$std\+::string, std\+::pair$<$double, double$>$ $>$\& tesseract\+\_\+environment\+::\+Change\+Joint\+Position\+Limits\+Command\+::get\+Limits (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classtesseract__environment_1_1ChangeJointPositionLimitsCommand_afe421287c2a77d40389b08ccf2ff06f3}\label{classtesseract__environment_1_1ChangeJointPositionLimitsCommand_afe421287c2a77d40389b08ccf2ff06f3}} 
+\index{tesseract\_environment::ChangeJointPositionLimitsCommand@{tesseract\_environment::ChangeJointPositionLimitsCommand}!getType@{getType}}
+\index{getType@{getType}!tesseract\_environment::ChangeJointPositionLimitsCommand@{tesseract\_environment::ChangeJointPositionLimitsCommand}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacetesseract__environment_afc00c1aecb519acba3afc24dbd367029}{Command\+Type}} tesseract\+\_\+environment\+::\+Change\+Joint\+Position\+Limits\+Command\+::get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [final]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classtesseract__environment_1_1Command_ae76293ca1e231a278dcd79c1ec16490f}{tesseract\+\_\+environment\+::\+Command}}.
 
 
 
@@ -76,4 +129,4 @@ std\+::unordered\+\_\+map$<$ std\+::string, std\+::pair$<$ double, double $>$ $>
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-tesseract/tesseract\+\_\+environment/include/tesseract\+\_\+environment/core/\mbox{\hyperlink{commands_8h}{commands.\+h}}\end{DoxyCompactItemize}
+tesseract\+\_\+environment/include/tesseract\+\_\+environment/commands/\mbox{\hyperlink{change__joint__position__limits__command_8h}{change\+\_\+joint\+\_\+position\+\_\+limits\+\_\+command.\+h}}\end{DoxyCompactItemize}

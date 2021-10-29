@@ -1,5 +1,6 @@
-<map id="tesseract/tesseract_environment/include/tesseract_environment/ofkt/ofkt_nodes.h" name="tesseract/tesseract_environment/include/tesseract_environment/ofkt/ofkt_nodes.h">
-<area shape="rect" id="node1" title="A implementation of the Optimized Forward Kinematic Tree Nodes." alt="" coords="87,5,245,76"/>
-<area shape="rect" id="node2" href="$d3/d6c/ofkt__nodes_8cpp.html" title="A implementation of the Optimized Forward Kinematic Tree Nodes." alt="" coords="5,124,153,180"/>
-<area shape="rect" id="node3" href="$d3/d9a/ofkt__state__solver_8cpp.html" title="A implementation of the Optimized Forward Kinematic Tree as a state solver." alt="" coords="177,124,328,180"/>
+<map id="tesseract_state_solver/include/tesseract_state_solver/ofkt/ofkt_nodes.h" name="tesseract_state_solver/include/tesseract_state_solver/ofkt/ofkt_nodes.h">
+<area shape="rect" id="node1" title="A implementation of the Optimized Forward Kinematic Tree Nodes." alt="" coords="187,5,355,61"/>
+<area shape="rect" id="node2" href="$d3/d6c/ofkt__nodes_8cpp.html" title="A implementation of the Optimized Forward Kinematic Tree Nodes." alt="" coords="5,117,160,158"/>
+<area shape="rect" id="node3" href="$d3/d9a/ofkt__state__solver_8cpp.html" title="A implementation of the Optimized Forward Kinematic Tree as a state solver." alt="" coords="185,117,357,158"/>
+<area shape="rect" id="node4" href="$da/d23/tesseract__state__solver__ofkt__unit_8cpp.html" title=" " alt="" coords="381,109,536,165"/>
 </map>

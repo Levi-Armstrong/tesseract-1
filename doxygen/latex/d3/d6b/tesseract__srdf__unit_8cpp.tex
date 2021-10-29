@@ -1,0 +1,224 @@
+\hypertarget{tesseract__srdf__unit_8cpp}{}\doxysection{tesseract\+\_\+srdf/test/tesseract\+\_\+srdf\+\_\+unit.cpp File Reference}
+\label{tesseract__srdf__unit_8cpp}\index{tesseract\_srdf/test/tesseract\_srdf\_unit.cpp@{tesseract\_srdf/test/tesseract\_srdf\_unit.cpp}}
+{\ttfamily \#include $<$tesseract\+\_\+common/macros.\+h$>$}\newline
+{\ttfamily \#include $<$gtest/gtest.\+h$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$yaml-\/cpp/yaml.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+common/utils.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+common/resource\+\_\+locator.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+common/yaml\+\_\+utils.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+scene\+\_\+graph/graph.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+scene\+\_\+graph/utils.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+srdf/collision\+\_\+margins.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+srdf/disabled\+\_\+collisions.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+srdf/group\+\_\+states.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+srdf/group\+\_\+tool\+\_\+center\+\_\+points.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+srdf/groups.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+srdf/srdf\+\_\+model.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+srdf/utils.\+h$>$}\newline
+Include dependency graph for tesseract\+\_\+srdf\+\_\+unit.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/d16/tesseract__srdf__unit_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{tesseract__srdf__unit_8cpp_a3b3fec2e8c7c4ff588bfa02e49a9fe87}{ABBConfig}} \{ \mbox{\hyperlink{tesseract__srdf__unit_8cpp_a3b3fec2e8c7c4ff588bfa02e49a9fe87a23f1d603ffec8d93bddcab459541e3f4}{ROBOT\+\_\+\+ONLY}}
+, \mbox{\hyperlink{tesseract__srdf__unit_8cpp_a3b3fec2e8c7c4ff588bfa02e49a9fe87a6f1ddae6849ed1acb8e4d668c4a5382a}{ROBOT\+\_\+\+ON\+\_\+\+RAIL}}
+, \mbox{\hyperlink{tesseract__srdf__unit_8cpp_a3b3fec2e8c7c4ff588bfa02e49a9fe87a01b4ecf9d5d61f8e9144d62e99e98b86}{ROBOT\+\_\+\+WITH\+\_\+\+POSITIONER}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{macros_8h_a8cc0e3c6a3382c5c0b19eb9e676fc2db}{TESSERACT\+\_\+\+COMMON\+\_\+\+IGNORE\+\_\+\+WARNINGS\+\_\+\+PUSH}} \mbox{\hyperlink{macros_8h_a7af8561cf52519e9896b0697095c1b8b}{TESSERACT\+\_\+\+COMMON\+\_\+\+IGNORE\+\_\+\+WARNINGS\+\_\+\+POP}} std\+::string \mbox{\hyperlink{tesseract__srdf__unit_8cpp_a093896878775ab688c91d8ef6b92150d}{locate\+Resource}} (const std\+::string \&url)
+\item 
+\mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph_a4421b8568bd664cf203613a054e1847b}{tesseract\+\_\+scene\+\_\+graph\+::\+Scene\+Graph\+::\+Ptr}} \mbox{\hyperlink{tesseract__srdf__unit_8cpp_ad4810631d7d5b55f1fb0a659a42e62a5}{get\+ABBScene\+Graph}} (\mbox{\hyperlink{tesseract__srdf__unit_8cpp_a3b3fec2e8c7c4ff588bfa02e49a9fe87}{ABBConfig}} config=\mbox{\hyperlink{tesseract__srdf__unit_8cpp_a3b3fec2e8c7c4ff588bfa02e49a9fe87a23f1d603ffec8d93bddcab459541e3f4}{ABBConfig\+::\+ROBOT\+\_\+\+ONLY}})
+\item 
+\mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph}{tesseract\+\_\+scene\+\_\+graph\+::\+Scene\+Graph}} \mbox{\hyperlink{tesseract__srdf__unit_8cpp_ae0bd2cf103ca1a43b036ebb9f4e1c2b5}{build\+Test\+Scene\+Graph}} ()
+\item 
+\mbox{\hyperlink{tesseract__srdf__unit_8cpp_a28a88fa1a8da7b4223190eb2ca4cbacd}{TEST}} (Tesseract\+SRDFUnit, Load\+SRDFFile\+Unit)
+\item 
+\mbox{\hyperlink{tesseract__srdf__unit_8cpp_aed4c46efcbe3f82a0fcca0eb27344747}{TEST}} (Tesseract\+SRDFUnit, Tesseract\+SRDFModel\+Unit)
+\item 
+\mbox{\hyperlink{tesseract__srdf__unit_8cpp_abbbab4418fb60aaf91c5a1b96ecaa135}{TEST}} (Tesseract\+SRDFUnit, Load\+SRDFFailure\+Cases\+Unit)
+\item 
+\mbox{\hyperlink{tesseract__srdf__unit_8cpp_a3430974016c0204005187e22a99a1d46}{TEST}} (Tesseract\+SRDFUnit, Load\+SRDFSave\+Unit)
+\item 
+\mbox{\hyperlink{tesseract__srdf__unit_8cpp_adb2546eb70036ffd91379bb7bcadee02}{TEST}} (Tesseract\+SRDFUnit, Load\+SRDFAllowed\+Collision\+Matrix\+Unit)
+\item 
+\mbox{\hyperlink{tesseract__srdf__unit_8cpp_afdf10c68d57ef5ff65a8c4abf569cb9a}{TEST}} (Tesseract\+SRDFUnit, SRDFChain\+Group\+Unit)
+\item 
+\mbox{\hyperlink{tesseract__srdf__unit_8cpp_a9760860da400eca08ddba1235c5f2e45}{TEST}} (Tesseract\+SRDFUnit, SRDFJoint\+Group\+Unit)
+\item 
+\mbox{\hyperlink{tesseract__srdf__unit_8cpp_ac7a519d8800ab7c7639e88acaa4c2806}{TEST}} (Tesseract\+SRDFUnit, SRDFLink\+Group\+Unit)
+\item 
+\mbox{\hyperlink{tesseract__srdf__unit_8cpp_a82ab518a8217e68b84549512d3ac4d39}{TEST}} (Tesseract\+SRDFUnit, Load\+SRDFGroup\+States\+Unit)
+\item 
+\mbox{\hyperlink{tesseract__srdf__unit_8cpp_a35c5935b6d9bf18511b935e2f0214cca}{TEST}} (Tesseract\+SRDFUnit, SRDFGroup\+TCPs\+Unit)
+\item 
+\mbox{\hyperlink{tesseract__srdf__unit_8cpp_a1395225f3a2429447bbf0fdb55e505d5}{TEST}} (Tesseract\+SRDFUnit, SRDFCollision\+Margins\+Unit)
+\item 
+\mbox{\hyperlink{tesseract__srdf__unit_8cpp_a42312a4957ef2ed07afa735611bf5d11}{TEST}} (Tesseract\+SRDFUnit, Add\+Remove\+Chain\+Group\+Unit)
+\item 
+\mbox{\hyperlink{tesseract__srdf__unit_8cpp_a13fb9db3da3311c447216ec894d158ec}{TEST}} (Tesseract\+SRDFUnit, Add\+Remove\+Joint\+Group\+Unit)
+\item 
+\mbox{\hyperlink{tesseract__srdf__unit_8cpp_a3a31eefba36c3c65a66832370326653d}{TEST}} (Tesseract\+SRDFUnit, Add\+Remove\+Link\+Group\+Unit)
+\item 
+\mbox{\hyperlink{tesseract__srdf__unit_8cpp_aa9eb7c49720c7810b3f580d64b3ad72d}{TEST}} (Tesseract\+SRDFUnit, Add\+Remove\+Group\+Joint\+State\+Unit)
+\item 
+\mbox{\hyperlink{tesseract__srdf__unit_8cpp_a62a2f0b142910b321638fcc13ce3a11b}{TEST}} (Tesseract\+SRDFUnit, Add\+Remove\+Group\+TCPUnit)
+\item 
+int \mbox{\hyperlink{tesseract__srdf__unit_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{tesseract__srdf__unit_8cpp_a3b3fec2e8c7c4ff588bfa02e49a9fe87}\label{tesseract__srdf__unit_8cpp_a3b3fec2e8c7c4ff588bfa02e49a9fe87}} 
+\index{tesseract\_srdf\_unit.cpp@{tesseract\_srdf\_unit.cpp}!ABBConfig@{ABBConfig}}
+\index{ABBConfig@{ABBConfig}!tesseract\_srdf\_unit.cpp@{tesseract\_srdf\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{ABBConfig}{ABBConfig}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{tesseract__srdf__unit_8cpp_a3b3fec2e8c7c4ff588bfa02e49a9fe87}{ABBConfig}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ROBOT\_ONLY@{ROBOT\_ONLY}!tesseract\_srdf\_unit.cpp@{tesseract\_srdf\_unit.cpp}}\index{tesseract\_srdf\_unit.cpp@{tesseract\_srdf\_unit.cpp}!ROBOT\_ONLY@{ROBOT\_ONLY}}}\mbox{\Hypertarget{tesseract__srdf__unit_8cpp_a3b3fec2e8c7c4ff588bfa02e49a9fe87a23f1d603ffec8d93bddcab459541e3f4}\label{tesseract__srdf__unit_8cpp_a3b3fec2e8c7c4ff588bfa02e49a9fe87a23f1d603ffec8d93bddcab459541e3f4}} 
+ROBOT\+\_\+\+ONLY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ROBOT\_ON\_RAIL@{ROBOT\_ON\_RAIL}!tesseract\_srdf\_unit.cpp@{tesseract\_srdf\_unit.cpp}}\index{tesseract\_srdf\_unit.cpp@{tesseract\_srdf\_unit.cpp}!ROBOT\_ON\_RAIL@{ROBOT\_ON\_RAIL}}}\mbox{\Hypertarget{tesseract__srdf__unit_8cpp_a3b3fec2e8c7c4ff588bfa02e49a9fe87a6f1ddae6849ed1acb8e4d668c4a5382a}\label{tesseract__srdf__unit_8cpp_a3b3fec2e8c7c4ff588bfa02e49a9fe87a6f1ddae6849ed1acb8e4d668c4a5382a}} 
+ROBOT\+\_\+\+ON\+\_\+\+RAIL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ROBOT\_WITH\_POSITIONER@{ROBOT\_WITH\_POSITIONER}!tesseract\_srdf\_unit.cpp@{tesseract\_srdf\_unit.cpp}}\index{tesseract\_srdf\_unit.cpp@{tesseract\_srdf\_unit.cpp}!ROBOT\_WITH\_POSITIONER@{ROBOT\_WITH\_POSITIONER}}}\mbox{\Hypertarget{tesseract__srdf__unit_8cpp_a3b3fec2e8c7c4ff588bfa02e49a9fe87a01b4ecf9d5d61f8e9144d62e99e98b86}\label{tesseract__srdf__unit_8cpp_a3b3fec2e8c7c4ff588bfa02e49a9fe87a01b4ecf9d5d61f8e9144d62e99e98b86}} 
+ROBOT\+\_\+\+WITH\+\_\+\+POSITIONER&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{tesseract__srdf__unit_8cpp_ae0bd2cf103ca1a43b036ebb9f4e1c2b5}\label{tesseract__srdf__unit_8cpp_ae0bd2cf103ca1a43b036ebb9f4e1c2b5}} 
+\index{tesseract\_srdf\_unit.cpp@{tesseract\_srdf\_unit.cpp}!buildTestSceneGraph@{buildTestSceneGraph}}
+\index{buildTestSceneGraph@{buildTestSceneGraph}!tesseract\_srdf\_unit.cpp@{tesseract\_srdf\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{buildTestSceneGraph()}{buildTestSceneGraph()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph}{tesseract\+\_\+scene\+\_\+graph\+::\+Scene\+Graph}} build\+Test\+Scene\+Graph (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{tesseract__srdf__unit_8cpp_ad4810631d7d5b55f1fb0a659a42e62a5}\label{tesseract__srdf__unit_8cpp_ad4810631d7d5b55f1fb0a659a42e62a5}} 
+\index{tesseract\_srdf\_unit.cpp@{tesseract\_srdf\_unit.cpp}!getABBSceneGraph@{getABBSceneGraph}}
+\index{getABBSceneGraph@{getABBSceneGraph}!tesseract\_srdf\_unit.cpp@{tesseract\_srdf\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{getABBSceneGraph()}{getABBSceneGraph()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph_a4421b8568bd664cf203613a054e1847b}{tesseract\+\_\+scene\+\_\+graph\+::\+Scene\+Graph\+::\+Ptr}} get\+ABBScene\+Graph (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{tesseract__srdf__unit_8cpp_a3b3fec2e8c7c4ff588bfa02e49a9fe87}{ABBConfig}}}]{config = {\ttfamily \mbox{\hyperlink{tesseract__srdf__unit_8cpp_a3b3fec2e8c7c4ff588bfa02e49a9fe87a23f1d603ffec8d93bddcab459541e3f4}{ABBConfig\+::\+ROBOT\+\_\+\+ONLY}}} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{tesseract__srdf__unit_8cpp_a093896878775ab688c91d8ef6b92150d}\label{tesseract__srdf__unit_8cpp_a093896878775ab688c91d8ef6b92150d}} 
+\index{tesseract\_srdf\_unit.cpp@{tesseract\_srdf\_unit.cpp}!locateResource@{locateResource}}
+\index{locateResource@{locateResource}!tesseract\_srdf\_unit.cpp@{tesseract\_srdf\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{locateResource()}{locateResource()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{macros_8h_a8cc0e3c6a3382c5c0b19eb9e676fc2db}{TESSERACT\+\_\+\+COMMON\+\_\+\+IGNORE\+\_\+\+WARNINGS\+\_\+\+PUSH}} \mbox{\hyperlink{macros_8h_a7af8561cf52519e9896b0697095c1b8b}{TESSERACT\+\_\+\+COMMON\+\_\+\+IGNORE\+\_\+\+WARNINGS\+\_\+\+POP}} std\+::string locate\+Resource (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{url }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{tesseract__srdf__unit_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}\label{tesseract__srdf__unit_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}} 
+\index{tesseract\_srdf\_unit.cpp@{tesseract\_srdf\_unit.cpp}!main@{main}}
+\index{main@{main}!tesseract\_srdf\_unit.cpp@{tesseract\_srdf\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{tesseract__srdf__unit_8cpp_a42312a4957ef2ed07afa735611bf5d11}\label{tesseract__srdf__unit_8cpp_a42312a4957ef2ed07afa735611bf5d11}} 
+\index{tesseract\_srdf\_unit.cpp@{tesseract\_srdf\_unit.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!tesseract\_srdf\_unit.cpp@{tesseract\_srdf\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [1/16]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Tesseract\+SRDFUnit}]{,  }\item[{Add\+Remove\+Chain\+Group\+Unit}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{tesseract__srdf__unit_8cpp_aa9eb7c49720c7810b3f580d64b3ad72d}\label{tesseract__srdf__unit_8cpp_aa9eb7c49720c7810b3f580d64b3ad72d}} 
+\index{tesseract\_srdf\_unit.cpp@{tesseract\_srdf\_unit.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!tesseract\_srdf\_unit.cpp@{tesseract\_srdf\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [2/16]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Tesseract\+SRDFUnit}]{,  }\item[{Add\+Remove\+Group\+Joint\+State\+Unit}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{tesseract__srdf__unit_8cpp_a62a2f0b142910b321638fcc13ce3a11b}\label{tesseract__srdf__unit_8cpp_a62a2f0b142910b321638fcc13ce3a11b}} 
+\index{tesseract\_srdf\_unit.cpp@{tesseract\_srdf\_unit.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!tesseract\_srdf\_unit.cpp@{tesseract\_srdf\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [3/16]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Tesseract\+SRDFUnit}]{,  }\item[{Add\+Remove\+Group\+TCPUnit}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{tesseract__srdf__unit_8cpp_a13fb9db3da3311c447216ec894d158ec}\label{tesseract__srdf__unit_8cpp_a13fb9db3da3311c447216ec894d158ec}} 
+\index{tesseract\_srdf\_unit.cpp@{tesseract\_srdf\_unit.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!tesseract\_srdf\_unit.cpp@{tesseract\_srdf\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [4/16]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Tesseract\+SRDFUnit}]{,  }\item[{Add\+Remove\+Joint\+Group\+Unit}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{tesseract__srdf__unit_8cpp_a3a31eefba36c3c65a66832370326653d}\label{tesseract__srdf__unit_8cpp_a3a31eefba36c3c65a66832370326653d}} 
+\index{tesseract\_srdf\_unit.cpp@{tesseract\_srdf\_unit.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!tesseract\_srdf\_unit.cpp@{tesseract\_srdf\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [5/16]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Tesseract\+SRDFUnit}]{,  }\item[{Add\+Remove\+Link\+Group\+Unit}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{tesseract__srdf__unit_8cpp_adb2546eb70036ffd91379bb7bcadee02}\label{tesseract__srdf__unit_8cpp_adb2546eb70036ffd91379bb7bcadee02}} 
+\index{tesseract\_srdf\_unit.cpp@{tesseract\_srdf\_unit.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!tesseract\_srdf\_unit.cpp@{tesseract\_srdf\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [6/16]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Tesseract\+SRDFUnit}]{,  }\item[{Load\+SRDFAllowed\+Collision\+Matrix\+Unit}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{tesseract__srdf__unit_8cpp_abbbab4418fb60aaf91c5a1b96ecaa135}\label{tesseract__srdf__unit_8cpp_abbbab4418fb60aaf91c5a1b96ecaa135}} 
+\index{tesseract\_srdf\_unit.cpp@{tesseract\_srdf\_unit.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!tesseract\_srdf\_unit.cpp@{tesseract\_srdf\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [7/16]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Tesseract\+SRDFUnit}]{,  }\item[{Load\+SRDFFailure\+Cases\+Unit}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{tesseract__srdf__unit_8cpp_a28a88fa1a8da7b4223190eb2ca4cbacd}\label{tesseract__srdf__unit_8cpp_a28a88fa1a8da7b4223190eb2ca4cbacd}} 
+\index{tesseract\_srdf\_unit.cpp@{tesseract\_srdf\_unit.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!tesseract\_srdf\_unit.cpp@{tesseract\_srdf\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [8/16]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Tesseract\+SRDFUnit}]{,  }\item[{Load\+SRDFFile\+Unit}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{tesseract__srdf__unit_8cpp_a82ab518a8217e68b84549512d3ac4d39}\label{tesseract__srdf__unit_8cpp_a82ab518a8217e68b84549512d3ac4d39}} 
+\index{tesseract\_srdf\_unit.cpp@{tesseract\_srdf\_unit.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!tesseract\_srdf\_unit.cpp@{tesseract\_srdf\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [9/16]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Tesseract\+SRDFUnit}]{,  }\item[{Load\+SRDFGroup\+States\+Unit}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{tesseract__srdf__unit_8cpp_a3430974016c0204005187e22a99a1d46}\label{tesseract__srdf__unit_8cpp_a3430974016c0204005187e22a99a1d46}} 
+\index{tesseract\_srdf\_unit.cpp@{tesseract\_srdf\_unit.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!tesseract\_srdf\_unit.cpp@{tesseract\_srdf\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [10/16]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Tesseract\+SRDFUnit}]{,  }\item[{Load\+SRDFSave\+Unit}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{tesseract__srdf__unit_8cpp_afdf10c68d57ef5ff65a8c4abf569cb9a}\label{tesseract__srdf__unit_8cpp_afdf10c68d57ef5ff65a8c4abf569cb9a}} 
+\index{tesseract\_srdf\_unit.cpp@{tesseract\_srdf\_unit.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!tesseract\_srdf\_unit.cpp@{tesseract\_srdf\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [11/16]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Tesseract\+SRDFUnit}]{,  }\item[{SRDFChain\+Group\+Unit}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{tesseract__srdf__unit_8cpp_a1395225f3a2429447bbf0fdb55e505d5}\label{tesseract__srdf__unit_8cpp_a1395225f3a2429447bbf0fdb55e505d5}} 
+\index{tesseract\_srdf\_unit.cpp@{tesseract\_srdf\_unit.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!tesseract\_srdf\_unit.cpp@{tesseract\_srdf\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [12/16]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Tesseract\+SRDFUnit}]{,  }\item[{SRDFCollision\+Margins\+Unit}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{tesseract__srdf__unit_8cpp_a35c5935b6d9bf18511b935e2f0214cca}\label{tesseract__srdf__unit_8cpp_a35c5935b6d9bf18511b935e2f0214cca}} 
+\index{tesseract\_srdf\_unit.cpp@{tesseract\_srdf\_unit.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!tesseract\_srdf\_unit.cpp@{tesseract\_srdf\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [13/16]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Tesseract\+SRDFUnit}]{,  }\item[{SRDFGroup\+TCPs\+Unit}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{tesseract__srdf__unit_8cpp_a9760860da400eca08ddba1235c5f2e45}\label{tesseract__srdf__unit_8cpp_a9760860da400eca08ddba1235c5f2e45}} 
+\index{tesseract\_srdf\_unit.cpp@{tesseract\_srdf\_unit.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!tesseract\_srdf\_unit.cpp@{tesseract\_srdf\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [14/16]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Tesseract\+SRDFUnit}]{,  }\item[{SRDFJoint\+Group\+Unit}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{tesseract__srdf__unit_8cpp_ac7a519d8800ab7c7639e88acaa4c2806}\label{tesseract__srdf__unit_8cpp_ac7a519d8800ab7c7639e88acaa4c2806}} 
+\index{tesseract\_srdf\_unit.cpp@{tesseract\_srdf\_unit.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!tesseract\_srdf\_unit.cpp@{tesseract\_srdf\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [15/16]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Tesseract\+SRDFUnit}]{,  }\item[{SRDFLink\+Group\+Unit}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{tesseract__srdf__unit_8cpp_aed4c46efcbe3f82a0fcca0eb27344747}\label{tesseract__srdf__unit_8cpp_aed4c46efcbe3f82a0fcca0eb27344747}} 
+\index{tesseract\_srdf\_unit.cpp@{tesseract\_srdf\_unit.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!tesseract\_srdf\_unit.cpp@{tesseract\_srdf\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [16/16]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Tesseract\+SRDFUnit}]{,  }\item[{Tesseract\+SRDFModel\+Unit}]{ }\end{DoxyParamCaption})}
+

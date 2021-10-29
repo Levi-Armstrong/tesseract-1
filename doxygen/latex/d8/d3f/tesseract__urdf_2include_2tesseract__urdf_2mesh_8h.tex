@@ -1,21 +1,13 @@
-\hypertarget{tesseract__urdf_2include_2tesseract__urdf_2mesh_8h}{}\doxysection{tesseract/tesseract\+\_\+urdf/include/tesseract\+\_\+urdf/mesh.h File Reference}
-\label{tesseract__urdf_2include_2tesseract__urdf_2mesh_8h}\index{tesseract/tesseract\_urdf/include/tesseract\_urdf/mesh.h@{tesseract/tesseract\_urdf/include/tesseract\_urdf/mesh.h}}
+\hypertarget{tesseract__urdf_2include_2tesseract__urdf_2mesh_8h}{}\doxysection{tesseract\+\_\+urdf/include/tesseract\+\_\+urdf/mesh.h File Reference}
+\label{tesseract__urdf_2include_2tesseract__urdf_2mesh_8h}\index{tesseract\_urdf/include/tesseract\_urdf/mesh.h@{tesseract\_urdf/include/tesseract\_urdf/mesh.h}}
 
 
 Parse mesh from xml string.  
 
 
 {\ttfamily \#include $<$tesseract\+\_\+common/macros.\+h$>$}\newline
-{\ttfamily \#include $<$tesseract\+\_\+common/status\+\_\+code.\+h$>$}\newline
-{\ttfamily \#include $<$tesseract\+\_\+common/utils.\+h$>$}\newline
-{\ttfamily \#include $<$Eigen/\+Geometry$>$}\newline
-{\ttfamily \#include $<$tinyxml2.\+h$>$}\newline
-{\ttfamily \#include $<$boost/algorithm/string/classification.\+hpp$>$}\newline
-{\ttfamily \#include $<$boost/algorithm/string/split.\+hpp$>$}\newline
-{\ttfamily \#include $<$tesseract\+\_\+geometry/impl/mesh.\+h$>$}\newline
-{\ttfamily \#include $<$tesseract\+\_\+scene\+\_\+graph/utils.\+h$>$}\newline
-{\ttfamily \#include $<$tesseract\+\_\+scene\+\_\+graph/resource\+\_\+locator.\+h$>$}\newline
-{\ttfamily \#include $<$tesseract\+\_\+geometry/mesh\+\_\+parser.\+h$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
 Include dependency graph for mesh.\+h\+:
 \nopagebreak
 \begin{figure}[H]
@@ -32,20 +24,23 @@ This graph shows which files directly or indirectly include this file\+:
 \includegraphics[width=350pt]{d3/d7f/tesseract__urdf_2include_2tesseract__urdf_2mesh_8h__dep__incl}
 \end{center}
 \end{figure}
-\doxysubsection*{Classes}
-\begin{DoxyCompactItemize}
-\item 
-class \mbox{\hyperlink{classtesseract__urdf_1_1MeshStatusCategory}{tesseract\+\_\+urdf\+::\+Mesh\+Status\+Category}}
-\end{DoxyCompactItemize}
 \doxysubsection*{Namespaces}
 \begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacetinyxml2}{tinyxml2}}
+\item 
+ \mbox{\hyperlink{namespacetesseract__common}{tesseract\+\_\+common}}
+\item 
+ \mbox{\hyperlink{namespacetesseract__geometry}{tesseract\+\_\+geometry}}
 \item 
  \mbox{\hyperlink{namespacetesseract__urdf}{tesseract\+\_\+urdf}}
 \end{DoxyCompactItemize}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classtesseract__common_1_1StatusCode_a2b285106bd9f4963d1696b9696dbaf5f}{tesseract\+\_\+common\+::\+Status\+Code\+::\+Ptr}} \mbox{\hyperlink{namespacetesseract__urdf_ae503d8bb971278d3234e53fa4bfa137d}{tesseract\+\_\+urdf\+::parse}} (std\+::vector$<$ \mbox{\hyperlink{classtesseract__geometry_1_1Mesh_afc301af0c59b2d87d45f046859de431f}{tesseract\+\_\+geometry\+::\+Mesh\+::\+Ptr}} $>$ \&meshes, const tinyxml2\+::\+XMLElement $\ast$xml\+\_\+element, const \mbox{\hyperlink{classtesseract__scene__graph_1_1ResourceLocator_a64ddb0339eae8885128e399f1275cf80}{tesseract\+\_\+scene\+\_\+graph\+::\+Resource\+Locator\+::\+Ptr}} \&locator, const bool visual, const int)
+\mbox{\hyperlink{vhacdRaycastMesh_8cpp_adcf134d50025cc52907d0c8ac798d89d}{std\+::vector}}$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classtesseract__geometry_1_1Mesh}{tesseract\+\_\+geometry\+::\+Mesh}} $>$ $>$ \mbox{\hyperlink{namespacetesseract__urdf_a6f119c09095c440cd57e72ea904dbbec}{tesseract\+\_\+urdf\+::parse\+Mesh}} (const tinyxml2\+::\+XMLElement $\ast$xml\+\_\+element, const \mbox{\hyperlink{classtesseract__common_1_1ResourceLocator}{tesseract\+\_\+common\+::\+Resource\+Locator}} \&locator, bool visual, int version)
+\begin{DoxyCompactList}\small\item\em Parse xml element mesh. \end{DoxyCompactList}\item 
+tinyxml2\+::\+XMLElement $\ast$ \mbox{\hyperlink{namespacetesseract__urdf_a00801dd00ad8f285131472893be5da1a}{tesseract\+\_\+urdf\+::write\+Mesh}} (const std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{classtesseract__geometry_1_1Mesh}{tesseract\+\_\+geometry\+::\+Mesh}} $>$ \&mesh, tinyxml2\+::\+XMLDocument \&doc, const std\+::string \&directory, const std\+::string \&filename)
 \end{DoxyCompactItemize}
 
 
@@ -62,7 +57,7 @@ September 1, 2019
 TODO 
 \end{DoxyVersion}
 \begin{DoxyRefDesc}{Bug}
-\item[\mbox{\hyperlink{bug__bug000344}{Bug}}]No known bugs\end{DoxyRefDesc}
+\item[\mbox{\hyperlink{bug__bug000197}{Bug}}]No known bugs\end{DoxyRefDesc}
 
 
 \begin{DoxyCopyright}{Copyright}

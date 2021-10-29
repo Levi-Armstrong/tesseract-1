@@ -1,0 +1,98 @@
+\hypertarget{classtesseract__kinematics_1_1FwdKinFactory}{}\doxysection{tesseract\+\_\+kinematics\+::Fwd\+Kin\+Factory Class Reference}
+\label{classtesseract__kinematics_1_1FwdKinFactory}\index{tesseract\_kinematics::FwdKinFactory@{tesseract\_kinematics::FwdKinFactory}}
+
+
+Define a forward kinematics plugin which the factory can create an instance.  
+
+
+
+
+{\ttfamily \#include $<$kinematics\+\_\+plugin\+\_\+factory.\+h$>$}
+
+
+
+Inheritance diagram for tesseract\+\_\+kinematics\+::Fwd\+Kin\+Factory\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=211pt]{d3/d77/classtesseract__kinematics_1_1FwdKinFactory__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classtesseract__kinematics_1_1FwdKinFactory_a27d2e728623b6eb6b87a3632fbf76fe3}{Ptr}} = std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classtesseract__kinematics_1_1FwdKinFactory}{Fwd\+Kin\+Factory}} $>$
+\item 
+using \mbox{\hyperlink{classtesseract__kinematics_1_1FwdKinFactory_afc349cd47acf510b3ebb9328c6dd8d74}{Const\+Ptr}} = std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{classtesseract__kinematics_1_1FwdKinFactory}{Fwd\+Kin\+Factory}} $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classtesseract__kinematics_1_1FwdKinFactory_acfeb7448b2e5368a6f8a23d261ea27fd}{$\sim$\+Fwd\+Kin\+Factory}} ()=default
+\item 
+virtual \mbox{\hyperlink{classtesseract__kinematics_1_1ForwardKinematics_a53cb5fab19798d5afc20c259d4ffe1e3}{Forward\+Kinematics\+::\+UPtr}} \mbox{\hyperlink{classtesseract__kinematics_1_1FwdKinFactory_a65937de7ff46f36c3684b46ee084638f}{create}} (const std\+::string \&solver\+\_\+name, const \mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph}{tesseract\+\_\+scene\+\_\+graph\+::\+Scene\+Graph}} \&scene\+\_\+graph, const \mbox{\hyperlink{structtesseract__scene__graph_1_1SceneState}{tesseract\+\_\+scene\+\_\+graph\+::\+Scene\+State}} \&scene\+\_\+state, const \mbox{\hyperlink{classtesseract__kinematics_1_1KinematicsPluginFactory}{Kinematics\+Plugin\+Factory}} \&plugin\+\_\+factory, const YAML\+::\+Node \&config) const =0
+\begin{DoxyCompactList}\small\item\em Create Inverse Kinematics Object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Define a forward kinematics plugin which the factory can create an instance. 
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classtesseract__kinematics_1_1FwdKinFactory_afc349cd47acf510b3ebb9328c6dd8d74}\label{classtesseract__kinematics_1_1FwdKinFactory_afc349cd47acf510b3ebb9328c6dd8d74}} 
+\index{tesseract\_kinematics::FwdKinFactory@{tesseract\_kinematics::FwdKinFactory}!ConstPtr@{ConstPtr}}
+\index{ConstPtr@{ConstPtr}!tesseract\_kinematics::FwdKinFactory@{tesseract\_kinematics::FwdKinFactory}}
+\doxysubsubsection{\texorpdfstring{ConstPtr}{ConstPtr}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classtesseract__kinematics_1_1FwdKinFactory_afc349cd47acf510b3ebb9328c6dd8d74}{tesseract\+\_\+kinematics\+::\+Fwd\+Kin\+Factory\+::\+Const\+Ptr}} =  std\+::shared\+\_\+ptr$<$const \mbox{\hyperlink{classtesseract__kinematics_1_1FwdKinFactory}{Fwd\+Kin\+Factory}}$>$}
+
+\mbox{\Hypertarget{classtesseract__kinematics_1_1FwdKinFactory_a27d2e728623b6eb6b87a3632fbf76fe3}\label{classtesseract__kinematics_1_1FwdKinFactory_a27d2e728623b6eb6b87a3632fbf76fe3}} 
+\index{tesseract\_kinematics::FwdKinFactory@{tesseract\_kinematics::FwdKinFactory}!Ptr@{Ptr}}
+\index{Ptr@{Ptr}!tesseract\_kinematics::FwdKinFactory@{tesseract\_kinematics::FwdKinFactory}}
+\doxysubsubsection{\texorpdfstring{Ptr}{Ptr}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classtesseract__kinematics_1_1FwdKinFactory_a27d2e728623b6eb6b87a3632fbf76fe3}{tesseract\+\_\+kinematics\+::\+Fwd\+Kin\+Factory\+::\+Ptr}} =  std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classtesseract__kinematics_1_1FwdKinFactory}{Fwd\+Kin\+Factory}}$>$}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtesseract__kinematics_1_1FwdKinFactory_acfeb7448b2e5368a6f8a23d261ea27fd}\label{classtesseract__kinematics_1_1FwdKinFactory_acfeb7448b2e5368a6f8a23d261ea27fd}} 
+\index{tesseract\_kinematics::FwdKinFactory@{tesseract\_kinematics::FwdKinFactory}!````~FwdKinFactory@{$\sim$FwdKinFactory}}
+\index{````~FwdKinFactory@{$\sim$FwdKinFactory}!tesseract\_kinematics::FwdKinFactory@{tesseract\_kinematics::FwdKinFactory}}
+\doxysubsubsection{\texorpdfstring{$\sim$FwdKinFactory()}{~FwdKinFactory()}}
+{\footnotesize\ttfamily virtual tesseract\+\_\+kinematics\+::\+Fwd\+Kin\+Factory\+::$\sim$\+Fwd\+Kin\+Factory (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtesseract__kinematics_1_1FwdKinFactory_a65937de7ff46f36c3684b46ee084638f}\label{classtesseract__kinematics_1_1FwdKinFactory_a65937de7ff46f36c3684b46ee084638f}} 
+\index{tesseract\_kinematics::FwdKinFactory@{tesseract\_kinematics::FwdKinFactory}!create@{create}}
+\index{create@{create}!tesseract\_kinematics::FwdKinFactory@{tesseract\_kinematics::FwdKinFactory}}
+\doxysubsubsection{\texorpdfstring{create()}{create()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classtesseract__kinematics_1_1ForwardKinematics_a53cb5fab19798d5afc20c259d4ffe1e3}{Forward\+Kinematics\+::\+UPtr}} tesseract\+\_\+kinematics\+::\+Fwd\+Kin\+Factory\+::create (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{solver\+\_\+name,  }\item[{const \mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph}{tesseract\+\_\+scene\+\_\+graph\+::\+Scene\+Graph}} \&}]{scene\+\_\+graph,  }\item[{const \mbox{\hyperlink{structtesseract__scene__graph_1_1SceneState}{tesseract\+\_\+scene\+\_\+graph\+::\+Scene\+State}} \&}]{scene\+\_\+state,  }\item[{const \mbox{\hyperlink{classtesseract__kinematics_1_1KinematicsPluginFactory}{Kinematics\+Plugin\+Factory}} \&}]{plugin\+\_\+factory,  }\item[{const YAML\+::\+Node \&}]{config }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Create Inverse Kinematics Object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em solver\+\_\+name} & The solver name of the kinematic object \\
+\hline
+{\em scene\+\_\+graph} & The Tesseract Scene Graph \\
+\hline
+{\em scene\+\_\+state} & The state of the scene graph \\
+\hline
+{\em plugin\+\_\+factory} & Provide access to the plugin factory so plugins and load plugins \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+If failed to create, nullptr is returned. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classtesseract__kinematics_1_1KDLFwdKinChainFactory_a21be17247179a55a3c93641c3c90c18b}{tesseract\+\_\+kinematics\+::\+KDLFwd\+Kin\+Chain\+Factory}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+tesseract\+\_\+kinematics/core/include/tesseract\+\_\+kinematics/core/\mbox{\hyperlink{kinematics__plugin__factory_8h}{kinematics\+\_\+plugin\+\_\+factory.\+h}}\end{DoxyCompactItemize}

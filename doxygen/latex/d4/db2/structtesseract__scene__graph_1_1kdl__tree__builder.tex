@@ -7,10 +7,6 @@ Everytime a vertex is visited for the first time add a new segment to the KDL Tr
 
 
 
-{\ttfamily \#include $<$kdl\+\_\+parser.\+h$>$}
-
-
-
 Inheritance diagram for tesseract\+\_\+scene\+\_\+graph\+::kdl\+\_\+tree\+\_\+builder\+:
 \nopagebreak
 \begin{figure}[H]
@@ -26,20 +22,20 @@ Collaboration diagram for tesseract\+\_\+scene\+\_\+graph\+::kdl\+\_\+tree\+\_\+
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=198pt]{d8/d37/structtesseract__scene__graph_1_1kdl__tree__builder__coll__graph}
+\includegraphics[width=350pt]{d8/d37/structtesseract__scene__graph_1_1kdl__tree__builder__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{structtesseract__scene__graph_1_1kdl__tree__builder_a120dc251cafbcf41678dfc5b3b584b9a}{kdl\+\_\+tree\+\_\+builder}} (KDL\+::\+Tree \&tree)
+\mbox{\hyperlink{structtesseract__scene__graph_1_1kdl__tree__builder_a4ca48abeffbb4c49a5d0d0560c223195}{kdl\+\_\+tree\+\_\+builder}} (\mbox{\hyperlink{structtesseract__scene__graph_1_1KDLTreeData}{KDLTree\+Data}} \&data)
 \item 
-{\footnotesize template$<$class u , class g $>$ }\\void \mbox{\hyperlink{structtesseract__scene__graph_1_1kdl__tree__builder_a19470f59fd281e134d08b4b3365029ff}{discover\+\_\+vertex}} (u vertex, g graph)
+{\footnotesize template$<$class u , class g $>$ }\\void \mbox{\hyperlink{structtesseract__scene__graph_1_1kdl__tree__builder_a0aee7256019fccbacadc433c3d6baabd}{discover\+\_\+vertex}} (u vertex, const g \&graph)
 \end{DoxyCompactItemize}
 \doxysubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
-KDL\+::\+Tree \& \mbox{\hyperlink{structtesseract__scene__graph_1_1kdl__tree__builder_a493c50e2c42fd8968241661cef57468a}{tree\+\_\+}}
+\mbox{\hyperlink{structtesseract__scene__graph_1_1KDLTreeData}{KDLTree\+Data}} \& \mbox{\hyperlink{structtesseract__scene__graph_1_1kdl__tree__builder_ad125b563020b639fc72bd730e3ca401e}{data\+\_\+}}
 \end{DoxyCompactItemize}
 
 
@@ -47,33 +43,33 @@ KDL\+::\+Tree \& \mbox{\hyperlink{structtesseract__scene__graph_1_1kdl__tree__bu
 Everytime a vertex is visited for the first time add a new segment to the KDL Tree;. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{structtesseract__scene__graph_1_1kdl__tree__builder_a120dc251cafbcf41678dfc5b3b584b9a}\label{structtesseract__scene__graph_1_1kdl__tree__builder_a120dc251cafbcf41678dfc5b3b584b9a}} 
+\mbox{\Hypertarget{structtesseract__scene__graph_1_1kdl__tree__builder_a4ca48abeffbb4c49a5d0d0560c223195}\label{structtesseract__scene__graph_1_1kdl__tree__builder_a4ca48abeffbb4c49a5d0d0560c223195}} 
 \index{tesseract\_scene\_graph::kdl\_tree\_builder@{tesseract\_scene\_graph::kdl\_tree\_builder}!kdl\_tree\_builder@{kdl\_tree\_builder}}
 \index{kdl\_tree\_builder@{kdl\_tree\_builder}!tesseract\_scene\_graph::kdl\_tree\_builder@{tesseract\_scene\_graph::kdl\_tree\_builder}}
 \doxysubsubsection{\texorpdfstring{kdl\_tree\_builder()}{kdl\_tree\_builder()}}
-{\footnotesize\ttfamily tesseract\+\_\+scene\+\_\+graph\+::kdl\+\_\+tree\+\_\+builder\+::kdl\+\_\+tree\+\_\+builder (\begin{DoxyParamCaption}\item[{KDL\+::\+Tree \&}]{tree }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily tesseract\+\_\+scene\+\_\+graph\+::kdl\+\_\+tree\+\_\+builder\+::kdl\+\_\+tree\+\_\+builder (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtesseract__scene__graph_1_1KDLTreeData}{KDLTree\+Data}} \&}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{structtesseract__scene__graph_1_1kdl__tree__builder_a19470f59fd281e134d08b4b3365029ff}\label{structtesseract__scene__graph_1_1kdl__tree__builder_a19470f59fd281e134d08b4b3365029ff}} 
+\mbox{\Hypertarget{structtesseract__scene__graph_1_1kdl__tree__builder_a0aee7256019fccbacadc433c3d6baabd}\label{structtesseract__scene__graph_1_1kdl__tree__builder_a0aee7256019fccbacadc433c3d6baabd}} 
 \index{tesseract\_scene\_graph::kdl\_tree\_builder@{tesseract\_scene\_graph::kdl\_tree\_builder}!discover\_vertex@{discover\_vertex}}
 \index{discover\_vertex@{discover\_vertex}!tesseract\_scene\_graph::kdl\_tree\_builder@{tesseract\_scene\_graph::kdl\_tree\_builder}}
 \doxysubsubsection{\texorpdfstring{discover\_vertex()}{discover\_vertex()}}
 {\footnotesize\ttfamily template$<$class u , class g $>$ \\
-void tesseract\+\_\+scene\+\_\+graph\+::kdl\+\_\+tree\+\_\+builder\+::discover\+\_\+vertex (\begin{DoxyParamCaption}\item[{u}]{vertex,  }\item[{g}]{graph }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+void tesseract\+\_\+scene\+\_\+graph\+::kdl\+\_\+tree\+\_\+builder\+::discover\+\_\+vertex (\begin{DoxyParamCaption}\item[{u}]{vertex,  }\item[{const g \&}]{graph }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
 \doxysubsection{Member Data Documentation}
-\mbox{\Hypertarget{structtesseract__scene__graph_1_1kdl__tree__builder_a493c50e2c42fd8968241661cef57468a}\label{structtesseract__scene__graph_1_1kdl__tree__builder_a493c50e2c42fd8968241661cef57468a}} 
-\index{tesseract\_scene\_graph::kdl\_tree\_builder@{tesseract\_scene\_graph::kdl\_tree\_builder}!tree\_@{tree\_}}
-\index{tree\_@{tree\_}!tesseract\_scene\_graph::kdl\_tree\_builder@{tesseract\_scene\_graph::kdl\_tree\_builder}}
-\doxysubsubsection{\texorpdfstring{tree\_}{tree\_}}
-{\footnotesize\ttfamily KDL\+::\+Tree\& tesseract\+\_\+scene\+\_\+graph\+::kdl\+\_\+tree\+\_\+builder\+::tree\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+\mbox{\Hypertarget{structtesseract__scene__graph_1_1kdl__tree__builder_ad125b563020b639fc72bd730e3ca401e}\label{structtesseract__scene__graph_1_1kdl__tree__builder_ad125b563020b639fc72bd730e3ca401e}} 
+\index{tesseract\_scene\_graph::kdl\_tree\_builder@{tesseract\_scene\_graph::kdl\_tree\_builder}!data\_@{data\_}}
+\index{data\_@{data\_}!tesseract\_scene\_graph::kdl\_tree\_builder@{tesseract\_scene\_graph::kdl\_tree\_builder}}
+\doxysubsubsection{\texorpdfstring{data\_}{data\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structtesseract__scene__graph_1_1KDLTreeData}{KDLTree\+Data}}\& tesseract\+\_\+scene\+\_\+graph\+::kdl\+\_\+tree\+\_\+builder\+::data\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
 
 
 
 The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-tesseract/tesseract\+\_\+scene\+\_\+graph/include/tesseract\+\_\+scene\+\_\+graph/parser/\mbox{\hyperlink{kdl__parser_8h}{kdl\+\_\+parser.\+h}}\end{DoxyCompactItemize}
+tesseract\+\_\+scene\+\_\+graph/src/\mbox{\hyperlink{kdl__parser_8cpp}{kdl\+\_\+parser.\+cpp}}\end{DoxyCompactItemize}

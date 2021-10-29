@@ -1,11 +1,9 @@
 <map id="tesseract_scene_graph::SceneGraph" name="tesseract_scene_graph::SceneGraph">
-<area shape="rect" id="node1" title=" " alt="" coords="1403,87,1560,129"/>
-<area shape="rect" id="node2" title=" " alt="" coords="1208,5,1265,32"/>
-<area shape="rect" id="node3" title=" " alt="" coords="1155,57,1319,98"/>
-<area shape="rect" id="node4" href="$d5/df3/classtesseract__scene__graph_1_1AllowedCollisionMatrix.html" title=" " alt="" coords="780,46,939,87"/>
-<area shape="rect" id="node5" title=" " alt="" coords="363,27,569,98"/>
-<area shape="rect" id="node6" title=" " alt="" coords="179,124,257,151"/>
-<area shape="rect" id="node8" title=" " alt="" coords="963,109,1131,165"/>
-<area shape="rect" id="node9" title=" " alt="" coords="593,171,756,227"/>
-<area shape="rect" id="node7" title=" " alt="" coords="5,117,129,158"/>
+<area shape="rect" id="node1" title=" " alt="" coords="619,79,776,121"/>
+<area shape="rect" id="node2" title=" " alt="" coords="391,5,449,32"/>
+<area shape="rect" id="node3" title=" " alt="" coords="338,57,502,98"/>
+<area shape="rect" id="node4" title=" " alt="" coords="336,121,504,177"/>
+<area shape="rect" id="node5" title=" " alt="" coords="179,176,257,203"/>
+<area shape="rect" id="node7" title=" " alt="" coords="339,201,501,257"/>
+<area shape="rect" id="node6" title=" " alt="" coords="5,169,129,210"/>
 </map>

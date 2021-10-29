@@ -2,7 +2,7 @@
 \label{classtesseract__environment_1_1AddSceneGraphCommand}\index{tesseract\_environment::AddSceneGraphCommand@{tesseract\_environment::AddSceneGraphCommand}}
 
 
-{\ttfamily \#include $<$commands.\+h$>$}
+{\ttfamily \#include $<$add\+\_\+scene\+\_\+graph\+\_\+command.\+h$>$}
 
 
 
@@ -24,10 +24,21 @@ Collaboration diagram for tesseract\+\_\+environment\+::Add\+Scene\+Graph\+Comma
 \includegraphics[width=350pt]{d1/daa/classtesseract__environment_1_1AddSceneGraphCommand__coll__graph}
 \end{center}
 \end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classtesseract__environment_1_1AddSceneGraphCommand_ac44fb92838da59fdab5638c4b1e99910}{Ptr}} = std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classtesseract__environment_1_1AddSceneGraphCommand}{Add\+Scene\+Graph\+Command}} $>$
+\item 
+using \mbox{\hyperlink{classtesseract__environment_1_1AddSceneGraphCommand_a1fc0a9e834cbefe4b25ff7fe530d4d70}{Const\+Ptr}} = std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{classtesseract__environment_1_1AddSceneGraphCommand}{Add\+Scene\+Graph\+Command}} $>$
+\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classtesseract__environment_1_1AddSceneGraphCommand_abd4da4200ab373c364426c4f874ba5cc}{Add\+Scene\+Graph\+Command}} (const \mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph}{tesseract\+\_\+scene\+\_\+graph\+::\+Scene\+Graph}} \&scene\+\_\+graph, \mbox{\hyperlink{classtesseract__scene__graph_1_1Joint_a705d1f0a066833444550aa0c7f6d16b9}{tesseract\+\_\+scene\+\_\+graph\+::\+Joint\+::\+Const\+Ptr}} joint, std\+::string prefix)
+\mbox{\hyperlink{classtesseract__environment_1_1AddSceneGraphCommand_a77e1445e0b9da1fd2b9c29b14fde6d17}{Add\+Scene\+Graph\+Command}} (const \mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph}{tesseract\+\_\+scene\+\_\+graph\+::\+Scene\+Graph}} \&scene\+\_\+graph, std\+::string prefix=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em Merge a graph into the current environment. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classtesseract__environment_1_1AddSceneGraphCommand_a63152226cad7a1a39609d85750422b86}{Add\+Scene\+Graph\+Command}} (const \mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph}{tesseract\+\_\+scene\+\_\+graph\+::\+Scene\+Graph}} \&scene\+\_\+graph, const \mbox{\hyperlink{classtesseract__scene__graph_1_1Joint}{tesseract\+\_\+scene\+\_\+graph\+::\+Joint}} \&joint, std\+::string prefix=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em Merge a graph into the current environment. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacetesseract__environment_afc00c1aecb519acba3afc24dbd367029}{Command\+Type}} \mbox{\hyperlink{classtesseract__environment_1_1AddSceneGraphCommand_a50f4212c7e99297c264f0452ab1b7d5f}{get\+Type}} () const final
 \item 
 const \mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph_a9ee303b2514bfedd8c914d09551b00ff}{tesseract\+\_\+scene\+\_\+graph\+::\+Scene\+Graph\+::\+Const\+Ptr}} \& \mbox{\hyperlink{classtesseract__environment_1_1AddSceneGraphCommand_ae1983ed6389829ff04d4d83a556c67b2}{get\+Scene\+Graph}} () const
 \item 
@@ -44,16 +55,66 @@ const std\+::string \& \mbox{\hyperlink{classtesseract__environment_1_1AddSceneG
 \item 
 std\+::string \mbox{\hyperlink{classtesseract__environment_1_1AddSceneGraphCommand_a6a21ce3bc3c8b303d437bc4ceb6864d8}{prefix\+\_\+}}
 \end{DoxyCompactItemize}
-\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classtesseract__environment_1_1AddSceneGraphCommand_a1fc0a9e834cbefe4b25ff7fe530d4d70}\label{classtesseract__environment_1_1AddSceneGraphCommand_a1fc0a9e834cbefe4b25ff7fe530d4d70}} 
+\index{tesseract\_environment::AddSceneGraphCommand@{tesseract\_environment::AddSceneGraphCommand}!ConstPtr@{ConstPtr}}
+\index{ConstPtr@{ConstPtr}!tesseract\_environment::AddSceneGraphCommand@{tesseract\_environment::AddSceneGraphCommand}}
+\doxysubsubsection{\texorpdfstring{ConstPtr}{ConstPtr}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classtesseract__environment_1_1AddSceneGraphCommand_a1fc0a9e834cbefe4b25ff7fe530d4d70}{tesseract\+\_\+environment\+::\+Add\+Scene\+Graph\+Command\+::\+Const\+Ptr}} =  std\+::shared\+\_\+ptr$<$const \mbox{\hyperlink{classtesseract__environment_1_1AddSceneGraphCommand}{Add\+Scene\+Graph\+Command}}$>$}
+
+\mbox{\Hypertarget{classtesseract__environment_1_1AddSceneGraphCommand_ac44fb92838da59fdab5638c4b1e99910}\label{classtesseract__environment_1_1AddSceneGraphCommand_ac44fb92838da59fdab5638c4b1e99910}} 
+\index{tesseract\_environment::AddSceneGraphCommand@{tesseract\_environment::AddSceneGraphCommand}!Ptr@{Ptr}}
+\index{Ptr@{Ptr}!tesseract\_environment::AddSceneGraphCommand@{tesseract\_environment::AddSceneGraphCommand}}
+\doxysubsubsection{\texorpdfstring{Ptr}{Ptr}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classtesseract__environment_1_1AddSceneGraphCommand_ac44fb92838da59fdab5638c4b1e99910}{tesseract\+\_\+environment\+::\+Add\+Scene\+Graph\+Command\+::\+Ptr}} =  std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classtesseract__environment_1_1AddSceneGraphCommand}{Add\+Scene\+Graph\+Command}}$>$}
+
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{classtesseract__environment_1_1AddSceneGraphCommand_abd4da4200ab373c364426c4f874ba5cc}\label{classtesseract__environment_1_1AddSceneGraphCommand_abd4da4200ab373c364426c4f874ba5cc}} 
+\mbox{\Hypertarget{classtesseract__environment_1_1AddSceneGraphCommand_a77e1445e0b9da1fd2b9c29b14fde6d17}\label{classtesseract__environment_1_1AddSceneGraphCommand_a77e1445e0b9da1fd2b9c29b14fde6d17}} 
 \index{tesseract\_environment::AddSceneGraphCommand@{tesseract\_environment::AddSceneGraphCommand}!AddSceneGraphCommand@{AddSceneGraphCommand}}
 \index{AddSceneGraphCommand@{AddSceneGraphCommand}!tesseract\_environment::AddSceneGraphCommand@{tesseract\_environment::AddSceneGraphCommand}}
-\doxysubsubsection{\texorpdfstring{AddSceneGraphCommand()}{AddSceneGraphCommand()}}
-{\footnotesize\ttfamily tesseract\+\_\+environment\+::\+Add\+Scene\+Graph\+Command\+::\+Add\+Scene\+Graph\+Command (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph}{tesseract\+\_\+scene\+\_\+graph\+::\+Scene\+Graph}} \&}]{scene\+\_\+graph,  }\item[{\mbox{\hyperlink{classtesseract__scene__graph_1_1Joint_a705d1f0a066833444550aa0c7f6d16b9}{tesseract\+\_\+scene\+\_\+graph\+::\+Joint\+::\+Const\+Ptr}}}]{joint,  }\item[{std\+::string}]{prefix }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\doxysubsubsection{\texorpdfstring{AddSceneGraphCommand()}{AddSceneGraphCommand()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily tesseract\+\_\+environment\+::\+Add\+Scene\+Graph\+Command\+::\+Add\+Scene\+Graph\+Command (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph}{tesseract\+\_\+scene\+\_\+graph\+::\+Scene\+Graph}} \&}]{scene\+\_\+graph,  }\item[{std\+::string}]{prefix = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
+
+
+Merge a graph into the current environment. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scene\+\_\+graph} & Const ref to the graph to be merged (said graph will be copied) \\
+\hline
+{\em prefix} & string Will be prepended to every link and joint of the merged graph \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return False if any link or joint name collides with current environment, otherwise True Merge a subgraph into the current environment, considering that the root of the merged graph is attached to the root of the environment by a fixed joint and no displacement. Every joint and link of the subgraph will be copied into the environment graph. The prefix argument is meant to allow adding multiple copies of the same subgraph with different names 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtesseract__environment_1_1AddSceneGraphCommand_a63152226cad7a1a39609d85750422b86}\label{classtesseract__environment_1_1AddSceneGraphCommand_a63152226cad7a1a39609d85750422b86}} 
+\index{tesseract\_environment::AddSceneGraphCommand@{tesseract\_environment::AddSceneGraphCommand}!AddSceneGraphCommand@{AddSceneGraphCommand}}
+\index{AddSceneGraphCommand@{AddSceneGraphCommand}!tesseract\_environment::AddSceneGraphCommand@{tesseract\_environment::AddSceneGraphCommand}}
+\doxysubsubsection{\texorpdfstring{AddSceneGraphCommand()}{AddSceneGraphCommand()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily tesseract\+\_\+environment\+::\+Add\+Scene\+Graph\+Command\+::\+Add\+Scene\+Graph\+Command (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph}{tesseract\+\_\+scene\+\_\+graph\+::\+Scene\+Graph}} \&}]{scene\+\_\+graph,  }\item[{const \mbox{\hyperlink{classtesseract__scene__graph_1_1Joint}{tesseract\+\_\+scene\+\_\+graph\+::\+Joint}} \&}]{joint,  }\item[{std\+::string}]{prefix = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Merge a graph into the current environment. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scene\+\_\+graph} & Const ref to the graph to be merged (said graph will be copied) \\
+\hline
+{\em root\+\_\+joint} & Const ptr to the joint that connects current environment with root of the merged graph \\
+\hline
+{\em prefix} & string Will be prepended to every link and joint of the merged graph \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return False if any link or joint name collides with current environment, otherwise True Merge a subgraph into the current environment. Every joint and link of the subgraph will be copied into the environment graph. The prefix argument is meant to allow adding multiple copies of the same subgraph with different names 
+\end{DoxyReturn}
 
 
 \doxysubsection{Member Function Documentation}
@@ -74,6 +135,16 @@ std\+::string \mbox{\hyperlink{classtesseract__environment_1_1AddSceneGraphComma
 \index{getSceneGraph@{getSceneGraph}!tesseract\_environment::AddSceneGraphCommand@{tesseract\_environment::AddSceneGraphCommand}}
 \doxysubsubsection{\texorpdfstring{getSceneGraph()}{getSceneGraph()}}
 {\footnotesize\ttfamily const \mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph_a9ee303b2514bfedd8c914d09551b00ff}{tesseract\+\_\+scene\+\_\+graph\+::\+Scene\+Graph\+::\+Const\+Ptr}}\& tesseract\+\_\+environment\+::\+Add\+Scene\+Graph\+Command\+::get\+Scene\+Graph (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classtesseract__environment_1_1AddSceneGraphCommand_a50f4212c7e99297c264f0452ab1b7d5f}\label{classtesseract__environment_1_1AddSceneGraphCommand_a50f4212c7e99297c264f0452ab1b7d5f}} 
+\index{tesseract\_environment::AddSceneGraphCommand@{tesseract\_environment::AddSceneGraphCommand}!getType@{getType}}
+\index{getType@{getType}!tesseract\_environment::AddSceneGraphCommand@{tesseract\_environment::AddSceneGraphCommand}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacetesseract__environment_afc00c1aecb519acba3afc24dbd367029}{Command\+Type}} tesseract\+\_\+environment\+::\+Add\+Scene\+Graph\+Command\+::get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [final]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classtesseract__environment_1_1Command_ae76293ca1e231a278dcd79c1ec16490f}{tesseract\+\_\+environment\+::\+Command}}.
 
 
 
@@ -100,4 +171,4 @@ std\+::string \mbox{\hyperlink{classtesseract__environment_1_1AddSceneGraphComma
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-tesseract/tesseract\+\_\+environment/include/tesseract\+\_\+environment/core/\mbox{\hyperlink{commands_8h}{commands.\+h}}\end{DoxyCompactItemize}
+tesseract\+\_\+environment/include/tesseract\+\_\+environment/commands/\mbox{\hyperlink{add__scene__graph__command_8h}{add\+\_\+scene\+\_\+graph\+\_\+command.\+h}}\end{DoxyCompactItemize}

@@ -1,21 +1,18 @@
-\hypertarget{tesseract__urdf_2include_2tesseract__urdf_2cone_8h}{}\doxysection{tesseract/tesseract\+\_\+urdf/include/tesseract\+\_\+urdf/cone.h File Reference}
-\label{tesseract__urdf_2include_2tesseract__urdf_2cone_8h}\index{tesseract/tesseract\_urdf/include/tesseract\_urdf/cone.h@{tesseract/tesseract\_urdf/include/tesseract\_urdf/cone.h}}
+\hypertarget{tesseract__urdf_2include_2tesseract__urdf_2cone_8h}{}\doxysection{tesseract\+\_\+urdf/include/tesseract\+\_\+urdf/cone.h File Reference}
+\label{tesseract__urdf_2include_2tesseract__urdf_2cone_8h}\index{tesseract\_urdf/include/tesseract\_urdf/cone.h@{tesseract\_urdf/include/tesseract\_urdf/cone.h}}
 
 
 Parse cone from xml string.  
 
 
 {\ttfamily \#include $<$tesseract\+\_\+common/macros.\+h$>$}\newline
-{\ttfamily \#include $<$tesseract\+\_\+common/status\+\_\+code.\+h$>$}\newline
-{\ttfamily \#include $<$Eigen/\+Geometry$>$}\newline
-{\ttfamily \#include $<$tinyxml2.\+h$>$}\newline
-{\ttfamily \#include $<$tesseract\+\_\+geometry/impl/cone.\+h$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
 Include dependency graph for cone.\+h\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{d0/d89/tesseract__urdf_2include_2tesseract__urdf_2cone_8h__incl}
+\includegraphics[width=292pt]{d0/d89/tesseract__urdf_2include_2tesseract__urdf_2cone_8h__incl}
 \end{center}
 \end{figure}
 This graph shows which files directly or indirectly include this file\+:
@@ -26,20 +23,21 @@ This graph shows which files directly or indirectly include this file\+:
 \includegraphics[width=350pt]{d7/dbe/tesseract__urdf_2include_2tesseract__urdf_2cone_8h__dep__incl}
 \end{center}
 \end{figure}
-\doxysubsection*{Classes}
-\begin{DoxyCompactItemize}
-\item 
-class \mbox{\hyperlink{classtesseract__urdf_1_1ConeStatusCategory}{tesseract\+\_\+urdf\+::\+Cone\+Status\+Category}}
-\end{DoxyCompactItemize}
 \doxysubsection*{Namespaces}
 \begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacetinyxml2}{tinyxml2}}
+\item 
+ \mbox{\hyperlink{namespacetesseract__geometry}{tesseract\+\_\+geometry}}
 \item 
  \mbox{\hyperlink{namespacetesseract__urdf}{tesseract\+\_\+urdf}}
 \end{DoxyCompactItemize}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classtesseract__common_1_1StatusCode_a2b285106bd9f4963d1696b9696dbaf5f}{tesseract\+\_\+common\+::\+Status\+Code\+::\+Ptr}} \mbox{\hyperlink{namespacetesseract__urdf_a4f7ebbe2d6053fe7e8d17bb1e9d932a2}{tesseract\+\_\+urdf\+::parse}} (\mbox{\hyperlink{classtesseract__geometry_1_1Cone_abb84652113d4ca4476f8d52e696dca34}{tesseract\+\_\+geometry\+::\+Cone\+::\+Ptr}} \&cone, const tinyxml2\+::\+XMLElement $\ast$xml\+\_\+element, const int)
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classtesseract__geometry_1_1Cone}{tesseract\+\_\+geometry\+::\+Cone}} $>$ \mbox{\hyperlink{namespacetesseract__urdf_a3823c0af576a1eb829ba8933dff06f0f}{tesseract\+\_\+urdf\+::parse\+Cone}} (const tinyxml2\+::\+XMLElement $\ast$xml\+\_\+element, int version)
+\begin{DoxyCompactList}\small\item\em Parse a xml cone element. \end{DoxyCompactList}\item 
+tinyxml2\+::\+XMLElement $\ast$ \mbox{\hyperlink{namespacetesseract__urdf_acf8707e5673357a2b5659dfeaf9f8fe8}{tesseract\+\_\+urdf\+::write\+Cone}} (const std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{classtesseract__geometry_1_1Cone}{tesseract\+\_\+geometry\+::\+Cone}} $>$ \&cone, tinyxml2\+::\+XMLDocument \&doc)
 \end{DoxyCompactItemize}
 
 
@@ -56,7 +54,7 @@ September 1, 2019
 TODO 
 \end{DoxyVersion}
 \begin{DoxyRefDesc}{Bug}
-\item[\mbox{\hyperlink{bug__bug000334}{Bug}}]No known bugs\end{DoxyRefDesc}
+\item[\mbox{\hyperlink{bug__bug000187}{Bug}}]No known bugs\end{DoxyRefDesc}
 
 
 \begin{DoxyCopyright}{Copyright}

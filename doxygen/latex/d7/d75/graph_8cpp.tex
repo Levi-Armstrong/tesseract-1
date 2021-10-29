@@ -1,5 +1,5 @@
-\hypertarget{graph_8cpp}{}\doxysection{tesseract/tesseract\+\_\+scene\+\_\+graph/src/graph.cpp File Reference}
-\label{graph_8cpp}\index{tesseract/tesseract\_scene\_graph/src/graph.cpp@{tesseract/tesseract\_scene\_graph/src/graph.cpp}}
+\hypertarget{graph_8cpp}{}\doxysection{tesseract\+\_\+scene\+\_\+graph/src/graph.cpp File Reference}
+\label{graph_8cpp}\index{tesseract\_scene\_graph/src/graph.cpp@{tesseract\_scene\_graph/src/graph.cpp}}
 
 
 A basic scene graph using boost.  
@@ -10,7 +10,10 @@ A basic scene graph using boost.
 {\ttfamily \#include $<$fstream$>$}\newline
 {\ttfamily \#include $<$queue$>$}\newline
 {\ttfamily \#include $<$console\+\_\+bridge/console.\+h$>$}\newline
+{\ttfamily \#include $<$boost/graph/undirected\+\_\+graph.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/graph/copy.\+hpp$>$}\newline
 {\ttfamily \#include $<$tesseract\+\_\+scene\+\_\+graph/graph.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+common/utils.\+h$>$}\newline
 Include dependency graph for graph.\+cpp\+:
 \nopagebreak
 \begin{figure}[H]
@@ -19,11 +22,21 @@ Include dependency graph for graph.\+cpp\+:
 \includegraphics[width=350pt]{dc/d09/graph_8cpp__incl}
 \end{center}
 \end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structtesseract__scene__graph_1_1ugraph__vertex__copier}{tesseract\+\_\+scene\+\_\+graph\+::ugraph\+\_\+vertex\+\_\+copier}}
+\end{DoxyCompactItemize}
 \doxysubsection*{Namespaces}
 \begin{DoxyCompactItemize}
 \item 
  \mbox{\hyperlink{namespacetesseract__scene__graph}{tesseract\+\_\+scene\+\_\+graph}}
-\begin{DoxyCompactList}\small\item\em Main namespace. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{namespacetesseract__scene__graph_a9d854d1aefdbcdab3a70f2051ee528f5}{tesseract\+\_\+scene\+\_\+graph\+::\+UGraph}} = boost\+::adjacency\+\_\+list$<$ boost\+::listS, boost\+::listS, boost\+::undirectedS, Vertex\+Property, Edge\+Property, Graph\+Property $>$
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -39,7 +52,7 @@ Dec 18, 2017
 TODO 
 \end{DoxyVersion}
 \begin{DoxyRefDesc}{Bug}
-\item[\mbox{\hyperlink{bug__bug000326}{Bug}}]No known bugs\end{DoxyRefDesc}
+\item[\mbox{\hyperlink{bug__bug000155}{Bug}}]No known bugs\end{DoxyRefDesc}
 
 
 \begin{DoxyCopyright}{Copyright}

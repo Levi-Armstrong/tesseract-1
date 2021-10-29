@@ -1,14 +1,13 @@
-\hypertarget{resource__locator_8h}{}\doxysection{tesseract/tesseract\+\_\+scene\+\_\+graph/include/tesseract\+\_\+scene\+\_\+graph/resource\+\_\+locator.h File Reference}
-\label{resource__locator_8h}\index{tesseract/tesseract\_scene\_graph/include/tesseract\_scene\_graph/resource\_locator.h@{tesseract/tesseract\_scene\_graph/include/tesseract\_scene\_graph/resource\_locator.h}}
+\hypertarget{resource__locator_8h}{}\doxysection{tesseract\+\_\+common/include/tesseract\+\_\+common/resource\+\_\+locator.h File Reference}
+\label{resource__locator_8h}\index{tesseract\_common/include/tesseract\_common/resource\_locator.h@{tesseract\_common/include/tesseract\_common/resource\_locator.h}}
 
 
 Locate and retrieve resource data.  
 
 
-{\ttfamily \#include $<$tesseract\+\_\+common/resource.\+h$>$}\newline
-{\ttfamily \#include $<$tesseract\+\_\+scene\+\_\+graph/allowed\+\_\+collision\+\_\+matrix.\+h$>$}\newline
-{\ttfamily \#include $<$tesseract\+\_\+scene\+\_\+graph/graph.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+common/macros.\+h$>$}\newline
 {\ttfamily \#include $<$functional$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
 Include dependency graph for resource\+\_\+locator.\+h\+:
 \nopagebreak
 \begin{figure}[H]
@@ -28,21 +27,25 @@ This graph shows which files directly or indirectly include this file\+:
 \doxysubsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
-class \mbox{\hyperlink{classtesseract__scene__graph_1_1ResourceLocator}{tesseract\+\_\+scene\+\_\+graph\+::\+Resource\+Locator}}
+class \mbox{\hyperlink{classtesseract__common_1_1ResourceLocator}{tesseract\+\_\+common\+::\+Resource\+Locator}}
 \begin{DoxyCompactList}\small\item\em Abstract class for resource loaders. \end{DoxyCompactList}\item 
-class \mbox{\hyperlink{classtesseract__scene__graph_1_1SimpleResourceLocator}{tesseract\+\_\+scene\+\_\+graph\+::\+Simple\+Resource\+Locator}}
-\begin{DoxyCompactList}\small\item\em Resource locator implementation using a provided function to locate file resources. \end{DoxyCompactList}\item 
-class \mbox{\hyperlink{classtesseract__scene__graph_1_1SimpleLocatedResource}{tesseract\+\_\+scene\+\_\+graph\+::\+Simple\+Located\+Resource}}
-\begin{DoxyCompactList}\small\item\em Resource implementation for a local file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+class \mbox{\hyperlink{classtesseract__common_1_1Resource}{tesseract\+\_\+common\+::\+Resource}}
+\begin{DoxyCompactList}\small\item\em Represents resource data available from a file or url. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classtesseract__common_1_1SimpleResourceLocator}{tesseract\+\_\+common\+::\+Simple\+Resource\+Locator}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classtesseract__common_1_1Resource}{Resource}} locator implementation using a provided function to locate file resources. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classtesseract__common_1_1SimpleLocatedResource}{tesseract\+\_\+common\+::\+Simple\+Located\+Resource}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classtesseract__common_1_1Resource}{Resource}} implementation for a local file. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classtesseract__common_1_1BytesResource}{tesseract\+\_\+common\+::\+Bytes\+Resource}}
+\end{DoxyCompactItemize}
 \doxysubsection*{Namespaces}
 \begin{DoxyCompactItemize}
 \item 
- \mbox{\hyperlink{namespacetesseract__scene__graph}{tesseract\+\_\+scene\+\_\+graph}}
-\begin{DoxyCompactList}\small\item\em Main namespace. \end{DoxyCompactList}\end{DoxyCompactItemize}
+ \mbox{\hyperlink{namespacetesseract__common}{tesseract\+\_\+common}}
+\end{DoxyCompactItemize}
 \doxysubsection*{Typedefs}
 \begin{DoxyCompactItemize}
 \item 
-using \mbox{\hyperlink{namespacetesseract__scene__graph_a69d7f23b6559723bd757a453bda40714}{tesseract\+\_\+scene\+\_\+graph\+::\+Simple\+Resource\+Locator\+Fn}} = std\+::function$<$ std\+::string(const std\+::string \&)$>$
+using \mbox{\hyperlink{namespacetesseract__common_a2ef4ec89c4c07fc0a75c4bc24da9681c}{tesseract\+\_\+common\+::\+Simple\+Resource\+Locator\+Fn}} = std\+::function$<$ std\+::string(const std\+::string \&)$>$
 \end{DoxyCompactItemize}
 
 
@@ -59,7 +62,7 @@ October 25, 2019
 TODO 
 \end{DoxyVersion}
 \begin{DoxyRefDesc}{Bug}
-\item[\mbox{\hyperlink{bug__bug000324}{Bug}}]No known bugs\end{DoxyRefDesc}
+\item[\mbox{\hyperlink{bug__bug000049}{Bug}}]No known bugs\end{DoxyRefDesc}
 
 
 \begin{DoxyCopyright}{Copyright}

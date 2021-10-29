@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['rel_5ferror2_6713',['REL_ERROR2',['../d9/db6/tesseract__gjk__pair__detector_8cpp.html#a33f63d97a8333611fd539f54c72e806b',1,'tesseract_gjk_pair_detector.cpp']]]
+  ['deprecated_6147',['DEPRECATED',['../de/d3c/macros_8h.html#af67a6ff1a54b41b2a6e4bd36bc47b118',1,'macros.h']]],
+  ['dot_6148',['DOT',['../d0/d1b/FloatMath_8inl.html#a6c711cc01fdb7296161accac376e26dc',1,'FloatMath.inl']]]
 ];

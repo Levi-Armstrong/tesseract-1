@@ -1,5 +1,5 @@
-\hypertarget{fcl__utils_8h}{}\doxysection{tesseract/tesseract\+\_\+collision/include/tesseract\+\_\+collision/fcl/fcl\+\_\+utils.h File Reference}
-\label{fcl__utils_8h}\index{tesseract/tesseract\_collision/include/tesseract\_collision/fcl/fcl\_utils.h@{tesseract/tesseract\_collision/include/tesseract\_collision/fcl/fcl\_utils.h}}
+\hypertarget{fcl__utils_8h}{}\doxysection{tesseract\+\_\+collision/fcl/include/tesseract\+\_\+collision/fcl/fcl\+\_\+utils.h File Reference}
+\label{fcl__utils_8h}\index{tesseract\_collision/fcl/include/tesseract\_collision/fcl/fcl\_utils.h@{tesseract\_collision/fcl/include/tesseract\_collision/fcl/fcl\_utils.h}}
 
 
 Tesseract ROS FCL Utility Functions.  
@@ -11,6 +11,7 @@ Tesseract ROS FCL Utility Functions.
 {\ttfamily \#include $<$fcl/narrowphase/distance-\/inl.\+h$>$}\newline
 {\ttfamily \#include $<$memory$>$}\newline
 {\ttfamily \#include $<$set$>$}\newline
+{\ttfamily \#include $<$console\+\_\+bridge/console.\+h$>$}\newline
 {\ttfamily \#include $<$tesseract\+\_\+collision/core/types.\+h$>$}\newline
 {\ttfamily \#include $<$tesseract\+\_\+collision/core/common.\+h$>$}\newline
 {\ttfamily \#include $<$tesseract\+\_\+collision/fcl/fcl\+\_\+collision\+\_\+object\+\_\+wrapper.\+h$>$}\newline
@@ -75,7 +76,7 @@ Collision\+Geometry\+Ptr \mbox{\hyperlink{namespacetesseract__collision_1_1tesse
 \item 
 COW\+::\+Ptr \mbox{\hyperlink{namespacetesseract__collision_1_1tesseract__collision__fcl_ac51107420aad60e96d74d9f6565e6b80}{tesseract\+\_\+collision\+::tesseract\+\_\+collision\+\_\+fcl\+::create\+FCLCollision\+Object}} (const std\+::string \&name, const int \&type\+\_\+id, const Collision\+Shapes\+Const \&shapes, const \mbox{\hyperlink{namespacetesseract__common_a94d9921fc7ed323609ac57d06f939cb6}{tesseract\+\_\+common\+::\+Vector\+Isometry3d}} \&shape\+\_\+poses, bool enabled)
 \item 
-void \mbox{\hyperlink{namespacetesseract__collision_1_1tesseract__collision__fcl_a3ee71fcd65b6047f891fad2ccaf33c33}{tesseract\+\_\+collision\+::tesseract\+\_\+collision\+\_\+fcl\+::update\+Collision\+Object\+Filters}} (const std\+::vector$<$ std\+::string $>$ \&active, const COW\+::\+Ptr \&cow, const std\+::unique\+\_\+ptr$<$ fcl\+::\+Broad\+Phase\+Collision\+Managerd $>$ \&static\+\_\+manager, const std\+::unique\+\_\+ptr$<$ fcl\+::\+Broad\+Phase\+Collision\+Managerd $>$ \&dynamic\+\_\+manager)
+void \mbox{\hyperlink{namespacetesseract__collision_1_1tesseract__collision__fcl_a3ee71fcd65b6047f891fad2ccaf33c33}{tesseract\+\_\+collision\+::tesseract\+\_\+collision\+\_\+fcl\+::update\+Collision\+Object\+Filters}} (const \mbox{\hyperlink{vhacdRaycastMesh_8cpp_adcf134d50025cc52907d0c8ac798d89d}{std\+::vector}}$<$ std\+::string $>$ \&active, const COW\+::\+Ptr \&cow, const std\+::unique\+\_\+ptr$<$ fcl\+::\+Broad\+Phase\+Collision\+Managerd $>$ \&static\+\_\+manager, const std\+::unique\+\_\+ptr$<$ fcl\+::\+Broad\+Phase\+Collision\+Managerd $>$ \&dynamic\+\_\+manager)
 \begin{DoxyCompactList}\small\item\em Update collision objects filters. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{namespacetesseract__collision_1_1tesseract__collision__fcl_ac8ce443c1dc3dd3345d0a28770b412d4}{tesseract\+\_\+collision\+::tesseract\+\_\+collision\+\_\+fcl\+::collision\+Callback}} (fcl\+::\+Collision\+Objectd $\ast$o1, fcl\+::\+Collision\+Objectd $\ast$o2, void $\ast$data)
 \item 
@@ -96,7 +97,7 @@ Dec 18, 2017
 TODO 
 \end{DoxyVersion}
 \begin{DoxyRefDesc}{Bug}
-\item[\mbox{\hyperlink{bug__bug000015}{Bug}}]No known bugs\end{DoxyRefDesc}
+\item[\mbox{\hyperlink{bug__bug000031}{Bug}}]No known bugs\end{DoxyRefDesc}
 
 
 \begin{DoxyCopyright}{Copyright}

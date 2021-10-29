@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['omplplannertype_6428',['OMPLPlannerType',['../d9/dcd/namespacetesseract__planning.html#aaced124f80faedf64173b4b9ae5bf009',1,'tesseract_planning']]],
-  ['omplproblemstatespace_6429',['OMPLProblemStateSpace',['../d9/dcd/namespacetesseract__planning.html#ac337c63f13aba30328a8cd25f863be62',1,'tesseract_planning']]]
+  ['planetriresult_5988',['PlaneTriResult',['../d6/d3c/namespacetesseract__collision_1_1FLOAT__MATH.html#a9dc0f42f1c9368405542eb051348bfdc',1,'tesseract_collision::FLOAT_MATH']]]
 ];

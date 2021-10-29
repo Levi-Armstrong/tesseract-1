@@ -1,5 +1,4 @@
 <map id="tesseract_kinematics::ForwardKinematics" name="tesseract_kinematics::ForwardKinematics">
-<area shape="rect" id="node1" title="Forward kinematics functions." alt="" coords="91,5,237,47"/>
+<area shape="rect" id="node1" title="Forward kinematics functions." alt="" coords="5,5,152,47"/>
 <area shape="rect" id="node2" href="$d7/de9/classtesseract__kinematics_1_1KDLFwdKinChain.html" title="KDL kinematic chain implementation." alt="" coords="5,95,152,136"/>
-<area shape="rect" id="node3" href="$db/db9/classtesseract__kinematics_1_1KDLFwdKinTree.html" title="ROS kinematics functions." alt="" coords="176,95,323,136"/>
 </map>

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['nodetype_6427',['NodeType',['../de/da1/classtesseract__planning_1_1GraphTaskflow.html#a0db33d64ff701d34d0418d95808b4162',1,'tesseract_planning::GraphTaskflow']]]
+  ['markertype_5987',['MarkerType',['../d8/de5/namespacetesseract__visualization.html#ac8e02d8f51fc302b5ea1fb8c3b1abc01',1,'tesseract_visualization']]]
 ];

@@ -1,19 +1,13 @@
-\hypertarget{point__cloud_8h}{}\doxysection{tesseract/tesseract\+\_\+urdf/include/tesseract\+\_\+urdf/point\+\_\+cloud.h File Reference}
-\label{point__cloud_8h}\index{tesseract/tesseract\_urdf/include/tesseract\_urdf/point\_cloud.h@{tesseract/tesseract\_urdf/include/tesseract\_urdf/point\_cloud.h}}
+\hypertarget{point__cloud_8h}{}\doxysection{tesseract\+\_\+urdf/include/tesseract\+\_\+urdf/point\+\_\+cloud.h File Reference}
+\label{point__cloud_8h}\index{tesseract\_urdf/include/tesseract\_urdf/point\_cloud.h@{tesseract\_urdf/include/tesseract\_urdf/point\_cloud.h}}
 
 
 Parse PCL point cloud to octree from xml string.  
 
 
 {\ttfamily \#include $<$tesseract\+\_\+common/macros.\+h$>$}\newline
-{\ttfamily \#include $<$tesseract\+\_\+common/status\+\_\+code.\+h$>$}\newline
-{\ttfamily \#include $<$tesseract\+\_\+common/utils.\+h$>$}\newline
-{\ttfamily \#include $<$Eigen/\+Geometry$>$}\newline
-{\ttfamily \#include $<$tinyxml2.\+h$>$}\newline
-{\ttfamily \#include $<$pcl/io/pcd\+\_\+io.\+h$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
 {\ttfamily \#include $<$tesseract\+\_\+geometry/impl/octree.\+h$>$}\newline
-{\ttfamily \#include $<$tesseract\+\_\+scene\+\_\+graph/utils.\+h$>$}\newline
-{\ttfamily \#include $<$tesseract\+\_\+scene\+\_\+graph/resource\+\_\+locator.\+h$>$}\newline
 Include dependency graph for point\+\_\+cloud.\+h\+:
 \nopagebreak
 \begin{figure}[H]
@@ -22,21 +16,28 @@ Include dependency graph for point\+\_\+cloud.\+h\+:
 \includegraphics[width=350pt]{dc/d6c/point__cloud_8h__incl}
 \end{center}
 \end{figure}
-\doxysubsection*{Classes}
-\begin{DoxyCompactItemize}
-\item 
-class \mbox{\hyperlink{classtesseract__urdf_1_1PointCloudStatusCategory}{tesseract\+\_\+urdf\+::\+Point\+Cloud\+Status\+Category}}
-\end{DoxyCompactItemize}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=193pt]{d8/dd1/point__cloud_8h__dep__incl}
+\end{center}
+\end{figure}
 \doxysubsection*{Namespaces}
 \begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacetinyxml2}{tinyxml2}}
+\item 
+ \mbox{\hyperlink{namespacetesseract__common}{tesseract\+\_\+common}}
 \item 
  \mbox{\hyperlink{namespacetesseract__urdf}{tesseract\+\_\+urdf}}
 \end{DoxyCompactItemize}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classtesseract__common_1_1StatusCode_a2b285106bd9f4963d1696b9696dbaf5f}{tesseract\+\_\+common\+::\+Status\+Code\+::\+Ptr}} \mbox{\hyperlink{namespacetesseract__urdf_a60770ebaa1c5c1bafedc387b9c12a4b3}{tesseract\+\_\+urdf\+::parse\+Point\+Cloud}} (\mbox{\hyperlink{classtesseract__geometry_1_1Octree_a327bf1326aaf567a46e57a6c8739d577}{tesseract\+\_\+geometry\+::\+Octree\+::\+Ptr}} \&octree, const tinyxml2\+::\+XMLElement $\ast$xml\+\_\+element, const \mbox{\hyperlink{classtesseract__scene__graph_1_1ResourceLocator_a64ddb0339eae8885128e399f1275cf80}{tesseract\+\_\+scene\+\_\+graph\+::\+Resource\+Locator\+::\+Ptr}} \&locator, \mbox{\hyperlink{classtesseract__geometry_1_1Octree_a50b534fbd4a871cd257ac52d6009af00}{tesseract\+\_\+geometry\+::\+Octree\+::\+Sub\+Type}} shape\+\_\+type, const bool prune, const int)
-\end{DoxyCompactItemize}
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classtesseract__geometry_1_1Octree}{tesseract\+\_\+geometry\+::\+Octree}} $>$ \mbox{\hyperlink{namespacetesseract__urdf_ab40c07d1708c3aba61e614fa1f03899c}{tesseract\+\_\+urdf\+::parse\+Point\+Cloud}} (const tinyxml2\+::\+XMLElement $\ast$xml\+\_\+element, const \mbox{\hyperlink{classtesseract__common_1_1ResourceLocator}{tesseract\+\_\+common\+::\+Resource\+Locator}} \&locator, \mbox{\hyperlink{classtesseract__geometry_1_1Octree_a50b534fbd4a871cd257ac52d6009af00}{tesseract\+\_\+geometry\+::\+Octree\+::\+Sub\+Type}} shape\+\_\+type, bool prune, int version)
+\begin{DoxyCompactList}\small\item\em Parse xml element point\+\_\+cloud. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -52,7 +53,7 @@ September 1, 2019
 TODO 
 \end{DoxyVersion}
 \begin{DoxyRefDesc}{Bug}
-\item[\mbox{\hyperlink{bug__bug000349}{Bug}}]No known bugs\end{DoxyRefDesc}
+\item[\mbox{\hyperlink{bug__bug000202}{Bug}}]No known bugs\end{DoxyRefDesc}
 
 
 \begin{DoxyCopyright}{Copyright}

@@ -57,6 +57,8 @@ const std\+::shared\+\_\+ptr$<$ const octomap\+::\+Oc\+Tree $>$ \& \mbox{\hyperl
 \item 
 \mbox{\hyperlink{classtesseract__geometry_1_1Octree_a50b534fbd4a871cd257ac52d6009af00}{Sub\+Type}} \mbox{\hyperlink{classtesseract__geometry_1_1Octree_af32ea5602ecda329bfe44b24ba34c466}{get\+Sub\+Type}} () const
 \item 
+bool \mbox{\hyperlink{classtesseract__geometry_1_1Octree_a087069afe99c36b6923d7ef0e8e1e29f}{get\+Pruned}} () const
+\item 
 \mbox{\hyperlink{classtesseract__geometry_1_1Geometry_acd91c55fb9604ed374446c029b6f2d08}{Geometry\+::\+Ptr}} \mbox{\hyperlink{classtesseract__geometry_1_1Octree_a806c462d66b9ddedef51ec7069b3d17b}{clone}} () const override
 \begin{DoxyCompactList}\small\item\em Create a copy of this shape. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classtesseract__geometry_1_1Octree_a2ba384fe7fe9d489e61a84fda5872149}{update}} ()
@@ -67,7 +69,7 @@ long \mbox{\hyperlink{classtesseract__geometry_1_1Octree_ae854ec8aa19fa88ca10cd1
 \begin{DoxyCompactItemize}
 \item 
 static void \mbox{\hyperlink{classtesseract__geometry_1_1Octree_a6869e2482754d630b7c15b9b6c428fa9}{prune}} (octomap\+::\+Oc\+Tree \&octree)
-\begin{DoxyCompactList}\small\item\em A custom octree prune which will prune if all children are above the occupency threshold. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em A custom octree prune which will prune if all children are above the occupancy threshold. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Static Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -83,6 +85,8 @@ static void \mbox{\hyperlink{classtesseract__geometry_1_1Octree_a87de9242d4b9118
 std\+::shared\+\_\+ptr$<$ const octomap\+::\+Oc\+Tree $>$ \mbox{\hyperlink{classtesseract__geometry_1_1Octree_aca7587afddb38c0b5052e1ed8eaf88f4}{octree\+\_\+}}
 \item 
 \mbox{\hyperlink{classtesseract__geometry_1_1Octree_a50b534fbd4a871cd257ac52d6009af00}{Sub\+Type}} \mbox{\hyperlink{classtesseract__geometry_1_1Octree_a90a701b0f4f93fe9f80b01001f9a5166}{sub\+\_\+type\+\_\+}}
+\item 
+bool \mbox{\hyperlink{classtesseract__geometry_1_1Octree_ae0f8d27720da5ad6c93dfb5dbe29affa}{pruned\+\_\+}} \{ false \}
 \end{DoxyCompactItemize}
 
 
@@ -194,6 +198,12 @@ Implements \mbox{\hyperlink{classtesseract__geometry_1_1Geometry_ae8e12b3ae80b55
 \doxysubsubsection{\texorpdfstring{getOctree()}{getOctree()}}
 {\footnotesize\ttfamily const std\+::shared\+\_\+ptr$<$const octomap\+::\+Oc\+Tree$>$\& tesseract\+\_\+geometry\+::\+Octree\+::get\+Octree (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
+\mbox{\Hypertarget{classtesseract__geometry_1_1Octree_a087069afe99c36b6923d7ef0e8e1e29f}\label{classtesseract__geometry_1_1Octree_a087069afe99c36b6923d7ef0e8e1e29f}} 
+\index{tesseract\_geometry::Octree@{tesseract\_geometry::Octree}!getPruned@{getPruned}}
+\index{getPruned@{getPruned}!tesseract\_geometry::Octree@{tesseract\_geometry::Octree}}
+\doxysubsubsection{\texorpdfstring{getPruned()}{getPruned()}}
+{\footnotesize\ttfamily bool tesseract\+\_\+geometry\+::\+Octree\+::get\+Pruned (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
 \mbox{\Hypertarget{classtesseract__geometry_1_1Octree_af32ea5602ecda329bfe44b24ba34c466}\label{classtesseract__geometry_1_1Octree_af32ea5602ecda329bfe44b24ba34c466}} 
 \index{tesseract\_geometry::Octree@{tesseract\_geometry::Octree}!getSubType@{getSubType}}
 \index{getSubType@{getSubType}!tesseract\_geometry::Octree@{tesseract\_geometry::Octree}}
@@ -226,9 +236,9 @@ Implements \mbox{\hyperlink{classtesseract__geometry_1_1Geometry_ae8e12b3ae80b55
 
 
 
-A custom octree prune which will prune if all children are above the occupency threshold. 
+A custom octree prune which will prune if all children are above the occupancy threshold. 
 
-This is different from the octomap\+::\+Oc\+Tree\+::prune which requires all children to have the same occupency to be collapsed.
+This is different from the octomap\+::\+Oc\+Tree\+::prune which requires all children to have the same occupancy to be collapsed.
 
 
 \begin{DoxyParams}{Parameters}
@@ -266,6 +276,12 @@ Octrees are typically generated from 3D sensor data so this method should be use
 \doxysubsubsection{\texorpdfstring{octree\_}{octree\_}}
 {\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$const octomap\+::\+Oc\+Tree$>$ tesseract\+\_\+geometry\+::\+Octree\+::octree\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
 
+\mbox{\Hypertarget{classtesseract__geometry_1_1Octree_ae0f8d27720da5ad6c93dfb5dbe29affa}\label{classtesseract__geometry_1_1Octree_ae0f8d27720da5ad6c93dfb5dbe29affa}} 
+\index{tesseract\_geometry::Octree@{tesseract\_geometry::Octree}!pruned\_@{pruned\_}}
+\index{pruned\_@{pruned\_}!tesseract\_geometry::Octree@{tesseract\_geometry::Octree}}
+\doxysubsubsection{\texorpdfstring{pruned\_}{pruned\_}}
+{\footnotesize\ttfamily bool tesseract\+\_\+geometry\+::\+Octree\+::pruned\+\_\+ \{ false \}\hspace{0.3cm}{\ttfamily [private]}}
+
 \mbox{\Hypertarget{classtesseract__geometry_1_1Octree_a90a701b0f4f93fe9f80b01001f9a5166}\label{classtesseract__geometry_1_1Octree_a90a701b0f4f93fe9f80b01001f9a5166}} 
 \index{tesseract\_geometry::Octree@{tesseract\_geometry::Octree}!sub\_type\_@{sub\_type\_}}
 \index{sub\_type\_@{sub\_type\_}!tesseract\_geometry::Octree@{tesseract\_geometry::Octree}}
@@ -276,4 +292,4 @@ Octrees are typically generated from 3D sensor data so this method should be use
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-tesseract/tesseract\+\_\+geometry/include/tesseract\+\_\+geometry/impl/\mbox{\hyperlink{tesseract__geometry_2include_2tesseract__geometry_2impl_2octree_8h}{octree.\+h}}\end{DoxyCompactItemize}
+tesseract\+\_\+geometry/include/tesseract\+\_\+geometry/impl/\mbox{\hyperlink{tesseract__geometry_2include_2tesseract__geometry_2impl_2octree_8h}{octree.\+h}}\end{DoxyCompactItemize}

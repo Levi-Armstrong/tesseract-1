@@ -1,21 +1,18 @@
-\hypertarget{safety__controller_8h}{}\doxysection{tesseract/tesseract\+\_\+urdf/include/tesseract\+\_\+urdf/safety\+\_\+controller.h File Reference}
-\label{safety__controller_8h}\index{tesseract/tesseract\_urdf/include/tesseract\_urdf/safety\_controller.h@{tesseract/tesseract\_urdf/include/tesseract\_urdf/safety\_controller.h}}
+\hypertarget{safety__controller_8h}{}\doxysection{tesseract\+\_\+urdf/include/tesseract\+\_\+urdf/safety\+\_\+controller.h File Reference}
+\label{safety__controller_8h}\index{tesseract\_urdf/include/tesseract\_urdf/safety\_controller.h@{tesseract\_urdf/include/tesseract\_urdf/safety\_controller.h}}
 
 
 Parse safety\+\_\+controller from xml string.  
 
 
 {\ttfamily \#include $<$tesseract\+\_\+common/macros.\+h$>$}\newline
-{\ttfamily \#include $<$tesseract\+\_\+common/status\+\_\+code.\+h$>$}\newline
-{\ttfamily \#include $<$Eigen/\+Geometry$>$}\newline
-{\ttfamily \#include $<$tinyxml2.\+h$>$}\newline
-{\ttfamily \#include $<$tesseract\+\_\+scene\+\_\+graph/joint.\+h$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
 Include dependency graph for safety\+\_\+controller.\+h\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{d2/d28/safety__controller_8h__incl}
+\includegraphics[width=292pt]{d2/d28/safety__controller_8h__incl}
 \end{center}
 \end{figure}
 This graph shows which files directly or indirectly include this file\+:
@@ -26,20 +23,21 @@ This graph shows which files directly or indirectly include this file\+:
 \includegraphics[width=350pt]{de/d7f/safety__controller_8h__dep__incl}
 \end{center}
 \end{figure}
-\doxysubsection*{Classes}
-\begin{DoxyCompactItemize}
-\item 
-class \mbox{\hyperlink{classtesseract__urdf_1_1SafetyStatusCategory}{tesseract\+\_\+urdf\+::\+Safety\+Status\+Category}}
-\end{DoxyCompactItemize}
 \doxysubsection*{Namespaces}
 \begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacetinyxml2}{tinyxml2}}
+\item 
+ \mbox{\hyperlink{namespacetesseract__scene__graph}{tesseract\+\_\+scene\+\_\+graph}}
 \item 
  \mbox{\hyperlink{namespacetesseract__urdf}{tesseract\+\_\+urdf}}
 \end{DoxyCompactItemize}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classtesseract__common_1_1StatusCode_a2b285106bd9f4963d1696b9696dbaf5f}{tesseract\+\_\+common\+::\+Status\+Code\+::\+Ptr}} \mbox{\hyperlink{namespacetesseract__urdf_a2427233b67dbffe75aba285c0cbb4059}{tesseract\+\_\+urdf\+::parse}} (\mbox{\hyperlink{classtesseract__scene__graph_1_1JointSafety_ae5c48f7daf62f4adcaf1e02df3eaf603}{tesseract\+\_\+scene\+\_\+graph\+::\+Joint\+Safety\+::\+Ptr}} \&safety, const tinyxml2\+::\+XMLElement $\ast$xml\+\_\+element, const int)
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classtesseract__scene__graph_1_1JointSafety}{tesseract\+\_\+scene\+\_\+graph\+::\+Joint\+Safety}} $>$ \mbox{\hyperlink{namespacetesseract__urdf_a9047be7f9f9f91001a8b434ebee4b9e3}{tesseract\+\_\+urdf\+::parse\+Safety\+Controller}} (const tinyxml2\+::\+XMLElement $\ast$xml\+\_\+element, int version)
+\begin{DoxyCompactList}\small\item\em Parse xml element safety\+\_\+controller. \end{DoxyCompactList}\item 
+tinyxml2\+::\+XMLElement $\ast$ \mbox{\hyperlink{namespacetesseract__urdf_aee6d8d691637846d1a6a3109c51fedc1}{tesseract\+\_\+urdf\+::write\+Safety\+Controller}} (const std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{classtesseract__scene__graph_1_1JointSafety}{tesseract\+\_\+scene\+\_\+graph\+::\+Joint\+Safety}} $>$ \&safety, tinyxml2\+::\+XMLDocument \&doc)
 \end{DoxyCompactItemize}
 
 
@@ -56,7 +54,7 @@ September 1, 2019
 TODO 
 \end{DoxyVersion}
 \begin{DoxyRefDesc}{Bug}
-\item[\mbox{\hyperlink{bug__bug000350}{Bug}}]No known bugs\end{DoxyRefDesc}
+\item[\mbox{\hyperlink{bug__bug000203}{Bug}}]No known bugs\end{DoxyRefDesc}
 
 
 \begin{DoxyCopyright}{Copyright}

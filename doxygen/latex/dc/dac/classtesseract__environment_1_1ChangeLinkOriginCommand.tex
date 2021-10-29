@@ -2,7 +2,7 @@
 \label{classtesseract__environment_1_1ChangeLinkOriginCommand}\index{tesseract\_environment::ChangeLinkOriginCommand@{tesseract\_environment::ChangeLinkOriginCommand}}
 
 
-{\ttfamily \#include $<$commands.\+h$>$}
+{\ttfamily \#include $<$change\+\_\+link\+\_\+origin\+\_\+command.\+h$>$}
 
 
 
@@ -24,10 +24,19 @@ Collaboration diagram for tesseract\+\_\+environment\+::Change\+Link\+Origin\+Co
 \includegraphics[width=291pt]{de/d4b/classtesseract__environment_1_1ChangeLinkOriginCommand__coll__graph}
 \end{center}
 \end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classtesseract__environment_1_1ChangeLinkOriginCommand_a687fc8bdb309cf8dca3ea49301adcba0}{Ptr}} = std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classtesseract__environment_1_1ChangeLinkOriginCommand}{Change\+Link\+Origin\+Command}} $>$
+\item 
+using \mbox{\hyperlink{classtesseract__environment_1_1ChangeLinkOriginCommand_a874c9bbcf832607001e63d94e463b302}{Const\+Ptr}} = std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{classtesseract__environment_1_1ChangeLinkOriginCommand}{Change\+Link\+Origin\+Command}} $>$
+\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classtesseract__environment_1_1ChangeLinkOriginCommand_ae41c126b9b3662b27bcdebc790c16154}{Change\+Link\+Origin\+Command}} (std\+::string link\+\_\+name, const Eigen\+::\+Isometry3d \&origin)
+\item 
+\mbox{\hyperlink{namespacetesseract__environment_afc00c1aecb519acba3afc24dbd367029}{Command\+Type}} \mbox{\hyperlink{classtesseract__environment_1_1ChangeLinkOriginCommand_a2c9940b531d91b04b911c60383f99de9}{get\+Type}} () const final
 \item 
 const std\+::string \& \mbox{\hyperlink{classtesseract__environment_1_1ChangeLinkOriginCommand_a1ad34289038380c75d6d3124d73d985c}{get\+Link\+Name}} () const
 \item 
@@ -40,7 +49,21 @@ std\+::string \mbox{\hyperlink{classtesseract__environment_1_1ChangeLinkOriginCo
 \item 
 Eigen\+::\+Isometry3d \mbox{\hyperlink{classtesseract__environment_1_1ChangeLinkOriginCommand_a5adea6c57419b1c21b101a45b2affea0}{origin\+\_\+}}
 \end{DoxyCompactItemize}
-\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classtesseract__environment_1_1ChangeLinkOriginCommand_a874c9bbcf832607001e63d94e463b302}\label{classtesseract__environment_1_1ChangeLinkOriginCommand_a874c9bbcf832607001e63d94e463b302}} 
+\index{tesseract\_environment::ChangeLinkOriginCommand@{tesseract\_environment::ChangeLinkOriginCommand}!ConstPtr@{ConstPtr}}
+\index{ConstPtr@{ConstPtr}!tesseract\_environment::ChangeLinkOriginCommand@{tesseract\_environment::ChangeLinkOriginCommand}}
+\doxysubsubsection{\texorpdfstring{ConstPtr}{ConstPtr}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classtesseract__environment_1_1ChangeLinkOriginCommand_a874c9bbcf832607001e63d94e463b302}{tesseract\+\_\+environment\+::\+Change\+Link\+Origin\+Command\+::\+Const\+Ptr}} =  std\+::shared\+\_\+ptr$<$const \mbox{\hyperlink{classtesseract__environment_1_1ChangeLinkOriginCommand}{Change\+Link\+Origin\+Command}}$>$}
+
+\mbox{\Hypertarget{classtesseract__environment_1_1ChangeLinkOriginCommand_a687fc8bdb309cf8dca3ea49301adcba0}\label{classtesseract__environment_1_1ChangeLinkOriginCommand_a687fc8bdb309cf8dca3ea49301adcba0}} 
+\index{tesseract\_environment::ChangeLinkOriginCommand@{tesseract\_environment::ChangeLinkOriginCommand}!Ptr@{Ptr}}
+\index{Ptr@{Ptr}!tesseract\_environment::ChangeLinkOriginCommand@{tesseract\_environment::ChangeLinkOriginCommand}}
+\doxysubsubsection{\texorpdfstring{Ptr}{Ptr}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classtesseract__environment_1_1ChangeLinkOriginCommand_a687fc8bdb309cf8dca3ea49301adcba0}{tesseract\+\_\+environment\+::\+Change\+Link\+Origin\+Command\+::\+Ptr}} =  std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classtesseract__environment_1_1ChangeLinkOriginCommand}{Change\+Link\+Origin\+Command}}$>$}
+
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
@@ -65,6 +88,16 @@ Eigen\+::\+Isometry3d \mbox{\hyperlink{classtesseract__environment_1_1ChangeLink
 \doxysubsubsection{\texorpdfstring{getOrigin()}{getOrigin()}}
 {\footnotesize\ttfamily const Eigen\+::\+Isometry3d\& tesseract\+\_\+environment\+::\+Change\+Link\+Origin\+Command\+::get\+Origin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
+\mbox{\Hypertarget{classtesseract__environment_1_1ChangeLinkOriginCommand_a2c9940b531d91b04b911c60383f99de9}\label{classtesseract__environment_1_1ChangeLinkOriginCommand_a2c9940b531d91b04b911c60383f99de9}} 
+\index{tesseract\_environment::ChangeLinkOriginCommand@{tesseract\_environment::ChangeLinkOriginCommand}!getType@{getType}}
+\index{getType@{getType}!tesseract\_environment::ChangeLinkOriginCommand@{tesseract\_environment::ChangeLinkOriginCommand}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacetesseract__environment_afc00c1aecb519acba3afc24dbd367029}{Command\+Type}} tesseract\+\_\+environment\+::\+Change\+Link\+Origin\+Command\+::get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [final]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classtesseract__environment_1_1Command_ae76293ca1e231a278dcd79c1ec16490f}{tesseract\+\_\+environment\+::\+Command}}.
+
 
 
 \doxysubsection{Member Data Documentation}
@@ -84,4 +117,4 @@ Eigen\+::\+Isometry3d \mbox{\hyperlink{classtesseract__environment_1_1ChangeLink
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-tesseract/tesseract\+\_\+environment/include/tesseract\+\_\+environment/core/\mbox{\hyperlink{commands_8h}{commands.\+h}}\end{DoxyCompactItemize}
+tesseract\+\_\+environment/include/tesseract\+\_\+environment/commands/\mbox{\hyperlink{change__link__origin__command_8h}{change\+\_\+link\+\_\+origin\+\_\+command.\+h}}\end{DoxyCompactItemize}

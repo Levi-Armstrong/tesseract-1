@@ -62,24 +62,24 @@ void \mbox{\hyperlink{classtesseract__collision_1_1tesseract__collision__bullet_
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-short int \mbox{\hyperlink{classtesseract__collision_1_1tesseract__collision__bullet_1_1CollisionObjectWrapper_ab740f54bab539fcd90991ff0bd6a173e}{m\+\_\+collision\+Filter\+Group}}
+short int \mbox{\hyperlink{classtesseract__collision_1_1tesseract__collision__bullet_1_1CollisionObjectWrapper_ab740f54bab539fcd90991ff0bd6a173e}{m\+\_\+collision\+Filter\+Group}} \{ bt\+Broadphase\+Proxy\+::\+Kinematic\+Filter \}
 \item 
-short int \mbox{\hyperlink{classtesseract__collision_1_1tesseract__collision__bullet_1_1CollisionObjectWrapper_aeeefb43862813ac5ef3d7350248d36eb}{m\+\_\+collision\+Filter\+Mask}}
+short int \mbox{\hyperlink{classtesseract__collision_1_1tesseract__collision__bullet_1_1CollisionObjectWrapper_aeeefb43862813ac5ef3d7350248d36eb}{m\+\_\+collision\+Filter\+Mask}} \{ bt\+Broadphase\+Proxy\+::\+Static\+Filter $\vert$ bt\+Broadphase\+Proxy\+::\+Kinematic\+Filter \}
 \item 
-bool \mbox{\hyperlink{classtesseract__collision_1_1tesseract__collision__bullet_1_1CollisionObjectWrapper_a53a5a8a7c0290137c219324eb7bd2130}{m\+\_\+enabled}}
+bool \mbox{\hyperlink{classtesseract__collision_1_1tesseract__collision__bullet_1_1CollisionObjectWrapper_a53a5a8a7c0290137c219324eb7bd2130}{m\+\_\+enabled}} \{ true \}
 \end{DoxyCompactItemize}
 \doxysubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
 std\+::string \mbox{\hyperlink{classtesseract__collision_1_1tesseract__collision__bullet_1_1CollisionObjectWrapper_a3e7b8010f943830140a6d866e84eb077}{m\+\_\+name}}
 \begin{DoxyCompactList}\small\item\em The name of the collision object. \end{DoxyCompactList}\item 
-int \mbox{\hyperlink{classtesseract__collision_1_1tesseract__collision__bullet_1_1CollisionObjectWrapper_a249d6761da873592d805ad27a8f77d59}{m\+\_\+type\+\_\+id}}
+int \mbox{\hyperlink{classtesseract__collision_1_1tesseract__collision__bullet_1_1CollisionObjectWrapper_a249d6761da873592d805ad27a8f77d59}{m\+\_\+type\+\_\+id}} \{ -\/1 \}
 \begin{DoxyCompactList}\small\item\em A user defined type id. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{namespacetesseract__collision_a2472107aae8174a30873bb0a955c3cb4}{Collision\+Shapes\+Const}} \mbox{\hyperlink{classtesseract__collision_1_1tesseract__collision__bullet_1_1CollisionObjectWrapper_a70781c8761f29a7ae7b3d5d79a931ef1}{m\+\_\+shapes}}
 \begin{DoxyCompactList}\small\item\em The shapes that define the collison object. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{namespacetesseract__common_a94d9921fc7ed323609ac57d06f939cb6}{tesseract\+\_\+common\+::\+Vector\+Isometry3d}} \mbox{\hyperlink{classtesseract__collision_1_1tesseract__collision__bullet_1_1CollisionObjectWrapper_ac370a5639754b135ddc65cab3a3d2cb7}{m\+\_\+shape\+\_\+poses}}
 \begin{DoxyCompactList}\small\item\em The shpaes poses information. \end{DoxyCompactList}\item 
-std\+::vector$<$ std\+::shared\+\_\+ptr$<$ bt\+Collision\+Shape $>$ $>$ \mbox{\hyperlink{classtesseract__collision_1_1tesseract__collision__bullet_1_1CollisionObjectWrapper_a3057d15c3ea807f0226ece57a376e879}{m\+\_\+data}}
+\mbox{\hyperlink{vhacdRaycastMesh_8cpp_adcf134d50025cc52907d0c8ac798d89d}{std\+::vector}}$<$ std\+::shared\+\_\+ptr$<$ bt\+Collision\+Shape $>$ $>$ \mbox{\hyperlink{classtesseract__collision_1_1tesseract__collision__bullet_1_1CollisionObjectWrapper_a3057d15c3ea807f0226ece57a376e879}{m\+\_\+data}}
 \begin{DoxyCompactList}\small\item\em This manages the collision shape pointer so they get destroyed. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -204,19 +204,19 @@ Check if two \mbox{\hyperlink{classtesseract__collision_1_1tesseract__collision_
 \index{tesseract\_collision::tesseract\_collision\_bullet::CollisionObjectWrapper@{tesseract\_collision::tesseract\_collision\_bullet::CollisionObjectWrapper}!m\_collisionFilterGroup@{m\_collisionFilterGroup}}
 \index{m\_collisionFilterGroup@{m\_collisionFilterGroup}!tesseract\_collision::tesseract\_collision\_bullet::CollisionObjectWrapper@{tesseract\_collision::tesseract\_collision\_bullet::CollisionObjectWrapper}}
 \doxysubsubsection{\texorpdfstring{m\_collisionFilterGroup}{m\_collisionFilterGroup}}
-{\footnotesize\ttfamily short int tesseract\+\_\+collision\+::tesseract\+\_\+collision\+\_\+bullet\+::\+Collision\+Object\+Wrapper\+::m\+\_\+collision\+Filter\+Group}
+{\footnotesize\ttfamily short int tesseract\+\_\+collision\+::tesseract\+\_\+collision\+\_\+bullet\+::\+Collision\+Object\+Wrapper\+::m\+\_\+collision\+Filter\+Group \{ bt\+Broadphase\+Proxy\+::\+Kinematic\+Filter \}}
 
 \mbox{\Hypertarget{classtesseract__collision_1_1tesseract__collision__bullet_1_1CollisionObjectWrapper_aeeefb43862813ac5ef3d7350248d36eb}\label{classtesseract__collision_1_1tesseract__collision__bullet_1_1CollisionObjectWrapper_aeeefb43862813ac5ef3d7350248d36eb}} 
 \index{tesseract\_collision::tesseract\_collision\_bullet::CollisionObjectWrapper@{tesseract\_collision::tesseract\_collision\_bullet::CollisionObjectWrapper}!m\_collisionFilterMask@{m\_collisionFilterMask}}
 \index{m\_collisionFilterMask@{m\_collisionFilterMask}!tesseract\_collision::tesseract\_collision\_bullet::CollisionObjectWrapper@{tesseract\_collision::tesseract\_collision\_bullet::CollisionObjectWrapper}}
 \doxysubsubsection{\texorpdfstring{m\_collisionFilterMask}{m\_collisionFilterMask}}
-{\footnotesize\ttfamily short int tesseract\+\_\+collision\+::tesseract\+\_\+collision\+\_\+bullet\+::\+Collision\+Object\+Wrapper\+::m\+\_\+collision\+Filter\+Mask}
+{\footnotesize\ttfamily short int tesseract\+\_\+collision\+::tesseract\+\_\+collision\+\_\+bullet\+::\+Collision\+Object\+Wrapper\+::m\+\_\+collision\+Filter\+Mask \{ bt\+Broadphase\+Proxy\+::\+Static\+Filter $\vert$ bt\+Broadphase\+Proxy\+::\+Kinematic\+Filter \}}
 
 \mbox{\Hypertarget{classtesseract__collision_1_1tesseract__collision__bullet_1_1CollisionObjectWrapper_a3057d15c3ea807f0226ece57a376e879}\label{classtesseract__collision_1_1tesseract__collision__bullet_1_1CollisionObjectWrapper_a3057d15c3ea807f0226ece57a376e879}} 
 \index{tesseract\_collision::tesseract\_collision\_bullet::CollisionObjectWrapper@{tesseract\_collision::tesseract\_collision\_bullet::CollisionObjectWrapper}!m\_data@{m\_data}}
 \index{m\_data@{m\_data}!tesseract\_collision::tesseract\_collision\_bullet::CollisionObjectWrapper@{tesseract\_collision::tesseract\_collision\_bullet::CollisionObjectWrapper}}
 \doxysubsubsection{\texorpdfstring{m\_data}{m\_data}}
-{\footnotesize\ttfamily std\+::vector$<$std\+::shared\+\_\+ptr$<$bt\+Collision\+Shape$>$ $>$ tesseract\+\_\+collision\+::tesseract\+\_\+collision\+\_\+bullet\+::\+Collision\+Object\+Wrapper\+::m\+\_\+data\hspace{0.3cm}{\ttfamily [protected]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{vhacdRaycastMesh_8cpp_adcf134d50025cc52907d0c8ac798d89d}{std\+::vector}}$<$std\+::shared\+\_\+ptr$<$bt\+Collision\+Shape$>$ $>$ tesseract\+\_\+collision\+::tesseract\+\_\+collision\+\_\+bullet\+::\+Collision\+Object\+Wrapper\+::m\+\_\+data\hspace{0.3cm}{\ttfamily [protected]}}
 
 
 
@@ -226,7 +226,7 @@ This manages the collision shape pointer so they get destroyed.
 \index{tesseract\_collision::tesseract\_collision\_bullet::CollisionObjectWrapper@{tesseract\_collision::tesseract\_collision\_bullet::CollisionObjectWrapper}!m\_enabled@{m\_enabled}}
 \index{m\_enabled@{m\_enabled}!tesseract\_collision::tesseract\_collision\_bullet::CollisionObjectWrapper@{tesseract\_collision::tesseract\_collision\_bullet::CollisionObjectWrapper}}
 \doxysubsubsection{\texorpdfstring{m\_enabled}{m\_enabled}}
-{\footnotesize\ttfamily bool tesseract\+\_\+collision\+::tesseract\+\_\+collision\+\_\+bullet\+::\+Collision\+Object\+Wrapper\+::m\+\_\+enabled}
+{\footnotesize\ttfamily bool tesseract\+\_\+collision\+::tesseract\+\_\+collision\+\_\+bullet\+::\+Collision\+Object\+Wrapper\+::m\+\_\+enabled \{ true \}}
 
 \mbox{\Hypertarget{classtesseract__collision_1_1tesseract__collision__bullet_1_1CollisionObjectWrapper_a3e7b8010f943830140a6d866e84eb077}\label{classtesseract__collision_1_1tesseract__collision__bullet_1_1CollisionObjectWrapper_a3e7b8010f943830140a6d866e84eb077}} 
 \index{tesseract\_collision::tesseract\_collision\_bullet::CollisionObjectWrapper@{tesseract\_collision::tesseract\_collision\_bullet::CollisionObjectWrapper}!m\_name@{m\_name}}
@@ -262,7 +262,7 @@ The shapes that define the collison object.
 \index{tesseract\_collision::tesseract\_collision\_bullet::CollisionObjectWrapper@{tesseract\_collision::tesseract\_collision\_bullet::CollisionObjectWrapper}!m\_type\_id@{m\_type\_id}}
 \index{m\_type\_id@{m\_type\_id}!tesseract\_collision::tesseract\_collision\_bullet::CollisionObjectWrapper@{tesseract\_collision::tesseract\_collision\_bullet::CollisionObjectWrapper}}
 \doxysubsubsection{\texorpdfstring{m\_type\_id}{m\_type\_id}}
-{\footnotesize\ttfamily int tesseract\+\_\+collision\+::tesseract\+\_\+collision\+\_\+bullet\+::\+Collision\+Object\+Wrapper\+::m\+\_\+type\+\_\+id\hspace{0.3cm}{\ttfamily [protected]}}
+{\footnotesize\ttfamily int tesseract\+\_\+collision\+::tesseract\+\_\+collision\+\_\+bullet\+::\+Collision\+Object\+Wrapper\+::m\+\_\+type\+\_\+id \{ -\/1 \}\hspace{0.3cm}{\ttfamily [protected]}}
 
 
 
@@ -272,5 +272,5 @@ A user defined type id.
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-tesseract/tesseract\+\_\+collision/include/tesseract\+\_\+collision/bullet/\mbox{\hyperlink{bullet__utils_8h}{bullet\+\_\+utils.\+h}}\item 
-tesseract/tesseract\+\_\+collision/src/bullet/\mbox{\hyperlink{bullet__utils_8cpp}{bullet\+\_\+utils.\+cpp}}\end{DoxyCompactItemize}
+tesseract\+\_\+collision/bullet/include/tesseract\+\_\+collision/bullet/\mbox{\hyperlink{bullet__utils_8h}{bullet\+\_\+utils.\+h}}\item 
+tesseract\+\_\+collision/bullet/src/\mbox{\hyperlink{bullet__utils_8cpp}{bullet\+\_\+utils.\+cpp}}\end{DoxyCompactItemize}

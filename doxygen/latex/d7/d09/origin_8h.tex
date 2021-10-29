@@ -1,17 +1,13 @@
-\hypertarget{origin_8h}{}\doxysection{tesseract/tesseract\+\_\+urdf/include/tesseract\+\_\+urdf/origin.h File Reference}
-\label{origin_8h}\index{tesseract/tesseract\_urdf/include/tesseract\_urdf/origin.h@{tesseract/tesseract\_urdf/include/tesseract\_urdf/origin.h}}
+\hypertarget{origin_8h}{}\doxysection{tesseract\+\_\+urdf/include/tesseract\+\_\+urdf/origin.h File Reference}
+\label{origin_8h}\index{tesseract\_urdf/include/tesseract\_urdf/origin.h@{tesseract\_urdf/include/tesseract\_urdf/origin.h}}
 
 
 Parse origin from xml string.  
 
 
 {\ttfamily \#include $<$tesseract\+\_\+common/macros.\+h$>$}\newline
-{\ttfamily \#include $<$tesseract\+\_\+common/status\+\_\+code.\+h$>$}\newline
-{\ttfamily \#include $<$tesseract\+\_\+common/utils.\+h$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
 {\ttfamily \#include $<$Eigen/\+Geometry$>$}\newline
-{\ttfamily \#include $<$tinyxml2.\+h$>$}\newline
-{\ttfamily \#include $<$vector$>$}\newline
-{\ttfamily \#include $<$boost/algorithm/string.\+hpp$>$}\newline
 Include dependency graph for origin.\+h\+:
 \nopagebreak
 \begin{figure}[H]
@@ -28,20 +24,19 @@ This graph shows which files directly or indirectly include this file\+:
 \includegraphics[width=350pt]{dd/d1c/origin_8h__dep__incl}
 \end{center}
 \end{figure}
-\doxysubsection*{Classes}
-\begin{DoxyCompactItemize}
-\item 
-class \mbox{\hyperlink{classtesseract__urdf_1_1OriginStatusCategory}{tesseract\+\_\+urdf\+::\+Origin\+Status\+Category}}
-\end{DoxyCompactItemize}
 \doxysubsection*{Namespaces}
 \begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacetinyxml2}{tinyxml2}}
 \item 
  \mbox{\hyperlink{namespacetesseract__urdf}{tesseract\+\_\+urdf}}
 \end{DoxyCompactItemize}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classtesseract__common_1_1StatusCode_a2b285106bd9f4963d1696b9696dbaf5f}{tesseract\+\_\+common\+::\+Status\+Code\+::\+Ptr}} \mbox{\hyperlink{namespacetesseract__urdf_ab7af0956f28fe70e8665376371be38de}{tesseract\+\_\+urdf\+::parse}} (Eigen\+::\+Isometry3d \&origin, const tinyxml2\+::\+XMLElement $\ast$xml\+\_\+element, const int)
+Eigen\+::\+Isometry3d \mbox{\hyperlink{namespacetesseract__urdf_a3dca8f3d3dc6bcb661e3e55cc7b3e2f3}{tesseract\+\_\+urdf\+::parse\+Origin}} (const tinyxml2\+::\+XMLElement $\ast$xml\+\_\+element, int version)
+\begin{DoxyCompactList}\small\item\em Parse xml element origin. \end{DoxyCompactList}\item 
+tinyxml2\+::\+XMLElement $\ast$ \mbox{\hyperlink{namespacetesseract__urdf_ae3a364fb1fdeaeeaaa0e8843459bd987}{tesseract\+\_\+urdf\+::write\+Origin}} (const Eigen\+::\+Isometry3d \&origin, tinyxml2\+::\+XMLDocument \&doc)
 \end{DoxyCompactItemize}
 
 
@@ -58,7 +53,7 @@ September 1, 2019
 TODO 
 \end{DoxyVersion}
 \begin{DoxyRefDesc}{Bug}
-\item[\mbox{\hyperlink{bug__bug000348}{Bug}}]No known bugs\end{DoxyRefDesc}
+\item[\mbox{\hyperlink{bug__bug000201}{Bug}}]No known bugs\end{DoxyRefDesc}
 
 
 \begin{DoxyCopyright}{Copyright}

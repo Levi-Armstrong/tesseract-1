@@ -1,0 +1,5 @@
+<map id="tesseract_collision::VHACD::TMMVertex" name="tesseract_collision::VHACD::TMMVertex">
+<area shape="rect" id="node1" title="Vertex data structure used in a triangular manifold mesh (TMM)." alt="" coords="320,45,467,87"/>
+<area shape="rect" id="node2" href="$d4/dd6/classtesseract__collision_1_1VHACD_1_1Vec3.html" title=" " alt="" coords="17,5,187,47"/>
+<area shape="rect" id="node3" href="$d8/d76/classtesseract__collision_1_1VHACD_1_1CircularListElement.html" title=" " alt="" coords="5,71,199,141"/>
+</map>

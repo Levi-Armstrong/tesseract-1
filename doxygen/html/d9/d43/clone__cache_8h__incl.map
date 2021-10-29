@@ -1,11 +1,12 @@
-<map id="tesseract/tesseract_common/include/tesseract_common/clone_cache.h" name="tesseract/tesseract_common/include/tesseract_common/clone_cache.h">
-<area shape="rect" id="node1" title=" " alt="" coords="93,5,276,61"/>
-<area shape="rect" id="node2" href="$de/d3c/macros_8h.html" title="Common Tesseract Macros." alt="" coords="99,199,289,225"/>
-<area shape="rect" id="node3" title=" " alt="" coords="27,117,84,143"/>
-<area shape="rect" id="node4" title=" " alt="" coords="108,117,176,143"/>
-<area shape="rect" id="node5" title=" " alt="" coords="200,117,257,143"/>
-<area shape="rect" id="node6" title=" " alt="" coords="282,117,450,143"/>
-<area shape="rect" id="node7" href="$d3/d03/sfinae__utils_8h.html" title=" " alt="" coords="474,109,645,151"/>
-<area shape="rect" id="node8" title=" " alt="" coords="473,199,555,225"/>
-<area shape="rect" id="node9" title=" " alt="" coords="579,199,630,225"/>
+<map id="tesseract_common/include/tesseract_common/clone_cache.h" name="tesseract_common/include/tesseract_common/clone_cache.h">
+<area shape="rect" id="node1" title=" " alt="" coords="151,5,330,61"/>
+<area shape="rect" id="node2" href="$de/d3c/macros_8h.html" title="Common Tesseract Macros." alt="" coords="150,199,341,225"/>
+<area shape="rect" id="node3" title=" " alt="" coords="29,117,86,143"/>
+<area shape="rect" id="node4" title=" " alt="" coords="110,117,178,143"/>
+<area shape="rect" id="node5" title=" " alt="" coords="203,117,278,143"/>
+<area shape="rect" id="node6" title=" " alt="" coords="302,117,360,143"/>
+<area shape="rect" id="node7" title=" " alt="" coords="384,117,552,143"/>
+<area shape="rect" id="node8" href="$d3/d03/sfinae__utils_8h.html" title=" " alt="" coords="576,109,747,151"/>
+<area shape="rect" id="node9" title=" " alt="" coords="575,199,658,225"/>
+<area shape="rect" id="node10" title=" " alt="" coords="682,199,732,225"/>
 </map>

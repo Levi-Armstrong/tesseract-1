@@ -1,22 +1,18 @@
-\hypertarget{mimic_8h}{}\doxysection{tesseract/tesseract\+\_\+urdf/include/tesseract\+\_\+urdf/mimic.h File Reference}
-\label{mimic_8h}\index{tesseract/tesseract\_urdf/include/tesseract\_urdf/mimic.h@{tesseract/tesseract\_urdf/include/tesseract\_urdf/mimic.h}}
+\hypertarget{mimic_8h}{}\doxysection{tesseract\+\_\+urdf/include/tesseract\+\_\+urdf/mimic.h File Reference}
+\label{mimic_8h}\index{tesseract\_urdf/include/tesseract\_urdf/mimic.h@{tesseract\_urdf/include/tesseract\_urdf/mimic.h}}
 
 
 Parse mimic from xml string.  
 
 
 {\ttfamily \#include $<$tesseract\+\_\+common/macros.\+h$>$}\newline
-{\ttfamily \#include $<$tesseract\+\_\+common/status\+\_\+code.\+h$>$}\newline
-{\ttfamily \#include $<$tesseract\+\_\+common/utils.\+h$>$}\newline
-{\ttfamily \#include $<$Eigen/\+Geometry$>$}\newline
-{\ttfamily \#include $<$tinyxml2.\+h$>$}\newline
-{\ttfamily \#include $<$tesseract\+\_\+scene\+\_\+graph/joint.\+h$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
 Include dependency graph for mimic.\+h\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{d6/da5/mimic_8h__incl}
+\includegraphics[width=292pt]{d6/da5/mimic_8h__incl}
 \end{center}
 \end{figure}
 This graph shows which files directly or indirectly include this file\+:
@@ -27,20 +23,21 @@ This graph shows which files directly or indirectly include this file\+:
 \includegraphics[width=350pt]{de/d9b/mimic_8h__dep__incl}
 \end{center}
 \end{figure}
-\doxysubsection*{Classes}
-\begin{DoxyCompactItemize}
-\item 
-class \mbox{\hyperlink{classtesseract__urdf_1_1MimicStatusCategory}{tesseract\+\_\+urdf\+::\+Mimic\+Status\+Category}}
-\end{DoxyCompactItemize}
 \doxysubsection*{Namespaces}
 \begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacetinyxml2}{tinyxml2}}
+\item 
+ \mbox{\hyperlink{namespacetesseract__scene__graph}{tesseract\+\_\+scene\+\_\+graph}}
 \item 
  \mbox{\hyperlink{namespacetesseract__urdf}{tesseract\+\_\+urdf}}
 \end{DoxyCompactItemize}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classtesseract__common_1_1StatusCode_a2b285106bd9f4963d1696b9696dbaf5f}{tesseract\+\_\+common\+::\+Status\+Code\+::\+Ptr}} \mbox{\hyperlink{namespacetesseract__urdf_a503969d9bedb6cae9f2eaff5add0e4a1}{tesseract\+\_\+urdf\+::parse}} (\mbox{\hyperlink{classtesseract__scene__graph_1_1JointMimic_ad08bd9a09f4b395bc46ed84446a95f0e}{tesseract\+\_\+scene\+\_\+graph\+::\+Joint\+Mimic\+::\+Ptr}} \&mimic, const tinyxml2\+::\+XMLElement $\ast$xml\+\_\+element, const int)
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classtesseract__scene__graph_1_1JointMimic}{tesseract\+\_\+scene\+\_\+graph\+::\+Joint\+Mimic}} $>$ \mbox{\hyperlink{namespacetesseract__urdf_a084a2e4a5407de5b7942fbeb8da231c9}{tesseract\+\_\+urdf\+::parse\+Mimic}} (const tinyxml2\+::\+XMLElement $\ast$xml\+\_\+element, int version)
+\begin{DoxyCompactList}\small\item\em Parse xml element mimic. \end{DoxyCompactList}\item 
+tinyxml2\+::\+XMLElement $\ast$ \mbox{\hyperlink{namespacetesseract__urdf_a5c362be0774db26758b4a6dbd7b7e169}{tesseract\+\_\+urdf\+::write\+Mimic}} (const std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{classtesseract__scene__graph_1_1JointMimic}{tesseract\+\_\+scene\+\_\+graph\+::\+Joint\+Mimic}} $>$ \&mimic, tinyxml2\+::\+XMLDocument \&doc)
 \end{DoxyCompactItemize}
 
 
@@ -57,7 +54,7 @@ September 1, 2019
 TODO 
 \end{DoxyVersion}
 \begin{DoxyRefDesc}{Bug}
-\item[\mbox{\hyperlink{bug__bug000345}{Bug}}]No known bugs\end{DoxyRefDesc}
+\item[\mbox{\hyperlink{bug__bug000198}{Bug}}]No known bugs\end{DoxyRefDesc}
 
 
 \begin{DoxyCopyright}{Copyright}

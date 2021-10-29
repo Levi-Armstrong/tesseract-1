@@ -2,7 +2,7 @@
 \label{classtesseract__environment_1_1ChangeJointVelocityLimitsCommand}\index{tesseract\_environment::ChangeJointVelocityLimitsCommand@{tesseract\_environment::ChangeJointVelocityLimitsCommand}}
 
 
-{\ttfamily \#include $<$commands.\+h$>$}
+{\ttfamily \#include $<$change\+\_\+joint\+\_\+velocity\+\_\+limits\+\_\+command.\+h$>$}
 
 
 
@@ -24,12 +24,21 @@ Collaboration diagram for tesseract\+\_\+environment\+::Change\+Joint\+Velocity\
 \includegraphics[width=324pt]{d0/dd8/classtesseract__environment_1_1ChangeJointVelocityLimitsCommand__coll__graph}
 \end{center}
 \end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classtesseract__environment_1_1ChangeJointVelocityLimitsCommand_a680076078526bdbd5a0f797fee227787}{Ptr}} = std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classtesseract__environment_1_1ChangeJointVelocityLimitsCommand}{Change\+Joint\+Velocity\+Limits\+Command}} $>$
+\item 
+using \mbox{\hyperlink{classtesseract__environment_1_1ChangeJointVelocityLimitsCommand_a384f0db571897a7ace20cf003eedd7be}{Const\+Ptr}} = std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{classtesseract__environment_1_1ChangeJointVelocityLimitsCommand}{Change\+Joint\+Velocity\+Limits\+Command}} $>$
+\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classtesseract__environment_1_1ChangeJointVelocityLimitsCommand_a5500694503731d95119a3663f806c9e4}{Change\+Joint\+Velocity\+Limits\+Command}} (std\+::string joint\+\_\+name, double limit)
-\item 
+\begin{DoxyCompactList}\small\item\em Changes the velocity limits associated with a joint. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classtesseract__environment_1_1ChangeJointVelocityLimitsCommand_a64a6d6e84797c895194251416801048d}{Change\+Joint\+Velocity\+Limits\+Command}} (std\+::unordered\+\_\+map$<$ std\+::string, double $>$ limits)
+\begin{DoxyCompactList}\small\item\em Changes the velocity limits associated with a joint. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacetesseract__environment_afc00c1aecb519acba3afc24dbd367029}{Command\+Type}} \mbox{\hyperlink{classtesseract__environment_1_1ChangeJointVelocityLimitsCommand_a6ce06deaffa7c2a3d0a30f4720ad8718}{get\+Type}} () const final
 \item 
 const std\+::unordered\+\_\+map$<$ std\+::string, double $>$ \& \mbox{\hyperlink{classtesseract__environment_1_1ChangeJointVelocityLimitsCommand_a661f00d8a24c62caf7f31709bdee235c}{get\+Limits}} () const
 \end{DoxyCompactItemize}
@@ -38,7 +47,21 @@ const std\+::unordered\+\_\+map$<$ std\+::string, double $>$ \& \mbox{\hyperlink
 \item 
 std\+::unordered\+\_\+map$<$ std\+::string, double $>$ \mbox{\hyperlink{classtesseract__environment_1_1ChangeJointVelocityLimitsCommand_a9d74c05b9237272ca106957d8553c480}{limits\+\_\+}}
 \end{DoxyCompactItemize}
-\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classtesseract__environment_1_1ChangeJointVelocityLimitsCommand_a384f0db571897a7ace20cf003eedd7be}\label{classtesseract__environment_1_1ChangeJointVelocityLimitsCommand_a384f0db571897a7ace20cf003eedd7be}} 
+\index{tesseract\_environment::ChangeJointVelocityLimitsCommand@{tesseract\_environment::ChangeJointVelocityLimitsCommand}!ConstPtr@{ConstPtr}}
+\index{ConstPtr@{ConstPtr}!tesseract\_environment::ChangeJointVelocityLimitsCommand@{tesseract\_environment::ChangeJointVelocityLimitsCommand}}
+\doxysubsubsection{\texorpdfstring{ConstPtr}{ConstPtr}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classtesseract__environment_1_1ChangeJointVelocityLimitsCommand_a384f0db571897a7ace20cf003eedd7be}{tesseract\+\_\+environment\+::\+Change\+Joint\+Velocity\+Limits\+Command\+::\+Const\+Ptr}} =  std\+::shared\+\_\+ptr$<$const \mbox{\hyperlink{classtesseract__environment_1_1ChangeJointVelocityLimitsCommand}{Change\+Joint\+Velocity\+Limits\+Command}}$>$}
+
+\mbox{\Hypertarget{classtesseract__environment_1_1ChangeJointVelocityLimitsCommand_a680076078526bdbd5a0f797fee227787}\label{classtesseract__environment_1_1ChangeJointVelocityLimitsCommand_a680076078526bdbd5a0f797fee227787}} 
+\index{tesseract\_environment::ChangeJointVelocityLimitsCommand@{tesseract\_environment::ChangeJointVelocityLimitsCommand}!Ptr@{Ptr}}
+\index{Ptr@{Ptr}!tesseract\_environment::ChangeJointVelocityLimitsCommand@{tesseract\_environment::ChangeJointVelocityLimitsCommand}}
+\doxysubsubsection{\texorpdfstring{Ptr}{Ptr}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classtesseract__environment_1_1ChangeJointVelocityLimitsCommand_a680076078526bdbd5a0f797fee227787}{tesseract\+\_\+environment\+::\+Change\+Joint\+Velocity\+Limits\+Command\+::\+Ptr}} =  std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classtesseract__environment_1_1ChangeJointVelocityLimitsCommand}{Change\+Joint\+Velocity\+Limits\+Command}}$>$}
+
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
@@ -48,6 +71,17 @@ std\+::unordered\+\_\+map$<$ std\+::string, double $>$ \mbox{\hyperlink{classtes
 \doxysubsubsection{\texorpdfstring{ChangeJointVelocityLimitsCommand()}{ChangeJointVelocityLimitsCommand()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily tesseract\+\_\+environment\+::\+Change\+Joint\+Velocity\+Limits\+Command\+::\+Change\+Joint\+Velocity\+Limits\+Command (\begin{DoxyParamCaption}\item[{std\+::string}]{joint\+\_\+name,  }\item[{double}]{limit }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
+
+
+Changes the velocity limits associated with a joint. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em joint\+\_\+name} & Name of the joint to be updated \\
+\hline
+{\em limits} & New velocity limits to be set as the joint limits \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{classtesseract__environment_1_1ChangeJointVelocityLimitsCommand_a64a6d6e84797c895194251416801048d}\label{classtesseract__environment_1_1ChangeJointVelocityLimitsCommand_a64a6d6e84797c895194251416801048d}} 
 \index{tesseract\_environment::ChangeJointVelocityLimitsCommand@{tesseract\_environment::ChangeJointVelocityLimitsCommand}!ChangeJointVelocityLimitsCommand@{ChangeJointVelocityLimitsCommand}}
 \index{ChangeJointVelocityLimitsCommand@{ChangeJointVelocityLimitsCommand}!tesseract\_environment::ChangeJointVelocityLimitsCommand@{tesseract\_environment::ChangeJointVelocityLimitsCommand}}
@@ -56,12 +90,31 @@ std\+::unordered\+\_\+map$<$ std\+::string, double $>$ \mbox{\hyperlink{classtes
 
 
 
+Changes the velocity limits associated with a joint. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em limits} & A map of joint names to new velocity limits \\
+\hline
+\end{DoxyParams}
+
+
 \doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{classtesseract__environment_1_1ChangeJointVelocityLimitsCommand_a661f00d8a24c62caf7f31709bdee235c}\label{classtesseract__environment_1_1ChangeJointVelocityLimitsCommand_a661f00d8a24c62caf7f31709bdee235c}} 
 \index{tesseract\_environment::ChangeJointVelocityLimitsCommand@{tesseract\_environment::ChangeJointVelocityLimitsCommand}!getLimits@{getLimits}}
 \index{getLimits@{getLimits}!tesseract\_environment::ChangeJointVelocityLimitsCommand@{tesseract\_environment::ChangeJointVelocityLimitsCommand}}
 \doxysubsubsection{\texorpdfstring{getLimits()}{getLimits()}}
 {\footnotesize\ttfamily const std\+::unordered\+\_\+map$<$std\+::string, double$>$\& tesseract\+\_\+environment\+::\+Change\+Joint\+Velocity\+Limits\+Command\+::get\+Limits (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classtesseract__environment_1_1ChangeJointVelocityLimitsCommand_a6ce06deaffa7c2a3d0a30f4720ad8718}\label{classtesseract__environment_1_1ChangeJointVelocityLimitsCommand_a6ce06deaffa7c2a3d0a30f4720ad8718}} 
+\index{tesseract\_environment::ChangeJointVelocityLimitsCommand@{tesseract\_environment::ChangeJointVelocityLimitsCommand}!getType@{getType}}
+\index{getType@{getType}!tesseract\_environment::ChangeJointVelocityLimitsCommand@{tesseract\_environment::ChangeJointVelocityLimitsCommand}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacetesseract__environment_afc00c1aecb519acba3afc24dbd367029}{Command\+Type}} tesseract\+\_\+environment\+::\+Change\+Joint\+Velocity\+Limits\+Command\+::get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [final]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classtesseract__environment_1_1Command_ae76293ca1e231a278dcd79c1ec16490f}{tesseract\+\_\+environment\+::\+Command}}.
 
 
 
@@ -76,4 +129,4 @@ std\+::unordered\+\_\+map$<$ std\+::string, double $>$ \mbox{\hyperlink{classtes
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-tesseract/tesseract\+\_\+environment/include/tesseract\+\_\+environment/core/\mbox{\hyperlink{commands_8h}{commands.\+h}}\end{DoxyCompactItemize}
+tesseract\+\_\+environment/include/tesseract\+\_\+environment/commands/\mbox{\hyperlink{change__joint__velocity__limits__command_8h}{change\+\_\+joint\+\_\+velocity\+\_\+limits\+\_\+command.\+h}}\end{DoxyCompactItemize}

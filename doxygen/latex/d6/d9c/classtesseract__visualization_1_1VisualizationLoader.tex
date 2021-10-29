@@ -11,12 +11,22 @@ This is used to dynamically load tesseract visualizer. This class must remain ar
 
 
 
+Inheritance diagram for tesseract\+\_\+visualization\+::Visualization\+Loader\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=211pt]{d2/d9c/classtesseract__visualization_1_1VisualizationLoader__inherit__graph}
+\end{center}
+\end{figure}
+
+
 Collaboration diagram for tesseract\+\_\+visualization\+::Visualization\+Loader\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=291pt]{d8/df2/classtesseract__visualization_1_1VisualizationLoader__coll__graph}
+\includegraphics[width=347pt]{d8/df2/classtesseract__visualization_1_1VisualizationLoader__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsection*{Public Member Functions}
@@ -24,24 +34,9 @@ Collaboration diagram for tesseract\+\_\+visualization\+::Visualization\+Loader\
 \item 
 \mbox{\hyperlink{classtesseract__visualization_1_1VisualizationLoader_a26dfce930ddde86d920d4c0c573eb802}{Visualization\+Loader}} ()
 \begin{DoxyCompactList}\small\item\em This will attempt to load the tesseract\+\_\+ignition visualizer provided by snap package. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classtesseract__visualization_1_1VisualizationLoader_a3b5cf7bdd52fb349fd65dc441d6830eb}{Visualization\+Loader}} (const std\+::string \&library\+\_\+path, const std\+::string \&derived\+\_\+class)
-\begin{DoxyCompactList}\small\item\em Dynamically load a visualization provided. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classtesseract__visualization_1_1Visualization_a61e87b2a04c6f22161fa0be9f808e077}{Visualization\+::\+Ptr}} \mbox{\hyperlink{classtesseract__visualization_1_1VisualizationLoader_a0d284401e6b53e57c4f98b24a708eb8f}{get}} ()
-\begin{DoxyCompactList}\small\item\em Load the visualization. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Protected Member Functions}
-\begin{DoxyCompactItemize}
-\item 
-void \mbox{\hyperlink{classtesseract__visualization_1_1VisualizationLoader_ab6cb78eea060f580687698d2c4ab67ec}{create\+Loader}} (const std\+::string \&library\+\_\+path)
-\end{DoxyCompactItemize}
-\doxysubsection*{Protected Attributes}
-\begin{DoxyCompactItemize}
-\item 
-std\+::string \mbox{\hyperlink{classtesseract__visualization_1_1VisualizationLoader_a73cf734af20a4a2ad98230451a27fd71}{library\+\_\+path\+\_\+}}
-\item 
-std\+::string \mbox{\hyperlink{classtesseract__visualization_1_1VisualizationLoader_a3b6da735db604c637d2d66463a82a4ca}{derived\+\_\+class\+\_\+}}
-\item 
-std\+::shared\+\_\+ptr$<$ class\+\_\+loader\+::\+Class\+Loader $>$ \mbox{\hyperlink{classtesseract__visualization_1_1VisualizationLoader_a16ec3af597221253e4149be2f6ed11d5}{loader\+\_\+}} \{ nullptr \}
-\end{DoxyCompactItemize}
+\mbox{\hyperlink{classtesseract__visualization_1_1Visualization_a61e87b2a04c6f22161fa0be9f808e077}{Visualization\+::\+Ptr}} \mbox{\hyperlink{classtesseract__visualization_1_1VisualizationLoader_ada7802a9941cf575d99945102e127d92}{get}} (std\+::string plugin\+\_\+name=\char`\"{}\char`\"{}) const
+\begin{DoxyCompactList}\small\item\em Load the default visualization plugin. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
 
 
 \doxysubsection{Detailed Description}
@@ -51,69 +46,37 @@ This is used to dynamically load tesseract visualizer. This class must remain ar
 \mbox{\Hypertarget{classtesseract__visualization_1_1VisualizationLoader_a26dfce930ddde86d920d4c0c573eb802}\label{classtesseract__visualization_1_1VisualizationLoader_a26dfce930ddde86d920d4c0c573eb802}} 
 \index{tesseract\_visualization::VisualizationLoader@{tesseract\_visualization::VisualizationLoader}!VisualizationLoader@{VisualizationLoader}}
 \index{VisualizationLoader@{VisualizationLoader}!tesseract\_visualization::VisualizationLoader@{tesseract\_visualization::VisualizationLoader}}
-\doxysubsubsection{\texorpdfstring{VisualizationLoader()}{VisualizationLoader()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+\doxysubsubsection{\texorpdfstring{VisualizationLoader()}{VisualizationLoader()}}
 {\footnotesize\ttfamily tesseract\+\_\+visualization\+::\+Visualization\+Loader\+::\+Visualization\+Loader (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
 This will attempt to load the tesseract\+\_\+ignition visualizer provided by snap package. 
 
-\mbox{\Hypertarget{classtesseract__visualization_1_1VisualizationLoader_a3b5cf7bdd52fb349fd65dc441d6830eb}\label{classtesseract__visualization_1_1VisualizationLoader_a3b5cf7bdd52fb349fd65dc441d6830eb}} 
-\index{tesseract\_visualization::VisualizationLoader@{tesseract\_visualization::VisualizationLoader}!VisualizationLoader@{VisualizationLoader}}
-\index{VisualizationLoader@{VisualizationLoader}!tesseract\_visualization::VisualizationLoader@{tesseract\_visualization::VisualizationLoader}}
-\doxysubsubsection{\texorpdfstring{VisualizationLoader()}{VisualizationLoader()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily tesseract\+\_\+visualization\+::\+Visualization\+Loader\+::\+Visualization\+Loader (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{library\+\_\+path,  }\item[{const std\+::string \&}]{derived\+\_\+class }\end{DoxyParamCaption})}
-
-
-
-Dynamically load a visualization provided. 
-
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{classtesseract__visualization_1_1VisualizationLoader_ab6cb78eea060f580687698d2c4ab67ec}\label{classtesseract__visualization_1_1VisualizationLoader_ab6cb78eea060f580687698d2c4ab67ec}} 
-\index{tesseract\_visualization::VisualizationLoader@{tesseract\_visualization::VisualizationLoader}!createLoader@{createLoader}}
-\index{createLoader@{createLoader}!tesseract\_visualization::VisualizationLoader@{tesseract\_visualization::VisualizationLoader}}
-\doxysubsubsection{\texorpdfstring{createLoader()}{createLoader()}}
-{\footnotesize\ttfamily void tesseract\+\_\+visualization\+::\+Visualization\+Loader\+::create\+Loader (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{library\+\_\+path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
-
-\mbox{\Hypertarget{classtesseract__visualization_1_1VisualizationLoader_a0d284401e6b53e57c4f98b24a708eb8f}\label{classtesseract__visualization_1_1VisualizationLoader_a0d284401e6b53e57c4f98b24a708eb8f}} 
+\mbox{\Hypertarget{classtesseract__visualization_1_1VisualizationLoader_ada7802a9941cf575d99945102e127d92}\label{classtesseract__visualization_1_1VisualizationLoader_ada7802a9941cf575d99945102e127d92}} 
 \index{tesseract\_visualization::VisualizationLoader@{tesseract\_visualization::VisualizationLoader}!get@{get}}
 \index{get@{get}!tesseract\_visualization::VisualizationLoader@{tesseract\_visualization::VisualizationLoader}}
 \doxysubsubsection{\texorpdfstring{get()}{get()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__visualization_1_1Visualization_a61e87b2a04c6f22161fa0be9f808e077}{Visualization\+::\+Ptr}} tesseract\+\_\+visualization\+::\+Visualization\+Loader\+::get (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__visualization_1_1Visualization_a61e87b2a04c6f22161fa0be9f808e077}{Visualization\+::\+Ptr}} tesseract\+\_\+visualization\+::\+Visualization\+Loader\+::get (\begin{DoxyParamCaption}\item[{std\+::string}]{plugin\+\_\+name = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption}) const}
 
 
 
-Load the visualization. 
+Load the default visualization plugin. 
 
+
+\begin{DoxyParams}{Parameters}
+{\em plugin\+\_\+name} & The plugin name, if empty it tries to load default plugin \\
+\hline
+\end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 Returns nullptr if failed 
 \end{DoxyReturn}
 
 
-\doxysubsection{Member Data Documentation}
-\mbox{\Hypertarget{classtesseract__visualization_1_1VisualizationLoader_a3b6da735db604c637d2d66463a82a4ca}\label{classtesseract__visualization_1_1VisualizationLoader_a3b6da735db604c637d2d66463a82a4ca}} 
-\index{tesseract\_visualization::VisualizationLoader@{tesseract\_visualization::VisualizationLoader}!derived\_class\_@{derived\_class\_}}
-\index{derived\_class\_@{derived\_class\_}!tesseract\_visualization::VisualizationLoader@{tesseract\_visualization::VisualizationLoader}}
-\doxysubsubsection{\texorpdfstring{derived\_class\_}{derived\_class\_}}
-{\footnotesize\ttfamily std\+::string tesseract\+\_\+visualization\+::\+Visualization\+Loader\+::derived\+\_\+class\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
-
-\mbox{\Hypertarget{classtesseract__visualization_1_1VisualizationLoader_a73cf734af20a4a2ad98230451a27fd71}\label{classtesseract__visualization_1_1VisualizationLoader_a73cf734af20a4a2ad98230451a27fd71}} 
-\index{tesseract\_visualization::VisualizationLoader@{tesseract\_visualization::VisualizationLoader}!library\_path\_@{library\_path\_}}
-\index{library\_path\_@{library\_path\_}!tesseract\_visualization::VisualizationLoader@{tesseract\_visualization::VisualizationLoader}}
-\doxysubsubsection{\texorpdfstring{library\_path\_}{library\_path\_}}
-{\footnotesize\ttfamily std\+::string tesseract\+\_\+visualization\+::\+Visualization\+Loader\+::library\+\_\+path\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
-
-\mbox{\Hypertarget{classtesseract__visualization_1_1VisualizationLoader_a16ec3af597221253e4149be2f6ed11d5}\label{classtesseract__visualization_1_1VisualizationLoader_a16ec3af597221253e4149be2f6ed11d5}} 
-\index{tesseract\_visualization::VisualizationLoader@{tesseract\_visualization::VisualizationLoader}!loader\_@{loader\_}}
-\index{loader\_@{loader\_}!tesseract\_visualization::VisualizationLoader@{tesseract\_visualization::VisualizationLoader}}
-\doxysubsubsection{\texorpdfstring{loader\_}{loader\_}}
-{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$class\+\_\+loader\+::\+Class\+Loader$>$ tesseract\+\_\+visualization\+::\+Visualization\+Loader\+::loader\+\_\+ \{ nullptr \}\hspace{0.3cm}{\ttfamily [protected]}}
-
-
-
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-tesseract/tesseract\+\_\+visualization/include/tesseract\+\_\+visualization/\mbox{\hyperlink{visualization__loader_8h}{visualization\+\_\+loader.\+h}}\item 
-tesseract/tesseract\+\_\+visualization/src/\mbox{\hyperlink{visualization__loader_8cpp}{visualization\+\_\+loader.\+cpp}}\end{DoxyCompactItemize}
+tesseract\+\_\+visualization/include/tesseract\+\_\+visualization/\mbox{\hyperlink{visualization__loader_8h}{visualization\+\_\+loader.\+h}}\item 
+tesseract\+\_\+visualization/src/\mbox{\hyperlink{visualization__loader_8cpp}{visualization\+\_\+loader.\+cpp}}\end{DoxyCompactItemize}

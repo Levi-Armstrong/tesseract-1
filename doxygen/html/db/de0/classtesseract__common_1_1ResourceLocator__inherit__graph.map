@@ -1,0 +1,7 @@
+<map id="tesseract_common::ResourceLocator" name="tesseract_common::ResourceLocator">
+<area shape="rect" id="node1" title="Abstract class for resource loaders." alt="" coords="240,5,435,47"/>
+<area shape="rect" id="node2" href="$d8/def/classtesseract__common_1_1Resource.html" title="Represents resource data available from a file or url." alt="" coords="135,102,329,129"/>
+<area shape="rect" id="node5" href="$db/dee/classtesseract__common_1_1SimpleResourceLocator.html" title="Resource locator implementation using a provided function to locate file resources." alt="" coords="353,95,532,136"/>
+<area shape="rect" id="node3" href="$d5/dca/classtesseract__common_1_1BytesResource.html" title=" " alt="" coords="5,191,232,218"/>
+<area shape="rect" id="node4" href="$d6/d85/classtesseract__common_1_1SimpleLocatedResource.html" title="Resource implementation for a local file." alt="" coords="256,184,435,225"/>
+</map>

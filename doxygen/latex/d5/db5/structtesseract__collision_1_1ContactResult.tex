@@ -17,47 +17,47 @@ Collaboration diagram for tesseract\+\_\+collision\+::Contact\+Result\+:
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{structtesseract__collision_1_1ContactResult_a6fbca6a69579d96fa698868a3f1e627d}{Contact\+Result}} ()
+\mbox{\hyperlink{structtesseract__collision_1_1ContactResult_ae53147fa92be093d09744e137c1b7006}{Contact\+Result}} ()=default
 \item 
 void \mbox{\hyperlink{structtesseract__collision_1_1ContactResult_a67e11db1a278aeb6fc0e3da3e174d246}{clear}} ()
 \begin{DoxyCompactList}\small\item\em reset to default values \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-EIGEN\+\_\+\+MAKE\+\_\+\+ALIGNED\+\_\+\+OPERATOR\+\_\+\+NEW double \mbox{\hyperlink{structtesseract__collision_1_1ContactResult_a8c773b96dd8883536ed5b55d0633cc16}{distance}}
+EIGEN\+\_\+\+MAKE\+\_\+\+ALIGNED\+\_\+\+OPERATOR\+\_\+\+NEW double \mbox{\hyperlink{structtesseract__collision_1_1ContactResult_a8c773b96dd8883536ed5b55d0633cc16}{distance}} \{ std\+::numeric\+\_\+limits$<$double$>$\+::max() \}
 \begin{DoxyCompactList}\small\item\em The distance between two links. \end{DoxyCompactList}\item 
-std\+::array$<$ int, 2 $>$ \mbox{\hyperlink{structtesseract__collision_1_1ContactResult_afc74246ec6e2322ec6c40b6b785c05fa}{type\+\_\+id}}
+std\+::array$<$ int, 2 $>$ \mbox{\hyperlink{structtesseract__collision_1_1ContactResult_afc74246ec6e2322ec6c40b6b785c05fa}{type\+\_\+id}} \{ 0, 0 \}
 \begin{DoxyCompactList}\small\item\em A user defined type id that is added to the contact shapes. \end{DoxyCompactList}\item 
 std\+::array$<$ std\+::string, 2 $>$ \mbox{\hyperlink{structtesseract__collision_1_1ContactResult_a74d51f58d9ed6a64a50ba1c09da16b8a}{link\+\_\+names}}
 \begin{DoxyCompactList}\small\item\em The two links that are in contact. \end{DoxyCompactList}\item 
-std\+::array$<$ int, 2 $>$ \mbox{\hyperlink{structtesseract__collision_1_1ContactResult_aeb033efd4c805de85130a3b4fa9057ef}{shape\+\_\+id}}
+std\+::array$<$ int, 2 $>$ \mbox{\hyperlink{structtesseract__collision_1_1ContactResult_aeb033efd4c805de85130a3b4fa9057ef}{shape\+\_\+id}} \{ -\/1, -\/1 \}
 \begin{DoxyCompactList}\small\item\em The two shapes that are in contact. Each link can be made up of multiple shapes. \end{DoxyCompactList}\item 
-std\+::array$<$ int, 2 $>$ \mbox{\hyperlink{structtesseract__collision_1_1ContactResult_a97b98b12ec2d284e03b7e29b91f90ac5}{subshape\+\_\+id}}
+std\+::array$<$ int, 2 $>$ \mbox{\hyperlink{structtesseract__collision_1_1ContactResult_a97b98b12ec2d284e03b7e29b91f90ac5}{subshape\+\_\+id}} \{ -\/1, -\/1 \}
 \begin{DoxyCompactList}\small\item\em Some shapes like octomap and mesh have subshape (boxes and triangles) \end{DoxyCompactList}\item 
-std\+::array$<$ Eigen\+::\+Vector3d, 2 $>$ \mbox{\hyperlink{structtesseract__collision_1_1ContactResult_a94258fa13fe82619f38635a89f255d79}{nearest\+\_\+points}}
+std\+::array$<$ Eigen\+::\+Vector3d, 2 $>$ \mbox{\hyperlink{structtesseract__collision_1_1ContactResult_a94258fa13fe82619f38635a89f255d79}{nearest\+\_\+points}} \{ Eigen\+::\+Vector3d\+::\+Zero(), Eigen\+::\+Vector3d\+::\+Zero() \}
 \begin{DoxyCompactList}\small\item\em The nearest point on both links in world coordinates. \end{DoxyCompactList}\item 
-std\+::array$<$ Eigen\+::\+Vector3d, 2 $>$ \mbox{\hyperlink{structtesseract__collision_1_1ContactResult_ac1b348ce75229f4c4abf8bff16a8f2fc}{nearest\+\_\+points\+\_\+local}}
+std\+::array$<$ Eigen\+::\+Vector3d, 2 $>$ \mbox{\hyperlink{structtesseract__collision_1_1ContactResult_ac1b348ce75229f4c4abf8bff16a8f2fc}{nearest\+\_\+points\+\_\+local}} \{ Eigen\+::\+Vector3d\+::\+Zero(), Eigen\+::\+Vector3d\+::\+Zero() \}
 \begin{DoxyCompactList}\small\item\em The nearest point on both links in local(link) coordinates. \end{DoxyCompactList}\item 
-std\+::array$<$ Eigen\+::\+Isometry3d, 2 $>$ \mbox{\hyperlink{structtesseract__collision_1_1ContactResult_a8e6635a73aa5e102d1b1ed93c7e6bb02}{transform}}
+std\+::array$<$ Eigen\+::\+Isometry3d, 2 $>$ \mbox{\hyperlink{structtesseract__collision_1_1ContactResult_a8e6635a73aa5e102d1b1ed93c7e6bb02}{transform}} \{ Eigen\+::\+Isometry3d\+::\+Identity(), Eigen\+::\+Isometry3d\+::\+Identity() \}
 \begin{DoxyCompactList}\small\item\em The transform of link in world coordinates. \end{DoxyCompactList}\item 
-Eigen\+::\+Vector3d \mbox{\hyperlink{structtesseract__collision_1_1ContactResult_a5601eaa7ac60c9c7d4515976e6eb0a76}{normal}}
+Eigen\+::\+Vector3d \mbox{\hyperlink{structtesseract__collision_1_1ContactResult_a5601eaa7ac60c9c7d4515976e6eb0a76}{normal}} \{ Eigen\+::\+Vector3d\+::\+Zero() \}
 \begin{DoxyCompactList}\small\item\em The normal vector to move the two objects out of contact in world coordinates. \end{DoxyCompactList}\item 
-std\+::array$<$ double, 2 $>$ \mbox{\hyperlink{structtesseract__collision_1_1ContactResult_ab9c739029a29b7655eb32e15b9cc3482}{cc\+\_\+time}}
+std\+::array$<$ double, 2 $>$ \mbox{\hyperlink{structtesseract__collision_1_1ContactResult_ab9c739029a29b7655eb32e15b9cc3482}{cc\+\_\+time}} \{ -\/1, -\/1 \}
 \begin{DoxyCompactList}\small\item\em This is between 0 and 1 indicating the point of contact. \end{DoxyCompactList}\item 
 std\+::array$<$ \mbox{\hyperlink{namespacetesseract__collision_a267c740fd3b446222ba19cbaa56dab5e}{Continuous\+Collision\+Type}}, 2 $>$ \mbox{\hyperlink{structtesseract__collision_1_1ContactResult_aeb4f5be24b1796ca5ed4fef9290112b6}{cc\+\_\+type}}
 \begin{DoxyCompactList}\small\item\em The type of continuous contact. \end{DoxyCompactList}\item 
-std\+::array$<$ Eigen\+::\+Isometry3d, 2 $>$ \mbox{\hyperlink{structtesseract__collision_1_1ContactResult_aa2447eb6d6186c1862620025516df60d}{cc\+\_\+transform}}
+std\+::array$<$ Eigen\+::\+Isometry3d, 2 $>$ \mbox{\hyperlink{structtesseract__collision_1_1ContactResult_aa2447eb6d6186c1862620025516df60d}{cc\+\_\+transform}} \{ Eigen\+::\+Isometry3d\+::\+Identity(), Eigen\+::\+Isometry3d\+::\+Identity() \}
 \begin{DoxyCompactList}\small\item\em The transform of link in world coordinates at its desired final location. Note\+: This is not the location of the link at the point of contact but the final location the link when performing continuous collision checking. If you desire the location of contact use cc\+\_\+time and interpolate between transform and cc\+\_\+transform;. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{structtesseract__collision_1_1ContactResult_a7ac9dac97afab192b7e05bde26f3796f}{single\+\_\+contact\+\_\+point}} = false
+bool \mbox{\hyperlink{structtesseract__collision_1_1ContactResult_a7ac9dac97afab192b7e05bde26f3796f}{single\+\_\+contact\+\_\+point}} \{ false \}
 \begin{DoxyCompactList}\small\item\em Some collision checkers only provide a single contact point for a given pair. This is used to indicate if only one contact point is provided which means nearest\+\_\+points\mbox{[}0\mbox{]} must equal nearest\+\_\+points\mbox{[}1\mbox{]}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{structtesseract__collision_1_1ContactResult_a6fbca6a69579d96fa698868a3f1e627d}\label{structtesseract__collision_1_1ContactResult_a6fbca6a69579d96fa698868a3f1e627d}} 
+\mbox{\Hypertarget{structtesseract__collision_1_1ContactResult_ae53147fa92be093d09744e137c1b7006}\label{structtesseract__collision_1_1ContactResult_ae53147fa92be093d09744e137c1b7006}} 
 \index{tesseract\_collision::ContactResult@{tesseract\_collision::ContactResult}!ContactResult@{ContactResult}}
 \index{ContactResult@{ContactResult}!tesseract\_collision::ContactResult@{tesseract\_collision::ContactResult}}
 \doxysubsubsection{\texorpdfstring{ContactResult()}{ContactResult()}}
-{\footnotesize\ttfamily tesseract\+\_\+collision\+::\+Contact\+Result\+::\+Contact\+Result (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily tesseract\+\_\+collision\+::\+Contact\+Result\+::\+Contact\+Result (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
 
 
 
@@ -66,7 +66,7 @@ bool \mbox{\hyperlink{structtesseract__collision_1_1ContactResult_a7ac9dac97afab
 \index{tesseract\_collision::ContactResult@{tesseract\_collision::ContactResult}!clear@{clear}}
 \index{clear@{clear}!tesseract\_collision::ContactResult@{tesseract\_collision::ContactResult}}
 \doxysubsubsection{\texorpdfstring{clear()}{clear()}}
-{\footnotesize\ttfamily void tesseract\+\_\+collision\+::\+Contact\+Result\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily void tesseract\+\_\+collision\+::\+Contact\+Result\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
@@ -79,7 +79,7 @@ reset to default values
 \index{tesseract\_collision::ContactResult@{tesseract\_collision::ContactResult}!cc\_time@{cc\_time}}
 \index{cc\_time@{cc\_time}!tesseract\_collision::ContactResult@{tesseract\_collision::ContactResult}}
 \doxysubsubsection{\texorpdfstring{cc\_time}{cc\_time}}
-{\footnotesize\ttfamily std\+::array$<$double, 2$>$ tesseract\+\_\+collision\+::\+Contact\+Result\+::cc\+\_\+time}
+{\footnotesize\ttfamily std\+::array$<$double, 2$>$ tesseract\+\_\+collision\+::\+Contact\+Result\+::cc\+\_\+time \{ -\/1, -\/1 \}}
 
 
 
@@ -89,7 +89,7 @@ This is between 0 and 1 indicating the point of contact.
 \index{tesseract\_collision::ContactResult@{tesseract\_collision::ContactResult}!cc\_transform@{cc\_transform}}
 \index{cc\_transform@{cc\_transform}!tesseract\_collision::ContactResult@{tesseract\_collision::ContactResult}}
 \doxysubsubsection{\texorpdfstring{cc\_transform}{cc\_transform}}
-{\footnotesize\ttfamily std\+::array$<$Eigen\+::\+Isometry3d, 2$>$ tesseract\+\_\+collision\+::\+Contact\+Result\+::cc\+\_\+transform}
+{\footnotesize\ttfamily std\+::array$<$Eigen\+::\+Isometry3d, 2$>$ tesseract\+\_\+collision\+::\+Contact\+Result\+::cc\+\_\+transform \{ Eigen\+::\+Isometry3d\+::\+Identity(), Eigen\+::\+Isometry3d\+::\+Identity() \}}
 
 
 
@@ -101,6 +101,12 @@ The transform of link in world coordinates at its desired final location. Note\+
 \doxysubsubsection{\texorpdfstring{cc\_type}{cc\_type}}
 {\footnotesize\ttfamily std\+::array$<$\mbox{\hyperlink{namespacetesseract__collision_a267c740fd3b446222ba19cbaa56dab5e}{Continuous\+Collision\+Type}}, 2$>$ tesseract\+\_\+collision\+::\+Contact\+Result\+::cc\+\_\+type}
 
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{ \mbox{\hyperlink{namespacetesseract__collision_a267c740fd3b446222ba19cbaa56dab5ea79e497b3f5d3d8b23ea29c9370354bb6}{ContinuousCollisionType::CCType\_None}},}
+\DoxyCodeLine{                                                  \mbox{\hyperlink{namespacetesseract__collision_a267c740fd3b446222ba19cbaa56dab5ea79e497b3f5d3d8b23ea29c9370354bb6}{ContinuousCollisionType::CCType\_None}} \}}
+
+\end{DoxyCode}
 
 
 The type of continuous contact. 
@@ -109,7 +115,7 @@ The type of continuous contact.
 \index{tesseract\_collision::ContactResult@{tesseract\_collision::ContactResult}!distance@{distance}}
 \index{distance@{distance}!tesseract\_collision::ContactResult@{tesseract\_collision::ContactResult}}
 \doxysubsubsection{\texorpdfstring{distance}{distance}}
-{\footnotesize\ttfamily EIGEN\+\_\+\+MAKE\+\_\+\+ALIGNED\+\_\+\+OPERATOR\+\_\+\+NEW double tesseract\+\_\+collision\+::\+Contact\+Result\+::distance}
+{\footnotesize\ttfamily EIGEN\+\_\+\+MAKE\+\_\+\+ALIGNED\+\_\+\+OPERATOR\+\_\+\+NEW double tesseract\+\_\+collision\+::\+Contact\+Result\+::distance \{ std\+::numeric\+\_\+limits$<$double$>$\+::max() \}}
 
 
 
@@ -129,7 +135,7 @@ The two links that are in contact.
 \index{tesseract\_collision::ContactResult@{tesseract\_collision::ContactResult}!nearest\_points@{nearest\_points}}
 \index{nearest\_points@{nearest\_points}!tesseract\_collision::ContactResult@{tesseract\_collision::ContactResult}}
 \doxysubsubsection{\texorpdfstring{nearest\_points}{nearest\_points}}
-{\footnotesize\ttfamily std\+::array$<$Eigen\+::\+Vector3d, 2$>$ tesseract\+\_\+collision\+::\+Contact\+Result\+::nearest\+\_\+points}
+{\footnotesize\ttfamily std\+::array$<$Eigen\+::\+Vector3d, 2$>$ tesseract\+\_\+collision\+::\+Contact\+Result\+::nearest\+\_\+points \{ Eigen\+::\+Vector3d\+::\+Zero(), Eigen\+::\+Vector3d\+::\+Zero() \}}
 
 
 
@@ -139,7 +145,7 @@ The nearest point on both links in world coordinates.
 \index{tesseract\_collision::ContactResult@{tesseract\_collision::ContactResult}!nearest\_points\_local@{nearest\_points\_local}}
 \index{nearest\_points\_local@{nearest\_points\_local}!tesseract\_collision::ContactResult@{tesseract\_collision::ContactResult}}
 \doxysubsubsection{\texorpdfstring{nearest\_points\_local}{nearest\_points\_local}}
-{\footnotesize\ttfamily std\+::array$<$Eigen\+::\+Vector3d, 2$>$ tesseract\+\_\+collision\+::\+Contact\+Result\+::nearest\+\_\+points\+\_\+local}
+{\footnotesize\ttfamily std\+::array$<$Eigen\+::\+Vector3d, 2$>$ tesseract\+\_\+collision\+::\+Contact\+Result\+::nearest\+\_\+points\+\_\+local \{ Eigen\+::\+Vector3d\+::\+Zero(), Eigen\+::\+Vector3d\+::\+Zero() \}}
 
 
 
@@ -149,7 +155,7 @@ The nearest point on both links in local(link) coordinates.
 \index{tesseract\_collision::ContactResult@{tesseract\_collision::ContactResult}!normal@{normal}}
 \index{normal@{normal}!tesseract\_collision::ContactResult@{tesseract\_collision::ContactResult}}
 \doxysubsubsection{\texorpdfstring{normal}{normal}}
-{\footnotesize\ttfamily Eigen\+::\+Vector3d tesseract\+\_\+collision\+::\+Contact\+Result\+::normal}
+{\footnotesize\ttfamily Eigen\+::\+Vector3d tesseract\+\_\+collision\+::\+Contact\+Result\+::normal \{ Eigen\+::\+Vector3d\+::\+Zero() \}}
 
 
 
@@ -162,7 +168,7 @@ This points from link\+\_\+name\mbox{[}0\mbox{]} to link\+\_\+name\mbox{[}1\mbox
 \index{tesseract\_collision::ContactResult@{tesseract\_collision::ContactResult}!shape\_id@{shape\_id}}
 \index{shape\_id@{shape\_id}!tesseract\_collision::ContactResult@{tesseract\_collision::ContactResult}}
 \doxysubsubsection{\texorpdfstring{shape\_id}{shape\_id}}
-{\footnotesize\ttfamily std\+::array$<$int, 2$>$ tesseract\+\_\+collision\+::\+Contact\+Result\+::shape\+\_\+id}
+{\footnotesize\ttfamily std\+::array$<$int, 2$>$ tesseract\+\_\+collision\+::\+Contact\+Result\+::shape\+\_\+id \{ -\/1, -\/1 \}}
 
 
 
@@ -172,7 +178,7 @@ The two shapes that are in contact. Each link can be made up of multiple shapes.
 \index{tesseract\_collision::ContactResult@{tesseract\_collision::ContactResult}!single\_contact\_point@{single\_contact\_point}}
 \index{single\_contact\_point@{single\_contact\_point}!tesseract\_collision::ContactResult@{tesseract\_collision::ContactResult}}
 \doxysubsubsection{\texorpdfstring{single\_contact\_point}{single\_contact\_point}}
-{\footnotesize\ttfamily bool tesseract\+\_\+collision\+::\+Contact\+Result\+::single\+\_\+contact\+\_\+point = false}
+{\footnotesize\ttfamily bool tesseract\+\_\+collision\+::\+Contact\+Result\+::single\+\_\+contact\+\_\+point \{ false \}}
 
 
 
@@ -182,7 +188,7 @@ Some collision checkers only provide a single contact point for a given pair. Th
 \index{tesseract\_collision::ContactResult@{tesseract\_collision::ContactResult}!subshape\_id@{subshape\_id}}
 \index{subshape\_id@{subshape\_id}!tesseract\_collision::ContactResult@{tesseract\_collision::ContactResult}}
 \doxysubsubsection{\texorpdfstring{subshape\_id}{subshape\_id}}
-{\footnotesize\ttfamily std\+::array$<$int, 2$>$ tesseract\+\_\+collision\+::\+Contact\+Result\+::subshape\+\_\+id}
+{\footnotesize\ttfamily std\+::array$<$int, 2$>$ tesseract\+\_\+collision\+::\+Contact\+Result\+::subshape\+\_\+id \{ -\/1, -\/1 \}}
 
 
 
@@ -192,7 +198,7 @@ Some shapes like octomap and mesh have subshape (boxes and triangles)
 \index{tesseract\_collision::ContactResult@{tesseract\_collision::ContactResult}!transform@{transform}}
 \index{transform@{transform}!tesseract\_collision::ContactResult@{tesseract\_collision::ContactResult}}
 \doxysubsubsection{\texorpdfstring{transform}{transform}}
-{\footnotesize\ttfamily std\+::array$<$Eigen\+::\+Isometry3d, 2$>$ tesseract\+\_\+collision\+::\+Contact\+Result\+::transform}
+{\footnotesize\ttfamily std\+::array$<$Eigen\+::\+Isometry3d, 2$>$ tesseract\+\_\+collision\+::\+Contact\+Result\+::transform \{ Eigen\+::\+Isometry3d\+::\+Identity(), Eigen\+::\+Isometry3d\+::\+Identity() \}}
 
 
 
@@ -202,7 +208,7 @@ The transform of link in world coordinates.
 \index{tesseract\_collision::ContactResult@{tesseract\_collision::ContactResult}!type\_id@{type\_id}}
 \index{type\_id@{type\_id}!tesseract\_collision::ContactResult@{tesseract\_collision::ContactResult}}
 \doxysubsubsection{\texorpdfstring{type\_id}{type\_id}}
-{\footnotesize\ttfamily std\+::array$<$int, 2$>$ tesseract\+\_\+collision\+::\+Contact\+Result\+::type\+\_\+id}
+{\footnotesize\ttfamily std\+::array$<$int, 2$>$ tesseract\+\_\+collision\+::\+Contact\+Result\+::type\+\_\+id \{ 0, 0 \}}
 
 
 
@@ -210,6 +216,7 @@ A user defined type id that is added to the contact shapes.
 
 
 
-The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-tesseract/tesseract\+\_\+collision/include/tesseract\+\_\+collision/core/\mbox{\hyperlink{tesseract__collision_2include_2tesseract__collision_2core_2types_8h}{types.\+h}}\end{DoxyCompactItemize}
+tesseract\+\_\+collision/core/include/tesseract\+\_\+collision/core/\mbox{\hyperlink{tesseract__collision_2core_2include_2tesseract__collision_2core_2types_8h}{types.\+h}}\item 
+tesseract\+\_\+collision/core/src/\mbox{\hyperlink{tesseract__collision_2core_2src_2types_8cpp}{types.\+cpp}}\end{DoxyCompactItemize}

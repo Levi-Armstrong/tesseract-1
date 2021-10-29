@@ -1,0 +1,126 @@
+\hypertarget{serialization_8h}{}\doxysection{tesseract\+\_\+common/include/tesseract\+\_\+common/serialization.h File Reference}
+\label{serialization_8h}\index{tesseract\_common/include/tesseract\_common/serialization.h@{tesseract\_common/include/tesseract\_common/serialization.h}}
+
+
+Additional Boost serialization wrappers.  
+
+
+{\ttfamily \#include $<$tesseract\+\_\+common/macros.\+h$>$}\newline
+{\ttfamily \#include $<$variant$>$}\newline
+{\ttfamily \#include $<$Eigen/\+Dense$>$}\newline
+{\ttfamily \#include $<$boost/serialization/tracking.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/serialization/tracking\+\_\+enum.\+hpp$>$}\newline
+Include dependency graph for serialization.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/d91/serialization_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/dd0/serialization_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespaceboost}{boost}}
+\item 
+ \mbox{\hyperlink{namespaceboost_1_1serialization}{boost\+::serialization}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class Archive $>$ }\\void \mbox{\hyperlink{namespaceboost_1_1serialization_a530b9d6ab7e0038d80a74e7030f750e5}{boost\+::serialization\+::save}} (Archive \&ar, const Eigen\+::\+Vector\+Xd \&g, const unsigned int version)
+\item 
+{\footnotesize template$<$class Archive $>$ }\\void \mbox{\hyperlink{namespaceboost_1_1serialization_a792bfcb1890d3e795dffa17790816d2e}{boost\+::serialization\+::load}} (Archive \&ar, Eigen\+::\+Vector\+Xd \&g, const unsigned int version)
+\item 
+{\footnotesize template$<$class Archive $>$ }\\void \mbox{\hyperlink{namespaceboost_1_1serialization_a2da13e661fc59d6f4e6af326fa4a119d}{boost\+::serialization\+::serialize}} (Archive \&ar, Eigen\+::\+Vector\+Xd \&g, const unsigned int version)
+\item 
+{\footnotesize template$<$class Archive $>$ }\\void \mbox{\hyperlink{namespaceboost_1_1serialization_a070c97bca3f5e369906d91323be197f5}{boost\+::serialization\+::save}} (Archive \&ar, const Eigen\+::\+Isometry3d \&g, const unsigned int version)
+\item 
+{\footnotesize template$<$class Archive $>$ }\\void \mbox{\hyperlink{namespaceboost_1_1serialization_a937c95e720c6f8a627a8598c22799506}{boost\+::serialization\+::load}} (Archive \&ar, Eigen\+::\+Isometry3d \&g, const unsigned int version)
+\item 
+{\footnotesize template$<$class Archive $>$ }\\void \mbox{\hyperlink{namespaceboost_1_1serialization_a4b28ff5af1663c933c8f23f65071e013}{boost\+::serialization\+::serialize}} (Archive \&ar, Eigen\+::\+Isometry3d \&g, const unsigned int version)
+\item 
+{\footnotesize template$<$class Archive $>$ }\\void \mbox{\hyperlink{namespaceboost_1_1serialization_a7ee92ce4c3d6937ac3e020c1866db330}{boost\+::serialization\+::save}} (Archive \&ar, const Eigen\+::\+Matrix\+X2d \&g, const unsigned int version)
+\item 
+{\footnotesize template$<$class Archive $>$ }\\void \mbox{\hyperlink{namespaceboost_1_1serialization_a594198c2e90f0a9eef3a1b3ca33f939f}{boost\+::serialization\+::load}} (Archive \&ar, Eigen\+::\+Matrix\+X2d \&g, const unsigned int version)
+\item 
+{\footnotesize template$<$class Archive $>$ }\\void \mbox{\hyperlink{namespaceboost_1_1serialization_acc2c87e6f21f9f87a5ef38ef10d38d8d}{boost\+::serialization\+::serialize}} (Archive \&ar, Eigen\+::\+Matrix\+X2d \&g, const unsigned int version)
+\item 
+{\footnotesize template$<$class Archive $>$ }\\void \mbox{\hyperlink{namespaceboost_1_1serialization_a5cedb22a9f3074c8826d852064662178}{boost\+::serialization\+::save}} (Archive \&ar, const std\+::variant$<$ std\+::string, Eigen\+::\+Isometry3d $>$ \&g, const unsigned int version)
+\item 
+{\footnotesize template$<$class Archive $>$ }\\void \mbox{\hyperlink{namespaceboost_1_1serialization_a70b58a18bac429a856c7f6e7bcb527f7}{boost\+::serialization\+::load}} (Archive \&ar, std\+::variant$<$ std\+::string, Eigen\+::\+Isometry3d $>$ \&g, const unsigned int version)
+\item 
+{\footnotesize template$<$class Archive $>$ }\\void \mbox{\hyperlink{namespaceboost_1_1serialization_a101eccbce7d00cf44575ef3e5e43e745}{boost\+::serialization\+::serialize}} (Archive \&ar, std\+::variant$<$ std\+::string, Eigen\+::\+Isometry3d $>$ \&g, const unsigned int version)
+\item 
+\mbox{\hyperlink{serialization_8h_a6ce327d54a408162d753adb9cc40e1cd}{BOOST\+\_\+\+CLASS\+\_\+\+TRACKING}} (Eigen\+::\+Vector\+Xd, boost\+::serialization\+::track\+\_\+never)
+\item 
+\mbox{\hyperlink{serialization_8h_aa77c59b509467002de669b90fb0205c7}{BOOST\+\_\+\+CLASS\+\_\+\+TRACKING}} (Eigen\+::\+Isometry3d, boost\+::serialization\+::track\+\_\+never)
+\item 
+\mbox{\hyperlink{serialization_8h_a559057f9634644f20b297c7b2165d95b}{BOOST\+\_\+\+CLASS\+\_\+\+TRACKING}} (Eigen\+::\+Matrix\+X2d, boost\+::serialization\+::track\+\_\+never)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Additional Boost serialization wrappers. 
+
+Supports the following
+\begin{DoxyItemize}
+\item Eigen\+::\+Vector\+Xd
+\item Eigen\+::\+Isometry3d
+\item Eigen\+::\+Matrix\+X2d
+\end{DoxyItemize}
+
+\begin{DoxyAuthor}{Author}
+Levi Armstrong 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+February 21, 2021 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+TODO 
+\end{DoxyVersion}
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000050}{Bug}}]No known bugs\end{DoxyRefDesc}
+
+
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2021, Southwest Research Institute
+\end{DoxyCopyright}
+\begin{DoxyParagraph}{License}
+Software License Agreement (Apache License) 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+Licensed under the Apache License, Version 2.\+0 (the \char`\"{}\+License\char`\"{}); you may not use this file except in compliance with the License. You may obtain a copy of the License at \href{http://www.apache.org/licenses/LICENSE-2.0}{\texttt{ http\+://www.\+apache.\+org/licenses/\+LICENSE-\/2.\+0}} 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \char`\"{}\+AS IS\char`\"{} BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. 
+\end{DoxyParagraph}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{serialization_8h_aa77c59b509467002de669b90fb0205c7}\label{serialization_8h_aa77c59b509467002de669b90fb0205c7}} 
+\index{serialization.h@{serialization.h}!BOOST\_CLASS\_TRACKING@{BOOST\_CLASS\_TRACKING}}
+\index{BOOST\_CLASS\_TRACKING@{BOOST\_CLASS\_TRACKING}!serialization.h@{serialization.h}}
+\doxysubsubsection{\texorpdfstring{BOOST\_CLASS\_TRACKING()}{BOOST\_CLASS\_TRACKING()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily BOOST\+\_\+\+CLASS\+\_\+\+TRACKING (\begin{DoxyParamCaption}\item[{Eigen\+::\+Isometry3d}]{,  }\item[{boost\+::serialization\+::track\+\_\+never}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{serialization_8h_a559057f9634644f20b297c7b2165d95b}\label{serialization_8h_a559057f9634644f20b297c7b2165d95b}} 
+\index{serialization.h@{serialization.h}!BOOST\_CLASS\_TRACKING@{BOOST\_CLASS\_TRACKING}}
+\index{BOOST\_CLASS\_TRACKING@{BOOST\_CLASS\_TRACKING}!serialization.h@{serialization.h}}
+\doxysubsubsection{\texorpdfstring{BOOST\_CLASS\_TRACKING()}{BOOST\_CLASS\_TRACKING()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily BOOST\+\_\+\+CLASS\+\_\+\+TRACKING (\begin{DoxyParamCaption}\item[{Eigen\+::\+Matrix\+X2d}]{,  }\item[{boost\+::serialization\+::track\+\_\+never}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{serialization_8h_a6ce327d54a408162d753adb9cc40e1cd}\label{serialization_8h_a6ce327d54a408162d753adb9cc40e1cd}} 
+\index{serialization.h@{serialization.h}!BOOST\_CLASS\_TRACKING@{BOOST\_CLASS\_TRACKING}}
+\index{BOOST\_CLASS\_TRACKING@{BOOST\_CLASS\_TRACKING}!serialization.h@{serialization.h}}
+\doxysubsubsection{\texorpdfstring{BOOST\_CLASS\_TRACKING()}{BOOST\_CLASS\_TRACKING()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily BOOST\+\_\+\+CLASS\+\_\+\+TRACKING (\begin{DoxyParamCaption}\item[{Eigen\+::\+Vector\+Xd}]{,  }\item[{boost\+::serialization\+::track\+\_\+never}]{ }\end{DoxyParamCaption})}
+

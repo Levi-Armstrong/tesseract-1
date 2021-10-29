@@ -26,7 +26,7 @@ Collaboration diagram for tesseract\+\_\+visualization\+::Tesseract\+Ignition\+V
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{da/dda/classtesseract__visualization_1_1TesseractIgnitionVisualization__coll__graph}
+\includegraphics[width=344pt]{da/dda/classtesseract__visualization_1_1TesseractIgnitionVisualization__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsection*{Public Types}
@@ -41,43 +41,31 @@ using \mbox{\hyperlink{classtesseract__visualization_1_1TesseractIgnitionVisuali
 \item 
 \mbox{\hyperlink{classtesseract__visualization_1_1TesseractIgnitionVisualization_ad0e7462acca275ad08e248416dcc7ce6}{Tesseract\+Ignition\+Visualization}} ()
 \item 
-bool \mbox{\hyperlink{classtesseract__visualization_1_1TesseractIgnitionVisualization_affb054b614ac1b4db32db8a34a33efd3}{init}} (\mbox{\hyperlink{classtesseract__environment_1_1Environment_a9d9ecedaebeea1d7ba45be7670fbcd77}{tesseract\+\_\+environment\+::\+Environment\+::\+Const\+Ptr}} env) override
-\begin{DoxyCompactList}\small\item\em Initialize the visualization tool. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classtesseract__visualization_1_1TesseractIgnitionVisualization_a5477b39aae89c55ce30c935378380797}{plot\+Environment}} (\mbox{\hyperlink{classtesseract__environment_1_1Environment_a9d9ecedaebeea1d7ba45be7670fbcd77}{tesseract\+\_\+environment\+::\+Environment\+::\+Const\+Ptr}} env=nullptr) override
-\begin{DoxyCompactList}\small\item\em Plot environment. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classtesseract__visualization_1_1TesseractIgnitionVisualization_a58ac0e19e5ab422aeb8b43c8fde8b7c3}{plot\+Environment\+State}} (\mbox{\hyperlink{structtesseract__environment_1_1EnvState_a670d57a48a695feea60020c81320a851}{tesseract\+\_\+environment\+::\+Env\+State\+::\+Const\+Ptr}} state=nullptr) override
-\begin{DoxyCompactList}\small\item\em Plot state of the environment. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classtesseract__visualization_1_1TesseractIgnitionVisualization_ad5c5d4b09d697a5fbdb91e149c43de67}{is\+Connected}} () const override
 \begin{DoxyCompactList}\small\item\em Some plotters may require connecting to external software. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classtesseract__visualization_1_1TesseractIgnitionVisualization_ac29a84474808de55d45de535dcbe041c}{wait\+For\+Connection}} (long seconds=0) const override
 \begin{DoxyCompactList}\small\item\em Wait for connection. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classtesseract__visualization_1_1TesseractIgnitionVisualization_afba166909a6f244d592951b41d280833}{plot\+Trajectory}} (const std\+::vector$<$ std\+::string $>$ \&joint\+\_\+names, const Eigen\+::\+Ref$<$ const \mbox{\hyperlink{namespacetesseract__common_a431ff65777ee0bed71e7671390638244}{tesseract\+\_\+common\+::\+Traj\+Array}} $>$ \&traj) override
-\item 
-void \mbox{\hyperlink{classtesseract__visualization_1_1TesseractIgnitionVisualization_a1b3b4ca4ff3956af3cac091f9da5c047}{plot\+Trajectory}} (const \mbox{\hyperlink{structtesseract__common_1_1JointTrajectory}{tesseract\+\_\+common\+::\+Joint\+Trajectory}} \&traj) override
+void \mbox{\hyperlink{classtesseract__visualization_1_1TesseractIgnitionVisualization_a5e441138f67f02204a5bf83295c79c12}{plot\+Environment}} (const \mbox{\hyperlink{classtesseract__environment_1_1Environment}{tesseract\+\_\+environment\+::\+Environment}} \&env, std\+::string ns=\char`\"{}\char`\"{}) override
+\begin{DoxyCompactList}\small\item\em Plot environment. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classtesseract__visualization_1_1TesseractIgnitionVisualization_aa52d42a803d4889a56ad3ac2204db85d}{plot\+Environment\+State}} (const \mbox{\hyperlink{structtesseract__scene__graph_1_1SceneState}{tesseract\+\_\+scene\+\_\+graph\+::\+Scene\+State}} \&state, std\+::string ns=\char`\"{}\char`\"{}) override
+\begin{DoxyCompactList}\small\item\em Plot state of the environment. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classtesseract__visualization_1_1TesseractIgnitionVisualization_a5e9f0af4a2827683be270592a09548e7}{plot\+Trajectory}} (const \mbox{\hyperlink{namespacetesseract__common_a57fa3336d4e5f8655281342a9c94aece}{tesseract\+\_\+common\+::\+Joint\+Trajectory}} \&traj, const \mbox{\hyperlink{classtesseract__scene__graph_1_1StateSolver}{tesseract\+\_\+scene\+\_\+graph\+::\+State\+Solver}} \&state\+\_\+solver, std\+::string ns=\char`\"{}\char`\"{}) override
 \begin{DoxyCompactList}\small\item\em Plot a Joint\+Trajectory. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classtesseract__visualization_1_1TesseractIgnitionVisualization_a5b3d10007469f3c31d0bf3ef025ad2f1}{plot\+Trajectory}} (const \mbox{\hyperlink{classtesseract__planning_1_1Instruction}{tesseract\+\_\+planning\+::\+Instruction}} \&instruction) override
-\begin{DoxyCompactList}\small\item\em Plot trajectory provided in the instruction. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classtesseract__visualization_1_1TesseractIgnitionVisualization_a7dbccfa32859d8088e41f1bec58312c9}{plot\+Tool\+Path}} (const \mbox{\hyperlink{classtesseract__planning_1_1Instruction}{tesseract\+\_\+planning\+::\+Instruction}} \&instruction) override
-\begin{DoxyCompactList}\small\item\em Plot tool path provided in the instruction. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classtesseract__visualization_1_1TesseractIgnitionVisualization_a9a77a3418dd2ecd0394d7713b90d91f3}{plot\+Contact\+Results}} (const std\+::vector$<$ std\+::string $>$ \&link\+\_\+names, const \mbox{\hyperlink{namespacetesseract__collision_a96d77f62b7c26962d1090f0a2f00419b}{tesseract\+\_\+collision\+::\+Contact\+Result\+Vector}} \&dist\+\_\+results, const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector\+Xd $>$ \&safety\+\_\+distances) override
-\begin{DoxyCompactList}\small\item\em Plot the collision results data. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classtesseract__visualization_1_1TesseractIgnitionVisualization_acf6c15021e0eb3ceb5341617eca80f28}{plot\+Arrow}} (const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector3d $>$ \&pt1, const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector3d $>$ \&pt2, const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector4d $>$ \&rgba, double scale) override
-\begin{DoxyCompactList}\small\item\em Plot arrow defined by two points. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classtesseract__visualization_1_1TesseractIgnitionVisualization_aaa7325eb71facdcf2a21137d1ba6ea14}{plot\+Axis}} (const Eigen\+::\+Isometry3d \&axis, double scale) override
-\begin{DoxyCompactList}\small\item\em Plot axis. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classtesseract__visualization_1_1TesseractIgnitionVisualization_a50ba42d59482f27f999cad34c757c5c3}{clear}} () override
-\begin{DoxyCompactList}\small\item\em This is called at the start of the plotting for each iteration to clear previous iteration graphics if neccessary. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classtesseract__visualization_1_1TesseractIgnitionVisualization_ae66bfbf9b951eb8b88aaea7ad2bfcc27}{wait\+For\+Input}} () override
+void \mbox{\hyperlink{classtesseract__visualization_1_1TesseractIgnitionVisualization_acf9edcea77f5b10f49f88192037b9792}{plot\+Marker}} (const \mbox{\hyperlink{classtesseract__visualization_1_1Marker}{Marker}} \&marker, std\+::string ns=\char`\"{}\char`\"{}) override
+\begin{DoxyCompactList}\small\item\em Plot marker. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classtesseract__visualization_1_1TesseractIgnitionVisualization_a7596ac72d3966c4762242f7edb020d15}{plot\+Markers}} (const \mbox{\hyperlink{vhacdRaycastMesh_8cpp_adcf134d50025cc52907d0c8ac798d89d}{std\+::vector}}$<$ \mbox{\hyperlink{classtesseract__visualization_1_1Marker_a3b34b1bd0031dfb6d3404cf1788553a2}{Marker\+::\+Ptr}} $>$ \&markers, std\+::string ns=\char`\"{}\char`\"{}) override
+\begin{DoxyCompactList}\small\item\em Plot a vector of markers under a given namespace. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classtesseract__visualization_1_1TesseractIgnitionVisualization_ad2170dd62762f91e3102a6b22f5cf88f}{clear}} (std\+::string ns=\char`\"{}\char`\"{}) override
+\begin{DoxyCompactList}\small\item\em This is called at the start of the plotting for each iteration to clear previous iteration graphics if necessary. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classtesseract__visualization_1_1TesseractIgnitionVisualization_a681393cb89e53bd0c38727dbc7d06d75}{wait\+For\+Input}} (std\+::string message=\char`\"{}Hit enter key to continue!\char`\"{}) override
 \begin{DoxyCompactList}\small\item\em Pause code and wait for enter key in terminal. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{classtesseract__visualization_1_1TesseractIgnitionVisualization_abe0def99f41504eadad07dbf0f46e3b7}{send\+Env\+State}} (const \mbox{\hyperlink{structtesseract__environment_1_1EnvState_a670d57a48a695feea60020c81320a851}{tesseract\+\_\+environment\+::\+Env\+State\+::\+Const\+Ptr}} \&env\+\_\+state)
+void \mbox{\hyperlink{classtesseract__visualization_1_1TesseractIgnitionVisualization_a607da96fc69edd4f105953a97e2d9dda}{send\+Scene\+State}} (const \mbox{\hyperlink{structtesseract__scene__graph_1_1SceneState}{tesseract\+\_\+scene\+\_\+graph\+::\+Scene\+State}} \&scene\+\_\+state)
 \begin{DoxyCompactList}\small\item\em Helper function for sending state to visualization tool. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
-\item 
-\mbox{\hyperlink{classtesseract__environment_1_1Environment_a9d9ecedaebeea1d7ba45be7670fbcd77}{tesseract\+\_\+environment\+::\+Environment\+::\+Const\+Ptr}} \mbox{\hyperlink{classtesseract__visualization_1_1TesseractIgnitionVisualization_a87802c2925215f2cc2d351ad48d14425}{env\+\_\+}}
 \item 
 ignition\+::transport\+::\+Node \mbox{\hyperlink{classtesseract__visualization_1_1TesseractIgnitionVisualization_a91c0d86c1e869bc1cf4ef83c1e773d4b}{node\+\_\+}}
 \item 
@@ -119,41 +107,19 @@ The Tesseract Ignition Vizualization class.
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{classtesseract__visualization_1_1TesseractIgnitionVisualization_a50ba42d59482f27f999cad34c757c5c3}\label{classtesseract__visualization_1_1TesseractIgnitionVisualization_a50ba42d59482f27f999cad34c757c5c3}} 
+\mbox{\Hypertarget{classtesseract__visualization_1_1TesseractIgnitionVisualization_ad2170dd62762f91e3102a6b22f5cf88f}\label{classtesseract__visualization_1_1TesseractIgnitionVisualization_ad2170dd62762f91e3102a6b22f5cf88f}} 
 \index{tesseract\_visualization::TesseractIgnitionVisualization@{tesseract\_visualization::TesseractIgnitionVisualization}!clear@{clear}}
 \index{clear@{clear}!tesseract\_visualization::TesseractIgnitionVisualization@{tesseract\_visualization::TesseractIgnitionVisualization}}
 \doxysubsubsection{\texorpdfstring{clear()}{clear()}}
-{\footnotesize\ttfamily void Tesseract\+Ignition\+Visualization\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily void Tesseract\+Ignition\+Visualization\+::clear (\begin{DoxyParamCaption}\item[{std\+::string}]{ns = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
-This is called at the start of the plotting for each iteration to clear previous iteration graphics if neccessary. 
+This is called at the start of the plotting for each iteration to clear previous iteration graphics if necessary. 
 
 
 
-Implements \mbox{\hyperlink{classtesseract__visualization_1_1Visualization_a3df0b2c1a16f0ab3936846fd2e221ffc}{tesseract\+\_\+visualization\+::\+Visualization}}.
-
-\mbox{\Hypertarget{classtesseract__visualization_1_1TesseractIgnitionVisualization_affb054b614ac1b4db32db8a34a33efd3}\label{classtesseract__visualization_1_1TesseractIgnitionVisualization_affb054b614ac1b4db32db8a34a33efd3}} 
-\index{tesseract\_visualization::TesseractIgnitionVisualization@{tesseract\_visualization::TesseractIgnitionVisualization}!init@{init}}
-\index{init@{init}!tesseract\_visualization::TesseractIgnitionVisualization@{tesseract\_visualization::TesseractIgnitionVisualization}}
-\doxysubsubsection{\texorpdfstring{init()}{init()}}
-{\footnotesize\ttfamily bool Tesseract\+Ignition\+Visualization\+::init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtesseract__environment_1_1Environment_a9d9ecedaebeea1d7ba45be7670fbcd77}{tesseract\+\_\+environment\+::\+Environment\+::\+Const\+Ptr}}}]{env }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
-
-
-
-Initialize the visualization tool. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em env} & The environment object \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-True if successful, otherwise false 
-\end{DoxyReturn}
-
-
-Implements \mbox{\hyperlink{classtesseract__visualization_1_1Visualization_ae5ce85c738d72558bda7d4f5db581d04}{tesseract\+\_\+visualization\+::\+Visualization}}.
+Implements \mbox{\hyperlink{classtesseract__visualization_1_1Visualization_a78acc6273025d7a847c28045d80b064b}{tesseract\+\_\+visualization\+::\+Visualization}}.
 
 \mbox{\Hypertarget{classtesseract__visualization_1_1TesseractIgnitionVisualization_ad5c5d4b09d697a5fbdb91e149c43de67}\label{classtesseract__visualization_1_1TesseractIgnitionVisualization_ad5c5d4b09d697a5fbdb91e149c43de67}} 
 \index{tesseract\_visualization::TesseractIgnitionVisualization@{tesseract\_visualization::TesseractIgnitionVisualization}!isConnected@{isConnected}}
@@ -172,80 +138,11 @@ True if connected, otherwise false
 
 Implements \mbox{\hyperlink{classtesseract__visualization_1_1Visualization_ab87b08f586264357bf246f532a719d53}{tesseract\+\_\+visualization\+::\+Visualization}}.
 
-\mbox{\Hypertarget{classtesseract__visualization_1_1TesseractIgnitionVisualization_acf6c15021e0eb3ceb5341617eca80f28}\label{classtesseract__visualization_1_1TesseractIgnitionVisualization_acf6c15021e0eb3ceb5341617eca80f28}} 
-\index{tesseract\_visualization::TesseractIgnitionVisualization@{tesseract\_visualization::TesseractIgnitionVisualization}!plotArrow@{plotArrow}}
-\index{plotArrow@{plotArrow}!tesseract\_visualization::TesseractIgnitionVisualization@{tesseract\_visualization::TesseractIgnitionVisualization}}
-\doxysubsubsection{\texorpdfstring{plotArrow()}{plotArrow()}}
-{\footnotesize\ttfamily void Tesseract\+Ignition\+Visualization\+::plot\+Arrow (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector3d $>$ \&}]{pt1,  }\item[{const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector3d $>$ \&}]{pt2,  }\item[{const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector4d $>$ \&}]{rgba,  }\item[{double}]{scale }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
-
-
-
-Plot arrow defined by two points. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em pt1} & Start position of the arrow \\
-\hline
-{\em pt2} & Final position of the arrow \\
-\hline
-{\em rgba} & Color of the arrow \\
-\hline
-{\em scale} & The size of the arrow (related to diameter) \\
-\hline
-\end{DoxyParams}
-
-
-Implements \mbox{\hyperlink{classtesseract__visualization_1_1Visualization_a42153345a684e7dfc181c78ce59cc3ef}{tesseract\+\_\+visualization\+::\+Visualization}}.
-
-\mbox{\Hypertarget{classtesseract__visualization_1_1TesseractIgnitionVisualization_aaa7325eb71facdcf2a21137d1ba6ea14}\label{classtesseract__visualization_1_1TesseractIgnitionVisualization_aaa7325eb71facdcf2a21137d1ba6ea14}} 
-\index{tesseract\_visualization::TesseractIgnitionVisualization@{tesseract\_visualization::TesseractIgnitionVisualization}!plotAxis@{plotAxis}}
-\index{plotAxis@{plotAxis}!tesseract\_visualization::TesseractIgnitionVisualization@{tesseract\_visualization::TesseractIgnitionVisualization}}
-\doxysubsubsection{\texorpdfstring{plotAxis()}{plotAxis()}}
-{\footnotesize\ttfamily void Tesseract\+Ignition\+Visualization\+::plot\+Axis (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Isometry3d \&}]{axis,  }\item[{double}]{scale }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
-
-
-
-Plot axis. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em axis} & The axis \\
-\hline
-{\em scale} & The size of the axis \\
-\hline
-\end{DoxyParams}
-
-
-Implements \mbox{\hyperlink{classtesseract__visualization_1_1Visualization_a1ccca7d56a63fca9e850cbd4718554f1}{tesseract\+\_\+visualization\+::\+Visualization}}.
-
-\mbox{\Hypertarget{classtesseract__visualization_1_1TesseractIgnitionVisualization_a9a77a3418dd2ecd0394d7713b90d91f3}\label{classtesseract__visualization_1_1TesseractIgnitionVisualization_a9a77a3418dd2ecd0394d7713b90d91f3}} 
-\index{tesseract\_visualization::TesseractIgnitionVisualization@{tesseract\_visualization::TesseractIgnitionVisualization}!plotContactResults@{plotContactResults}}
-\index{plotContactResults@{plotContactResults}!tesseract\_visualization::TesseractIgnitionVisualization@{tesseract\_visualization::TesseractIgnitionVisualization}}
-\doxysubsubsection{\texorpdfstring{plotContactResults()}{plotContactResults()}}
-{\footnotesize\ttfamily void Tesseract\+Ignition\+Visualization\+::plot\+Contact\+Results (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::string $>$ \&}]{link\+\_\+names,  }\item[{const \mbox{\hyperlink{namespacetesseract__collision_a96d77f62b7c26962d1090f0a2f00419b}{tesseract\+\_\+collision\+::\+Contact\+Result\+Vector}} \&}]{dist\+\_\+results,  }\item[{const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector\+Xd $>$ \&}]{safety\+\_\+distances }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
-
-
-
-Plot the collision results data. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em link\+\_\+names} & List of link names for which to plot data \\
-\hline
-{\em dist\+\_\+results} & The collision results data \\
-\hline
-{\em safety\+\_\+distance} & Vector of safety Distance corresponding to dist\+\_\+results (Must be in the same order and length). \\
-\hline
-\end{DoxyParams}
-
-
-Implements \mbox{\hyperlink{classtesseract__visualization_1_1Visualization_a0ed913e72765135ac4313ac9fa5347ac}{tesseract\+\_\+visualization\+::\+Visualization}}.
-
-\mbox{\Hypertarget{classtesseract__visualization_1_1TesseractIgnitionVisualization_a5477b39aae89c55ce30c935378380797}\label{classtesseract__visualization_1_1TesseractIgnitionVisualization_a5477b39aae89c55ce30c935378380797}} 
+\mbox{\Hypertarget{classtesseract__visualization_1_1TesseractIgnitionVisualization_a5e441138f67f02204a5bf83295c79c12}\label{classtesseract__visualization_1_1TesseractIgnitionVisualization_a5e441138f67f02204a5bf83295c79c12}} 
 \index{tesseract\_visualization::TesseractIgnitionVisualization@{tesseract\_visualization::TesseractIgnitionVisualization}!plotEnvironment@{plotEnvironment}}
 \index{plotEnvironment@{plotEnvironment}!tesseract\_visualization::TesseractIgnitionVisualization@{tesseract\_visualization::TesseractIgnitionVisualization}}
 \doxysubsubsection{\texorpdfstring{plotEnvironment()}{plotEnvironment()}}
-{\footnotesize\ttfamily void Tesseract\+Ignition\+Visualization\+::plot\+Environment (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtesseract__environment_1_1Environment_a9d9ecedaebeea1d7ba45be7670fbcd77}{tesseract\+\_\+environment\+::\+Environment\+::\+Const\+Ptr}}}]{env = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily void Tesseract\+Ignition\+Visualization\+::plot\+Environment (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtesseract__environment_1_1Environment}{tesseract\+\_\+environment\+::\+Environment}} \&}]{env,  }\item[{std\+::string}]{ns = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
@@ -253,18 +150,18 @@ Plot environment.
 
 
 \begin{DoxyParams}{Parameters}
-{\em env} & The environment. If provided a nullptr it should the current environent. \\
+{\em env} & The environment. \\
 \hline
 \end{DoxyParams}
 
 
-Implements \mbox{\hyperlink{classtesseract__visualization_1_1Visualization_a12c62160fa4a552008ef5cfb7f0caec2}{tesseract\+\_\+visualization\+::\+Visualization}}.
+Implements \mbox{\hyperlink{classtesseract__visualization_1_1Visualization_abacd700ccba888aad3ff65dce4a9a9bf}{tesseract\+\_\+visualization\+::\+Visualization}}.
 
-\mbox{\Hypertarget{classtesseract__visualization_1_1TesseractIgnitionVisualization_a58ac0e19e5ab422aeb8b43c8fde8b7c3}\label{classtesseract__visualization_1_1TesseractIgnitionVisualization_a58ac0e19e5ab422aeb8b43c8fde8b7c3}} 
+\mbox{\Hypertarget{classtesseract__visualization_1_1TesseractIgnitionVisualization_aa52d42a803d4889a56ad3ac2204db85d}\label{classtesseract__visualization_1_1TesseractIgnitionVisualization_aa52d42a803d4889a56ad3ac2204db85d}} 
 \index{tesseract\_visualization::TesseractIgnitionVisualization@{tesseract\_visualization::TesseractIgnitionVisualization}!plotEnvironmentState@{plotEnvironmentState}}
 \index{plotEnvironmentState@{plotEnvironmentState}!tesseract\_visualization::TesseractIgnitionVisualization@{tesseract\_visualization::TesseractIgnitionVisualization}}
 \doxysubsubsection{\texorpdfstring{plotEnvironmentState()}{plotEnvironmentState()}}
-{\footnotesize\ttfamily void Tesseract\+Ignition\+Visualization\+::plot\+Environment\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtesseract__environment_1_1EnvState_a670d57a48a695feea60020c81320a851}{tesseract\+\_\+environment\+::\+Env\+State\+::\+Const\+Ptr}}}]{state = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily void Tesseract\+Ignition\+Visualization\+::plot\+Environment\+State (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structtesseract__scene__graph_1_1SceneState}{tesseract\+\_\+scene\+\_\+graph\+::\+Scene\+State}} \&}]{state,  }\item[{std\+::string}]{ns = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
@@ -272,58 +169,60 @@ Plot state of the environment.
 
 
 \begin{DoxyParams}{Parameters}
-{\em state} & The state of the environment. If provided a nullptr it should the current state. \\
+{\em state} & The state of the environment. \\
 \hline
 \end{DoxyParams}
 
 
-Implements \mbox{\hyperlink{classtesseract__visualization_1_1Visualization_a8e13774a0b52ef4f9880ad289eb2af6a}{tesseract\+\_\+visualization\+::\+Visualization}}.
+Implements \mbox{\hyperlink{classtesseract__visualization_1_1Visualization_afcba911c96ab43ff33a733dea96d359e}{tesseract\+\_\+visualization\+::\+Visualization}}.
 
-\mbox{\Hypertarget{classtesseract__visualization_1_1TesseractIgnitionVisualization_a7dbccfa32859d8088e41f1bec58312c9}\label{classtesseract__visualization_1_1TesseractIgnitionVisualization_a7dbccfa32859d8088e41f1bec58312c9}} 
-\index{tesseract\_visualization::TesseractIgnitionVisualization@{tesseract\_visualization::TesseractIgnitionVisualization}!plotToolPath@{plotToolPath}}
-\index{plotToolPath@{plotToolPath}!tesseract\_visualization::TesseractIgnitionVisualization@{tesseract\_visualization::TesseractIgnitionVisualization}}
-\doxysubsubsection{\texorpdfstring{plotToolPath()}{plotToolPath()}}
-{\footnotesize\ttfamily void Tesseract\+Ignition\+Visualization\+::plot\+Tool\+Path (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtesseract__planning_1_1Instruction}{tesseract\+\_\+planning\+::\+Instruction}} \&}]{instruction }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+\mbox{\Hypertarget{classtesseract__visualization_1_1TesseractIgnitionVisualization_acf9edcea77f5b10f49f88192037b9792}\label{classtesseract__visualization_1_1TesseractIgnitionVisualization_acf9edcea77f5b10f49f88192037b9792}} 
+\index{tesseract\_visualization::TesseractIgnitionVisualization@{tesseract\_visualization::TesseractIgnitionVisualization}!plotMarker@{plotMarker}}
+\index{plotMarker@{plotMarker}!tesseract\_visualization::TesseractIgnitionVisualization@{tesseract\_visualization::TesseractIgnitionVisualization}}
+\doxysubsubsection{\texorpdfstring{plotMarker()}{plotMarker()}}
+{\footnotesize\ttfamily void Tesseract\+Ignition\+Visualization\+::plot\+Marker (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtesseract__visualization_1_1Marker}{Marker}} \&}]{marker,  }\item[{std\+::string}]{ns = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
-Plot tool path provided in the instruction. 
-
-This can either be a composite instruction which includes plan/move instructions or a single plan/move instruction.
+Plot marker. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em instruction} & \\
+{\em marker} & The marker to plot \\
+\hline
+{\em ns} & The namespace to plot the object under \\
 \hline
 \end{DoxyParams}
 
 
-Implements \mbox{\hyperlink{classtesseract__visualization_1_1Visualization_ab64ad28670fe61d92c1f9dd812789c1a}{tesseract\+\_\+visualization\+::\+Visualization}}.
+Implements \mbox{\hyperlink{classtesseract__visualization_1_1Visualization_a7d448bef780df504e2b3538d0ecea1c6}{tesseract\+\_\+visualization\+::\+Visualization}}.
 
-\mbox{\Hypertarget{classtesseract__visualization_1_1TesseractIgnitionVisualization_afba166909a6f244d592951b41d280833}\label{classtesseract__visualization_1_1TesseractIgnitionVisualization_afba166909a6f244d592951b41d280833}} 
-\index{tesseract\_visualization::TesseractIgnitionVisualization@{tesseract\_visualization::TesseractIgnitionVisualization}!plotTrajectory@{plotTrajectory}}
-\index{plotTrajectory@{plotTrajectory}!tesseract\_visualization::TesseractIgnitionVisualization@{tesseract\_visualization::TesseractIgnitionVisualization}}
-\doxysubsubsection{\texorpdfstring{plotTrajectory()}{plotTrajectory()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
-{\footnotesize\ttfamily void Tesseract\+Ignition\+Visualization\+::plot\+Trajectory (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::string $>$ \&}]{joint\+\_\+names,  }\item[{const Eigen\+::\+Ref$<$ const \mbox{\hyperlink{namespacetesseract__common_a431ff65777ee0bed71e7671390638244}{tesseract\+\_\+common\+::\+Traj\+Array}} $>$ \&}]{traj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+\mbox{\Hypertarget{classtesseract__visualization_1_1TesseractIgnitionVisualization_a7596ac72d3966c4762242f7edb020d15}\label{classtesseract__visualization_1_1TesseractIgnitionVisualization_a7596ac72d3966c4762242f7edb020d15}} 
+\index{tesseract\_visualization::TesseractIgnitionVisualization@{tesseract\_visualization::TesseractIgnitionVisualization}!plotMarkers@{plotMarkers}}
+\index{plotMarkers@{plotMarkers}!tesseract\_visualization::TesseractIgnitionVisualization@{tesseract\_visualization::TesseractIgnitionVisualization}}
+\doxysubsubsection{\texorpdfstring{plotMarkers()}{plotMarkers()}}
+{\footnotesize\ttfamily void Tesseract\+Ignition\+Visualization\+::plot\+Markers (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{vhacdRaycastMesh_8cpp_adcf134d50025cc52907d0c8ac798d89d}{std\+::vector}}$<$ \mbox{\hyperlink{classtesseract__visualization_1_1Marker_a3b34b1bd0031dfb6d3404cf1788553a2}{Marker\+::\+Ptr}} $>$ \&}]{markers,  }\item[{std\+::string}]{ns = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
-\begin{DoxyRefDesc}{Deprecated}
-\item[\mbox{\hyperlink{deprecated__deprecated000001}{Deprecated}}]Plot a trajectory using joint\+\_\+names and a Traj\+Array \end{DoxyRefDesc}
+
+
+Plot a vector of markers under a given namespace. 
+
 
 \begin{DoxyParams}{Parameters}
-{\em joint\+\_\+names} & Joint Names \\
+{\em markers} & The markers to plot \\
 \hline
-{\em traj} & Rows are timesteps. Columns correspond to joint\+\_\+names \\
+{\em ns} & The namespace to plot the objects under \\
 \hline
 \end{DoxyParams}
 
 
-Implements \mbox{\hyperlink{classtesseract__visualization_1_1Visualization_a046e29ee7c767d892606799f0ee760dc}{tesseract\+\_\+visualization\+::\+Visualization}}.
+Implements \mbox{\hyperlink{classtesseract__visualization_1_1Visualization_aa75e832a291c661973bd01310a08fb92}{tesseract\+\_\+visualization\+::\+Visualization}}.
 
-\mbox{\Hypertarget{classtesseract__visualization_1_1TesseractIgnitionVisualization_a1b3b4ca4ff3956af3cac091f9da5c047}\label{classtesseract__visualization_1_1TesseractIgnitionVisualization_a1b3b4ca4ff3956af3cac091f9da5c047}} 
+\mbox{\Hypertarget{classtesseract__visualization_1_1TesseractIgnitionVisualization_a5e9f0af4a2827683be270592a09548e7}\label{classtesseract__visualization_1_1TesseractIgnitionVisualization_a5e9f0af4a2827683be270592a09548e7}} 
 \index{tesseract\_visualization::TesseractIgnitionVisualization@{tesseract\_visualization::TesseractIgnitionVisualization}!plotTrajectory@{plotTrajectory}}
 \index{plotTrajectory@{plotTrajectory}!tesseract\_visualization::TesseractIgnitionVisualization@{tesseract\_visualization::TesseractIgnitionVisualization}}
-\doxysubsubsection{\texorpdfstring{plotTrajectory()}{plotTrajectory()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
-{\footnotesize\ttfamily void Tesseract\+Ignition\+Visualization\+::plot\+Trajectory (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structtesseract__common_1_1JointTrajectory}{tesseract\+\_\+common\+::\+Joint\+Trajectory}} \&}]{traj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+\doxysubsubsection{\texorpdfstring{plotTrajectory()}{plotTrajectory()}}
+{\footnotesize\ttfamily void Tesseract\+Ignition\+Visualization\+::plot\+Trajectory (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacetesseract__common_a57fa3336d4e5f8655281342a9c94aece}{tesseract\+\_\+common\+::\+Joint\+Trajectory}} \&}]{traj,  }\item[{const \mbox{\hyperlink{classtesseract__scene__graph_1_1StateSolver}{tesseract\+\_\+scene\+\_\+graph\+::\+State\+Solver}} \&}]{state\+\_\+solver,  }\item[{std\+::string}]{ns = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
@@ -331,39 +230,20 @@ Plot a Joint\+Trajectory.
 
 
 \begin{DoxyParams}{Parameters}
+{\em state\+\_\+solver} & The environment \\
+\hline
 {\em trajectory} & Joint\+Trajectory to be plotted \\
 \hline
 \end{DoxyParams}
 
 
-Implements \mbox{\hyperlink{classtesseract__visualization_1_1Visualization_aef97dbd45de01fffebcfac1e069b7e4d}{tesseract\+\_\+visualization\+::\+Visualization}}.
+Implements \mbox{\hyperlink{classtesseract__visualization_1_1Visualization_a0849835bb5b8351edf45dd2e3416af15}{tesseract\+\_\+visualization\+::\+Visualization}}.
 
-\mbox{\Hypertarget{classtesseract__visualization_1_1TesseractIgnitionVisualization_a5b3d10007469f3c31d0bf3ef025ad2f1}\label{classtesseract__visualization_1_1TesseractIgnitionVisualization_a5b3d10007469f3c31d0bf3ef025ad2f1}} 
-\index{tesseract\_visualization::TesseractIgnitionVisualization@{tesseract\_visualization::TesseractIgnitionVisualization}!plotTrajectory@{plotTrajectory}}
-\index{plotTrajectory@{plotTrajectory}!tesseract\_visualization::TesseractIgnitionVisualization@{tesseract\_visualization::TesseractIgnitionVisualization}}
-\doxysubsubsection{\texorpdfstring{plotTrajectory()}{plotTrajectory()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
-{\footnotesize\ttfamily void Tesseract\+Ignition\+Visualization\+::plot\+Trajectory (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtesseract__planning_1_1Instruction}{tesseract\+\_\+planning\+::\+Instruction}} \&}]{instruction }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
-
-
-
-Plot trajectory provided in the instruction. 
-
-This can either be a composite instruction which includes move instructions or a single move instruction.
-
-
-\begin{DoxyParams}{Parameters}
-{\em instruction} & \\
-\hline
-\end{DoxyParams}
-
-
-Implements \mbox{\hyperlink{classtesseract__visualization_1_1Visualization_a4f0b9c26e8d8ea92cd4b76d71da57a9f}{tesseract\+\_\+visualization\+::\+Visualization}}.
-
-\mbox{\Hypertarget{classtesseract__visualization_1_1TesseractIgnitionVisualization_abe0def99f41504eadad07dbf0f46e3b7}\label{classtesseract__visualization_1_1TesseractIgnitionVisualization_abe0def99f41504eadad07dbf0f46e3b7}} 
-\index{tesseract\_visualization::TesseractIgnitionVisualization@{tesseract\_visualization::TesseractIgnitionVisualization}!sendEnvState@{sendEnvState}}
-\index{sendEnvState@{sendEnvState}!tesseract\_visualization::TesseractIgnitionVisualization@{tesseract\_visualization::TesseractIgnitionVisualization}}
-\doxysubsubsection{\texorpdfstring{sendEnvState()}{sendEnvState()}}
-{\footnotesize\ttfamily void Tesseract\+Ignition\+Visualization\+::send\+Env\+State (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structtesseract__environment_1_1EnvState_a670d57a48a695feea60020c81320a851}{tesseract\+\_\+environment\+::\+Env\+State\+::\+Const\+Ptr}} \&}]{env\+\_\+state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+\mbox{\Hypertarget{classtesseract__visualization_1_1TesseractIgnitionVisualization_a607da96fc69edd4f105953a97e2d9dda}\label{classtesseract__visualization_1_1TesseractIgnitionVisualization_a607da96fc69edd4f105953a97e2d9dda}} 
+\index{tesseract\_visualization::TesseractIgnitionVisualization@{tesseract\_visualization::TesseractIgnitionVisualization}!sendSceneState@{sendSceneState}}
+\index{sendSceneState@{sendSceneState}!tesseract\_visualization::TesseractIgnitionVisualization@{tesseract\_visualization::TesseractIgnitionVisualization}}
+\doxysubsubsection{\texorpdfstring{sendSceneState()}{sendSceneState()}}
+{\footnotesize\ttfamily void Tesseract\+Ignition\+Visualization\+::send\+Scene\+State (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structtesseract__scene__graph_1_1SceneState}{tesseract\+\_\+scene\+\_\+graph\+::\+Scene\+State}} \&}]{scene\+\_\+state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
@@ -371,7 +251,7 @@ Helper function for sending state to visualization tool.
 
 
 \begin{DoxyParams}{Parameters}
-{\em env\+\_\+state} & Environment state \\
+{\em scene\+\_\+state} & Environment state \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{classtesseract__visualization_1_1TesseractIgnitionVisualization_ac29a84474808de55d45de535dcbe041c}\label{classtesseract__visualization_1_1TesseractIgnitionVisualization_ac29a84474808de55d45de535dcbe041c}} 
@@ -393,11 +273,11 @@ Wait for connection.
 
 Implements \mbox{\hyperlink{classtesseract__visualization_1_1Visualization_af5bc0d37ffe8ced55c50f7717414d2c6}{tesseract\+\_\+visualization\+::\+Visualization}}.
 
-\mbox{\Hypertarget{classtesseract__visualization_1_1TesseractIgnitionVisualization_ae66bfbf9b951eb8b88aaea7ad2bfcc27}\label{classtesseract__visualization_1_1TesseractIgnitionVisualization_ae66bfbf9b951eb8b88aaea7ad2bfcc27}} 
+\mbox{\Hypertarget{classtesseract__visualization_1_1TesseractIgnitionVisualization_a681393cb89e53bd0c38727dbc7d06d75}\label{classtesseract__visualization_1_1TesseractIgnitionVisualization_a681393cb89e53bd0c38727dbc7d06d75}} 
 \index{tesseract\_visualization::TesseractIgnitionVisualization@{tesseract\_visualization::TesseractIgnitionVisualization}!waitForInput@{waitForInput}}
 \index{waitForInput@{waitForInput}!tesseract\_visualization::TesseractIgnitionVisualization@{tesseract\_visualization::TesseractIgnitionVisualization}}
 \doxysubsubsection{\texorpdfstring{waitForInput()}{waitForInput()}}
-{\footnotesize\ttfamily void Tesseract\+Ignition\+Visualization\+::wait\+For\+Input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily void Tesseract\+Ignition\+Visualization\+::wait\+For\+Input (\begin{DoxyParamCaption}\item[{std\+::string}]{message = {\ttfamily \char`\"{}Hit~enter~key~to~continue!\char`\"{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
@@ -405,7 +285,7 @@ Pause code and wait for enter key in terminal.
 
 
 
-Implements \mbox{\hyperlink{classtesseract__visualization_1_1Visualization_a3c82492636d57cc7b5e85befc787a3ac}{tesseract\+\_\+visualization\+::\+Visualization}}.
+Implements \mbox{\hyperlink{classtesseract__visualization_1_1Visualization_ac56d4388184de9cf6c668c142349569c}{tesseract\+\_\+visualization\+::\+Visualization}}.
 
 
 
@@ -422,13 +302,7 @@ Deletion publisher \mbox{\Hypertarget{classtesseract__visualization_1_1Tesseract
 \doxysubsubsection{\texorpdfstring{entity\_manager\_}{entity\_manager\_}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__visualization_1_1EntityManager}{Entity\+Manager}} tesseract\+\_\+visualization\+::\+Tesseract\+Ignition\+Visualization\+::entity\+\_\+manager\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
 
-\mbox{\Hypertarget{classtesseract__visualization_1_1TesseractIgnitionVisualization_a87802c2925215f2cc2d351ad48d14425}\label{classtesseract__visualization_1_1TesseractIgnitionVisualization_a87802c2925215f2cc2d351ad48d14425}} 
-\index{tesseract\_visualization::TesseractIgnitionVisualization@{tesseract\_visualization::TesseractIgnitionVisualization}!env\_@{env\_}}
-\index{env\_@{env\_}!tesseract\_visualization::TesseractIgnitionVisualization@{tesseract\_visualization::TesseractIgnitionVisualization}}
-\doxysubsubsection{\texorpdfstring{env\_}{env\_}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__environment_1_1Environment_a9d9ecedaebeea1d7ba45be7670fbcd77}{tesseract\+\_\+environment\+::\+Environment\+::\+Const\+Ptr}} tesseract\+\_\+visualization\+::\+Tesseract\+Ignition\+Visualization\+::env\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
-
-Tesseract Environment Object \mbox{\Hypertarget{classtesseract__visualization_1_1TesseractIgnitionVisualization_a91c0d86c1e869bc1cf4ef83c1e773d4b}\label{classtesseract__visualization_1_1TesseractIgnitionVisualization_a91c0d86c1e869bc1cf4ef83c1e773d4b}} 
+\mbox{\Hypertarget{classtesseract__visualization_1_1TesseractIgnitionVisualization_a91c0d86c1e869bc1cf4ef83c1e773d4b}\label{classtesseract__visualization_1_1TesseractIgnitionVisualization_a91c0d86c1e869bc1cf4ef83c1e773d4b}} 
 \index{tesseract\_visualization::TesseractIgnitionVisualization@{tesseract\_visualization::TesseractIgnitionVisualization}!node\_@{node\_}}
 \index{node\_@{node\_}!tesseract\_visualization::TesseractIgnitionVisualization@{tesseract\_visualization::TesseractIgnitionVisualization}}
 \doxysubsubsection{\texorpdfstring{node\_}{node\_}}
@@ -450,5 +324,5 @@ Scene publisher
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-tesseract/tesseract\+\_\+visualization/include/tesseract\+\_\+visualization/ignition/\mbox{\hyperlink{tesseract__ignition__visualization_8h}{tesseract\+\_\+ignition\+\_\+visualization.\+h}}\item 
-tesseract/tesseract\+\_\+visualization/src/ignition/\mbox{\hyperlink{tesseract__ignition__visualization_8cpp}{tesseract\+\_\+ignition\+\_\+visualization.\+cpp}}\end{DoxyCompactItemize}
+tesseract\+\_\+visualization/include/tesseract\+\_\+visualization/ignition/\mbox{\hyperlink{tesseract__ignition__visualization_8h}{tesseract\+\_\+ignition\+\_\+visualization.\+h}}\item 
+tesseract\+\_\+visualization/src/ignition/\mbox{\hyperlink{tesseract__ignition__visualization_8cpp}{tesseract\+\_\+ignition\+\_\+visualization.\+cpp}}\end{DoxyCompactItemize}

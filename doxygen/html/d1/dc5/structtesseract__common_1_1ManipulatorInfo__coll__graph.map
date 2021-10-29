@@ -1,6 +1,5 @@
 <map id="tesseract_common::ManipulatorInfo" name="tesseract_common::ManipulatorInfo">
-<area shape="rect" id="node1" title="Contains information about a robot manipulator." alt="" coords="5,307,233,333"/>
-<area shape="rect" id="node2" href="$d2/dad/classtesseract__common_1_1ToolCenterPoint.html" title="Manipulator Info Tool Center Point Definition." alt="" coords="249,201,451,243"/>
-<area shape="rect" id="node3" title=" " alt="" coords="80,96,159,123"/>
-<area shape="rect" id="node4" title=" " alt="" coords="57,5,181,47"/>
+<area shape="rect" id="node1" title="Contains information about a robot manipulator." alt="" coords="5,229,233,256"/>
+<area shape="rect" id="node2" title=" " alt="" coords="80,96,159,123"/>
+<area shape="rect" id="node3" title=" " alt="" coords="57,5,181,47"/>
 </map>

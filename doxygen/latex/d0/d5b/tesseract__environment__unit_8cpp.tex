@@ -1,19 +1,19 @@
-\hypertarget{tesseract__environment__unit_8cpp}{}\doxysection{tesseract/tesseract\+\_\+environment/test/tesseract\+\_\+environment\+\_\+unit.cpp File Reference}
-\label{tesseract__environment__unit_8cpp}\index{tesseract/tesseract\_environment/test/tesseract\_environment\_unit.cpp@{tesseract/tesseract\_environment/test/tesseract\_environment\_unit.cpp}}
+\hypertarget{tesseract__environment__unit_8cpp}{}\doxysection{tesseract\+\_\+environment/test/tesseract\+\_\+environment\+\_\+unit.cpp File Reference}
+\label{tesseract__environment__unit_8cpp}\index{tesseract\_environment/test/tesseract\_environment\_unit.cpp@{tesseract\_environment/test/tesseract\_environment\_unit.cpp}}
 {\ttfamily \#include $<$tesseract\+\_\+common/macros.\+h$>$}\newline
 {\ttfamily \#include $<$gtest/gtest.\+h$>$}\newline
 {\ttfamily \#include $<$algorithm$>$}\newline
 {\ttfamily \#include $<$vector$>$}\newline
 {\ttfamily \#include $<$tesseract\+\_\+urdf/urdf\+\_\+parser.\+h$>$}\newline
-{\ttfamily \#include $<$tesseract\+\_\+collision/bullet/bullet\+\_\+discrete\+\_\+bvh\+\_\+manager.\+h$>$}\newline
-{\ttfamily \#include $<$tesseract\+\_\+collision/fcl/fcl\+\_\+discrete\+\_\+managers.\+h$>$}\newline
-{\ttfamily \#include $<$tesseract\+\_\+collision/bullet/bullet\+\_\+cast\+\_\+bvh\+\_\+manager.\+h$>$}\newline
-{\ttfamily \#include $<$tesseract\+\_\+scene\+\_\+graph/resource\+\_\+locator.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+geometry/impl/box.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+common/resource\+\_\+locator.\+h$>$}\newline
 {\ttfamily \#include $<$tesseract\+\_\+common/utils.\+h$>$}\newline
-{\ttfamily \#include $<$tesseract\+\_\+environment/core/types.\+h$>$}\newline
-{\ttfamily \#include $<$tesseract\+\_\+environment/kdl/kdl\+\_\+state\+\_\+solver.\+h$>$}\newline
-{\ttfamily \#include $<$tesseract\+\_\+environment/ofkt/ofkt\+\_\+state\+\_\+solver.\+h$>$}\newline
-{\ttfamily \#include $<$tesseract\+\_\+environment/core/environment.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+state\+\_\+solver/kdl/kdl\+\_\+state\+\_\+solver.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+collision/core/discrete\+\_\+contact\+\_\+manager.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+collision/core/continuous\+\_\+contact\+\_\+manager.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+environment/commands.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+environment/environment.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+environment/utils.\+h$>$}\newline
 Include dependency graph for tesseract\+\_\+environment\+\_\+unit.\+cpp\+:
 \nopagebreak
 \begin{figure}[H]
@@ -22,82 +22,166 @@ Include dependency graph for tesseract\+\_\+environment\+\_\+unit.\+cpp\+:
 \includegraphics[width=350pt]{dc/d10/tesseract__environment__unit_8cpp__incl}
 \end{center}
 \end{figure}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{tesseract__environment__unit_8cpp_a3a32177399531ca863fffa708e0675bb}{Environment\+Init\+Type}} \{ \mbox{\hyperlink{tesseract__environment__unit_8cpp_a3a32177399531ca863fffa708e0675bba8eee8e217391199668cbac89472ace53}{OBJECT}}
+, \mbox{\hyperlink{tesseract__environment__unit_8cpp_a3a32177399531ca863fffa708e0675bba63b588d5559f64f89a416e656880b949}{STRING}}
+, \mbox{\hyperlink{tesseract__environment__unit_8cpp_a3a32177399531ca863fffa708e0675bba86e4c917b9ee70e67a68639bd9fcead7}{FILEPATH}}
+ \}
+\end{DoxyCompactItemize}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
 std\+::string \mbox{\hyperlink{tesseract__environment__unit_8cpp_ad43b67aac2fb3de014c67c88f9dc4db9}{locate\+Resource}} (const std\+::string \&url)
 \item 
-\mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph_a4421b8568bd664cf203613a054e1847b}{Scene\+Graph\+::\+Ptr}} \mbox{\hyperlink{tesseract__environment__unit_8cpp_a79c8a4870e1158d996b5c6089d212188}{get\+Scene\+Graph}} ()
+Eigen\+::\+Isometry3d \mbox{\hyperlink{tesseract__environment__unit_8cpp_aa9edb466c8df58e8053326d072ef15a5}{tcp\+Callback}} (const \mbox{\hyperlink{structtesseract__common_1_1ManipulatorInfo}{tesseract\+\_\+common\+::\+Manipulator\+Info}} \&mi)
 \item 
-\mbox{\hyperlink{classtesseract__scene__graph_1_1SRDFModel_aeb01da18b3ee7d6da9593d6e4dd30729}{tesseract\+\_\+scene\+\_\+graph\+::\+SRDFModel\+::\+Ptr}} \mbox{\hyperlink{tesseract__environment__unit_8cpp_a0d920afabbea750b576b7233787611bc}{get\+SRDFModel}} (const \mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph_a4421b8568bd664cf203613a054e1847b}{Scene\+Graph\+::\+Ptr}} \&scene\+\_\+graph)
+\mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph_aacd7acf57071e94cd87fbae62dbaafba}{Scene\+Graph\+::\+UPtr}} \mbox{\hyperlink{tesseract__environment__unit_8cpp_ab1f646b73e8b8753f65d82b9f26e3510}{get\+Scene\+Graph}} ()
 \item 
-{\footnotesize template$<$typename S $>$ }\\\mbox{\hyperlink{classtesseract__environment_1_1Environment_a7f9f24116120df888e99fe015803ffc0}{Environment\+::\+Ptr}} \mbox{\hyperlink{tesseract__environment__unit_8cpp_a305deb9c63b0d99aafc6311a1b12f18b}{get\+Environment}} ()
+\mbox{\hyperlink{classtesseract__srdf_1_1SRDFModel_aa774b8f688b3521f25ea1a6d4e16839c}{SRDFModel\+::\+Ptr}} \mbox{\hyperlink{tesseract__environment__unit_8cpp_aab3daf3bc58287c24ac4be5b9caa8ab8}{get\+SRDFModel}} (const \mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph}{Scene\+Graph}} \&scene\+\_\+graph)
 \item 
-{\footnotesize template$<$typename S $>$ }\\void \mbox{\hyperlink{tesseract__environment__unit_8cpp_a18cf4ef7dcf011bf387c9112f6b1ee30}{run\+Contact\+Manager\+Clone\+Test}} ()
+std\+::string \mbox{\hyperlink{tesseract__environment__unit_8cpp_a0168f81bbe314ef74df419bbe66569ce}{get\+Scene\+Graph\+String}} ()
 \item 
-{\footnotesize template$<$typename S $>$ }\\void \mbox{\hyperlink{tesseract__environment__unit_8cpp_a056073c6879a739115d1badee71e85ba}{run\+Addand\+Remove\+Link\+Test}} ()
+std\+::string \mbox{\hyperlink{tesseract__environment__unit_8cpp_a49f520ba70df39d6682585fb30e23f80}{get\+SRDFModel\+String}} ()
 \item 
-{\footnotesize template$<$typename S $>$ }\\void \mbox{\hyperlink{tesseract__environment__unit_8cpp_ac838aaf16704df1fe3656e8d7ea9df71}{run\+Move\+Linkand\+Joint\+Test}} ()
+\mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph_a4421b8568bd664cf203613a054e1847b}{Scene\+Graph\+::\+Ptr}} \mbox{\hyperlink{tesseract__environment__unit_8cpp_a832944897415b09bd43d59eae7088c54}{get\+Sub\+Scene\+Graph}} ()
 \item 
-{\footnotesize template$<$typename S $>$ }\\void \mbox{\hyperlink{tesseract__environment__unit_8cpp_a3d624cb127f1519baf356d930704f5d5}{run\+Change\+Joint\+Origin\+Test}} ()
+void \mbox{\hyperlink{tesseract__environment__unit_8cpp_aeeadb5cb5db368d6835dfd7bf514c393}{run\+Get\+Link\+Transforms\+Test}} (\mbox{\hyperlink{classtesseract__environment_1_1Environment}{Environment}} \&env)
 \item 
-{\footnotesize template$<$typename S $>$ }\\void \mbox{\hyperlink{tesseract__environment__unit_8cpp_a3e01b9b60be619b89ae6b47efd10657b}{run\+Change\+Joint\+Limits\+Test}} ()
+\mbox{\hyperlink{classtesseract__environment_1_1Environment_a7f9f24116120df888e99fe015803ffc0}{Environment\+::\+Ptr}} \mbox{\hyperlink{tesseract__environment__unit_8cpp_a5aa46320c824270edbeafe6b0356835d}{get\+Environment}} (\mbox{\hyperlink{tesseract__environment__unit_8cpp_a3a32177399531ca863fffa708e0675bb}{Environment\+Init\+Type}} init\+\_\+type=\mbox{\hyperlink{tesseract__environment__unit_8cpp_a3a32177399531ca863fffa708e0675bba8eee8e217391199668cbac89472ace53}{Environment\+Init\+Type\+::\+OBJECT}})
 \item 
-{\footnotesize template$<$typename S $>$ }\\void \mbox{\hyperlink{tesseract__environment__unit_8cpp_aa3ff23322b9f4753f56f938df57cb707}{run\+Current\+State\+Preserved\+When\+Env\+Changes\+Test}} ()
+\mbox{\hyperlink{classtesseract__environment_1_1Environment_a7f9f24116120df888e99fe015803ffc0}{Environment\+::\+Ptr}} \mbox{\hyperlink{tesseract__environment__unit_8cpp_a5e1f644bf499cceaf562d43a97e7c8d7}{get\+Environment\+URDFOnly}} (\mbox{\hyperlink{tesseract__environment__unit_8cpp_a3a32177399531ca863fffa708e0675bb}{Environment\+Init\+Type}} init\+\_\+type)
 \item 
-{\footnotesize template$<$typename S $>$ }\\void \mbox{\hyperlink{tesseract__environment__unit_8cpp_a45adc959a33161618072323f6c7dc730}{run\+Add\+Scene\+Graph\+Test}} ()
+\mbox{\hyperlink{tesseract__environment__unit_8cpp_a11c94e70728367d0d016ac1e64dd31ec}{TEST}} (Tesseract\+Environment\+Unit, Env\+Init\+URDFOnly\+Unit)
 \item 
-{\footnotesize template$<$typename S $>$ }\\void \mbox{\hyperlink{tesseract__environment__unit_8cpp_a7efd38cb7d246fd917d0181cc944ec94}{run\+Apply\+Commands\+Test}} ()
-\item 
-{\footnotesize template$<$typename S $>$ }\\void \mbox{\hyperlink{tesseract__environment__unit_8cpp_a0bf9aef44f4493420bc3914859c57a9b}{run\+Env\+Clone\+Test}} ()
-\item 
-{\footnotesize template$<$typename S $>$ }\\void \mbox{\hyperlink{tesseract__environment__unit_8cpp_a80ceea364f193b545dfca623b698b89a}{run\+Env\+Set\+State\+Test}} ()
-\item 
-{\footnotesize template$<$typename S $>$ }\\void \mbox{\hyperlink{tesseract__environment__unit_8cpp_ad98c277fa0a1db193e5d9bdee29af903}{run\+Env\+Set\+State\+Test2}} ()
+\mbox{\hyperlink{tesseract__environment__unit_8cpp_a448d00b8af6cb7096c4db424e01c1219}{TEST}} (Tesseract\+Environment\+Unit, Env\+Init\+Failures\+Unit)
 \item 
 \mbox{\hyperlink{tesseract__environment__unit_8cpp_a4c53d32b112511dd619bb728f7cf00d6}{TEST}} (Tesseract\+Environment\+Unit, Env\+Clone\+Contact\+Manager\+Unit)
 \item 
+\mbox{\hyperlink{tesseract__environment__unit_8cpp_ab5930f64e7cbfcb77aae6eeadc5c5b13}{TEST}} (Tesseract\+Environment\+Unit, Env\+Add\+And\+Remove\+Allowed\+Collision\+Command\+Unit)
+\item 
 \mbox{\hyperlink{tesseract__environment__unit_8cpp_ac7bda300deadcaea8236c84ec09b949f}{TEST}} (Tesseract\+Environment\+Unit, Env\+Addand\+Remove\+Link)
 \item 
-\mbox{\hyperlink{tesseract__environment__unit_8cpp_a0fd17870a27f4b02fca001eeee6954dd}{TEST}} (Tesseract\+Environment\+Unit, Env\+Move\+Linkand\+Joint)
+\mbox{\hyperlink{tesseract__environment__unit_8cpp_a65b5942ff3c6c80261347bb8518a3316}{TEST}} (Tesseract\+Environment\+Unit, Env\+Add\+Kinematics\+Information\+Command\+Unit)
 \item 
-\mbox{\hyperlink{tesseract__environment__unit_8cpp_ac90ec00a71aef7df02dd7c2f12f38ced}{TEST}} (Tesseract\+Environment\+Unit, Env\+Change\+Joint\+Origin)
+\mbox{\hyperlink{tesseract__environment__unit_8cpp_ab2c1f16a9f35b74069e6a773fac2d4b7}{TEST}} (Tesseract\+Environment\+Unit, Env\+Add\+Scene\+Graph\+Command\+Unit)
 \item 
-\mbox{\hyperlink{tesseract__environment__unit_8cpp_a21c7e23d5f2440e59a7958f8a8ea7942}{TEST}} (Tesseract\+Environment\+Unit, Env\+Change\+Joint\+Limits)
+\mbox{\hyperlink{tesseract__environment__unit_8cpp_a79dcd2f979798d355358bf60b17ca6bd}{TEST}} (Tesseract\+Environment\+Unit, Env\+Change\+Joint\+Limits\+Command\+Unit)
+\item 
+\mbox{\hyperlink{tesseract__environment__unit_8cpp_a6d8c2992f5b3014f9c7cb40d7eb688d4}{TEST}} (Tesseract\+Environment\+Unit, Env\+Change\+Joint\+Origin\+Command\+Unit)
+\item 
+\mbox{\hyperlink{tesseract__environment__unit_8cpp_a7f3ebb27b4f5dd34f06bdf234a3ae638}{TEST}} (Tesseract\+Environment\+Unit, Env\+Change\+Link\+Origin\+Command\+Unit)
+\item 
+\mbox{\hyperlink{tesseract__environment__unit_8cpp_a0885de2a8da955b4bb9b9be73de49350}{TEST}} (Tesseract\+Environment\+Unit, Env\+Change\+Link\+Collision\+Enabled\+Command\+Unit)
+\item 
+\mbox{\hyperlink{tesseract__environment__unit_8cpp_aa8be7c5729a18846a93f15be668f8d93}{TEST}} (Tesseract\+Environment\+Unit, Env\+Change\+Link\+Visibility\+Command\+Unit)
+\item 
+\mbox{\hyperlink{tesseract__environment__unit_8cpp_a48e8ba4aff90b6492e3905dc3d9a2686}{TEST}} (Tesseract\+Environment\+Unit, Env\+Set\+Active\+Continuous\+Contact\+Manager\+Command\+Unit)
+\item 
+\mbox{\hyperlink{tesseract__environment__unit_8cpp_ac000b39be53683eced961b8e905d5050}{TEST}} (Tesseract\+Environment\+Unit, Env\+Set\+Active\+Discrete\+Contact\+Manager\+Command\+Unit)
+\item 
+\mbox{\hyperlink{tesseract__environment__unit_8cpp_ab051f25b040d4e0ef2a74f2615a987cb}{TEST}} (Tesseract\+Environment\+Unit, Env\+Change\+Collision\+Margins\+Command\+Unit)
+\item 
+\mbox{\hyperlink{tesseract__environment__unit_8cpp_ad07ac718b4139f6fede7d84b31019355}{TEST}} (Tesseract\+Environment\+Unit, Env\+Move\+Joint\+Command\+Unit)
+\item 
+\mbox{\hyperlink{tesseract__environment__unit_8cpp_aadadc8f71ef06c64e9554f745416938c}{TEST}} (Tesseract\+Environment\+Unit, Env\+Move\+Link\+Command\+Unit)
 \item 
 \mbox{\hyperlink{tesseract__environment__unit_8cpp_a873d0311d38bb981397aac233d8bf8b3}{TEST}} (Tesseract\+Environment\+Unit, Env\+Current\+State\+Preserved\+When\+Env\+Changes)
 \item 
-\mbox{\hyperlink{tesseract__environment__unit_8cpp_a78d0303c6e6a9a5e590df64a0246a6be}{TEST}} (Tesseract\+Environment\+Unit, Env\+Add\+Scene\+Graph)
+\mbox{\hyperlink{tesseract__environment__unit_8cpp_a30f83c449537b03e8ff03390853ee28e}{TEST}} (Tesseract\+Environment\+Unit, Env\+Reset\+Unit)
 \item 
-\mbox{\hyperlink{tesseract__environment__unit_8cpp_ad23f665a390bc412961efcf81df03d63}{TEST}} (Tesseract\+Environment\+Unit, Env\+Apply\+Commands)
+\mbox{\hyperlink{tesseract__environment__unit_8cpp_aa8afe28c65abed52a6d447c5ce997635}{TEST}} (Tesseract\+Environment\+Unit, Env\+Change\+Name\+Unit)
+\item 
+void \mbox{\hyperlink{tesseract__environment__unit_8cpp_add9c175b68ff8e5e4dda6b2811d27067}{run\+Compare\+Scene\+States}} (const \mbox{\hyperlink{structtesseract__scene__graph_1_1SceneState}{Scene\+State}} \&base\+\_\+state, const \mbox{\hyperlink{structtesseract__scene__graph_1_1SceneState}{Scene\+State}} \&compare\+\_\+state)
+\item 
+void \mbox{\hyperlink{tesseract__environment__unit_8cpp_ac8f0778a6392acc9f7d18b2c13dc09ed}{run\+Compare\+State\+Solver}} (const \mbox{\hyperlink{classtesseract__scene__graph_1_1StateSolver}{State\+Solver}} \&base\+\_\+solver, \mbox{\hyperlink{classtesseract__scene__graph_1_1StateSolver}{State\+Solver}} \&comp\+\_\+solver)
+\item 
+\mbox{\hyperlink{tesseract__environment__unit_8cpp_a70919f1fe3c4b5561ab20eb17cb370b0}{TEST}} (Tesseract\+Environment\+Unit, Env\+Apply\+Commands\+State\+Solver\+Compare\+Unit)
+\item 
+\mbox{\hyperlink{tesseract__environment__unit_8cpp_a64a97fc679c9f640da22494a4ee6984f}{TEST}} (Tesseract\+Environment\+Unit, Env\+Multithreaded\+Apply\+Commands\+Test)
 \item 
 \mbox{\hyperlink{tesseract__environment__unit_8cpp_a687c529441df00ae77c294006d35ca92}{TEST}} (Tesseract\+Environment\+Unit, Env\+Clone)
 \item 
 \mbox{\hyperlink{tesseract__environment__unit_8cpp_a9d0c28c11dac2a40bfd5442e7c6c3a5f}{TEST}} (Tesseract\+Environment\+Unit, Env\+Set\+State)
 \item 
+\mbox{\hyperlink{tesseract__environment__unit_8cpp_abca032c576f4be110632df2f6203123d}{TEST}} (Tesseract\+Environment\+Unit, Env\+Set\+State2)
+\item 
+\mbox{\hyperlink{tesseract__environment__unit_8cpp_a6de667089c721d24af714cf350b7c4fb}{TEST}} (Tesseract\+Environment\+Unit, Env\+Find\+TCPUnit)
+\item 
+\mbox{\hyperlink{tesseract__environment__unit_8cpp_abca0bfe315f2ddb9dc2a3a2be6f71f49}{TEST}} (Tesseract\+Environment\+Unit, get\+Active\+Link\+Names\+Recursive\+Unit)
+\item 
+\mbox{\hyperlink{tesseract__environment__unit_8cpp_a0d0135e86e53fd517ae04252a6fd398c}{TEST}} (Tesseract\+Environment\+Unit, check\+Trajectory\+Unit)
+\item 
 int \mbox{\hyperlink{tesseract__environment__unit_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (int argc, char $\ast$$\ast$argv)
 \end{DoxyCompactItemize}
 
 
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{tesseract__environment__unit_8cpp_a3a32177399531ca863fffa708e0675bb}\label{tesseract__environment__unit_8cpp_a3a32177399531ca863fffa708e0675bb}} 
+\index{tesseract\_environment\_unit.cpp@{tesseract\_environment\_unit.cpp}!EnvironmentInitType@{EnvironmentInitType}}
+\index{EnvironmentInitType@{EnvironmentInitType}!tesseract\_environment\_unit.cpp@{tesseract\_environment\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{EnvironmentInitType}{EnvironmentInitType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{tesseract__environment__unit_8cpp_a3a32177399531ca863fffa708e0675bb}{Environment\+Init\+Type}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{OBJECT@{OBJECT}!tesseract\_environment\_unit.cpp@{tesseract\_environment\_unit.cpp}}\index{tesseract\_environment\_unit.cpp@{tesseract\_environment\_unit.cpp}!OBJECT@{OBJECT}}}\mbox{\Hypertarget{tesseract__environment__unit_8cpp_a3a32177399531ca863fffa708e0675bba8eee8e217391199668cbac89472ace53}\label{tesseract__environment__unit_8cpp_a3a32177399531ca863fffa708e0675bba8eee8e217391199668cbac89472ace53}} 
+OBJECT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{STRING@{STRING}!tesseract\_environment\_unit.cpp@{tesseract\_environment\_unit.cpp}}\index{tesseract\_environment\_unit.cpp@{tesseract\_environment\_unit.cpp}!STRING@{STRING}}}\mbox{\Hypertarget{tesseract__environment__unit_8cpp_a3a32177399531ca863fffa708e0675bba63b588d5559f64f89a416e656880b949}\label{tesseract__environment__unit_8cpp_a3a32177399531ca863fffa708e0675bba63b588d5559f64f89a416e656880b949}} 
+STRING&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FILEPATH@{FILEPATH}!tesseract\_environment\_unit.cpp@{tesseract\_environment\_unit.cpp}}\index{tesseract\_environment\_unit.cpp@{tesseract\_environment\_unit.cpp}!FILEPATH@{FILEPATH}}}\mbox{\Hypertarget{tesseract__environment__unit_8cpp_a3a32177399531ca863fffa708e0675bba86e4c917b9ee70e67a68639bd9fcead7}\label{tesseract__environment__unit_8cpp_a3a32177399531ca863fffa708e0675bba86e4c917b9ee70e67a68639bd9fcead7}} 
+FILEPATH&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
 \doxysubsection{Function Documentation}
-\mbox{\Hypertarget{tesseract__environment__unit_8cpp_a305deb9c63b0d99aafc6311a1b12f18b}\label{tesseract__environment__unit_8cpp_a305deb9c63b0d99aafc6311a1b12f18b}} 
+\mbox{\Hypertarget{tesseract__environment__unit_8cpp_a5aa46320c824270edbeafe6b0356835d}\label{tesseract__environment__unit_8cpp_a5aa46320c824270edbeafe6b0356835d}} 
 \index{tesseract\_environment\_unit.cpp@{tesseract\_environment\_unit.cpp}!getEnvironment@{getEnvironment}}
 \index{getEnvironment@{getEnvironment}!tesseract\_environment\_unit.cpp@{tesseract\_environment\_unit.cpp}}
 \doxysubsubsection{\texorpdfstring{getEnvironment()}{getEnvironment()}}
-{\footnotesize\ttfamily template$<$typename S $>$ \\
-\mbox{\hyperlink{classtesseract__environment_1_1Environment_a7f9f24116120df888e99fe015803ffc0}{Environment\+::\+Ptr}} get\+Environment (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__environment_1_1Environment_a7f9f24116120df888e99fe015803ffc0}{Environment\+::\+Ptr}} get\+Environment (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{tesseract__environment__unit_8cpp_a3a32177399531ca863fffa708e0675bb}{Environment\+Init\+Type}}}]{init\+\_\+type = {\ttfamily \mbox{\hyperlink{tesseract__environment__unit_8cpp_a3a32177399531ca863fffa708e0675bba8eee8e217391199668cbac89472ace53}{Environment\+Init\+Type\+::\+OBJECT}}} }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{tesseract__environment__unit_8cpp_a79c8a4870e1158d996b5c6089d212188}\label{tesseract__environment__unit_8cpp_a79c8a4870e1158d996b5c6089d212188}} 
+\mbox{\Hypertarget{tesseract__environment__unit_8cpp_a5e1f644bf499cceaf562d43a97e7c8d7}\label{tesseract__environment__unit_8cpp_a5e1f644bf499cceaf562d43a97e7c8d7}} 
+\index{tesseract\_environment\_unit.cpp@{tesseract\_environment\_unit.cpp}!getEnvironmentURDFOnly@{getEnvironmentURDFOnly}}
+\index{getEnvironmentURDFOnly@{getEnvironmentURDFOnly}!tesseract\_environment\_unit.cpp@{tesseract\_environment\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{getEnvironmentURDFOnly()}{getEnvironmentURDFOnly()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__environment_1_1Environment_a7f9f24116120df888e99fe015803ffc0}{Environment\+::\+Ptr}} get\+Environment\+URDFOnly (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{tesseract__environment__unit_8cpp_a3a32177399531ca863fffa708e0675bb}{Environment\+Init\+Type}}}]{init\+\_\+type }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{tesseract__environment__unit_8cpp_ab1f646b73e8b8753f65d82b9f26e3510}\label{tesseract__environment__unit_8cpp_ab1f646b73e8b8753f65d82b9f26e3510}} 
 \index{tesseract\_environment\_unit.cpp@{tesseract\_environment\_unit.cpp}!getSceneGraph@{getSceneGraph}}
 \index{getSceneGraph@{getSceneGraph}!tesseract\_environment\_unit.cpp@{tesseract\_environment\_unit.cpp}}
 \doxysubsubsection{\texorpdfstring{getSceneGraph()}{getSceneGraph()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph_a4421b8568bd664cf203613a054e1847b}{Scene\+Graph\+::\+Ptr}} get\+Scene\+Graph (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph_aacd7acf57071e94cd87fbae62dbaafba}{Scene\+Graph\+::\+UPtr}} get\+Scene\+Graph (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{tesseract__environment__unit_8cpp_a0d920afabbea750b576b7233787611bc}\label{tesseract__environment__unit_8cpp_a0d920afabbea750b576b7233787611bc}} 
+\mbox{\Hypertarget{tesseract__environment__unit_8cpp_a0168f81bbe314ef74df419bbe66569ce}\label{tesseract__environment__unit_8cpp_a0168f81bbe314ef74df419bbe66569ce}} 
+\index{tesseract\_environment\_unit.cpp@{tesseract\_environment\_unit.cpp}!getSceneGraphString@{getSceneGraphString}}
+\index{getSceneGraphString@{getSceneGraphString}!tesseract\_environment\_unit.cpp@{tesseract\_environment\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{getSceneGraphString()}{getSceneGraphString()}}
+{\footnotesize\ttfamily std\+::string get\+Scene\+Graph\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{tesseract__environment__unit_8cpp_aab3daf3bc58287c24ac4be5b9caa8ab8}\label{tesseract__environment__unit_8cpp_aab3daf3bc58287c24ac4be5b9caa8ab8}} 
 \index{tesseract\_environment\_unit.cpp@{tesseract\_environment\_unit.cpp}!getSRDFModel@{getSRDFModel}}
 \index{getSRDFModel@{getSRDFModel}!tesseract\_environment\_unit.cpp@{tesseract\_environment\_unit.cpp}}
 \doxysubsubsection{\texorpdfstring{getSRDFModel()}{getSRDFModel()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__scene__graph_1_1SRDFModel_aeb01da18b3ee7d6da9593d6e4dd30729}{tesseract\+\_\+scene\+\_\+graph\+::\+SRDFModel\+::\+Ptr}} get\+SRDFModel (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph_a4421b8568bd664cf203613a054e1847b}{Scene\+Graph\+::\+Ptr}} \&}]{scene\+\_\+graph }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__srdf_1_1SRDFModel_aa774b8f688b3521f25ea1a6d4e16839c}{SRDFModel\+::\+Ptr}} get\+SRDFModel (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph}{Scene\+Graph}} \&}]{scene\+\_\+graph }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{tesseract__environment__unit_8cpp_a49f520ba70df39d6682585fb30e23f80}\label{tesseract__environment__unit_8cpp_a49f520ba70df39d6682585fb30e23f80}} 
+\index{tesseract\_environment\_unit.cpp@{tesseract\_environment\_unit.cpp}!getSRDFModelString@{getSRDFModelString}}
+\index{getSRDFModelString@{getSRDFModelString}!tesseract\_environment\_unit.cpp@{tesseract\_environment\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{getSRDFModelString()}{getSRDFModelString()}}
+{\footnotesize\ttfamily std\+::string get\+SRDFModel\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{tesseract__environment__unit_8cpp_a832944897415b09bd43d59eae7088c54}\label{tesseract__environment__unit_8cpp_a832944897415b09bd43d59eae7088c54}} 
+\index{tesseract\_environment\_unit.cpp@{tesseract\_environment\_unit.cpp}!getSubSceneGraph@{getSubSceneGraph}}
+\index{getSubSceneGraph@{getSubSceneGraph}!tesseract\_environment\_unit.cpp@{tesseract\_environment\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{getSubSceneGraph()}{getSubSceneGraph()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph_a4421b8568bd664cf203613a054e1847b}{Scene\+Graph\+::\+Ptr}} get\+Sub\+Scene\+Graph (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 \mbox{\Hypertarget{tesseract__environment__unit_8cpp_ad43b67aac2fb3de014c67c88f9dc4db9}\label{tesseract__environment__unit_8cpp_ad43b67aac2fb3de014c67c88f9dc4db9}} 
 \index{tesseract\_environment\_unit.cpp@{tesseract\_environment\_unit.cpp}!locateResource@{locateResource}}
@@ -111,142 +195,203 @@ int \mbox{\hyperlink{tesseract__environment__unit_8cpp_a3c04138a5bfe5d72780bb7e8
 \doxysubsubsection{\texorpdfstring{main()}{main()}}
 {\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{tesseract__environment__unit_8cpp_a056073c6879a739115d1badee71e85ba}\label{tesseract__environment__unit_8cpp_a056073c6879a739115d1badee71e85ba}} 
-\index{tesseract\_environment\_unit.cpp@{tesseract\_environment\_unit.cpp}!runAddandRemoveLinkTest@{runAddandRemoveLinkTest}}
-\index{runAddandRemoveLinkTest@{runAddandRemoveLinkTest}!tesseract\_environment\_unit.cpp@{tesseract\_environment\_unit.cpp}}
-\doxysubsubsection{\texorpdfstring{runAddandRemoveLinkTest()}{runAddandRemoveLinkTest()}}
-{\footnotesize\ttfamily template$<$typename S $>$ \\
-void run\+Addand\+Remove\+Link\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{tesseract__environment__unit_8cpp_add9c175b68ff8e5e4dda6b2811d27067}\label{tesseract__environment__unit_8cpp_add9c175b68ff8e5e4dda6b2811d27067}} 
+\index{tesseract\_environment\_unit.cpp@{tesseract\_environment\_unit.cpp}!runCompareSceneStates@{runCompareSceneStates}}
+\index{runCompareSceneStates@{runCompareSceneStates}!tesseract\_environment\_unit.cpp@{tesseract\_environment\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{runCompareSceneStates()}{runCompareSceneStates()}}
+{\footnotesize\ttfamily void run\+Compare\+Scene\+States (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structtesseract__scene__graph_1_1SceneState}{Scene\+State}} \&}]{base\+\_\+state,  }\item[{const \mbox{\hyperlink{structtesseract__scene__graph_1_1SceneState}{Scene\+State}} \&}]{compare\+\_\+state }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{tesseract__environment__unit_8cpp_a45adc959a33161618072323f6c7dc730}\label{tesseract__environment__unit_8cpp_a45adc959a33161618072323f6c7dc730}} 
-\index{tesseract\_environment\_unit.cpp@{tesseract\_environment\_unit.cpp}!runAddSceneGraphTest@{runAddSceneGraphTest}}
-\index{runAddSceneGraphTest@{runAddSceneGraphTest}!tesseract\_environment\_unit.cpp@{tesseract\_environment\_unit.cpp}}
-\doxysubsubsection{\texorpdfstring{runAddSceneGraphTest()}{runAddSceneGraphTest()}}
-{\footnotesize\ttfamily template$<$typename S $>$ \\
-void run\+Add\+Scene\+Graph\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{tesseract__environment__unit_8cpp_ac8f0778a6392acc9f7d18b2c13dc09ed}\label{tesseract__environment__unit_8cpp_ac8f0778a6392acc9f7d18b2c13dc09ed}} 
+\index{tesseract\_environment\_unit.cpp@{tesseract\_environment\_unit.cpp}!runCompareStateSolver@{runCompareStateSolver}}
+\index{runCompareStateSolver@{runCompareStateSolver}!tesseract\_environment\_unit.cpp@{tesseract\_environment\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{runCompareStateSolver()}{runCompareStateSolver()}}
+{\footnotesize\ttfamily void run\+Compare\+State\+Solver (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtesseract__scene__graph_1_1StateSolver}{State\+Solver}} \&}]{base\+\_\+solver,  }\item[{\mbox{\hyperlink{classtesseract__scene__graph_1_1StateSolver}{State\+Solver}} \&}]{comp\+\_\+solver }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{tesseract__environment__unit_8cpp_a7efd38cb7d246fd917d0181cc944ec94}\label{tesseract__environment__unit_8cpp_a7efd38cb7d246fd917d0181cc944ec94}} 
-\index{tesseract\_environment\_unit.cpp@{tesseract\_environment\_unit.cpp}!runApplyCommandsTest@{runApplyCommandsTest}}
-\index{runApplyCommandsTest@{runApplyCommandsTest}!tesseract\_environment\_unit.cpp@{tesseract\_environment\_unit.cpp}}
-\doxysubsubsection{\texorpdfstring{runApplyCommandsTest()}{runApplyCommandsTest()}}
-{\footnotesize\ttfamily template$<$typename S $>$ \\
-void run\+Apply\+Commands\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{tesseract__environment__unit_8cpp_aeeadb5cb5db368d6835dfd7bf514c393}\label{tesseract__environment__unit_8cpp_aeeadb5cb5db368d6835dfd7bf514c393}} 
+\index{tesseract\_environment\_unit.cpp@{tesseract\_environment\_unit.cpp}!runGetLinkTransformsTest@{runGetLinkTransformsTest}}
+\index{runGetLinkTransformsTest@{runGetLinkTransformsTest}!tesseract\_environment\_unit.cpp@{tesseract\_environment\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{runGetLinkTransformsTest()}{runGetLinkTransformsTest()}}
+{\footnotesize\ttfamily void run\+Get\+Link\+Transforms\+Test (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtesseract__environment_1_1Environment}{Environment}} \&}]{env }\end{DoxyParamCaption})}
 
-\begin{DoxyRefDesc}{Todo}
-\item[\mbox{\hyperlink{todo__todo000002}{Todo}}]Add tests for applying commands to the environment \end{DoxyRefDesc}
-\mbox{\Hypertarget{tesseract__environment__unit_8cpp_a3e01b9b60be619b89ae6b47efd10657b}\label{tesseract__environment__unit_8cpp_a3e01b9b60be619b89ae6b47efd10657b}} 
-\index{tesseract\_environment\_unit.cpp@{tesseract\_environment\_unit.cpp}!runChangeJointLimitsTest@{runChangeJointLimitsTest}}
-\index{runChangeJointLimitsTest@{runChangeJointLimitsTest}!tesseract\_environment\_unit.cpp@{tesseract\_environment\_unit.cpp}}
-\doxysubsubsection{\texorpdfstring{runChangeJointLimitsTest()}{runChangeJointLimitsTest()}}
-{\footnotesize\ttfamily template$<$typename S $>$ \\
-void run\+Change\+Joint\+Limits\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{tesseract__environment__unit_8cpp_aa9edb466c8df58e8053326d072ef15a5}\label{tesseract__environment__unit_8cpp_aa9edb466c8df58e8053326d072ef15a5}} 
+\index{tesseract\_environment\_unit.cpp@{tesseract\_environment\_unit.cpp}!tcpCallback@{tcpCallback}}
+\index{tcpCallback@{tcpCallback}!tesseract\_environment\_unit.cpp@{tesseract\_environment\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{tcpCallback()}{tcpCallback()}}
+{\footnotesize\ttfamily Eigen\+::\+Isometry3d tcp\+Callback (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structtesseract__common_1_1ManipulatorInfo}{tesseract\+\_\+common\+::\+Manipulator\+Info}} \&}]{mi }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{tesseract__environment__unit_8cpp_a3d624cb127f1519baf356d930704f5d5}\label{tesseract__environment__unit_8cpp_a3d624cb127f1519baf356d930704f5d5}} 
-\index{tesseract\_environment\_unit.cpp@{tesseract\_environment\_unit.cpp}!runChangeJointOriginTest@{runChangeJointOriginTest}}
-\index{runChangeJointOriginTest@{runChangeJointOriginTest}!tesseract\_environment\_unit.cpp@{tesseract\_environment\_unit.cpp}}
-\doxysubsubsection{\texorpdfstring{runChangeJointOriginTest()}{runChangeJointOriginTest()}}
-{\footnotesize\ttfamily template$<$typename S $>$ \\
-void run\+Change\+Joint\+Origin\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{tesseract__environment__unit_8cpp_a0d0135e86e53fd517ae04252a6fd398c}\label{tesseract__environment__unit_8cpp_a0d0135e86e53fd517ae04252a6fd398c}} 
+\index{tesseract\_environment\_unit.cpp@{tesseract\_environment\_unit.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!tesseract\_environment\_unit.cpp@{tesseract\_environment\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [1/28]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Tesseract\+Environment\+Unit}]{,  }\item[{check\+Trajectory\+Unit}]{ }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{tesseract__environment__unit_8cpp_a18cf4ef7dcf011bf387c9112f6b1ee30}\label{tesseract__environment__unit_8cpp_a18cf4ef7dcf011bf387c9112f6b1ee30}} 
-\index{tesseract\_environment\_unit.cpp@{tesseract\_environment\_unit.cpp}!runContactManagerCloneTest@{runContactManagerCloneTest}}
-\index{runContactManagerCloneTest@{runContactManagerCloneTest}!tesseract\_environment\_unit.cpp@{tesseract\_environment\_unit.cpp}}
-\doxysubsubsection{\texorpdfstring{runContactManagerCloneTest()}{runContactManagerCloneTest()}}
-{\footnotesize\ttfamily template$<$typename S $>$ \\
-void run\+Contact\+Manager\+Clone\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-\mbox{\Hypertarget{tesseract__environment__unit_8cpp_aa3ff23322b9f4753f56f938df57cb707}\label{tesseract__environment__unit_8cpp_aa3ff23322b9f4753f56f938df57cb707}} 
-\index{tesseract\_environment\_unit.cpp@{tesseract\_environment\_unit.cpp}!runCurrentStatePreservedWhenEnvChangesTest@{runCurrentStatePreservedWhenEnvChangesTest}}
-\index{runCurrentStatePreservedWhenEnvChangesTest@{runCurrentStatePreservedWhenEnvChangesTest}!tesseract\_environment\_unit.cpp@{tesseract\_environment\_unit.cpp}}
-\doxysubsubsection{\texorpdfstring{runCurrentStatePreservedWhenEnvChangesTest()}{runCurrentStatePreservedWhenEnvChangesTest()}}
-{\footnotesize\ttfamily template$<$typename S $>$ \\
-void run\+Current\+State\+Preserved\+When\+Env\+Changes\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-\mbox{\Hypertarget{tesseract__environment__unit_8cpp_a0bf9aef44f4493420bc3914859c57a9b}\label{tesseract__environment__unit_8cpp_a0bf9aef44f4493420bc3914859c57a9b}} 
-\index{tesseract\_environment\_unit.cpp@{tesseract\_environment\_unit.cpp}!runEnvCloneTest@{runEnvCloneTest}}
-\index{runEnvCloneTest@{runEnvCloneTest}!tesseract\_environment\_unit.cpp@{tesseract\_environment\_unit.cpp}}
-\doxysubsubsection{\texorpdfstring{runEnvCloneTest()}{runEnvCloneTest()}}
-{\footnotesize\ttfamily template$<$typename S $>$ \\
-void run\+Env\+Clone\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-\mbox{\Hypertarget{tesseract__environment__unit_8cpp_a80ceea364f193b545dfca623b698b89a}\label{tesseract__environment__unit_8cpp_a80ceea364f193b545dfca623b698b89a}} 
-\index{tesseract\_environment\_unit.cpp@{tesseract\_environment\_unit.cpp}!runEnvSetStateTest@{runEnvSetStateTest}}
-\index{runEnvSetStateTest@{runEnvSetStateTest}!tesseract\_environment\_unit.cpp@{tesseract\_environment\_unit.cpp}}
-\doxysubsubsection{\texorpdfstring{runEnvSetStateTest()}{runEnvSetStateTest()}}
-{\footnotesize\ttfamily template$<$typename S $>$ \\
-void run\+Env\+Set\+State\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-\mbox{\Hypertarget{tesseract__environment__unit_8cpp_ad98c277fa0a1db193e5d9bdee29af903}\label{tesseract__environment__unit_8cpp_ad98c277fa0a1db193e5d9bdee29af903}} 
-\index{tesseract\_environment\_unit.cpp@{tesseract\_environment\_unit.cpp}!runEnvSetStateTest2@{runEnvSetStateTest2}}
-\index{runEnvSetStateTest2@{runEnvSetStateTest2}!tesseract\_environment\_unit.cpp@{tesseract\_environment\_unit.cpp}}
-\doxysubsubsection{\texorpdfstring{runEnvSetStateTest2()}{runEnvSetStateTest2()}}
-{\footnotesize\ttfamily template$<$typename S $>$ \\
-void run\+Env\+Set\+State\+Test2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-\mbox{\Hypertarget{tesseract__environment__unit_8cpp_ac838aaf16704df1fe3656e8d7ea9df71}\label{tesseract__environment__unit_8cpp_ac838aaf16704df1fe3656e8d7ea9df71}} 
-\index{tesseract\_environment\_unit.cpp@{tesseract\_environment\_unit.cpp}!runMoveLinkandJointTest@{runMoveLinkandJointTest}}
-\index{runMoveLinkandJointTest@{runMoveLinkandJointTest}!tesseract\_environment\_unit.cpp@{tesseract\_environment\_unit.cpp}}
-\doxysubsubsection{\texorpdfstring{runMoveLinkandJointTest()}{runMoveLinkandJointTest()}}
-{\footnotesize\ttfamily template$<$typename S $>$ \\
-void run\+Move\+Linkand\+Joint\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{tesseract__environment__unit_8cpp_ab5930f64e7cbfcb77aae6eeadc5c5b13}\label{tesseract__environment__unit_8cpp_ab5930f64e7cbfcb77aae6eeadc5c5b13}} 
+\index{tesseract\_environment\_unit.cpp@{tesseract\_environment\_unit.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!tesseract\_environment\_unit.cpp@{tesseract\_environment\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [2/28]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Tesseract\+Environment\+Unit}]{,  }\item[{Env\+Add\+And\+Remove\+Allowed\+Collision\+Command\+Unit}]{ }\end{DoxyParamCaption})}
 
 \mbox{\Hypertarget{tesseract__environment__unit_8cpp_ac7bda300deadcaea8236c84ec09b949f}\label{tesseract__environment__unit_8cpp_ac7bda300deadcaea8236c84ec09b949f}} 
 \index{tesseract\_environment\_unit.cpp@{tesseract\_environment\_unit.cpp}!TEST@{TEST}}
 \index{TEST@{TEST}!tesseract\_environment\_unit.cpp@{tesseract\_environment\_unit.cpp}}
-\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [1/10]}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [3/28]}}
 {\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Tesseract\+Environment\+Unit}]{,  }\item[{Env\+Addand\+Remove\+Link}]{ }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{tesseract__environment__unit_8cpp_a78d0303c6e6a9a5e590df64a0246a6be}\label{tesseract__environment__unit_8cpp_a78d0303c6e6a9a5e590df64a0246a6be}} 
+\mbox{\Hypertarget{tesseract__environment__unit_8cpp_a65b5942ff3c6c80261347bb8518a3316}\label{tesseract__environment__unit_8cpp_a65b5942ff3c6c80261347bb8518a3316}} 
 \index{tesseract\_environment\_unit.cpp@{tesseract\_environment\_unit.cpp}!TEST@{TEST}}
 \index{TEST@{TEST}!tesseract\_environment\_unit.cpp@{tesseract\_environment\_unit.cpp}}
-\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [2/10]}}
-{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Tesseract\+Environment\+Unit}]{,  }\item[{Env\+Add\+Scene\+Graph}]{ }\end{DoxyParamCaption})}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [4/28]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Tesseract\+Environment\+Unit}]{,  }\item[{Env\+Add\+Kinematics\+Information\+Command\+Unit}]{ }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{tesseract__environment__unit_8cpp_ad23f665a390bc412961efcf81df03d63}\label{tesseract__environment__unit_8cpp_ad23f665a390bc412961efcf81df03d63}} 
+\mbox{\Hypertarget{tesseract__environment__unit_8cpp_ab2c1f16a9f35b74069e6a773fac2d4b7}\label{tesseract__environment__unit_8cpp_ab2c1f16a9f35b74069e6a773fac2d4b7}} 
 \index{tesseract\_environment\_unit.cpp@{tesseract\_environment\_unit.cpp}!TEST@{TEST}}
 \index{TEST@{TEST}!tesseract\_environment\_unit.cpp@{tesseract\_environment\_unit.cpp}}
-\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [3/10]}}
-{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Tesseract\+Environment\+Unit}]{,  }\item[{Env\+Apply\+Commands}]{ }\end{DoxyParamCaption})}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [5/28]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Tesseract\+Environment\+Unit}]{,  }\item[{Env\+Add\+Scene\+Graph\+Command\+Unit}]{ }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{tesseract__environment__unit_8cpp_a21c7e23d5f2440e59a7958f8a8ea7942}\label{tesseract__environment__unit_8cpp_a21c7e23d5f2440e59a7958f8a8ea7942}} 
+\mbox{\Hypertarget{tesseract__environment__unit_8cpp_a70919f1fe3c4b5561ab20eb17cb370b0}\label{tesseract__environment__unit_8cpp_a70919f1fe3c4b5561ab20eb17cb370b0}} 
 \index{tesseract\_environment\_unit.cpp@{tesseract\_environment\_unit.cpp}!TEST@{TEST}}
 \index{TEST@{TEST}!tesseract\_environment\_unit.cpp@{tesseract\_environment\_unit.cpp}}
-\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [4/10]}}
-{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Tesseract\+Environment\+Unit}]{,  }\item[{Env\+Change\+Joint\+Limits}]{ }\end{DoxyParamCaption})}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [6/28]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Tesseract\+Environment\+Unit}]{,  }\item[{Env\+Apply\+Commands\+State\+Solver\+Compare\+Unit}]{ }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{tesseract__environment__unit_8cpp_ac90ec00a71aef7df02dd7c2f12f38ced}\label{tesseract__environment__unit_8cpp_ac90ec00a71aef7df02dd7c2f12f38ced}} 
+\mbox{\Hypertarget{tesseract__environment__unit_8cpp_ab051f25b040d4e0ef2a74f2615a987cb}\label{tesseract__environment__unit_8cpp_ab051f25b040d4e0ef2a74f2615a987cb}} 
 \index{tesseract\_environment\_unit.cpp@{tesseract\_environment\_unit.cpp}!TEST@{TEST}}
 \index{TEST@{TEST}!tesseract\_environment\_unit.cpp@{tesseract\_environment\_unit.cpp}}
-\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [5/10]}}
-{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Tesseract\+Environment\+Unit}]{,  }\item[{Env\+Change\+Joint\+Origin}]{ }\end{DoxyParamCaption})}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [7/28]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Tesseract\+Environment\+Unit}]{,  }\item[{Env\+Change\+Collision\+Margins\+Command\+Unit}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{tesseract__environment__unit_8cpp_a79dcd2f979798d355358bf60b17ca6bd}\label{tesseract__environment__unit_8cpp_a79dcd2f979798d355358bf60b17ca6bd}} 
+\index{tesseract\_environment\_unit.cpp@{tesseract\_environment\_unit.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!tesseract\_environment\_unit.cpp@{tesseract\_environment\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [8/28]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Tesseract\+Environment\+Unit}]{,  }\item[{Env\+Change\+Joint\+Limits\+Command\+Unit}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{tesseract__environment__unit_8cpp_a6d8c2992f5b3014f9c7cb40d7eb688d4}\label{tesseract__environment__unit_8cpp_a6d8c2992f5b3014f9c7cb40d7eb688d4}} 
+\index{tesseract\_environment\_unit.cpp@{tesseract\_environment\_unit.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!tesseract\_environment\_unit.cpp@{tesseract\_environment\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [9/28]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Tesseract\+Environment\+Unit}]{,  }\item[{Env\+Change\+Joint\+Origin\+Command\+Unit}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{tesseract__environment__unit_8cpp_a0885de2a8da955b4bb9b9be73de49350}\label{tesseract__environment__unit_8cpp_a0885de2a8da955b4bb9b9be73de49350}} 
+\index{tesseract\_environment\_unit.cpp@{tesseract\_environment\_unit.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!tesseract\_environment\_unit.cpp@{tesseract\_environment\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [10/28]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Tesseract\+Environment\+Unit}]{,  }\item[{Env\+Change\+Link\+Collision\+Enabled\+Command\+Unit}]{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000005}{Todo}}]update contact manager to have function to check collision object enabled state \end{DoxyRefDesc}
+\mbox{\Hypertarget{tesseract__environment__unit_8cpp_a7f3ebb27b4f5dd34f06bdf234a3ae638}\label{tesseract__environment__unit_8cpp_a7f3ebb27b4f5dd34f06bdf234a3ae638}} 
+\index{tesseract\_environment\_unit.cpp@{tesseract\_environment\_unit.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!tesseract\_environment\_unit.cpp@{tesseract\_environment\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [11/28]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Tesseract\+Environment\+Unit}]{,  }\item[{Env\+Change\+Link\+Origin\+Command\+Unit}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{tesseract__environment__unit_8cpp_aa8be7c5729a18846a93f15be668f8d93}\label{tesseract__environment__unit_8cpp_aa8be7c5729a18846a93f15be668f8d93}} 
+\index{tesseract\_environment\_unit.cpp@{tesseract\_environment\_unit.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!tesseract\_environment\_unit.cpp@{tesseract\_environment\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [12/28]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Tesseract\+Environment\+Unit}]{,  }\item[{Env\+Change\+Link\+Visibility\+Command\+Unit}]{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000006}{Todo}}]update contact manager to have function to check collision object enabled state \end{DoxyRefDesc}
+\mbox{\Hypertarget{tesseract__environment__unit_8cpp_aa8afe28c65abed52a6d447c5ce997635}\label{tesseract__environment__unit_8cpp_aa8afe28c65abed52a6d447c5ce997635}} 
+\index{tesseract\_environment\_unit.cpp@{tesseract\_environment\_unit.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!tesseract\_environment\_unit.cpp@{tesseract\_environment\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [13/28]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Tesseract\+Environment\+Unit}]{,  }\item[{Env\+Change\+Name\+Unit}]{ }\end{DoxyParamCaption})}
 
 \mbox{\Hypertarget{tesseract__environment__unit_8cpp_a687c529441df00ae77c294006d35ca92}\label{tesseract__environment__unit_8cpp_a687c529441df00ae77c294006d35ca92}} 
 \index{tesseract\_environment\_unit.cpp@{tesseract\_environment\_unit.cpp}!TEST@{TEST}}
 \index{TEST@{TEST}!tesseract\_environment\_unit.cpp@{tesseract\_environment\_unit.cpp}}
-\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [6/10]}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [14/28]}}
 {\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Tesseract\+Environment\+Unit}]{,  }\item[{Env\+Clone}]{ }\end{DoxyParamCaption})}
 
 \mbox{\Hypertarget{tesseract__environment__unit_8cpp_a4c53d32b112511dd619bb728f7cf00d6}\label{tesseract__environment__unit_8cpp_a4c53d32b112511dd619bb728f7cf00d6}} 
 \index{tesseract\_environment\_unit.cpp@{tesseract\_environment\_unit.cpp}!TEST@{TEST}}
 \index{TEST@{TEST}!tesseract\_environment\_unit.cpp@{tesseract\_environment\_unit.cpp}}
-\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [7/10]}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [15/28]}}
 {\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Tesseract\+Environment\+Unit}]{,  }\item[{Env\+Clone\+Contact\+Manager\+Unit}]{ }\end{DoxyParamCaption})}
 
 \mbox{\Hypertarget{tesseract__environment__unit_8cpp_a873d0311d38bb981397aac233d8bf8b3}\label{tesseract__environment__unit_8cpp_a873d0311d38bb981397aac233d8bf8b3}} 
 \index{tesseract\_environment\_unit.cpp@{tesseract\_environment\_unit.cpp}!TEST@{TEST}}
 \index{TEST@{TEST}!tesseract\_environment\_unit.cpp@{tesseract\_environment\_unit.cpp}}
-\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [8/10]}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [16/28]}}
 {\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Tesseract\+Environment\+Unit}]{,  }\item[{Env\+Current\+State\+Preserved\+When\+Env\+Changes}]{ }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{tesseract__environment__unit_8cpp_a0fd17870a27f4b02fca001eeee6954dd}\label{tesseract__environment__unit_8cpp_a0fd17870a27f4b02fca001eeee6954dd}} 
+\mbox{\Hypertarget{tesseract__environment__unit_8cpp_a6de667089c721d24af714cf350b7c4fb}\label{tesseract__environment__unit_8cpp_a6de667089c721d24af714cf350b7c4fb}} 
 \index{tesseract\_environment\_unit.cpp@{tesseract\_environment\_unit.cpp}!TEST@{TEST}}
 \index{TEST@{TEST}!tesseract\_environment\_unit.cpp@{tesseract\_environment\_unit.cpp}}
-\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [9/10]}}
-{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Tesseract\+Environment\+Unit}]{,  }\item[{Env\+Move\+Linkand\+Joint}]{ }\end{DoxyParamCaption})}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [17/28]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Tesseract\+Environment\+Unit}]{,  }\item[{Env\+Find\+TCPUnit}]{ }\end{DoxyParamCaption})}
 
+\mbox{\Hypertarget{tesseract__environment__unit_8cpp_a448d00b8af6cb7096c4db424e01c1219}\label{tesseract__environment__unit_8cpp_a448d00b8af6cb7096c4db424e01c1219}} 
+\index{tesseract\_environment\_unit.cpp@{tesseract\_environment\_unit.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!tesseract\_environment\_unit.cpp@{tesseract\_environment\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [18/28]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Tesseract\+Environment\+Unit}]{,  }\item[{Env\+Init\+Failures\+Unit}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{tesseract__environment__unit_8cpp_a11c94e70728367d0d016ac1e64dd31ec}\label{tesseract__environment__unit_8cpp_a11c94e70728367d0d016ac1e64dd31ec}} 
+\index{tesseract\_environment\_unit.cpp@{tesseract\_environment\_unit.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!tesseract\_environment\_unit.cpp@{tesseract\_environment\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [19/28]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Tesseract\+Environment\+Unit}]{,  }\item[{Env\+Init\+URDFOnly\+Unit}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{tesseract__environment__unit_8cpp_ad07ac718b4139f6fede7d84b31019355}\label{tesseract__environment__unit_8cpp_ad07ac718b4139f6fede7d84b31019355}} 
+\index{tesseract\_environment\_unit.cpp@{tesseract\_environment\_unit.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!tesseract\_environment\_unit.cpp@{tesseract\_environment\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [20/28]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Tesseract\+Environment\+Unit}]{,  }\item[{Env\+Move\+Joint\+Command\+Unit}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{tesseract__environment__unit_8cpp_aadadc8f71ef06c64e9554f745416938c}\label{tesseract__environment__unit_8cpp_aadadc8f71ef06c64e9554f745416938c}} 
+\index{tesseract\_environment\_unit.cpp@{tesseract\_environment\_unit.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!tesseract\_environment\_unit.cpp@{tesseract\_environment\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [21/28]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Tesseract\+Environment\+Unit}]{,  }\item[{Env\+Move\+Link\+Command\+Unit}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{tesseract__environment__unit_8cpp_a64a97fc679c9f640da22494a4ee6984f}\label{tesseract__environment__unit_8cpp_a64a97fc679c9f640da22494a4ee6984f}} 
+\index{tesseract\_environment\_unit.cpp@{tesseract\_environment\_unit.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!tesseract\_environment\_unit.cpp@{tesseract\_environment\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [22/28]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Tesseract\+Environment\+Unit}]{,  }\item[{Env\+Multithreaded\+Apply\+Commands\+Test}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{tesseract__environment__unit_8cpp_a30f83c449537b03e8ff03390853ee28e}\label{tesseract__environment__unit_8cpp_a30f83c449537b03e8ff03390853ee28e}} 
+\index{tesseract\_environment\_unit.cpp@{tesseract\_environment\_unit.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!tesseract\_environment\_unit.cpp@{tesseract\_environment\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [23/28]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Tesseract\+Environment\+Unit}]{,  }\item[{Env\+Reset\+Unit}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{tesseract__environment__unit_8cpp_a48e8ba4aff90b6492e3905dc3d9a2686}\label{tesseract__environment__unit_8cpp_a48e8ba4aff90b6492e3905dc3d9a2686}} 
+\index{tesseract\_environment\_unit.cpp@{tesseract\_environment\_unit.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!tesseract\_environment\_unit.cpp@{tesseract\_environment\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [24/28]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Tesseract\+Environment\+Unit}]{,  }\item[{Env\+Set\+Active\+Continuous\+Contact\+Manager\+Command\+Unit}]{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000007}{Todo}}]update contact manager to have function to check collision object enabled state \end{DoxyRefDesc}
+\mbox{\Hypertarget{tesseract__environment__unit_8cpp_ac000b39be53683eced961b8e905d5050}\label{tesseract__environment__unit_8cpp_ac000b39be53683eced961b8e905d5050}} 
+\index{tesseract\_environment\_unit.cpp@{tesseract\_environment\_unit.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!tesseract\_environment\_unit.cpp@{tesseract\_environment\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [25/28]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Tesseract\+Environment\+Unit}]{,  }\item[{Env\+Set\+Active\+Discrete\+Contact\+Manager\+Command\+Unit}]{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000008}{Todo}}]update contact manager to have function to check collision object enabled state \end{DoxyRefDesc}
 \mbox{\Hypertarget{tesseract__environment__unit_8cpp_a9d0c28c11dac2a40bfd5442e7c6c3a5f}\label{tesseract__environment__unit_8cpp_a9d0c28c11dac2a40bfd5442e7c6c3a5f}} 
 \index{tesseract\_environment\_unit.cpp@{tesseract\_environment\_unit.cpp}!TEST@{TEST}}
 \index{TEST@{TEST}!tesseract\_environment\_unit.cpp@{tesseract\_environment\_unit.cpp}}
-\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [10/10]}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [26/28]}}
 {\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Tesseract\+Environment\+Unit}]{,  }\item[{Env\+Set\+State}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{tesseract__environment__unit_8cpp_abca032c576f4be110632df2f6203123d}\label{tesseract__environment__unit_8cpp_abca032c576f4be110632df2f6203123d}} 
+\index{tesseract\_environment\_unit.cpp@{tesseract\_environment\_unit.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!tesseract\_environment\_unit.cpp@{tesseract\_environment\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [27/28]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Tesseract\+Environment\+Unit}]{,  }\item[{Env\+Set\+State2}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{tesseract__environment__unit_8cpp_abca0bfe315f2ddb9dc2a3a2be6f71f49}\label{tesseract__environment__unit_8cpp_abca0bfe315f2ddb9dc2a3a2be6f71f49}} 
+\index{tesseract\_environment\_unit.cpp@{tesseract\_environment\_unit.cpp}!TEST@{TEST}}
+\index{TEST@{TEST}!tesseract\_environment\_unit.cpp@{tesseract\_environment\_unit.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [28/28]}}
+{\footnotesize\ttfamily TEST (\begin{DoxyParamCaption}\item[{Tesseract\+Environment\+Unit}]{,  }\item[{get\+Active\+Link\+Names\+Recursive\+Unit}]{ }\end{DoxyParamCaption})}
 

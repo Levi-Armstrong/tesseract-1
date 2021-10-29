@@ -1,0 +1,137 @@
+\hypertarget{structtesseract__common_1_1KinematicsPluginInfo}{}\doxysection{tesseract\+\_\+common\+::Kinematics\+Plugin\+Info Struct Reference}
+\label{structtesseract__common_1_1KinematicsPluginInfo}\index{tesseract\_common::KinematicsPluginInfo@{tesseract\_common::KinematicsPluginInfo}}
+
+
+The kinematics plugin information structure.  
+
+
+
+
+{\ttfamily \#include $<$types.\+h$>$}
+
+
+
+Collaboration diagram for tesseract\+\_\+common\+::Kinematics\+Plugin\+Info\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/d7a/structtesseract__common_1_1KinematicsPluginInfo__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{structtesseract__common_1_1KinematicsPluginInfo_a111afeca17089b492a728e3f53d4fb2d}{insert}} (const \mbox{\hyperlink{structtesseract__common_1_1KinematicsPluginInfo}{Kinematics\+Plugin\+Info}} \&other)
+\begin{DoxyCompactList}\small\item\em Insert the content of an other \mbox{\hyperlink{structtesseract__common_1_1KinematicsPluginInfo}{Kinematics\+Plugin\+Info}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structtesseract__common_1_1KinematicsPluginInfo_afa07a53eb0ff226cdd88da9d3b184657}{clear}} ()
+\begin{DoxyCompactList}\small\item\em Clear the contents. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structtesseract__common_1_1KinematicsPluginInfo_a10c0875a3c2708a9394a6654accdd11d}{empty}} () const
+\begin{DoxyCompactList}\small\item\em Check if structure is empty. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::set$<$ std\+::string $>$ \mbox{\hyperlink{structtesseract__common_1_1KinematicsPluginInfo_ad7d83f5d13b1d374720aab5d59c3d055}{search\+\_\+paths}}
+\begin{DoxyCompactList}\small\item\em A list of paths to search for plugins. \end{DoxyCompactList}\item 
+std\+::set$<$ std\+::string $>$ \mbox{\hyperlink{structtesseract__common_1_1KinematicsPluginInfo_a78883c184e4558ba61255ff7414fce71}{search\+\_\+libraries}}
+\begin{DoxyCompactList}\small\item\em A list of library names without the prefix or suffix that contain plugins. \end{DoxyCompactList}\item 
+std\+::map$<$ std\+::string, \mbox{\hyperlink{structtesseract__common_1_1PluginInfoContainer}{tesseract\+\_\+common\+::\+Plugin\+Info\+Container}} $>$ \mbox{\hyperlink{structtesseract__common_1_1KinematicsPluginInfo_acd01f7bd08872e0725df7dc0372748ba}{fwd\+\_\+plugin\+\_\+infos}}
+\begin{DoxyCompactList}\small\item\em A map of group name to forward kinematics plugin information. \end{DoxyCompactList}\item 
+std\+::map$<$ std\+::string, \mbox{\hyperlink{structtesseract__common_1_1PluginInfoContainer}{tesseract\+\_\+common\+::\+Plugin\+Info\+Container}} $>$ \mbox{\hyperlink{structtesseract__common_1_1KinematicsPluginInfo_a6175523ac6bad698b2f8172025a0e185}{inv\+\_\+plugin\+\_\+infos}}
+\begin{DoxyCompactList}\small\item\em A map of group name to inverse kinematics plugin information. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const std\+::string \mbox{\hyperlink{structtesseract__common_1_1KinematicsPluginInfo_a52737d75fa5a7db043d972b0015818be}{CONFIG\+\_\+\+KEY}} \{ \char`\"{}kinematic\+\_\+plugins\char`\"{} \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The kinematics plugin information structure. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structtesseract__common_1_1KinematicsPluginInfo_afa07a53eb0ff226cdd88da9d3b184657}\label{structtesseract__common_1_1KinematicsPluginInfo_afa07a53eb0ff226cdd88da9d3b184657}} 
+\index{tesseract\_common::KinematicsPluginInfo@{tesseract\_common::KinematicsPluginInfo}!clear@{clear}}
+\index{clear@{clear}!tesseract\_common::KinematicsPluginInfo@{tesseract\_common::KinematicsPluginInfo}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily void tesseract\+\_\+common\+::\+Kinematics\+Plugin\+Info\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Clear the contents. 
+
+\mbox{\Hypertarget{structtesseract__common_1_1KinematicsPluginInfo_a10c0875a3c2708a9394a6654accdd11d}\label{structtesseract__common_1_1KinematicsPluginInfo_a10c0875a3c2708a9394a6654accdd11d}} 
+\index{tesseract\_common::KinematicsPluginInfo@{tesseract\_common::KinematicsPluginInfo}!empty@{empty}}
+\index{empty@{empty}!tesseract\_common::KinematicsPluginInfo@{tesseract\_common::KinematicsPluginInfo}}
+\doxysubsubsection{\texorpdfstring{empty()}{empty()}}
+{\footnotesize\ttfamily bool tesseract\+\_\+common\+::\+Kinematics\+Plugin\+Info\+::empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Check if structure is empty. 
+
+\mbox{\Hypertarget{structtesseract__common_1_1KinematicsPluginInfo_a111afeca17089b492a728e3f53d4fb2d}\label{structtesseract__common_1_1KinematicsPluginInfo_a111afeca17089b492a728e3f53d4fb2d}} 
+\index{tesseract\_common::KinematicsPluginInfo@{tesseract\_common::KinematicsPluginInfo}!insert@{insert}}
+\index{insert@{insert}!tesseract\_common::KinematicsPluginInfo@{tesseract\_common::KinematicsPluginInfo}}
+\doxysubsubsection{\texorpdfstring{insert()}{insert()}}
+{\footnotesize\ttfamily void tesseract\+\_\+common\+::\+Kinematics\+Plugin\+Info\+::insert (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structtesseract__common_1_1KinematicsPluginInfo}{Kinematics\+Plugin\+Info}} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+Insert the content of an other \mbox{\hyperlink{structtesseract__common_1_1KinematicsPluginInfo}{Kinematics\+Plugin\+Info}}. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structtesseract__common_1_1KinematicsPluginInfo_a52737d75fa5a7db043d972b0015818be}\label{structtesseract__common_1_1KinematicsPluginInfo_a52737d75fa5a7db043d972b0015818be}} 
+\index{tesseract\_common::KinematicsPluginInfo@{tesseract\_common::KinematicsPluginInfo}!CONFIG\_KEY@{CONFIG\_KEY}}
+\index{CONFIG\_KEY@{CONFIG\_KEY}!tesseract\_common::KinematicsPluginInfo@{tesseract\_common::KinematicsPluginInfo}}
+\doxysubsubsection{\texorpdfstring{CONFIG\_KEY}{CONFIG\_KEY}}
+{\footnotesize\ttfamily const std\+::string tesseract\+\_\+common\+::\+Kinematics\+Plugin\+Info\+::\+CONFIG\+\_\+\+KEY \{ \char`\"{}kinematic\+\_\+plugins\char`\"{} \}\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{structtesseract__common_1_1KinematicsPluginInfo_acd01f7bd08872e0725df7dc0372748ba}\label{structtesseract__common_1_1KinematicsPluginInfo_acd01f7bd08872e0725df7dc0372748ba}} 
+\index{tesseract\_common::KinematicsPluginInfo@{tesseract\_common::KinematicsPluginInfo}!fwd\_plugin\_infos@{fwd\_plugin\_infos}}
+\index{fwd\_plugin\_infos@{fwd\_plugin\_infos}!tesseract\_common::KinematicsPluginInfo@{tesseract\_common::KinematicsPluginInfo}}
+\doxysubsubsection{\texorpdfstring{fwd\_plugin\_infos}{fwd\_plugin\_infos}}
+{\footnotesize\ttfamily std\+::map$<$std\+::string, \mbox{\hyperlink{structtesseract__common_1_1PluginInfoContainer}{tesseract\+\_\+common\+::\+Plugin\+Info\+Container}}$>$ tesseract\+\_\+common\+::\+Kinematics\+Plugin\+Info\+::fwd\+\_\+plugin\+\_\+infos}
+
+
+
+A map of group name to forward kinematics plugin information. 
+
+\mbox{\Hypertarget{structtesseract__common_1_1KinematicsPluginInfo_a6175523ac6bad698b2f8172025a0e185}\label{structtesseract__common_1_1KinematicsPluginInfo_a6175523ac6bad698b2f8172025a0e185}} 
+\index{tesseract\_common::KinematicsPluginInfo@{tesseract\_common::KinematicsPluginInfo}!inv\_plugin\_infos@{inv\_plugin\_infos}}
+\index{inv\_plugin\_infos@{inv\_plugin\_infos}!tesseract\_common::KinematicsPluginInfo@{tesseract\_common::KinematicsPluginInfo}}
+\doxysubsubsection{\texorpdfstring{inv\_plugin\_infos}{inv\_plugin\_infos}}
+{\footnotesize\ttfamily std\+::map$<$std\+::string, \mbox{\hyperlink{structtesseract__common_1_1PluginInfoContainer}{tesseract\+\_\+common\+::\+Plugin\+Info\+Container}}$>$ tesseract\+\_\+common\+::\+Kinematics\+Plugin\+Info\+::inv\+\_\+plugin\+\_\+infos}
+
+
+
+A map of group name to inverse kinematics plugin information. 
+
+\mbox{\Hypertarget{structtesseract__common_1_1KinematicsPluginInfo_a78883c184e4558ba61255ff7414fce71}\label{structtesseract__common_1_1KinematicsPluginInfo_a78883c184e4558ba61255ff7414fce71}} 
+\index{tesseract\_common::KinematicsPluginInfo@{tesseract\_common::KinematicsPluginInfo}!search\_libraries@{search\_libraries}}
+\index{search\_libraries@{search\_libraries}!tesseract\_common::KinematicsPluginInfo@{tesseract\_common::KinematicsPluginInfo}}
+\doxysubsubsection{\texorpdfstring{search\_libraries}{search\_libraries}}
+{\footnotesize\ttfamily std\+::set$<$std\+::string$>$ tesseract\+\_\+common\+::\+Kinematics\+Plugin\+Info\+::search\+\_\+libraries}
+
+
+
+A list of library names without the prefix or suffix that contain plugins. 
+
+\mbox{\Hypertarget{structtesseract__common_1_1KinematicsPluginInfo_ad7d83f5d13b1d374720aab5d59c3d055}\label{structtesseract__common_1_1KinematicsPluginInfo_ad7d83f5d13b1d374720aab5d59c3d055}} 
+\index{tesseract\_common::KinematicsPluginInfo@{tesseract\_common::KinematicsPluginInfo}!search\_paths@{search\_paths}}
+\index{search\_paths@{search\_paths}!tesseract\_common::KinematicsPluginInfo@{tesseract\_common::KinematicsPluginInfo}}
+\doxysubsubsection{\texorpdfstring{search\_paths}{search\_paths}}
+{\footnotesize\ttfamily std\+::set$<$std\+::string$>$ tesseract\+\_\+common\+::\+Kinematics\+Plugin\+Info\+::search\+\_\+paths}
+
+
+
+A list of paths to search for plugins. 
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+tesseract\+\_\+common/include/tesseract\+\_\+common/\mbox{\hyperlink{tesseract__common_2include_2tesseract__common_2types_8h}{types.\+h}}\item 
+tesseract\+\_\+common/src/\mbox{\hyperlink{tesseract__common_2src_2types_8cpp}{types.\+cpp}}\end{DoxyCompactItemize}

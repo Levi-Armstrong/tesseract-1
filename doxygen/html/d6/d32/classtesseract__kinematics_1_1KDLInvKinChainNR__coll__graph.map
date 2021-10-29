@@ -1,16 +1,13 @@
 <map id="tesseract_kinematics::KDLInvKinChainNR" name="tesseract_kinematics::KDLInvKinChainNR">
-<area shape="rect" id="node1" title="KDL Inverse kinematic chain implementation." alt="" coords="1095,246,1241,287"/>
-<area shape="rect" id="node2" href="$de/d1c/classtesseract__kinematics_1_1InverseKinematics.html" title="Inverse kinematics functions." alt="" coords="783,50,930,91"/>
-<area shape="rect" id="node3" title=" " alt="" coords="772,115,941,157"/>
-<area shape="rect" id="node4" title=" " alt="" coords="771,181,942,222"/>
-<area shape="rect" id="node5" title=" " alt="" coords="179,249,257,276"/>
-<area shape="rect" id="node7" href="$df/d78/structtesseract__kinematics_1_1KDLChainData.html" title="The KDLChainData struct." alt="" coords="783,246,930,287"/>
-<area shape="rect" id="node10" title=" " alt="" coords="445,79,587,121"/>
-<area shape="rect" id="node11" title=" " alt="" coords="436,211,596,237"/>
-<area shape="rect" id="node6" title=" " alt="" coords="5,242,129,283"/>
-<area shape="rect" id="node8" href="$d2/d94/structtesseract__common_1_1KinematicLimits.html" title="Store kinematic limits." alt="" coords="417,14,615,55"/>
-<area shape="rect" id="node9" title=" " alt="" coords="180,21,256,48"/>
-<area shape="rect" id="node12" title=" " alt="" coords="429,145,603,186"/>
-<area shape="rect" id="node13" title=" " alt="" coords="781,390,932,431"/>
-<area shape="rect" id="node14" title=" " alt="" coords="753,455,960,497"/>
+<area shape="rect" id="node1" title="KDL Inverse kinematic chain implementation." alt="" coords="1017,165,1164,207"/>
+<area shape="rect" id="node2" href="$de/d1c/classtesseract__kinematics_1_1InverseKinematics.html" title="Inverse kinematics functions." alt="" coords="706,5,853,47"/>
+<area shape="rect" id="node3" title=" " alt="" coords="695,71,864,112"/>
+<area shape="rect" id="node4" title=" " alt="" coords="694,136,865,177"/>
+<area shape="rect" id="node5" title=" " alt="" coords="179,353,257,379"/>
+<area shape="rect" id="node7" href="$df/d78/structtesseract__kinematics_1_1KDLChainData.html" title="The KDLChainData struct." alt="" coords="706,279,853,320"/>
+<area shape="rect" id="node8" title=" " alt="" coords="379,448,521,489"/>
+<area shape="rect" id="node9" title=" " alt="" coords="370,319,530,346"/>
+<area shape="rect" id="node6" title=" " alt="" coords="5,345,129,387"/>
+<area shape="rect" id="node10" title=" " alt="" coords="363,253,537,295"/>
+<area shape="rect" id="node11" title=" " alt="" coords="676,344,883,385"/>
 </map>

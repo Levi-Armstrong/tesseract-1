@@ -2,7 +2,7 @@
 \label{classtesseract__environment_1_1ChangeLinkCollisionEnabledCommand}\index{tesseract\_environment::ChangeLinkCollisionEnabledCommand@{tesseract\_environment::ChangeLinkCollisionEnabledCommand}}
 
 
-{\ttfamily \#include $<$commands.\+h$>$}
+{\ttfamily \#include $<$change\+\_\+link\+\_\+collision\+\_\+enabled\+\_\+command.\+h$>$}
 
 
 
@@ -24,10 +24,19 @@ Collaboration diagram for tesseract\+\_\+environment\+::Change\+Link\+Collision\
 \includegraphics[width=291pt]{d6/db6/classtesseract__environment_1_1ChangeLinkCollisionEnabledCommand__coll__graph}
 \end{center}
 \end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classtesseract__environment_1_1ChangeLinkCollisionEnabledCommand_a3e4165f768b970e92c27e790bd264fec}{Ptr}} = std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classtesseract__environment_1_1ChangeLinkCollisionEnabledCommand}{Change\+Link\+Collision\+Enabled\+Command}} $>$
+\item 
+using \mbox{\hyperlink{classtesseract__environment_1_1ChangeLinkCollisionEnabledCommand_a615b48d3e7e2194a72b86943f5d50656}{Const\+Ptr}} = std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{classtesseract__environment_1_1ChangeLinkCollisionEnabledCommand}{Change\+Link\+Collision\+Enabled\+Command}} $>$
+\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classtesseract__environment_1_1ChangeLinkCollisionEnabledCommand_a9f7aa1cb35c77892d3f7582a9f9a7adb}{Change\+Link\+Collision\+Enabled\+Command}} (std\+::string link\+\_\+name, bool enabled)
+\begin{DoxyCompactList}\small\item\em Set whether a link should be considered during collision checking. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacetesseract__environment_afc00c1aecb519acba3afc24dbd367029}{Command\+Type}} \mbox{\hyperlink{classtesseract__environment_1_1ChangeLinkCollisionEnabledCommand_a7ccbbebe1eba0d2d76dd47dace6d596b}{get\+Type}} () const final
 \item 
 const std\+::string \& \mbox{\hyperlink{classtesseract__environment_1_1ChangeLinkCollisionEnabledCommand_a1aa5c7bbde6bc2a2383413a1ded1787c}{get\+Link\+Name}} () const
 \item 
@@ -40,7 +49,21 @@ std\+::string \mbox{\hyperlink{classtesseract__environment_1_1ChangeLinkCollisio
 \item 
 bool \mbox{\hyperlink{classtesseract__environment_1_1ChangeLinkCollisionEnabledCommand_a9e6965b9e9dba13add7b875697ddb666}{enabled\+\_\+}}
 \end{DoxyCompactItemize}
-\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classtesseract__environment_1_1ChangeLinkCollisionEnabledCommand_a615b48d3e7e2194a72b86943f5d50656}\label{classtesseract__environment_1_1ChangeLinkCollisionEnabledCommand_a615b48d3e7e2194a72b86943f5d50656}} 
+\index{tesseract\_environment::ChangeLinkCollisionEnabledCommand@{tesseract\_environment::ChangeLinkCollisionEnabledCommand}!ConstPtr@{ConstPtr}}
+\index{ConstPtr@{ConstPtr}!tesseract\_environment::ChangeLinkCollisionEnabledCommand@{tesseract\_environment::ChangeLinkCollisionEnabledCommand}}
+\doxysubsubsection{\texorpdfstring{ConstPtr}{ConstPtr}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classtesseract__environment_1_1ChangeLinkCollisionEnabledCommand_a615b48d3e7e2194a72b86943f5d50656}{tesseract\+\_\+environment\+::\+Change\+Link\+Collision\+Enabled\+Command\+::\+Const\+Ptr}} =  std\+::shared\+\_\+ptr$<$const \mbox{\hyperlink{classtesseract__environment_1_1ChangeLinkCollisionEnabledCommand}{Change\+Link\+Collision\+Enabled\+Command}}$>$}
+
+\mbox{\Hypertarget{classtesseract__environment_1_1ChangeLinkCollisionEnabledCommand_a3e4165f768b970e92c27e790bd264fec}\label{classtesseract__environment_1_1ChangeLinkCollisionEnabledCommand_a3e4165f768b970e92c27e790bd264fec}} 
+\index{tesseract\_environment::ChangeLinkCollisionEnabledCommand@{tesseract\_environment::ChangeLinkCollisionEnabledCommand}!Ptr@{Ptr}}
+\index{Ptr@{Ptr}!tesseract\_environment::ChangeLinkCollisionEnabledCommand@{tesseract\_environment::ChangeLinkCollisionEnabledCommand}}
+\doxysubsubsection{\texorpdfstring{Ptr}{Ptr}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classtesseract__environment_1_1ChangeLinkCollisionEnabledCommand_a3e4165f768b970e92c27e790bd264fec}{tesseract\+\_\+environment\+::\+Change\+Link\+Collision\+Enabled\+Command\+::\+Ptr}} =  std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classtesseract__environment_1_1ChangeLinkCollisionEnabledCommand}{Change\+Link\+Collision\+Enabled\+Command}}$>$}
+
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
@@ -50,6 +73,17 @@ bool \mbox{\hyperlink{classtesseract__environment_1_1ChangeLinkCollisionEnabledC
 \doxysubsubsection{\texorpdfstring{ChangeLinkCollisionEnabledCommand()}{ChangeLinkCollisionEnabledCommand()}}
 {\footnotesize\ttfamily tesseract\+\_\+environment\+::\+Change\+Link\+Collision\+Enabled\+Command\+::\+Change\+Link\+Collision\+Enabled\+Command (\begin{DoxyParamCaption}\item[{std\+::string}]{link\+\_\+name,  }\item[{bool}]{enabled }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
+
+
+Set whether a link should be considered during collision checking. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em link\+\_\+name} & The link name to modify collision enabled \\
+\hline
+{\em enabled} & True if should be condisdered during collision checking, otherwise false \\
+\hline
+\end{DoxyParams}
 
 
 \doxysubsection{Member Function Documentation}
@@ -64,6 +98,16 @@ bool \mbox{\hyperlink{classtesseract__environment_1_1ChangeLinkCollisionEnabledC
 \index{getLinkName@{getLinkName}!tesseract\_environment::ChangeLinkCollisionEnabledCommand@{tesseract\_environment::ChangeLinkCollisionEnabledCommand}}
 \doxysubsubsection{\texorpdfstring{getLinkName()}{getLinkName()}}
 {\footnotesize\ttfamily const std\+::string\& tesseract\+\_\+environment\+::\+Change\+Link\+Collision\+Enabled\+Command\+::get\+Link\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classtesseract__environment_1_1ChangeLinkCollisionEnabledCommand_a7ccbbebe1eba0d2d76dd47dace6d596b}\label{classtesseract__environment_1_1ChangeLinkCollisionEnabledCommand_a7ccbbebe1eba0d2d76dd47dace6d596b}} 
+\index{tesseract\_environment::ChangeLinkCollisionEnabledCommand@{tesseract\_environment::ChangeLinkCollisionEnabledCommand}!getType@{getType}}
+\index{getType@{getType}!tesseract\_environment::ChangeLinkCollisionEnabledCommand@{tesseract\_environment::ChangeLinkCollisionEnabledCommand}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacetesseract__environment_afc00c1aecb519acba3afc24dbd367029}{Command\+Type}} tesseract\+\_\+environment\+::\+Change\+Link\+Collision\+Enabled\+Command\+::get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [final]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classtesseract__environment_1_1Command_ae76293ca1e231a278dcd79c1ec16490f}{tesseract\+\_\+environment\+::\+Command}}.
 
 
 
@@ -84,4 +128,4 @@ bool \mbox{\hyperlink{classtesseract__environment_1_1ChangeLinkCollisionEnabledC
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-tesseract/tesseract\+\_\+environment/include/tesseract\+\_\+environment/core/\mbox{\hyperlink{commands_8h}{commands.\+h}}\end{DoxyCompactItemize}
+tesseract\+\_\+environment/include/tesseract\+\_\+environment/commands/\mbox{\hyperlink{change__link__collision__enabled__command_8h}{change\+\_\+link\+\_\+collision\+\_\+enabled\+\_\+command.\+h}}\end{DoxyCompactItemize}

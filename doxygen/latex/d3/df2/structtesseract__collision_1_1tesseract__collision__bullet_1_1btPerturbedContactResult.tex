@@ -25,9 +25,9 @@ Collaboration diagram for tesseract\+\_\+collision\+::tesseract\+\_\+collision\+
 \item 
 \mbox{\hyperlink{structtesseract__collision_1_1tesseract__collision__bullet_1_1btPerturbedContactResult_ab06f4c1256ff21b9b0f0988832321ff1}{bt\+Perturbed\+Contact\+Result}} (bt\+Manifold\+Result $\ast$original\+Result, const bt\+Transform \&transformA, const bt\+Transform \&transformB, const bt\+Transform \&un\+Perturbed\+Transform, bool perturbA, bt\+IDebug\+Draw $\ast$debug\+Drawer)
 \item 
-virtual \mbox{\hyperlink{structtesseract__collision_1_1tesseract__collision__bullet_1_1btPerturbedContactResult_a69080adfde80a1c38d8a200d813f3ed7}{$\sim$bt\+Perturbed\+Contact\+Result}} ()
+\mbox{\hyperlink{structtesseract__collision_1_1tesseract__collision__bullet_1_1btPerturbedContactResult_afe60bef93c10b2225bfd29569d7710a4}{$\sim$bt\+Perturbed\+Contact\+Result}} () override=default
 \item 
-virtual void \mbox{\hyperlink{structtesseract__collision_1_1tesseract__collision__bullet_1_1btPerturbedContactResult_a0a9d0bdc93a2b1e33fa7fa10c22dc122}{add\+Contact\+Point}} (const bt\+Vector3 \&normal\+On\+BIn\+World, const bt\+Vector3 \&point\+In\+World, bt\+Scalar org\+Depth)
+void \mbox{\hyperlink{structtesseract__collision_1_1tesseract__collision__bullet_1_1btPerturbedContactResult_adfe61fd67c6ff87b6eafce2ba21be9a8}{add\+Contact\+Point}} (const bt\+Vector3 \&normal\+On\+BIn\+World, const bt\+Vector3 \&point\+In\+World, bt\+Scalar org\+Depth) override
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
@@ -53,20 +53,20 @@ bt\+IDebug\+Draw $\ast$ \mbox{\hyperlink{structtesseract__collision_1_1tesseract
 \doxysubsubsection{\texorpdfstring{btPerturbedContactResult()}{btPerturbedContactResult()}}
 {\footnotesize\ttfamily tesseract\+\_\+collision\+::tesseract\+\_\+collision\+\_\+bullet\+::bt\+Perturbed\+Contact\+Result\+::bt\+Perturbed\+Contact\+Result (\begin{DoxyParamCaption}\item[{bt\+Manifold\+Result $\ast$}]{original\+Result,  }\item[{const bt\+Transform \&}]{transformA,  }\item[{const bt\+Transform \&}]{transformB,  }\item[{const bt\+Transform \&}]{un\+Perturbed\+Transform,  }\item[{bool}]{perturbA,  }\item[{bt\+IDebug\+Draw $\ast$}]{debug\+Drawer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
-\mbox{\Hypertarget{structtesseract__collision_1_1tesseract__collision__bullet_1_1btPerturbedContactResult_a69080adfde80a1c38d8a200d813f3ed7}\label{structtesseract__collision_1_1tesseract__collision__bullet_1_1btPerturbedContactResult_a69080adfde80a1c38d8a200d813f3ed7}} 
+\mbox{\Hypertarget{structtesseract__collision_1_1tesseract__collision__bullet_1_1btPerturbedContactResult_afe60bef93c10b2225bfd29569d7710a4}\label{structtesseract__collision_1_1tesseract__collision__bullet_1_1btPerturbedContactResult_afe60bef93c10b2225bfd29569d7710a4}} 
 \index{tesseract\_collision::tesseract\_collision\_bullet::btPerturbedContactResult@{tesseract\_collision::tesseract\_collision\_bullet::btPerturbedContactResult}!````~btPerturbedContactResult@{$\sim$btPerturbedContactResult}}
 \index{````~btPerturbedContactResult@{$\sim$btPerturbedContactResult}!tesseract\_collision::tesseract\_collision\_bullet::btPerturbedContactResult@{tesseract\_collision::tesseract\_collision\_bullet::btPerturbedContactResult}}
 \doxysubsubsection{\texorpdfstring{$\sim$btPerturbedContactResult()}{~btPerturbedContactResult()}}
-{\footnotesize\ttfamily virtual tesseract\+\_\+collision\+::tesseract\+\_\+collision\+\_\+bullet\+::bt\+Perturbed\+Contact\+Result\+::$\sim$bt\+Perturbed\+Contact\+Result (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily tesseract\+\_\+collision\+::tesseract\+\_\+collision\+\_\+bullet\+::bt\+Perturbed\+Contact\+Result\+::$\sim$bt\+Perturbed\+Contact\+Result (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [default]}}
 
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{structtesseract__collision_1_1tesseract__collision__bullet_1_1btPerturbedContactResult_a0a9d0bdc93a2b1e33fa7fa10c22dc122}\label{structtesseract__collision_1_1tesseract__collision__bullet_1_1btPerturbedContactResult_a0a9d0bdc93a2b1e33fa7fa10c22dc122}} 
+\mbox{\Hypertarget{structtesseract__collision_1_1tesseract__collision__bullet_1_1btPerturbedContactResult_adfe61fd67c6ff87b6eafce2ba21be9a8}\label{structtesseract__collision_1_1tesseract__collision__bullet_1_1btPerturbedContactResult_adfe61fd67c6ff87b6eafce2ba21be9a8}} 
 \index{tesseract\_collision::tesseract\_collision\_bullet::btPerturbedContactResult@{tesseract\_collision::tesseract\_collision\_bullet::btPerturbedContactResult}!addContactPoint@{addContactPoint}}
 \index{addContactPoint@{addContactPoint}!tesseract\_collision::tesseract\_collision\_bullet::btPerturbedContactResult@{tesseract\_collision::tesseract\_collision\_bullet::btPerturbedContactResult}}
 \doxysubsubsection{\texorpdfstring{addContactPoint()}{addContactPoint()}}
-{\footnotesize\ttfamily virtual void tesseract\+\_\+collision\+::tesseract\+\_\+collision\+\_\+bullet\+::bt\+Perturbed\+Contact\+Result\+::add\+Contact\+Point (\begin{DoxyParamCaption}\item[{const bt\+Vector3 \&}]{normal\+On\+BIn\+World,  }\item[{const bt\+Vector3 \&}]{point\+In\+World,  }\item[{bt\+Scalar}]{org\+Depth }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily void tesseract\+\_\+collision\+::tesseract\+\_\+collision\+\_\+bullet\+::bt\+Perturbed\+Contact\+Result\+::add\+Contact\+Point (\begin{DoxyParamCaption}\item[{const bt\+Vector3 \&}]{normal\+On\+BIn\+World,  }\item[{const bt\+Vector3 \&}]{point\+In\+World,  }\item[{bt\+Scalar}]{org\+Depth }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}}
 
 
 
@@ -111,4 +111,4 @@ bt\+IDebug\+Draw $\ast$ \mbox{\hyperlink{structtesseract__collision_1_1tesseract
 
 The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-tesseract/tesseract\+\_\+collision/src/bullet/\mbox{\hyperlink{tesseract__convex__convex__algorithm_8cpp}{tesseract\+\_\+convex\+\_\+convex\+\_\+algorithm.\+cpp}}\end{DoxyCompactItemize}
+tesseract\+\_\+collision/bullet/src/\mbox{\hyperlink{tesseract__convex__convex__algorithm_8cpp}{tesseract\+\_\+convex\+\_\+convex\+\_\+algorithm.\+cpp}}\end{DoxyCompactItemize}

@@ -1,11 +1,12 @@
-\hypertarget{bullet__utils_8cpp}{}\doxysection{tesseract/tesseract\+\_\+collision/src/bullet/bullet\+\_\+utils.cpp File Reference}
-\label{bullet__utils_8cpp}\index{tesseract/tesseract\_collision/src/bullet/bullet\_utils.cpp@{tesseract/tesseract\_collision/src/bullet/bullet\_utils.cpp}}
+\hypertarget{bullet__utils_8cpp}{}\doxysection{tesseract\+\_\+collision/bullet/src/bullet\+\_\+utils.cpp File Reference}
+\label{bullet__utils_8cpp}\index{tesseract\_collision/bullet/src/bullet\_utils.cpp@{tesseract\_collision/bullet/src/bullet\_utils.cpp}}
 
 
 Tesseract ROS Bullet environment utility function.  
 
 
 {\ttfamily \#include \char`\"{}tesseract\+\_\+collision/bullet/bullet\+\_\+utils.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$Linear\+Math/bt\+Convex\+Hull\+Computer.\+h$>$}\newline
 {\ttfamily \#include $<$Bullet\+Collision/\+Collision\+Dispatch/bt\+Convex\+Convex\+Algorithm.\+h$>$}\newline
 {\ttfamily \#include $<$Bullet\+Collision/\+Collision\+Shapes/bt\+Shape\+Hull.\+h$>$}\newline
 {\ttfamily \#include $<$Bullet\+Collision/\+Gimpact/bt\+Triangle\+Shape\+Ex.\+h$>$}\newline
@@ -48,11 +49,6 @@ std\+::shared\+\_\+ptr$<$ bt\+Collision\+Shape $>$ \mbox{\hyperlink{namespacetes
 \item 
 std\+::shared\+\_\+ptr$<$ bt\+Collision\+Shape $>$ \mbox{\hyperlink{namespacetesseract__collision_1_1tesseract__collision__bullet_adb87ec9db8f5ae1e636887a432379af4}{tesseract\+\_\+collision\+::tesseract\+\_\+collision\+\_\+bullet\+::create\+Shape\+Primitive}} (const Collision\+Shape\+Const\+Ptr \&geom, Collision\+Object\+Wrapper $\ast$cow, int shape\+\_\+index)
 \begin{DoxyCompactList}\small\item\em Create a bullet collision shape from tesseract collision shape. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Variables}
-\begin{DoxyCompactItemize}
-\item 
-\mbox{\hyperlink{macros_8h_a8cc0e3c6a3382c5c0b19eb9e676fc2db}{TESSERACT\+\_\+\+COMMON\+\_\+\+IGNORE\+\_\+\+WARNINGS\+\_\+\+PUSH}} \mbox{\hyperlink{macros_8h_a7af8561cf52519e9896b0697095c1b8b}{TESSERACT\+\_\+\+COMMON\+\_\+\+IGNORE\+\_\+\+WARNINGS\+\_\+\+POP}} bt\+Scalar \mbox{\hyperlink{bullet__utils_8cpp_a265b84cce0521ae2a9708ab0ae829d70}{g\+Dbvt\+Margin}} = 0
-\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -70,7 +66,7 @@ Dec 18, 2017
 TODO 
 \end{DoxyVersion}
 \begin{DoxyRefDesc}{Bug}
-\item[\mbox{\hyperlink{bug__bug000020}{Bug}}]No known bugs\end{DoxyRefDesc}
+\item[\mbox{\hyperlink{bug__bug000015}{Bug}}]No known bugs\end{DoxyRefDesc}
 
 
 \begin{DoxyCopyright}{Copyright}
@@ -97,12 +93,3 @@ Redistribution and use in source and binary forms, with or without modification,
 \begin{DoxyParagraph}{}
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \char`\"{}\+AS IS\char`\"{} AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. 
 \end{DoxyParagraph}
-
-
-\doxysubsection{Variable Documentation}
-\mbox{\Hypertarget{bullet__utils_8cpp_a265b84cce0521ae2a9708ab0ae829d70}\label{bullet__utils_8cpp_a265b84cce0521ae2a9708ab0ae829d70}} 
-\index{bullet\_utils.cpp@{bullet\_utils.cpp}!gDbvtMargin@{gDbvtMargin}}
-\index{gDbvtMargin@{gDbvtMargin}!bullet\_utils.cpp@{bullet\_utils.cpp}}
-\doxysubsubsection{\texorpdfstring{gDbvtMargin}{gDbvtMargin}}
-{\footnotesize\ttfamily \mbox{\hyperlink{macros_8h_a8cc0e3c6a3382c5c0b19eb9e676fc2db}{TESSERACT\+\_\+\+COMMON\+\_\+\+IGNORE\+\_\+\+WARNINGS\+\_\+\+PUSH}} \mbox{\hyperlink{macros_8h_a7af8561cf52519e9896b0697095c1b8b}{TESSERACT\+\_\+\+COMMON\+\_\+\+IGNORE\+\_\+\+WARNINGS\+\_\+\+POP}} bt\+Scalar g\+Dbvt\+Margin = 0}
-

@@ -7,6 +7,8 @@ class \mbox{\hyperlink{classtesseract__collision_1_1tesseract__collision__fcl_1_
 \begin{DoxyCompactList}\small\item\em This is a wrapper around FCL Collision Object Class which allows you to expand the AABB by the contact dist. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classtesseract__collision_1_1tesseract__collision__fcl_1_1FCLDiscreteBVHManager}{FCLDiscrete\+BVHManager}}
 \begin{DoxyCompactList}\small\item\em A FCL implementation of the discrete contact manager. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classtesseract__collision_1_1tesseract__collision__fcl_1_1FCLDiscreteBVHManagerFactory}{FCLDiscrete\+BVHManager\+Factory}}
+\item 
 class \mbox{\hyperlink{classtesseract__collision_1_1tesseract__collision__fcl_1_1CollisionObjectWrapper}{Collision\+Object\+Wrapper}}
 \begin{DoxyCompactList}\small\item\em This is a Tesseract link collision object wrapper which add items specific to tesseract. It is a wrapper around a tesseract link which may contain several collision objects. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Typedefs}
@@ -42,7 +44,7 @@ enum \mbox{\hyperlink{namespacetesseract__collision_1_1tesseract__collision__fcl
 \item 
 \mbox{\hyperlink{classtesseract__collision_1_1tesseract__collision__fcl_1_1CollisionObjectWrapper_aaf34b4748fdf60924fdc077aba998788}{COW\+::\+Ptr}} \mbox{\hyperlink{namespacetesseract__collision_1_1tesseract__collision__fcl_ac51107420aad60e96d74d9f6565e6b80}{create\+FCLCollision\+Object}} (const std\+::string \&name, const int \&type\+\_\+id, const \mbox{\hyperlink{namespacetesseract__collision_a2472107aae8174a30873bb0a955c3cb4}{Collision\+Shapes\+Const}} \&shapes, const \mbox{\hyperlink{namespacetesseract__common_a94d9921fc7ed323609ac57d06f939cb6}{tesseract\+\_\+common\+::\+Vector\+Isometry3d}} \&shape\+\_\+poses, bool enabled)
 \item 
-void \mbox{\hyperlink{namespacetesseract__collision_1_1tesseract__collision__fcl_a3ee71fcd65b6047f891fad2ccaf33c33}{update\+Collision\+Object\+Filters}} (const std\+::vector$<$ std\+::string $>$ \&active, const \mbox{\hyperlink{classtesseract__collision_1_1tesseract__collision__fcl_1_1CollisionObjectWrapper_aaf34b4748fdf60924fdc077aba998788}{COW\+::\+Ptr}} \&cow, const std\+::unique\+\_\+ptr$<$ fcl\+::\+Broad\+Phase\+Collision\+Managerd $>$ \&static\+\_\+manager, const std\+::unique\+\_\+ptr$<$ fcl\+::\+Broad\+Phase\+Collision\+Managerd $>$ \&dynamic\+\_\+manager)
+void \mbox{\hyperlink{namespacetesseract__collision_1_1tesseract__collision__fcl_a3ee71fcd65b6047f891fad2ccaf33c33}{update\+Collision\+Object\+Filters}} (const \mbox{\hyperlink{vhacdRaycastMesh_8cpp_adcf134d50025cc52907d0c8ac798d89d}{std\+::vector}}$<$ std\+::string $>$ \&active, const \mbox{\hyperlink{classtesseract__collision_1_1tesseract__collision__fcl_1_1CollisionObjectWrapper_aaf34b4748fdf60924fdc077aba998788}{COW\+::\+Ptr}} \&cow, const std\+::unique\+\_\+ptr$<$ fcl\+::\+Broad\+Phase\+Collision\+Managerd $>$ \&static\+\_\+manager, const std\+::unique\+\_\+ptr$<$ fcl\+::\+Broad\+Phase\+Collision\+Managerd $>$ \&dynamic\+\_\+manager)
 \begin{DoxyCompactList}\small\item\em Update collision objects filters. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{namespacetesseract__collision_1_1tesseract__collision__fcl_ac8ce443c1dc3dd3345d0a28770b412d4}{collision\+Callback}} (fcl\+::\+Collision\+Objectd $\ast$o1, fcl\+::\+Collision\+Objectd $\ast$o2, void $\ast$data)
 \item 
@@ -251,7 +253,7 @@ This is used to perform self check for fcl. The AABB Tree self check is N$^\wedg
 \index{tesseract\_collision::tesseract\_collision\_fcl@{tesseract\_collision::tesseract\_collision\_fcl}!updateCollisionObjectFilters@{updateCollisionObjectFilters}}
 \index{updateCollisionObjectFilters@{updateCollisionObjectFilters}!tesseract\_collision::tesseract\_collision\_fcl@{tesseract\_collision::tesseract\_collision\_fcl}}
 \doxysubsubsection{\texorpdfstring{updateCollisionObjectFilters()}{updateCollisionObjectFilters()}}
-{\footnotesize\ttfamily void tesseract\+\_\+collision\+::tesseract\+\_\+collision\+\_\+fcl\+::update\+Collision\+Object\+Filters (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::string $>$ \&}]{active,  }\item[{const \mbox{\hyperlink{classtesseract__collision_1_1tesseract__collision__fcl_1_1CollisionObjectWrapper_aaf34b4748fdf60924fdc077aba998788}{COW\+::\+Ptr}} \&}]{cow,  }\item[{const std\+::unique\+\_\+ptr$<$ fcl\+::\+Broad\+Phase\+Collision\+Managerd $>$ \&}]{static\+\_\+manager,  }\item[{const std\+::unique\+\_\+ptr$<$ fcl\+::\+Broad\+Phase\+Collision\+Managerd $>$ \&}]{dynamic\+\_\+manager }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily void tesseract\+\_\+collision\+::tesseract\+\_\+collision\+\_\+fcl\+::update\+Collision\+Object\+Filters (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{vhacdRaycastMesh_8cpp_adcf134d50025cc52907d0c8ac798d89d}{std\+::vector}}$<$ std\+::string $>$ \&}]{active,  }\item[{const \mbox{\hyperlink{classtesseract__collision_1_1tesseract__collision__fcl_1_1CollisionObjectWrapper_aaf34b4748fdf60924fdc077aba998788}{COW\+::\+Ptr}} \&}]{cow,  }\item[{const std\+::unique\+\_\+ptr$<$ fcl\+::\+Broad\+Phase\+Collision\+Managerd $>$ \&}]{static\+\_\+manager,  }\item[{const std\+::unique\+\_\+ptr$<$ fcl\+::\+Broad\+Phase\+Collision\+Managerd $>$ \&}]{dynamic\+\_\+manager }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 

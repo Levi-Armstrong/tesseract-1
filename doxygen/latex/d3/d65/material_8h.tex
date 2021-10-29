@@ -1,18 +1,13 @@
-\hypertarget{material_8h}{}\doxysection{tesseract/tesseract\+\_\+urdf/include/tesseract\+\_\+urdf/material.h File Reference}
-\label{material_8h}\index{tesseract/tesseract\_urdf/include/tesseract\_urdf/material.h@{tesseract/tesseract\_urdf/include/tesseract\_urdf/material.h}}
+\hypertarget{material_8h}{}\doxysection{tesseract\+\_\+urdf/include/tesseract\+\_\+urdf/material.h File Reference}
+\label{material_8h}\index{tesseract\_urdf/include/tesseract\_urdf/material.h@{tesseract\_urdf/include/tesseract\_urdf/material.h}}
 
 
 Parse material from xml string.  
 
 
 {\ttfamily \#include $<$tesseract\+\_\+common/macros.\+h$>$}\newline
-{\ttfamily \#include $<$tesseract\+\_\+common/status\+\_\+code.\+h$>$}\newline
-{\ttfamily \#include $<$tesseract\+\_\+common/utils.\+h$>$}\newline
-{\ttfamily \#include $<$Eigen/\+Geometry$>$}\newline
-{\ttfamily \#include $<$tinyxml2.\+h$>$}\newline
-{\ttfamily \#include $<$boost/algorithm/string.\+hpp$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
 {\ttfamily \#include $<$unordered\+\_\+map$>$}\newline
-{\ttfamily \#include $<$tesseract\+\_\+scene\+\_\+graph/link.\+h$>$}\newline
 Include dependency graph for material.\+h\+:
 \nopagebreak
 \begin{figure}[H]
@@ -29,20 +24,21 @@ This graph shows which files directly or indirectly include this file\+:
 \includegraphics[width=350pt]{db/dbd/material_8h__dep__incl}
 \end{center}
 \end{figure}
-\doxysubsection*{Classes}
-\begin{DoxyCompactItemize}
-\item 
-class \mbox{\hyperlink{classtesseract__urdf_1_1MaterialStatusCategory}{tesseract\+\_\+urdf\+::\+Material\+Status\+Category}}
-\end{DoxyCompactItemize}
 \doxysubsection*{Namespaces}
 \begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacetinyxml2}{tinyxml2}}
+\item 
+ \mbox{\hyperlink{namespacetesseract__scene__graph}{tesseract\+\_\+scene\+\_\+graph}}
 \item 
  \mbox{\hyperlink{namespacetesseract__urdf}{tesseract\+\_\+urdf}}
 \end{DoxyCompactItemize}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classtesseract__common_1_1StatusCode_a2b285106bd9f4963d1696b9696dbaf5f}{tesseract\+\_\+common\+::\+Status\+Code\+::\+Ptr}} \mbox{\hyperlink{namespacetesseract__urdf_ab34f47487ad745dbc4504b29cf18580b}{tesseract\+\_\+urdf\+::parse}} (\mbox{\hyperlink{classtesseract__scene__graph_1_1Material_a9d68bd33aa85035e3b291c13d6ae7a98}{tesseract\+\_\+scene\+\_\+graph\+::\+Material\+::\+Ptr}} \&material, const tinyxml2\+::\+XMLElement $\ast$xml\+\_\+element, std\+::unordered\+\_\+map$<$ std\+::string, \mbox{\hyperlink{classtesseract__scene__graph_1_1Material_a9d68bd33aa85035e3b291c13d6ae7a98}{tesseract\+\_\+scene\+\_\+graph\+::\+Material\+::\+Ptr}} $>$ \&available\+\_\+materials, const bool allow\+\_\+anonymous, const int)
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classtesseract__scene__graph_1_1Material}{tesseract\+\_\+scene\+\_\+graph\+::\+Material}} $>$ \mbox{\hyperlink{namespacetesseract__urdf_ac667bc9e9e20f0747279a479cfada4a5}{tesseract\+\_\+urdf\+::parse\+Material}} (const tinyxml2\+::\+XMLElement $\ast$xml\+\_\+element, std\+::unordered\+\_\+map$<$ std\+::string, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classtesseract__scene__graph_1_1Material}{tesseract\+\_\+scene\+\_\+graph\+::\+Material}} $>$$>$ \&available\+\_\+materials, bool allow\+\_\+anonymous, int version)
+\begin{DoxyCompactList}\small\item\em Parse xml element material. \end{DoxyCompactList}\item 
+tinyxml2\+::\+XMLElement $\ast$ \mbox{\hyperlink{namespacetesseract__urdf_ab1fcba4c6fb26d4987068e770c44ea6a}{tesseract\+\_\+urdf\+::write\+Material}} (const std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{classtesseract__scene__graph_1_1Material}{tesseract\+\_\+scene\+\_\+graph\+::\+Material}} $>$ \&material, tinyxml2\+::\+XMLDocument \&doc)
 \end{DoxyCompactItemize}
 
 
@@ -59,7 +55,7 @@ September 1, 2019
 TODO 
 \end{DoxyVersion}
 \begin{DoxyRefDesc}{Bug}
-\item[\mbox{\hyperlink{bug__bug000343}{Bug}}]No known bugs\end{DoxyRefDesc}
+\item[\mbox{\hyperlink{bug__bug000196}{Bug}}]No known bugs\end{DoxyRefDesc}
 
 
 \begin{DoxyCopyright}{Copyright}

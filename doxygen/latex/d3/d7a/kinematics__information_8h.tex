@@ -1,5 +1,5 @@
-\hypertarget{kinematics__information_8h}{}\doxysection{tesseract/tesseract\+\_\+scene\+\_\+graph/include/tesseract\+\_\+scene\+\_\+graph/kinematics\+\_\+information.h File Reference}
-\label{kinematics__information_8h}\index{tesseract/tesseract\_scene\_graph/include/tesseract\_scene\_graph/kinematics\_information.h@{tesseract/tesseract\_scene\_graph/include/tesseract\_scene\_graph/kinematics\_information.h}}
+\hypertarget{kinematics__information_8h}{}\doxysection{tesseract\+\_\+srdf/include/tesseract\+\_\+srdf/kinematics\+\_\+information.h File Reference}
+\label{kinematics__information_8h}\index{tesseract\_srdf/include/tesseract\_srdf/kinematics\_information.h@{tesseract\_srdf/include/tesseract\_srdf/kinematics\_information.h}}
 
 
 This hold the kinematics information.  
@@ -10,8 +10,10 @@ This hold the kinematics information.
 {\ttfamily \#include $<$string$>$}\newline
 {\ttfamily \#include $<$vector$>$}\newline
 {\ttfamily \#include $<$array$>$}\newline
+{\ttfamily \#include $<$map$>$}\newline
 {\ttfamily \#include $<$Eigen/\+Geometry$>$}\newline
 {\ttfamily \#include $<$tesseract\+\_\+common/types.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+common/utils.\+h$>$}\newline
 Include dependency graph for kinematics\+\_\+information.\+h\+:
 \nopagebreak
 \begin{figure}[H]
@@ -31,53 +33,39 @@ This graph shows which files directly or indirectly include this file\+:
 \doxysubsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
-struct \mbox{\hyperlink{structtesseract__scene__graph_1_1OPWKinematicParameters}{tesseract\+\_\+scene\+\_\+graph\+::\+OPWKinematic\+Parameters}}
-\begin{DoxyCompactList}\small\item\em A structure to hold opw kinematics data. \end{DoxyCompactList}\item 
-struct \mbox{\hyperlink{structtesseract__scene__graph_1_1ROPKinematicParameters}{tesseract\+\_\+scene\+\_\+graph\+::\+ROPKinematic\+Parameters}}
-\item 
-struct \mbox{\hyperlink{structtesseract__scene__graph_1_1REPKinematicParameters}{tesseract\+\_\+scene\+\_\+graph\+::\+REPKinematic\+Parameters}}
-\item 
-struct \mbox{\hyperlink{structtesseract__scene__graph_1_1KinematicsInformation}{tesseract\+\_\+scene\+\_\+graph\+::\+Kinematics\+Information}}
+struct \mbox{\hyperlink{structtesseract__srdf_1_1KinematicsInformation}{tesseract\+\_\+srdf\+::\+Kinematics\+Information}}
 \begin{DoxyCompactList}\small\item\em This hold the kinematics information used to create the SRDF and is the data container for the manipulator manager. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Namespaces}
 \begin{DoxyCompactItemize}
 \item 
- \mbox{\hyperlink{namespacetesseract__scene__graph}{tesseract\+\_\+scene\+\_\+graph}}
+ \mbox{\hyperlink{namespacetesseract__srdf}{tesseract\+\_\+srdf}}
 \begin{DoxyCompactList}\small\item\em Main namespace. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Typedefs}
 \begin{DoxyCompactItemize}
 \item 
-using \mbox{\hyperlink{namespacetesseract__scene__graph_a77b1884f10925e2c431045d0d4d134e0}{tesseract\+\_\+scene\+\_\+graph\+::\+Groups\+Joint\+State}} = std\+::unordered\+\_\+map$<$ std\+::string, double $>$
+using \mbox{\hyperlink{namespacetesseract__srdf_a0009f3795f0da60af2cfec8b9b4a1a32}{tesseract\+\_\+srdf\+::\+Groups\+Joint\+State}} = std\+::unordered\+\_\+map$<$ std\+::string, double $>$
 \item 
-using \mbox{\hyperlink{namespacetesseract__scene__graph_a110c4857ad1a17088da7cc7d32b00fb8}{tesseract\+\_\+scene\+\_\+graph\+::\+Groups\+Joint\+States}} = std\+::unordered\+\_\+map$<$ std\+::string, Groups\+Joint\+State $>$
+using \mbox{\hyperlink{namespacetesseract__srdf_a16b9f51d6021d9266cae3ac5e237bc3a}{tesseract\+\_\+srdf\+::\+Groups\+Joint\+States}} = std\+::unordered\+\_\+map$<$ std\+::string, Groups\+Joint\+State $>$
 \item 
-using \mbox{\hyperlink{namespacetesseract__scene__graph_ab80a8d02a40b16de527327ba2487ffb8}{tesseract\+\_\+scene\+\_\+graph\+::\+Group\+Joint\+States}} = std\+::unordered\+\_\+map$<$ std\+::string, Groups\+Joint\+States $>$
+using \mbox{\hyperlink{namespacetesseract__srdf_a893adac8aedb290029dd8c0c1227bb2a}{tesseract\+\_\+srdf\+::\+Group\+Joint\+States}} = std\+::unordered\+\_\+map$<$ std\+::string, Groups\+Joint\+States $>$
 \item 
-using \mbox{\hyperlink{namespacetesseract__scene__graph_a18bcf73ffc76d25188696564005cf569}{tesseract\+\_\+scene\+\_\+graph\+::\+Groups\+TCPs}} = \mbox{\hyperlink{namespacetesseract__common_a2c5a4b6149060671cf8c3f9d15ef58c4}{tesseract\+\_\+common\+::\+Aligned\+Map}}$<$ std\+::string, Eigen\+::\+Isometry3d $>$
+using \mbox{\hyperlink{namespacetesseract__srdf_ae2edf968cb4b2f9bf98c92c67e2b5135}{tesseract\+\_\+srdf\+::\+Groups\+TCPs}} = \mbox{\hyperlink{namespacetesseract__common_a2c5a4b6149060671cf8c3f9d15ef58c4}{tesseract\+\_\+common\+::\+Aligned\+Map}}$<$ std\+::string, Eigen\+::\+Isometry3d $>$
 \item 
-using \mbox{\hyperlink{namespacetesseract__scene__graph_aeee0af01091daa5112d3a5e167c09951}{tesseract\+\_\+scene\+\_\+graph\+::\+Group\+TCPs}} = \mbox{\hyperlink{namespacetesseract__common_a2c5a4b6149060671cf8c3f9d15ef58c4}{tesseract\+\_\+common\+::\+Aligned\+Map}}$<$ std\+::string, Groups\+TCPs $>$
+using \mbox{\hyperlink{namespacetesseract__srdf_a757e7e21be5f06ad7817852a859a14d5}{tesseract\+\_\+srdf\+::\+Group\+TCPs}} = \mbox{\hyperlink{namespacetesseract__common_a2c5a4b6149060671cf8c3f9d15ef58c4}{tesseract\+\_\+common\+::\+Aligned\+Map}}$<$ std\+::string, Groups\+TCPs $>$
 \item 
-using \mbox{\hyperlink{namespacetesseract__scene__graph_af59fa5cf100507d2b1544006747c5333}{tesseract\+\_\+scene\+\_\+graph\+::\+Chain\+Group}} = std\+::vector$<$ std\+::pair$<$ std\+::string, std\+::string $>$ $>$
+using \mbox{\hyperlink{namespacetesseract__srdf_ac49776831006079227596c269fe5509b}{tesseract\+\_\+srdf\+::\+Chain\+Group}} = \mbox{\hyperlink{vhacdRaycastMesh_8cpp_adcf134d50025cc52907d0c8ac798d89d}{std\+::vector}}$<$ std\+::pair$<$ std\+::string, std\+::string $>$ $>$
 \item 
-using \mbox{\hyperlink{namespacetesseract__scene__graph_a3abd6411aec87a44d780401c2cb30cf9}{tesseract\+\_\+scene\+\_\+graph\+::\+Chain\+Groups}} = std\+::unordered\+\_\+map$<$ std\+::string, Chain\+Group $>$
+using \mbox{\hyperlink{namespacetesseract__srdf_a66daf017abd3ba8dec95b4789e659ffe}{tesseract\+\_\+srdf\+::\+Chain\+Groups}} = std\+::unordered\+\_\+map$<$ std\+::string, Chain\+Group $>$
 \item 
-using \mbox{\hyperlink{namespacetesseract__scene__graph_a7bf9af642abac4d4888c64f4ec6ad832}{tesseract\+\_\+scene\+\_\+graph\+::\+Joint\+Group}} = std\+::vector$<$ std\+::string $>$
+using \mbox{\hyperlink{namespacetesseract__srdf_a26dab32897f63eda9d83d9eb59f82cb7}{tesseract\+\_\+srdf\+::\+Joint\+Group}} = \mbox{\hyperlink{vhacdRaycastMesh_8cpp_adcf134d50025cc52907d0c8ac798d89d}{std\+::vector}}$<$ std\+::string $>$
 \item 
-using \mbox{\hyperlink{namespacetesseract__scene__graph_a242ffd70ca004aa3b080ce297aff77d4}{tesseract\+\_\+scene\+\_\+graph\+::\+Joint\+Groups}} = std\+::unordered\+\_\+map$<$ std\+::string, Joint\+Group $>$
+using \mbox{\hyperlink{namespacetesseract__srdf_a1d5af46a82a66b3277963baa541a2f04}{tesseract\+\_\+srdf\+::\+Joint\+Groups}} = std\+::unordered\+\_\+map$<$ std\+::string, Joint\+Group $>$
 \item 
-using \mbox{\hyperlink{namespacetesseract__scene__graph_a847a67031db93f9304702b1facfd9f6d}{tesseract\+\_\+scene\+\_\+graph\+::\+Link\+Group}} = std\+::vector$<$ std\+::string $>$
+using \mbox{\hyperlink{namespacetesseract__srdf_a780c08d254467e74cedf28edb6953b91}{tesseract\+\_\+srdf\+::\+Link\+Group}} = \mbox{\hyperlink{vhacdRaycastMesh_8cpp_adcf134d50025cc52907d0c8ac798d89d}{std\+::vector}}$<$ std\+::string $>$
 \item 
-using \mbox{\hyperlink{namespacetesseract__scene__graph_ab616c56edf955298f1d2c550edb9548f}{tesseract\+\_\+scene\+\_\+graph\+::\+Link\+Groups}} = std\+::unordered\+\_\+map$<$ std\+::string, Link\+Group $>$
+using \mbox{\hyperlink{namespacetesseract__srdf_a1c4e72bf9949de9db865b53df753ef75}{tesseract\+\_\+srdf\+::\+Link\+Groups}} = std\+::unordered\+\_\+map$<$ std\+::string, Link\+Group $>$
 \item 
-using \mbox{\hyperlink{namespacetesseract__scene__graph_a32f5566007ca12430e9ea9da77a83205}{tesseract\+\_\+scene\+\_\+graph\+::\+Group\+Names}} = std\+::vector$<$ std\+::string $>$
-\item 
-using \mbox{\hyperlink{namespacetesseract__scene__graph_a78f17c9d34861d2c993d97cc82a1e657}{tesseract\+\_\+scene\+\_\+graph\+::\+Group\+ROPKinematics}} = std\+::unordered\+\_\+map$<$ std\+::string, ROPKinematic\+Parameters $>$
-\item 
-using \mbox{\hyperlink{namespacetesseract__scene__graph_acc7a2b9aba7513de98222c5b680baa97}{tesseract\+\_\+scene\+\_\+graph\+::\+Group\+REPKinematics}} = std\+::unordered\+\_\+map$<$ std\+::string, REPKinematic\+Parameters $>$
-\item 
-using \mbox{\hyperlink{namespacetesseract__scene__graph_a33353003fc3c590f3f10a9a1dab84b77}{tesseract\+\_\+scene\+\_\+graph\+::\+Group\+OPWKinematics}} = std\+::unordered\+\_\+map$<$ std\+::string, OPWKinematic\+Parameters $>$
-\item 
-using \mbox{\hyperlink{namespacetesseract__scene__graph_a63a923da37f74c71d5a0497ea61c29c4}{tesseract\+\_\+scene\+\_\+graph\+::\+Group\+Default\+Kinematics\+Solver}} = std\+::unordered\+\_\+map$<$ std\+::string, std\+::string $>$
+using \mbox{\hyperlink{namespacetesseract__srdf_a4521a965628b7a88ca489d6c3c5f56ff}{tesseract\+\_\+srdf\+::\+Group\+Names}} = std\+::set$<$ std\+::string $>$
 \end{DoxyCompactItemize}
 
 
@@ -94,7 +82,7 @@ May 12, 2020
 TODO 
 \end{DoxyVersion}
 \begin{DoxyRefDesc}{Bug}
-\item[\mbox{\hyperlink{bug__bug000323}{Bug}}]No known bugs\end{DoxyRefDesc}
+\item[\mbox{\hyperlink{bug__bug000163}{Bug}}]No known bugs\end{DoxyRefDesc}
 
 
 \begin{DoxyCopyright}{Copyright}

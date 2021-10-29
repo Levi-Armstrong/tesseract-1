@@ -1,10 +1,8 @@
 <map id="tesseract_visualization::TesseractIgnitionVisualization" name="tesseract_visualization::TesseractIgnitionVisualization">
-<area shape="rect" id="node1" title="The Tesseract Ignition Vizualization class." alt="" coords="933,71,1135,112"/>
-<area shape="rect" id="node2" href="$df/d78/classtesseract__visualization_1_1Visualization.html" title="The Vizualization class." alt="" coords="632,5,787,47"/>
-<area shape="rect" id="node3" href="$d8/d9c/classtesseract__visualization_1_1EntityManager.html" title=" " alt="" coords="632,71,787,112"/>
-<area shape="rect" id="node4" title=" " alt="" coords="336,71,488,112"/>
-<area shape="rect" id="node5" title=" " alt="" coords="179,78,257,105"/>
-<area shape="rect" id="node6" title=" " alt="" coords="5,71,129,112"/>
-<area shape="rect" id="node7" title=" " alt="" coords="634,136,785,177"/>
-<area shape="rect" id="node8" title=" " alt="" coords="365,143,459,170"/>
+<area shape="rect" id="node1" title="The Tesseract Ignition Vizualization class." alt="" coords="37,437,238,479"/>
+<area shape="rect" id="node2" href="$df/d78/classtesseract__visualization_1_1Visualization.html" title="The Vizualization class." alt="" coords="5,333,160,375"/>
+<area shape="rect" id="node3" href="$d8/d9c/classtesseract__visualization_1_1EntityManager.html" title=" " alt="" coords="184,333,339,375"/>
+<area shape="rect" id="node4" title=" " alt="" coords="185,185,337,227"/>
+<area shape="rect" id="node5" title=" " alt="" coords="222,96,301,123"/>
+<area shape="rect" id="node6" title=" " alt="" coords="199,5,323,47"/>
 </map>

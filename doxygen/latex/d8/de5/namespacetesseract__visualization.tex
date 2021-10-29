@@ -7,6 +7,18 @@ class \mbox{\hyperlink{classtesseract__visualization_1_1EntityManager}{Entity\+M
 \item 
 class \mbox{\hyperlink{classtesseract__visualization_1_1TesseractIgnitionVisualization}{Tesseract\+Ignition\+Visualization}}
 \begin{DoxyCompactList}\small\item\em The Tesseract Ignition Vizualization class. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classtesseract__visualization_1_1ArrowMarker}{Arrow\+Marker}}
+\begin{DoxyCompactList}\small\item\em An arrow marker. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classtesseract__visualization_1_1AxisMarker}{Axis\+Marker}}
+\begin{DoxyCompactList}\small\item\em An axis. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classtesseract__visualization_1_1ContactResultsMarker}{Contact\+Results\+Marker}}
+\begin{DoxyCompactList}\small\item\em A contact results marker. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classtesseract__visualization_1_1GeometryMarker}{Geometry\+Marker}}
+\begin{DoxyCompactList}\small\item\em An geometry marker. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classtesseract__visualization_1_1Marker}{Marker}}
+\item 
+class \mbox{\hyperlink{classtesseract__visualization_1_1ToolpathMarker}{Toolpath\+Marker}}
+\begin{DoxyCompactList}\small\item\em An arrow defined by two points. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classtesseract__visualization_1_1TrajectoryInterpolator}{Trajectory\+Interpolator}}
 \item 
 class \mbox{\hyperlink{classtesseract__visualization_1_1TrajectoryPlayer}{Trajectory\+Player}}
@@ -22,6 +34,29 @@ using \mbox{\hyperlink{namespacetesseract__visualization_a12376b06553445215c95f0
 \item 
 using \mbox{\hyperlink{namespacetesseract__visualization_a62add283f33a3eda80b1ffdc98e34261}{Entity\+Map}} = std\+::unordered\+\_\+map$<$ std\+::string, \mbox{\hyperlink{namespacetesseract__visualization_a12376b06553445215c95f00b5fac42ea}{Entity\+ID}} $>$
 \end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{namespacetesseract__visualization_ac8e02d8f51fc302b5ea1fb8c3b1abc01}{Marker\+Type}} \+: int \{ \newline
+\mbox{\hyperlink{namespacetesseract__visualization_ac8e02d8f51fc302b5ea1fb8c3b1abc01ab50339a10e1de285ac99d4c3990b8693}{NONE}} = 0
+, \mbox{\hyperlink{namespacetesseract__visualization_ac8e02d8f51fc302b5ea1fb8c3b1abc01ab22957ad8078e8d73de61aef53d13a74}{GEOMETRY}} = 1
+, \mbox{\hyperlink{namespacetesseract__visualization_ac8e02d8f51fc302b5ea1fb8c3b1abc01a9e388340c6d15a821c4f93dfb9f1bd9c}{AXIS}} = 2
+, \mbox{\hyperlink{namespacetesseract__visualization_ac8e02d8f51fc302b5ea1fb8c3b1abc01aca2dc0c55b6e8d70bafcb4d84f5a9544}{ARROW}} = 3
+, \newline
+\mbox{\hyperlink{namespacetesseract__visualization_ac8e02d8f51fc302b5ea1fb8c3b1abc01ae64a4d2159ed46d077e21a505575c814}{LINE\+\_\+\+STRIP}} = 4
+, \mbox{\hyperlink{namespacetesseract__visualization_ac8e02d8f51fc302b5ea1fb8c3b1abc01a195d93c98c5e94cad21509e910f65fae}{LINE\+\_\+\+LIST}} = 5
+, \mbox{\hyperlink{namespacetesseract__visualization_ac8e02d8f51fc302b5ea1fb8c3b1abc01a70b71cabeeaf8c2bf473c896d5442ddb}{POINTS}} = 6
+, \mbox{\hyperlink{namespacetesseract__visualization_ac8e02d8f51fc302b5ea1fb8c3b1abc01a61a96ffcb251bb9bf0abf8fec19d0ea8}{TEXT}} = 7
+, \newline
+\mbox{\hyperlink{namespacetesseract__visualization_ac8e02d8f51fc302b5ea1fb8c3b1abc01aa9f047dff7e4cd4d8d3bdeafc4029d47}{TRIANGLE\+\_\+\+FAN}} = 8
+, \mbox{\hyperlink{namespacetesseract__visualization_ac8e02d8f51fc302b5ea1fb8c3b1abc01a14d20da17f6d27fc43c5f311c17eb912}{TRIANGLE\+\_\+\+LIST}} = 9
+, \mbox{\hyperlink{namespacetesseract__visualization_ac8e02d8f51fc302b5ea1fb8c3b1abc01a708de017e3b83ccba21dfc9f6367d46f}{TRIANGLE\+\_\+\+STRIP}} = 10
+, \mbox{\hyperlink{namespacetesseract__visualization_ac8e02d8f51fc302b5ea1fb8c3b1abc01a2b3d5b10f124341f75a903cfa57a392a}{TOOLPATH}} = 11
+, \newline
+\mbox{\hyperlink{namespacetesseract__visualization_ac8e02d8f51fc302b5ea1fb8c3b1abc01ae8c9f70bfc69a0ac89c3c32c2b91c90f}{CONTACT\+\_\+\+RESULTS}} = 12
+, \mbox{\hyperlink{namespacetesseract__visualization_ac8e02d8f51fc302b5ea1fb8c3b1abc01a5123cb514ff95a726922950380866e00}{USER\+\_\+\+DEFINED}} = 1000
+ \}
+\end{DoxyCompactItemize}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -35,8 +70,6 @@ ignition\+::msgs\+::\+Material \mbox{\hyperlink{namespacetesseract__visualizatio
 \begin{DoxyCompactItemize}
 \item 
 static const int \mbox{\hyperlink{namespacetesseract__visualization_a06a562dbdd5b945e34e0896aa06c74d1}{NULL\+\_\+\+ENTITY\+\_\+\+ID}} = -\/1
-\item 
-static \mbox{\hyperlink{namespacetesseract__planning_ac008e09ddce5c25c00e2c77ff18929e8}{tesseract\+\_\+planning\+::locate\+Filter\+Fn}} \mbox{\hyperlink{namespacetesseract__visualization_add8c32b18fb2acbdd70682c366b17a62}{move\+Filter}}
 \end{DoxyCompactItemize}
 
 
@@ -53,6 +86,73 @@ static \mbox{\hyperlink{namespacetesseract__planning_ac008e09ddce5c25c00e2c77ff1
 \doxysubsubsection{\texorpdfstring{EntityMap}{EntityMap}}
 {\footnotesize\ttfamily using \mbox{\hyperlink{namespacetesseract__visualization_a62add283f33a3eda80b1ffdc98e34261}{tesseract\+\_\+visualization\+::\+Entity\+Map}} = typedef std\+::unordered\+\_\+map$<$std\+::string, \mbox{\hyperlink{namespacetesseract__visualization_a12376b06553445215c95f00b5fac42ea}{Entity\+ID}}$>$}
 
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{namespacetesseract__visualization_ac8e02d8f51fc302b5ea1fb8c3b1abc01}\label{namespacetesseract__visualization_ac8e02d8f51fc302b5ea1fb8c3b1abc01}} 
+\index{tesseract\_visualization@{tesseract\_visualization}!MarkerType@{MarkerType}}
+\index{MarkerType@{MarkerType}!tesseract\_visualization@{tesseract\_visualization}}
+\doxysubsubsection{\texorpdfstring{MarkerType}{MarkerType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespacetesseract__visualization_ac8e02d8f51fc302b5ea1fb8c3b1abc01}{tesseract\+\_\+visualization\+::\+Marker\+Type}} \+: int\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NONE@{NONE}!tesseract\_visualization@{tesseract\_visualization}}\index{tesseract\_visualization@{tesseract\_visualization}!NONE@{NONE}}}\mbox{\Hypertarget{namespacetesseract__visualization_ac8e02d8f51fc302b5ea1fb8c3b1abc01ab50339a10e1de285ac99d4c3990b8693}\label{namespacetesseract__visualization_ac8e02d8f51fc302b5ea1fb8c3b1abc01ab50339a10e1de285ac99d4c3990b8693}} 
+NONE&No type. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GEOMETRY@{GEOMETRY}!tesseract\_visualization@{tesseract\_visualization}}\index{tesseract\_visualization@{tesseract\_visualization}!GEOMETRY@{GEOMETRY}}}\mbox{\Hypertarget{namespacetesseract__visualization_ac8e02d8f51fc302b5ea1fb8c3b1abc01ab22957ad8078e8d73de61aef53d13a74}\label{namespacetesseract__visualization_ac8e02d8f51fc302b5ea1fb8c3b1abc01ab22957ad8078e8d73de61aef53d13a74}} 
+GEOMETRY&Tesseract geometry. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AXIS@{AXIS}!tesseract\_visualization@{tesseract\_visualization}}\index{tesseract\_visualization@{tesseract\_visualization}!AXIS@{AXIS}}}\mbox{\Hypertarget{namespacetesseract__visualization_ac8e02d8f51fc302b5ea1fb8c3b1abc01a9e388340c6d15a821c4f93dfb9f1bd9c}\label{namespacetesseract__visualization_ac8e02d8f51fc302b5ea1fb8c3b1abc01a9e388340c6d15a821c4f93dfb9f1bd9c}} 
+AXIS&Axis primitive. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ARROW@{ARROW}!tesseract\_visualization@{tesseract\_visualization}}\index{tesseract\_visualization@{tesseract\_visualization}!ARROW@{ARROW}}}\mbox{\Hypertarget{namespacetesseract__visualization_ac8e02d8f51fc302b5ea1fb8c3b1abc01aca2dc0c55b6e8d70bafcb4d84f5a9544}\label{namespacetesseract__visualization_ac8e02d8f51fc302b5ea1fb8c3b1abc01aca2dc0c55b6e8d70bafcb4d84f5a9544}} 
+ARROW&Arrow primitive. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LINE\_STRIP@{LINE\_STRIP}!tesseract\_visualization@{tesseract\_visualization}}\index{tesseract\_visualization@{tesseract\_visualization}!LINE\_STRIP@{LINE\_STRIP}}}\mbox{\Hypertarget{namespacetesseract__visualization_ac8e02d8f51fc302b5ea1fb8c3b1abc01ae64a4d2159ed46d077e21a505575c814}\label{namespacetesseract__visualization_ac8e02d8f51fc302b5ea1fb8c3b1abc01ae64a4d2159ed46d077e21a505575c814}} 
+LINE\+\_\+\+STRIP&Line strip primitive. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LINE\_LIST@{LINE\_LIST}!tesseract\_visualization@{tesseract\_visualization}}\index{tesseract\_visualization@{tesseract\_visualization}!LINE\_LIST@{LINE\_LIST}}}\mbox{\Hypertarget{namespacetesseract__visualization_ac8e02d8f51fc302b5ea1fb8c3b1abc01a195d93c98c5e94cad21509e910f65fae}\label{namespacetesseract__visualization_ac8e02d8f51fc302b5ea1fb8c3b1abc01a195d93c98c5e94cad21509e910f65fae}} 
+LINE\+\_\+\+LIST&Line list primitive. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{POINTS@{POINTS}!tesseract\_visualization@{tesseract\_visualization}}\index{tesseract\_visualization@{tesseract\_visualization}!POINTS@{POINTS}}}\mbox{\Hypertarget{namespacetesseract__visualization_ac8e02d8f51fc302b5ea1fb8c3b1abc01a70b71cabeeaf8c2bf473c896d5442ddb}\label{namespacetesseract__visualization_ac8e02d8f51fc302b5ea1fb8c3b1abc01a70b71cabeeaf8c2bf473c896d5442ddb}} 
+POINTS&Points primitive. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TEXT@{TEXT}!tesseract\_visualization@{tesseract\_visualization}}\index{tesseract\_visualization@{tesseract\_visualization}!TEXT@{TEXT}}}\mbox{\Hypertarget{namespacetesseract__visualization_ac8e02d8f51fc302b5ea1fb8c3b1abc01a61a96ffcb251bb9bf0abf8fec19d0ea8}\label{namespacetesseract__visualization_ac8e02d8f51fc302b5ea1fb8c3b1abc01a61a96ffcb251bb9bf0abf8fec19d0ea8}} 
+TEXT&Text geometry. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TRIANGLE\_FAN@{TRIANGLE\_FAN}!tesseract\_visualization@{tesseract\_visualization}}\index{tesseract\_visualization@{tesseract\_visualization}!TRIANGLE\_FAN@{TRIANGLE\_FAN}}}\mbox{\Hypertarget{namespacetesseract__visualization_ac8e02d8f51fc302b5ea1fb8c3b1abc01aa9f047dff7e4cd4d8d3bdeafc4029d47}\label{namespacetesseract__visualization_ac8e02d8f51fc302b5ea1fb8c3b1abc01aa9f047dff7e4cd4d8d3bdeafc4029d47}} 
+TRIANGLE\+\_\+\+FAN&Triangle fan primitive. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TRIANGLE\_LIST@{TRIANGLE\_LIST}!tesseract\_visualization@{tesseract\_visualization}}\index{tesseract\_visualization@{tesseract\_visualization}!TRIANGLE\_LIST@{TRIANGLE\_LIST}}}\mbox{\Hypertarget{namespacetesseract__visualization_ac8e02d8f51fc302b5ea1fb8c3b1abc01a14d20da17f6d27fc43c5f311c17eb912}\label{namespacetesseract__visualization_ac8e02d8f51fc302b5ea1fb8c3b1abc01a14d20da17f6d27fc43c5f311c17eb912}} 
+TRIANGLE\+\_\+\+LIST&Triangle list primitive. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TRIANGLE\_STRIP@{TRIANGLE\_STRIP}!tesseract\_visualization@{tesseract\_visualization}}\index{tesseract\_visualization@{tesseract\_visualization}!TRIANGLE\_STRIP@{TRIANGLE\_STRIP}}}\mbox{\Hypertarget{namespacetesseract__visualization_ac8e02d8f51fc302b5ea1fb8c3b1abc01a708de017e3b83ccba21dfc9f6367d46f}\label{namespacetesseract__visualization_ac8e02d8f51fc302b5ea1fb8c3b1abc01a708de017e3b83ccba21dfc9f6367d46f}} 
+TRIANGLE\+\_\+\+STRIP&Triangle strip primitive. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TOOLPATH@{TOOLPATH}!tesseract\_visualization@{tesseract\_visualization}}\index{tesseract\_visualization@{tesseract\_visualization}!TOOLPATH@{TOOLPATH}}}\mbox{\Hypertarget{namespacetesseract__visualization_ac8e02d8f51fc302b5ea1fb8c3b1abc01a2b3d5b10f124341f75a903cfa57a392a}\label{namespacetesseract__visualization_ac8e02d8f51fc302b5ea1fb8c3b1abc01a2b3d5b10f124341f75a903cfa57a392a}} 
+TOOLPATH&Toolpath marker. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CONTACT\_RESULTS@{CONTACT\_RESULTS}!tesseract\_visualization@{tesseract\_visualization}}\index{tesseract\_visualization@{tesseract\_visualization}!CONTACT\_RESULTS@{CONTACT\_RESULTS}}}\mbox{\Hypertarget{namespacetesseract__visualization_ac8e02d8f51fc302b5ea1fb8c3b1abc01ae8c9f70bfc69a0ac89c3c32c2b91c90f}\label{namespacetesseract__visualization_ac8e02d8f51fc302b5ea1fb8c3b1abc01ae8c9f70bfc69a0ac89c3c32c2b91c90f}} 
+CONTACT\+\_\+\+RESULTS&Contact results marker. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{USER\_DEFINED@{USER\_DEFINED}!tesseract\_visualization@{tesseract\_visualization}}\index{tesseract\_visualization@{tesseract\_visualization}!USER\_DEFINED@{USER\_DEFINED}}}\mbox{\Hypertarget{namespacetesseract__visualization_ac8e02d8f51fc302b5ea1fb8c3b1abc01a5123cb514ff95a726922950380866e00}\label{namespacetesseract__visualization_ac8e02d8f51fc302b5ea1fb8c3b1abc01a5123cb514ff95a726922950380866e00}} 
+USER\+\_\+\+DEFINED&\\
+\hline
+
+\end{DoxyEnumFields}
 
 
 \doxysubsection{Function Documentation}
@@ -77,28 +177,6 @@ static \mbox{\hyperlink{namespacetesseract__planning_ac008e09ddce5c25c00e2c77ff1
 
 
 \doxysubsection{Variable Documentation}
-\mbox{\Hypertarget{namespacetesseract__visualization_add8c32b18fb2acbdd70682c366b17a62}\label{namespacetesseract__visualization_add8c32b18fb2acbdd70682c366b17a62}} 
-\index{tesseract\_visualization@{tesseract\_visualization}!moveFilter@{moveFilter}}
-\index{moveFilter@{moveFilter}!tesseract\_visualization@{tesseract\_visualization}}
-\doxysubsubsection{\texorpdfstring{moveFilter}{moveFilter}}
-{\footnotesize\ttfamily \mbox{\hyperlink{namespacetesseract__planning_ac008e09ddce5c25c00e2c77ff18929e8}{tesseract\+\_\+planning\+::locate\+Filter\+Fn}} tesseract\+\_\+visualization\+::move\+Filter\hspace{0.3cm}{\ttfamily [static]}}
-
-{\bfseries Initial value\+:}
-\begin{DoxyCode}{0}
-\DoxyCodeLine{= [](\textcolor{keyword}{const} \mbox{\hyperlink{classtesseract__planning_1_1Instruction}{tesseract\_planning::Instruction}}\& i,}
-\DoxyCodeLine{                                                          \textcolor{keyword}{const} \mbox{\hyperlink{classtesseract__planning_1_1CompositeInstruction}{tesseract\_planning::CompositeInstruction}}\& ,}
-\DoxyCodeLine{                                                          \textcolor{keywordtype}{bool} parent\_is\_first\_composite) \{}
-\DoxyCodeLine{  \textcolor{keywordflow}{if} (\mbox{\hyperlink{namespacetesseract__planning_a2a1d26a1924d6b53c23630143a579436}{tesseract\_planning::isMoveInstruction}}(i))}
-\DoxyCodeLine{  \{}
-\DoxyCodeLine{    \textcolor{keywordflow}{if} (i.\mbox{\hyperlink{classtesseract__planning_1_1Instruction_a9ceeabb2bd557d47cdf8f5ca96e848f2}{cast\_const}}<\mbox{\hyperlink{classtesseract__planning_1_1MoveInstruction}{tesseract\_planning::MoveInstruction}}>()-\/>\mbox{\hyperlink{classtesseract__planning_1_1MoveInstruction_ad7ea2fb0fcfc4259ace79dafc6ac8179}{isStart}}())}
-\DoxyCodeLine{      \textcolor{keywordflow}{return} (parent\_is\_first\_composite);}
-\DoxyCodeLine{}
-\DoxyCodeLine{    \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
-\DoxyCodeLine{  \}}
-\DoxyCodeLine{  \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
-\DoxyCodeLine{\}}
-
-\end{DoxyCode}
 \mbox{\Hypertarget{namespacetesseract__visualization_a06a562dbdd5b945e34e0896aa06c74d1}\label{namespacetesseract__visualization_a06a562dbdd5b945e34e0896aa06c74d1}} 
 \index{tesseract\_visualization@{tesseract\_visualization}!NULL\_ENTITY\_ID@{NULL\_ENTITY\_ID}}
 \index{NULL\_ENTITY\_ID@{NULL\_ENTITY\_ID}!tesseract\_visualization@{tesseract\_visualization}}

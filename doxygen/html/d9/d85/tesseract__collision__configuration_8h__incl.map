@@ -1,5 +1,5 @@
-<map id="tesseract/tesseract_collision/include/tesseract_collision/bullet/tesseract_collision_configuration.h" name="tesseract/tesseract_collision/include/tesseract_collision/bullet/tesseract_collision_configuration.h">
-<area shape="rect" id="node1" title="Modified bullet collision configuration." alt="" coords="137,5,315,76"/>
+<map id="tesseract_collision/bullet/include/tesseract_collision/bullet/tesseract_collision_configuration.h" name="tesseract_collision/bullet/include/tesseract_collision/bullet/tesseract_collision_configuration.h">
+<area shape="rect" id="node1" title="Modified bullet collision configuration." alt="" coords="141,5,311,76"/>
 <area shape="rect" id="node2" href="$de/d3c/macros_8h.html" title="Common Tesseract Macros." alt="" coords="5,131,196,158"/>
 <area shape="rect" id="node3" title=" " alt="" coords="220,124,483,165"/>
 </map>

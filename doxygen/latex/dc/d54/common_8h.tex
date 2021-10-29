@@ -1,23 +1,15 @@
-\hypertarget{common_8h}{}\doxysection{tesseract/tesseract\+\_\+collision/include/tesseract\+\_\+collision/core/common.h File Reference}
-\label{common_8h}\index{tesseract/tesseract\_collision/include/tesseract\_collision/core/common.h@{tesseract/tesseract\_collision/include/tesseract\_collision/core/common.h}}
+\hypertarget{common_8h}{}\doxysection{tesseract\+\_\+collision/core/include/tesseract\+\_\+collision/core/common.h File Reference}
+\label{common_8h}\index{tesseract\_collision/core/include/tesseract\_collision/core/common.h@{tesseract\_collision/core/include/tesseract\_collision/core/common.h}}
 
 
 This is a collection of common methods.  
 
 
 {\ttfamily \#include $<$tesseract\+\_\+common/macros.\+h$>$}\newline
-{\ttfamily \#include $<$Linear\+Math/bt\+Convex\+Hull\+Computer.\+h$>$}\newline
-{\ttfamily \#include $<$cstdio$>$}\newline
-{\ttfamily \#include $<$cctype$>$}\newline
+{\ttfamily \#include $<$map$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
 {\ttfamily \#include $<$Eigen/\+Geometry$>$}\newline
-{\ttfamily \#include $<$fstream$>$}\newline
-{\ttfamily \#include $<$iostream$>$}\newline
-{\ttfamily \#include $<$iomanip$>$}\newline
-{\ttfamily \#include $<$boost/algorithm/string.\+hpp$>$}\newline
-{\ttfamily \#include $<$console\+\_\+bridge/console.\+h$>$}\newline
-{\ttfamily \#include $<$tesseract\+\_\+common/utils.\+h$>$}\newline
 {\ttfamily \#include $<$tesseract\+\_\+collision/core/types.\+h$>$}\newline
-{\ttfamily \#include $<$tesseract\+\_\+collision/core/common.\+h$>$}\newline
 Include dependency graph for common.\+h\+:
 \nopagebreak
 \begin{figure}[H]
@@ -49,17 +41,19 @@ using \mbox{\hyperlink{namespacetesseract__collision_af5926355228f0196ddf51e6951
 \item 
 Object\+Pair\+Key \mbox{\hyperlink{namespacetesseract__collision_a0876bd0182505440236643eb5bade1c7}{tesseract\+\_\+collision\+::get\+Object\+Pair\+Key}} (const std\+::string \&obj1, const std\+::string \&obj2)
 \begin{DoxyCompactList}\small\item\em Get a key for two object to search the collision matrix. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{namespacetesseract__collision_ab6cce1ce95e96f38382f53976bbe9dea}{tesseract\+\_\+collision\+::is\+Link\+Active}} (const std\+::vector$<$ std\+::string $>$ \&active, const std\+::string \&name)
+\mbox{\hyperlink{vhacdRaycastMesh_8cpp_adcf134d50025cc52907d0c8ac798d89d}{std\+::vector}}$<$ Object\+Pair\+Key $>$ \mbox{\hyperlink{namespacetesseract__collision_ac37834bbb711cf5148c4b3a00faf6162}{tesseract\+\_\+collision\+::get\+Collision\+Object\+Pairs}} (const \mbox{\hyperlink{vhacdRaycastMesh_8cpp_adcf134d50025cc52907d0c8ac798d89d}{std\+::vector}}$<$ std\+::string $>$ \&active\+\_\+links, const \mbox{\hyperlink{vhacdRaycastMesh_8cpp_adcf134d50025cc52907d0c8ac798d89d}{std\+::vector}}$<$ std\+::string $>$ \&static\+\_\+links, const Is\+Contact\+Allowed\+Fn \&acm=nullptr)
+\begin{DoxyCompactList}\small\item\em Get a vector of possible collision object pairs. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespacetesseract__collision_ab6cce1ce95e96f38382f53976bbe9dea}{tesseract\+\_\+collision\+::is\+Link\+Active}} (const \mbox{\hyperlink{vhacdRaycastMesh_8cpp_adcf134d50025cc52907d0c8ac798d89d}{std\+::vector}}$<$ std\+::string $>$ \&active, const std\+::string \&name)
 \begin{DoxyCompactList}\small\item\em This will check if a link is active provided a list. If the list is empty the link is considered active. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{namespacetesseract__collision_a1d5b1daf53ea0152f87f4ab565643478}{tesseract\+\_\+collision\+::is\+Contact\+Allowed}} (const std\+::string \&name1, const std\+::string \&name2, const Is\+Contact\+Allowed\+Fn \&acm, bool verbose=false)
 \begin{DoxyCompactList}\small\item\em Determine if contact is allowed between two objects. \end{DoxyCompactList}\item 
-Contact\+Result $\ast$ \mbox{\hyperlink{namespacetesseract__collision_a6e40c6a2976671ddb907584a16760b6f}{tesseract\+\_\+collision\+::process\+Result}} (Contact\+Test\+Data \&cdata, Contact\+Result \&contact, const std\+::pair$<$ std\+::string, std\+::string $>$ \&key, bool found)
+Contact\+Result $\ast$ \mbox{\hyperlink{namespacetesseract__collision_a883c51241e0ae2933532c43f8841a3f0}{tesseract\+\_\+collision\+::process\+Result}} (Contact\+Test\+Data \&cdata, Contact\+Result \&contact, const std\+::pair$<$ std\+::string, std\+::string $>$ \&key, bool found)
 \begin{DoxyCompactList}\small\item\em process\+Result Processes the \mbox{\hyperlink{structtesseract__collision_1_1ContactResult}{Contact\+Result}} based on the information in the \mbox{\hyperlink{structtesseract__collision_1_1ContactTestData}{Contact\+Test\+Data}} \end{DoxyCompactList}\item 
-int \mbox{\hyperlink{namespacetesseract__collision_ac97bc1eb96f0aa2e1d3033d7e7758849}{tesseract\+\_\+collision\+::create\+Convex\+Hull}} (\mbox{\hyperlink{namespacetesseract__common_af89ed6517f4c84bdb2b037bb40f7d9d9}{tesseract\+\_\+common\+::\+Vector\+Vector3d}} \&vertices, Eigen\+::\+Vector\+Xi \&faces, const \mbox{\hyperlink{namespacetesseract__common_af89ed6517f4c84bdb2b037bb40f7d9d9}{tesseract\+\_\+common\+::\+Vector\+Vector3d}} \&input, double shrink=-\/1, double shrink\+Clamp=-\/1)
-\begin{DoxyCompactList}\small\item\em Create a convex hull from vertices using Bullet Convex Hull Computer. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classtesseract__geometry_1_1ConvexMesh_aecd145c5f75117ff7a3bab1fb921e4c0}{tesseract\+\_\+geometry\+::\+Convex\+Mesh\+::\+Ptr}} \mbox{\hyperlink{namespacetesseract__collision_ad17b98123f412bcc30207daa6931cbb2}{tesseract\+\_\+collision\+::make\+Convex\+Mesh}} (const \mbox{\hyperlink{classtesseract__geometry_1_1Mesh}{tesseract\+\_\+geometry\+::\+Mesh}} \&mesh)
-\item 
-bool \mbox{\hyperlink{namespacetesseract__collision_a4dc11acdd34b2eaa5023e5828463ba05}{tesseract\+\_\+collision\+::write\+Simple\+Ply\+File}} (const std\+::string \&path, const \mbox{\hyperlink{namespacetesseract__common_af89ed6517f4c84bdb2b037bb40f7d9d9}{tesseract\+\_\+common\+::\+Vector\+Vector3d}} \&vertices, const std\+::vector$<$ Eigen\+::\+Vector3i $>$ \&vectices\+\_\+color, const Eigen\+::\+Vector\+Xi \&faces, int num\+\_\+faces)
+void \mbox{\hyperlink{namespacetesseract__collision_ab4dd1d697dc897dc95de209f2a4d2df9}{tesseract\+\_\+collision\+::scale\+Vertices}} (\mbox{\hyperlink{namespacetesseract__common_af89ed6517f4c84bdb2b037bb40f7d9d9}{tesseract\+\_\+common\+::\+Vector\+Vector3d}} \&vertices, const Eigen\+::\+Vector3d \&center, const Eigen\+::\+Vector3d \&scale)
+\begin{DoxyCompactList}\small\item\em Apply scaling to the geometry coordinates. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespacetesseract__collision_aa56b0690f742ef8f30f818ca562c8b67}{tesseract\+\_\+collision\+::scale\+Vertices}} (\mbox{\hyperlink{namespacetesseract__common_af89ed6517f4c84bdb2b037bb40f7d9d9}{tesseract\+\_\+common\+::\+Vector\+Vector3d}} \&vertices, const Eigen\+::\+Vector3d \&scale)
+\begin{DoxyCompactList}\small\item\em Apply scaling to the geometry coordinates. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespacetesseract__collision_a4dc11acdd34b2eaa5023e5828463ba05}{tesseract\+\_\+collision\+::write\+Simple\+Ply\+File}} (const std\+::string \&path, const \mbox{\hyperlink{namespacetesseract__common_af89ed6517f4c84bdb2b037bb40f7d9d9}{tesseract\+\_\+common\+::\+Vector\+Vector3d}} \&vertices, const \mbox{\hyperlink{vhacdRaycastMesh_8cpp_adcf134d50025cc52907d0c8ac798d89d}{std\+::vector}}$<$ Eigen\+::\+Vector3i $>$ \&vectices\+\_\+color, const Eigen\+::\+Vector\+Xi \&faces, int num\+\_\+faces)
 \begin{DoxyCompactList}\small\item\em Write a simple ply file given vertices and faces. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{namespacetesseract__collision_ab322b688c8e598e590e5a9af30084272}{tesseract\+\_\+collision\+::write\+Simple\+Ply\+File}} (const std\+::string \&path, const \mbox{\hyperlink{namespacetesseract__common_af89ed6517f4c84bdb2b037bb40f7d9d9}{tesseract\+\_\+common\+::\+Vector\+Vector3d}} \&vertices, const Eigen\+::\+Vector\+Xi \&faces, int num\+\_\+faces)
 \begin{DoxyCompactList}\small\item\em Write a simple ply file given vertices and faces. \end{DoxyCompactList}\item 
@@ -80,7 +74,7 @@ Dec 18, 2017
 TODO 
 \end{DoxyVersion}
 \begin{DoxyRefDesc}{Bug}
-\item[\mbox{\hyperlink{bug__bug000007}{Bug}}]No known bugs\end{DoxyRefDesc}
+\item[\mbox{\hyperlink{bug__bug000019}{Bug}}]No known bugs\end{DoxyRefDesc}
 
 
 \begin{DoxyCopyright}{Copyright}

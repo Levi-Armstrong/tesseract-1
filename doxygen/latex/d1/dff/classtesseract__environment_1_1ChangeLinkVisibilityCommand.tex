@@ -2,7 +2,7 @@
 \label{classtesseract__environment_1_1ChangeLinkVisibilityCommand}\index{tesseract\_environment::ChangeLinkVisibilityCommand@{tesseract\_environment::ChangeLinkVisibilityCommand}}
 
 
-{\ttfamily \#include $<$commands.\+h$>$}
+{\ttfamily \#include $<$change\+\_\+link\+\_\+visibility\+\_\+command.\+h$>$}
 
 
 
@@ -24,10 +24,19 @@ Collaboration diagram for tesseract\+\_\+environment\+::Change\+Link\+Visibility
 \includegraphics[width=293pt]{d2/db4/classtesseract__environment_1_1ChangeLinkVisibilityCommand__coll__graph}
 \end{center}
 \end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classtesseract__environment_1_1ChangeLinkVisibilityCommand_a47a850e9e4431e23e8dec865e5838fb7}{Ptr}} = std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classtesseract__environment_1_1ChangeLinkVisibilityCommand}{Change\+Link\+Visibility\+Command}} $>$
+\item 
+using \mbox{\hyperlink{classtesseract__environment_1_1ChangeLinkVisibilityCommand_a32fe25dc1df9fb2c4114a2ecb36006b0}{Const\+Ptr}} = std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{classtesseract__environment_1_1ChangeLinkVisibilityCommand}{Change\+Link\+Visibility\+Command}} $>$
+\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classtesseract__environment_1_1ChangeLinkVisibilityCommand_a01dac5180179c85a4b00de0293ea8a80}{Change\+Link\+Visibility\+Command}} (std\+::string link\+\_\+name, bool enabled)
+\begin{DoxyCompactList}\small\item\em Set a links visibility. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacetesseract__environment_afc00c1aecb519acba3afc24dbd367029}{Command\+Type}} \mbox{\hyperlink{classtesseract__environment_1_1ChangeLinkVisibilityCommand_a5565a2546b6dcbd6d62d383c86f6bceb}{get\+Type}} () const final
 \item 
 const std\+::string \& \mbox{\hyperlink{classtesseract__environment_1_1ChangeLinkVisibilityCommand_a5dcf6273a627f31587377616af66f478}{get\+Link\+Name}} () const
 \item 
@@ -40,7 +49,21 @@ std\+::string \mbox{\hyperlink{classtesseract__environment_1_1ChangeLinkVisibili
 \item 
 bool \mbox{\hyperlink{classtesseract__environment_1_1ChangeLinkVisibilityCommand_a3591db5614f781e76b5fd0231c2dcfb4}{enabled\+\_\+}}
 \end{DoxyCompactItemize}
-\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classtesseract__environment_1_1ChangeLinkVisibilityCommand_a32fe25dc1df9fb2c4114a2ecb36006b0}\label{classtesseract__environment_1_1ChangeLinkVisibilityCommand_a32fe25dc1df9fb2c4114a2ecb36006b0}} 
+\index{tesseract\_environment::ChangeLinkVisibilityCommand@{tesseract\_environment::ChangeLinkVisibilityCommand}!ConstPtr@{ConstPtr}}
+\index{ConstPtr@{ConstPtr}!tesseract\_environment::ChangeLinkVisibilityCommand@{tesseract\_environment::ChangeLinkVisibilityCommand}}
+\doxysubsubsection{\texorpdfstring{ConstPtr}{ConstPtr}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classtesseract__environment_1_1ChangeLinkVisibilityCommand_a32fe25dc1df9fb2c4114a2ecb36006b0}{tesseract\+\_\+environment\+::\+Change\+Link\+Visibility\+Command\+::\+Const\+Ptr}} =  std\+::shared\+\_\+ptr$<$const \mbox{\hyperlink{classtesseract__environment_1_1ChangeLinkVisibilityCommand}{Change\+Link\+Visibility\+Command}}$>$}
+
+\mbox{\Hypertarget{classtesseract__environment_1_1ChangeLinkVisibilityCommand_a47a850e9e4431e23e8dec865e5838fb7}\label{classtesseract__environment_1_1ChangeLinkVisibilityCommand_a47a850e9e4431e23e8dec865e5838fb7}} 
+\index{tesseract\_environment::ChangeLinkVisibilityCommand@{tesseract\_environment::ChangeLinkVisibilityCommand}!Ptr@{Ptr}}
+\index{Ptr@{Ptr}!tesseract\_environment::ChangeLinkVisibilityCommand@{tesseract\_environment::ChangeLinkVisibilityCommand}}
+\doxysubsubsection{\texorpdfstring{Ptr}{Ptr}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classtesseract__environment_1_1ChangeLinkVisibilityCommand_a47a850e9e4431e23e8dec865e5838fb7}{tesseract\+\_\+environment\+::\+Change\+Link\+Visibility\+Command\+::\+Ptr}} =  std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classtesseract__environment_1_1ChangeLinkVisibilityCommand}{Change\+Link\+Visibility\+Command}}$>$}
+
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
@@ -50,6 +73,17 @@ bool \mbox{\hyperlink{classtesseract__environment_1_1ChangeLinkVisibilityCommand
 \doxysubsubsection{\texorpdfstring{ChangeLinkVisibilityCommand()}{ChangeLinkVisibilityCommand()}}
 {\footnotesize\ttfamily tesseract\+\_\+environment\+::\+Change\+Link\+Visibility\+Command\+::\+Change\+Link\+Visibility\+Command (\begin{DoxyParamCaption}\item[{std\+::string}]{link\+\_\+name,  }\item[{bool}]{enabled }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
+
+
+Set a links visibility. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the link \\
+\hline
+{\em visibility} & True if should be visible, otherwise false \\
+\hline
+\end{DoxyParams}
 
 
 \doxysubsection{Member Function Documentation}
@@ -64,6 +98,16 @@ bool \mbox{\hyperlink{classtesseract__environment_1_1ChangeLinkVisibilityCommand
 \index{getLinkName@{getLinkName}!tesseract\_environment::ChangeLinkVisibilityCommand@{tesseract\_environment::ChangeLinkVisibilityCommand}}
 \doxysubsubsection{\texorpdfstring{getLinkName()}{getLinkName()}}
 {\footnotesize\ttfamily const std\+::string\& tesseract\+\_\+environment\+::\+Change\+Link\+Visibility\+Command\+::get\+Link\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classtesseract__environment_1_1ChangeLinkVisibilityCommand_a5565a2546b6dcbd6d62d383c86f6bceb}\label{classtesseract__environment_1_1ChangeLinkVisibilityCommand_a5565a2546b6dcbd6d62d383c86f6bceb}} 
+\index{tesseract\_environment::ChangeLinkVisibilityCommand@{tesseract\_environment::ChangeLinkVisibilityCommand}!getType@{getType}}
+\index{getType@{getType}!tesseract\_environment::ChangeLinkVisibilityCommand@{tesseract\_environment::ChangeLinkVisibilityCommand}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacetesseract__environment_afc00c1aecb519acba3afc24dbd367029}{Command\+Type}} tesseract\+\_\+environment\+::\+Change\+Link\+Visibility\+Command\+::get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [final]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classtesseract__environment_1_1Command_ae76293ca1e231a278dcd79c1ec16490f}{tesseract\+\_\+environment\+::\+Command}}.
 
 
 
@@ -84,4 +128,4 @@ bool \mbox{\hyperlink{classtesseract__environment_1_1ChangeLinkVisibilityCommand
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-tesseract/tesseract\+\_\+environment/include/tesseract\+\_\+environment/core/\mbox{\hyperlink{commands_8h}{commands.\+h}}\end{DoxyCompactItemize}
+tesseract\+\_\+environment/include/tesseract\+\_\+environment/commands/\mbox{\hyperlink{change__link__visibility__command_8h}{change\+\_\+link\+\_\+visibility\+\_\+command.\+h}}\end{DoxyCompactItemize}

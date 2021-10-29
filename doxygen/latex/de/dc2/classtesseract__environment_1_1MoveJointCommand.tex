@@ -2,7 +2,7 @@
 \label{classtesseract__environment_1_1MoveJointCommand}\index{tesseract\_environment::MoveJointCommand@{tesseract\_environment::MoveJointCommand}}
 
 
-{\ttfamily \#include $<$commands.\+h$>$}
+{\ttfamily \#include $<$move\+\_\+joint\+\_\+command.\+h$>$}
 
 
 
@@ -24,10 +24,19 @@ Collaboration diagram for tesseract\+\_\+environment\+::Move\+Joint\+Command\+:
 \includegraphics[width=291pt]{dc/d01/classtesseract__environment_1_1MoveJointCommand__coll__graph}
 \end{center}
 \end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classtesseract__environment_1_1MoveJointCommand_a6d11660a37e53b01aff7ca2b6a78a5a8}{Ptr}} = std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classtesseract__environment_1_1MoveJointCommand}{Move\+Joint\+Command}} $>$
+\item 
+using \mbox{\hyperlink{classtesseract__environment_1_1MoveJointCommand_abd0490e6cad67b442c0f3f8d00ce52b3}{Const\+Ptr}} = std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{classtesseract__environment_1_1MoveJointCommand}{Move\+Joint\+Command}} $>$
+\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classtesseract__environment_1_1MoveJointCommand_a161201491387a039e988f8266ed7221f}{Move\+Joint\+Command}} (std\+::string joint\+\_\+name, std\+::string parent\+\_\+link)
+\begin{DoxyCompactList}\small\item\em Move a joint from one link to another. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacetesseract__environment_afc00c1aecb519acba3afc24dbd367029}{Command\+Type}} \mbox{\hyperlink{classtesseract__environment_1_1MoveJointCommand_a394dd31cd89db36d26cbfc17ff3c13f7}{get\+Type}} () const final
 \item 
 const std\+::string \& \mbox{\hyperlink{classtesseract__environment_1_1MoveJointCommand_ad6a9620be2fb71b5e867fa520a78df88}{get\+Joint\+Name}} () const
 \item 
@@ -40,7 +49,21 @@ std\+::string \mbox{\hyperlink{classtesseract__environment_1_1MoveJointCommand_a
 \item 
 std\+::string \mbox{\hyperlink{classtesseract__environment_1_1MoveJointCommand_a303538d674b2c61a25ff63113f268551}{parent\+\_\+link\+\_\+}}
 \end{DoxyCompactItemize}
-\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classtesseract__environment_1_1MoveJointCommand_abd0490e6cad67b442c0f3f8d00ce52b3}\label{classtesseract__environment_1_1MoveJointCommand_abd0490e6cad67b442c0f3f8d00ce52b3}} 
+\index{tesseract\_environment::MoveJointCommand@{tesseract\_environment::MoveJointCommand}!ConstPtr@{ConstPtr}}
+\index{ConstPtr@{ConstPtr}!tesseract\_environment::MoveJointCommand@{tesseract\_environment::MoveJointCommand}}
+\doxysubsubsection{\texorpdfstring{ConstPtr}{ConstPtr}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classtesseract__environment_1_1MoveJointCommand_abd0490e6cad67b442c0f3f8d00ce52b3}{tesseract\+\_\+environment\+::\+Move\+Joint\+Command\+::\+Const\+Ptr}} =  std\+::shared\+\_\+ptr$<$const \mbox{\hyperlink{classtesseract__environment_1_1MoveJointCommand}{Move\+Joint\+Command}}$>$}
+
+\mbox{\Hypertarget{classtesseract__environment_1_1MoveJointCommand_a6d11660a37e53b01aff7ca2b6a78a5a8}\label{classtesseract__environment_1_1MoveJointCommand_a6d11660a37e53b01aff7ca2b6a78a5a8}} 
+\index{tesseract\_environment::MoveJointCommand@{tesseract\_environment::MoveJointCommand}!Ptr@{Ptr}}
+\index{Ptr@{Ptr}!tesseract\_environment::MoveJointCommand@{tesseract\_environment::MoveJointCommand}}
+\doxysubsubsection{\texorpdfstring{Ptr}{Ptr}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classtesseract__environment_1_1MoveJointCommand_a6d11660a37e53b01aff7ca2b6a78a5a8}{tesseract\+\_\+environment\+::\+Move\+Joint\+Command\+::\+Ptr}} =  std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classtesseract__environment_1_1MoveJointCommand}{Move\+Joint\+Command}}$>$}
+
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
@@ -50,6 +73,19 @@ std\+::string \mbox{\hyperlink{classtesseract__environment_1_1MoveJointCommand_a
 \doxysubsubsection{\texorpdfstring{MoveJointCommand()}{MoveJointCommand()}}
 {\footnotesize\ttfamily tesseract\+\_\+environment\+::\+Move\+Joint\+Command\+::\+Move\+Joint\+Command (\begin{DoxyParamCaption}\item[{std\+::string}]{joint\+\_\+name,  }\item[{std\+::string}]{parent\+\_\+link }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
+
+
+Move a joint from one link to another. 
+
+\begin{DoxyVerb}   All child links & joints should follow
+\end{DoxyVerb}
+ 
+\begin{DoxyParams}{Parameters}
+{\em joint\+\_\+name} & The name of the joint to move \\
+\hline
+{\em new\+\_\+parent\+\_\+link} & The name of the link to move to.\+e \\
+\hline
+\end{DoxyParams}
 
 
 \doxysubsection{Member Function Documentation}
@@ -64,6 +100,16 @@ std\+::string \mbox{\hyperlink{classtesseract__environment_1_1MoveJointCommand_a
 \index{getParentLink@{getParentLink}!tesseract\_environment::MoveJointCommand@{tesseract\_environment::MoveJointCommand}}
 \doxysubsubsection{\texorpdfstring{getParentLink()}{getParentLink()}}
 {\footnotesize\ttfamily const std\+::string\& tesseract\+\_\+environment\+::\+Move\+Joint\+Command\+::get\+Parent\+Link (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classtesseract__environment_1_1MoveJointCommand_a394dd31cd89db36d26cbfc17ff3c13f7}\label{classtesseract__environment_1_1MoveJointCommand_a394dd31cd89db36d26cbfc17ff3c13f7}} 
+\index{tesseract\_environment::MoveJointCommand@{tesseract\_environment::MoveJointCommand}!getType@{getType}}
+\index{getType@{getType}!tesseract\_environment::MoveJointCommand@{tesseract\_environment::MoveJointCommand}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacetesseract__environment_afc00c1aecb519acba3afc24dbd367029}{Command\+Type}} tesseract\+\_\+environment\+::\+Move\+Joint\+Command\+::get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [final]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classtesseract__environment_1_1Command_ae76293ca1e231a278dcd79c1ec16490f}{tesseract\+\_\+environment\+::\+Command}}.
 
 
 
@@ -84,4 +130,4 @@ std\+::string \mbox{\hyperlink{classtesseract__environment_1_1MoveJointCommand_a
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-tesseract/tesseract\+\_\+environment/include/tesseract\+\_\+environment/core/\mbox{\hyperlink{commands_8h}{commands.\+h}}\end{DoxyCompactItemize}
+tesseract\+\_\+environment/include/tesseract\+\_\+environment/commands/\mbox{\hyperlink{move__joint__command_8h}{move\+\_\+joint\+\_\+command.\+h}}\end{DoxyCompactItemize}

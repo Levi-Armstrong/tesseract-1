@@ -1,0 +1,202 @@
+\hypertarget{classtesseract__common_1_1Any}{}\doxysection{tesseract\+\_\+common\+::Any Class Reference}
+\label{classtesseract__common_1_1Any}\index{tesseract\_common::Any@{tesseract\_common::Any}}
+
+
+{\ttfamily \#include $<$any.\+h$>$}
+
+
+
+Collaboration diagram for tesseract\+\_\+common\+::Any\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=261pt]{d4/d73/classtesseract__common_1_1Any__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T , generic\+\_\+ctor\+\_\+enabler$<$ T $>$  = 0$>$ }\\\mbox{\hyperlink{classtesseract__common_1_1Any_a4d87e27f43d7a1770ac2e5d3603b95bd}{Any}} (T \&\&any\+\_\+type)
+\item 
+\mbox{\hyperlink{classtesseract__common_1_1Any_aa562163615df01361a7d26546b5da273}{Any}} ()
+\item 
+\mbox{\hyperlink{classtesseract__common_1_1Any_a3029f0debd2bd5338948d45022252a65}{$\sim$\+Any}} ()=default
+\item 
+\mbox{\hyperlink{classtesseract__common_1_1Any_a1d09af26ce03aaa82fa7c7f61fa59447}{Any}} (const \mbox{\hyperlink{classtesseract__common_1_1Any}{Any}} \&other)
+\item 
+\mbox{\hyperlink{classtesseract__common_1_1Any_a16bdf81300c75f063ea1f2ef06ea8eae}{Any}} (\mbox{\hyperlink{classtesseract__common_1_1Any}{Any}} \&\&other) noexcept
+\item 
+\mbox{\hyperlink{classtesseract__common_1_1Any}{Any}} \& \mbox{\hyperlink{classtesseract__common_1_1Any_a0abd39d86ef30449838357f90dcc2e09}{operator=}} (\mbox{\hyperlink{classtesseract__common_1_1Any}{Any}} \&\&other) noexcept
+\item 
+\mbox{\hyperlink{classtesseract__common_1_1Any}{Any}} \& \mbox{\hyperlink{classtesseract__common_1_1Any_ac0e7f15fb4e55c005ff471a274eeeafb}{operator=}} (const \mbox{\hyperlink{classtesseract__common_1_1Any}{Any}} \&other)
+\item 
+{\footnotesize template$<$typename T , generic\+\_\+ctor\+\_\+enabler$<$ T $>$  = 0$>$ }\\\mbox{\hyperlink{classtesseract__common_1_1Any}{Any}} \& \mbox{\hyperlink{classtesseract__common_1_1Any_a95ac7e1b59e5b8006a6907718d6b2a72}{operator=}} (T \&\&other)
+\item 
+std\+::type\+\_\+index \mbox{\hyperlink{classtesseract__common_1_1Any_af207dd9e6a1ff78340bdcf05e1c8be22}{get\+Type}} () const
+\item 
+bool \mbox{\hyperlink{classtesseract__common_1_1Any_a962875c3ad4505138a9fc0cb9aa6556c}{operator==}} (const \mbox{\hyperlink{classtesseract__common_1_1Any}{Any}} \&rhs) const
+\item 
+bool \mbox{\hyperlink{classtesseract__common_1_1Any_aa0980d9cdb790789f9f563f81f5e847a}{operator!=}} (const \mbox{\hyperlink{classtesseract__common_1_1Any}{Any}} \&rhs) const
+\item 
+{\footnotesize template$<$typename T $>$ }\\T \& \mbox{\hyperlink{classtesseract__common_1_1Any_aa9fb45a09c05b300d75884f269b3182b}{as}} ()
+\item 
+{\footnotesize template$<$typename T $>$ }\\const T \& \mbox{\hyperlink{classtesseract__common_1_1Any_a9782a783c0a04cd41e28ef8ce06be90f}{as}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\using \mbox{\hyperlink{classtesseract__common_1_1Any_a842b0ebe8a90b899be7a2877ecc76d3a}{uncvref\+\_\+t}} = std\+::remove\+\_\+cv\+\_\+t$<$ typename std\+::remove\+\_\+reference$<$ T $>$\+::type $>$
+\item 
+{\footnotesize template$<$typename T $>$ }\\using \mbox{\hyperlink{classtesseract__common_1_1Any_ab7708d56f03efcd2a7a621692ed54e87}{generic\+\_\+ctor\+\_\+enabler}} = std\+::enable\+\_\+if\+\_\+t$<$!std\+::is\+\_\+same$<$ \mbox{\hyperlink{classtesseract__common_1_1Any}{Any}}, \mbox{\hyperlink{classtesseract__common_1_1Any_a842b0ebe8a90b899be7a2877ecc76d3a}{uncvref\+\_\+t}}$<$ T $>$ $>$\+::value, int $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class Archive $>$ }\\void \mbox{\hyperlink{classtesseract__common_1_1Any_abada6580d840ac6df954dbf30caef3cb}{serialize}} (Archive \&ar, const unsigned int)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{structtesseract__common_1_1detail__any_1_1AnyInnerBase}{detail\+\_\+any\+::\+Any\+Inner\+Base}} $>$ \mbox{\hyperlink{classtesseract__common_1_1Any_a8f2f5c3d13691e573cab8ac5042c570a}{any\+\_\+type\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classtesseract__common_1_1Any_ac98d07dd8f7b70e16ccb9a01abf56b9c}{boost\+::serialization\+::access}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classtesseract__common_1_1Any_ab7708d56f03efcd2a7a621692ed54e87}\label{classtesseract__common_1_1Any_ab7708d56f03efcd2a7a621692ed54e87}} 
+\index{tesseract\_common::Any@{tesseract\_common::Any}!generic\_ctor\_enabler@{generic\_ctor\_enabler}}
+\index{generic\_ctor\_enabler@{generic\_ctor\_enabler}!tesseract\_common::Any@{tesseract\_common::Any}}
+\doxysubsubsection{\texorpdfstring{generic\_ctor\_enabler}{generic\_ctor\_enabler}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+using \mbox{\hyperlink{classtesseract__common_1_1Any_ab7708d56f03efcd2a7a621692ed54e87}{tesseract\+\_\+common\+::\+Any\+::generic\+\_\+ctor\+\_\+enabler}} =  std\+::enable\+\_\+if\+\_\+t$<$!std\+::is\+\_\+same$<$\mbox{\hyperlink{classtesseract__common_1_1Any}{Any}}, \mbox{\hyperlink{classtesseract__common_1_1Any_a842b0ebe8a90b899be7a2877ecc76d3a}{uncvref\+\_\+t}}$<$T$>$ $>$\+::value, int$>$\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classtesseract__common_1_1Any_a842b0ebe8a90b899be7a2877ecc76d3a}\label{classtesseract__common_1_1Any_a842b0ebe8a90b899be7a2877ecc76d3a}} 
+\index{tesseract\_common::Any@{tesseract\_common::Any}!uncvref\_t@{uncvref\_t}}
+\index{uncvref\_t@{uncvref\_t}!tesseract\_common::Any@{tesseract\_common::Any}}
+\doxysubsubsection{\texorpdfstring{uncvref\_t}{uncvref\_t}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+using \mbox{\hyperlink{classtesseract__common_1_1Any_a842b0ebe8a90b899be7a2877ecc76d3a}{tesseract\+\_\+common\+::\+Any\+::uncvref\+\_\+t}} =  std\+::remove\+\_\+cv\+\_\+t$<$typename std\+::remove\+\_\+reference$<$T$>$\+::type$>$\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtesseract__common_1_1Any_a4d87e27f43d7a1770ac2e5d3603b95bd}\label{classtesseract__common_1_1Any_a4d87e27f43d7a1770ac2e5d3603b95bd}} 
+\index{tesseract\_common::Any@{tesseract\_common::Any}!Any@{Any}}
+\index{Any@{Any}!tesseract\_common::Any@{tesseract\_common::Any}}
+\doxysubsubsection{\texorpdfstring{Any()}{Any()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$typename T , generic\+\_\+ctor\+\_\+enabler$<$ T $>$  = 0$>$ \\
+tesseract\+\_\+common\+::\+Any\+::\+Any (\begin{DoxyParamCaption}\item[{T \&\&}]{any\+\_\+type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classtesseract__common_1_1Any_aa562163615df01361a7d26546b5da273}\label{classtesseract__common_1_1Any_aa562163615df01361a7d26546b5da273}} 
+\index{tesseract\_common::Any@{tesseract\_common::Any}!Any@{Any}}
+\index{Any@{Any}!tesseract\_common::Any@{tesseract\_common::Any}}
+\doxysubsubsection{\texorpdfstring{Any()}{Any()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily tesseract\+\_\+common\+::\+Any\+::\+Any (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classtesseract__common_1_1Any_a3029f0debd2bd5338948d45022252a65}\label{classtesseract__common_1_1Any_a3029f0debd2bd5338948d45022252a65}} 
+\index{tesseract\_common::Any@{tesseract\_common::Any}!````~Any@{$\sim$Any}}
+\index{````~Any@{$\sim$Any}!tesseract\_common::Any@{tesseract\_common::Any}}
+\doxysubsubsection{\texorpdfstring{$\sim$Any()}{~Any()}}
+{\footnotesize\ttfamily tesseract\+\_\+common\+::\+Any\+::$\sim$\+Any (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classtesseract__common_1_1Any_a1d09af26ce03aaa82fa7c7f61fa59447}\label{classtesseract__common_1_1Any_a1d09af26ce03aaa82fa7c7f61fa59447}} 
+\index{tesseract\_common::Any@{tesseract\_common::Any}!Any@{Any}}
+\index{Any@{Any}!tesseract\_common::Any@{tesseract\_common::Any}}
+\doxysubsubsection{\texorpdfstring{Any()}{Any()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily tesseract\+\_\+common\+::\+Any\+::\+Any (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtesseract__common_1_1Any}{Any}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classtesseract__common_1_1Any_a16bdf81300c75f063ea1f2ef06ea8eae}\label{classtesseract__common_1_1Any_a16bdf81300c75f063ea1f2ef06ea8eae}} 
+\index{tesseract\_common::Any@{tesseract\_common::Any}!Any@{Any}}
+\index{Any@{Any}!tesseract\_common::Any@{tesseract\_common::Any}}
+\doxysubsubsection{\texorpdfstring{Any()}{Any()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily tesseract\+\_\+common\+::\+Any\+::\+Any (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtesseract__common_1_1Any}{Any}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtesseract__common_1_1Any_aa9fb45a09c05b300d75884f269b3182b}\label{classtesseract__common_1_1Any_aa9fb45a09c05b300d75884f269b3182b}} 
+\index{tesseract\_common::Any@{tesseract\_common::Any}!as@{as}}
+\index{as@{as}!tesseract\_common::Any@{tesseract\_common::Any}}
+\doxysubsubsection{\texorpdfstring{as()}{as()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T\& tesseract\+\_\+common\+::\+Any\+::as (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classtesseract__common_1_1Any_a9782a783c0a04cd41e28ef8ce06be90f}\label{classtesseract__common_1_1Any_a9782a783c0a04cd41e28ef8ce06be90f}} 
+\index{tesseract\_common::Any@{tesseract\_common::Any}!as@{as}}
+\index{as@{as}!tesseract\_common::Any@{tesseract\_common::Any}}
+\doxysubsubsection{\texorpdfstring{as()}{as()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+const T\& tesseract\+\_\+common\+::\+Any\+::as (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classtesseract__common_1_1Any_af207dd9e6a1ff78340bdcf05e1c8be22}\label{classtesseract__common_1_1Any_af207dd9e6a1ff78340bdcf05e1c8be22}} 
+\index{tesseract\_common::Any@{tesseract\_common::Any}!getType@{getType}}
+\index{getType@{getType}!tesseract\_common::Any@{tesseract\_common::Any}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily std\+::type\+\_\+index tesseract\+\_\+common\+::\+Any\+::get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classtesseract__common_1_1Any_aa0980d9cdb790789f9f563f81f5e847a}\label{classtesseract__common_1_1Any_aa0980d9cdb790789f9f563f81f5e847a}} 
+\index{tesseract\_common::Any@{tesseract\_common::Any}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!tesseract\_common::Any@{tesseract\_common::Any}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily bool tesseract\+\_\+common\+::\+Any\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtesseract__common_1_1Any}{Any}} \&}]{rhs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classtesseract__common_1_1Any_a0abd39d86ef30449838357f90dcc2e09}\label{classtesseract__common_1_1Any_a0abd39d86ef30449838357f90dcc2e09}} 
+\index{tesseract\_common::Any@{tesseract\_common::Any}!operator=@{operator=}}
+\index{operator=@{operator=}!tesseract\_common::Any@{tesseract\_common::Any}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__common_1_1Any}{Any}}\& tesseract\+\_\+common\+::\+Any\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtesseract__common_1_1Any}{Any}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classtesseract__common_1_1Any_ac0e7f15fb4e55c005ff471a274eeeafb}\label{classtesseract__common_1_1Any_ac0e7f15fb4e55c005ff471a274eeeafb}} 
+\index{tesseract\_common::Any@{tesseract\_common::Any}!operator=@{operator=}}
+\index{operator=@{operator=}!tesseract\_common::Any@{tesseract\_common::Any}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__common_1_1Any}{Any}}\& tesseract\+\_\+common\+::\+Any\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtesseract__common_1_1Any}{Any}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classtesseract__common_1_1Any_a95ac7e1b59e5b8006a6907718d6b2a72}\label{classtesseract__common_1_1Any_a95ac7e1b59e5b8006a6907718d6b2a72}} 
+\index{tesseract\_common::Any@{tesseract\_common::Any}!operator=@{operator=}}
+\index{operator=@{operator=}!tesseract\_common::Any@{tesseract\_common::Any}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$typename T , generic\+\_\+ctor\+\_\+enabler$<$ T $>$  = 0$>$ \\
+\mbox{\hyperlink{classtesseract__common_1_1Any}{Any}}\& tesseract\+\_\+common\+::\+Any\+::operator= (\begin{DoxyParamCaption}\item[{T \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classtesseract__common_1_1Any_a962875c3ad4505138a9fc0cb9aa6556c}\label{classtesseract__common_1_1Any_a962875c3ad4505138a9fc0cb9aa6556c}} 
+\index{tesseract\_common::Any@{tesseract\_common::Any}!operator==@{operator==}}
+\index{operator==@{operator==}!tesseract\_common::Any@{tesseract\_common::Any}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool tesseract\+\_\+common\+::\+Any\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtesseract__common_1_1Any}{Any}} \&}]{rhs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classtesseract__common_1_1Any_abada6580d840ac6df954dbf30caef3cb}\label{classtesseract__common_1_1Any_abada6580d840ac6df954dbf30caef3cb}} 
+\index{tesseract\_common::Any@{tesseract\_common::Any}!serialize@{serialize}}
+\index{serialize@{serialize}!tesseract\_common::Any@{tesseract\_common::Any}}
+\doxysubsubsection{\texorpdfstring{serialize()}{serialize()}}
+{\footnotesize\ttfamily template$<$class Archive $>$ \\
+void tesseract\+\_\+common\+::\+Any\+::serialize (\begin{DoxyParamCaption}\item[{Archive \&}]{ar,  }\item[{const unsigned int}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classtesseract__common_1_1Any_ac98d07dd8f7b70e16ccb9a01abf56b9c}\label{classtesseract__common_1_1Any_ac98d07dd8f7b70e16ccb9a01abf56b9c}} 
+\index{tesseract\_common::Any@{tesseract\_common::Any}!boost::serialization::access@{boost::serialization::access}}
+\index{boost::serialization::access@{boost::serialization::access}!tesseract\_common::Any@{tesseract\_common::Any}}
+\doxysubsubsection{\texorpdfstring{boost::serialization::access}{boost::serialization::access}}
+{\footnotesize\ttfamily friend class boost\+::serialization\+::access\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classtesseract__common_1_1Any_a8f2f5c3d13691e573cab8ac5042c570a}\label{classtesseract__common_1_1Any_a8f2f5c3d13691e573cab8ac5042c570a}} 
+\index{tesseract\_common::Any@{tesseract\_common::Any}!any\_type\_@{any\_type\_}}
+\index{any\_type\_@{any\_type\_}!tesseract\_common::Any@{tesseract\_common::Any}}
+\doxysubsubsection{\texorpdfstring{any\_type\_}{any\_type\_}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{structtesseract__common_1_1detail__any_1_1AnyInnerBase}{detail\+\_\+any\+::\+Any\+Inner\+Base}}$>$ tesseract\+\_\+common\+::\+Any\+::any\+\_\+type\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+tesseract\+\_\+common/include/tesseract\+\_\+common/\mbox{\hyperlink{any_8h}{any.\+h}}\end{DoxyCompactItemize}

@@ -1,5 +1,5 @@
-\hypertarget{graph_8h}{}\doxysection{tesseract/tesseract\+\_\+scene\+\_\+graph/include/tesseract\+\_\+scene\+\_\+graph/graph.h File Reference}
-\label{graph_8h}\index{tesseract/tesseract\_scene\_graph/include/tesseract\_scene\_graph/graph.h@{tesseract/tesseract\_scene\_graph/include/tesseract\_scene\_graph/graph.h}}
+\hypertarget{graph_8h}{}\doxysection{tesseract\+\_\+scene\+\_\+graph/include/tesseract\+\_\+scene\+\_\+graph/graph.h File Reference}
+\label{graph_8h}\index{tesseract\_scene\_graph/include/tesseract\_scene\_graph/graph.h@{tesseract\_scene\_graph/include/tesseract\_scene\_graph/graph.h}}
 
 
 A basic scene graph using boost.  
@@ -36,6 +36,8 @@ This graph shows which files directly or indirectly include this file\+:
 \doxysubsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
+struct \mbox{\hyperlink{structtesseract__scene__graph_1_1ShortestPath}{tesseract\+\_\+scene\+\_\+graph\+::\+Shortest\+Path}}
+\begin{DoxyCompactList}\small\item\em Holds the shortest path information. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph}{tesseract\+\_\+scene\+\_\+graph\+::\+Scene\+Graph}}
 \item 
 struct \mbox{\hyperlink{structtesseract__scene__graph_1_1SceneGraph_1_1cycle__detector}{tesseract\+\_\+scene\+\_\+graph\+::\+Scene\+Graph\+::cycle\+\_\+detector}}
@@ -43,6 +45,8 @@ struct \mbox{\hyperlink{structtesseract__scene__graph_1_1SceneGraph_1_1cycle__de
 struct \mbox{\hyperlink{structtesseract__scene__graph_1_1SceneGraph_1_1tree__detector}{tesseract\+\_\+scene\+\_\+graph\+::\+Scene\+Graph\+::tree\+\_\+detector}}
 \item 
 struct \mbox{\hyperlink{structtesseract__scene__graph_1_1SceneGraph_1_1children__detector}{tesseract\+\_\+scene\+\_\+graph\+::\+Scene\+Graph\+::children\+\_\+detector}}
+\item 
+struct \mbox{\hyperlink{structtesseract__scene__graph_1_1SceneGraph_1_1adjacency__detector}{tesseract\+\_\+scene\+\_\+graph\+::\+Scene\+Graph\+::adjacency\+\_\+detector}}
 \end{DoxyCompactItemize}
 \doxysubsection*{Namespaces}
 \begin{DoxyCompactItemize}
@@ -50,7 +54,7 @@ struct \mbox{\hyperlink{structtesseract__scene__graph_1_1SceneGraph_1_1children_
  \mbox{\hyperlink{namespaceboost}{boost}}
 \item 
  \mbox{\hyperlink{namespacetesseract__scene__graph}{tesseract\+\_\+scene\+\_\+graph}}
-\begin{DoxyCompactList}\small\item\em Main namespace. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{DoxyCompactItemize}
 \doxysubsection*{Typedefs}
 \begin{DoxyCompactItemize}
 \item 
@@ -93,7 +97,7 @@ enum \mbox{\hyperlink{namespaceboost_ab3ffe54ba2693f8e8e5e709d8a425f65}{boost\+:
 \item 
 \mbox{\hyperlink{namespaceboost_a9e70dbab81a95f5c36fde0799a598dbf}{boost\+::\+BOOST\+\_\+\+INSTALL\+\_\+\+PROPERTY}} (graph, root)
 \item 
-std\+::ostream \& \mbox{\hyperlink{namespacetesseract__scene__graph_a8282e1e01e7595b9ae8ce47813ccf35d}{tesseract\+\_\+scene\+\_\+graph\+::operator$<$$<$}} (std\+::ostream \&os, const Scene\+Graph\+::\+Path \&path)
+std\+::ostream \& \mbox{\hyperlink{namespacetesseract__scene__graph_a24ea91fec7fb64354921f429f24d6835}{tesseract\+\_\+scene\+\_\+graph\+::operator$<$$<$}} (std\+::ostream \&os, const Shortest\+Path \&path)
 \end{DoxyCompactItemize}
 
 
@@ -110,7 +114,7 @@ Dec 18, 2017
 TODO 
 \end{DoxyVersion}
 \begin{DoxyRefDesc}{Bug}
-\item[\mbox{\hyperlink{bug__bug000322}{Bug}}]No known bugs\end{DoxyRefDesc}
+\item[\mbox{\hyperlink{bug__bug000152}{Bug}}]No known bugs\end{DoxyRefDesc}
 
 
 \begin{DoxyCopyright}{Copyright}

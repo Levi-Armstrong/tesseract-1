@@ -1,7 +1,5 @@
 <map id="tesseract_geometry::MeshTexture" name="tesseract_geometry::MeshTexture">
-<area shape="rect" id="node1" title="Represents a texture and UV coordinates extracted from a mesh file." alt="" coords="711,41,847,83"/>
-<area shape="rect" id="node2" title=" " alt="" coords="328,5,571,47"/>
-<area shape="rect" id="node3" title=" " alt="" coords="149,13,261,39"/>
-<area shape="rect" id="node4" title=" " alt="" coords="5,13,44,39"/>
-<area shape="rect" id="node5" title=" " alt="" coords="357,71,541,98"/>
+<area shape="rect" id="node1" title="Represents a texture and UV coordinates extracted from a mesh file." alt="" coords="388,35,524,76"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,5,248,47"/>
+<area shape="rect" id="node3" title=" " alt="" coords="35,71,219,98"/>
 </map>

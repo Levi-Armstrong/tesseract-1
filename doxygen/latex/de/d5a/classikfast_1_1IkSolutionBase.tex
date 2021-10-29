@@ -22,13 +22,13 @@ Inheritance diagram for ikfast\+::Ik\+Solution\+Base$<$ T $>$\+:
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-virtual \mbox{\hyperlink{classikfast_1_1IkSolutionBase_ae40e464cdbc474388cc7d55560ec44f9}{$\sim$\+Ik\+Solution\+Base}} ()
+virtual \mbox{\hyperlink{classikfast_1_1IkSolutionBase_aaf2244322c7463d52039a122bf1160f3}{$\sim$\+Ik\+Solution\+Base}} ()=default
 \item 
 virtual void \mbox{\hyperlink{classikfast_1_1IkSolutionBase_a9405530feb49f12f56c3175e7150c66f}{Get\+Solution}} (T $\ast$solution, const T $\ast$freevalues) const =0
 \begin{DoxyCompactList}\small\item\em gets a concrete solution \end{DoxyCompactList}\item 
-virtual void \mbox{\hyperlink{classikfast_1_1IkSolutionBase_a4e8afdc564a90aeed598d276d4f1bd3f}{Get\+Solution}} (std\+::vector$<$ T $>$ \&solution, const std\+::vector$<$ T $>$ \&freevalues) const
+virtual void \mbox{\hyperlink{classikfast_1_1IkSolutionBase_a4e8afdc564a90aeed598d276d4f1bd3f}{Get\+Solution}} (\mbox{\hyperlink{vhacdRaycastMesh_8cpp_adcf134d50025cc52907d0c8ac798d89d}{std\+::vector}}$<$ T $>$ \&solution, const \mbox{\hyperlink{vhacdRaycastMesh_8cpp_adcf134d50025cc52907d0c8ac798d89d}{std\+::vector}}$<$ T $>$ \&freevalues) const
 \begin{DoxyCompactList}\small\item\em std\+::vector version of \mbox{\hyperlink{classikfast_1_1IkSolutionBase_a9405530feb49f12f56c3175e7150c66f}{Get\+Solution}} \end{DoxyCompactList}\item 
-virtual const std\+::vector$<$ int $>$ \& \mbox{\hyperlink{classikfast_1_1IkSolutionBase_a2693ede66be937b7c4c1c949284282ca}{Get\+Free}} () const =0
+virtual const \mbox{\hyperlink{vhacdRaycastMesh_8cpp_adcf134d50025cc52907d0c8ac798d89d}{std\+::vector}}$<$ int $>$ \& \mbox{\hyperlink{classikfast_1_1IkSolutionBase_a2693ede66be937b7c4c1c949284282ca}{Get\+Free}} () const =0
 \begin{DoxyCompactList}\small\item\em Gets the indices of the configuration space that have to be preset before a full solution can be returned. \end{DoxyCompactList}\item 
 virtual int \mbox{\hyperlink{classikfast_1_1IkSolutionBase_a94ac1496405343f4c7ad2a3c07b375cc}{Get\+DOF}} () const =0
 \begin{DoxyCompactList}\small\item\em the dof of the solution \end{DoxyCompactList}\end{DoxyCompactItemize}
@@ -43,12 +43,12 @@ The discrete solutions are returned in this structure.
 Sometimes the joint axes of the robot can align allowing an infinite number of solutions. Stores all these solutions in the form of free variables that the user has to set when querying the solution. Its prototype is\+: 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{classikfast_1_1IkSolutionBase_ae40e464cdbc474388cc7d55560ec44f9}\label{classikfast_1_1IkSolutionBase_ae40e464cdbc474388cc7d55560ec44f9}} 
+\mbox{\Hypertarget{classikfast_1_1IkSolutionBase_aaf2244322c7463d52039a122bf1160f3}\label{classikfast_1_1IkSolutionBase_aaf2244322c7463d52039a122bf1160f3}} 
 \index{ikfast::IkSolutionBase$<$ T $>$@{ikfast::IkSolutionBase$<$ T $>$}!````~IkSolutionBase@{$\sim$IkSolutionBase}}
 \index{````~IkSolutionBase@{$\sim$IkSolutionBase}!ikfast::IkSolutionBase$<$ T $>$@{ikfast::IkSolutionBase$<$ T $>$}}
 \doxysubsubsection{\texorpdfstring{$\sim$IkSolutionBase()}{~IkSolutionBase()}}
 {\footnotesize\ttfamily template$<$typename T $>$ \\
-virtual \mbox{\hyperlink{classikfast_1_1IkSolutionBase}{ikfast\+::\+Ik\+Solution\+Base}}$<$ T $>$\+::$\sim$\mbox{\hyperlink{classikfast_1_1IkSolutionBase}{Ik\+Solution\+Base}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+virtual \mbox{\hyperlink{classikfast_1_1IkSolutionBase}{ikfast\+::\+Ik\+Solution\+Base}}$<$ T $>$\+::$\sim$\mbox{\hyperlink{classikfast_1_1IkSolutionBase}{Ik\+Solution\+Base}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
 
 
 
@@ -66,14 +66,14 @@ the dof of the solution
 
 
 
-Implemented in \mbox{\hyperlink{classikfast_1_1IkSolution_a38374e5c362498812fdbb86bdd77ee42}{ikfast\+::\+Ik\+Solution$<$ T $>$}}.
+Implemented in \mbox{\hyperlink{classikfast_1_1IkSolution_a7cca4d33349888047513cc374c01e5f4}{ikfast\+::\+Ik\+Solution$<$ T $>$}}.
 
 \mbox{\Hypertarget{classikfast_1_1IkSolutionBase_a2693ede66be937b7c4c1c949284282ca}\label{classikfast_1_1IkSolutionBase_a2693ede66be937b7c4c1c949284282ca}} 
 \index{ikfast::IkSolutionBase$<$ T $>$@{ikfast::IkSolutionBase$<$ T $>$}!GetFree@{GetFree}}
 \index{GetFree@{GetFree}!ikfast::IkSolutionBase$<$ T $>$@{ikfast::IkSolutionBase$<$ T $>$}}
 \doxysubsubsection{\texorpdfstring{GetFree()}{GetFree()}}
 {\footnotesize\ttfamily template$<$typename T $>$ \\
-virtual const std\+::vector$<$int$>$\& \mbox{\hyperlink{classikfast_1_1IkSolutionBase}{ikfast\+::\+Ik\+Solution\+Base}}$<$ T $>$\+::Get\+Free (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+virtual const \mbox{\hyperlink{vhacdRaycastMesh_8cpp_adcf134d50025cc52907d0c8ac798d89d}{std\+::vector}}$<$int$>$\& \mbox{\hyperlink{classikfast_1_1IkSolutionBase}{ikfast\+::\+Ik\+Solution\+Base}}$<$ T $>$\+::Get\+Free (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
@@ -84,14 +84,14 @@ vector of indices indicating the free parameters
 \end{DoxyReturn}
 
 
-Implemented in \mbox{\hyperlink{classikfast_1_1IkSolution_a6565d27370b7fe391efaa64a18e87afc}{ikfast\+::\+Ik\+Solution$<$ T $>$}}.
+Implemented in \mbox{\hyperlink{classikfast_1_1IkSolution_a97e025d0f2b2df6f8a22588f2eca68e6}{ikfast\+::\+Ik\+Solution$<$ T $>$}}.
 
 \mbox{\Hypertarget{classikfast_1_1IkSolutionBase_a4e8afdc564a90aeed598d276d4f1bd3f}\label{classikfast_1_1IkSolutionBase_a4e8afdc564a90aeed598d276d4f1bd3f}} 
 \index{ikfast::IkSolutionBase$<$ T $>$@{ikfast::IkSolutionBase$<$ T $>$}!GetSolution@{GetSolution}}
 \index{GetSolution@{GetSolution}!ikfast::IkSolutionBase$<$ T $>$@{ikfast::IkSolutionBase$<$ T $>$}}
 \doxysubsubsection{\texorpdfstring{GetSolution()}{GetSolution()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily template$<$typename T $>$ \\
-virtual void \mbox{\hyperlink{classikfast_1_1IkSolutionBase}{ikfast\+::\+Ik\+Solution\+Base}}$<$ T $>$\+::Get\+Solution (\begin{DoxyParamCaption}\item[{std\+::vector$<$ T $>$ \&}]{solution,  }\item[{const std\+::vector$<$ T $>$ \&}]{freevalues }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+virtual void \mbox{\hyperlink{classikfast_1_1IkSolutionBase}{ikfast\+::\+Ik\+Solution\+Base}}$<$ T $>$\+::Get\+Solution (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{vhacdRaycastMesh_8cpp_adcf134d50025cc52907d0c8ac798d89d}{std\+::vector}}$<$ T $>$ \&}]{solution,  }\item[{const \mbox{\hyperlink{vhacdRaycastMesh_8cpp_adcf134d50025cc52907d0c8ac798d89d}{std\+::vector}}$<$ T $>$ \&}]{freevalues }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
 
 
 
@@ -99,7 +99,7 @@ std\+::vector version of \mbox{\hyperlink{classikfast_1_1IkSolutionBase_a9405530
 
 
 
-Reimplemented in \mbox{\hyperlink{classikfast_1_1IkSolution_ab0258a9b42c720194e13953e631c9b8b}{ikfast\+::\+Ik\+Solution$<$ T $>$}}.
+Reimplemented in \mbox{\hyperlink{classikfast_1_1IkSolution_a3a326a9fb5b55108e5f8e5192f0a1318}{ikfast\+::\+Ik\+Solution$<$ T $>$}}.
 
 \mbox{\Hypertarget{classikfast_1_1IkSolutionBase_a9405530feb49f12f56c3175e7150c66f}\label{classikfast_1_1IkSolutionBase_a9405530feb49f12f56c3175e7150c66f}} 
 \index{ikfast::IkSolutionBase$<$ T $>$@{ikfast::IkSolutionBase$<$ T $>$}!GetSolution@{GetSolution}}
@@ -121,10 +121,10 @@ gets a concrete solution
 \end{DoxyParams}
 
 
-Implemented in \mbox{\hyperlink{classikfast_1_1IkSolution_ae8891fda83002a94c74a80ab9784679e}{ikfast\+::\+Ik\+Solution$<$ T $>$}}.
+Implemented in \mbox{\hyperlink{classikfast_1_1IkSolution_afa05dd08f29e8ca4713df8e0b2a07d0c}{ikfast\+::\+Ik\+Solution$<$ T $>$}}.
 
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-tesseract/tesseract\+\_\+kinematics/include/tesseract\+\_\+kinematics/ikfast/external/\mbox{\hyperlink{ikfast_8h}{ikfast.\+h}}\end{DoxyCompactItemize}
+tesseract\+\_\+kinematics/ikfast/include/tesseract\+\_\+kinematics/ikfast/external/\mbox{\hyperlink{ikfast_8h}{ikfast.\+h}}\end{DoxyCompactItemize}

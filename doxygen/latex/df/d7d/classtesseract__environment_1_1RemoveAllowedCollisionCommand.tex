@@ -2,7 +2,7 @@
 \label{classtesseract__environment_1_1RemoveAllowedCollisionCommand}\index{tesseract\_environment::RemoveAllowedCollisionCommand@{tesseract\_environment::RemoveAllowedCollisionCommand}}
 
 
-{\ttfamily \#include $<$commands.\+h$>$}
+{\ttfamily \#include $<$remove\+\_\+allowed\+\_\+collision\+\_\+command.\+h$>$}
 
 
 
@@ -24,10 +24,19 @@ Collaboration diagram for tesseract\+\_\+environment\+::Remove\+Allowed\+Collisi
 \includegraphics[width=303pt]{d3/d21/classtesseract__environment_1_1RemoveAllowedCollisionCommand__coll__graph}
 \end{center}
 \end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classtesseract__environment_1_1RemoveAllowedCollisionCommand_a7dddb76c119fe52f872797c7dd7c8bcd}{Ptr}} = std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classtesseract__environment_1_1RemoveAllowedCollisionCommand}{Remove\+Allowed\+Collision\+Command}} $>$
+\item 
+using \mbox{\hyperlink{classtesseract__environment_1_1RemoveAllowedCollisionCommand_a9d255725e662954db01245fdcadf79ab}{Const\+Ptr}} = std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{classtesseract__environment_1_1RemoveAllowedCollisionCommand}{Remove\+Allowed\+Collision\+Command}} $>$
+\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classtesseract__environment_1_1RemoveAllowedCollisionCommand_a2317a907a75826477fc6dd0d550d4ca3}{Remove\+Allowed\+Collision\+Command}} (std\+::string link\+\_\+name1, std\+::string link\+\_\+name2)
+\begin{DoxyCompactList}\small\item\em Remove disabled collision pair from allowed collision matrix. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacetesseract__environment_afc00c1aecb519acba3afc24dbd367029}{Command\+Type}} \mbox{\hyperlink{classtesseract__environment_1_1RemoveAllowedCollisionCommand_a94dd3148340aee5292355e998969898e}{get\+Type}} () const final
 \item 
 const std\+::string \& \mbox{\hyperlink{classtesseract__environment_1_1RemoveAllowedCollisionCommand_a0b641f651d0b6c90e24fb56024247975}{get\+Link\+Name1}} () const
 \item 
@@ -40,7 +49,21 @@ std\+::string \mbox{\hyperlink{classtesseract__environment_1_1RemoveAllowedColli
 \item 
 std\+::string \mbox{\hyperlink{classtesseract__environment_1_1RemoveAllowedCollisionCommand_abf7c5d4cd0e07501fc36e1b8fed6eac2}{link\+\_\+name2\+\_\+}}
 \end{DoxyCompactItemize}
-\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classtesseract__environment_1_1RemoveAllowedCollisionCommand_a9d255725e662954db01245fdcadf79ab}\label{classtesseract__environment_1_1RemoveAllowedCollisionCommand_a9d255725e662954db01245fdcadf79ab}} 
+\index{tesseract\_environment::RemoveAllowedCollisionCommand@{tesseract\_environment::RemoveAllowedCollisionCommand}!ConstPtr@{ConstPtr}}
+\index{ConstPtr@{ConstPtr}!tesseract\_environment::RemoveAllowedCollisionCommand@{tesseract\_environment::RemoveAllowedCollisionCommand}}
+\doxysubsubsection{\texorpdfstring{ConstPtr}{ConstPtr}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classtesseract__environment_1_1RemoveAllowedCollisionCommand_a9d255725e662954db01245fdcadf79ab}{tesseract\+\_\+environment\+::\+Remove\+Allowed\+Collision\+Command\+::\+Const\+Ptr}} =  std\+::shared\+\_\+ptr$<$const \mbox{\hyperlink{classtesseract__environment_1_1RemoveAllowedCollisionCommand}{Remove\+Allowed\+Collision\+Command}}$>$}
+
+\mbox{\Hypertarget{classtesseract__environment_1_1RemoveAllowedCollisionCommand_a7dddb76c119fe52f872797c7dd7c8bcd}\label{classtesseract__environment_1_1RemoveAllowedCollisionCommand_a7dddb76c119fe52f872797c7dd7c8bcd}} 
+\index{tesseract\_environment::RemoveAllowedCollisionCommand@{tesseract\_environment::RemoveAllowedCollisionCommand}!Ptr@{Ptr}}
+\index{Ptr@{Ptr}!tesseract\_environment::RemoveAllowedCollisionCommand@{tesseract\_environment::RemoveAllowedCollisionCommand}}
+\doxysubsubsection{\texorpdfstring{Ptr}{Ptr}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classtesseract__environment_1_1RemoveAllowedCollisionCommand_a7dddb76c119fe52f872797c7dd7c8bcd}{tesseract\+\_\+environment\+::\+Remove\+Allowed\+Collision\+Command\+::\+Ptr}} =  std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classtesseract__environment_1_1RemoveAllowedCollisionCommand}{Remove\+Allowed\+Collision\+Command}}$>$}
+
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
@@ -50,6 +73,17 @@ std\+::string \mbox{\hyperlink{classtesseract__environment_1_1RemoveAllowedColli
 \doxysubsubsection{\texorpdfstring{RemoveAllowedCollisionCommand()}{RemoveAllowedCollisionCommand()}}
 {\footnotesize\ttfamily tesseract\+\_\+environment\+::\+Remove\+Allowed\+Collision\+Command\+::\+Remove\+Allowed\+Collision\+Command (\begin{DoxyParamCaption}\item[{std\+::string}]{link\+\_\+name1,  }\item[{std\+::string}]{link\+\_\+name2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
+
+
+Remove disabled collision pair from allowed collision matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em link\+\_\+name1} & Collision object name \\
+\hline
+{\em link\+\_\+name2} & Collision object name \\
+\hline
+\end{DoxyParams}
 
 
 \doxysubsection{Member Function Documentation}
@@ -64,6 +98,16 @@ std\+::string \mbox{\hyperlink{classtesseract__environment_1_1RemoveAllowedColli
 \index{getLinkName2@{getLinkName2}!tesseract\_environment::RemoveAllowedCollisionCommand@{tesseract\_environment::RemoveAllowedCollisionCommand}}
 \doxysubsubsection{\texorpdfstring{getLinkName2()}{getLinkName2()}}
 {\footnotesize\ttfamily const std\+::string\& tesseract\+\_\+environment\+::\+Remove\+Allowed\+Collision\+Command\+::get\+Link\+Name2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classtesseract__environment_1_1RemoveAllowedCollisionCommand_a94dd3148340aee5292355e998969898e}\label{classtesseract__environment_1_1RemoveAllowedCollisionCommand_a94dd3148340aee5292355e998969898e}} 
+\index{tesseract\_environment::RemoveAllowedCollisionCommand@{tesseract\_environment::RemoveAllowedCollisionCommand}!getType@{getType}}
+\index{getType@{getType}!tesseract\_environment::RemoveAllowedCollisionCommand@{tesseract\_environment::RemoveAllowedCollisionCommand}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacetesseract__environment_afc00c1aecb519acba3afc24dbd367029}{Command\+Type}} tesseract\+\_\+environment\+::\+Remove\+Allowed\+Collision\+Command\+::get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [final]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classtesseract__environment_1_1Command_ae76293ca1e231a278dcd79c1ec16490f}{tesseract\+\_\+environment\+::\+Command}}.
 
 
 
@@ -84,4 +128,4 @@ std\+::string \mbox{\hyperlink{classtesseract__environment_1_1RemoveAllowedColli
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-tesseract/tesseract\+\_\+environment/include/tesseract\+\_\+environment/core/\mbox{\hyperlink{commands_8h}{commands.\+h}}\end{DoxyCompactItemize}
+tesseract\+\_\+environment/include/tesseract\+\_\+environment/commands/\mbox{\hyperlink{remove__allowed__collision__command_8h}{remove\+\_\+allowed\+\_\+collision\+\_\+command.\+h}}\end{DoxyCompactItemize}

@@ -27,7 +27,9 @@ Collaboration diagram for tesseract\+\_\+collision\+::Collision\+Check\+Config\+
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{structtesseract__collision_1_1CollisionMarginData}{Collision\+Margin\+Data}} \mbox{\hyperlink{structtesseract__collision_1_1CollisionCheckConfig_a396d3bbd4a21240e02929b431867f67f}{collision\+\_\+margin\+\_\+data}}
+\mbox{\hyperlink{namespacetesseract__common_af06d85d024a36d63b58a6031556af8a1}{Collision\+Margin\+Override\+Type}} \mbox{\hyperlink{structtesseract__collision_1_1CollisionCheckConfig_aadf2eb4687259b6b2d56ff65b05e5bc8}{collision\+\_\+margin\+\_\+override\+\_\+type}} \{ Collision\+Margin\+Override\+Type\+::\+NONE \}
+\begin{DoxyCompactList}\small\item\em Identify how the collision margin data should be applied to the contact manager. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacetesseract__collision_a0717a3c53d08d510257f631ea96cb560}{Collision\+Margin\+Data}} \mbox{\hyperlink{structtesseract__collision_1_1CollisionCheckConfig_a396d3bbd4a21240e02929b431867f67f}{collision\+\_\+margin\+\_\+data}}
 \begin{DoxyCompactList}\small\item\em Stores information about how the margins allowed between collision objects. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{structtesseract__collision_1_1ContactRequest}{Contact\+Request}} \mbox{\hyperlink{structtesseract__collision_1_1CollisionCheckConfig_a4a97e5373546778882e201190c0367ae}{contact\+\_\+request}}
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{structtesseract__collision_1_1ContactRequest}{Contact\+Request}} that will be used for this check. Default test type\+: FIRST. \end{DoxyCompactList}\item 
@@ -45,7 +47,7 @@ This is a high level structure containing common information that collision chec
 \index{tesseract\_collision::CollisionCheckConfig@{tesseract\_collision::CollisionCheckConfig}!CollisionCheckConfig@{CollisionCheckConfig}}
 \index{CollisionCheckConfig@{CollisionCheckConfig}!tesseract\_collision::CollisionCheckConfig@{tesseract\_collision::CollisionCheckConfig}}
 \doxysubsubsection{\texorpdfstring{CollisionCheckConfig()}{CollisionCheckConfig()}}
-{\footnotesize\ttfamily tesseract\+\_\+collision\+::\+Collision\+Check\+Config\+::\+Collision\+Check\+Config (\begin{DoxyParamCaption}\item[{double}]{default\+\_\+margin = {\ttfamily 0},  }\item[{\mbox{\hyperlink{structtesseract__collision_1_1ContactRequest}{Contact\+Request}}}]{request = {\ttfamily \mbox{\hyperlink{structtesseract__collision_1_1ContactRequest}{Contact\+Request}}()},  }\item[{\mbox{\hyperlink{namespacetesseract__collision_af17e8ee8632a40cf4b6ed1ba1aec41ac}{Collision\+Evaluator\+Type}}}]{type = {\ttfamily \mbox{\hyperlink{namespacetesseract__collision_af17e8ee8632a40cf4b6ed1ba1aec41aca947436f2927405d3b5997a9ffbaee5c1}{Collision\+Evaluator\+Type\+::\+DISCRETE}}},  }\item[{double}]{longest\+\_\+valid\+\_\+segment\+\_\+length = {\ttfamily 0.005} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily tesseract\+\_\+collision\+::\+Collision\+Check\+Config\+::\+Collision\+Check\+Config (\begin{DoxyParamCaption}\item[{double}]{default\+\_\+margin = {\ttfamily 0},  }\item[{\mbox{\hyperlink{structtesseract__collision_1_1ContactRequest}{Contact\+Request}}}]{request = {\ttfamily \mbox{\hyperlink{structtesseract__collision_1_1ContactRequest}{Contact\+Request}}()},  }\item[{\mbox{\hyperlink{namespacetesseract__collision_af17e8ee8632a40cf4b6ed1ba1aec41ac}{Collision\+Evaluator\+Type}}}]{type = {\ttfamily \mbox{\hyperlink{namespacetesseract__collision_af17e8ee8632a40cf4b6ed1ba1aec41aca947436f2927405d3b5997a9ffbaee5c1}{Collision\+Evaluator\+Type\+::\+DISCRETE}}},  }\item[{double}]{longest\+\_\+valid\+\_\+segment\+\_\+length = {\ttfamily 0.005} }\end{DoxyParamCaption})}
 
 
 
@@ -54,11 +56,21 @@ This is a high level structure containing common information that collision chec
 \index{tesseract\_collision::CollisionCheckConfig@{tesseract\_collision::CollisionCheckConfig}!collision\_margin\_data@{collision\_margin\_data}}
 \index{collision\_margin\_data@{collision\_margin\_data}!tesseract\_collision::CollisionCheckConfig@{tesseract\_collision::CollisionCheckConfig}}
 \doxysubsubsection{\texorpdfstring{collision\_margin\_data}{collision\_margin\_data}}
-{\footnotesize\ttfamily \mbox{\hyperlink{structtesseract__collision_1_1CollisionMarginData}{Collision\+Margin\+Data}} tesseract\+\_\+collision\+::\+Collision\+Check\+Config\+::collision\+\_\+margin\+\_\+data}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacetesseract__collision_a0717a3c53d08d510257f631ea96cb560}{Collision\+Margin\+Data}} tesseract\+\_\+collision\+::\+Collision\+Check\+Config\+::collision\+\_\+margin\+\_\+data}
 
 
 
 Stores information about how the margins allowed between collision objects. 
+
+\mbox{\Hypertarget{structtesseract__collision_1_1CollisionCheckConfig_aadf2eb4687259b6b2d56ff65b05e5bc8}\label{structtesseract__collision_1_1CollisionCheckConfig_aadf2eb4687259b6b2d56ff65b05e5bc8}} 
+\index{tesseract\_collision::CollisionCheckConfig@{tesseract\_collision::CollisionCheckConfig}!collision\_margin\_override\_type@{collision\_margin\_override\_type}}
+\index{collision\_margin\_override\_type@{collision\_margin\_override\_type}!tesseract\_collision::CollisionCheckConfig@{tesseract\_collision::CollisionCheckConfig}}
+\doxysubsubsection{\texorpdfstring{collision\_margin\_override\_type}{collision\_margin\_override\_type}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacetesseract__common_af06d85d024a36d63b58a6031556af8a1}{Collision\+Margin\+Override\+Type}} tesseract\+\_\+collision\+::\+Collision\+Check\+Config\+::collision\+\_\+margin\+\_\+override\+\_\+type \{ Collision\+Margin\+Override\+Type\+::\+NONE \}}
+
+
+
+Identify how the collision margin data should be applied to the contact manager. 
 
 \mbox{\Hypertarget{structtesseract__collision_1_1CollisionCheckConfig_a4a97e5373546778882e201190c0367ae}\label{structtesseract__collision_1_1CollisionCheckConfig_a4a97e5373546778882e201190c0367ae}} 
 \index{tesseract\_collision::CollisionCheckConfig@{tesseract\_collision::CollisionCheckConfig}!contact\_request@{contact\_request}}
@@ -92,6 +104,7 @@ Specifies the type of collision check to be performed. Default\+: DISCRETE.
 
 
 
-The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-tesseract/tesseract\+\_\+collision/include/tesseract\+\_\+collision/core/\mbox{\hyperlink{tesseract__collision_2include_2tesseract__collision_2core_2types_8h}{types.\+h}}\end{DoxyCompactItemize}
+tesseract\+\_\+collision/core/include/tesseract\+\_\+collision/core/\mbox{\hyperlink{tesseract__collision_2core_2include_2tesseract__collision_2core_2types_8h}{types.\+h}}\item 
+tesseract\+\_\+collision/core/src/\mbox{\hyperlink{tesseract__collision_2core_2src_2types_8cpp}{types.\+cpp}}\end{DoxyCompactItemize}

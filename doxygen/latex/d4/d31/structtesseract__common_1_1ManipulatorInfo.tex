@@ -16,7 +16,7 @@ Collaboration diagram for tesseract\+\_\+common\+::Manipulator\+Info\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{d1/dc5/structtesseract__common_1_1ManipulatorInfo__coll__graph}
+\includegraphics[width=261pt]{d1/dc5/structtesseract__common_1_1ManipulatorInfo__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsection*{Public Member Functions}
@@ -24,29 +24,39 @@ Collaboration diagram for tesseract\+\_\+common\+::Manipulator\+Info\+:
 \item 
 EIGEN\+\_\+\+MAKE\+\_\+\+ALIGNED\+\_\+\+OPERATOR\+\_\+\+NEW \mbox{\hyperlink{structtesseract__common_1_1ManipulatorInfo_ae3a5fb1060b979532c639ed77d38d9eb}{Manipulator\+Info}} ()=default
 \item 
-\mbox{\hyperlink{structtesseract__common_1_1ManipulatorInfo_afd0bfa5fb44531b699bb135f71a4b62b}{Manipulator\+Info}} (std\+::string \mbox{\hyperlink{structtesseract__common_1_1ManipulatorInfo_a01a307e8b4b478b5129294157ad344fd}{manipulator}})
-\item 
-\mbox{\hyperlink{structtesseract__common_1_1ManipulatorInfo_aa28c7a1e0c281d2e3ae3dee514b3b4b2}{Manipulator\+Info}} (const tinyxml2\+::\+XMLElement \&xml\+\_\+element)
+\mbox{\hyperlink{structtesseract__common_1_1ManipulatorInfo_aa4c82b14afa664230fc286a57f328d9a}{Manipulator\+Info}} (std\+::string manipulator\+\_\+, std\+::string working\+\_\+frame\+\_\+, std\+::string tcp\+\_\+frame\+\_\+, const Eigen\+::\+Isometry3d \&tcp\+\_\+offset\+\_\+=Eigen\+::\+Isometry3d\+::\+Identity())
 \item 
 \mbox{\hyperlink{structtesseract__common_1_1ManipulatorInfo}{Manipulator\+Info}} \mbox{\hyperlink{structtesseract__common_1_1ManipulatorInfo_afcf7745a4e3ea769fef1122af8cc1fb1}{get\+Combined}} (const \mbox{\hyperlink{structtesseract__common_1_1ManipulatorInfo}{Manipulator\+Info}} \&manip\+\_\+info\+\_\+override) const
-\begin{DoxyCompactList}\small\item\em If the provided manipulator information member is not empty it will override this and return a new manipualtor information with the combined results. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em If the provided manipulator information member is not empty it will override this and return a new manipulator information with the combined results. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{structtesseract__common_1_1ManipulatorInfo_a7e57927da4742bb782eeacbe803e556d}{empty}} () const
 \begin{DoxyCompactList}\small\item\em Check if any data is current being stored. \end{DoxyCompactList}\item 
-tinyxml2\+::\+XMLElement $\ast$ \mbox{\hyperlink{structtesseract__common_1_1ManipulatorInfo_ae578d6281a7a48a12e973a434dfa5648}{to\+XML}} (tinyxml2\+::\+XMLDocument \&doc) const
+bool \mbox{\hyperlink{structtesseract__common_1_1ManipulatorInfo_a2b4d400b2ea62a21bc4310cf0f8094fd}{operator==}} (const \mbox{\hyperlink{structtesseract__common_1_1ManipulatorInfo}{Manipulator\+Info}} \&rhs) const
 \item 
-bool \mbox{\hyperlink{structtesseract__common_1_1ManipulatorInfo_a9c2c47999e664503a4f5b99787d86b57}{operator==}} (const \mbox{\hyperlink{structtesseract__common_1_1ManipulatorInfo}{Manipulator\+Info}} \&other) const
+bool \mbox{\hyperlink{structtesseract__common_1_1ManipulatorInfo_a4c9a6d788e1a20dae680b57a7167c149}{operator!=}} (const \mbox{\hyperlink{structtesseract__common_1_1ManipulatorInfo}{Manipulator\+Info}} \&rhs) const
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
 std\+::string \mbox{\hyperlink{structtesseract__common_1_1ManipulatorInfo_a01a307e8b4b478b5129294157ad344fd}{manipulator}}
 \begin{DoxyCompactList}\small\item\em Name of the manipulator group. \end{DoxyCompactList}\item 
-std\+::string \mbox{\hyperlink{structtesseract__common_1_1ManipulatorInfo_a9ab227eae3c22eea4d68b7284313eab2}{manipulator\+\_\+ik\+\_\+solver}}
-\begin{DoxyCompactList}\small\item\em (Optional) IK Solver to be used \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classtesseract__common_1_1ToolCenterPoint}{Tool\+Center\+Point}} \mbox{\hyperlink{structtesseract__common_1_1ManipulatorInfo_af64e5a3496ec957da16feec23d3557b8}{tcp}}
-\begin{DoxyCompactList}\small\item\em (Optional) The tool center point, if of type bool it is empty \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{structtesseract__common_1_1ManipulatorInfo_a256f01ba9f28a07c7681dd85cb6bf631}{working\+\_\+frame}}
-\begin{DoxyCompactList}\small\item\em (Optional) The working frame to which waypoints are relative. If empty the base link of the environment is used \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em The working frame to which waypoints are relative. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{structtesseract__common_1_1ManipulatorInfo_ae179f24016c98a1779b348edad8975af}{tcp\+\_\+frame}}
+\begin{DoxyCompactList}\small\item\em The coordinate frame within to the environment to use as the reference frame for the tool center point (TCP) which is defined by an offset transform relative to this frame. \end{DoxyCompactList}\item 
+std\+::variant$<$ std\+::string, Eigen\+::\+Isometry3d $>$ \mbox{\hyperlink{structtesseract__common_1_1ManipulatorInfo_aeec269ba1d25ed10a23ec961a11303ef}{tcp\+\_\+offset}} \{ Eigen\+::\+Isometry3d\+::\+Identity() \}
+\begin{DoxyCompactList}\small\item\em (Optional) Offset transform applied to the tcp\+\_\+frame link to represent the manipulator TCP \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{structtesseract__common_1_1ManipulatorInfo_a9ab227eae3c22eea4d68b7284313eab2}{manipulator\+\_\+ik\+\_\+solver}}
+\begin{DoxyCompactList}\small\item\em (Optional) IK Solver to be used \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class Archive $>$ }\\void \mbox{\hyperlink{structtesseract__common_1_1ManipulatorInfo_a3195cf677cd9d4f90778bdb608cde57b}{serialize}} (Archive \&ar, const unsigned int version)
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{structtesseract__common_1_1ManipulatorInfo_ac98d07dd8f7b70e16ccb9a01abf56b9c}{boost\+::serialization\+::access}}
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -56,20 +66,14 @@ Contains information about a robot manipulator.
 \mbox{\Hypertarget{structtesseract__common_1_1ManipulatorInfo_ae3a5fb1060b979532c639ed77d38d9eb}\label{structtesseract__common_1_1ManipulatorInfo_ae3a5fb1060b979532c639ed77d38d9eb}} 
 \index{tesseract\_common::ManipulatorInfo@{tesseract\_common::ManipulatorInfo}!ManipulatorInfo@{ManipulatorInfo}}
 \index{ManipulatorInfo@{ManipulatorInfo}!tesseract\_common::ManipulatorInfo@{tesseract\_common::ManipulatorInfo}}
-\doxysubsubsection{\texorpdfstring{ManipulatorInfo()}{ManipulatorInfo()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+\doxysubsubsection{\texorpdfstring{ManipulatorInfo()}{ManipulatorInfo()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily EIGEN\+\_\+\+MAKE\+\_\+\+ALIGNED\+\_\+\+OPERATOR\+\_\+\+NEW tesseract\+\_\+common\+::\+Manipulator\+Info\+::\+Manipulator\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
 
-\mbox{\Hypertarget{structtesseract__common_1_1ManipulatorInfo_afd0bfa5fb44531b699bb135f71a4b62b}\label{structtesseract__common_1_1ManipulatorInfo_afd0bfa5fb44531b699bb135f71a4b62b}} 
+\mbox{\Hypertarget{structtesseract__common_1_1ManipulatorInfo_aa4c82b14afa664230fc286a57f328d9a}\label{structtesseract__common_1_1ManipulatorInfo_aa4c82b14afa664230fc286a57f328d9a}} 
 \index{tesseract\_common::ManipulatorInfo@{tesseract\_common::ManipulatorInfo}!ManipulatorInfo@{ManipulatorInfo}}
 \index{ManipulatorInfo@{ManipulatorInfo}!tesseract\_common::ManipulatorInfo@{tesseract\_common::ManipulatorInfo}}
-\doxysubsubsection{\texorpdfstring{ManipulatorInfo()}{ManipulatorInfo()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
-{\footnotesize\ttfamily tesseract\+\_\+common\+::\+Manipulator\+Info\+::\+Manipulator\+Info (\begin{DoxyParamCaption}\item[{std\+::string}]{manipulator }\end{DoxyParamCaption})}
-
-\mbox{\Hypertarget{structtesseract__common_1_1ManipulatorInfo_aa28c7a1e0c281d2e3ae3dee514b3b4b2}\label{structtesseract__common_1_1ManipulatorInfo_aa28c7a1e0c281d2e3ae3dee514b3b4b2}} 
-\index{tesseract\_common::ManipulatorInfo@{tesseract\_common::ManipulatorInfo}!ManipulatorInfo@{ManipulatorInfo}}
-\index{ManipulatorInfo@{ManipulatorInfo}!tesseract\_common::ManipulatorInfo@{tesseract\_common::ManipulatorInfo}}
-\doxysubsubsection{\texorpdfstring{ManipulatorInfo()}{ManipulatorInfo()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
-{\footnotesize\ttfamily tesseract\+\_\+common\+::\+Manipulator\+Info\+::\+Manipulator\+Info (\begin{DoxyParamCaption}\item[{const tinyxml2\+::\+XMLElement \&}]{xml\+\_\+element }\end{DoxyParamCaption})}
+\doxysubsubsection{\texorpdfstring{ManipulatorInfo()}{ManipulatorInfo()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily tesseract\+\_\+common\+::\+Manipulator\+Info\+::\+Manipulator\+Info (\begin{DoxyParamCaption}\item[{std\+::string}]{manipulator\+\_\+,  }\item[{std\+::string}]{working\+\_\+frame\+\_\+,  }\item[{std\+::string}]{tcp\+\_\+frame\+\_\+,  }\item[{const Eigen\+::\+Isometry3d \&}]{tcp\+\_\+offset\+\_\+ = {\ttfamily Eigen\+:\+:Isometry3d\+:\+:Identity()} }\end{DoxyParamCaption})}
 
 
 
@@ -95,7 +99,7 @@ True if empty otherwise false
 
 
 
-If the provided manipulator information member is not empty it will override this and return a new manipualtor information with the combined results. 
+If the provided manipulator information member is not empty it will override this and return a new manipulator information with the combined results. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -105,17 +109,33 @@ If the provided manipulator information member is not empty it will override thi
 \begin{DoxyReturn}{Returns}
 The combined manipulator information 
 \end{DoxyReturn}
-\mbox{\Hypertarget{structtesseract__common_1_1ManipulatorInfo_a9c2c47999e664503a4f5b99787d86b57}\label{structtesseract__common_1_1ManipulatorInfo_a9c2c47999e664503a4f5b99787d86b57}} 
+\mbox{\Hypertarget{structtesseract__common_1_1ManipulatorInfo_a4c9a6d788e1a20dae680b57a7167c149}\label{structtesseract__common_1_1ManipulatorInfo_a4c9a6d788e1a20dae680b57a7167c149}} 
+\index{tesseract\_common::ManipulatorInfo@{tesseract\_common::ManipulatorInfo}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!tesseract\_common::ManipulatorInfo@{tesseract\_common::ManipulatorInfo}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily bool tesseract\+\_\+common\+::\+Manipulator\+Info\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structtesseract__common_1_1ManipulatorInfo}{Manipulator\+Info}} \&}]{rhs }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{structtesseract__common_1_1ManipulatorInfo_a2b4d400b2ea62a21bc4310cf0f8094fd}\label{structtesseract__common_1_1ManipulatorInfo_a2b4d400b2ea62a21bc4310cf0f8094fd}} 
 \index{tesseract\_common::ManipulatorInfo@{tesseract\_common::ManipulatorInfo}!operator==@{operator==}}
 \index{operator==@{operator==}!tesseract\_common::ManipulatorInfo@{tesseract\_common::ManipulatorInfo}}
 \doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
-{\footnotesize\ttfamily bool tesseract\+\_\+common\+::\+Manipulator\+Info\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structtesseract__common_1_1ManipulatorInfo}{Manipulator\+Info}} \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily bool tesseract\+\_\+common\+::\+Manipulator\+Info\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structtesseract__common_1_1ManipulatorInfo}{Manipulator\+Info}} \&}]{rhs }\end{DoxyParamCaption}) const}
 
-\mbox{\Hypertarget{structtesseract__common_1_1ManipulatorInfo_ae578d6281a7a48a12e973a434dfa5648}\label{structtesseract__common_1_1ManipulatorInfo_ae578d6281a7a48a12e973a434dfa5648}} 
-\index{tesseract\_common::ManipulatorInfo@{tesseract\_common::ManipulatorInfo}!toXML@{toXML}}
-\index{toXML@{toXML}!tesseract\_common::ManipulatorInfo@{tesseract\_common::ManipulatorInfo}}
-\doxysubsubsection{\texorpdfstring{toXML()}{toXML()}}
-{\footnotesize\ttfamily tinyxml2\+::\+XMLElement $\ast$ tesseract\+\_\+common\+::\+Manipulator\+Info\+::to\+XML (\begin{DoxyParamCaption}\item[{tinyxml2\+::\+XMLDocument \&}]{doc }\end{DoxyParamCaption}) const}
+\mbox{\Hypertarget{structtesseract__common_1_1ManipulatorInfo_a3195cf677cd9d4f90778bdb608cde57b}\label{structtesseract__common_1_1ManipulatorInfo_a3195cf677cd9d4f90778bdb608cde57b}} 
+\index{tesseract\_common::ManipulatorInfo@{tesseract\_common::ManipulatorInfo}!serialize@{serialize}}
+\index{serialize@{serialize}!tesseract\_common::ManipulatorInfo@{tesseract\_common::ManipulatorInfo}}
+\doxysubsubsection{\texorpdfstring{serialize()}{serialize()}}
+{\footnotesize\ttfamily template$<$class Archive $>$ \\
+template void tesseract\+\_\+common\+::\+Manipulator\+Info\+::serialize (\begin{DoxyParamCaption}\item[{Archive \&}]{ar,  }\item[{const unsigned int}]{version }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{structtesseract__common_1_1ManipulatorInfo_ac98d07dd8f7b70e16ccb9a01abf56b9c}\label{structtesseract__common_1_1ManipulatorInfo_ac98d07dd8f7b70e16ccb9a01abf56b9c}} 
+\index{tesseract\_common::ManipulatorInfo@{tesseract\_common::ManipulatorInfo}!boost::serialization::access@{boost::serialization::access}}
+\index{boost::serialization::access@{boost::serialization::access}!tesseract\_common::ManipulatorInfo@{tesseract\_common::ManipulatorInfo}}
+\doxysubsubsection{\texorpdfstring{boost::serialization::access}{boost::serialization::access}}
+{\footnotesize\ttfamily friend class boost\+::serialization\+::access\hspace{0.3cm}{\ttfamily [friend]}}
 
 
 
@@ -140,15 +160,25 @@ Name of the manipulator group.
 
 (Optional) IK Solver to be used 
 
-\mbox{\Hypertarget{structtesseract__common_1_1ManipulatorInfo_af64e5a3496ec957da16feec23d3557b8}\label{structtesseract__common_1_1ManipulatorInfo_af64e5a3496ec957da16feec23d3557b8}} 
-\index{tesseract\_common::ManipulatorInfo@{tesseract\_common::ManipulatorInfo}!tcp@{tcp}}
-\index{tcp@{tcp}!tesseract\_common::ManipulatorInfo@{tesseract\_common::ManipulatorInfo}}
-\doxysubsubsection{\texorpdfstring{tcp}{tcp}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__common_1_1ToolCenterPoint}{Tool\+Center\+Point}} tesseract\+\_\+common\+::\+Manipulator\+Info\+::tcp}
+\mbox{\Hypertarget{structtesseract__common_1_1ManipulatorInfo_ae179f24016c98a1779b348edad8975af}\label{structtesseract__common_1_1ManipulatorInfo_ae179f24016c98a1779b348edad8975af}} 
+\index{tesseract\_common::ManipulatorInfo@{tesseract\_common::ManipulatorInfo}!tcp\_frame@{tcp\_frame}}
+\index{tcp\_frame@{tcp\_frame}!tesseract\_common::ManipulatorInfo@{tesseract\_common::ManipulatorInfo}}
+\doxysubsubsection{\texorpdfstring{tcp\_frame}{tcp\_frame}}
+{\footnotesize\ttfamily std\+::string tesseract\+\_\+common\+::\+Manipulator\+Info\+::tcp\+\_\+frame}
 
 
 
-(Optional) The tool center point, if of type bool it is empty 
+The coordinate frame within to the environment to use as the reference frame for the tool center point (TCP) which is defined by an offset transform relative to this frame. 
+
+\mbox{\Hypertarget{structtesseract__common_1_1ManipulatorInfo_aeec269ba1d25ed10a23ec961a11303ef}\label{structtesseract__common_1_1ManipulatorInfo_aeec269ba1d25ed10a23ec961a11303ef}} 
+\index{tesseract\_common::ManipulatorInfo@{tesseract\_common::ManipulatorInfo}!tcp\_offset@{tcp\_offset}}
+\index{tcp\_offset@{tcp\_offset}!tesseract\_common::ManipulatorInfo@{tesseract\_common::ManipulatorInfo}}
+\doxysubsubsection{\texorpdfstring{tcp\_offset}{tcp\_offset}}
+{\footnotesize\ttfamily std\+::variant$<$std\+::string, Eigen\+::\+Isometry3d$>$ tesseract\+\_\+common\+::\+Manipulator\+Info\+::tcp\+\_\+offset \{ Eigen\+::\+Isometry3d\+::\+Identity() \}}
+
+
+
+(Optional) Offset transform applied to the tcp\+\_\+frame link to represent the manipulator TCP 
 
 \mbox{\Hypertarget{structtesseract__common_1_1ManipulatorInfo_a256f01ba9f28a07c7681dd85cb6bf631}\label{structtesseract__common_1_1ManipulatorInfo_a256f01ba9f28a07c7681dd85cb6bf631}} 
 \index{tesseract\_common::ManipulatorInfo@{tesseract\_common::ManipulatorInfo}!working\_frame@{working\_frame}}
@@ -158,11 +188,11 @@ Name of the manipulator group.
 
 
 
-(Optional) The working frame to which waypoints are relative. If empty the base link of the environment is used 
+The working frame to which waypoints are relative. 
 
-
+If the tcp\+\_\+frame is external to manipulator then the working frame must be an active frame on the manipulator 
 
 The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-tesseract/tesseract\+\_\+common/include/tesseract\+\_\+common/\mbox{\hyperlink{manipulator__info_8h}{manipulator\+\_\+info.\+h}}\item 
-tesseract/tesseract\+\_\+common/src/\mbox{\hyperlink{manipulator__info_8cpp}{manipulator\+\_\+info.\+cpp}}\end{DoxyCompactItemize}
+tesseract\+\_\+common/include/tesseract\+\_\+common/\mbox{\hyperlink{manipulator__info_8h}{manipulator\+\_\+info.\+h}}\item 
+tesseract\+\_\+common/src/\mbox{\hyperlink{manipulator__info_8cpp}{manipulator\+\_\+info.\+cpp}}\end{DoxyCompactItemize}

@@ -1,4 +1,4 @@
 <map id="tesseract_kinematics::KDLInvKinChainNRFactory" name="tesseract_kinematics::KDLInvKinChainNRFactory">
 <area shape="rect" id="node1" title=" " alt="" coords="5,95,192,136"/>
-<area shape="rect" id="node2" href="$d0/dff/classtesseract__kinematics_1_1InverseKinematicsFactory.html" title=" " alt="" coords="9,5,188,47"/>
+<area shape="rect" id="node2" href="$dd/d6d/classtesseract__kinematics_1_1InvKinFactory.html" title="Define a inverse kinematics plugin which the factory can create an instance." alt="" coords="25,5,172,47"/>
 </map>
