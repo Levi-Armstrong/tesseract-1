@@ -8,8 +8,6 @@
 \doxysubsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
-class \mbox{\hyperlink{classtesseract__scene__graph_1_1AllowedCollisionMatrix}{Allowed\+Collision\+Matrix}}
-\item 
 struct \mbox{\hyperlink{structtesseract__scene__graph_1_1ShortestPath}{Shortest\+Path}}
 \begin{DoxyCompactList}\small\item\em Holds the shortest path information. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph}{Scene\+Graph}}
@@ -43,9 +41,9 @@ struct \mbox{\hyperlink{structtesseract__scene__graph_1_1SceneState}{Scene\+Stat
 struct \mbox{\hyperlink{structtesseract__scene__graph_1_1ugraph__vertex__copier}{ugraph\+\_\+vertex\+\_\+copier}}
 \item 
 struct \mbox{\hyperlink{structtesseract__scene__graph_1_1kdl__tree__builder}{kdl\+\_\+tree\+\_\+builder}}
-\begin{DoxyCompactList}\small\item\em Everytime a vertex is visited for the first time add a new segment to the KDL Tree;. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Every time a vertex is visited for the first time add a new segment to the KDL Tree;. \end{DoxyCompactList}\item 
 struct \mbox{\hyperlink{structtesseract__scene__graph_1_1kdl__sub__tree__builder}{kdl\+\_\+sub\+\_\+tree\+\_\+builder}}
-\begin{DoxyCompactList}\small\item\em Everytime a vertex is visited for the first time add a new segment to the KDL Tree;. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Every time a vertex is visited for the first time add a new segment to the KDL Tree;. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classtesseract__scene__graph_1_1KDLStateSolver}{KDLState\+Solver}}
 \item 
 class \mbox{\hyperlink{classtesseract__scene__graph_1_1MutableStateSolver}{Mutable\+State\+Solver}}
@@ -69,11 +67,11 @@ class \mbox{\hyperlink{classtesseract__scene__graph_1_1OFKTStateSolver}{OFKTStat
 class \mbox{\hyperlink{classtesseract__scene__graph_1_1StateSolver}{State\+Solver}}
 \item 
 struct \mbox{\hyperlink{structtesseract__scene__graph_1_1ofkt__builder}{ofkt\+\_\+builder}}
-\begin{DoxyCompactList}\small\item\em Everytime a vertex is visited for the first time add a new node to the tree. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Every time a vertex is visited for the first time add a new node to the tree. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Typedefs}
 \begin{DoxyCompactItemize}
 \item 
-using \mbox{\hyperlink{namespacetesseract__scene__graph_a40a7b2e03fe5365f09dd8c309b6bcffb}{Allowed\+Collision\+Entries}} = std\+::unordered\+\_\+map$<$ \mbox{\hyperlink{namespacetesseract__common_a5b28b7ae665b374a7ca166d496f648ce}{tesseract\+\_\+common\+::\+Link\+Names\+Pair}}, std\+::string, \mbox{\hyperlink{structtesseract__common_1_1PairHash}{tesseract\+\_\+common\+::\+Pair\+Hash}} $>$
+using \mbox{\hyperlink{namespacetesseract__scene__graph_ad233b8202f835cf71f8b0fdd0710fb73}{Allowed\+Collision\+Matrix}} = \mbox{\hyperlink{classtesseract__common_1_1AllowedCollisionMatrix}{tesseract\+\_\+common\+::\+Allowed\+Collision\+Matrix}}
 \item 
 using \mbox{\hyperlink{namespacetesseract__scene__graph_a8a54db22a9b9c10174389d74fc6a46bc}{Graph\+Property}} = boost\+::property$<$ boost\+::graph\+\_\+name\+\_\+t, std\+::string, boost\+::property$<$ \mbox{\hyperlink{namespaceboost_ab3ffe54ba2693f8e8e5e709d8a425f65}{boost\+::graph\+\_\+root\+\_\+t}}, std\+::string $>$ $>$
 \begin{DoxyCompactList}\small\item\em Defines the boost graph property. \end{DoxyCompactList}\item 
@@ -127,22 +125,20 @@ KDL\+::\+Rigid\+Body\+Inertia \mbox{\hyperlink{namespacetesseract__scene__graph_
 \mbox{\hyperlink{structtesseract__scene__graph_1_1KDLTreeData}{KDLTree\+Data}} \mbox{\hyperlink{namespacetesseract__scene__graph_a439bf1eadaac010f053903e68227ee2e}{parse\+Scene\+Graph}} (const \mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph}{Scene\+Graph}} \&scene\+\_\+graph)
 \begin{DoxyCompactList}\small\item\em Convert a Tesseract \mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph}{Scene\+Graph}} into a KDL Tree. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{structtesseract__scene__graph_1_1KDLTreeData}{KDLTree\+Data}} \mbox{\hyperlink{namespacetesseract__scene__graph_a7930a86b5321e8e39bfcde88012c1aca}{parse\+Scene\+Graph}} (const \mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph}{Scene\+Graph}} \&scene\+\_\+graph, const \mbox{\hyperlink{vhacdRaycastMesh_8cpp_adcf134d50025cc52907d0c8ac798d89d}{std\+::vector}}$<$ std\+::string $>$ \&joint\+\_\+names, const std\+::unordered\+\_\+map$<$ std\+::string, double $>$ \&joint\+\_\+values)
-\begin{DoxyCompactList}\small\item\em Convert a portion of a Tesseract \mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph}{Scene\+Graph}} into a KDL Tree. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{vhacdRaycastMesh_8cpp_adcf134d50025cc52907d0c8ac798d89d}{std\+::vector}}$<$ std\+::string $>$ \mbox{\hyperlink{namespacetesseract__scene__graph_ac2abd4b3afef22a092ab25d0104a22e4}{get\+Allowed\+Collisions}} (const \mbox{\hyperlink{vhacdRaycastMesh_8cpp_adcf134d50025cc52907d0c8ac798d89d}{std\+::vector}}$<$ std\+::string $>$ \&link\+\_\+names, const \mbox{\hyperlink{namespacetesseract__scene__graph_a40a7b2e03fe5365f09dd8c309b6bcffb}{Allowed\+Collision\+Entries}} \&acm\+\_\+entries, bool remove\+\_\+duplicates=true)
-\begin{DoxyCompactList}\small\item\em Gets allowed collisions for a set of link names. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Convert a portion of a Tesseract \mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph}{Scene\+Graph}} into a KDL Tree. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
-static auto \mbox{\hyperlink{namespacetesseract__scene__graph_a2c50647f73070577a0bd18924a9eef34}{DEFAULT\+\_\+\+TESSERACT\+\_\+\+MATERIAL}} = std\+::make\+\_\+shared$<$\mbox{\hyperlink{classtesseract__scene__graph_1_1Material}{Material}}$>$(\char`\"{}default\+\_\+tesseract\+\_\+material\char`\"{})
+static const auto \mbox{\hyperlink{namespacetesseract__scene__graph_a7cc4d6d52cec84a34e4dad908a65c88f}{DEFAULT\+\_\+\+TESSERACT\+\_\+\+MATERIAL}} = std\+::make\+\_\+shared$<$\mbox{\hyperlink{classtesseract__scene__graph_1_1Material}{Material}}$>$(\char`\"{}default\+\_\+tesseract\+\_\+material\char`\"{})
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Typedef Documentation}
-\mbox{\Hypertarget{namespacetesseract__scene__graph_a40a7b2e03fe5365f09dd8c309b6bcffb}\label{namespacetesseract__scene__graph_a40a7b2e03fe5365f09dd8c309b6bcffb}} 
-\index{tesseract\_scene\_graph@{tesseract\_scene\_graph}!AllowedCollisionEntries@{AllowedCollisionEntries}}
-\index{AllowedCollisionEntries@{AllowedCollisionEntries}!tesseract\_scene\_graph@{tesseract\_scene\_graph}}
-\doxysubsubsection{\texorpdfstring{AllowedCollisionEntries}{AllowedCollisionEntries}}
-{\footnotesize\ttfamily using \mbox{\hyperlink{namespacetesseract__scene__graph_a40a7b2e03fe5365f09dd8c309b6bcffb}{tesseract\+\_\+scene\+\_\+graph\+::\+Allowed\+Collision\+Entries}} = typedef std\+::unordered\+\_\+map$<$\mbox{\hyperlink{namespacetesseract__common_a5b28b7ae665b374a7ca166d496f648ce}{tesseract\+\_\+common\+::\+Link\+Names\+Pair}}, std\+::string, \mbox{\hyperlink{structtesseract__common_1_1PairHash}{tesseract\+\_\+common\+::\+Pair\+Hash}}$>$}
+\mbox{\Hypertarget{namespacetesseract__scene__graph_ad233b8202f835cf71f8b0fdd0710fb73}\label{namespacetesseract__scene__graph_ad233b8202f835cf71f8b0fdd0710fb73}} 
+\index{tesseract\_scene\_graph@{tesseract\_scene\_graph}!AllowedCollisionMatrix@{AllowedCollisionMatrix}}
+\index{AllowedCollisionMatrix@{AllowedCollisionMatrix}!tesseract\_scene\_graph@{tesseract\_scene\_graph}}
+\doxysubsubsection{\texorpdfstring{AllowedCollisionMatrix}{AllowedCollisionMatrix}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{namespacetesseract__scene__graph_ad233b8202f835cf71f8b0fdd0710fb73}{tesseract\+\_\+scene\+\_\+graph\+::\+Allowed\+Collision\+Matrix}} = typedef \mbox{\hyperlink{classtesseract__common_1_1AllowedCollisionMatrix}{tesseract\+\_\+common\+::\+Allowed\+Collision\+Matrix}}}
 
 \mbox{\Hypertarget{namespacetesseract__scene__graph_a9dc21bc544723df21ec27052717c4e1e}\label{namespacetesseract__scene__graph_a9dc21bc544723df21ec27052717c4e1e}} 
 \index{tesseract\_scene\_graph@{tesseract\_scene\_graph}!EdgeProperty@{EdgeProperty}}
@@ -392,28 +388,6 @@ Convert KDL\+::\+Vector to Eigen\+::\+Vector3d.
 \begin{DoxyReturn}{Returns}
 frame Output Eigen Vector3d 
 \end{DoxyReturn}
-\mbox{\Hypertarget{namespacetesseract__scene__graph_ac2abd4b3afef22a092ab25d0104a22e4}\label{namespacetesseract__scene__graph_ac2abd4b3afef22a092ab25d0104a22e4}} 
-\index{tesseract\_scene\_graph@{tesseract\_scene\_graph}!getAllowedCollisions@{getAllowedCollisions}}
-\index{getAllowedCollisions@{getAllowedCollisions}!tesseract\_scene\_graph@{tesseract\_scene\_graph}}
-\doxysubsubsection{\texorpdfstring{getAllowedCollisions()}{getAllowedCollisions()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{vhacdRaycastMesh_8cpp_adcf134d50025cc52907d0c8ac798d89d}{std\+::vector}}$<$std\+::string$>$ tesseract\+\_\+scene\+\_\+graph\+::get\+Allowed\+Collisions (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{vhacdRaycastMesh_8cpp_adcf134d50025cc52907d0c8ac798d89d}{std\+::vector}}$<$ std\+::string $>$ \&}]{link\+\_\+names,  }\item[{const \mbox{\hyperlink{namespacetesseract__scene__graph_a40a7b2e03fe5365f09dd8c309b6bcffb}{Allowed\+Collision\+Entries}} \&}]{acm\+\_\+entries,  }\item[{bool}]{remove\+\_\+duplicates = {\ttfamily true} }\end{DoxyParamCaption})}
-
-
-
-Gets allowed collisions for a set of link names. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em link\+\_\+names} & Vector of link names for which we want the allowed collisions \\
-\hline
-{\em acm\+\_\+entries} & Entries in the ACM. Get this with \mbox{\hyperlink{classtesseract__scene__graph_1_1AllowedCollisionMatrix_af336e45edd84667323ef31dd04415c7a}{Allowed\+Collision\+Matrix\+::get\+All\+Allowed\+Collisions()}} \\
-\hline
-{\em remove\+\_\+duplicates} & If true, duplicates will be removed. Default\+: true \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-vector of links that are allowed to collide with links given 
-\end{DoxyReturn}
 \mbox{\Hypertarget{namespacetesseract__scene__graph_a889d2454755511e4d1878c948a3f7942}\label{namespacetesseract__scene__graph_a889d2454755511e4d1878c948a3f7942}} 
 \index{tesseract\_scene\_graph@{tesseract\_scene\_graph}!operator$<$$<$@{operator$<$$<$}}
 \index{operator$<$$<$@{operator$<$$<$}!tesseract\_scene\_graph@{tesseract\_scene\_graph}}
@@ -479,9 +453,9 @@ Returns KDL tree representation of the sub scene graph
 
 
 \doxysubsection{Variable Documentation}
-\mbox{\Hypertarget{namespacetesseract__scene__graph_a2c50647f73070577a0bd18924a9eef34}\label{namespacetesseract__scene__graph_a2c50647f73070577a0bd18924a9eef34}} 
+\mbox{\Hypertarget{namespacetesseract__scene__graph_a7cc4d6d52cec84a34e4dad908a65c88f}\label{namespacetesseract__scene__graph_a7cc4d6d52cec84a34e4dad908a65c88f}} 
 \index{tesseract\_scene\_graph@{tesseract\_scene\_graph}!DEFAULT\_TESSERACT\_MATERIAL@{DEFAULT\_TESSERACT\_MATERIAL}}
 \index{DEFAULT\_TESSERACT\_MATERIAL@{DEFAULT\_TESSERACT\_MATERIAL}!tesseract\_scene\_graph@{tesseract\_scene\_graph}}
 \doxysubsubsection{\texorpdfstring{DEFAULT\_TESSERACT\_MATERIAL}{DEFAULT\_TESSERACT\_MATERIAL}}
-{\footnotesize\ttfamily auto tesseract\+\_\+scene\+\_\+graph\+::\+DEFAULT\+\_\+\+TESSERACT\+\_\+\+MATERIAL = std\+::make\+\_\+shared$<$\mbox{\hyperlink{classtesseract__scene__graph_1_1Material}{Material}}$>$(\char`\"{}default\+\_\+tesseract\+\_\+material\char`\"{})\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily const auto tesseract\+\_\+scene\+\_\+graph\+::\+DEFAULT\+\_\+\+TESSERACT\+\_\+\+MATERIAL = std\+::make\+\_\+shared$<$\mbox{\hyperlink{classtesseract__scene__graph_1_1Material}{Material}}$>$(\char`\"{}default\+\_\+tesseract\+\_\+material\char`\"{})\hspace{0.3cm}{\ttfamily [static]}}
 

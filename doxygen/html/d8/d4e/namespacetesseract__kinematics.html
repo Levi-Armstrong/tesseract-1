@@ -152,6 +152,8 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dbb/classtesseract__kinematics_1_1AbbIRB2400Kinematics.html">AbbIRB2400Kinematics</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d05/classtesseract__kinematics_1_1iiwa7Kinematics.html">iiwa7Kinematics</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/da6/classtesseract__kinematics_1_1URInvKinFactory.html">URInvKinFactory</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/df6/classtesseract__kinematics_1_1URInvKin.html">URInvKin</a></td></tr>
@@ -209,7 +211,7 @@ Functions</h2></td></tr>
 <tr class="separator:ad071f516596c9a983b661f60e4511ac3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:affd89a194d01da0138a0bec3c3a81e8e"><td class="memTemplParams" colspan="2">template&lt;typename FloatType &gt; </td></tr>
 <tr class="memitem:affd89a194d01da0138a0bec3c3a81e8e"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d8/d4e/namespacetesseract__kinematics.html#affd89a194d01da0138a0bec3c3a81e8e">getRedundantSolutionsHelper</a> (<a class="el" href="../../db/dad/vhacdRaycastMesh_8cpp.html#adcf134d50025cc52907d0c8ac798d89d">std::vector</a>&lt; <a class="el" href="../../d8/d4e/namespacetesseract__kinematics.html#a59d7ac70f855c7d00848b703e6bcfe9a">VectorX</a>&lt; FloatType &gt;&gt; &amp;redundant_sols, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;sol, const Eigen::MatrixX2d &amp;limits, <a class="el" href="../../db/dad/vhacdRaycastMesh_8cpp.html#adcf134d50025cc52907d0c8ac798d89d">std::vector</a>&lt; Eigen::Index &gt;::const_iterator current_index, <a class="el" href="../../db/dad/vhacdRaycastMesh_8cpp.html#adcf134d50025cc52907d0c8ac798d89d">std::vector</a>&lt; Eigen::Index &gt;::const_iterator end_index)</td></tr>
-<tr class="memdesc:affd89a194d01da0138a0bec3c3a81e8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">&zwj;**  <a href="../../d8/d4e/namespacetesseract__kinematics.html#affd89a194d01da0138a0bec3c3a81e8e">More...</a><br /></td></tr>
+<tr class="memdesc:affd89a194d01da0138a0bec3c3a81e8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">This a recursive function for calculating all permutations of the redundant solutions.  <a href="../../d8/d4e/namespacetesseract__kinematics.html#affd89a194d01da0138a0bec3c3a81e8e">More...</a><br /></td></tr>
 <tr class="separator:affd89a194d01da0138a0bec3c3a81e8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8a64bc43e94b9f3899b80789deb7e463"><td class="memTemplParams" colspan="2">template&lt;typename FloatType &gt; </td></tr>
 <tr class="memitem:a8a64bc43e94b9f3899b80789deb7e463"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../db/dad/vhacdRaycastMesh_8cpp.html#adcf134d50025cc52907d0c8ac798d89d">std::vector</a>&lt; <a class="el" href="../../d8/d4e/namespacetesseract__kinematics.html#a59d7ac70f855c7d00848b703e6bcfe9a">VectorX</a>&lt; FloatType &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d8/d4e/namespacetesseract__kinematics.html#a8a64bc43e94b9f3899b80789deb7e463">getRedundantSolutions</a> (const Eigen::Ref&lt; const <a class="el" href="../../d8/d4e/namespacetesseract__kinematics.html#a59d7ac70f855c7d00848b703e6bcfe9a">VectorX</a>&lt; FloatType &gt;&gt; &amp;sol, const Eigen::MatrixX2d &amp;limits, const <a class="el" href="../../db/dad/vhacdRaycastMesh_8cpp.html#adcf134d50025cc52907d0c8ac798d89d">std::vector</a>&lt; Eigen::Index &gt; &amp;redundancy_capable_joints)</td></tr>
@@ -223,6 +225,10 @@ Functions</h2></td></tr>
 <tr class="memitem:ab50bcc818a12ddc691a8fced83b22585"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d8/d4e/namespacetesseract__kinematics.html#ab50bcc818a12ddc691a8fced83b22585">harmonizeTowardZero</a> (Eigen::Ref&lt; <a class="el" href="../../d8/d4e/namespacetesseract__kinematics.html#a59d7ac70f855c7d00848b703e6bcfe9a">VectorX</a>&lt; FloatType &gt;&gt; qs)</td></tr>
 <tr class="memdesc:ab50bcc818a12ddc691a8fced83b22585"><td class="mdescLeft">&#160;</td><td class="mdescRight">This take an array of floats and modifies them in place to be between [-PI, PI].  <a href="../../d8/d4e/namespacetesseract__kinematics.html#ab50bcc818a12ddc691a8fced83b22585">More...</a><br /></td></tr>
 <tr class="separator:ab50bcc818a12ddc691a8fced83b22585"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adbd9bb8ca655c364bdfcf7e981ab3839"><td class="memTemplParams" colspan="2">template&lt;typename FloatType &gt; </td></tr>
+<tr class="memitem:adbd9bb8ca655c364bdfcf7e981ab3839"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d8/d4e/namespacetesseract__kinematics.html#adbd9bb8ca655c364bdfcf7e981ab3839">harmonizeTowardZero</a> (Eigen::Ref&lt; <a class="el" href="../../d8/d4e/namespacetesseract__kinematics.html#a59d7ac70f855c7d00848b703e6bcfe9a">VectorX</a>&lt; FloatType &gt;&gt; qs, const <a class="el" href="../../db/dad/vhacdRaycastMesh_8cpp.html#adcf134d50025cc52907d0c8ac798d89d">std::vector</a>&lt; Eigen::Index &gt; &amp;redundancy_capable_joints)</td></tr>
+<tr class="memdesc:adbd9bb8ca655c364bdfcf7e981ab3839"><td class="mdescLeft">&#160;</td><td class="mdescRight">This take an array of floats and modifies them in place to be between [-PI, PI].  <a href="../../d8/d4e/namespacetesseract__kinematics.html#adbd9bb8ca655c364bdfcf7e981ab3839">More...</a><br /></td></tr>
+<tr class="separator:adbd9bb8ca655c364bdfcf7e981ab3839"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad7331d401c8c7f0780dcd728e77b64d9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d4e/namespacetesseract__kinematics.html#ad7331d401c8c7f0780dcd728e77b64d9">checkKinematics</a> (const <a class="el" href="../../d9/d67/classtesseract__kinematics_1_1KinematicGroup.html">KinematicGroup</a> &amp;manip, double tol=1e-3)</td></tr>
 <tr class="memdesc:ad7331d401c8c7f0780dcd728e77b64d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">This compares calcFwdKin to calcInvKin for a <a class="el" href="../../d9/d67/classtesseract__kinematics_1_1KinematicGroup.html">KinematicGroup</a>.  <a href="../../d8/d4e/namespacetesseract__kinematics.html#ad7331d401c8c7f0780dcd728e77b64d9">More...</a><br /></td></tr>
 <tr class="separator:ad7331d401c8c7f0780dcd728e77b64d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -360,9 +366,6 @@ template&lt;typename FloatType &gt; </div>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">bool tesseract_kinematics::checkKinematics </td>
@@ -382,11 +385,6 @@ template&lt;typename FloatType &gt; </div>
           <td></td><td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>This compares calcFwdKin to calcInvKin for a <a class="el" href="../../d9/d67/classtesseract__kinematics_1_1KinematicGroup.html">KinematicGroup</a>. </p>
@@ -645,14 +643,13 @@ template&lt;typename FloatType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>&zwj;** </p>
-<p>This a recursive function for calculating all permutations of the redundant solutions.</p>
+<p>This a recursive function for calculating all permutations of the redundant solutions. </p>
 <p>This should not be used directly, use getRedundantSolutions function. </p>
 
 </div>
 </div>
 <a id="ab50bcc818a12ddc691a8fced83b22585"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab50bcc818a12ddc691a8fced83b22585">&#9670;&nbsp;</a></span>harmonizeTowardZero()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ab50bcc818a12ddc691a8fced83b22585">&#9670;&nbsp;</a></span>harmonizeTowardZero() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -668,6 +665,53 @@ template&lt;typename FloatType &gt; </div>
           <td class="paramtype">Eigen::Ref&lt; <a class="el" href="../../d8/d4e/namespacetesseract__kinematics.html#a59d7ac70f855c7d00848b703e6bcfe9a">VectorX</a>&lt; FloatType &gt;&gt;&#160;</td>
           <td class="paramname"><em>qs</em></td><td>)</td>
           <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>This take an array of floats and modifies them in place to be between [-PI, PI]. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">qs</td><td>A pointer to a float array </td></tr>
+    <tr><td class="paramname">dof</td><td>The length of the float array </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="adbd9bb8ca655c364bdfcf7e981ab3839"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adbd9bb8ca655c364bdfcf7e981ab3839">&#9670;&nbsp;</a></span>harmonizeTowardZero() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename FloatType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void tesseract_kinematics::harmonizeTowardZero </td>
+          <td>(</td>
+          <td class="paramtype">Eigen::Ref&lt; <a class="el" href="../../d8/d4e/namespacetesseract__kinematics.html#a59d7ac70f855c7d00848b703e6bcfe9a">VectorX</a>&lt; FloatType &gt;&gt;&#160;</td>
+          <td class="paramname"><em>qs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../db/dad/vhacdRaycastMesh_8cpp.html#adcf134d50025cc52907d0c8ac798d89d">std::vector</a>&lt; Eigen::Index &gt; &amp;&#160;</td>
+          <td class="paramname"><em>redundancy_capable_joints</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -1807,7 +1851,7 @@ template&lt;typename FloatType &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Oct 29 2021 04:27:16 for Tesseract by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Wed Dec 15 2021 17:36:07 for Tesseract by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

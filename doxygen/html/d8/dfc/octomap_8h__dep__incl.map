@@ -1,6 +1,6 @@
 <map id="tesseract_urdf/include/tesseract_urdf/octomap.h" name="tesseract_urdf/include/tesseract_urdf/octomap.h">
 <area shape="rect" id="node1" title="Parse octomap from xml string." alt="" coords="133,5,306,47"/>
-<area shape="rect" id="node2" href="$d4/d59/geometry_8cpp.html" title="Parse geometry from xml string." alt="" coords="5,102,132,143"/>
+<area shape="rect" id="node2" href="$d4/d59/geometry_8cpp.html" title="Parse geometry from XML string." alt="" coords="5,102,132,143"/>
 <area shape="rect" id="node3" href="$d0/d7b/octomap_8cpp.html" title="Parse octomap from xml string." alt="" coords="156,102,283,143"/>
 <area shape="rect" id="node4" href="$d5/d64/tesseract__urdf__octree__unit_8cpp.html" title=" " alt="" coords="307,95,459,151"/>
 </map>

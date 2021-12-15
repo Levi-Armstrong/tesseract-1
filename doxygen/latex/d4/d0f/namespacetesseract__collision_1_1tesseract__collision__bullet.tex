@@ -143,7 +143,7 @@ static SIMD\+\_\+\+FORCE\+\_\+\+INLINE bt\+Scalar \mbox{\hyperlink{namespacetess
 \item 
 static void \mbox{\hyperlink{namespacetesseract__collision_1_1tesseract__collision__bullet_af8e1e3eda9937a6f319e60d0a31198ec}{bt\+Compute\+Support}} (const bt\+Convex\+Shape $\ast$convexA, const bt\+Transform \&local\+TransA, const bt\+Convex\+Shape $\ast$convexB, const bt\+Transform \&local\+TransB, const bt\+Vector3 \&dir, bool check2d, bt\+Vector3 \&sup\+Aworld, bt\+Vector3 \&sup\+Bworld, bt\+Vector3 \&a\+Minb)
 \item 
-static bt\+Vector3 \mbox{\hyperlink{namespacetesseract__collision_1_1tesseract__collision__bullet_a6fd9b440a4362bc46cfc5b5b8958aa65}{ccd\+\_\+vec3\+\_\+origin}} (0, 0, 0)
+static const bt\+Vector3 \mbox{\hyperlink{namespacetesseract__collision_1_1tesseract__collision__bullet_a733a92a067ca826f5a20ed95dff1a81a}{ccd\+\_\+vec3\+\_\+origin}} (0, 0, 0)
 \item 
 void \mbox{\hyperlink{namespacetesseract__collision_1_1tesseract__collision__bullet_aeea0100fa98b26c581817125b14af0f5}{bt\+Simplex\+Init}} (\mbox{\hyperlink{structtesseract__collision_1_1tesseract__collision__bullet_1_1btSimplex}{bt\+Simplex}} $\ast$s)
 \item 
@@ -234,7 +234,7 @@ static const \mbox{\hyperlink{namespacetesseract__collision_a2472107aae8174a3087
 \item 
 static const \mbox{\hyperlink{namespacetesseract__common_a94d9921fc7ed323609ac57d06f939cb6}{tesseract\+\_\+common\+::\+Vector\+Isometry3d}} \mbox{\hyperlink{namespacetesseract__collision_1_1tesseract__collision__bullet_a2ae5304e2020e48c09a390e04750690f}{EMPTY\+\_\+\+COLLISION\+\_\+\+SHAPES\+\_\+\+TRANSFORMS}}
 \item 
-bool \mbox{\hyperlink{namespacetesseract__collision_1_1tesseract__collision__bullet_af9c2726a980060ad99a531e88dcff9d7}{disable\+Ccd}} = false
+static const bool \mbox{\hyperlink{namespacetesseract__collision_1_1tesseract__collision__bullet_ab98cd88ba8479c4635bf36aefc7575f8}{disable\+Ccd}} = false
 \end{DoxyCompactItemize}
 
 
@@ -448,11 +448,11 @@ Calculate the continuous contact data for casted collision shape.
 \doxysubsubsection{\texorpdfstring{capsuleCapsuleDistance()}{capsuleCapsuleDistance()}}
 {\footnotesize\ttfamily static SIMD\+\_\+\+FORCE\+\_\+\+INLINE bt\+Scalar tesseract\+\_\+collision\+::tesseract\+\_\+collision\+\_\+bullet\+::capsule\+Capsule\+Distance (\begin{DoxyParamCaption}\item[{bt\+Vector3 \&}]{normal\+OnB,  }\item[{bt\+Vector3 \&}]{point\+OnB,  }\item[{bt\+Scalar}]{capsule\+LengthA,  }\item[{bt\+Scalar}]{capsule\+RadiusA,  }\item[{bt\+Scalar}]{capsule\+LengthB,  }\item[{bt\+Scalar}]{capsule\+RadiusB,  }\item[{int}]{capsule\+AxisA,  }\item[{int}]{capsule\+AxisB,  }\item[{const bt\+Transform \&}]{transformA,  }\item[{const bt\+Transform \&}]{transformB,  }\item[{bt\+Scalar}]{distance\+Threshold }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
-\mbox{\Hypertarget{namespacetesseract__collision_1_1tesseract__collision__bullet_a6fd9b440a4362bc46cfc5b5b8958aa65}\label{namespacetesseract__collision_1_1tesseract__collision__bullet_a6fd9b440a4362bc46cfc5b5b8958aa65}} 
+\mbox{\Hypertarget{namespacetesseract__collision_1_1tesseract__collision__bullet_a733a92a067ca826f5a20ed95dff1a81a}\label{namespacetesseract__collision_1_1tesseract__collision__bullet_a733a92a067ca826f5a20ed95dff1a81a}} 
 \index{tesseract\_collision::tesseract\_collision\_bullet@{tesseract\_collision::tesseract\_collision\_bullet}!ccd\_vec3\_origin@{ccd\_vec3\_origin}}
 \index{ccd\_vec3\_origin@{ccd\_vec3\_origin}!tesseract\_collision::tesseract\_collision\_bullet@{tesseract\_collision::tesseract\_collision\_bullet}}
 \doxysubsubsection{\texorpdfstring{ccd\_vec3\_origin()}{ccd\_vec3\_origin()}}
-{\footnotesize\ttfamily static bt\+Vector3 tesseract\+\_\+collision\+::tesseract\+\_\+collision\+\_\+bullet\+::ccd\+\_\+vec3\+\_\+origin (\begin{DoxyParamCaption}\item[{0}]{,  }\item[{0}]{,  }\item[{0}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily static const bt\+Vector3 tesseract\+\_\+collision\+::tesseract\+\_\+collision\+\_\+bullet\+::ccd\+\_\+vec3\+\_\+origin (\begin{DoxyParamCaption}\item[{0}]{,  }\item[{0}]{,  }\item[{0}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 \mbox{\Hypertarget{namespacetesseract__collision_1_1tesseract__collision__bullet_abe40d9bde2e2c9558bda045ddab65116}\label{namespacetesseract__collision_1_1tesseract__collision__bullet_abe40d9bde2e2c9558bda045ddab65116}} 
 \index{tesseract\_collision::tesseract\_collision\_bullet@{tesseract\_collision::tesseract\_collision\_bullet}!ccdEq@{ccdEq}}
@@ -832,11 +832,11 @@ Update a collision objects filters for broadphase.
 \doxysubsubsection{\texorpdfstring{BULLET\_SUPPORT\_FUNC\_TOLERANCE}{BULLET\_SUPPORT\_FUNC\_TOLERANCE}}
 {\footnotesize\ttfamily const bt\+Scalar tesseract\+\_\+collision\+::tesseract\+\_\+collision\+\_\+bullet\+::\+BULLET\+\_\+\+SUPPORT\+\_\+\+FUNC\+\_\+\+TOLERANCE = bt\+Scalar(0.\+01) \mbox{\hyperlink{bullet__utils_8h_aa2d1ce652c65764c67dcca938d0aca3e}{METERS}}}
 
-\mbox{\Hypertarget{namespacetesseract__collision_1_1tesseract__collision__bullet_af9c2726a980060ad99a531e88dcff9d7}\label{namespacetesseract__collision_1_1tesseract__collision__bullet_af9c2726a980060ad99a531e88dcff9d7}} 
+\mbox{\Hypertarget{namespacetesseract__collision_1_1tesseract__collision__bullet_ab98cd88ba8479c4635bf36aefc7575f8}\label{namespacetesseract__collision_1_1tesseract__collision__bullet_ab98cd88ba8479c4635bf36aefc7575f8}} 
 \index{tesseract\_collision::tesseract\_collision\_bullet@{tesseract\_collision::tesseract\_collision\_bullet}!disableCcd@{disableCcd}}
 \index{disableCcd@{disableCcd}!tesseract\_collision::tesseract\_collision\_bullet@{tesseract\_collision::tesseract\_collision\_bullet}}
 \doxysubsubsection{\texorpdfstring{disableCcd}{disableCcd}}
-{\footnotesize\ttfamily bool tesseract\+\_\+collision\+::tesseract\+\_\+collision\+\_\+bullet\+::disable\+Ccd = false}
+{\footnotesize\ttfamily const bool tesseract\+\_\+collision\+::tesseract\+\_\+collision\+\_\+bullet\+::disable\+Ccd = false\hspace{0.3cm}{\ttfamily [static]}}
 
 \mbox{\Hypertarget{namespacetesseract__collision_1_1tesseract__collision__bullet_a753ee825b286ebeff13d09dd01db63bc}\label{namespacetesseract__collision_1_1tesseract__collision__bullet_a753ee825b286ebeff13d09dd01db63bc}} 
 \index{tesseract\_collision::tesseract\_collision\_bullet@{tesseract\_collision::tesseract\_collision\_bullet}!EMPTY\_COLLISION\_SHAPES\_CONST@{EMPTY\_COLLISION\_SHAPES\_CONST}}

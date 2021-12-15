@@ -18,6 +18,7 @@ Tesseracts Collision Common Types.
 {\ttfamily \#include $<$tesseract\+\_\+geometry/geometries.\+h$>$}\newline
 {\ttfamily \#include $<$tesseract\+\_\+common/types.\+h$>$}\newline
 {\ttfamily \#include $<$tesseract\+\_\+common/collision\+\_\+margin\+\_\+data.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+common/allowed\+\_\+collision\+\_\+matrix.\+h$>$}\newline
 Include dependency graph for types.\+h\+:
 \nopagebreak
 \begin{figure}[H]
@@ -43,6 +44,8 @@ struct \mbox{\hyperlink{structtesseract__collision_1_1ContactRequest}{tesseract\
 \begin{DoxyCompactList}\small\item\em The \mbox{\hyperlink{structtesseract__collision_1_1ContactRequest}{Contact\+Request}} struct. \end{DoxyCompactList}\item 
 struct \mbox{\hyperlink{structtesseract__collision_1_1ContactTestData}{tesseract\+\_\+collision\+::\+Contact\+Test\+Data}}
 \begin{DoxyCompactList}\small\item\em This data is intended only to be used internal to the collision checkers as a container and should not be externally used by other libraries or packages. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structtesseract__collision_1_1ContactManagerConfig}{tesseract\+\_\+collision\+::\+Contact\+Manager\+Config}}
+\begin{DoxyCompactList}\small\item\em Contains parameters used to configure a contact manager before a series of contact checks. \end{DoxyCompactList}\item 
 struct \mbox{\hyperlink{structtesseract__collision_1_1CollisionCheckConfig}{tesseract\+\_\+collision\+::\+Collision\+Check\+Config}}
 \begin{DoxyCompactList}\small\item\em This is a high level structure containing common information that collision checking utilities need. The goal of this config is to allow all collision checking utilities and planners to use the same datastructure. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Namespaces}
@@ -96,7 +99,13 @@ enum class \mbox{\hyperlink{namespacetesseract__collision_af17e8ee8632a40cf4b6ed
 , \newline
 \mbox{\hyperlink{namespacetesseract__collision_af17e8ee8632a40cf4b6ed1ba1aec41acab8bde735baca78a8b98c00e1a0a50239}{tesseract\+\_\+collision\+::\+LVS\+\_\+\+CONTINUOUS}}
  \}
-\begin{DoxyCompactList}\small\item\em High level descriptor used in planners and utilities to specify what kind of collision check is desired. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em High level descriptor used in planners and utilities to specify what kind of collision check is desired. \end{DoxyCompactList}\item 
+enum class \mbox{\hyperlink{namespacetesseract__collision_ab4aafe369f7930ea6a356f0b578c16af}{tesseract\+\_\+collision\+::\+ACMOverride\+Type}} \{ \mbox{\hyperlink{namespacetesseract__collision_ab4aafe369f7930ea6a356f0b578c16afab50339a10e1de285ac99d4c3990b8693}{tesseract\+\_\+collision\+::\+NONE}}
+, \mbox{\hyperlink{namespacetesseract__collision_ab4aafe369f7930ea6a356f0b578c16afaffd6976a2b4f6934eb075d0013316ff1}{tesseract\+\_\+collision\+::\+ASSIGN}}
+, \mbox{\hyperlink{namespacetesseract__collision_ab4aafe369f7930ea6a356f0b578c16afa558ffc8f5770d8e4f95f51d822685532}{tesseract\+\_\+collision\+::\+AND}}
+, \mbox{\hyperlink{namespacetesseract__collision_ab4aafe369f7930ea6a356f0b578c16afa1d00e7dce692e8dc3f6877f035e3a616}{tesseract\+\_\+collision\+::\+OR}}
+ \}
+\begin{DoxyCompactList}\small\item\em Identifies how the provided Allowed\+Collision\+Matrix should be applied relative to the is\+Allowed\+Fn in the contact manager. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 

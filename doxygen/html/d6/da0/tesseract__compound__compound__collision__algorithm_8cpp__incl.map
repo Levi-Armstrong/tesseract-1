@@ -1,52 +1,52 @@
 <map id="tesseract_collision/bullet/src/tesseract_compound_compound_collision_algorithm.cpp" name="tesseract_collision/bullet/src/tesseract_compound_compound_collision_algorithm.cpp">
-<area shape="rect" id="node1" title=" " alt="" coords="4573,5,4783,76"/>
-<area shape="rect" id="node2" href="$de/d3c/macros_8h.html" title="Common Tesseract Macros." alt="" coords="2735,704,2925,731"/>
-<area shape="rect" id="node3" title=" " alt="" coords="4393,139,4561,165"/>
-<area shape="rect" id="node4" title=" " alt="" coords="4585,131,4771,173"/>
-<area shape="rect" id="node5" title=" " alt="" coords="4795,131,4985,173"/>
-<area shape="rect" id="node6" title=" " alt="" coords="5009,131,5187,173"/>
-<area shape="rect" id="node7" title=" " alt="" coords="5,339,183,381"/>
-<area shape="rect" id="node8" title=" " alt="" coords="207,339,411,381"/>
-<area shape="rect" id="node9" title=" " alt="" coords="5211,139,5393,165"/>
-<area shape="rect" id="node10" title=" " alt="" coords="5417,139,5587,165"/>
-<area shape="rect" id="node11" title=" " alt="" coords="5611,131,5795,173"/>
-<area shape="rect" id="node12" title=" " alt="" coords="5820,131,6053,173"/>
-<area shape="rect" id="node13" href="$d6/df8/tesseract__compound__compound__collision__algorithm_8h.html" title=" " alt="" coords="943,124,1157,180"/>
-<area shape="rect" id="node22" href="$d3/db3/tesseract__collision_2core_2include_2tesseract__collision_2core_2types_8h.html" title="Tesseracts Collision Common Types." alt="" coords="4238,131,4369,173"/>
-<area shape="rect" id="node14" title=" " alt="" coords="435,339,612,381"/>
-<area shape="rect" id="node15" title=" " alt="" coords="637,339,853,381"/>
-<area shape="rect" id="node16" title=" " alt="" coords="927,332,1122,388"/>
-<area shape="rect" id="node17" title=" " alt="" coords="1146,339,1343,381"/>
-<area shape="rect" id="node18" title=" " alt="" coords="1368,339,1583,381"/>
-<area shape="rect" id="node19" title=" " alt="" coords="1607,339,1789,381"/>
-<area shape="rect" id="node20" title=" " alt="" coords="1214,235,1457,277"/>
-<area shape="rect" id="node21" href="$d1/d14/tesseract__compound__collision__algorithm_8h.html" title=" " alt="" coords="801,228,984,284"/>
-<area shape="rect" id="node23" title=" " alt="" coords="4473,704,4558,731"/>
-<area shape="rect" id="node24" title=" " alt="" coords="3675,704,3790,731"/>
-<area shape="rect" id="node25" title=" " alt="" coords="4419,622,4478,649"/>
-<area shape="rect" id="node26" title=" " alt="" coords="2868,622,2936,649"/>
-<area shape="rect" id="node27" title=" " alt="" coords="4688,622,4735,649"/>
-<area shape="rect" id="node28" title=" " alt="" coords="4754,243,4805,269"/>
-<area shape="rect" id="node29" title=" " alt="" coords="4553,622,4664,649"/>
-<area shape="rect" id="node30" title=" " alt="" coords="4829,243,4908,269"/>
-<area shape="rect" id="node31" title=" " alt="" coords="4933,243,5039,269"/>
-<area shape="rect" id="node32" href="$d4/ddb/geometries_8h.html" title="Tesseract Geometries." alt="" coords="2813,235,2949,277"/>
-<area shape="rect" id="node38" href="$dd/ddb/tesseract__common_2include_2tesseract__common_2types_8h.html" title="Common Tesseract Types." alt="" coords="4023,533,4202,559"/>
-<area shape="rect" id="node48" href="$d4/da8/collision__margin__data_8h.html" title="This is used to store collision margin information." alt="" coords="4211,339,4395,381"/>
-<area shape="rect" id="node33" href="$df/d9e/tesseract__geometry_2include_2tesseract__geometry_2impl_2box_8h.html" title="Tesseract Box Geometry." alt="" coords="3019,525,3155,567"/>
-<area shape="rect" id="node34" href="$d8/d2b/tesseract__geometry_2include_2tesseract__geometry_2impl_2capsule_8h.html" title="Tesseract Capsule Geometry." alt="" coords="2446,525,2582,567"/>
-<area shape="rect" id="node35" href="$dc/df2/tesseract__geometry_2include_2tesseract__geometry_2impl_2cone_8h.html" title="Tesseract Cone Geometry." alt="" coords="2606,525,2742,567"/>
-<area shape="rect" id="node36" href="$de/dd2/tesseract__geometry_2include_2tesseract__geometry_2impl_2convex__mesh_8h.html" title="Tesseract Convex Mesh Geometry." alt="" coords="3110,339,3254,381"/>
-<area shape="rect" id="node37" href="$d2/deb/polygon__mesh_8h.html" title="Tesseract Polygon Mesh Geometry." alt="" coords="3321,436,3467,477"/>
-<area shape="rect" id="node42" href="$d8/d3b/tesseract__geometry_2include_2tesseract__geometry_2impl_2cylinder_8h.html" title="Tesseract Cylinder Geometry." alt="" coords="1966,525,2102,567"/>
-<area shape="rect" id="node43" href="$d5/d93/tesseract__geometry_2include_2tesseract__geometry_2impl_2mesh_8h.html" title="Tesseract Mesh Geometry." alt="" coords="3409,339,3545,381"/>
-<area shape="rect" id="node44" href="$df/d5e/tesseract__geometry_2include_2tesseract__geometry_2impl_2octree_8h.html" title="Tesseract Octree Geometry." alt="" coords="3230,525,3366,567"/>
-<area shape="rect" id="node45" href="$db/d8b/plane_8h.html" title="Tesseract Plane Geometry." alt="" coords="2126,525,2262,567"/>
-<area shape="rect" id="node46" href="$d2/d17/tesseract__geometry_2include_2tesseract__geometry_2impl_2sdf__mesh_8h.html" title="Tesseract SDF Mesh Geometry." alt="" coords="2838,339,2974,381"/>
-<area shape="rect" id="node47" href="$d8/db6/tesseract__geometry_2include_2tesseract__geometry_2impl_2sphere_8h.html" title="Tesseract Sphere Geometry." alt="" coords="2286,525,2422,567"/>
-<area shape="rect" id="node39" title=" " alt="" coords="3796,622,3936,649"/>
-<area shape="rect" id="node40" title=" " alt="" coords="3961,622,4075,649"/>
-<area shape="rect" id="node41" href="$d9/dc2/kinematic__limits_8h.html" title="Common Tesseract Kinematic Limits and Related Utility Functions." alt="" coords="4151,615,4344,656"/>
-<area shape="rect" id="node49" title=" " alt="" coords="4371,533,4425,559"/>
-<area shape="rect" id="node50" href="$dc/d79/tesseract__common_2include_2tesseract__common_2utils_8h.html" title="Common Tesseract Utility Functions." alt="" coords="4171,443,4342,470"/>
+<area shape="rect" id="node1" title=" " alt="" coords="4519,5,4729,76"/>
+<area shape="rect" id="node2" href="$de/d3c/macros_8h.html" title="Common Tesseract Macros." alt="" coords="2726,704,2917,731"/>
+<area shape="rect" id="node3" title=" " alt="" coords="4339,139,4507,165"/>
+<area shape="rect" id="node4" title=" " alt="" coords="4531,131,4717,173"/>
+<area shape="rect" id="node5" title=" " alt="" coords="4741,131,4931,173"/>
+<area shape="rect" id="node6" title=" " alt="" coords="4955,131,5133,173"/>
+<area shape="rect" id="node7" title=" " alt="" coords="43,339,221,381"/>
+<area shape="rect" id="node8" title=" " alt="" coords="245,339,449,381"/>
+<area shape="rect" id="node9" title=" " alt="" coords="5157,139,5339,165"/>
+<area shape="rect" id="node10" title=" " alt="" coords="5363,139,5533,165"/>
+<area shape="rect" id="node11" title=" " alt="" coords="5557,131,5741,173"/>
+<area shape="rect" id="node12" title=" " alt="" coords="5766,131,5999,173"/>
+<area shape="rect" id="node13" href="$d6/df8/tesseract__compound__compound__collision__algorithm_8h.html" title=" " alt="" coords="904,124,1117,180"/>
+<area shape="rect" id="node22" href="$d3/db3/tesseract__collision_2core_2include_2tesseract__collision_2core_2types_8h.html" title="Tesseracts Collision Common Types." alt="" coords="4184,131,4315,173"/>
+<area shape="rect" id="node14" title=" " alt="" coords="1410,339,1587,381"/>
+<area shape="rect" id="node15" title=" " alt="" coords="1612,339,1828,381"/>
+<area shape="rect" id="node16" title=" " alt="" coords="473,332,668,388"/>
+<area shape="rect" id="node17" title=" " alt="" coords="692,339,889,381"/>
+<area shape="rect" id="node18" title=" " alt="" coords="965,339,1179,381"/>
+<area shape="rect" id="node19" title=" " alt="" coords="1203,339,1386,381"/>
+<area shape="rect" id="node20" title=" " alt="" coords="435,235,677,277"/>
+<area shape="rect" id="node21" href="$d1/d14/tesseract__compound__collision__algorithm_8h.html" title=" " alt="" coords="854,228,1037,284"/>
+<area shape="rect" id="node23" title=" " alt="" coords="4623,704,4708,731"/>
+<area shape="rect" id="node24" title=" " alt="" coords="3764,704,3879,731"/>
+<area shape="rect" id="node25" title=" " alt="" coords="4508,622,4567,649"/>
+<area shape="rect" id="node26" title=" " alt="" coords="2918,622,2986,649"/>
+<area shape="rect" id="node27" title=" " alt="" coords="4726,622,4773,649"/>
+<area shape="rect" id="node28" title=" " alt="" coords="4911,243,4961,269"/>
+<area shape="rect" id="node29" title=" " alt="" coords="4591,622,4702,649"/>
+<area shape="rect" id="node30" title=" " alt="" coords="4986,243,5065,269"/>
+<area shape="rect" id="node31" title=" " alt="" coords="5089,243,5196,269"/>
+<area shape="rect" id="node32" href="$d4/ddb/geometries_8h.html" title="Tesseract Geometries." alt="" coords="2753,235,2889,277"/>
+<area shape="rect" id="node38" href="$dd/ddb/tesseract__common_2include_2tesseract__common_2types_8h.html" title="Common Tesseract Types." alt="" coords="4025,533,4204,559"/>
+<area shape="rect" id="node48" href="$d4/da8/collision__margin__data_8h.html" title="This is used to store collision margin information." alt="" coords="4428,436,4612,477"/>
+<area shape="rect" id="node50" href="$d2/d01/allowed__collision__matrix_8h.html" title=" " alt="" coords="4223,436,4404,477"/>
+<area shape="rect" id="node33" href="$df/d9e/tesseract__geometry_2include_2tesseract__geometry_2impl_2box_8h.html" title="Tesseract Box Geometry." alt="" coords="2113,525,2249,567"/>
+<area shape="rect" id="node34" href="$d8/d2b/tesseract__geometry_2include_2tesseract__geometry_2impl_2capsule_8h.html" title="Tesseract Capsule Geometry." alt="" coords="2753,525,2889,567"/>
+<area shape="rect" id="node35" href="$dc/df2/tesseract__geometry_2include_2tesseract__geometry_2impl_2cone_8h.html" title="Tesseract Cone Geometry." alt="" coords="1953,525,2089,567"/>
+<area shape="rect" id="node36" href="$de/dd2/tesseract__geometry_2include_2tesseract__geometry_2impl_2convex__mesh_8h.html" title="Tesseract Convex Mesh Geometry." alt="" coords="3212,339,3356,381"/>
+<area shape="rect" id="node37" href="$d2/deb/polygon__mesh_8h.html" title="Tesseract Polygon Mesh Geometry." alt="" coords="3580,436,3727,477"/>
+<area shape="rect" id="node42" href="$d8/d3b/tesseract__geometry_2include_2tesseract__geometry_2impl_2cylinder_8h.html" title="Tesseract Cylinder Geometry." alt="" coords="2273,525,2409,567"/>
+<area shape="rect" id="node43" href="$d5/d93/tesseract__geometry_2include_2tesseract__geometry_2impl_2mesh_8h.html" title="Tesseract Mesh Geometry." alt="" coords="3669,339,3805,381"/>
+<area shape="rect" id="node44" href="$df/d5e/tesseract__geometry_2include_2tesseract__geometry_2impl_2octree_8h.html" title="Tesseract Octree Geometry." alt="" coords="3217,525,3353,567"/>
+<area shape="rect" id="node45" href="$db/d8b/plane_8h.html" title="Tesseract Plane Geometry." alt="" coords="2433,525,2569,567"/>
+<area shape="rect" id="node46" href="$d2/d17/tesseract__geometry_2include_2tesseract__geometry_2impl_2sdf__mesh_8h.html" title="Tesseract SDF Mesh Geometry." alt="" coords="3380,339,3516,381"/>
+<area shape="rect" id="node47" href="$d8/db6/tesseract__geometry_2include_2tesseract__geometry_2impl_2sphere_8h.html" title="Tesseract Sphere Geometry." alt="" coords="2593,525,2729,567"/>
+<area shape="rect" id="node39" title=" " alt="" coords="3885,622,4025,649"/>
+<area shape="rect" id="node40" title=" " alt="" coords="4049,622,4164,649"/>
+<area shape="rect" id="node41" href="$d9/dc2/kinematic__limits_8h.html" title="Common Tesseract Kinematic Limits and Related Utility Functions." alt="" coords="4239,615,4433,656"/>
+<area shape="rect" id="node49" title=" " alt="" coords="4481,533,4535,559"/>
 </map>

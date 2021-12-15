@@ -1,6 +1,6 @@
 <map id="tesseract_urdf/include/tesseract_urdf/mesh.h" name="tesseract_urdf/include/tesseract_urdf/mesh.h">
 <area shape="rect" id="node1" title="Parse mesh from xml string." alt="" coords="222,5,377,47"/>
-<area shape="rect" id="node2" href="$d4/d59/geometry_8cpp.html" title="Parse geometry from xml string." alt="" coords="5,102,132,143"/>
+<area shape="rect" id="node2" href="$d4/d59/geometry_8cpp.html" title="Parse geometry from XML string." alt="" coords="5,102,132,143"/>
 <area shape="rect" id="node3" href="$d8/dd2/mesh_8cpp.html" title="Parse mesh from xml string." alt="" coords="156,102,283,143"/>
 <area shape="rect" id="node4" href="$da/d99/tesseract__urdf__mesh__material__unit_8cpp.html" title=" " alt="" coords="307,95,455,151"/>
 <area shape="rect" id="node5" href="$de/d57/tesseract__urdf__mesh__unit_8cpp.html" title=" " alt="" coords="479,95,627,151"/>

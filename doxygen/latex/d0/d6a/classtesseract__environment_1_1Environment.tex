@@ -114,7 +114,7 @@ bool \mbox{\hyperlink{classtesseract__environment_1_1Environment_ab6cfcb8b6d9892
 \begin{DoxyCompactList}\small\item\em Get whether a link should be considered during collision checking. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classtesseract__environment_1_1Environment_a113e5b98a118846499b44855e6691d9f}{get\+Link\+Visibility}} (const std\+::string \&name) const
 \begin{DoxyCompactList}\small\item\em Get a given links visibility setting. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classtesseract__scene__graph_1_1AllowedCollisionMatrix_a8ff33cc8d3892d5338dba781b8440c66}{tesseract\+\_\+scene\+\_\+graph\+::\+Allowed\+Collision\+Matrix\+::\+Const\+Ptr}} \mbox{\hyperlink{classtesseract__environment_1_1Environment_a70986e21df4b69f85142e05033f90958}{get\+Allowed\+Collision\+Matrix}} () const
+\mbox{\hyperlink{classtesseract__common_1_1AllowedCollisionMatrix_a6a8fd56f7cd2c4098245c7a15d1736d7}{tesseract\+\_\+common\+::\+Allowed\+Collision\+Matrix\+::\+Const\+Ptr}} \mbox{\hyperlink{classtesseract__environment_1_1Environment_ad0db7596e7046eedc310e5e5cf358270}{get\+Allowed\+Collision\+Matrix}} () const
 \begin{DoxyCompactList}\small\item\em Get the allowed collision matrix. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{vhacdRaycastMesh_8cpp_adcf134d50025cc52907d0c8ac798d89d}{std\+::vector}}$<$ std\+::string $>$ \mbox{\hyperlink{classtesseract__environment_1_1Environment_a40c8713acb1f873ae2f9447007327965}{get\+Joint\+Names}} () const
 \begin{DoxyCompactList}\small\item\em Get a vector of joint names in the environment. \end{DoxyCompactList}\item 
@@ -210,6 +210,18 @@ std\+::chrono\+::high\+\_\+resolution\+\_\+clock\+::duration \mbox{\hyperlink{cl
 \begin{DoxyCompactList}\small\item\em The discrete contact manager object. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classtesseract__collision_1_1ContinuousContactManager_af3e8b59ffc319924eb2a7e3925bb6e56}{tesseract\+\_\+collision\+::\+Continuous\+Contact\+Manager\+::\+UPtr}} \mbox{\hyperlink{classtesseract__environment_1_1Environment_a5510e7991d8c6a1daea9e212614201fe}{continuous\+\_\+manager\+\_\+}}
 \begin{DoxyCompactList}\small\item\em The continuous contact manager object. \end{DoxyCompactList}\item 
+std\+::unordered\+\_\+map$<$ std\+::string, \mbox{\hyperlink{vhacdRaycastMesh_8cpp_adcf134d50025cc52907d0c8ac798d89d}{std\+::vector}}$<$ std\+::string $>$ $>$ \mbox{\hyperlink{classtesseract__environment_1_1Environment_ae8aa86cda448600843289e11876674b8}{group\+\_\+joint\+\_\+names\+\_\+cache\+\_\+}}
+\begin{DoxyCompactList}\small\item\em A cache of group joint names to provide faster access. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+mutex \mbox{\hyperlink{classtesseract__environment_1_1Environment_aea256f1e8b66716f97214cd9dbc500dd}{group\+\_\+joint\+\_\+names\+\_\+cache\+\_\+mutex\+\_\+}}
+\item 
+std\+::unordered\+\_\+map$<$ std\+::string, \mbox{\hyperlink{classtesseract__kinematics_1_1JointGroup_ae671cb8eec7305576666282365c2e011}{tesseract\+\_\+kinematics\+::\+Joint\+Group\+::\+UPtr}} $>$ \mbox{\hyperlink{classtesseract__environment_1_1Environment_a0f9255a3d71c501813c9a12ece0e1c11}{joint\+\_\+group\+\_\+cache\+\_\+}}
+\begin{DoxyCompactList}\small\item\em A cache of joint groups to provide faster access. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+mutex \mbox{\hyperlink{classtesseract__environment_1_1Environment_a0c23446c1c7b5983505acfe0bacdf9f7}{joint\+\_\+group\+\_\+cache\+\_\+mutex\+\_\+}}
+\item 
+std\+::unordered\+\_\+map$<$ std\+::string, \mbox{\hyperlink{classtesseract__kinematics_1_1KinematicGroup_a039a701cf2b2749effa2d0400d45aeec}{tesseract\+\_\+kinematics\+::\+Kinematic\+Group\+::\+UPtr}} $>$ \mbox{\hyperlink{classtesseract__environment_1_1Environment_a2e5d28d74c8afa88a64e48bde980a926}{kinematic\+\_\+group\+\_\+cache\+\_\+}}
+\begin{DoxyCompactList}\small\item\em A cache of kinematic groups to provide faster access. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+mutex \mbox{\hyperlink{classtesseract__environment_1_1Environment_a857fe314931f5dd986856772a52f5b5d}{kinematic\+\_\+group\+\_\+cache\+\_\+mutex\+\_\+}}
+\item 
 std\+::shared\+\_\+mutex \mbox{\hyperlink{classtesseract__environment_1_1Environment_a61a2ac8e2eff89640028975c4f57ed57}{mutex\+\_\+}}
 \begin{DoxyCompactList}\small\item\em The environment can be accessed from multiple threads, need use mutex throughout. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Member Functions}
@@ -640,11 +652,11 @@ Get a vector of active link names affected by the provided joints in the environ
 \begin{DoxyReturn}{Returns}
 A vector of active link names 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classtesseract__environment_1_1Environment_a70986e21df4b69f85142e05033f90958}\label{classtesseract__environment_1_1Environment_a70986e21df4b69f85142e05033f90958}} 
+\mbox{\Hypertarget{classtesseract__environment_1_1Environment_ad0db7596e7046eedc310e5e5cf358270}\label{classtesseract__environment_1_1Environment_ad0db7596e7046eedc310e5e5cf358270}} 
 \index{tesseract\_environment::Environment@{tesseract\_environment::Environment}!getAllowedCollisionMatrix@{getAllowedCollisionMatrix}}
 \index{getAllowedCollisionMatrix@{getAllowedCollisionMatrix}!tesseract\_environment::Environment@{tesseract\_environment::Environment}}
 \doxysubsubsection{\texorpdfstring{getAllowedCollisionMatrix()}{getAllowedCollisionMatrix()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__scene__graph_1_1AllowedCollisionMatrix_a8ff33cc8d3892d5338dba781b8440c66}{tesseract\+\_\+scene\+\_\+graph\+::\+Allowed\+Collision\+Matrix\+::\+Const\+Ptr}} tesseract\+\_\+environment\+::\+Environment\+::get\+Allowed\+Collision\+Matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__common_1_1AllowedCollisionMatrix_a6a8fd56f7cd2c4098245c7a15d1736d7}{tesseract\+\_\+common\+::\+Allowed\+Collision\+Matrix\+::\+Const\+Ptr}} tesseract\+\_\+environment\+::\+Environment\+::get\+Allowed\+Collision\+Matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
 
@@ -1479,6 +1491,22 @@ The discrete contact manager object.
 
 A vector of user defined callbacks for locating tool center point. 
 
+\mbox{\Hypertarget{classtesseract__environment_1_1Environment_ae8aa86cda448600843289e11876674b8}\label{classtesseract__environment_1_1Environment_ae8aa86cda448600843289e11876674b8}} 
+\index{tesseract\_environment::Environment@{tesseract\_environment::Environment}!group\_joint\_names\_cache\_@{group\_joint\_names\_cache\_}}
+\index{group\_joint\_names\_cache\_@{group\_joint\_names\_cache\_}!tesseract\_environment::Environment@{tesseract\_environment::Environment}}
+\doxysubsubsection{\texorpdfstring{group\_joint\_names\_cache\_}{group\_joint\_names\_cache\_}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$std\+::string, \mbox{\hyperlink{vhacdRaycastMesh_8cpp_adcf134d50025cc52907d0c8ac798d89d}{std\+::vector}}$<$std\+::string$>$ $>$ tesseract\+\_\+environment\+::\+Environment\+::group\+\_\+joint\+\_\+names\+\_\+cache\+\_\+\hspace{0.3cm}{\ttfamily [mutable]}, {\ttfamily [protected]}}
+
+
+
+A cache of group joint names to provide faster access. 
+
+This will cleared when environment changes \mbox{\Hypertarget{classtesseract__environment_1_1Environment_aea256f1e8b66716f97214cd9dbc500dd}\label{classtesseract__environment_1_1Environment_aea256f1e8b66716f97214cd9dbc500dd}} 
+\index{tesseract\_environment::Environment@{tesseract\_environment::Environment}!group\_joint\_names\_cache\_mutex\_@{group\_joint\_names\_cache\_mutex\_}}
+\index{group\_joint\_names\_cache\_mutex\_@{group\_joint\_names\_cache\_mutex\_}!tesseract\_environment::Environment@{tesseract\_environment::Environment}}
+\doxysubsubsection{\texorpdfstring{group\_joint\_names\_cache\_mutex\_}{group\_joint\_names\_cache\_mutex\_}}
+{\footnotesize\ttfamily std\+::shared\+\_\+mutex tesseract\+\_\+environment\+::\+Environment\+::group\+\_\+joint\+\_\+names\+\_\+cache\+\_\+mutex\+\_\+\hspace{0.3cm}{\ttfamily [mutable]}, {\ttfamily [protected]}}
+
 \mbox{\Hypertarget{classtesseract__environment_1_1Environment_ad8893d73b2310f67657460392cbb9395}\label{classtesseract__environment_1_1Environment_ad8893d73b2310f67657460392cbb9395}} 
 \index{tesseract\_environment::Environment@{tesseract\_environment::Environment}!init\_revision\_@{init\_revision\_}}
 \index{init\_revision\_@{init\_revision\_}!tesseract\_environment::Environment@{tesseract\_environment::Environment}}
@@ -1508,6 +1536,38 @@ Identifies if the object has been initialized.
 
 
 The function used to determine if two objects are allowed in collision. 
+
+\mbox{\Hypertarget{classtesseract__environment_1_1Environment_a0f9255a3d71c501813c9a12ece0e1c11}\label{classtesseract__environment_1_1Environment_a0f9255a3d71c501813c9a12ece0e1c11}} 
+\index{tesseract\_environment::Environment@{tesseract\_environment::Environment}!joint\_group\_cache\_@{joint\_group\_cache\_}}
+\index{joint\_group\_cache\_@{joint\_group\_cache\_}!tesseract\_environment::Environment@{tesseract\_environment::Environment}}
+\doxysubsubsection{\texorpdfstring{joint\_group\_cache\_}{joint\_group\_cache\_}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$std\+::string, \mbox{\hyperlink{classtesseract__kinematics_1_1JointGroup_ae671cb8eec7305576666282365c2e011}{tesseract\+\_\+kinematics\+::\+Joint\+Group\+::\+UPtr}}$>$ tesseract\+\_\+environment\+::\+Environment\+::joint\+\_\+group\+\_\+cache\+\_\+\hspace{0.3cm}{\ttfamily [mutable]}, {\ttfamily [protected]}}
+
+
+
+A cache of joint groups to provide faster access. 
+
+This will cleared when environment changes \mbox{\Hypertarget{classtesseract__environment_1_1Environment_a0c23446c1c7b5983505acfe0bacdf9f7}\label{classtesseract__environment_1_1Environment_a0c23446c1c7b5983505acfe0bacdf9f7}} 
+\index{tesseract\_environment::Environment@{tesseract\_environment::Environment}!joint\_group\_cache\_mutex\_@{joint\_group\_cache\_mutex\_}}
+\index{joint\_group\_cache\_mutex\_@{joint\_group\_cache\_mutex\_}!tesseract\_environment::Environment@{tesseract\_environment::Environment}}
+\doxysubsubsection{\texorpdfstring{joint\_group\_cache\_mutex\_}{joint\_group\_cache\_mutex\_}}
+{\footnotesize\ttfamily std\+::shared\+\_\+mutex tesseract\+\_\+environment\+::\+Environment\+::joint\+\_\+group\+\_\+cache\+\_\+mutex\+\_\+\hspace{0.3cm}{\ttfamily [mutable]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classtesseract__environment_1_1Environment_a2e5d28d74c8afa88a64e48bde980a926}\label{classtesseract__environment_1_1Environment_a2e5d28d74c8afa88a64e48bde980a926}} 
+\index{tesseract\_environment::Environment@{tesseract\_environment::Environment}!kinematic\_group\_cache\_@{kinematic\_group\_cache\_}}
+\index{kinematic\_group\_cache\_@{kinematic\_group\_cache\_}!tesseract\_environment::Environment@{tesseract\_environment::Environment}}
+\doxysubsubsection{\texorpdfstring{kinematic\_group\_cache\_}{kinematic\_group\_cache\_}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$std\+::string, \mbox{\hyperlink{classtesseract__kinematics_1_1KinematicGroup_a039a701cf2b2749effa2d0400d45aeec}{tesseract\+\_\+kinematics\+::\+Kinematic\+Group\+::\+UPtr}}$>$ tesseract\+\_\+environment\+::\+Environment\+::kinematic\+\_\+group\+\_\+cache\+\_\+\hspace{0.3cm}{\ttfamily [mutable]}, {\ttfamily [protected]}}
+
+
+
+A cache of kinematic groups to provide faster access. 
+
+This will cleared when environment changes \mbox{\Hypertarget{classtesseract__environment_1_1Environment_a857fe314931f5dd986856772a52f5b5d}\label{classtesseract__environment_1_1Environment_a857fe314931f5dd986856772a52f5b5d}} 
+\index{tesseract\_environment::Environment@{tesseract\_environment::Environment}!kinematic\_group\_cache\_mutex\_@{kinematic\_group\_cache\_mutex\_}}
+\index{kinematic\_group\_cache\_mutex\_@{kinematic\_group\_cache\_mutex\_}!tesseract\_environment::Environment@{tesseract\_environment::Environment}}
+\doxysubsubsection{\texorpdfstring{kinematic\_group\_cache\_mutex\_}{kinematic\_group\_cache\_mutex\_}}
+{\footnotesize\ttfamily std\+::shared\+\_\+mutex tesseract\+\_\+environment\+::\+Environment\+::kinematic\+\_\+group\+\_\+cache\+\_\+mutex\+\_\+\hspace{0.3cm}{\ttfamily [mutable]}, {\ttfamily [protected]}}
 
 \mbox{\Hypertarget{classtesseract__environment_1_1Environment_a4819f7c9532d9c52bdda64dbb633f53f}\label{classtesseract__environment_1_1Environment_a4819f7c9532d9c52bdda64dbb633f53f}} 
 \index{tesseract\_environment::Environment@{tesseract\_environment::Environment}!kinematics\_factory\_@{kinematics\_factory\_}}

@@ -125,7 +125,7 @@ Public Attributes</h2></td></tr>
 <tr class="memdesc:a0708204dd34adfdec1a7506df07cd30a"><td class="mdescLeft">&#160;</td><td class="mdescRight">A list of paths to search for plugins.  <a href="../../d1/da5/classtesseract__common_1_1PluginLoader.html#a0708204dd34adfdec1a7506df07cd30a">More...</a><br /></td></tr>
 <tr class="separator:a0708204dd34adfdec1a7506df07cd30a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac21baef3ac5e035e5d6604c48dce293c"><td class="memItemLeft" align="right" valign="top">std::set&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/da5/classtesseract__common_1_1PluginLoader.html#ac21baef3ac5e035e5d6604c48dce293c">search_libraries</a></td></tr>
-<tr class="memdesc:ac21baef3ac5e035e5d6604c48dce293c"><td class="mdescLeft">&#160;</td><td class="mdescRight">A list of library names without the prefix or sufix that contain plugins.  <a href="../../d1/da5/classtesseract__common_1_1PluginLoader.html#ac21baef3ac5e035e5d6604c48dce293c">More...</a><br /></td></tr>
+<tr class="memdesc:ac21baef3ac5e035e5d6604c48dce293c"><td class="mdescLeft">&#160;</td><td class="mdescRight">A list of library names without the prefix or suffix that contain plugins.  <a href="../../d1/da5/classtesseract__common_1_1PluginLoader.html#ac21baef3ac5e035e5d6604c48dce293c">More...</a><br /></td></tr>
 <tr class="separator:ac21baef3ac5e035e5d6604c48dce293c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a07ad5f9ed665a443296650ba4cf74ac2"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/da5/classtesseract__common_1_1PluginLoader.html#a07ad5f9ed665a443296650ba4cf74ac2">search_paths_env</a></td></tr>
 <tr class="memdesc:a07ad5f9ed665a443296650ba4cf74ac2"><td class="mdescLeft">&#160;</td><td class="mdescRight">The environment variable containing plugin search paths.  <a href="../../d1/da5/classtesseract__common_1_1PluginLoader.html#a07ad5f9ed665a443296650ba4cf74ac2">More...</a><br /></td></tr>
@@ -138,7 +138,7 @@ Public Attributes</h2></td></tr>
 <div class="textblock"><p>This is a utility class for loading plugins within Tesseract. </p>
 <p>The library_name should not include the prefix 'lib' or suffix '.so'. It will add the correct prefix and suffix based on the OS.</p>
 <p>It supports providing additional search paths and set environment variable which should be used when searching for plugins.</p>
-<p>The plugin must be exported using the macro TESSERACT_ADD_PLUGIN. In the example below, the first parameter is the derived object and the second is the assinged symbol name which is used for looding Example: <a class="el" href="../../dd/d9f/class__loader_8h.html#a97c9d4061ddaef2cc923033180af020f">TESSERACT_ADD_PLUGIN(my_namespace::MyPlugin, plugin)</a></p>
+<p>The plugin must be exported using the macro TESSERACT_ADD_PLUGIN. In the example below, the first parameter is the derived object and the second is the assigned symbol name which is used for loading Example: <a class="el" href="../../dd/d9f/class__loader_8h.html#a97c9d4061ddaef2cc923033180af020f">TESSERACT_ADD_PLUGIN(my_namespace::MyPlugin, plugin)</a></p>
 <p><a class="el" href="../../d1/da5/classtesseract__common_1_1PluginLoader.html" title="This is a utility class for loading plugins within Tesseract.">PluginLoader</a> loader; loader.search_libraries.insert("my_plugin"); // libmy_plugin.so std::shared_ptr&lt;PluginBase&gt; p = loader.instantiate&lt;PluginBase&gt;("plugin"); </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a8f0b1bf448293e184888f791baba0341"></a>
@@ -194,7 +194,7 @@ template&lt;class PluginBase &gt; </div>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A instantiation of the plugin, if nullptr it failed to create plugin </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A instantiate of the plugin, if nullptr it failed to create plugin </dd></dl>
 
 </div>
 </div>
@@ -246,7 +246,7 @@ template&lt;class PluginBase &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>A list of library names without the prefix or sufix that contain plugins. </p>
+<p>A list of library names without the prefix or suffix that contain plugins. </p>
 
 </div>
 </div>
@@ -263,7 +263,7 @@ template&lt;class PluginBase &gt; </div>
 </div><div class="memdoc">
 
 <p>The environment variable containing plugins. </p>
-<p>The plugins are store ins the following formate. The library name does not contain prefix or suffix Format: library_name:library_name1:library_name2 </p>
+<p>The plugins are store ins the following format. The library name does not contain prefix or suffix Format: library_name:library_name1:library_name2 </p>
 
 </div>
 </div>
@@ -322,7 +322,7 @@ template&lt;class PluginBase &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Oct 29 2021 04:27:16 for Tesseract by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Wed Dec 15 2021 17:36:06 for Tesseract by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

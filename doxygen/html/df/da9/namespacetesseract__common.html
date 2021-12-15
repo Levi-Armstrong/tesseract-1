@@ -84,6 +84,8 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d4e/classtesseract__common_1_1AllowedCollisionMatrix.html">AllowedCollisionMatrix</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d73/classtesseract__common_1_1Any.html">Any</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d3b/structtesseract__common_1_1ClassLoader.html">ClassLoader</a></td></tr>
@@ -159,6 +161,8 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
+<tr class="memitem:a79d2a34647d0da5e574629878c142086"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/da9/namespacetesseract__common.html#a79d2a34647d0da5e574629878c142086">AllowedCollisionEntries</a> = std::unordered_map&lt; <a class="el" href="../../df/da9/namespacetesseract__common.html#a5b28b7ae665b374a7ca166d496f648ce">tesseract_common::LinkNamesPair</a>, std::string, <a class="el" href="../../d7/de0/structtesseract__common_1_1PairHash.html">tesseract_common::PairHash</a> &gt;</td></tr>
+<tr class="separator:a79d2a34647d0da5e574629878c142086"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a84cc21cc4b384291adbbddaa81fe6447"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/da9/namespacetesseract__common.html#a84cc21cc4b384291adbbddaa81fe6447">PairsCollisionMarginData</a> = std::unordered_map&lt; <a class="el" href="../../df/da9/namespacetesseract__common.html#a5b28b7ae665b374a7ca166d496f648ce">tesseract_common::LinkNamesPair</a>, double, <a class="el" href="../../d7/de0/structtesseract__common_1_1PairHash.html">tesseract_common::PairHash</a> &gt;</td></tr>
 <tr class="separator:a84cc21cc4b384291adbbddaa81fe6447"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a57fa3336d4e5f8655281342a9c94aece"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/da9/namespacetesseract__common.html#a57fa3336d4e5f8655281342a9c94aece">JointTrajectory</a> = <a class="el" href="../../db/dad/vhacdRaycastMesh_8cpp.html#adcf134d50025cc52907d0c8ac798d89d">std::vector</a>&lt; <a class="el" href="../../d0/de2/structtesseract__common_1_1JointState.html">JointState</a> &gt;</td></tr>
@@ -201,10 +205,11 @@ Enumerations</h2></td></tr>
 <tr class="memitem:af06d85d024a36d63b58a6031556af8a1"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/da9/namespacetesseract__common.html#af06d85d024a36d63b58a6031556af8a1">CollisionMarginOverrideType</a> { <br />
 &#160;&#160;<a class="el" href="../../df/da9/namespacetesseract__common.html#af06d85d024a36d63b58a6031556af8a1ab50339a10e1de285ac99d4c3990b8693">NONE</a>
 , <a class="el" href="../../df/da9/namespacetesseract__common.html#af06d85d024a36d63b58a6031556af8a1a560a2dd6f6744646473b3b19e1fe96d7">REPLACE</a>
+, <a class="el" href="../../df/da9/namespacetesseract__common.html#af06d85d024a36d63b58a6031556af8a1ab9f20f7748e2e578e81ea9ae1a0dfb30">MODIFY</a>
 , <a class="el" href="../../df/da9/namespacetesseract__common.html#af06d85d024a36d63b58a6031556af8a1a68f2f4f7ee420d8895a41ac3f35db3fe">OVERRIDE_DEFAULT_MARGIN</a>
-, <a class="el" href="../../df/da9/namespacetesseract__common.html#af06d85d024a36d63b58a6031556af8a1ae54086ed48f7d2ca425bdeca2121c83c">OVERRIDE_PAIR_MARGIN</a>
 , <br />
-&#160;&#160;<a class="el" href="../../df/da9/namespacetesseract__common.html#af06d85d024a36d63b58a6031556af8a1a8f7ea9e9137c5d7d8bc6ea025484f55a">MODIFY_PAIR_MARGIN</a>
+&#160;&#160;<a class="el" href="../../df/da9/namespacetesseract__common.html#af06d85d024a36d63b58a6031556af8a1ae54086ed48f7d2ca425bdeca2121c83c">OVERRIDE_PAIR_MARGIN</a>
+, <a class="el" href="../../df/da9/namespacetesseract__common.html#af06d85d024a36d63b58a6031556af8a1a8f7ea9e9137c5d7d8bc6ea025484f55a">MODIFY_PAIR_MARGIN</a>
 <br />
  }</td></tr>
 <tr class="memdesc:af06d85d024a36d63b58a6031556af8a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Identifies how the provided contact margin data should be applied.  <a href="../../df/da9/namespacetesseract__common.html#af06d85d024a36d63b58a6031556af8a1">More...</a><br /></td></tr>
@@ -325,6 +330,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a00bc131acfeba0eba8fe7ff7cd944860"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../df/da9/namespacetesseract__common.html#a00bc131acfeba0eba8fe7ff7cd944860">toNumeric</a> (const std::string &amp;s, FloatType &amp;value)</td></tr>
 <tr class="memdesc:a00bc131acfeba0eba8fe7ff7cd944860"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert a string to a numeric value type.  <a href="../../df/da9/namespacetesseract__common.html#a00bc131acfeba0eba8fe7ff7cd944860">More...</a><br /></td></tr>
 <tr class="separator:a00bc131acfeba0eba8fe7ff7cd944860"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06a25f37f1c374da0421ef480069ec91"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/dad/vhacdRaycastMesh_8cpp.html#adcf134d50025cc52907d0c8ac798d89d">std::vector</a>&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/da9/namespacetesseract__common.html#a06a25f37f1c374da0421ef480069ec91">getAllowedCollisions</a> (const <a class="el" href="../../db/dad/vhacdRaycastMesh_8cpp.html#adcf134d50025cc52907d0c8ac798d89d">std::vector</a>&lt; std::string &gt; &amp;link_names, const <a class="el" href="../../df/da9/namespacetesseract__common.html#a79d2a34647d0da5e574629878c142086">AllowedCollisionEntries</a> &amp;acm_entries, bool remove_duplicates=true)</td></tr>
+<tr class="memdesc:a06a25f37f1c374da0421ef480069ec91"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets allowed collisions for a set of link names.  <a href="../../df/da9/namespacetesseract__common.html#a06a25f37f1c374da0421ef480069ec91">More...</a><br /></td></tr>
+<tr class="separator:a06a25f37f1c374da0421ef480069ec91"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af5ca1a2af32cf2aa20666fabebb01ae3"><td class="memItemLeft" align="right" valign="top">template bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/da9/namespacetesseract__common.html#af5ca1a2af32cf2aa20666fabebb01ae3">toNumeric&lt; double &gt;</a> (const std::string &amp;, double &amp;)</td></tr>
 <tr class="separator:af5ca1a2af32cf2aa20666fabebb01ae3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa70232725f5f768795d33beb4d783754"><td class="memItemLeft" align="right" valign="top">template bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/da9/namespacetesseract__common.html#aa70232725f5f768795d33beb4d783754">toNumeric&lt; float &gt;</a> (const std::string &amp;, float &amp;)</td></tr>
@@ -398,6 +406,20 @@ template&lt;typename T &gt; </div>
 </div><div class="memdoc">
 
 <p>Enable easy switching to std::filesystem when available. </p>
+
+</div>
+</div>
+<a id="a79d2a34647d0da5e574629878c142086"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79d2a34647d0da5e574629878c142086">&#9670;&nbsp;</a></span>AllowedCollisionEntries</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../df/da9/namespacetesseract__common.html#a79d2a34647d0da5e574629878c142086">tesseract_common::AllowedCollisionEntries</a> = typedef std::unordered_map&lt;<a class="el" href="../../df/da9/namespacetesseract__common.html#a5b28b7ae665b374a7ca166d496f648ce">tesseract_common::LinkNamesPair</a>, std::string, <a class="el" href="../../d7/de0/structtesseract__common_1_1PairHash.html">tesseract_common::PairHash</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -599,6 +621,9 @@ template&lt;typename T &gt; </div>
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="af06d85d024a36d63b58a6031556af8a1ab50339a10e1de285ac99d4c3990b8693"></a>NONE&#160;</td><td class="fielddoc"><p>Do not apply contact margin data. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="af06d85d024a36d63b58a6031556af8a1a560a2dd6f6744646473b3b19e1fe96d7"></a>REPLACE&#160;</td><td class="fielddoc"><p>Replace the contact manager's <a class="el" href="../../d6/dc7/classtesseract__common_1_1CollisionMarginData.html" title="Stores information about how the margins allowed between collision objects.">CollisionMarginData</a>. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="af06d85d024a36d63b58a6031556af8a1ab9f20f7748e2e578e81ea9ae1a0dfb30"></a>MODIFY&#160;</td><td class="fielddoc"><p>Modify the contact managers default margin and pair margins. </p>
+<p>This will preserve existing pairs not being modified by the provided margin data. If a pair already exist it will be updated with the provided margin data. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="af06d85d024a36d63b58a6031556af8a1a68f2f4f7ee420d8895a41ac3f35db3fe"></a>OVERRIDE_DEFAULT_MARGIN&#160;</td><td class="fielddoc"><p>Override the contact managers default margin only. </p>
 </td></tr>
@@ -921,6 +946,51 @@ template&lt;typename T &gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A vector of random numbers between the provided limits. </dd></dl>
+
+</div>
+</div>
+<a id="a06a25f37f1c374da0421ef480069ec91"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06a25f37f1c374da0421ef480069ec91">&#9670;&nbsp;</a></span>getAllowedCollisions()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../db/dad/vhacdRaycastMesh_8cpp.html#adcf134d50025cc52907d0c8ac798d89d">std::vector</a>&lt;std::string&gt; tesseract_common::getAllowedCollisions </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../db/dad/vhacdRaycastMesh_8cpp.html#adcf134d50025cc52907d0c8ac798d89d">std::vector</a>&lt; std::string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>link_names</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../df/da9/namespacetesseract__common.html#a79d2a34647d0da5e574629878c142086">AllowedCollisionEntries</a> &amp;&#160;</td>
+          <td class="paramname"><em>acm_entries</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>remove_duplicates</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets allowed collisions for a set of link names. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">link_names</td><td>Vector of link names for which we want the allowed collisions </td></tr>
+    <tr><td class="paramname">acm_entries</td><td>Entries in the ACM. Get this with <a class="el" href="../../d7/d4e/classtesseract__common_1_1AllowedCollisionMatrix.html#a674799ce3547c17ba109ab14c08afc6d" title="Get all of the entries in the allowed collision matrix.">AllowedCollisionMatrix::getAllAllowedCollisions()</a> </td></tr>
+    <tr><td class="paramname">remove_duplicates</td><td>If true, duplicates will be removed. Default: true </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>vector of links that are allowed to collide with links given </dd></dl>
 
 </div>
 </div>
@@ -2212,7 +2282,7 @@ template&lt;typename FloatType &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Oct 29 2021 04:27:16 for Tesseract by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Wed Dec 15 2021 17:36:06 for Tesseract by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

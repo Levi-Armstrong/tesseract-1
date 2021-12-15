@@ -1,11 +1,28 @@
 \hypertarget{classIKSolver}{}\doxysection{IKSolver Class Reference}
 \label{classIKSolver}\index{IKSolver@{IKSolver}}
+
+
+{\ttfamily \#include $<$abb\+\_\+irb2400\+\_\+ikfast\+\_\+solver.\+hpp$>$}
+
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 bool \mbox{\hyperlink{classIKSolver_ac0195e291bed491b4cb6a68db8199b55}{Compute\+Ik}} (const Ik\+Real $\ast$eetrans, const Ik\+Real $\ast$eerot, const Ik\+Real $\ast$pfree, \mbox{\hyperlink{classikfast_1_1IkSolutionListBase}{Ik\+Solution\+List\+Base}}$<$ Ik\+Real $>$ \&solutions)
 \item 
 void \mbox{\hyperlink{classIKSolver_a139a62477d8d27e5a5dace907f0b38b0}{rotationfunction0}} (\mbox{\hyperlink{classikfast_1_1IkSolutionListBase}{Ik\+Solution\+List\+Base}}$<$ Ik\+Real $>$ \&solutions)
+\item 
+bool \mbox{\hyperlink{classIKSolver_ac0195e291bed491b4cb6a68db8199b55}{Compute\+Ik}} (const Ik\+Real $\ast$eetrans, const Ik\+Real $\ast$eerot, const Ik\+Real $\ast$pfree, \mbox{\hyperlink{classikfast_1_1IkSolutionListBase}{Ik\+Solution\+List\+Base}}$<$ Ik\+Real $>$ \&solutions)
+\item 
+void \mbox{\hyperlink{classIKSolver_a139a62477d8d27e5a5dace907f0b38b0}{rotationfunction0}} (\mbox{\hyperlink{classikfast_1_1IkSolutionListBase}{Ik\+Solution\+List\+Base}}$<$ Ik\+Real $>$ \&solutions)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classIKSolver_a46a898ea503f9399df84df127f7f84eb}{polyroots3}} (Ik\+Real rawcoeffs\mbox{[}3+1\mbox{]}, Ik\+Real rawroots\mbox{[}3\mbox{]}, int \&numroots)
+\item 
+static void \mbox{\hyperlink{classIKSolver_a16a33b8d7de25af06070fb7c55e80bb1}{polyroots2}} (Ik\+Real rawcoeffs\mbox{[}2+1\mbox{]}, Ik\+Real rawroots\mbox{[}2\mbox{]}, int \&numroots)
+\item 
+static void \mbox{\hyperlink{classIKSolver_a771ebe9dbd8593520e8aab200e3c141a}{polyroots4}} (Ik\+Real rawcoeffs\mbox{[}4+1\mbox{]}, Ik\+Real rawroots\mbox{[}4\mbox{]}, int \&numroots)
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
@@ -132,29 +149,63 @@ Ik\+Real \mbox{\hyperlink{classIKSolver_ac5ba601bbc95efd9881f70ebf871c5c1}{npz}}
 \item 
 Ik\+Real \mbox{\hyperlink{classIKSolver_a2940190f4bac7e2fcd3d95503beb1a29}{pp}}
 \item 
-unsigned char \mbox{\hyperlink{classIKSolver_ae0fdf96e14e42d408bc5e16580c81100}{\+\_\+ij0}} \mbox{[}2\mbox{]}
+unsigned char \mbox{\hyperlink{classIKSolver_a85349865928c61a3fa283510ff0387f2}{\+\_\+ij0}} \mbox{[}2\mbox{]}
 \item 
 unsigned char \mbox{\hyperlink{classIKSolver_ac2fb0a00657f58a0bc49485454ddd914}{\+\_\+nj0}}
 \item 
-unsigned char \mbox{\hyperlink{classIKSolver_a66a0610cba0da00e09deda3c72e3909f}{\+\_\+ij1}} \mbox{[}2\mbox{]}
+unsigned char \mbox{\hyperlink{classIKSolver_aa1e2af4ba963e6eb35d84b542a6b8118}{\+\_\+ij1}} \mbox{[}2\mbox{]}
 \item 
 unsigned char \mbox{\hyperlink{classIKSolver_a38f5fb04f76ea095f6835eb767de1bbb}{\+\_\+nj1}}
 \item 
-unsigned char \mbox{\hyperlink{classIKSolver_aff0b7815729d44c5decbef316763d45f}{\+\_\+ij2}} \mbox{[}2\mbox{]}
+unsigned char \mbox{\hyperlink{classIKSolver_a253496f1fb90123704cfea43ea758803}{\+\_\+ij2}} \mbox{[}2\mbox{]}
 \item 
 unsigned char \mbox{\hyperlink{classIKSolver_aac13220157c526f065b9f655b4a5cb7f}{\+\_\+nj2}}
 \item 
-unsigned char \mbox{\hyperlink{classIKSolver_a4e65e7d6f429bdc4ad9146bda1b48712}{\+\_\+ij3}} \mbox{[}2\mbox{]}
+unsigned char \mbox{\hyperlink{classIKSolver_aea84edaaa9d97b6a2a69d1d1ccd9e820}{\+\_\+ij3}} \mbox{[}2\mbox{]}
 \item 
 unsigned char \mbox{\hyperlink{classIKSolver_a19d64b2e1f7c33b7492420d74ff280a0}{\+\_\+nj3}}
 \item 
-unsigned char \mbox{\hyperlink{classIKSolver_a0b552c60bc1dd705f67a32cb3f03b738}{\+\_\+ij4}} \mbox{[}2\mbox{]}
+unsigned char \mbox{\hyperlink{classIKSolver_a618a6ae375c04a4643585161b20215ee}{\+\_\+ij4}} \mbox{[}2\mbox{]}
 \item 
 unsigned char \mbox{\hyperlink{classIKSolver_af4a3d8d26ff3a7cbf3ebbe8c8258f12c}{\+\_\+nj4}}
 \item 
-unsigned char \mbox{\hyperlink{classIKSolver_a19d1dfd6307ab991ba52a2508ca88ab9}{\+\_\+ij5}} \mbox{[}2\mbox{]}
+unsigned char \mbox{\hyperlink{classIKSolver_ac7b253543912175f4fde770cda2b920a}{\+\_\+ij5}} \mbox{[}2\mbox{]}
 \item 
 unsigned char \mbox{\hyperlink{classIKSolver_aaa811fe7438ac359598271dc80f55ea7}{\+\_\+nj5}}
+\item 
+Ik\+Real \mbox{\hyperlink{classIKSolver_a7e5b52eca8716ef85d3e857c5c6a0664}{j0mul}}
+\item 
+Ik\+Real \mbox{\hyperlink{classIKSolver_a8e666ee88199689ecabf3d3457d86bc2}{j1mul}}
+\item 
+Ik\+Real \mbox{\hyperlink{classIKSolver_a293ea10271033383fd77c557befd11b4}{j2mul}}
+\item 
+Ik\+Real \mbox{\hyperlink{classIKSolver_a827e1cab13ea3962046446651efec165}{j3mul}}
+\item 
+Ik\+Real \mbox{\hyperlink{classIKSolver_a4933a202f17f03ec1667024dd4351dba}{j5mul}}
+\item 
+Ik\+Real \mbox{\hyperlink{classIKSolver_a140fdfaddaf1a9185d96147031ca6393}{j6}}
+\item 
+Ik\+Real \mbox{\hyperlink{classIKSolver_ab17bcd7fa262758ecf4afcecb7371294}{cj6}}
+\item 
+Ik\+Real \mbox{\hyperlink{classIKSolver_a3eb0c06b18b234fcb505883ac302d7ec}{sj6}}
+\item 
+Ik\+Real \mbox{\hyperlink{classIKSolver_acd55310d288ef23d3fe6aacdf2203411}{htj6}}
+\item 
+Ik\+Real \mbox{\hyperlink{classIKSolver_afb7966ac4a46333ce8f0ba34ec074ab1}{j6mul}}
+\item 
+unsigned char \mbox{\hyperlink{classIKSolver_af6ffb16a73435094bdd3d4f88b8853e5}{\+\_\+ij6}} \mbox{[}2\mbox{]}
+\item 
+unsigned char \mbox{\hyperlink{classIKSolver_ae495a59ca0a0db22c916ca21fca93e49}{\+\_\+nj6}}
+\item 
+Ik\+Real \mbox{\hyperlink{classIKSolver_a793dbaa888ed31ea892028f3da3b6251}{j100}}
+\item 
+Ik\+Real \mbox{\hyperlink{classIKSolver_aff9b55d101572e59a2b2ff7255401883}{cj100}}
+\item 
+Ik\+Real \mbox{\hyperlink{classIKSolver_a481a9e5ad8adad9c244a5a1a8bca8124}{sj100}}
+\item 
+unsigned char \mbox{\hyperlink{classIKSolver_a532f95a61a95105a0d54bc0d480f8a1c}{\+\_\+ij100}} \mbox{[}2\mbox{]}
+\item 
+unsigned char \mbox{\hyperlink{classIKSolver_ae2e2e25e523459bc8c56bd08d020998c}{\+\_\+nj100}}
 \end{DoxyCompactItemize}
 
 
@@ -162,53 +213,95 @@ unsigned char \mbox{\hyperlink{classIKSolver_aaa811fe7438ac359598271dc80f55ea7}{
 \mbox{\Hypertarget{classIKSolver_ac0195e291bed491b4cb6a68db8199b55}\label{classIKSolver_ac0195e291bed491b4cb6a68db8199b55}} 
 \index{IKSolver@{IKSolver}!ComputeIk@{ComputeIk}}
 \index{ComputeIk@{ComputeIk}!IKSolver@{IKSolver}}
-\doxysubsubsection{\texorpdfstring{ComputeIk()}{ComputeIk()}}
+\doxysubsubsection{\texorpdfstring{ComputeIk()}{ComputeIk()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily bool IKSolver\+::\+Compute\+Ik (\begin{DoxyParamCaption}\item[{const Ik\+Real $\ast$}]{eetrans,  }\item[{const Ik\+Real $\ast$}]{eerot,  }\item[{const Ik\+Real $\ast$}]{pfree,  }\item[{\mbox{\hyperlink{classikfast_1_1IkSolutionListBase}{Ik\+Solution\+List\+Base}}$<$ Ik\+Real $>$ \&}]{solutions }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classIKSolver_ac0195e291bed491b4cb6a68db8199b55}\label{classIKSolver_ac0195e291bed491b4cb6a68db8199b55}} 
+\index{IKSolver@{IKSolver}!ComputeIk@{ComputeIk}}
+\index{ComputeIk@{ComputeIk}!IKSolver@{IKSolver}}
+\doxysubsubsection{\texorpdfstring{ComputeIk()}{ComputeIk()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool IKSolver\+::\+Compute\+Ik (\begin{DoxyParamCaption}\item[{const Ik\+Real $\ast$}]{eetrans,  }\item[{const Ik\+Real $\ast$}]{eerot,  }\item[{const Ik\+Real $\ast$}]{pfree,  }\item[{\mbox{\hyperlink{classikfast_1_1IkSolutionListBase}{Ik\+Solution\+List\+Base}}$<$ Ik\+Real $>$ \&}]{solutions }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classIKSolver_a16a33b8d7de25af06070fb7c55e80bb1}\label{classIKSolver_a16a33b8d7de25af06070fb7c55e80bb1}} 
+\index{IKSolver@{IKSolver}!polyroots2@{polyroots2}}
+\index{polyroots2@{polyroots2}!IKSolver@{IKSolver}}
+\doxysubsubsection{\texorpdfstring{polyroots2()}{polyroots2()}}
+{\footnotesize\ttfamily static void IKSolver\+::polyroots2 (\begin{DoxyParamCaption}\item[{Ik\+Real}]{rawcoeffs\mbox{[}2+1\mbox{]},  }\item[{Ik\+Real}]{rawroots\mbox{[}2\mbox{]},  }\item[{int \&}]{numroots }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{classIKSolver_a46a898ea503f9399df84df127f7f84eb}\label{classIKSolver_a46a898ea503f9399df84df127f7f84eb}} 
+\index{IKSolver@{IKSolver}!polyroots3@{polyroots3}}
+\index{polyroots3@{polyroots3}!IKSolver@{IKSolver}}
+\doxysubsubsection{\texorpdfstring{polyroots3()}{polyroots3()}}
+{\footnotesize\ttfamily static void IKSolver\+::polyroots3 (\begin{DoxyParamCaption}\item[{Ik\+Real}]{rawcoeffs\mbox{[}3+1\mbox{]},  }\item[{Ik\+Real}]{rawroots\mbox{[}3\mbox{]},  }\item[{int \&}]{numroots }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{classIKSolver_a771ebe9dbd8593520e8aab200e3c141a}\label{classIKSolver_a771ebe9dbd8593520e8aab200e3c141a}} 
+\index{IKSolver@{IKSolver}!polyroots4@{polyroots4}}
+\index{polyroots4@{polyroots4}!IKSolver@{IKSolver}}
+\doxysubsubsection{\texorpdfstring{polyroots4()}{polyroots4()}}
+{\footnotesize\ttfamily static void IKSolver\+::polyroots4 (\begin{DoxyParamCaption}\item[{Ik\+Real}]{rawcoeffs\mbox{[}4+1\mbox{]},  }\item[{Ik\+Real}]{rawroots\mbox{[}4\mbox{]},  }\item[{int \&}]{numroots }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
 
 \mbox{\Hypertarget{classIKSolver_a139a62477d8d27e5a5dace907f0b38b0}\label{classIKSolver_a139a62477d8d27e5a5dace907f0b38b0}} 
 \index{IKSolver@{IKSolver}!rotationfunction0@{rotationfunction0}}
 \index{rotationfunction0@{rotationfunction0}!IKSolver@{IKSolver}}
-\doxysubsubsection{\texorpdfstring{rotationfunction0()}{rotationfunction0()}}
+\doxysubsubsection{\texorpdfstring{rotationfunction0()}{rotationfunction0()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void IKSolver\+::rotationfunction0 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classikfast_1_1IkSolutionListBase}{Ik\+Solution\+List\+Base}}$<$ Ik\+Real $>$ \&}]{solutions }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classIKSolver_a139a62477d8d27e5a5dace907f0b38b0}\label{classIKSolver_a139a62477d8d27e5a5dace907f0b38b0}} 
+\index{IKSolver@{IKSolver}!rotationfunction0@{rotationfunction0}}
+\index{rotationfunction0@{rotationfunction0}!IKSolver@{IKSolver}}
+\doxysubsubsection{\texorpdfstring{rotationfunction0()}{rotationfunction0()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily void IKSolver\+::rotationfunction0 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classikfast_1_1IkSolutionListBase}{Ik\+Solution\+List\+Base}}$<$ Ik\+Real $>$ \&}]{solutions }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
 \doxysubsection{Member Data Documentation}
-\mbox{\Hypertarget{classIKSolver_ae0fdf96e14e42d408bc5e16580c81100}\label{classIKSolver_ae0fdf96e14e42d408bc5e16580c81100}} 
+\mbox{\Hypertarget{classIKSolver_a85349865928c61a3fa283510ff0387f2}\label{classIKSolver_a85349865928c61a3fa283510ff0387f2}} 
 \index{IKSolver@{IKSolver}!\_ij0@{\_ij0}}
 \index{\_ij0@{\_ij0}!IKSolver@{IKSolver}}
 \doxysubsubsection{\texorpdfstring{\_ij0}{\_ij0}}
-{\footnotesize\ttfamily unsigned char IKSolver\+::\+\_\+ij0\mbox{[}2\mbox{]}}
+{\footnotesize\ttfamily unsigned char IKSolver\+::\+\_\+ij0}
 
-\mbox{\Hypertarget{classIKSolver_a66a0610cba0da00e09deda3c72e3909f}\label{classIKSolver_a66a0610cba0da00e09deda3c72e3909f}} 
+\mbox{\Hypertarget{classIKSolver_aa1e2af4ba963e6eb35d84b542a6b8118}\label{classIKSolver_aa1e2af4ba963e6eb35d84b542a6b8118}} 
 \index{IKSolver@{IKSolver}!\_ij1@{\_ij1}}
 \index{\_ij1@{\_ij1}!IKSolver@{IKSolver}}
 \doxysubsubsection{\texorpdfstring{\_ij1}{\_ij1}}
-{\footnotesize\ttfamily unsigned char IKSolver\+::\+\_\+ij1\mbox{[}2\mbox{]}}
+{\footnotesize\ttfamily unsigned char IKSolver\+::\+\_\+ij1}
 
-\mbox{\Hypertarget{classIKSolver_aff0b7815729d44c5decbef316763d45f}\label{classIKSolver_aff0b7815729d44c5decbef316763d45f}} 
+\mbox{\Hypertarget{classIKSolver_a532f95a61a95105a0d54bc0d480f8a1c}\label{classIKSolver_a532f95a61a95105a0d54bc0d480f8a1c}} 
+\index{IKSolver@{IKSolver}!\_ij100@{\_ij100}}
+\index{\_ij100@{\_ij100}!IKSolver@{IKSolver}}
+\doxysubsubsection{\texorpdfstring{\_ij100}{\_ij100}}
+{\footnotesize\ttfamily unsigned char IKSolver\+::\+\_\+ij100\mbox{[}2\mbox{]}}
+
+\mbox{\Hypertarget{classIKSolver_a253496f1fb90123704cfea43ea758803}\label{classIKSolver_a253496f1fb90123704cfea43ea758803}} 
 \index{IKSolver@{IKSolver}!\_ij2@{\_ij2}}
 \index{\_ij2@{\_ij2}!IKSolver@{IKSolver}}
 \doxysubsubsection{\texorpdfstring{\_ij2}{\_ij2}}
-{\footnotesize\ttfamily unsigned char IKSolver\+::\+\_\+ij2\mbox{[}2\mbox{]}}
+{\footnotesize\ttfamily unsigned char IKSolver\+::\+\_\+ij2}
 
-\mbox{\Hypertarget{classIKSolver_a4e65e7d6f429bdc4ad9146bda1b48712}\label{classIKSolver_a4e65e7d6f429bdc4ad9146bda1b48712}} 
+\mbox{\Hypertarget{classIKSolver_aea84edaaa9d97b6a2a69d1d1ccd9e820}\label{classIKSolver_aea84edaaa9d97b6a2a69d1d1ccd9e820}} 
 \index{IKSolver@{IKSolver}!\_ij3@{\_ij3}}
 \index{\_ij3@{\_ij3}!IKSolver@{IKSolver}}
 \doxysubsubsection{\texorpdfstring{\_ij3}{\_ij3}}
-{\footnotesize\ttfamily unsigned char IKSolver\+::\+\_\+ij3\mbox{[}2\mbox{]}}
+{\footnotesize\ttfamily unsigned char IKSolver\+::\+\_\+ij3}
 
-\mbox{\Hypertarget{classIKSolver_a0b552c60bc1dd705f67a32cb3f03b738}\label{classIKSolver_a0b552c60bc1dd705f67a32cb3f03b738}} 
+\mbox{\Hypertarget{classIKSolver_a618a6ae375c04a4643585161b20215ee}\label{classIKSolver_a618a6ae375c04a4643585161b20215ee}} 
 \index{IKSolver@{IKSolver}!\_ij4@{\_ij4}}
 \index{\_ij4@{\_ij4}!IKSolver@{IKSolver}}
 \doxysubsubsection{\texorpdfstring{\_ij4}{\_ij4}}
-{\footnotesize\ttfamily unsigned char IKSolver\+::\+\_\+ij4\mbox{[}2\mbox{]}}
+{\footnotesize\ttfamily unsigned char IKSolver\+::\+\_\+ij4}
 
-\mbox{\Hypertarget{classIKSolver_a19d1dfd6307ab991ba52a2508ca88ab9}\label{classIKSolver_a19d1dfd6307ab991ba52a2508ca88ab9}} 
+\mbox{\Hypertarget{classIKSolver_ac7b253543912175f4fde770cda2b920a}\label{classIKSolver_ac7b253543912175f4fde770cda2b920a}} 
 \index{IKSolver@{IKSolver}!\_ij5@{\_ij5}}
 \index{\_ij5@{\_ij5}!IKSolver@{IKSolver}}
 \doxysubsubsection{\texorpdfstring{\_ij5}{\_ij5}}
-{\footnotesize\ttfamily unsigned char IKSolver\+::\+\_\+ij5\mbox{[}2\mbox{]}}
+{\footnotesize\ttfamily unsigned char IKSolver\+::\+\_\+ij5}
+
+\mbox{\Hypertarget{classIKSolver_af6ffb16a73435094bdd3d4f88b8853e5}\label{classIKSolver_af6ffb16a73435094bdd3d4f88b8853e5}} 
+\index{IKSolver@{IKSolver}!\_ij6@{\_ij6}}
+\index{\_ij6@{\_ij6}!IKSolver@{IKSolver}}
+\doxysubsubsection{\texorpdfstring{\_ij6}{\_ij6}}
+{\footnotesize\ttfamily unsigned char IKSolver\+::\+\_\+ij6\mbox{[}2\mbox{]}}
 
 \mbox{\Hypertarget{classIKSolver_ac2fb0a00657f58a0bc49485454ddd914}\label{classIKSolver_ac2fb0a00657f58a0bc49485454ddd914}} 
 \index{IKSolver@{IKSolver}!\_nj0@{\_nj0}}
@@ -221,6 +314,12 @@ unsigned char \mbox{\hyperlink{classIKSolver_aaa811fe7438ac359598271dc80f55ea7}{
 \index{\_nj1@{\_nj1}!IKSolver@{IKSolver}}
 \doxysubsubsection{\texorpdfstring{\_nj1}{\_nj1}}
 {\footnotesize\ttfamily unsigned char IKSolver\+::\+\_\+nj1}
+
+\mbox{\Hypertarget{classIKSolver_ae2e2e25e523459bc8c56bd08d020998c}\label{classIKSolver_ae2e2e25e523459bc8c56bd08d020998c}} 
+\index{IKSolver@{IKSolver}!\_nj100@{\_nj100}}
+\index{\_nj100@{\_nj100}!IKSolver@{IKSolver}}
+\doxysubsubsection{\texorpdfstring{\_nj100}{\_nj100}}
+{\footnotesize\ttfamily unsigned char IKSolver\+::\+\_\+nj100}
 
 \mbox{\Hypertarget{classIKSolver_aac13220157c526f065b9f655b4a5cb7f}\label{classIKSolver_aac13220157c526f065b9f655b4a5cb7f}} 
 \index{IKSolver@{IKSolver}!\_nj2@{\_nj2}}
@@ -246,6 +345,12 @@ unsigned char \mbox{\hyperlink{classIKSolver_aaa811fe7438ac359598271dc80f55ea7}{
 \doxysubsubsection{\texorpdfstring{\_nj5}{\_nj5}}
 {\footnotesize\ttfamily unsigned char IKSolver\+::\+\_\+nj5}
 
+\mbox{\Hypertarget{classIKSolver_ae495a59ca0a0db22c916ca21fca93e49}\label{classIKSolver_ae495a59ca0a0db22c916ca21fca93e49}} 
+\index{IKSolver@{IKSolver}!\_nj6@{\_nj6}}
+\index{\_nj6@{\_nj6}!IKSolver@{IKSolver}}
+\doxysubsubsection{\texorpdfstring{\_nj6}{\_nj6}}
+{\footnotesize\ttfamily unsigned char IKSolver\+::\+\_\+nj6}
+
 \mbox{\Hypertarget{classIKSolver_aa3c0bd74bcf87573ce608d8039408526}\label{classIKSolver_aa3c0bd74bcf87573ce608d8039408526}} 
 \index{IKSolver@{IKSolver}!cj0@{cj0}}
 \index{cj0@{cj0}!IKSolver@{IKSolver}}
@@ -257,6 +362,12 @@ unsigned char \mbox{\hyperlink{classIKSolver_aaa811fe7438ac359598271dc80f55ea7}{
 \index{cj1@{cj1}!IKSolver@{IKSolver}}
 \doxysubsubsection{\texorpdfstring{cj1}{cj1}}
 {\footnotesize\ttfamily Ik\+Real IKSolver\+::cj1}
+
+\mbox{\Hypertarget{classIKSolver_aff9b55d101572e59a2b2ff7255401883}\label{classIKSolver_aff9b55d101572e59a2b2ff7255401883}} 
+\index{IKSolver@{IKSolver}!cj100@{cj100}}
+\index{cj100@{cj100}!IKSolver@{IKSolver}}
+\doxysubsubsection{\texorpdfstring{cj100}{cj100}}
+{\footnotesize\ttfamily Ik\+Real IKSolver\+::cj100}
 
 \mbox{\Hypertarget{classIKSolver_afae239eeaad5f0c027cd4837faa666a0}\label{classIKSolver_afae239eeaad5f0c027cd4837faa666a0}} 
 \index{IKSolver@{IKSolver}!cj2@{cj2}}
@@ -281,6 +392,12 @@ unsigned char \mbox{\hyperlink{classIKSolver_aaa811fe7438ac359598271dc80f55ea7}{
 \index{cj5@{cj5}!IKSolver@{IKSolver}}
 \doxysubsubsection{\texorpdfstring{cj5}{cj5}}
 {\footnotesize\ttfamily Ik\+Real IKSolver\+::cj5}
+
+\mbox{\Hypertarget{classIKSolver_ab17bcd7fa262758ecf4afcecb7371294}\label{classIKSolver_ab17bcd7fa262758ecf4afcecb7371294}} 
+\index{IKSolver@{IKSolver}!cj6@{cj6}}
+\index{cj6@{cj6}!IKSolver@{IKSolver}}
+\doxysubsubsection{\texorpdfstring{cj6}{cj6}}
+{\footnotesize\ttfamily Ik\+Real IKSolver\+::cj6}
 
 \mbox{\Hypertarget{classIKSolver_af29aefe604a6957a573f5532a0ae0924}\label{classIKSolver_af29aefe604a6957a573f5532a0ae0924}} 
 \index{IKSolver@{IKSolver}!htj0@{htj0}}
@@ -318,11 +435,23 @@ unsigned char \mbox{\hyperlink{classIKSolver_aaa811fe7438ac359598271dc80f55ea7}{
 \doxysubsubsection{\texorpdfstring{htj5}{htj5}}
 {\footnotesize\ttfamily Ik\+Real IKSolver\+::htj5}
 
+\mbox{\Hypertarget{classIKSolver_acd55310d288ef23d3fe6aacdf2203411}\label{classIKSolver_acd55310d288ef23d3fe6aacdf2203411}} 
+\index{IKSolver@{IKSolver}!htj6@{htj6}}
+\index{htj6@{htj6}!IKSolver@{IKSolver}}
+\doxysubsubsection{\texorpdfstring{htj6}{htj6}}
+{\footnotesize\ttfamily Ik\+Real IKSolver\+::htj6}
+
 \mbox{\Hypertarget{classIKSolver_a57f10792b61e342bc910311172b36488}\label{classIKSolver_a57f10792b61e342bc910311172b36488}} 
 \index{IKSolver@{IKSolver}!j0@{j0}}
 \index{j0@{j0}!IKSolver@{IKSolver}}
 \doxysubsubsection{\texorpdfstring{j0}{j0}}
 {\footnotesize\ttfamily Ik\+Real IKSolver\+::j0}
+
+\mbox{\Hypertarget{classIKSolver_a7e5b52eca8716ef85d3e857c5c6a0664}\label{classIKSolver_a7e5b52eca8716ef85d3e857c5c6a0664}} 
+\index{IKSolver@{IKSolver}!j0mul@{j0mul}}
+\index{j0mul@{j0mul}!IKSolver@{IKSolver}}
+\doxysubsubsection{\texorpdfstring{j0mul}{j0mul}}
+{\footnotesize\ttfamily Ik\+Real IKSolver\+::j0mul}
 
 \mbox{\Hypertarget{classIKSolver_abce606fc49166277524525eadfe47f1a}\label{classIKSolver_abce606fc49166277524525eadfe47f1a}} 
 \index{IKSolver@{IKSolver}!j1@{j1}}
@@ -330,17 +459,41 @@ unsigned char \mbox{\hyperlink{classIKSolver_aaa811fe7438ac359598271dc80f55ea7}{
 \doxysubsubsection{\texorpdfstring{j1}{j1}}
 {\footnotesize\ttfamily Ik\+Real IKSolver\+::j1}
 
+\mbox{\Hypertarget{classIKSolver_a793dbaa888ed31ea892028f3da3b6251}\label{classIKSolver_a793dbaa888ed31ea892028f3da3b6251}} 
+\index{IKSolver@{IKSolver}!j100@{j100}}
+\index{j100@{j100}!IKSolver@{IKSolver}}
+\doxysubsubsection{\texorpdfstring{j100}{j100}}
+{\footnotesize\ttfamily Ik\+Real IKSolver\+::j100}
+
+\mbox{\Hypertarget{classIKSolver_a8e666ee88199689ecabf3d3457d86bc2}\label{classIKSolver_a8e666ee88199689ecabf3d3457d86bc2}} 
+\index{IKSolver@{IKSolver}!j1mul@{j1mul}}
+\index{j1mul@{j1mul}!IKSolver@{IKSolver}}
+\doxysubsubsection{\texorpdfstring{j1mul}{j1mul}}
+{\footnotesize\ttfamily Ik\+Real IKSolver\+::j1mul}
+
 \mbox{\Hypertarget{classIKSolver_a2059d93255027d204610a6818e5c45a6}\label{classIKSolver_a2059d93255027d204610a6818e5c45a6}} 
 \index{IKSolver@{IKSolver}!j2@{j2}}
 \index{j2@{j2}!IKSolver@{IKSolver}}
 \doxysubsubsection{\texorpdfstring{j2}{j2}}
 {\footnotesize\ttfamily Ik\+Real IKSolver\+::j2}
 
+\mbox{\Hypertarget{classIKSolver_a293ea10271033383fd77c557befd11b4}\label{classIKSolver_a293ea10271033383fd77c557befd11b4}} 
+\index{IKSolver@{IKSolver}!j2mul@{j2mul}}
+\index{j2mul@{j2mul}!IKSolver@{IKSolver}}
+\doxysubsubsection{\texorpdfstring{j2mul}{j2mul}}
+{\footnotesize\ttfamily Ik\+Real IKSolver\+::j2mul}
+
 \mbox{\Hypertarget{classIKSolver_adf5d1568dc258d51edc6430bf90ef09d}\label{classIKSolver_adf5d1568dc258d51edc6430bf90ef09d}} 
 \index{IKSolver@{IKSolver}!j3@{j3}}
 \index{j3@{j3}!IKSolver@{IKSolver}}
 \doxysubsubsection{\texorpdfstring{j3}{j3}}
 {\footnotesize\ttfamily Ik\+Real IKSolver\+::j3}
+
+\mbox{\Hypertarget{classIKSolver_a827e1cab13ea3962046446651efec165}\label{classIKSolver_a827e1cab13ea3962046446651efec165}} 
+\index{IKSolver@{IKSolver}!j3mul@{j3mul}}
+\index{j3mul@{j3mul}!IKSolver@{IKSolver}}
+\doxysubsubsection{\texorpdfstring{j3mul}{j3mul}}
+{\footnotesize\ttfamily Ik\+Real IKSolver\+::j3mul}
 
 \mbox{\Hypertarget{classIKSolver_a7f090894b4553ceda8b2fbe91a9d469c}\label{classIKSolver_a7f090894b4553ceda8b2fbe91a9d469c}} 
 \index{IKSolver@{IKSolver}!j4@{j4}}
@@ -353,6 +506,24 @@ unsigned char \mbox{\hyperlink{classIKSolver_aaa811fe7438ac359598271dc80f55ea7}{
 \index{j5@{j5}!IKSolver@{IKSolver}}
 \doxysubsubsection{\texorpdfstring{j5}{j5}}
 {\footnotesize\ttfamily Ik\+Real IKSolver\+::j5}
+
+\mbox{\Hypertarget{classIKSolver_a4933a202f17f03ec1667024dd4351dba}\label{classIKSolver_a4933a202f17f03ec1667024dd4351dba}} 
+\index{IKSolver@{IKSolver}!j5mul@{j5mul}}
+\index{j5mul@{j5mul}!IKSolver@{IKSolver}}
+\doxysubsubsection{\texorpdfstring{j5mul}{j5mul}}
+{\footnotesize\ttfamily Ik\+Real IKSolver\+::j5mul}
+
+\mbox{\Hypertarget{classIKSolver_a140fdfaddaf1a9185d96147031ca6393}\label{classIKSolver_a140fdfaddaf1a9185d96147031ca6393}} 
+\index{IKSolver@{IKSolver}!j6@{j6}}
+\index{j6@{j6}!IKSolver@{IKSolver}}
+\doxysubsubsection{\texorpdfstring{j6}{j6}}
+{\footnotesize\ttfamily Ik\+Real IKSolver\+::j6}
+
+\mbox{\Hypertarget{classIKSolver_afb7966ac4a46333ce8f0ba34ec074ab1}\label{classIKSolver_afb7966ac4a46333ce8f0ba34ec074ab1}} 
+\index{IKSolver@{IKSolver}!j6mul@{j6mul}}
+\index{j6mul@{j6mul}!IKSolver@{IKSolver}}
+\doxysubsubsection{\texorpdfstring{j6mul}{j6mul}}
+{\footnotesize\ttfamily Ik\+Real IKSolver\+::j6mul}
 
 \mbox{\Hypertarget{classIKSolver_a81fbafdee3f4d7df5c82a4db80cb74d7}\label{classIKSolver_a81fbafdee3f4d7df5c82a4db80cb74d7}} 
 \index{IKSolver@{IKSolver}!new\_px@{new\_px}}
@@ -588,6 +759,12 @@ unsigned char \mbox{\hyperlink{classIKSolver_aaa811fe7438ac359598271dc80f55ea7}{
 \doxysubsubsection{\texorpdfstring{sj1}{sj1}}
 {\footnotesize\ttfamily Ik\+Real IKSolver\+::sj1}
 
+\mbox{\Hypertarget{classIKSolver_a481a9e5ad8adad9c244a5a1a8bca8124}\label{classIKSolver_a481a9e5ad8adad9c244a5a1a8bca8124}} 
+\index{IKSolver@{IKSolver}!sj100@{sj100}}
+\index{sj100@{sj100}!IKSolver@{IKSolver}}
+\doxysubsubsection{\texorpdfstring{sj100}{sj100}}
+{\footnotesize\ttfamily Ik\+Real IKSolver\+::sj100}
+
 \mbox{\Hypertarget{classIKSolver_adbd68395fd872d5e9a13f3a787c1b0d9}\label{classIKSolver_adbd68395fd872d5e9a13f3a787c1b0d9}} 
 \index{IKSolver@{IKSolver}!sj2@{sj2}}
 \index{sj2@{sj2}!IKSolver@{IKSolver}}
@@ -612,8 +789,15 @@ unsigned char \mbox{\hyperlink{classIKSolver_aaa811fe7438ac359598271dc80f55ea7}{
 \doxysubsubsection{\texorpdfstring{sj5}{sj5}}
 {\footnotesize\ttfamily Ik\+Real IKSolver\+::sj5}
 
+\mbox{\Hypertarget{classIKSolver_a3eb0c06b18b234fcb505883ac302d7ec}\label{classIKSolver_a3eb0c06b18b234fcb505883ac302d7ec}} 
+\index{IKSolver@{IKSolver}!sj6@{sj6}}
+\index{sj6@{sj6}!IKSolver@{IKSolver}}
+\doxysubsubsection{\texorpdfstring{sj6}{sj6}}
+{\footnotesize\ttfamily Ik\+Real IKSolver\+::sj6}
 
 
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-tesseract\+\_\+kinematics/test/\mbox{\hyperlink{abb__irb2400__ikfast__solver_8cpp}{abb\+\_\+irb2400\+\_\+ikfast\+\_\+solver.\+cpp}}\end{DoxyCompactItemize}
+tesseract\+\_\+kinematics/test/\mbox{\hyperlink{abb__irb2400__ikfast__solver_8hpp}{abb\+\_\+irb2400\+\_\+ikfast\+\_\+solver.\+hpp}}\item 
+tesseract\+\_\+kinematics/test/\mbox{\hyperlink{iiwa7__ikfast__solver_8hpp}{iiwa7\+\_\+ikfast\+\_\+solver.\+hpp}}\end{DoxyCompactItemize}

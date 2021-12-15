@@ -98,7 +98,7 @@ $(function() {
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="preprocessor">  TESSERACT_ANY_EXPORT_KEY(any_t)                                                                                      \</span></div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="preprocessor">  TESSERACT_ANY_EXPORT_IMPLEMENT(any_t)</span></div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
-<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="../../df/da9/namespacetesseract__common.html">   56</a></span>&#160;<span class="keyword">namespace </span><a class="code" href="../../df/da9/namespacetesseract__common.html">tesseract_common</a></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keyword">namespace </span><a class="code" href="../../df/da9/namespacetesseract__common.html">tesseract_common</a></div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;{</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="preprocessor">#ifndef SWIG</span></div>
 <div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="../../d0/def/namespacetesseract__common_1_1detail__any.html">   59</a></span>&#160;<span class="keyword">namespace </span>detail_any</div>
@@ -193,11 +193,11 @@ $(function() {
 <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;<span class="comment">// Taken from pagmo to address the same issue</span></div>
 <div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;<span class="comment">// NOTE: in some earlier versions of Boost (i.e., at least up to 1.67)</span></div>
 <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;<span class="comment">// the is_virtual_base_of type trait, used by the Boost serialization library, fails</span></div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;<span class="comment">// with a compile time error if a class is declared final. Thus, we provide a specialised</span></div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;<span class="comment">// with a compile time error if a class is declared final. Thus, we provide a specialized</span></div>
 <div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;<span class="comment">// implementation of this type trait to work around the issue. See:</span></div>
 <div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;<span class="comment">// https://www.boost.org/doc/libs/1_52_0/libs/type_traits/doc/html/boost_typetraits/reference/is_virtual_base_of.html</span></div>
 <div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;<span class="comment">// https://stackoverflow.com/questions/18982064/boost-serialization-of-base-class-of-final-subclass-error</span></div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;<span class="comment">// We never use virtual inheritance, thus the specialisation is always false.</span></div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;<span class="comment">// We never use virtual inheritance, thus the specialization is always false.</span></div>
 <div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
 <div class="line"><a name="l00157"></a><span class="lineno"><a class="line" href="../../d5/d6f/structboost_1_1is__virtual__base__of_3_01tesseract__common_1_1detail__any_1_1AnyInnerBase_00_01tac47434b92b7658b28e2dbc80d41c5f0.html">  157</a></span>&#160;<span class="keyword">struct </span>is_virtual_base_of&lt;<a class="code" href="../../df/da9/namespacetesseract__common.html">tesseract_common</a>::detail_any::AnyInnerBase, <a class="code" href="../../d0/de7/structtesseract__common_1_1detail__any_1_1AnyInner.html">tesseract_common::detail_any::AnyInner</a>&lt;T&gt;&gt;</div>
 <div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;  : false_type</div>
@@ -330,7 +330,7 @@ $(function() {
 <div class="ttc" id="amacros_8h_html_a8cc0e3c6a3382c5c0b19eb9e676fc2db"><div class="ttname"><a href="../../de/d3c/macros_8h.html#a8cc0e3c6a3382c5c0b19eb9e676fc2db">TESSERACT_COMMON_IGNORE_WARNINGS_PUSH</a></div><div class="ttdeci">#define TESSERACT_COMMON_IGNORE_WARNINGS_PUSH</div><div class="ttdef"><b>Definition:</b> macros.h:69</div></div>
 <div class="ttc" id="anamespaceTESSERACT__COMMON__IGNORE__WARNINGS__POP_html"><div class="ttname"><a href="../../df/d21/namespaceTESSERACT__COMMON__IGNORE__WARNINGS__POP.html">TESSERACT_COMMON_IGNORE_WARNINGS_POP</a></div><div class="ttdef"><b>Definition:</b> create_convex_hull.cpp:36</div></div>
 <div class="ttc" id="anamespaceboost_html"><div class="ttname"><a href="../../d4/da9/namespaceboost.html">boost</a></div><div class="ttdef"><b>Definition:</b> any.h:147</div></div>
-<div class="ttc" id="anamespacetesseract__common_html"><div class="ttname"><a href="../../df/da9/namespacetesseract__common.html">tesseract_common</a></div><div class="ttdef"><b>Definition:</b> any.h:57</div></div>
+<div class="ttc" id="anamespacetesseract__common_html"><div class="ttname"><a href="../../df/da9/namespacetesseract__common.html">tesseract_common</a></div><div class="ttdef"><b>Definition:</b> allowed_collision_matrix.h:22</div></div>
 <div class="ttc" id="astructtesseract__common_1_1detail__any_1_1AnyInnerBase_html"><div class="ttname"><a href="../../d3/d6e/structtesseract__common_1_1detail__any_1_1AnyInnerBase.html">tesseract_common::detail_any::AnyInnerBase</a></div><div class="ttdef"><b>Definition:</b> any.h:62</div></div>
 <div class="ttc" id="astructtesseract__common_1_1detail__any_1_1AnyInnerBase_html_a2f7a2c56bf2991e275c49990912c3b09"><div class="ttname"><a href="../../d3/d6e/structtesseract__common_1_1detail__any_1_1AnyInnerBase.html#a2f7a2c56bf2991e275c49990912c3b09">tesseract_common::detail_any::AnyInnerBase::AnyInnerBase</a></div><div class="ttdeci">AnyInnerBase(AnyInnerBase &amp;&amp;)=delete</div></div>
 <div class="ttc" id="astructtesseract__common_1_1detail__any_1_1AnyInnerBase_html_a66b7bd115dfcdfd889b5438693c4fa39"><div class="ttname"><a href="../../d3/d6e/structtesseract__common_1_1detail__any_1_1AnyInnerBase.html#a66b7bd115dfcdfd889b5438693c4fa39">tesseract_common::detail_any::AnyInnerBase::operator!=</a></div><div class="ttdeci">virtual bool operator!=(const AnyInnerBase &amp;rhs) const =0</div></div>
@@ -367,7 +367,7 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Oct 29 2021 04:27:12 for Tesseract by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Wed Dec 15 2021 17:36:03 for Tesseract by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

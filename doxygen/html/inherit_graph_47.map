@@ -1,3 +1,4 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$d3/d3e/classtesseract__collision_1_1tesseract__collision__fcl_1_1CollisionObjectWrapper.html" title="This is a Tesseract link collision object wrapper which add items specific to tesseract...." alt="" coords="5,5,189,61"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,13,184,54"/>
+<area shape="rect" id="node2" href="$df/d3b/classtesseract__collision_1_1tesseract__collision__bullet_1_1TesseractGjkPairDetector.html" title="This is a modifed Convex to Convex collision algorithm." alt="" coords="232,5,448,61"/>
 </map>

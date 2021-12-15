@@ -180,11 +180,17 @@ Functions</h2></td></tr>
 <tr class="memdesc:a7fe3fcca505faa7a06d9159be7d1217b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the active Link Names Recursively.  <a href="../../d2/d5f/namespacetesseract__environment.html#a7fe3fcca505faa7a06d9159be7d1217b">More...</a><br /></td></tr>
 <tr class="separator:a7fe3fcca505faa7a06d9159be7d1217b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a31b20059b09f499341a343c1829a7040"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d5f/namespacetesseract__environment.html#a31b20059b09f499341a343c1829a7040">checkTrajectorySegment</a> (<a class="el" href="../../db/dad/vhacdRaycastMesh_8cpp.html#adcf134d50025cc52907d0c8ac798d89d">std::vector</a>&lt; <a class="el" href="../../d4/d79/namespacetesseract__collision.html#a1eeace4cc41027dbde8e7dbeb77ca7cf">tesseract_collision::ContactResultMap</a> &gt; &amp;contacts, <a class="el" href="../../de/d3a/classtesseract__collision_1_1ContinuousContactManager.html">tesseract_collision::ContinuousContactManager</a> &amp;manager, const <a class="el" href="../../df/da9/namespacetesseract__common.html#a67bde3cb7bb235f0f61c370ef8bc74d8">tesseract_common::TransformMap</a> &amp;state0, const <a class="el" href="../../df/da9/namespacetesseract__common.html#a67bde3cb7bb235f0f61c370ef8bc74d8">tesseract_common::TransformMap</a> &amp;state1, const <a class="el" href="../../d9/d2c/structtesseract__collision_1_1CollisionCheckConfig.html">tesseract_collision::CollisionCheckConfig</a> &amp;config)</td></tr>
-<tr class="memdesc:a31b20059b09f499341a343c1829a7040"><td class="mdescLeft">&#160;</td><td class="mdescRight">Should perform a continuous collision check between two states.  <a href="../../d2/d5f/namespacetesseract__environment.html#a31b20059b09f499341a343c1829a7040">More...</a><br /></td></tr>
+<tr class="memdesc:a31b20059b09f499341a343c1829a7040"><td class="mdescLeft">&#160;</td><td class="mdescRight">Should perform a continuous collision check between two states configuring the manager with the config.  <a href="../../d2/d5f/namespacetesseract__environment.html#a31b20059b09f499341a343c1829a7040">More...</a><br /></td></tr>
 <tr class="separator:a31b20059b09f499341a343c1829a7040"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac122b339f8a5bd499253f0275f4fffcb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d5f/namespacetesseract__environment.html#ac122b339f8a5bd499253f0275f4fffcb">checkTrajectorySegment</a> (<a class="el" href="../../db/dad/vhacdRaycastMesh_8cpp.html#adcf134d50025cc52907d0c8ac798d89d">std::vector</a>&lt; <a class="el" href="../../d4/d79/namespacetesseract__collision.html#a1eeace4cc41027dbde8e7dbeb77ca7cf">tesseract_collision::ContactResultMap</a> &gt; &amp;contacts, <a class="el" href="../../de/d3a/classtesseract__collision_1_1ContinuousContactManager.html">tesseract_collision::ContinuousContactManager</a> &amp;manager, const <a class="el" href="../../df/da9/namespacetesseract__common.html#a67bde3cb7bb235f0f61c370ef8bc74d8">tesseract_common::TransformMap</a> &amp;state0, const <a class="el" href="../../df/da9/namespacetesseract__common.html#a67bde3cb7bb235f0f61c370ef8bc74d8">tesseract_common::TransformMap</a> &amp;state1, const <a class="el" href="../../da/df6/structtesseract__collision_1_1ContactRequest.html">tesseract_collision::ContactRequest</a> &amp;contact_request)</td></tr>
+<tr class="memdesc:ac122b339f8a5bd499253f0275f4fffcb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Should perform a continuous collision check between two states only passing along the contact_request to the manager.  <a href="../../d2/d5f/namespacetesseract__environment.html#ac122b339f8a5bd499253f0275f4fffcb">More...</a><br /></td></tr>
+<tr class="separator:ac122b339f8a5bd499253f0275f4fffcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab1d48046e6696c7e7bac893a8eb703f2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d5f/namespacetesseract__environment.html#ab1d48046e6696c7e7bac893a8eb703f2">checkTrajectoryState</a> (<a class="el" href="../../db/dad/vhacdRaycastMesh_8cpp.html#adcf134d50025cc52907d0c8ac798d89d">std::vector</a>&lt; <a class="el" href="../../d4/d79/namespacetesseract__collision.html#a1eeace4cc41027dbde8e7dbeb77ca7cf">tesseract_collision::ContactResultMap</a> &gt; &amp;contacts, <a class="el" href="../../dd/dbc/classtesseract__collision_1_1DiscreteContactManager.html">tesseract_collision::DiscreteContactManager</a> &amp;manager, const <a class="el" href="../../df/da9/namespacetesseract__common.html#a67bde3cb7bb235f0f61c370ef8bc74d8">tesseract_common::TransformMap</a> &amp;state, const <a class="el" href="../../d9/d2c/structtesseract__collision_1_1CollisionCheckConfig.html">tesseract_collision::CollisionCheckConfig</a> &amp;config)</td></tr>
-<tr class="memdesc:ab1d48046e6696c7e7bac893a8eb703f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Should perform a discrete collision check a state.  <a href="../../d2/d5f/namespacetesseract__environment.html#ab1d48046e6696c7e7bac893a8eb703f2">More...</a><br /></td></tr>
+<tr class="memdesc:ab1d48046e6696c7e7bac893a8eb703f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Should perform a discrete collision check a state first configuring manager with config.  <a href="../../d2/d5f/namespacetesseract__environment.html#ab1d48046e6696c7e7bac893a8eb703f2">More...</a><br /></td></tr>
 <tr class="separator:ab1d48046e6696c7e7bac893a8eb703f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a084903985707ad50810db85d658986"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d5f/namespacetesseract__environment.html#a8a084903985707ad50810db85d658986">checkTrajectoryState</a> (<a class="el" href="../../db/dad/vhacdRaycastMesh_8cpp.html#adcf134d50025cc52907d0c8ac798d89d">std::vector</a>&lt; <a class="el" href="../../d4/d79/namespacetesseract__collision.html#a1eeace4cc41027dbde8e7dbeb77ca7cf">tesseract_collision::ContactResultMap</a> &gt; &amp;contacts, <a class="el" href="../../dd/dbc/classtesseract__collision_1_1DiscreteContactManager.html">tesseract_collision::DiscreteContactManager</a> &amp;manager, const <a class="el" href="../../df/da9/namespacetesseract__common.html#a67bde3cb7bb235f0f61c370ef8bc74d8">tesseract_common::TransformMap</a> &amp;state, const <a class="el" href="../../da/df6/structtesseract__collision_1_1ContactRequest.html">tesseract_collision::ContactRequest</a> &amp;contact_request)</td></tr>
+<tr class="memdesc:a8a084903985707ad50810db85d658986"><td class="mdescLeft">&#160;</td><td class="mdescRight">Should perform a discrete collision check a state only passing contact_request to the manager.  <a href="../../d2/d5f/namespacetesseract__environment.html#a8a084903985707ad50810db85d658986">More...</a><br /></td></tr>
+<tr class="separator:a8a084903985707ad50810db85d658986"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a004a381580225b270eafc72992b17af5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d5f/namespacetesseract__environment.html#a004a381580225b270eafc72992b17af5">checkTrajectory</a> (<a class="el" href="../../db/dad/vhacdRaycastMesh_8cpp.html#adcf134d50025cc52907d0c8ac798d89d">std::vector</a>&lt; <a class="el" href="../../d4/d79/namespacetesseract__collision.html#a1eeace4cc41027dbde8e7dbeb77ca7cf">tesseract_collision::ContactResultMap</a> &gt; &amp;contacts, <a class="el" href="../../de/d3a/classtesseract__collision_1_1ContinuousContactManager.html">tesseract_collision::ContinuousContactManager</a> &amp;manager, const <a class="el" href="../../d8/d95/classtesseract__scene__graph_1_1StateSolver.html">tesseract_scene_graph::StateSolver</a> &amp;state_solver, const <a class="el" href="../../db/dad/vhacdRaycastMesh_8cpp.html#adcf134d50025cc52907d0c8ac798d89d">std::vector</a>&lt; std::string &gt; &amp;joint_names, const <a class="el" href="../../df/da9/namespacetesseract__common.html#a431ff65777ee0bed71e7671390638244">tesseract_common::TrajArray</a> &amp;traj, const <a class="el" href="../../d9/d2c/structtesseract__collision_1_1CollisionCheckConfig.html">tesseract_collision::CollisionCheckConfig</a> &amp;config)</td></tr>
 <tr class="memdesc:a004a381580225b270eafc72992b17af5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Should perform a continuous collision check over the trajectory and stop on first collision.  <a href="../../d2/d5f/namespacetesseract__environment.html#a004a381580225b270eafc72992b17af5">More...</a><br /></td></tr>
 <tr class="separator:a004a381580225b270eafc72992b17af5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -571,7 +577,7 @@ Functions</h2></td></tr>
 </div>
 </div>
 <a id="a31b20059b09f499341a343c1829a7040"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a31b20059b09f499341a343c1829a7040">&#9670;&nbsp;</a></span>checkTrajectorySegment()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a31b20059b09f499341a343c1829a7040">&#9670;&nbsp;</a></span>checkTrajectorySegment() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -614,7 +620,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Should perform a continuous collision check between two states. </p>
+<p>Should perform a continuous collision check between two states configuring the manager with the config. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">contacts</td><td>A vector of vector of ContactMap where each index corresponds to a timestep </td></tr>
@@ -629,8 +635,67 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="ac122b339f8a5bd499253f0275f4fffcb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac122b339f8a5bd499253f0275f4fffcb">&#9670;&nbsp;</a></span>checkTrajectorySegment() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool tesseract_environment::checkTrajectorySegment </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../db/dad/vhacdRaycastMesh_8cpp.html#adcf134d50025cc52907d0c8ac798d89d">std::vector</a>&lt; <a class="el" href="../../d4/d79/namespacetesseract__collision.html#a1eeace4cc41027dbde8e7dbeb77ca7cf">tesseract_collision::ContactResultMap</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>contacts</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../de/d3a/classtesseract__collision_1_1ContinuousContactManager.html">tesseract_collision::ContinuousContactManager</a> &amp;&#160;</td>
+          <td class="paramname"><em>manager</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../df/da9/namespacetesseract__common.html#a67bde3cb7bb235f0f61c370ef8bc74d8">tesseract_common::TransformMap</a> &amp;&#160;</td>
+          <td class="paramname"><em>state0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../df/da9/namespacetesseract__common.html#a67bde3cb7bb235f0f61c370ef8bc74d8">tesseract_common::TransformMap</a> &amp;&#160;</td>
+          <td class="paramname"><em>state1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../da/df6/structtesseract__collision_1_1ContactRequest.html">tesseract_collision::ContactRequest</a> &amp;&#160;</td>
+          <td class="paramname"><em>contact_request</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Should perform a continuous collision check between two states only passing along the contact_request to the manager. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">contacts</td><td>A vector of vector of ContactMap where each index corresponds to a timestep </td></tr>
+    <tr><td class="paramname">manager</td><td>A continuous contact manager </td></tr>
+    <tr><td class="paramname">state0</td><td>First environment state </td></tr>
+    <tr><td class="paramname">state1</td><td>Second environment state </td></tr>
+    <tr><td class="paramname">contact_request</td><td>Contact request passed to the manager </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if collision was found, otherwise false. </dd></dl>
+
+</div>
+</div>
 <a id="ab1d48046e6696c7e7bac893a8eb703f2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab1d48046e6696c7e7bac893a8eb703f2">&#9670;&nbsp;</a></span>checkTrajectoryState()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1d48046e6696c7e7bac893a8eb703f2">&#9670;&nbsp;</a></span>checkTrajectoryState() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -667,7 +732,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Should perform a discrete collision check a state. </p>
+<p>Should perform a discrete collision check a state first configuring manager with config. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">contacts</td><td>A vector of vector of ContactMap where each index corresponds to a timestep </td></tr>
@@ -678,6 +743,69 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>True if collision was found, otherwise false. </dd></dl>
+
+</div>
+</div>
+<a id="a8a084903985707ad50810db85d658986"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a084903985707ad50810db85d658986">&#9670;&nbsp;</a></span>checkTrajectoryState() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool tesseract_environment::checkTrajectoryState </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../db/dad/vhacdRaycastMesh_8cpp.html#adcf134d50025cc52907d0c8ac798d89d">std::vector</a>&lt; <a class="el" href="../../d4/d79/namespacetesseract__collision.html#a1eeace4cc41027dbde8e7dbeb77ca7cf">tesseract_collision::ContactResultMap</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>contacts</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dd/dbc/classtesseract__collision_1_1DiscreteContactManager.html">tesseract_collision::DiscreteContactManager</a> &amp;&#160;</td>
+          <td class="paramname"><em>manager</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../df/da9/namespacetesseract__common.html#a67bde3cb7bb235f0f61c370ef8bc74d8">tesseract_common::TransformMap</a> &amp;&#160;</td>
+          <td class="paramname"><em>state</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../da/df6/structtesseract__collision_1_1ContactRequest.html">tesseract_collision::ContactRequest</a> &amp;&#160;</td>
+          <td class="paramname"><em>contact_request</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Should perform a discrete collision check a state only passing contact_request to the manager. </p>
+<p>Check a state in a trajectory for collisions. Return true if in collision.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">contacts</td><td>A vector of vector of ContactMap where each index corresponds to a timestep </td></tr>
+    <tr><td class="paramname">manager</td><td>A discrete contact manager </td></tr>
+    <tr><td class="paramname">state</td><td>First environment state </td></tr>
+    <tr><td class="paramname">contact_request</td><td>Contact request passed to the manager </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if collision was found, otherwise false.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">contacts</td><td>Collision results </td></tr>
+    <tr><td class="paramname">manager</td><td>Contact manager used for checking </td></tr>
+    <tr><td class="paramname">state</td><td>State to be checked </td></tr>
+    <tr><td class="paramname">contact_request</td><td>Contact request used for the collision check </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if the state is in collision. False if collision free </dd></dl>
 
 </div>
 </div>
@@ -737,7 +865,7 @@ Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Oct 29 2021 04:27:16 for Tesseract by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Wed Dec 15 2021 17:36:06 for Tesseract by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

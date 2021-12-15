@@ -15,6 +15,7 @@ Common Tesseract Utility Functions.
 {\ttfamily \#include $<$Eigen/\+Core$>$}\newline
 {\ttfamily \#include $<$iostream$>$}\newline
 {\ttfamily \#include $<$tinyxml2.\+h$>$}\newline
+{\ttfamily \#include $<$tesseract\+\_\+common/allowed\+\_\+collision\+\_\+matrix.\+h$>$}\newline
 {\ttfamily \#include $<$tesseract\+\_\+common/types.\+h$>$}\newline
 Include dependency graph for utils.\+h\+:
 \nopagebreak
@@ -95,7 +96,9 @@ bool \mbox{\hyperlink{namespacetesseract__common_ac9961ff2a5d322165a817241b7746f
 bool \mbox{\hyperlink{namespacetesseract__common_a12eb899ec3967699e946431730eed959}{tesseract\+\_\+common\+::almost\+Equal\+Relative\+And\+Abs}} (const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector\+Xd $>$ \&v1, const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector\+Xd $>$ \&v2, double max\+\_\+diff=1e-\/6, double max\+\_\+rel\+\_\+diff=std\+::numeric\+\_\+limits$<$ double $>$\+::epsilon())
 \begin{DoxyCompactList}\small\item\em Check if two Eigen Vector\+Xd are relatively and absolute equal. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename Float\+Type $>$ }\\bool \mbox{\hyperlink{namespacetesseract__common_a00bc131acfeba0eba8fe7ff7cd944860}{tesseract\+\_\+common\+::to\+Numeric}} (const std\+::string \&s, Float\+Type \&value)
-\begin{DoxyCompactList}\small\item\em Convert a string to a numeric value type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Convert a string to a numeric value type. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{vhacdRaycastMesh_8cpp_adcf134d50025cc52907d0c8ac798d89d}{std\+::vector}}$<$ std\+::string $>$ \mbox{\hyperlink{namespacetesseract__common_a06a25f37f1c374da0421ef480069ec91}{tesseract\+\_\+common\+::get\+Allowed\+Collisions}} (const \mbox{\hyperlink{vhacdRaycastMesh_8cpp_adcf134d50025cc52907d0c8ac798d89d}{std\+::vector}}$<$ std\+::string $>$ \&link\+\_\+names, const Allowed\+Collision\+Entries \&acm\+\_\+entries, bool remove\+\_\+duplicates=true)
+\begin{DoxyCompactList}\small\item\em Gets allowed collisions for a set of link names. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
@@ -116,7 +119,7 @@ January 18, 2018
 TODO 
 \end{DoxyVersion}
 \begin{DoxyRefDesc}{Bug}
-\item[\mbox{\hyperlink{bug__bug000054}{Bug}}]No known bugs\end{DoxyRefDesc}
+\item[\mbox{\hyperlink{bug__bug000058}{Bug}}]No known bugs\end{DoxyRefDesc}
 
 
 \begin{DoxyCopyright}{Copyright}

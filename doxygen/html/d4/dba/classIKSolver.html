@@ -67,12 +67,15 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="../../d6/dbb/classIKSolver-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">IKSolver Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="../../d4/d14/abb__irb2400__ikfast__solver_8hpp_source.html">abb_irb2400_ikfast_solver.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -80,6 +83,19 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ac0195e291bed491b4cb6a68db8199b55"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a139a62477d8d27e5a5dace907f0b38b0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dba/classIKSolver.html#a139a62477d8d27e5a5dace907f0b38b0">rotationfunction0</a> (<a class="el" href="../../d7/d2e/classikfast_1_1IkSolutionListBase.html">IkSolutionListBase</a>&lt; IkReal &gt; &amp;solutions)</td></tr>
 <tr class="separator:a139a62477d8d27e5a5dace907f0b38b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0195e291bed491b4cb6a68db8199b55"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dba/classIKSolver.html#ac0195e291bed491b4cb6a68db8199b55">ComputeIk</a> (const IkReal *eetrans, const IkReal *eerot, const IkReal *pfree, <a class="el" href="../../d7/d2e/classikfast_1_1IkSolutionListBase.html">IkSolutionListBase</a>&lt; IkReal &gt; &amp;solutions)</td></tr>
+<tr class="separator:ac0195e291bed491b4cb6a68db8199b55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a139a62477d8d27e5a5dace907f0b38b0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dba/classIKSolver.html#a139a62477d8d27e5a5dace907f0b38b0">rotationfunction0</a> (<a class="el" href="../../d7/d2e/classikfast_1_1IkSolutionListBase.html">IkSolutionListBase</a>&lt; IkReal &gt; &amp;solutions)</td></tr>
+<tr class="separator:a139a62477d8d27e5a5dace907f0b38b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a46a898ea503f9399df84df127f7f84eb"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dba/classIKSolver.html#a46a898ea503f9399df84df127f7f84eb">polyroots3</a> (IkReal rawcoeffs[3+1], IkReal rawroots[3], int &amp;numroots)</td></tr>
+<tr class="separator:a46a898ea503f9399df84df127f7f84eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16a33b8d7de25af06070fb7c55e80bb1"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dba/classIKSolver.html#a16a33b8d7de25af06070fb7c55e80bb1">polyroots2</a> (IkReal rawcoeffs[2+1], IkReal rawroots[2], int &amp;numroots)</td></tr>
+<tr class="separator:a16a33b8d7de25af06070fb7c55e80bb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a771ebe9dbd8593520e8aab200e3c141a"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dba/classIKSolver.html#a771ebe9dbd8593520e8aab200e3c141a">polyroots4</a> (IkReal rawcoeffs[4+1], IkReal rawroots[4], int &amp;numroots)</td></tr>
+<tr class="separator:a771ebe9dbd8593520e8aab200e3c141a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -205,34 +221,68 @@ Public Attributes</h2></td></tr>
 <tr class="separator:ac5ba601bbc95efd9881f70ebf871c5c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2940190f4bac7e2fcd3d95503beb1a29"><td class="memItemLeft" align="right" valign="top">IkReal&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dba/classIKSolver.html#a2940190f4bac7e2fcd3d95503beb1a29">pp</a></td></tr>
 <tr class="separator:a2940190f4bac7e2fcd3d95503beb1a29"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae0fdf96e14e42d408bc5e16580c81100"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dba/classIKSolver.html#ae0fdf96e14e42d408bc5e16580c81100">_ij0</a> [2]</td></tr>
-<tr class="separator:ae0fdf96e14e42d408bc5e16580c81100"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85349865928c61a3fa283510ff0387f2"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dba/classIKSolver.html#a85349865928c61a3fa283510ff0387f2">_ij0</a> [2]</td></tr>
+<tr class="separator:a85349865928c61a3fa283510ff0387f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac2fb0a00657f58a0bc49485454ddd914"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dba/classIKSolver.html#ac2fb0a00657f58a0bc49485454ddd914">_nj0</a></td></tr>
 <tr class="separator:ac2fb0a00657f58a0bc49485454ddd914"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a66a0610cba0da00e09deda3c72e3909f"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dba/classIKSolver.html#a66a0610cba0da00e09deda3c72e3909f">_ij1</a> [2]</td></tr>
-<tr class="separator:a66a0610cba0da00e09deda3c72e3909f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1e2af4ba963e6eb35d84b542a6b8118"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dba/classIKSolver.html#aa1e2af4ba963e6eb35d84b542a6b8118">_ij1</a> [2]</td></tr>
+<tr class="separator:aa1e2af4ba963e6eb35d84b542a6b8118"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a38f5fb04f76ea095f6835eb767de1bbb"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dba/classIKSolver.html#a38f5fb04f76ea095f6835eb767de1bbb">_nj1</a></td></tr>
 <tr class="separator:a38f5fb04f76ea095f6835eb767de1bbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aff0b7815729d44c5decbef316763d45f"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dba/classIKSolver.html#aff0b7815729d44c5decbef316763d45f">_ij2</a> [2]</td></tr>
-<tr class="separator:aff0b7815729d44c5decbef316763d45f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a253496f1fb90123704cfea43ea758803"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dba/classIKSolver.html#a253496f1fb90123704cfea43ea758803">_ij2</a> [2]</td></tr>
+<tr class="separator:a253496f1fb90123704cfea43ea758803"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aac13220157c526f065b9f655b4a5cb7f"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dba/classIKSolver.html#aac13220157c526f065b9f655b4a5cb7f">_nj2</a></td></tr>
 <tr class="separator:aac13220157c526f065b9f655b4a5cb7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4e65e7d6f429bdc4ad9146bda1b48712"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dba/classIKSolver.html#a4e65e7d6f429bdc4ad9146bda1b48712">_ij3</a> [2]</td></tr>
-<tr class="separator:a4e65e7d6f429bdc4ad9146bda1b48712"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea84edaaa9d97b6a2a69d1d1ccd9e820"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dba/classIKSolver.html#aea84edaaa9d97b6a2a69d1d1ccd9e820">_ij3</a> [2]</td></tr>
+<tr class="separator:aea84edaaa9d97b6a2a69d1d1ccd9e820"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a19d64b2e1f7c33b7492420d74ff280a0"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dba/classIKSolver.html#a19d64b2e1f7c33b7492420d74ff280a0">_nj3</a></td></tr>
 <tr class="separator:a19d64b2e1f7c33b7492420d74ff280a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0b552c60bc1dd705f67a32cb3f03b738"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dba/classIKSolver.html#a0b552c60bc1dd705f67a32cb3f03b738">_ij4</a> [2]</td></tr>
-<tr class="separator:a0b552c60bc1dd705f67a32cb3f03b738"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a618a6ae375c04a4643585161b20215ee"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dba/classIKSolver.html#a618a6ae375c04a4643585161b20215ee">_ij4</a> [2]</td></tr>
+<tr class="separator:a618a6ae375c04a4643585161b20215ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af4a3d8d26ff3a7cbf3ebbe8c8258f12c"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dba/classIKSolver.html#af4a3d8d26ff3a7cbf3ebbe8c8258f12c">_nj4</a></td></tr>
 <tr class="separator:af4a3d8d26ff3a7cbf3ebbe8c8258f12c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a19d1dfd6307ab991ba52a2508ca88ab9"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dba/classIKSolver.html#a19d1dfd6307ab991ba52a2508ca88ab9">_ij5</a> [2]</td></tr>
-<tr class="separator:a19d1dfd6307ab991ba52a2508ca88ab9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7b253543912175f4fde770cda2b920a"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dba/classIKSolver.html#ac7b253543912175f4fde770cda2b920a">_ij5</a> [2]</td></tr>
+<tr class="separator:ac7b253543912175f4fde770cda2b920a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaa811fe7438ac359598271dc80f55ea7"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dba/classIKSolver.html#aaa811fe7438ac359598271dc80f55ea7">_nj5</a></td></tr>
 <tr class="separator:aaa811fe7438ac359598271dc80f55ea7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e5b52eca8716ef85d3e857c5c6a0664"><td class="memItemLeft" align="right" valign="top">IkReal&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dba/classIKSolver.html#a7e5b52eca8716ef85d3e857c5c6a0664">j0mul</a></td></tr>
+<tr class="separator:a7e5b52eca8716ef85d3e857c5c6a0664"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e666ee88199689ecabf3d3457d86bc2"><td class="memItemLeft" align="right" valign="top">IkReal&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dba/classIKSolver.html#a8e666ee88199689ecabf3d3457d86bc2">j1mul</a></td></tr>
+<tr class="separator:a8e666ee88199689ecabf3d3457d86bc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a293ea10271033383fd77c557befd11b4"><td class="memItemLeft" align="right" valign="top">IkReal&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dba/classIKSolver.html#a293ea10271033383fd77c557befd11b4">j2mul</a></td></tr>
+<tr class="separator:a293ea10271033383fd77c557befd11b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a827e1cab13ea3962046446651efec165"><td class="memItemLeft" align="right" valign="top">IkReal&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dba/classIKSolver.html#a827e1cab13ea3962046446651efec165">j3mul</a></td></tr>
+<tr class="separator:a827e1cab13ea3962046446651efec165"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4933a202f17f03ec1667024dd4351dba"><td class="memItemLeft" align="right" valign="top">IkReal&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dba/classIKSolver.html#a4933a202f17f03ec1667024dd4351dba">j5mul</a></td></tr>
+<tr class="separator:a4933a202f17f03ec1667024dd4351dba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a140fdfaddaf1a9185d96147031ca6393"><td class="memItemLeft" align="right" valign="top">IkReal&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dba/classIKSolver.html#a140fdfaddaf1a9185d96147031ca6393">j6</a></td></tr>
+<tr class="separator:a140fdfaddaf1a9185d96147031ca6393"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab17bcd7fa262758ecf4afcecb7371294"><td class="memItemLeft" align="right" valign="top">IkReal&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dba/classIKSolver.html#ab17bcd7fa262758ecf4afcecb7371294">cj6</a></td></tr>
+<tr class="separator:ab17bcd7fa262758ecf4afcecb7371294"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3eb0c06b18b234fcb505883ac302d7ec"><td class="memItemLeft" align="right" valign="top">IkReal&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dba/classIKSolver.html#a3eb0c06b18b234fcb505883ac302d7ec">sj6</a></td></tr>
+<tr class="separator:a3eb0c06b18b234fcb505883ac302d7ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd55310d288ef23d3fe6aacdf2203411"><td class="memItemLeft" align="right" valign="top">IkReal&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dba/classIKSolver.html#acd55310d288ef23d3fe6aacdf2203411">htj6</a></td></tr>
+<tr class="separator:acd55310d288ef23d3fe6aacdf2203411"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb7966ac4a46333ce8f0ba34ec074ab1"><td class="memItemLeft" align="right" valign="top">IkReal&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dba/classIKSolver.html#afb7966ac4a46333ce8f0ba34ec074ab1">j6mul</a></td></tr>
+<tr class="separator:afb7966ac4a46333ce8f0ba34ec074ab1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6ffb16a73435094bdd3d4f88b8853e5"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dba/classIKSolver.html#af6ffb16a73435094bdd3d4f88b8853e5">_ij6</a> [2]</td></tr>
+<tr class="separator:af6ffb16a73435094bdd3d4f88b8853e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae495a59ca0a0db22c916ca21fca93e49"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dba/classIKSolver.html#ae495a59ca0a0db22c916ca21fca93e49">_nj6</a></td></tr>
+<tr class="separator:ae495a59ca0a0db22c916ca21fca93e49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a793dbaa888ed31ea892028f3da3b6251"><td class="memItemLeft" align="right" valign="top">IkReal&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dba/classIKSolver.html#a793dbaa888ed31ea892028f3da3b6251">j100</a></td></tr>
+<tr class="separator:a793dbaa888ed31ea892028f3da3b6251"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff9b55d101572e59a2b2ff7255401883"><td class="memItemLeft" align="right" valign="top">IkReal&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dba/classIKSolver.html#aff9b55d101572e59a2b2ff7255401883">cj100</a></td></tr>
+<tr class="separator:aff9b55d101572e59a2b2ff7255401883"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a481a9e5ad8adad9c244a5a1a8bca8124"><td class="memItemLeft" align="right" valign="top">IkReal&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dba/classIKSolver.html#a481a9e5ad8adad9c244a5a1a8bca8124">sj100</a></td></tr>
+<tr class="separator:a481a9e5ad8adad9c244a5a1a8bca8124"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a532f95a61a95105a0d54bc0d480f8a1c"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dba/classIKSolver.html#a532f95a61a95105a0d54bc0d480f8a1c">_ij100</a> [2]</td></tr>
+<tr class="separator:a532f95a61a95105a0d54bc0d480f8a1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2e2e25e523459bc8c56bd08d020998c"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dba/classIKSolver.html#ae2e2e25e523459bc8c56bd08d020998c">_nj100</a></td></tr>
+<tr class="separator:ae2e2e25e523459bc8c56bd08d020998c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="ac0195e291bed491b4cb6a68db8199b55"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac0195e291bed491b4cb6a68db8199b55">&#9670;&nbsp;</a></span>ComputeIk()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0195e291bed491b4cb6a68db8199b55">&#9670;&nbsp;</a></span>ComputeIk() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -279,8 +329,208 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="ac0195e291bed491b4cb6a68db8199b55"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0195e291bed491b4cb6a68db8199b55">&#9670;&nbsp;</a></span>ComputeIk() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool IKSolver::ComputeIk </td>
+          <td>(</td>
+          <td class="paramtype">const IkReal *&#160;</td>
+          <td class="paramname"><em>eetrans</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const IkReal *&#160;</td>
+          <td class="paramname"><em>eerot</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const IkReal *&#160;</td>
+          <td class="paramname"><em>pfree</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d7/d2e/classikfast_1_1IkSolutionListBase.html">IkSolutionListBase</a>&lt; IkReal &gt; &amp;&#160;</td>
+          <td class="paramname"><em>solutions</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a16a33b8d7de25af06070fb7c55e80bb1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16a33b8d7de25af06070fb7c55e80bb1">&#9670;&nbsp;</a></span>polyroots2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void IKSolver::polyroots2 </td>
+          <td>(</td>
+          <td class="paramtype">IkReal&#160;</td>
+          <td class="paramname"><em>rawcoeffs</em>[2+1], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">IkReal&#160;</td>
+          <td class="paramname"><em>rawroots</em>[2], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int &amp;&#160;</td>
+          <td class="paramname"><em>numroots</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a46a898ea503f9399df84df127f7f84eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46a898ea503f9399df84df127f7f84eb">&#9670;&nbsp;</a></span>polyroots3()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void IKSolver::polyroots3 </td>
+          <td>(</td>
+          <td class="paramtype">IkReal&#160;</td>
+          <td class="paramname"><em>rawcoeffs</em>[3+1], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">IkReal&#160;</td>
+          <td class="paramname"><em>rawroots</em>[3], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int &amp;&#160;</td>
+          <td class="paramname"><em>numroots</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a771ebe9dbd8593520e8aab200e3c141a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a771ebe9dbd8593520e8aab200e3c141a">&#9670;&nbsp;</a></span>polyroots4()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void IKSolver::polyroots4 </td>
+          <td>(</td>
+          <td class="paramtype">IkReal&#160;</td>
+          <td class="paramname"><em>rawcoeffs</em>[4+1], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">IkReal&#160;</td>
+          <td class="paramname"><em>rawroots</em>[4], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int &amp;&#160;</td>
+          <td class="paramname"><em>numroots</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a139a62477d8d27e5a5dace907f0b38b0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a139a62477d8d27e5a5dace907f0b38b0">&#9670;&nbsp;</a></span>rotationfunction0()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a139a62477d8d27e5a5dace907f0b38b0">&#9670;&nbsp;</a></span>rotationfunction0() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void IKSolver::rotationfunction0 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d7/d2e/classikfast_1_1IkSolutionListBase.html">IkSolutionListBase</a>&lt; IkReal &gt; &amp;&#160;</td>
+          <td class="paramname"><em>solutions</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a139a62477d8d27e5a5dace907f0b38b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a139a62477d8d27e5a5dace907f0b38b0">&#9670;&nbsp;</a></span>rotationfunction0() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -306,84 +556,112 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="ae0fdf96e14e42d408bc5e16580c81100"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae0fdf96e14e42d408bc5e16580c81100">&#9670;&nbsp;</a></span>_ij0</h2>
+<a id="a85349865928c61a3fa283510ff0387f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85349865928c61a3fa283510ff0387f2">&#9670;&nbsp;</a></span>_ij0</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned char IKSolver::_ij0[2]</td>
+          <td class="memname">unsigned char IKSolver::_ij0</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a66a0610cba0da00e09deda3c72e3909f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a66a0610cba0da00e09deda3c72e3909f">&#9670;&nbsp;</a></span>_ij1</h2>
+<a id="aa1e2af4ba963e6eb35d84b542a6b8118"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1e2af4ba963e6eb35d84b542a6b8118">&#9670;&nbsp;</a></span>_ij1</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned char IKSolver::_ij1[2]</td>
+          <td class="memname">unsigned char IKSolver::_ij1</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="aff0b7815729d44c5decbef316763d45f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aff0b7815729d44c5decbef316763d45f">&#9670;&nbsp;</a></span>_ij2</h2>
+<a id="a532f95a61a95105a0d54bc0d480f8a1c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a532f95a61a95105a0d54bc0d480f8a1c">&#9670;&nbsp;</a></span>_ij100</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned char IKSolver::_ij2[2]</td>
+          <td class="memname">unsigned char IKSolver::_ij100[2]</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a4e65e7d6f429bdc4ad9146bda1b48712"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4e65e7d6f429bdc4ad9146bda1b48712">&#9670;&nbsp;</a></span>_ij3</h2>
+<a id="a253496f1fb90123704cfea43ea758803"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a253496f1fb90123704cfea43ea758803">&#9670;&nbsp;</a></span>_ij2</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned char IKSolver::_ij3[2]</td>
+          <td class="memname">unsigned char IKSolver::_ij2</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a0b552c60bc1dd705f67a32cb3f03b738"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0b552c60bc1dd705f67a32cb3f03b738">&#9670;&nbsp;</a></span>_ij4</h2>
+<a id="aea84edaaa9d97b6a2a69d1d1ccd9e820"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea84edaaa9d97b6a2a69d1d1ccd9e820">&#9670;&nbsp;</a></span>_ij3</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned char IKSolver::_ij4[2]</td>
+          <td class="memname">unsigned char IKSolver::_ij3</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a19d1dfd6307ab991ba52a2508ca88ab9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a19d1dfd6307ab991ba52a2508ca88ab9">&#9670;&nbsp;</a></span>_ij5</h2>
+<a id="a618a6ae375c04a4643585161b20215ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a618a6ae375c04a4643585161b20215ee">&#9670;&nbsp;</a></span>_ij4</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned char IKSolver::_ij5[2]</td>
+          <td class="memname">unsigned char IKSolver::_ij4</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac7b253543912175f4fde770cda2b920a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7b253543912175f4fde770cda2b920a">&#9670;&nbsp;</a></span>_ij5</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned char IKSolver::_ij5</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af6ffb16a73435094bdd3d4f88b8853e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6ffb16a73435094bdd3d4f88b8853e5">&#9670;&nbsp;</a></span>_ij6</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned char IKSolver::_ij6[2]</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -412,6 +690,20 @@ Public Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">unsigned char IKSolver::_nj1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae2e2e25e523459bc8c56bd08d020998c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2e2e25e523459bc8c56bd08d020998c">&#9670;&nbsp;</a></span>_nj100</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned char IKSolver::_nj100</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -474,6 +766,20 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="ae495a59ca0a0db22c916ca21fca93e49"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae495a59ca0a0db22c916ca21fca93e49">&#9670;&nbsp;</a></span>_nj6</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned char IKSolver::_nj6</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="aa3c0bd74bcf87573ce608d8039408526"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa3c0bd74bcf87573ce608d8039408526">&#9670;&nbsp;</a></span>cj0</h2>
 
@@ -496,6 +802,20 @@ Public Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">IkReal IKSolver::cj1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aff9b55d101572e59a2b2ff7255401883"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff9b55d101572e59a2b2ff7255401883">&#9670;&nbsp;</a></span>cj100</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">IkReal IKSolver::cj100</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -552,6 +872,20 @@ Public Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">IkReal IKSolver::cj5</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab17bcd7fa262758ecf4afcecb7371294"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab17bcd7fa262758ecf4afcecb7371294">&#9670;&nbsp;</a></span>cj6</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">IkReal IKSolver::cj6</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -642,6 +976,20 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="acd55310d288ef23d3fe6aacdf2203411"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd55310d288ef23d3fe6aacdf2203411">&#9670;&nbsp;</a></span>htj6</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">IkReal IKSolver::htj6</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a57f10792b61e342bc910311172b36488"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a57f10792b61e342bc910311172b36488">&#9670;&nbsp;</a></span>j0</h2>
 
@@ -650,6 +998,20 @@ Public Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">IkReal IKSolver::j0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7e5b52eca8716ef85d3e857c5c6a0664"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e5b52eca8716ef85d3e857c5c6a0664">&#9670;&nbsp;</a></span>j0mul</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">IkReal IKSolver::j0mul</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -670,6 +1032,34 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a793dbaa888ed31ea892028f3da3b6251"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a793dbaa888ed31ea892028f3da3b6251">&#9670;&nbsp;</a></span>j100</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">IkReal IKSolver::j100</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8e666ee88199689ecabf3d3457d86bc2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e666ee88199689ecabf3d3457d86bc2">&#9670;&nbsp;</a></span>j1mul</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">IkReal IKSolver::j1mul</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a2059d93255027d204610a6818e5c45a6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2059d93255027d204610a6818e5c45a6">&#9670;&nbsp;</a></span>j2</h2>
 
@@ -684,6 +1074,20 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a293ea10271033383fd77c557befd11b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a293ea10271033383fd77c557befd11b4">&#9670;&nbsp;</a></span>j2mul</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">IkReal IKSolver::j2mul</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="adf5d1568dc258d51edc6430bf90ef09d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#adf5d1568dc258d51edc6430bf90ef09d">&#9670;&nbsp;</a></span>j3</h2>
 
@@ -692,6 +1096,20 @@ Public Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">IkReal IKSolver::j3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a827e1cab13ea3962046446651efec165"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a827e1cab13ea3962046446651efec165">&#9670;&nbsp;</a></span>j3mul</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">IkReal IKSolver::j3mul</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -720,6 +1138,48 @@ Public Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">IkReal IKSolver::j5</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4933a202f17f03ec1667024dd4351dba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4933a202f17f03ec1667024dd4351dba">&#9670;&nbsp;</a></span>j5mul</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">IkReal IKSolver::j5mul</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a140fdfaddaf1a9185d96147031ca6393"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a140fdfaddaf1a9185d96147031ca6393">&#9670;&nbsp;</a></span>j6</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">IkReal IKSolver::j6</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afb7966ac4a46333ce8f0ba34ec074ab1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb7966ac4a46333ce8f0ba34ec074ab1">&#9670;&nbsp;</a></span>j6mul</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">IkReal IKSolver::j6mul</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1272,6 +1732,20 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a481a9e5ad8adad9c244a5a1a8bca8124"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a481a9e5ad8adad9c244a5a1a8bca8124">&#9670;&nbsp;</a></span>sj100</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">IkReal IKSolver::sj100</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="adbd68395fd872d5e9a13f3a787c1b0d9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#adbd68395fd872d5e9a13f3a787c1b0d9">&#9670;&nbsp;</a></span>sj2</h2>
 
@@ -1328,13 +1802,28 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
-<li>tesseract_kinematics/test/<a class="el" href="../../df/d1b/abb__irb2400__ikfast__solver_8cpp.html">abb_irb2400_ikfast_solver.cpp</a></li>
+<a id="a3eb0c06b18b234fcb505883ac302d7ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3eb0c06b18b234fcb505883ac302d7ec">&#9670;&nbsp;</a></span>sj6</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">IkReal IKSolver::sj6</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
+<li>tesseract_kinematics/test/<a class="el" href="../../d4/d14/abb__irb2400__ikfast__solver_8hpp_source.html">abb_irb2400_ikfast_solver.hpp</a></li>
+<li>tesseract_kinematics/test/<a class="el" href="../../d9/def/iiwa7__ikfast__solver_8hpp_source.html">iiwa7_ikfast_solver.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Oct 29 2021 04:27:15 for Tesseract by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Wed Dec 15 2021 17:36:05 for Tesseract by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

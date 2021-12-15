@@ -89,32 +89,36 @@ $(function() {
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keyword">namespace </span><a class="code" href="../../d9/d42/namespacetesseract__scene__graph.html">tesseract_scene_graph</a></div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;{</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword">class </span>SceneGraph;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keyword">class </span>AllowedCollisionMatrix;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;}  <span class="comment">// namespace tesseract_scene_graph</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="keyword">namespace </span><a class="code" href="../../d9/d6a/namespacetesseract__srdf.html">tesseract_srdf</a></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;{</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<a class="code" href="../../d5/df3/classtesseract__scene__graph_1_1AllowedCollisionMatrix.html">tesseract_scene_graph::AllowedCollisionMatrix</a></div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<a class="code" href="../../d9/d6a/namespacetesseract__srdf.html#aca7d92c63074b8969ec5e500428ae776">parseDisabledCollisions</a>(<span class="keyword">const</span> <a class="code" href="../../d7/d5d/classtesseract__scene__graph_1_1SceneGraph.html">tesseract_scene_graph::SceneGraph</a>&amp; scene_graph,</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                        <span class="keyword">const</span> tinyxml2::XMLElement* srdf_xml,</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                        <span class="keyword">const</span> std::array&lt;int, 3&gt;&amp; version);</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;}  <span class="comment">// namespace tesseract_srdf</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;}</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keyword">namespace </span><a class="code" href="../../df/da9/namespacetesseract__common.html">tesseract_common</a></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;{</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="keyword">class </span><a class="code" href="../../d9/d42/namespacetesseract__scene__graph.html#ad233b8202f835cf71f8b0fdd0710fb73">AllowedCollisionMatrix</a>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;}  <span class="comment">// namespace tesseract_common</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="keyword">namespace </span><a class="code" href="../../d9/d6a/namespacetesseract__srdf.html">tesseract_srdf</a></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;{</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<a class="code" href="../../d7/d4e/classtesseract__common_1_1AllowedCollisionMatrix.html">tesseract_common::AllowedCollisionMatrix</a> <a class="code" href="../../d9/d6a/namespacetesseract__srdf.html#a008c165807f11a523fbe608a21874271">parseDisabledCollisions</a>(<span class="keyword">const</span> <a class="code" href="../../d7/d5d/classtesseract__scene__graph_1_1SceneGraph.html">tesseract_scene_graph::SceneGraph</a>&amp; scene_graph,</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                                                                 <span class="keyword">const</span> tinyxml2::XMLElement* srdf_xml,</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                                                                 <span class="keyword">const</span> std::array&lt;int, 3&gt;&amp; version);</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">// TESSERACT_SRDF_DISABLED_COLLISIONS_H</span></div>
-<div class="ttc" id="aclasstesseract__scene__graph_1_1AllowedCollisionMatrix_html"><div class="ttname"><a href="../../d5/df3/classtesseract__scene__graph_1_1AllowedCollisionMatrix.html">tesseract_scene_graph::AllowedCollisionMatrix</a></div><div class="ttdef"><b>Definition:</b> allowed_collision_matrix.h:27</div></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;}  <span class="comment">// namespace tesseract_srdf</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">// TESSERACT_SRDF_DISABLED_COLLISIONS_H</span></div>
+<div class="ttc" id="aclasstesseract__common_1_1AllowedCollisionMatrix_html"><div class="ttname"><a href="../../d7/d4e/classtesseract__common_1_1AllowedCollisionMatrix.html">tesseract_common::AllowedCollisionMatrix</a></div><div class="ttdef"><b>Definition:</b> allowed_collision_matrix.h:27</div></div>
 <div class="ttc" id="aclasstesseract__scene__graph_1_1SceneGraph_html"><div class="ttname"><a href="../../d7/d5d/classtesseract__scene__graph_1_1SceneGraph.html">tesseract_scene_graph::SceneGraph</a></div><div class="ttdef"><b>Definition:</b> graph.h:133</div></div>
 <div class="ttc" id="amacros_8h_html"><div class="ttname"><a href="../../de/d3c/macros_8h.html">macros.h</a></div><div class="ttdoc">Common Tesseract Macros.</div></div>
 <div class="ttc" id="amacros_8h_html_a8cc0e3c6a3382c5c0b19eb9e676fc2db"><div class="ttname"><a href="../../de/d3c/macros_8h.html#a8cc0e3c6a3382c5c0b19eb9e676fc2db">TESSERACT_COMMON_IGNORE_WARNINGS_PUSH</a></div><div class="ttdeci">#define TESSERACT_COMMON_IGNORE_WARNINGS_PUSH</div><div class="ttdef"><b>Definition:</b> macros.h:69</div></div>
 <div class="ttc" id="anamespaceTESSERACT__COMMON__IGNORE__WARNINGS__POP_html"><div class="ttname"><a href="../../df/d21/namespaceTESSERACT__COMMON__IGNORE__WARNINGS__POP.html">TESSERACT_COMMON_IGNORE_WARNINGS_POP</a></div><div class="ttdef"><b>Definition:</b> create_convex_hull.cpp:36</div></div>
-<div class="ttc" id="anamespacetesseract__scene__graph_html"><div class="ttname"><a href="../../d9/d42/namespacetesseract__scene__graph.html">tesseract_scene_graph</a></div><div class="ttdef"><b>Definition:</b> allowed_collision_matrix.h:22</div></div>
+<div class="ttc" id="anamespacetesseract__common_html"><div class="ttname"><a href="../../df/da9/namespacetesseract__common.html">tesseract_common</a></div><div class="ttdef"><b>Definition:</b> allowed_collision_matrix.h:22</div></div>
+<div class="ttc" id="anamespacetesseract__scene__graph_html"><div class="ttname"><a href="../../d9/d42/namespacetesseract__scene__graph.html">tesseract_scene_graph</a></div><div class="ttdef"><b>Definition:</b> allowed_collision_matrix.h:135</div></div>
+<div class="ttc" id="anamespacetesseract__scene__graph_html_ad233b8202f835cf71f8b0fdd0710fb73"><div class="ttname"><a href="../../d9/d42/namespacetesseract__scene__graph.html#ad233b8202f835cf71f8b0fdd0710fb73">tesseract_scene_graph::AllowedCollisionMatrix</a></div><div class="ttdeci">tesseract_common::AllowedCollisionMatrix AllowedCollisionMatrix</div><div class="ttdef"><b>Definition:</b> allowed_collision_matrix.h:137</div></div>
 <div class="ttc" id="anamespacetesseract__srdf_html"><div class="ttname"><a href="../../d9/d6a/namespacetesseract__srdf.html">tesseract_srdf</a></div><div class="ttdoc">Main namespace.</div><div class="ttdef"><b>Definition:</b> collision_margins.h:49</div></div>
-<div class="ttc" id="anamespacetesseract__srdf_html_aca7d92c63074b8969ec5e500428ae776"><div class="ttname"><a href="../../d9/d6a/namespacetesseract__srdf.html#aca7d92c63074b8969ec5e500428ae776">tesseract_srdf::parseDisabledCollisions</a></div><div class="ttdeci">tesseract_scene_graph::AllowedCollisionMatrix parseDisabledCollisions(const tesseract_scene_graph::SceneGraph &amp;scene_graph, const tinyxml2::XMLElement *srdf_xml, const std::array&lt; int, 3 &gt; &amp;version)</div><div class="ttdoc">Parse allowed collisions from srdf xml element.</div><div class="ttdef"><b>Definition:</b> disabled_collisions.cpp:41</div></div>
+<div class="ttc" id="anamespacetesseract__srdf_html_a008c165807f11a523fbe608a21874271"><div class="ttname"><a href="../../d9/d6a/namespacetesseract__srdf.html#a008c165807f11a523fbe608a21874271">tesseract_srdf::parseDisabledCollisions</a></div><div class="ttdeci">tesseract_common::AllowedCollisionMatrix parseDisabledCollisions(const tesseract_scene_graph::SceneGraph &amp;scene_graph, const tinyxml2::XMLElement *srdf_xml, const std::array&lt; int, 3 &gt; &amp;version)</div><div class="ttdoc">Parse allowed collisions from srdf xml element.</div><div class="ttdef"><b>Definition:</b> disabled_collisions.cpp:40</div></div>
 <div class="ttc" id="anamespacetinyxml2_html"><div class="ttname"><a href="../../da/dce/namespacetinyxml2.html">tinyxml2</a></div><div class="ttdef"><b>Definition:</b> collision_margins.h:36</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Oct 29 2021 04:27:13 for Tesseract by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Wed Dec 15 2021 17:36:04 for Tesseract by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

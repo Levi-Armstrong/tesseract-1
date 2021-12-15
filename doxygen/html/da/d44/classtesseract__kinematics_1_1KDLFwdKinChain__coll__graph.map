@@ -1,12 +1,13 @@
 <map id="tesseract_kinematics::KDLFwdKinChain" name="tesseract_kinematics::KDLFwdKinChain">
-<area shape="rect" id="node1" title="KDL kinematic chain implementation." alt="" coords="1000,129,1147,171"/>
+<area shape="rect" id="node1" title="KDL kinematic chain implementation." alt="" coords="1000,152,1147,193"/>
 <area shape="rect" id="node2" href="$da/d70/classtesseract__kinematics_1_1ForwardKinematics.html" title="Forward kinematics functions." alt="" coords="706,5,853,47"/>
-<area shape="rect" id="node3" title=" " alt="" coords="698,71,861,112"/>
-<area shape="rect" id="node4" title=" " alt="" coords="179,287,257,314"/>
-<area shape="rect" id="node6" href="$df/d78/structtesseract__kinematics_1_1KDLChainData.html" title="The KDLChainData struct." alt="" coords="706,213,853,255"/>
-<area shape="rect" id="node7" title=" " alt="" coords="379,383,521,424"/>
-<area shape="rect" id="node8" title=" " alt="" coords="370,254,530,281"/>
-<area shape="rect" id="node5" title=" " alt="" coords="5,280,129,321"/>
-<area shape="rect" id="node9" title=" " alt="" coords="363,188,537,229"/>
-<area shape="rect" id="node10" title=" " alt="" coords="676,279,883,320"/>
+<area shape="rect" id="node3" title=" " alt="" coords="739,71,820,98"/>
+<area shape="rect" id="node4" title=" " alt="" coords="698,123,861,164"/>
+<area shape="rect" id="node5" title=" " alt="" coords="179,339,257,366"/>
+<area shape="rect" id="node7" href="$df/d78/structtesseract__kinematics_1_1KDLChainData.html" title="The KDLChainData struct." alt="" coords="706,265,853,307"/>
+<area shape="rect" id="node8" title=" " alt="" coords="379,435,521,476"/>
+<area shape="rect" id="node9" title=" " alt="" coords="370,306,530,333"/>
+<area shape="rect" id="node6" title=" " alt="" coords="5,332,129,373"/>
+<area shape="rect" id="node10" title=" " alt="" coords="363,240,537,281"/>
+<area shape="rect" id="node11" title=" " alt="" coords="676,331,883,372"/>
 </map>

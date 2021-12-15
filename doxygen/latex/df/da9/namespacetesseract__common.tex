@@ -8,6 +8,8 @@
 \doxysubsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
+class \mbox{\hyperlink{classtesseract__common_1_1AllowedCollisionMatrix}{Allowed\+Collision\+Matrix}}
+\item 
 class \mbox{\hyperlink{classtesseract__common_1_1Any}{Any}}
 \item 
 struct \mbox{\hyperlink{structtesseract__common_1_1ClassLoader}{Class\+Loader}}
@@ -69,6 +71,8 @@ class \mbox{\hyperlink{classtesseract__common_1_1TestPluginMultiply}{Test\+Plugi
 \doxysubsection*{Typedefs}
 \begin{DoxyCompactItemize}
 \item 
+using \mbox{\hyperlink{namespacetesseract__common_a79d2a34647d0da5e574629878c142086}{Allowed\+Collision\+Entries}} = std\+::unordered\+\_\+map$<$ \mbox{\hyperlink{namespacetesseract__common_a5b28b7ae665b374a7ca166d496f648ce}{tesseract\+\_\+common\+::\+Link\+Names\+Pair}}, std\+::string, \mbox{\hyperlink{structtesseract__common_1_1PairHash}{tesseract\+\_\+common\+::\+Pair\+Hash}} $>$
+\item 
 using \mbox{\hyperlink{namespacetesseract__common_a84cc21cc4b384291adbbddaa81fe6447}{Pairs\+Collision\+Margin\+Data}} = std\+::unordered\+\_\+map$<$ \mbox{\hyperlink{namespacetesseract__common_a5b28b7ae665b374a7ca166d496f648ce}{tesseract\+\_\+common\+::\+Link\+Names\+Pair}}, double, \mbox{\hyperlink{structtesseract__common_1_1PairHash}{tesseract\+\_\+common\+::\+Pair\+Hash}} $>$
 \item 
 using \mbox{\hyperlink{namespacetesseract__common_a57fa3336d4e5f8655281342a9c94aece}{Joint\+Trajectory}} = \mbox{\hyperlink{vhacdRaycastMesh_8cpp_adcf134d50025cc52907d0c8ac798d89d}{std\+::vector}}$<$ \mbox{\hyperlink{structtesseract__common_1_1JointState}{Joint\+State}} $>$
@@ -105,10 +109,11 @@ using \mbox{\hyperlink{namespacetesseract__common_a43d1f6e0418164a6db0e1c4471503
 enum class \mbox{\hyperlink{namespacetesseract__common_af06d85d024a36d63b58a6031556af8a1}{Collision\+Margin\+Override\+Type}} \{ \newline
 \mbox{\hyperlink{namespacetesseract__common_af06d85d024a36d63b58a6031556af8a1ab50339a10e1de285ac99d4c3990b8693}{NONE}}
 , \mbox{\hyperlink{namespacetesseract__common_af06d85d024a36d63b58a6031556af8a1a560a2dd6f6744646473b3b19e1fe96d7}{REPLACE}}
+, \mbox{\hyperlink{namespacetesseract__common_af06d85d024a36d63b58a6031556af8a1ab9f20f7748e2e578e81ea9ae1a0dfb30}{MODIFY}}
 , \mbox{\hyperlink{namespacetesseract__common_af06d85d024a36d63b58a6031556af8a1a68f2f4f7ee420d8895a41ac3f35db3fe}{OVERRIDE\+\_\+\+DEFAULT\+\_\+\+MARGIN}}
-, \mbox{\hyperlink{namespacetesseract__common_af06d85d024a36d63b58a6031556af8a1ae54086ed48f7d2ca425bdeca2121c83c}{OVERRIDE\+\_\+\+PAIR\+\_\+\+MARGIN}}
 , \newline
-\mbox{\hyperlink{namespacetesseract__common_af06d85d024a36d63b58a6031556af8a1a8f7ea9e9137c5d7d8bc6ea025484f55a}{MODIFY\+\_\+\+PAIR\+\_\+\+MARGIN}}
+\mbox{\hyperlink{namespacetesseract__common_af06d85d024a36d63b58a6031556af8a1ae54086ed48f7d2ca425bdeca2121c83c}{OVERRIDE\+\_\+\+PAIR\+\_\+\+MARGIN}}
+, \mbox{\hyperlink{namespacetesseract__common_af06d85d024a36d63b58a6031556af8a1a8f7ea9e9137c5d7d8bc6ea025484f55a}{MODIFY\+\_\+\+PAIR\+\_\+\+MARGIN}}
  \}
 \begin{DoxyCompactList}\small\item\em Identifies how the provided contact margin data should be applied. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Functions}
@@ -190,6 +195,8 @@ bool \mbox{\hyperlink{namespacetesseract__common_a12eb899ec3967699e946431730eed9
 \begin{DoxyCompactList}\small\item\em Check if two Eigen Vector\+Xd are relatively and absolute equal. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename Float\+Type $>$ }\\bool \mbox{\hyperlink{namespacetesseract__common_a00bc131acfeba0eba8fe7ff7cd944860}{to\+Numeric}} (const std\+::string \&s, Float\+Type \&value)
 \begin{DoxyCompactList}\small\item\em Convert a string to a numeric value type. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{vhacdRaycastMesh_8cpp_adcf134d50025cc52907d0c8ac798d89d}{std\+::vector}}$<$ std\+::string $>$ \mbox{\hyperlink{namespacetesseract__common_a06a25f37f1c374da0421ef480069ec91}{get\+Allowed\+Collisions}} (const \mbox{\hyperlink{vhacdRaycastMesh_8cpp_adcf134d50025cc52907d0c8ac798d89d}{std\+::vector}}$<$ std\+::string $>$ \&link\+\_\+names, const \mbox{\hyperlink{namespacetesseract__common_a79d2a34647d0da5e574629878c142086}{Allowed\+Collision\+Entries}} \&acm\+\_\+entries, bool remove\+\_\+duplicates=true)
+\begin{DoxyCompactList}\small\item\em Gets allowed collisions for a set of link names. \end{DoxyCompactList}\item 
 template bool \mbox{\hyperlink{namespacetesseract__common_af5ca1a2af32cf2aa20666fabebb01ae3}{to\+Numeric$<$ double $>$}} (const std\+::string \&, double \&)
 \item 
 template bool \mbox{\hyperlink{namespacetesseract__common_aa70232725f5f768795d33beb4d783754}{to\+Numeric$<$ float $>$}} (const std\+::string \&, float \&)
@@ -238,6 +245,12 @@ using \mbox{\hyperlink{namespacetesseract__common_a000d15c3ab8d8ba4ebdaae64153b0
 
 
 Enable easy switching to std\+::filesystem when available. 
+
+\mbox{\Hypertarget{namespacetesseract__common_a79d2a34647d0da5e574629878c142086}\label{namespacetesseract__common_a79d2a34647d0da5e574629878c142086}} 
+\index{tesseract\_common@{tesseract\_common}!AllowedCollisionEntries@{AllowedCollisionEntries}}
+\index{AllowedCollisionEntries@{AllowedCollisionEntries}!tesseract\_common@{tesseract\_common}}
+\doxysubsubsection{\texorpdfstring{AllowedCollisionEntries}{AllowedCollisionEntries}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{namespacetesseract__common_a79d2a34647d0da5e574629878c142086}{tesseract\+\_\+common\+::\+Allowed\+Collision\+Entries}} = typedef std\+::unordered\+\_\+map$<$\mbox{\hyperlink{namespacetesseract__common_a5b28b7ae665b374a7ca166d496f648ce}{tesseract\+\_\+common\+::\+Link\+Names\+Pair}}, std\+::string, \mbox{\hyperlink{structtesseract__common_1_1PairHash}{tesseract\+\_\+common\+::\+Pair\+Hash}}$>$}
 
 \mbox{\Hypertarget{namespacetesseract__common_a57fa3336d4e5f8655281342a9c94aece}\label{namespacetesseract__common_a57fa3336d4e5f8655281342a9c94aece}} 
 \index{tesseract\_common@{tesseract\_common}!JointTrajectory@{JointTrajectory}}
@@ -339,6 +352,10 @@ NONE&Do not apply contact margin data. \\
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{REPLACE@{REPLACE}!tesseract\_common@{tesseract\_common}}\index{tesseract\_common@{tesseract\_common}!REPLACE@{REPLACE}}}\mbox{\Hypertarget{namespacetesseract__common_af06d85d024a36d63b58a6031556af8a1a560a2dd6f6744646473b3b19e1fe96d7}\label{namespacetesseract__common_af06d85d024a36d63b58a6031556af8a1a560a2dd6f6744646473b3b19e1fe96d7}} 
 REPLACE&Replace the contact manager\textquotesingle{}s \mbox{\hyperlink{classtesseract__common_1_1CollisionMarginData}{Collision\+Margin\+Data}}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MODIFY@{MODIFY}!tesseract\_common@{tesseract\_common}}\index{tesseract\_common@{tesseract\_common}!MODIFY@{MODIFY}}}\mbox{\Hypertarget{namespacetesseract__common_af06d85d024a36d63b58a6031556af8a1ab9f20f7748e2e578e81ea9ae1a0dfb30}\label{namespacetesseract__common_af06d85d024a36d63b58a6031556af8a1ab9f20f7748e2e578e81ea9ae1a0dfb30}} 
+MODIFY&Modify the contact managers default margin and pair margins. This will preserve existing pairs not being modified by the provided margin data. If a pair already exist it will be updated with the provided margin data. \\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{OVERRIDE\_DEFAULT\_MARGIN@{OVERRIDE\_DEFAULT\_MARGIN}!tesseract\_common@{tesseract\_common}}\index{tesseract\_common@{tesseract\_common}!OVERRIDE\_DEFAULT\_MARGIN@{OVERRIDE\_DEFAULT\_MARGIN}}}\mbox{\Hypertarget{namespacetesseract__common_af06d85d024a36d63b58a6031556af8a1a68f2f4f7ee420d8895a41ac3f35db3fe}\label{namespacetesseract__common_af06d85d024a36d63b58a6031556af8a1a68f2f4f7ee420d8895a41ac3f35db3fe}} 
@@ -522,6 +539,28 @@ Given a set of limits it will generate a vector of random numbers between the li
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 A vector of random numbers between the provided limits. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacetesseract__common_a06a25f37f1c374da0421ef480069ec91}\label{namespacetesseract__common_a06a25f37f1c374da0421ef480069ec91}} 
+\index{tesseract\_common@{tesseract\_common}!getAllowedCollisions@{getAllowedCollisions}}
+\index{getAllowedCollisions@{getAllowedCollisions}!tesseract\_common@{tesseract\_common}}
+\doxysubsubsection{\texorpdfstring{getAllowedCollisions()}{getAllowedCollisions()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{vhacdRaycastMesh_8cpp_adcf134d50025cc52907d0c8ac798d89d}{std\+::vector}}$<$std\+::string$>$ tesseract\+\_\+common\+::get\+Allowed\+Collisions (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{vhacdRaycastMesh_8cpp_adcf134d50025cc52907d0c8ac798d89d}{std\+::vector}}$<$ std\+::string $>$ \&}]{link\+\_\+names,  }\item[{const \mbox{\hyperlink{namespacetesseract__common_a79d2a34647d0da5e574629878c142086}{Allowed\+Collision\+Entries}} \&}]{acm\+\_\+entries,  }\item[{bool}]{remove\+\_\+duplicates = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+
+Gets allowed collisions for a set of link names. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em link\+\_\+names} & Vector of link names for which we want the allowed collisions \\
+\hline
+{\em acm\+\_\+entries} & Entries in the ACM. Get this with \mbox{\hyperlink{classtesseract__common_1_1AllowedCollisionMatrix_a674799ce3547c17ba109ab14c08afc6d}{Allowed\+Collision\+Matrix\+::get\+All\+Allowed\+Collisions()}} \\
+\hline
+{\em remove\+\_\+duplicates} & If true, duplicates will be removed. Default\+: true \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vector of links that are allowed to collide with links given 
 \end{DoxyReturn}
 \mbox{\Hypertarget{namespacetesseract__common_ab95e168b09d14e3cee3de2bcd38efb63}\label{namespacetesseract__common_ab95e168b09d14e3cee3de2bcd38efb63}} 
 \index{tesseract\_common@{tesseract\_common}!getAllSearchLibraries@{getAllSearchLibraries}}

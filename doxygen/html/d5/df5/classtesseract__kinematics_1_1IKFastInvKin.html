@@ -72,6 +72,7 @@ $(function() {
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="../../d8/dcd/classtesseract__kinematics_1_1IKFastInvKin-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -88,9 +89,10 @@ Inheritance diagram for tesseract_kinematics::IKFastInvKin:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../dc/de3/classtesseract__kinematics_1_1IKFastInvKin__inherit__graph.png" border="0" usemap="#atesseract__kinematics_1_1IKFastInvKin_inherit__map" alt="Inheritance graph"/></div>
 <map name="atesseract__kinematics_1_1IKFastInvKin_inherit__map" id="atesseract__kinematics_1_1IKFastInvKin_inherit__map">
-<area shape="rect" title="IKFast Inverse Kinematics Implmentation." alt="" coords="15,95,162,136"/>
+<area shape="rect" title="IKFast Inverse Kinematics Implmentation." alt="" coords="106,95,253,136"/>
 <area shape="rect" href="../../da/dbb/classtesseract__kinematics_1_1AbbIRB2400Kinematics.html" title=" " alt="" coords="5,184,172,225"/>
-<area shape="rect" href="../../de/d1c/classtesseract__kinematics_1_1InverseKinematics.html" title="Inverse kinematics functions." alt="" coords="15,5,162,47"/>
+<area shape="rect" href="../../da/d05/classtesseract__kinematics_1_1iiwa7Kinematics.html" title=" " alt="" coords="197,184,343,225"/>
+<area shape="rect" href="../../de/d1c/classtesseract__kinematics_1_1InverseKinematics.html" title="Inverse kinematics functions." alt="" coords="106,5,253,47"/>
 </map>
 <center><span class="legend">[<a href="../../graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
@@ -98,11 +100,14 @@ Collaboration diagram for tesseract_kinematics::IKFastInvKin:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d5/d58/classtesseract__kinematics_1_1IKFastInvKin__coll__graph.png" border="0" usemap="#atesseract__kinematics_1_1IKFastInvKin_coll__map" alt="Collaboration graph"/></div>
 <map name="atesseract__kinematics_1_1IKFastInvKin_coll__map" id="atesseract__kinematics_1_1IKFastInvKin_coll__map">
-<area shape="rect" title="IKFast Inverse Kinematics Implmentation." alt="" coords="127,292,273,333"/>
-<area shape="rect" href="../../de/d1c/classtesseract__kinematics_1_1InverseKinematics.html" title="Inverse kinematics functions." alt="" coords="5,187,152,228"/>
-<area shape="rect" title=" " alt="" coords="182,96,261,123"/>
-<area shape="rect" title=" " alt="" coords="329,194,489,221"/>
-<area shape="rect" title=" " alt="" coords="159,5,283,47"/>
+<area shape="rect" title="IKFast Inverse Kinematics Implmentation." alt="" coords="756,136,903,177"/>
+<area shape="rect" href="../../de/d1c/classtesseract__kinematics_1_1InverseKinematics.html" title="Inverse kinematics functions." alt="" coords="433,5,580,47"/>
+<area shape="rect" title=" " alt="" coords="430,71,583,112"/>
+<area shape="rect" title=" " alt="" coords="179,78,321,105"/>
+<area shape="rect" title=" " alt="" coords="444,136,569,177"/>
+<area shape="rect" title=" " alt="" coords="211,257,289,283"/>
+<area shape="rect" title=" " alt="" coords="427,294,587,321"/>
+<area shape="rect" title=" " alt="" coords="5,249,129,291"/>
 </map>
 <center><span class="legend">[<a href="../../graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -138,9 +143,9 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aa52184e36d0c886569309efacd47c98d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a36c70141163df3b372933c121894b1b0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/df5/classtesseract__kinematics_1_1IKFastInvKin.html">IKFastInvKin</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/df5/classtesseract__kinematics_1_1IKFastInvKin.html#a36c70141163df3b372933c121894b1b0">operator=</a> (<a class="el" href="../../d5/df5/classtesseract__kinematics_1_1IKFastInvKin.html">IKFastInvKin</a> &amp;&amp;)=default</td></tr>
 <tr class="separator:a36c70141163df3b372933c121894b1b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aad9a5013f39814f5a8332b5065d2c90c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/df5/classtesseract__kinematics_1_1IKFastInvKin.html#aad9a5013f39814f5a8332b5065d2c90c">IKFastInvKin</a> (std::string base_link_name, std::string tip_link_name, <a class="el" href="../../db/dad/vhacdRaycastMesh_8cpp.html#adcf134d50025cc52907d0c8ac798d89d">std::vector</a>&lt; std::string &gt; joint_names, std::string solver_name=<a class="el" href="../../d8/d4e/namespacetesseract__kinematics.html#ac29892c9bb7ec49301f7dd901ff8e356">IKFAST_INV_KIN_CHAIN_SOLVER_NAME</a>)</td></tr>
-<tr class="memdesc:aad9a5013f39814f5a8332b5065d2c90c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct IKFast Inverse Kinematics.  <a href="../../d5/df5/classtesseract__kinematics_1_1IKFastInvKin.html#aad9a5013f39814f5a8332b5065d2c90c">More...</a><br /></td></tr>
-<tr class="separator:aad9a5013f39814f5a8332b5065d2c90c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f2b34f40970d121d7b600ece66c6a17"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/df5/classtesseract__kinematics_1_1IKFastInvKin.html#a5f2b34f40970d121d7b600ece66c6a17">IKFastInvKin</a> (std::string base_link_name, std::string tip_link_name, <a class="el" href="../../db/dad/vhacdRaycastMesh_8cpp.html#adcf134d50025cc52907d0c8ac798d89d">std::vector</a>&lt; std::string &gt; joint_names, <a class="el" href="../../db/dad/vhacdRaycastMesh_8cpp.html#adcf134d50025cc52907d0c8ac798d89d">std::vector</a>&lt; Eigen::Index &gt; redundancy_capable_joints, std::string solver_name=<a class="el" href="../../d8/d4e/namespacetesseract__kinematics.html#ac29892c9bb7ec49301f7dd901ff8e356">IKFAST_INV_KIN_CHAIN_SOLVER_NAME</a>, <a class="el" href="../../db/dad/vhacdRaycastMesh_8cpp.html#adcf134d50025cc52907d0c8ac798d89d">std::vector</a>&lt; <a class="el" href="../../db/dad/vhacdRaycastMesh_8cpp.html#adcf134d50025cc52907d0c8ac798d89d">std::vector</a>&lt; double &gt;&gt; free_joint_states={})</td></tr>
+<tr class="memdesc:a5f2b34f40970d121d7b600ece66c6a17"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct IKFast Inverse Kinematics.  <a href="../../d5/df5/classtesseract__kinematics_1_1IKFastInvKin.html#a5f2b34f40970d121d7b600ece66c6a17">More...</a><br /></td></tr>
+<tr class="separator:a5f2b34f40970d121d7b600ece66c6a17"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8d4ceb3a73931703fa00ef9d1433780d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d8/d4e/namespacetesseract__kinematics.html#af12a01d2264e3371dc9bc7db2a7b59ac">IKSolutions</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/df5/classtesseract__kinematics_1_1IKFastInvKin.html#a8d4ceb3a73931703fa00ef9d1433780d">calcInvKin</a> (const <a class="el" href="../../df/da9/namespacetesseract__common.html#a67bde3cb7bb235f0f61c370ef8bc74d8">tesseract_common::TransformMap</a> &amp;tip_link_poses, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;seed) const override</td></tr>
 <tr class="memdesc:a8d4ceb3a73931703fa00ef9d1433780d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates joint solutions given a pose for each tip link.  <a href="../../d5/df5/classtesseract__kinematics_1_1IKFastInvKin.html#a8d4ceb3a73931703fa00ef9d1433780d">More...</a><br /></td></tr>
 <tr class="separator:a8d4ceb3a73931703fa00ef9d1433780d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -179,6 +184,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a1124c971853b6b69bf39d709cc65113d inherit pub_methods_classtesseract__kinematics_1_1InverseKinematics"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../de/d1c/classtesseract__kinematics_1_1InverseKinematics.html">InverseKinematics</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d1c/classtesseract__kinematics_1_1InverseKinematics.html#a1124c971853b6b69bf39d709cc65113d">operator=</a> (<a class="el" href="../../de/d1c/classtesseract__kinematics_1_1InverseKinematics.html">InverseKinematics</a> &amp;&amp;)=default</td></tr>
 <tr class="separator:a1124c971853b6b69bf39d709cc65113d inherit pub_methods_classtesseract__kinematics_1_1InverseKinematics"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a4104a0e5700dd73d1c360d2cb4edde90"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../db/dad/vhacdRaycastMesh_8cpp.html#adcf134d50025cc52907d0c8ac798d89d">std::vector</a>&lt; <a class="el" href="../../db/dad/vhacdRaycastMesh_8cpp.html#adcf134d50025cc52907d0c8ac798d89d">std::vector</a>&lt; double &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/df5/classtesseract__kinematics_1_1IKFastInvKin.html#a4104a0e5700dd73d1c360d2cb4edde90">generateAllFreeJointStateCombinations</a> (const <a class="el" href="../../db/dad/vhacdRaycastMesh_8cpp.html#adcf134d50025cc52907d0c8ac798d89d">std::vector</a>&lt; <a class="el" href="../../db/dad/vhacdRaycastMesh_8cpp.html#adcf134d50025cc52907d0c8ac798d89d">std::vector</a>&lt; double &gt;&gt; &amp;free_joint_samples)</td></tr>
+<tr class="memdesc:a4104a0e5700dd73d1c360d2cb4edde90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates all possible combinations of joint states and stores it to the free_joint_states_ class member Example: Given 2 free joints, wanting to sample the first joint at 0, 1, and 2 and the second joint at 3 and 4 the input would be [[0, 1, 2][3,4]] and it would generate [[0,3][0,4][1,3][1,4][2,3][2,4]].  <a href="../../d5/df5/classtesseract__kinematics_1_1IKFastInvKin.html#a4104a0e5700dd73d1c360d2cb4edde90">More...</a><br /></td></tr>
+<tr class="separator:a4104a0e5700dd73d1c360d2cb4edde90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:a769811812973842dd1d8b2ac59ad5b80"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/df5/classtesseract__kinematics_1_1IKFastInvKin.html#a769811812973842dd1d8b2ac59ad5b80">base_link_name_</a></td></tr>
@@ -190,19 +201,23 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:a2b4be6412d6a25f271914bcccc407bfd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/dad/vhacdRaycastMesh_8cpp.html#adcf134d50025cc52907d0c8ac798d89d">std::vector</a>&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/df5/classtesseract__kinematics_1_1IKFastInvKin.html#a2b4be6412d6a25f271914bcccc407bfd">joint_names_</a></td></tr>
 <tr class="memdesc:a2b4be6412d6a25f271914bcccc407bfd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Joint names for the kinematic object.  <a href="../../d5/df5/classtesseract__kinematics_1_1IKFastInvKin.html#a2b4be6412d6a25f271914bcccc407bfd">More...</a><br /></td></tr>
 <tr class="separator:a2b4be6412d6a25f271914bcccc407bfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1cf52903cc9c500e8d65755c00ce4122"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/dad/vhacdRaycastMesh_8cpp.html#adcf134d50025cc52907d0c8ac798d89d">std::vector</a>&lt; Eigen::Index &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/df5/classtesseract__kinematics_1_1IKFastInvKin.html#a1cf52903cc9c500e8d65755c00ce4122">redundancy_capable_joints_</a></td></tr>
+<tr class="separator:a1cf52903cc9c500e8d65755c00ce4122"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac122d5be325b8e4f4e6e064179ecbeb2"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/df5/classtesseract__kinematics_1_1IKFastInvKin.html#ac122d5be325b8e4f4e6e064179ecbeb2">solver_name_</a> { <a class="el" href="../../d8/d4e/namespacetesseract__kinematics.html#ac29892c9bb7ec49301f7dd901ff8e356">IKFAST_INV_KIN_CHAIN_SOLVER_NAME</a> }</td></tr>
-<tr class="memdesc:ac122d5be325b8e4f4e6e064179ecbeb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Name of this solver.  <a href="../../d5/df5/classtesseract__kinematics_1_1IKFastInvKin.html#ac122d5be325b8e4f4e6e064179ecbeb2">More...</a><br /></td></tr>
+<tr class="memdesc:ac122d5be325b8e4f4e6e064179ecbeb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Redundancy capable joints.  <a href="../../d5/df5/classtesseract__kinematics_1_1IKFastInvKin.html#ac122d5be325b8e4f4e6e064179ecbeb2">More...</a><br /></td></tr>
 <tr class="separator:ac122d5be325b8e4f4e6e064179ecbeb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a139663aac5dd1256626d7270cb0481a9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/dad/vhacdRaycastMesh_8cpp.html#adcf134d50025cc52907d0c8ac798d89d">std::vector</a>&lt; <a class="el" href="../../db/dad/vhacdRaycastMesh_8cpp.html#adcf134d50025cc52907d0c8ac798d89d">std::vector</a>&lt; double &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/df5/classtesseract__kinematics_1_1IKFastInvKin.html#a139663aac5dd1256626d7270cb0481a9">free_joint_states_</a></td></tr>
+<tr class="separator:a139663aac5dd1256626d7270cb0481a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>IKFast Inverse Kinematics Implmentation. </p>
-<p>This along with the <a class="el" href="../../db/d22/ikfast__inv__kin_8hpp.html" title="Tesseract IKFast Inverse kinematics Wrapper Implementation.">ikfast_inv_kin.hpp</a> is to be used with a generated ikfast to create a tesseract implementation. Once you have created your ikfast solver of your robot all you need is to create header similiar to what is shown below:</p>
+<p>This along with the <a class="el" href="../../db/d22/ikfast__inv__kin_8hpp.html" title="Tesseract IKFast Inverse kinematics Wrapper Implementation.">ikfast_inv_kin.hpp</a> is to be used with a generated ikfast to create a tesseract implementation. Once you have created your ikfast solver of your robot all you need is to create header similar to what is shown below:</p>
 <p>Header File: fanuc_p50ib_15_inv_kinematics.h</p>
-<p>#include &lt;Eigen/Geometry&gt; #include &lt;vector&gt; #include &lt;<a class="el" href="../../db/d7f/ikfast__inv__kin_8h.html" title="Tesseract IKFast Inverse kinematics Wrapper.">tesseract_kinematics/ikfast/ikfast_inv_kin.h</a>&gt; #include &lt;<a class="el" href="../../d6/d45/forward__kinematics_8h.html" title="Forward kinematics functions.">tesseract_kinematics/core/forward_kinematics.h</a>&gt;</p>
-<p>namespace fanuc_p50ib_15_ikfast_wrapper { class FanucP50iBInvKinematics : public <a class="el" href="../../d5/df5/classtesseract__kinematics_1_1IKFastInvKin.html" title="IKFast Inverse Kinematics Implmentation.">tesseract_kinematics::IKFastInvKin</a> { public: FanucP50iBInvKinematics(const std::string name, const std::string base_link_name, const std::string tip_link_name, const std::vector&lt;std::string&gt; joint_names) };</p>
+<p>#include &lt;Eigen/Geometry&gt; #include &lt;vector&gt; #include &lt;<a class="el" href="../../db/d7f/ikfast__inv__kin_8h.html" title="Tesseract IKFast Inverse kinematics Wrapper.">tesseract_kinematics/ikfast/ikfast_inv_kin.h</a>&gt;</p>
+<p>namespace fanuc_p50ib_15_ikfast_wrapper { class FanucP50iBInvKinematics : public <a class="el" href="../../d5/df5/classtesseract__kinematics_1_1IKFastInvKin.html" title="IKFast Inverse Kinematics Implmentation.">tesseract_kinematics::IKFastInvKin</a> { public: FanucP50iBInvKinematics(const std::string base_link_name, const std::string tip_link_name, const std::vector&lt;std::string&gt; joint_names, const std::string name) };</p>
 <p>Cpp File:</p>
 <p>#include &lt;<a class="el" href="../../db/d22/ikfast__inv__kin_8hpp.html" title="Tesseract IKFast Inverse kinematics Wrapper Implementation.">tesseract_kinematics/ikfast/impl/ikfast_inv_kin.hpp</a>&gt; #include &lt;fanuc_p50ib_15_ikfast_wrapper/impl/fanuc_p50ib_15_ikfast.hpp&gt; #include &lt;fanuc_p50ib_15_ikfast_wrapper/tesseract_fanuc_p50ib_kinematics.h&gt;</p>
-<p>namespace fanuc_p50ib_15_ikfast_wrapper { FanucP50iBInvKinematics::FanucP50iBInvKinematics(const std::string name, const std::string base_link_name, const std::string tip_link_name, const std::vector&lt;std::string&gt; joint_names) : FanucP50iBInvKinematics(name, base_link_name, tip_link_name, joint_names, joint_limits) {} } </p>
+<p>namespace fanuc_p50ib_15_ikfast_wrapper { FanucP50iBInvKinematics::FanucP50iBInvKinematics(const std::string base_link_name, const std::string tip_link_name, const std::vector&lt;std::string&gt; joint_names const std::string name) : FanucP50iBInvKinematics(base_link_name, tip_link_name, joint_names, name, joint_limits) {} } </p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="ad7440f9b1ec3442ecdc8dc7f66f2fda0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad7440f9b1ec3442ecdc8dc7f66f2fda0">&#9670;&nbsp;</a></span>ConstPtr</h2>
@@ -338,8 +353,8 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="aad9a5013f39814f5a8332b5065d2c90c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aad9a5013f39814f5a8332b5065d2c90c">&#9670;&nbsp;</a></span>IKFastInvKin() <span class="overload">[3/3]</span></h2>
+<a id="a5f2b34f40970d121d7b600ece66c6a17"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f2b34f40970d121d7b600ece66c6a17">&#9670;&nbsp;</a></span>IKFastInvKin() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -368,8 +383,20 @@ Protected Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype"><a class="el" href="../../db/dad/vhacdRaycastMesh_8cpp.html#adcf134d50025cc52907d0c8ac798d89d">std::vector</a>&lt; Eigen::Index &gt;&#160;</td>
+          <td class="paramname"><em>redundancy_capable_joints</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">std::string&#160;</td>
-          <td class="paramname"><em>solver_name</em> = <code><a class="el" href="../../d8/d4e/namespacetesseract__kinematics.html#ac29892c9bb7ec49301f7dd901ff8e356">IKFAST_INV_KIN_CHAIN_SOLVER_NAME</a></code>&#160;</td>
+          <td class="paramname"><em>solver_name</em> = <code><a class="el" href="../../d8/d4e/namespacetesseract__kinematics.html#ac29892c9bb7ec49301f7dd901ff8e356">IKFAST_INV_KIN_CHAIN_SOLVER_NAME</a></code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../db/dad/vhacdRaycastMesh_8cpp.html#adcf134d50025cc52907d0c8ac798d89d">std::vector</a>&lt; <a class="el" href="../../db/dad/vhacdRaycastMesh_8cpp.html#adcf134d50025cc52907d0c8ac798d89d">std::vector</a>&lt; double &gt;&gt;&#160;</td>
+          <td class="paramname"><em>free_joint_states</em> = <code>{}</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -473,6 +500,41 @@ Protected Attributes</h2></td></tr>
 <p>Clone the forward kinematics object. </p>
 
 <p>Implements <a class="el" href="../../de/d1c/classtesseract__kinematics_1_1InverseKinematics.html#a6b26c03efeb34f6e2969a36a93ab223d">tesseract_kinematics::InverseKinematics</a>.</p>
+
+</div>
+</div>
+<a id="a4104a0e5700dd73d1c360d2cb4edde90"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4104a0e5700dd73d1c360d2cb4edde90">&#9670;&nbsp;</a></span>generateAllFreeJointStateCombinations()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../db/dad/vhacdRaycastMesh_8cpp.html#adcf134d50025cc52907d0c8ac798d89d">std::vector</a>&lt; <a class="el" href="../../db/dad/vhacdRaycastMesh_8cpp.html#adcf134d50025cc52907d0c8ac798d89d">std::vector</a>&lt; double &gt; &gt; tesseract_kinematics::IKFastInvKin::generateAllFreeJointStateCombinations </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../db/dad/vhacdRaycastMesh_8cpp.html#adcf134d50025cc52907d0c8ac798d89d">std::vector</a>&lt; <a class="el" href="../../db/dad/vhacdRaycastMesh_8cpp.html#adcf134d50025cc52907d0c8ac798d89d">std::vector</a>&lt; double &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>free_joint_samples</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Generates all possible combinations of joint states and stores it to the free_joint_states_ class member Example: Given 2 free joints, wanting to sample the first joint at 0, 1, and 2 and the second joint at 3 and 4 the input would be [[0, 1, 2][3,4]] and it would generate [[0,3][0,4][1,3][1,4][2,3][2,4]]. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">free_joint_samples</td><td>A vector of vectors in which the lower level vectors each represent all of a single joint's possible positions to be sampled </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
 </div>
 </div>
@@ -731,6 +793,28 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a139663aac5dd1256626d7270cb0481a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a139663aac5dd1256626d7270cb0481a9">&#9670;&nbsp;</a></span>free_joint_states_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../db/dad/vhacdRaycastMesh_8cpp.html#adcf134d50025cc52907d0c8ac798d89d">std::vector</a>&lt;<a class="el" href="../../db/dad/vhacdRaycastMesh_8cpp.html#adcf134d50025cc52907d0c8ac798d89d">std::vector</a>&lt;double&gt; &gt; tesseract_kinematics::IKFastInvKin::free_joint_states_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a2b4be6412d6a25f271914bcccc407bfd"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2b4be6412d6a25f271914bcccc407bfd">&#9670;&nbsp;</a></span>joint_names_</h2>
 
@@ -755,6 +839,28 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a1cf52903cc9c500e8d65755c00ce4122"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1cf52903cc9c500e8d65755c00ce4122">&#9670;&nbsp;</a></span>redundancy_capable_joints_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../db/dad/vhacdRaycastMesh_8cpp.html#adcf134d50025cc52907d0c8ac798d89d">std::vector</a>&lt;Eigen::Index&gt; tesseract_kinematics::IKFastInvKin::redundancy_capable_joints_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="ac122d5be325b8e4f4e6e064179ecbeb2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac122d5be325b8e4f4e6e064179ecbeb2">&#9670;&nbsp;</a></span>solver_name_</h2>
 
@@ -775,7 +881,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Name of this solver. </p>
+<p>Redundancy capable joints. </p>
+<p>Name of this solver</p>
+<p>combinations of free joints to sample when computing IK Example: Given 3 free joints, a valid input would be [[0,0,0][0,0,1][-1,0,1][0,2,0]] </p>
 
 </div>
 </div>
@@ -810,7 +918,7 @@ Protected Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Oct 29 2021 04:27:16 for Tesseract by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Wed Dec 15 2021 17:36:07 for Tesseract by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

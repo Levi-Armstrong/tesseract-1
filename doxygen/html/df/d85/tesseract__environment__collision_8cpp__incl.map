@@ -1,52 +1,52 @@
 <map id="tesseract_environment/test/tesseract_environment_collision.cpp" name="tesseract_environment/test/tesseract_environment_collision.cpp">
-<area shape="rect" id="node1" title=" " alt="" coords="4671,5,4855,61"/>
-<area shape="rect" id="node2" href="$de/d3c/macros_8h.html" title="Common Tesseract Macros." alt="" coords="3181,525,3372,552"/>
-<area shape="rect" id="node3" title=" " alt="" coords="4398,117,4493,143"/>
-<area shape="rect" id="node4" title=" " alt="" coords="4518,117,4592,143"/>
-<area shape="rect" id="node5" title=" " alt="" coords="6231,525,6290,552"/>
-<area shape="rect" id="node6" href="$d8/dec/urdf__parser_8h.html" title="A urdf parser for tesseract." alt="" coords="4934,199,5064,240"/>
-<area shape="rect" id="node9" href="$d3/d95/resource__locator_8h.html" title="Locate and retrieve resource data." alt="" coords="4878,303,5064,344"/>
-<area shape="rect" id="node12" href="$df/d9e/tesseract__geometry_2include_2tesseract__geometry_2impl_2box_8h.html" title="Tesseract Box Geometry." alt="" coords="4718,303,4854,344"/>
-<area shape="rect" id="node14" href="$dc/d79/tesseract__common_2include_2tesseract__common_2utils_8h.html" title="Common Tesseract Utility Functions." alt="" coords="5718,310,5888,337"/>
-<area shape="rect" id="node23" href="$d5/d90/commands_8h.html" title="This contains classes for recording operations applied to the environment for tracking changes...." alt="" coords="2463,199,2618,240"/>
-<area shape="rect" id="node46" href="$de/d26/environment_8h.html" title=" " alt="" coords="5151,109,5306,151"/>
-<area shape="rect" id="node7" href="$d6/df3/graph_8h.html" title="A basic scene graph using boost." alt="" coords="5083,421,5240,463"/>
-<area shape="rect" id="node8" title=" " alt="" coords="5134,525,5189,552"/>
-<area shape="rect" id="node10" title=" " alt="" coords="4878,429,4957,455"/>
-<area shape="rect" id="node11" title=" " alt="" coords="2372,525,2440,552"/>
-<area shape="rect" id="node13" href="$d0/da6/tesseract__geometry_2include_2tesseract__geometry_2geometry_8h.html" title="Tesseract Geometries." alt="" coords="4667,421,4803,463"/>
-<area shape="rect" id="node15" title=" " alt="" coords="5568,429,5638,455"/>
-<area shape="rect" id="node16" title=" " alt="" coords="5764,429,5842,455"/>
-<area shape="rect" id="node17" title=" " alt="" coords="5866,429,5932,455"/>
-<area shape="rect" id="node18" title=" " alt="" coords="5956,429,6023,455"/>
-<area shape="rect" id="node19" title=" " alt="" coords="5523,525,5608,552"/>
-<area shape="rect" id="node20" title=" " alt="" coords="6047,429,6119,455"/>
-<area shape="rect" id="node21" title=" " alt="" coords="6144,429,6222,455"/>
-<area shape="rect" id="node22" href="$dd/ddb/tesseract__common_2include_2tesseract__common_2types_8h.html" title="Common Tesseract Types." alt="" coords="5315,429,5494,455"/>
-<area shape="rect" id="node24" href="$d4/d04/add__allowed__collision__command_8h.html" title="Used to add an allowed collision to the environment." alt="" coords="1262,414,1429,470"/>
-<area shape="rect" id="node25" href="$db/d41/add__contact__managers__plugin__info__command_8h.html" title="Used to add contact managers plugin info to the environment." alt="" coords="4396,288,4562,359"/>
-<area shape="rect" id="node26" href="$da/db7/add__link__command_8h.html" title="Used to add link and joint to environment." alt="" coords="2072,421,2288,463"/>
-<area shape="rect" id="node27" href="$d6/d07/add__kinematics__information__command_8h.html" title="Used to kinematics information to the environment." alt="" coords="2313,414,2498,470"/>
-<area shape="rect" id="node28" href="$df/ddd/add__scene__graph__command_8h.html" title="Used to add scene graph to the environment." alt="" coords="3765,295,3961,351"/>
-<area shape="rect" id="node29" href="$da/d98/change__joint__acceleration__limits__command_8h.html" title="Used to change a joints acceleration limits in environment." alt="" coords="3171,414,3382,470"/>
-<area shape="rect" id="node30" href="$df/dd7/change__joint__origin__command_8h.html" title="Used to change a joints origin in environment." alt="" coords="78,414,245,470"/>
-<area shape="rect" id="node31" href="$de/dbe/change__joint__position__limits__command_8h.html" title="Used to change a joints position limits in environment." alt="" coords="3598,414,3784,470"/>
-<area shape="rect" id="node32" href="$d8/dcb/change__joint__velocity__limits__command_8h.html" title="Used to change a joints velocity limits in environment." alt="" coords="2734,414,2920,470"/>
-<area shape="rect" id="node33" href="$de/d30/change__link__collision__enabled__command_8h.html" title="Used to change a links collision enabled in environment." alt="" coords="2944,414,3147,470"/>
-<area shape="rect" id="node34" href="$db/d87/change__link__origin__command_8h.html" title="Used to change a links origin in environment." alt="" coords="670,414,832,470"/>
-<area shape="rect" id="node35" href="$d8/d76/change__link__visibility__command_8h.html" title="Used to change a links visibility in environment." alt="" coords="1454,414,1616,470"/>
-<area shape="rect" id="node36" href="$dd/dbd/move__joint__command_8h.html" title="Used to move joint in environment." alt="" coords="1640,414,1798,470"/>
-<area shape="rect" id="node37" href="$db/ddd/move__link__command_8h.html" title="Used to move link in environment." alt="" coords="1822,421,2048,463"/>
-<area shape="rect" id="node38" href="$dc/d4e/remove__allowed__collision__command_8h.html" title="Used to remove an allowed collision from the environment." alt="" coords="2522,414,2710,470"/>
-<area shape="rect" id="node39" href="$d0/dfb/remove__allowed__collision__link__command_8h.html" title=" " alt="" coords="269,414,457,470"/>
-<area shape="rect" id="node40" href="$dd/d36/remove__joint__command_8h.html" title="Used to remove joint from environment." alt="" coords="3406,414,3574,470"/>
-<area shape="rect" id="node41" href="$db/dfb/remove__link__command_8h.html" title="Used to remove link from environment." alt="" coords="481,414,645,470"/>
-<area shape="rect" id="node42" href="$d7/d35/replace__joint__command_8h.html" title="Used to replace joint in environment." alt="" coords="857,414,1024,470"/>
-<area shape="rect" id="node43" href="$d7/d59/change__collision__margins__command_8h.html" title=" " alt="" coords="1048,414,1238,470"/>
-<area shape="rect" id="node44" href="$d8/df9/set__active__continuous__contact__manager__command_8h.html" title="Used to set the active continuous contact manager for the environment." alt="" coords="4136,407,4334,477"/>
-<area shape="rect" id="node45" href="$dd/d8a/set__active__discrete__contact__manager__command_8h.html" title="Used to set the active discrete contact manager for the environment." alt="" coords="4358,407,4541,477"/>
-<area shape="rect" id="node47" title=" " alt="" coords="5342,206,5445,233"/>
-<area shape="rect" id="node48" title=" " alt="" coords="5520,206,5582,233"/>
-<area shape="rect" id="node49" title=" " alt="" coords="5606,206,5774,233"/>
-<area shape="rect" id="node50" href="$db/d35/discrete__contact__manager_8h.html" title="This is the discrete contact manager base class." alt="" coords="3809,414,3960,470"/>
+<area shape="rect" id="node1" title=" " alt="" coords="4176,5,4360,61"/>
+<area shape="rect" id="node2" href="$de/d3c/macros_8h.html" title="Common Tesseract Macros." alt="" coords="3214,704,3404,731"/>
+<area shape="rect" id="node3" title=" " alt="" coords="3944,117,4039,143"/>
+<area shape="rect" id="node4" title=" " alt="" coords="4064,117,4138,143"/>
+<area shape="rect" id="node5" title=" " alt="" coords="5533,704,5592,731"/>
+<area shape="rect" id="node6" href="$d8/dec/urdf__parser_8h.html" title="A urdf parser for tesseract." alt="" coords="4381,199,4512,240"/>
+<area shape="rect" id="node13" href="$d3/d95/resource__locator_8h.html" title="Locate and retrieve resource data." alt="" coords="4314,295,4501,337"/>
+<area shape="rect" id="node15" href="$df/d9e/tesseract__geometry_2include_2tesseract__geometry_2impl_2box_8h.html" title="Tesseract Box Geometry." alt="" coords="3525,496,3661,537"/>
+<area shape="rect" id="node17" href="$dc/d79/tesseract__common_2include_2tesseract__common_2utils_8h.html" title="Common Tesseract Utility Functions." alt="" coords="5254,399,5425,426"/>
+<area shape="rect" id="node24" href="$d5/d90/commands_8h.html" title="This contains classes for recording operations applied to the environment for tracking changes...." alt="" coords="2272,199,2426,240"/>
+<area shape="rect" id="node47" href="$de/d26/environment_8h.html" title=" " alt="" coords="4749,109,4904,151"/>
+<area shape="rect" id="node7" href="$d6/df3/graph_8h.html" title="A basic scene graph using boost." alt="" coords="4506,392,4664,433"/>
+<area shape="rect" id="node8" title=" " alt="" coords="4594,615,4648,641"/>
+<area shape="rect" id="node9" href="$d2/d01/allowed__collision__matrix_8h.html" title=" " alt="" coords="4709,496,4890,537"/>
+<area shape="rect" id="node10" title=" " alt="" coords="2239,704,2307,731"/>
+<area shape="rect" id="node11" href="$dd/ddb/tesseract__common_2include_2tesseract__common_2types_8h.html" title="Common Tesseract Types." alt="" coords="4813,615,4992,641"/>
+<area shape="rect" id="node12" title=" " alt="" coords="5240,704,5325,731"/>
+<area shape="rect" id="node14" title=" " alt="" coords="4352,399,4431,426"/>
+<area shape="rect" id="node16" href="$d0/da6/tesseract__geometry_2include_2tesseract__geometry_2geometry_8h.html" title="Tesseract Geometries." alt="" coords="4078,607,4214,649"/>
+<area shape="rect" id="node18" title=" " alt="" coords="5550,503,5620,530"/>
+<area shape="rect" id="node19" title=" " alt="" coords="5067,503,5146,530"/>
+<area shape="rect" id="node20" title=" " alt="" coords="5170,503,5235,530"/>
+<area shape="rect" id="node21" title=" " alt="" coords="5260,503,5326,530"/>
+<area shape="rect" id="node22" title=" " alt="" coords="5350,503,5422,530"/>
+<area shape="rect" id="node23" title=" " alt="" coords="5447,503,5526,530"/>
+<area shape="rect" id="node25" href="$d4/d04/add__allowed__collision__command_8h.html" title="Used to add an allowed collision to the environment." alt="" coords="1550,600,1716,656"/>
+<area shape="rect" id="node26" href="$db/d41/add__contact__managers__plugin__info__command_8h.html" title="Used to add contact managers plugin info to the environment." alt="" coords="4216,481,4381,552"/>
+<area shape="rect" id="node27" href="$da/db7/add__link__command_8h.html" title="Used to add link and joint to environment." alt="" coords="305,607,521,649"/>
+<area shape="rect" id="node28" href="$d6/d07/add__kinematics__information__command_8h.html" title="Used to kinematics information to the environment." alt="" coords="3216,600,3402,656"/>
+<area shape="rect" id="node29" href="$df/ddd/add__scene__graph__command_8h.html" title="Used to add scene graph to the environment." alt="" coords="3942,288,4138,344"/>
+<area shape="rect" id="node30" href="$da/d98/change__joint__acceleration__limits__command_8h.html" title="Used to change a joints acceleration limits in environment." alt="" coords="1956,600,2166,656"/>
+<area shape="rect" id="node31" href="$df/dd7/change__joint__origin__command_8h.html" title="Used to change a joints origin in environment." alt="" coords="2190,600,2356,656"/>
+<area shape="rect" id="node32" href="$de/dbe/change__joint__position__limits__command_8h.html" title="Used to change a joints position limits in environment." alt="" coords="2381,600,2568,656"/>
+<area shape="rect" id="node33" href="$d8/dcb/change__joint__velocity__limits__command_8h.html" title="Used to change a joints velocity limits in environment." alt="" coords="2592,600,2778,656"/>
+<area shape="rect" id="node34" href="$de/d30/change__link__collision__enabled__command_8h.html" title="Used to change a links collision enabled in environment." alt="" coords="2802,600,3005,656"/>
+<area shape="rect" id="node35" href="$db/d87/change__link__origin__command_8h.html" title="Used to change a links origin in environment." alt="" coords="3029,600,3192,656"/>
+<area shape="rect" id="node36" href="$d8/d76/change__link__visibility__command_8h.html" title="Used to change a links visibility in environment." alt="" coords="3638,600,3801,656"/>
+<area shape="rect" id="node37" href="$dd/dbd/move__joint__command_8h.html" title="Used to move joint in environment." alt="" coords="926,600,1084,656"/>
+<area shape="rect" id="node38" href="$db/ddd/move__link__command_8h.html" title="Used to move link in environment." alt="" coords="1108,607,1334,649"/>
+<area shape="rect" id="node39" href="$dc/d4e/remove__allowed__collision__command_8h.html" title="Used to remove an allowed collision from the environment." alt="" coords="92,600,280,656"/>
+<area shape="rect" id="node40" href="$d0/dfb/remove__allowed__collision__link__command_8h.html" title=" " alt="" coords="3426,600,3614,656"/>
+<area shape="rect" id="node41" href="$dd/d36/remove__joint__command_8h.html" title="Used to remove joint from environment." alt="" coords="734,600,902,656"/>
+<area shape="rect" id="node42" href="$db/dfb/remove__link__command_8h.html" title="Used to remove link from environment." alt="" coords="546,600,710,656"/>
+<area shape="rect" id="node43" href="$d7/d35/replace__joint__command_8h.html" title="Used to replace joint in environment." alt="" coords="1359,600,1526,656"/>
+<area shape="rect" id="node44" href="$d7/d59/change__collision__margins__command_8h.html" title=" " alt="" coords="1740,600,1931,656"/>
+<area shape="rect" id="node45" href="$d8/df9/set__active__continuous__contact__manager__command_8h.html" title="Used to set the active continuous contact manager for the environment." alt="" coords="3684,481,3883,552"/>
+<area shape="rect" id="node46" href="$dd/d8a/set__active__discrete__contact__manager__command_8h.html" title="Used to set the active discrete contact manager for the environment." alt="" coords="3907,481,4090,552"/>
+<area shape="rect" id="node48" title=" " alt="" coords="5067,206,5170,233"/>
+<area shape="rect" id="node49" title=" " alt="" coords="4536,206,4597,233"/>
+<area shape="rect" id="node50" title=" " alt="" coords="4621,206,4789,233"/>
 </map>

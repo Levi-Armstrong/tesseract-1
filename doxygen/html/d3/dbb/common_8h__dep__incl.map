@@ -18,7 +18,7 @@
 <area shape="rect" id="node44" href="$d2/dde/fcl__utils_8h.html" title="Tesseract ROS FCL Utility Functions." alt="" coords="2433,117,2586,173"/>
 <area shape="rect" id="node47" href="$d4/d09/collision__core__unit_8cpp.html" title=" " alt="" coords="4105,117,4236,173"/>
 <area shape="rect" id="node48" href="$dc/d82/environment_8cpp.html" title="Tesseract environment interface implementation." alt="" coords="4260,124,4415,165"/>
-<area shape="rect" id="node49" href="$d4/d59/geometry_8cpp.html" title="Parse geometry from xml string." alt="" coords="4439,124,4566,165"/>
+<area shape="rect" id="node49" href="$d4/d59/geometry_8cpp.html" title="Parse geometry from XML string." alt="" coords="4439,124,4566,165"/>
 <area shape="rect" id="node50" href="$d4/d24/mesh__writer_8cpp.html" title=" " alt="" coords="4590,124,4717,165"/>
 <area shape="rect" id="node3" href="$db/dc0/bullet__cast__bvh__manager_8h.html" title="Tesseract ROS Bullet cast(continuous) BVH collision manager." alt="" coords="684,228,844,299"/>
 <area shape="rect" id="node11" href="$d5/d68/bullet__cast__simple__manager_8h.html" title="Tesseract ROS Bullet cast(continuous) simple collision manager." alt="" coords="874,228,1041,299"/>

@@ -165,7 +165,7 @@ $(function() {
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;};</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="preprocessor">#ifndef SWIG</span></div>
-<div class="line"><a name="l00093"></a><span class="lineno"><a class="line" href="../../d9/d42/namespacetesseract__scene__graph.html#a2c50647f73070577a0bd18924a9eef34">   93</a></span>&#160;<span class="keyword">static</span> <span class="keyword">auto</span> <a class="code" href="../../d9/d42/namespacetesseract__scene__graph.html#a2c50647f73070577a0bd18924a9eef34">DEFAULT_TESSERACT_MATERIAL</a> = std::make_shared&lt;Material&gt;(<span class="stringliteral">&quot;default_tesseract_material&quot;</span>);</div>
+<div class="line"><a name="l00093"></a><span class="lineno"><a class="line" href="../../d9/d42/namespacetesseract__scene__graph.html#a7cc4d6d52cec84a34e4dad908a65c88f">   93</a></span>&#160;<span class="keyword">static</span> <span class="keyword">const</span> <span class="keyword">auto</span> <a class="code" href="../../d9/d42/namespacetesseract__scene__graph.html#a7cc4d6d52cec84a34e4dad908a65c88f">DEFAULT_TESSERACT_MATERIAL</a> = std::make_shared&lt;Material&gt;(<span class="stringliteral">&quot;default_tesseract_material&quot;</span>);</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">// SWIG</span></div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
 <div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="../../d4/da2/classtesseract__scene__graph_1_1Inertial.html">   96</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d4/da2/classtesseract__scene__graph_1_1Inertial.html">Inertial</a></div>
@@ -206,7 +206,7 @@ $(function() {
 <div class="line"><a name="l00131"></a><span class="lineno"><a class="line" href="../../dd/db7/classtesseract__scene__graph_1_1Visual.html#aebd604677b78a4b661b729d60d87f208">  131</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="../../dd/db7/classtesseract__scene__graph_1_1Visual.html#aebd604677b78a4b661b729d60d87f208">clear</a>()</div>
 <div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;  {</div>
 <div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    origin.setIdentity();</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    material = <a class="code" href="../../d9/d42/namespacetesseract__scene__graph.html#a2c50647f73070577a0bd18924a9eef34">DEFAULT_TESSERACT_MATERIAL</a>;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    material = <a class="code" href="../../d9/d42/namespacetesseract__scene__graph.html#a7cc4d6d52cec84a34e4dad908a65c88f">DEFAULT_TESSERACT_MATERIAL</a>;</div>
 <div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    geometry.reset();</div>
 <div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    name.clear();</div>
 <div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;  }</div>
@@ -363,14 +363,14 @@ $(function() {
 <div class="ttc" id="amacros_8h_html"><div class="ttname"><a href="../../de/d3c/macros_8h.html">macros.h</a></div><div class="ttdoc">Common Tesseract Macros.</div></div>
 <div class="ttc" id="amacros_8h_html_a8cc0e3c6a3382c5c0b19eb9e676fc2db"><div class="ttname"><a href="../../de/d3c/macros_8h.html#a8cc0e3c6a3382c5c0b19eb9e676fc2db">TESSERACT_COMMON_IGNORE_WARNINGS_PUSH</a></div><div class="ttdeci">#define TESSERACT_COMMON_IGNORE_WARNINGS_PUSH</div><div class="ttdef"><b>Definition:</b> macros.h:69</div></div>
 <div class="ttc" id="anamespaceTESSERACT__COMMON__IGNORE__WARNINGS__POP_html"><div class="ttname"><a href="../../df/d21/namespaceTESSERACT__COMMON__IGNORE__WARNINGS__POP.html">TESSERACT_COMMON_IGNORE_WARNINGS_POP</a></div><div class="ttdef"><b>Definition:</b> create_convex_hull.cpp:36</div></div>
-<div class="ttc" id="anamespacetesseract__scene__graph_html"><div class="ttname"><a href="../../d9/d42/namespacetesseract__scene__graph.html">tesseract_scene_graph</a></div><div class="ttdef"><b>Definition:</b> allowed_collision_matrix.h:22</div></div>
-<div class="ttc" id="anamespacetesseract__scene__graph_html_a2c50647f73070577a0bd18924a9eef34"><div class="ttname"><a href="../../d9/d42/namespacetesseract__scene__graph.html#a2c50647f73070577a0bd18924a9eef34">tesseract_scene_graph::DEFAULT_TESSERACT_MATERIAL</a></div><div class="ttdeci">static auto DEFAULT_TESSERACT_MATERIAL</div><div class="ttdef"><b>Definition:</b> link.h:93</div></div>
+<div class="ttc" id="anamespacetesseract__scene__graph_html"><div class="ttname"><a href="../../d9/d42/namespacetesseract__scene__graph.html">tesseract_scene_graph</a></div><div class="ttdef"><b>Definition:</b> allowed_collision_matrix.h:135</div></div>
+<div class="ttc" id="anamespacetesseract__scene__graph_html_a7cc4d6d52cec84a34e4dad908a65c88f"><div class="ttname"><a href="../../d9/d42/namespacetesseract__scene__graph.html#a7cc4d6d52cec84a34e4dad908a65c88f">tesseract_scene_graph::DEFAULT_TESSERACT_MATERIAL</a></div><div class="ttdeci">static const auto DEFAULT_TESSERACT_MATERIAL</div><div class="ttdef"><b>Definition:</b> link.h:93</div></div>
 <div class="ttc" id="atesseract__geometry_2include_2tesseract__geometry_2geometry_8h_html"><div class="ttname"><a href="../../d0/da6/tesseract__geometry_2include_2tesseract__geometry_2geometry_8h.html">geometry.h</a></div><div class="ttdoc">Tesseract Geometries.</div></div>
 <div class="ttc" id="atesseract__scene__graph_2include_2tesseract__scene__graph_2joint_8h_html"><div class="ttname"><a href="../../d4/d6d/tesseract__scene__graph_2include_2tesseract__scene__graph_2joint_8h.html">joint.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Oct 29 2021 04:27:13 for Tesseract by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Wed Dec 15 2021 17:36:04 for Tesseract by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

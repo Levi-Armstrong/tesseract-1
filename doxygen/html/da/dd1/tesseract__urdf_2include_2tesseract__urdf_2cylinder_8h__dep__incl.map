@@ -1,6 +1,6 @@
 <map id="tesseract_urdf/include/tesseract_urdf/cylinder.h" name="tesseract_urdf/include/tesseract_urdf/cylinder.h">
 <area shape="rect" id="node1" title="Parse cylinder from xml string." alt="" coords="136,5,303,47"/>
 <area shape="rect" id="node2" href="$d3/dd3/cylinder_8cpp.html" title="Parse cylinder from xml string." alt="" coords="5,102,132,143"/>
-<area shape="rect" id="node3" href="$d4/d59/geometry_8cpp.html" title="Parse geometry from xml string." alt="" coords="156,102,283,143"/>
+<area shape="rect" id="node3" href="$d4/d59/geometry_8cpp.html" title="Parse geometry from XML string." alt="" coords="156,102,283,143"/>
 <area shape="rect" id="node4" href="$db/d7e/tesseract__urdf__cylinder__unit_8cpp.html" title=" " alt="" coords="307,95,467,151"/>
 </map>

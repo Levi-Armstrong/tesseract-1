@@ -1,6 +1,12 @@
 <map id="tesseract_collision::CollisionCheckConfig" name="tesseract_collision::CollisionCheckConfig">
-<area shape="rect" id="node1" title="This is a high level structure containing common information that collision checking utilities need...." alt="" coords="709,37,860,79"/>
-<area shape="rect" id="node2" href="$da/df6/structtesseract__collision_1_1ContactRequest.html" title="The ContactRequest struct." alt="" coords="373,5,503,47"/>
-<area shape="rect" id="node3" href="$d6/dc7/classtesseract__common_1_1CollisionMarginData.html" title="Stores information about how the margins allowed between collision objects." alt="" coords="344,71,532,112"/>
-<area shape="rect" id="node4" title=" " alt="" coords="5,56,212,127"/>
+<area shape="rect" id="node1" title="This is a high level structure containing common information that collision checking utilities need...." alt="" coords="1415,60,1565,101"/>
+<area shape="rect" id="node2" href="$da/df6/structtesseract__collision_1_1ContactRequest.html" title="The ContactRequest struct." alt="" coords="1077,28,1207,69"/>
+<area shape="rect" id="node3" href="$d1/d64/structtesseract__collision_1_1ContactManagerConfig.html" title="Contains parameters used to configure a contact manager before a series of contact checks." alt="" coords="1063,93,1221,135"/>
+<area shape="rect" id="node4" href="$d7/d4e/classtesseract__common_1_1AllowedCollisionMatrix.html" title=" " alt="" coords="753,27,939,68"/>
+<area shape="rect" id="node5" title=" " alt="" coords="363,5,569,76"/>
+<area shape="rect" id="node6" title=" " alt="" coords="179,78,257,105"/>
+<area shape="rect" id="node8" title=" " alt="" coords="593,93,728,135"/>
+<area shape="rect" id="node7" title=" " alt="" coords="5,71,129,112"/>
+<area shape="rect" id="node9" href="$d6/dc7/classtesseract__common_1_1CollisionMarginData.html" title="Stores information about how the margins allowed between collision objects." alt="" coords="752,164,940,205"/>
+<area shape="rect" id="node10" title=" " alt="" coords="363,152,569,223"/>
 </map>

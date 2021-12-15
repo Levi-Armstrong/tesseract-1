@@ -1,52 +1,52 @@
 <map id="tesseract_common/include/tesseract_common/resource_locator.h" name="tesseract_common/include/tesseract_common/resource_locator.h">
-<area shape="rect" id="node1" title="Locate and retrieve resource data." alt="" coords="2583,5,2774,61"/>
+<area shape="rect" id="node1" title="Locate and retrieve resource data." alt="" coords="2649,5,2839,61"/>
 <area shape="rect" id="node2" href="$d7/d6f/resource__locator_8cpp.html" title="Resource locator functions." alt="" coords="5,117,160,158"/>
 <area shape="rect" id="node3" href="$d1/de7/resource__locator__unit_8cpp.html" title=" " alt="" coords="185,117,359,158"/>
 <area shape="rect" id="node4" href="$de/df1/tesseract__common__unit_8cpp.html" title=" " alt="" coords="384,117,573,158"/>
-<area shape="rect" id="node5" href="$de/d26/environment_8h.html" title=" " alt="" coords="1157,213,1360,269"/>
-<area shape="rect" id="node8" href="$d0/d5b/tesseract__environment__unit_8cpp.html" title=" " alt="" coords="1305,429,1489,485"/>
-<area shape="rect" id="node10" href="$d8/da4/tesseract__environment__collision_8cpp.html" title=" " alt="" coords="1460,317,1644,373"/>
-<area shape="rect" id="node13" href="$d5/d93/tesseract__geometry_2include_2tesseract__geometry_2impl_2mesh_8h.html" title="Tesseract Mesh Geometry." alt="" coords="2666,317,2851,373"/>
-<area shape="rect" id="node15" href="$de/d9a/convex__mesh_8cpp.html" title="Parse convex_mesh from xml string." alt="" coords="2967,555,3097,596"/>
-<area shape="rect" id="node16" href="$d4/d59/geometry_8cpp.html" title="Parse geometry from xml string." alt="" coords="3525,555,3651,596"/>
-<area shape="rect" id="node21" href="$d8/dd2/mesh_8cpp.html" title="Parse mesh from xml string." alt="" coords="2913,436,3039,477"/>
-<area shape="rect" id="node24" href="$df/d8e/mesh__material_8h.html" title="Tesseract Mesh Material read from a mesh file." alt="" coords="2961,109,3146,165"/>
-<area shape="rect" id="node26" href="$d2/deb/polygon__mesh_8h.html" title="Tesseract Polygon Mesh Geometry." alt="" coords="3090,213,3275,269"/>
-<area shape="rect" id="node28" href="$d2/db8/sdf__mesh_8cpp.html" title=" " alt="" coords="3661,436,3787,477"/>
-<area shape="rect" id="node30" href="$d8/dc3/mesh__parser_8h.html" title=" " alt="" coords="2875,317,3061,373"/>
-<area shape="rect" id="node31" href="$d3/d2e/parse__srdf__example_8cpp.html" title=" " alt="" coords="375,325,542,366"/>
-<area shape="rect" id="node32" href="$d0/d42/srdf__model_8h.html" title="Parse srdf xml." alt="" coords="776,117,963,158"/>
-<area shape="rect" id="node34" href="$d3/d6b/tesseract__srdf__unit_8cpp.html" title=" " alt="" coords="618,325,779,366"/>
-<area shape="rect" id="node36" href="$d4/db8/state__solver__test__suite_8h.html" title=" " alt="" coords="2275,213,2429,269"/>
-<area shape="rect" id="node38" href="$d8/dec/urdf__parser_8h.html" title="A urdf parser for tesseract." alt="" coords="1897,117,2085,158"/>
-<area shape="rect" id="node44" href="$df/d71/tesseract__urdf__common__unit_8h.html" title=" " alt="" coords="2505,213,2671,269"/>
-<area shape="rect" id="node45" href="$df/d69/collision_8cpp.html" title="Parse collision from xml string." alt="" coords="3541,117,3667,158"/>
-<area shape="rect" id="node46" href="$d2/d41/link_8cpp.html" title="Parse link from xml string." alt="" coords="3691,117,3818,158"/>
-<area shape="rect" id="node47" href="$d0/d7b/octomap_8cpp.html" title="Parse octomap from xml string." alt="" coords="3842,117,3969,158"/>
-<area shape="rect" id="node48" href="$d0/d4f/octree_8cpp.html" title="Parse octree from xml string." alt="" coords="3993,117,4119,158"/>
-<area shape="rect" id="node49" href="$d0/d52/point__cloud_8cpp.html" title="Parse PCL point cloud to octree from xml string." alt="" coords="4143,117,4270,158"/>
-<area shape="rect" id="node50" href="$d8/dad/visual_8cpp.html" title="Parse visual from xml string." alt="" coords="4294,117,4421,158"/>
-<area shape="rect" id="node6" href="$d9/d71/tesseract__environment_2include_2tesseract__environment_2utils_8h.html" title="Tesseract Environment Utility Functions." alt="" coords="1132,317,1335,373"/>
-<area shape="rect" id="node7" href="$dc/d82/environment_8cpp.html" title="Tesseract environment interface implementation." alt="" coords="1017,436,1172,477"/>
-<area shape="rect" id="node9" href="$de/d87/environment__clone__benchmarks_8cpp.html" title=" " alt="" coords="1669,317,1867,373"/>
-<area shape="rect" id="node11" href="$d0/de9/tesseract__ignition__visualization_8h.html" title=" " alt="" coords="753,421,956,492"/>
-<area shape="rect" id="node12" href="$d2/d02/visualization_8h.html" title="Visualization Class." alt="" coords="855,317,1057,373"/>
-<area shape="rect" id="node14" href="$d0/d01/convex__hull__utils_8h.html" title="This is a collection of common methods." alt="" coords="3267,421,3427,492"/>
-<area shape="rect" id="node17" href="$d6/d6e/parse__mesh__example_8cpp.html" title=" " alt="" coords="2733,429,2889,485"/>
-<area shape="rect" id="node18" href="$d4/ddb/geometries_8h.html" title="Tesseract Geometries." alt="" coords="3451,429,3637,485"/>
-<area shape="rect" id="node22" href="$da/d99/tesseract__urdf__mesh__material__unit_8cpp.html" title=" " alt="" coords="2509,429,2657,485"/>
-<area shape="rect" id="node23" href="$de/d57/tesseract__urdf__mesh__unit_8cpp.html" title=" " alt="" coords="2337,429,2485,485"/>
-<area shape="rect" id="node19" href="$d9/d70/collision__octomap__mesh__unit_8hpp.html" title=" " alt="" coords="3313,540,3501,611"/>
-<area shape="rect" id="node20" href="$d7/d07/tesseract__geometry__unit_8cpp.html" title=" " alt="" coords="3122,547,3289,603"/>
-<area shape="rect" id="node25" href="$de/dd2/tesseract__geometry_2include_2tesseract__geometry_2impl_2convex__mesh_8h.html" title="Tesseract Convex Mesh Geometry." alt="" coords="3355,317,3541,373"/>
-<area shape="rect" id="node27" href="$d2/d17/tesseract__geometry_2include_2tesseract__geometry_2impl_2sdf__mesh_8h.html" title="Tesseract SDF Mesh Geometry." alt="" coords="3565,317,3750,373"/>
-<area shape="rect" id="node29" href="$db/dc6/mesh__writer_8h.html" title=" " alt="" coords="3085,325,3280,366"/>
-<area shape="rect" id="node33" href="$dd/d02/tesseract__srdf_2include_2tesseract__srdf_2utils_8h.html" title="Tesseract SRDF utility functions." alt="" coords="757,221,907,262"/>
-<area shape="rect" id="node35" href="$d6/de2/srdf__model_8cpp.html" title="Parse srdf xml." alt="" coords="606,221,733,262"/>
-<area shape="rect" id="node37" href="$da/d23/tesseract__state__solver__ofkt__unit_8cpp.html" title=" " alt="" coords="2283,317,2437,373"/>
-<area shape="rect" id="node39" href="$d7/dcb/kinematics__test__utils_8h.html" title=" " alt="" coords="2053,213,2200,269"/>
-<area shape="rect" id="node40" href="$d9/dee/rep__kinematics__unit_8cpp.html" title=" " alt="" coords="1941,317,2088,373"/>
-<area shape="rect" id="node41" href="$d0/dac/rop__kinematics__unit_8cpp.html" title=" " alt="" coords="2112,317,2259,373"/>
-<area shape="rect" id="node42" href="$d2/dbe/load__urdf__example_8cpp.html" title=" " alt="" coords="1613,221,1777,262"/>
-<area shape="rect" id="node43" href="$d4/d44/urdf__parser_8cpp.html" title=" " alt="" coords="1801,221,1927,262"/>
+<area shape="rect" id="node5" href="$de/d26/environment_8h.html" title=" " alt="" coords="1169,213,1372,269"/>
+<area shape="rect" id="node8" href="$d0/d5b/tesseract__environment__unit_8cpp.html" title=" " alt="" coords="1156,429,1340,485"/>
+<area shape="rect" id="node9" href="$df/d00/tesseract__environment__utils_8cpp.html" title=" " alt="" coords="1607,429,1791,485"/>
+<area shape="rect" id="node11" href="$d8/da4/tesseract__environment__collision_8cpp.html" title=" " alt="" coords="1447,317,1631,373"/>
+<area shape="rect" id="node14" href="$d5/d93/tesseract__geometry_2include_2tesseract__geometry_2impl_2mesh_8h.html" title="Tesseract Mesh Geometry." alt="" coords="2821,317,3006,373"/>
+<area shape="rect" id="node16" href="$de/d9a/convex__mesh_8cpp.html" title="Parse convex_mesh from xml string." alt="" coords="3157,555,3288,596"/>
+<area shape="rect" id="node17" href="$d4/d59/geometry_8cpp.html" title="Parse geometry from XML string." alt="" coords="3715,555,3842,596"/>
+<area shape="rect" id="node22" href="$d8/dd2/mesh_8cpp.html" title="Parse mesh from xml string." alt="" coords="2898,436,3025,477"/>
+<area shape="rect" id="node25" href="$df/d8e/mesh__material_8h.html" title="Tesseract Mesh Material read from a mesh file." alt="" coords="3099,109,3285,165"/>
+<area shape="rect" id="node27" href="$d2/deb/polygon__mesh_8h.html" title="Tesseract Polygon Mesh Geometry." alt="" coords="3245,213,3430,269"/>
+<area shape="rect" id="node29" href="$d2/db8/sdf__mesh_8cpp.html" title=" " alt="" coords="3826,436,3953,477"/>
+<area shape="rect" id="node31" href="$d8/dc3/mesh__parser_8h.html" title=" " alt="" coords="3030,317,3215,373"/>
+<area shape="rect" id="node32" href="$d3/d2e/parse__srdf__example_8cpp.html" title=" " alt="" coords="311,325,478,366"/>
+<area shape="rect" id="node33" href="$d0/d42/srdf__model_8h.html" title="Parse srdf xml." alt="" coords="776,117,963,158"/>
+<area shape="rect" id="node35" href="$d3/d6b/tesseract__srdf__unit_8cpp.html" title=" " alt="" coords="554,325,715,366"/>
+<area shape="rect" id="node37" href="$d4/db8/state__solver__test__suite_8h.html" title=" " alt="" coords="2431,213,2585,269"/>
+<area shape="rect" id="node39" href="$d8/dec/urdf__parser_8h.html" title="A urdf parser for tesseract." alt="" coords="1949,117,2137,158"/>
+<area shape="rect" id="node44" href="$df/d71/tesseract__urdf__common__unit_8h.html" title=" " alt="" coords="2661,213,2827,269"/>
+<area shape="rect" id="node45" href="$df/d69/collision_8cpp.html" title="Parse collision from xml string." alt="" coords="3687,117,3814,158"/>
+<area shape="rect" id="node46" href="$d2/d41/link_8cpp.html" title="Parse link from xml string." alt="" coords="3838,117,3965,158"/>
+<area shape="rect" id="node47" href="$d0/d7b/octomap_8cpp.html" title="Parse octomap from xml string." alt="" coords="3989,117,4115,158"/>
+<area shape="rect" id="node48" href="$d0/d4f/octree_8cpp.html" title="Parse octree from xml string." alt="" coords="4139,117,4266,158"/>
+<area shape="rect" id="node49" href="$d0/d52/point__cloud_8cpp.html" title="Parse PCL point cloud to octree from xml string." alt="" coords="4290,117,4417,158"/>
+<area shape="rect" id="node50" href="$d8/dad/visual_8cpp.html" title="Parse visual from xml string." alt="" coords="4441,117,4567,158"/>
+<area shape="rect" id="node6" href="$d9/d71/tesseract__environment_2include_2tesseract__environment_2utils_8h.html" title="Tesseract Environment Utility Functions." alt="" coords="1169,317,1372,373"/>
+<area shape="rect" id="node7" href="$dc/d82/environment_8cpp.html" title="Tesseract environment interface implementation." alt="" coords="953,436,1108,477"/>
+<area shape="rect" id="node10" href="$de/d87/environment__clone__benchmarks_8cpp.html" title=" " alt="" coords="1655,317,1854,373"/>
+<area shape="rect" id="node12" href="$d0/de9/tesseract__ignition__visualization_8h.html" title=" " alt="" coords="689,421,892,492"/>
+<area shape="rect" id="node13" href="$d2/d02/visualization_8h.html" title="Visualization Class." alt="" coords="791,317,993,373"/>
+<area shape="rect" id="node15" href="$d0/d01/convex__hull__utils_8h.html" title="This is a collection of common methods." alt="" coords="3381,421,3541,492"/>
+<area shape="rect" id="node18" href="$d6/d6e/parse__mesh__example_8cpp.html" title=" " alt="" coords="3049,429,3205,485"/>
+<area shape="rect" id="node19" href="$d4/ddb/geometries_8h.html" title="Tesseract Geometries." alt="" coords="3617,429,3802,485"/>
+<area shape="rect" id="node23" href="$da/d99/tesseract__urdf__mesh__material__unit_8cpp.html" title=" " alt="" coords="2502,429,2650,485"/>
+<area shape="rect" id="node24" href="$de/d57/tesseract__urdf__mesh__unit_8cpp.html" title=" " alt="" coords="2674,429,2822,485"/>
+<area shape="rect" id="node20" href="$d9/d70/collision__octomap__mesh__unit_8hpp.html" title=" " alt="" coords="3503,540,3691,611"/>
+<area shape="rect" id="node21" href="$d7/d07/tesseract__geometry__unit_8cpp.html" title=" " alt="" coords="3313,547,3479,603"/>
+<area shape="rect" id="node26" href="$de/dd2/tesseract__geometry_2include_2tesseract__geometry_2impl_2convex__mesh_8h.html" title="Tesseract Convex Mesh Geometry." alt="" coords="3459,317,3645,373"/>
+<area shape="rect" id="node28" href="$d2/d17/tesseract__geometry_2include_2tesseract__geometry_2impl_2sdf__mesh_8h.html" title="Tesseract SDF Mesh Geometry." alt="" coords="3721,317,3906,373"/>
+<area shape="rect" id="node30" href="$db/dc6/mesh__writer_8h.html" title=" " alt="" coords="3240,325,3435,366"/>
+<area shape="rect" id="node34" href="$dd/d02/tesseract__srdf_2include_2tesseract__srdf_2utils_8h.html" title="Tesseract SRDF utility functions." alt="" coords="570,221,721,262"/>
+<area shape="rect" id="node36" href="$d6/de2/srdf__model_8cpp.html" title="Parse srdf xml." alt="" coords="745,221,871,262"/>
+<area shape="rect" id="node38" href="$da/d23/tesseract__state__solver__ofkt__unit_8cpp.html" title=" " alt="" coords="2431,317,2585,373"/>
+<area shape="rect" id="node40" href="$d7/dcb/kinematics__test__utils_8h.html" title=" " alt="" coords="2209,213,2356,269"/>
+<area shape="rect" id="node41" href="$d9/dee/rep__kinematics__unit_8cpp.html" title=" " alt="" coords="2064,317,2211,373"/>
+<area shape="rect" id="node42" href="$d0/dac/rop__kinematics__unit_8cpp.html" title=" " alt="" coords="2252,317,2399,373"/>
+<area shape="rect" id="node43" href="$d2/dbe/load__urdf__example_8cpp.html" title=" " alt="" coords="2021,221,2185,262"/>
 </map>

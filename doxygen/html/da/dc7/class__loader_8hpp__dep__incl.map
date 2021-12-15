@@ -1,48 +1,50 @@
 <map id="tesseract_common/include/tesseract_common/class_loader.hpp" name="tesseract_common/include/tesseract_common/class_loader.hpp">
-<area shape="rect" id="node1" title="Class Loader to be used throughout Tesseract for loading plugins." alt="" coords="3787,5,3965,61"/>
-<area shape="rect" id="node2" href="$dd/d9f/class__loader_8h.html" title="Class Loader to be used throughout Tesseract for loading plugins." alt="" coords="3787,109,3965,165"/>
-<area shape="rect" id="node3" href="$d1/d2f/plugin__loader_8hpp.html" title="Plugin Loader to be used throughout Tesseract for loading plugins." alt="" coords="3501,213,3680,269"/>
-<area shape="rect" id="node20" href="$d6/dbe/tesseract__ignition__visualization_8cpp.html" title=" " alt="" coords="3423,881,3595,937"/>
-<area shape="rect" id="node23" href="$d3/da9/visualization__loader_8cpp.html" title=" " alt="" coords="3739,889,3925,930"/>
-<area shape="rect" id="node24" href="$da/dd2/plugin__loader__unit_8cpp.html" title=" " alt="" coords="3629,436,3787,477"/>
-<area shape="rect" id="node46" href="$d6/d3b/test__plugin__multiply_8cpp.html" title="Plugin Test plugin class." alt="" coords="3965,221,4129,262"/>
-<area shape="rect" id="node4" href="$de/d9e/contact__managers__plugin__factory_8cpp.html" title="Factory for loading contact managers as plugins." alt="" coords="3604,547,3788,603"/>
-<area shape="rect" id="node5" href="$de/db6/plugin__loader_8h.html" title="Plugin Loader to be used throughout Tesseract for loading plugins." alt="" coords="3501,317,3680,373"/>
-<area shape="rect" id="node30" href="$d6/d3d/kinematics__plugin__factory_8cpp.html" title=" " alt="" coords="429,547,576,603"/>
-<area shape="rect" id="node6" href="$da/d56/contact__managers__plugin__factory_8h.html" title="Factory for loading contact managers as plugins." alt="" coords="3293,421,3475,492"/>
-<area shape="rect" id="node22" href="$da/d93/visualization__loader_8h.html" title="Visualization Loader." alt="" coords="3636,770,3839,826"/>
-<area shape="rect" id="node25" href="$d0/d3c/kinematics__plugin__factory_8h.html" title="Kinematics Plugin Factory." alt="" coords="1253,421,1441,492"/>
-<area shape="rect" id="node7" href="$d1/dd8/bullet__factories_8h.html" title="Factories for loading bullet contact managers as plugins." alt="" coords="3033,540,3193,611"/>
-<area shape="rect" id="node9" href="$d6/d64/fcl__factories_8h.html" title="Factories for loading fcl contact managers as plugins." alt="" coords="3217,547,3396,603"/>
-<area shape="rect" id="node11" href="$d2/d51/contact__managers__factory__unit_8cpp.html" title="Tesseract collision contact managers factory test." alt="" coords="3421,547,3579,603"/>
-<area shape="rect" id="node12" href="$de/d26/environment_8h.html" title=" " alt="" coords="2807,547,3009,603"/>
-<area shape="rect" id="node8" href="$d4/d6e/bullet__factories_8cpp.html" title=" " alt="" coords="3407,666,3601,707"/>
-<area shape="rect" id="node10" href="$d6/d74/fcl__factories_8cpp.html" title="Factories for loading fcl contact managers as plugins." alt="" coords="3626,666,3787,707"/>
-<area shape="rect" id="node13" href="$d9/d71/tesseract__environment_2include_2tesseract__environment_2utils_8h.html" title="Tesseract Environment Utility Functions." alt="" coords="2852,659,3055,715"/>
-<area shape="rect" id="node14" href="$dc/d82/environment_8cpp.html" title="Tesseract environment interface implementation." alt="" coords="3008,777,3163,819"/>
-<area shape="rect" id="node16" href="$d0/d5b/tesseract__environment__unit_8cpp.html" title=" " alt="" coords="2453,770,2637,826"/>
-<area shape="rect" id="node17" href="$de/d87/environment__clone__benchmarks_8cpp.html" title=" " alt="" coords="2421,659,2619,715"/>
-<area shape="rect" id="node18" href="$d8/da4/tesseract__environment__collision_8cpp.html" title=" " alt="" coords="2644,659,2828,715"/>
-<area shape="rect" id="node19" href="$d0/de9/tesseract__ignition__visualization_8h.html" title=" " alt="" coords="3187,763,3389,833"/>
-<area shape="rect" id="node21" href="$d2/d02/visualization_8h.html" title="Visualization Class." alt="" coords="3180,659,3383,715"/>
-<area shape="rect" id="node15" href="$d1/d89/tesseract__environment_2src_2utils_8cpp.html" title="Tesseract Environment Utility Functions." alt="" coords="2829,777,2984,819"/>
-<area shape="rect" id="node26" href="$d4/d83/rep__factory_8h.html" title="Robot with External Positioner Inverse kinematics Factory." alt="" coords="2049,547,2247,603"/>
-<area shape="rect" id="node28" href="$d6/d68/rop__factory_8h.html" title="Robot on Positioner Inverse kinematics factory." alt="" coords="601,547,799,603"/>
-<area shape="rect" id="node31" href="$da/d3e/kdl__factories_8h.html" title="Tesseract KDL Factories." alt="" coords="823,547,1025,603"/>
-<area shape="rect" id="node33" href="$de/dff/opw__factory_8h.html" title="Tesseract OPW Inverse kinematics Factory." alt="" coords="1049,547,1253,603"/>
-<area shape="rect" id="node35" href="$d7/d1d/kinematics__factory__unit_8cpp.html" title="Tesseract kinematics factory test." alt="" coords="582,659,743,715"/>
-<area shape="rect" id="node36" href="$d7/dcb/kinematics__test__utils_8h.html" title=" " alt="" coords="1328,547,1475,603"/>
-<area shape="rect" id="node44" href="$d7/dbe/ur__factory_8h.html" title="Tesseract UR Inverse kinematics Factory." alt="" coords="1615,547,1793,603"/>
-<area shape="rect" id="node27" href="$d5/d5b/rep__factory_8cpp.html" title=" " alt="" coords="2181,666,2347,707"/>
-<area shape="rect" id="node29" href="$dc/dd0/rop__factory_8cpp.html" title="Robot on Positioner Inverse kinematics factory." alt="" coords="5,666,171,707"/>
-<area shape="rect" id="node32" href="$d7/d99/kdl__factories_8cpp.html" title=" " alt="" coords="195,666,362,707"/>
-<area shape="rect" id="node34" href="$d1/de8/opw__factory_8cpp.html" title=" " alt="" coords="387,666,557,707"/>
-<area shape="rect" id="node37" href="$d6/dd6/ikfast__kinematics__unit_8cpp.html" title=" " alt="" coords="1149,659,1304,715"/>
-<area shape="rect" id="node38" href="$da/d94/kdl__kinematics__unit_8cpp.html" title=" " alt="" coords="1328,659,1475,715"/>
-<area shape="rect" id="node39" href="$d4/d0f/kinematics__core__unit_8cpp.html" title=" " alt="" coords="1499,659,1645,715"/>
-<area shape="rect" id="node40" href="$d6/d2e/opw__kinematics__unit_8cpp.html" title="Tesseract opw kinematics test." alt="" coords="1669,659,1816,715"/>
-<area shape="rect" id="node41" href="$d9/dee/rep__kinematics__unit_8cpp.html" title=" " alt="" coords="1840,659,1987,715"/>
-<area shape="rect" id="node42" href="$d0/dac/rop__kinematics__unit_8cpp.html" title=" " alt="" coords="768,659,915,715"/>
-<area shape="rect" id="node43" href="$d3/d31/ur__kinematics__unit_8cpp.html" title=" " alt="" coords="939,666,1125,707"/>
-<area shape="rect" id="node45" href="$d7/d79/ur__factory_8cpp.html" title="Tesseract UR Inverse kinematics Factory." alt="" coords="2011,666,2157,707"/>
+<area shape="rect" id="node1" title="Class Loader to be used throughout Tesseract for loading plugins." alt="" coords="4077,5,4256,61"/>
+<area shape="rect" id="node2" href="$dd/d9f/class__loader_8h.html" title="Class Loader to be used throughout Tesseract for loading plugins." alt="" coords="4077,109,4256,165"/>
+<area shape="rect" id="node3" href="$d1/d2f/plugin__loader_8hpp.html" title="Plugin Loader to be used throughout Tesseract for loading plugins." alt="" coords="3951,213,4129,269"/>
+<area shape="rect" id="node21" href="$d6/dbe/tesseract__ignition__visualization_8cpp.html" title=" " alt="" coords="1621,881,1793,937"/>
+<area shape="rect" id="node24" href="$d3/da9/visualization__loader_8cpp.html" title=" " alt="" coords="4093,889,4278,930"/>
+<area shape="rect" id="node25" href="$da/dd2/plugin__loader__unit_8cpp.html" title=" " alt="" coords="4082,436,4241,477"/>
+<area shape="rect" id="node48" href="$d6/d3b/test__plugin__multiply_8cpp.html" title="Plugin Test plugin class." alt="" coords="4317,221,4481,262"/>
+<area shape="rect" id="node4" href="$de/d9e/contact__managers__plugin__factory_8cpp.html" title="Factory for loading contact managers as plugins." alt="" coords="3872,547,4056,603"/>
+<area shape="rect" id="node5" href="$de/db6/plugin__loader_8h.html" title="Plugin Loader to be used throughout Tesseract for loading plugins." alt="" coords="3951,317,4129,373"/>
+<area shape="rect" id="node31" href="$d6/d3d/kinematics__plugin__factory_8cpp.html" title=" " alt="" coords="867,547,1013,603"/>
+<area shape="rect" id="node6" href="$da/d56/contact__managers__plugin__factory_8h.html" title="Factory for loading contact managers as plugins." alt="" coords="3570,421,3753,492"/>
+<area shape="rect" id="node23" href="$da/d93/visualization__loader_8h.html" title="Visualization Loader." alt="" coords="3992,770,4195,826"/>
+<area shape="rect" id="node26" href="$d0/d3c/kinematics__plugin__factory_8h.html" title="Kinematics Plugin Factory." alt="" coords="1897,421,2085,492"/>
+<area shape="rect" id="node7" href="$d1/dd8/bullet__factories_8h.html" title="Factories for loading bullet contact managers as plugins." alt="" coords="3301,540,3461,611"/>
+<area shape="rect" id="node9" href="$d6/d64/fcl__factories_8h.html" title="Factories for loading fcl contact managers as plugins." alt="" coords="3669,547,3848,603"/>
+<area shape="rect" id="node11" href="$d2/d51/contact__managers__factory__unit_8cpp.html" title="Tesseract collision contact managers factory test." alt="" coords="3486,547,3645,603"/>
+<area shape="rect" id="node12" href="$de/d26/environment_8h.html" title=" " alt="" coords="2965,547,3168,603"/>
+<area shape="rect" id="node8" href="$d4/d6e/bullet__factories_8cpp.html" title=" " alt="" coords="3675,666,3869,707"/>
+<area shape="rect" id="node10" href="$d6/d74/fcl__factories_8cpp.html" title="Factories for loading fcl contact managers as plugins." alt="" coords="3894,666,4055,707"/>
+<area shape="rect" id="node13" href="$d9/d71/tesseract__environment_2include_2tesseract__environment_2utils_8h.html" title="Tesseract Environment Utility Functions." alt="" coords="2896,659,3099,715"/>
+<area shape="rect" id="node14" href="$dc/d82/environment_8cpp.html" title="Tesseract environment interface implementation." alt="" coords="2505,777,2660,819"/>
+<area shape="rect" id="node16" href="$d0/d5b/tesseract__environment__unit_8cpp.html" title=" " alt="" coords="2684,770,2868,826"/>
+<area shape="rect" id="node17" href="$df/d00/tesseract__environment__utils_8cpp.html" title=" " alt="" coords="3071,770,3255,826"/>
+<area shape="rect" id="node18" href="$de/d87/environment__clone__benchmarks_8cpp.html" title=" " alt="" coords="3451,659,3650,715"/>
+<area shape="rect" id="node19" href="$d8/da4/tesseract__environment__collision_8cpp.html" title=" " alt="" coords="2587,659,2771,715"/>
+<area shape="rect" id="node20" href="$d0/de9/tesseract__ignition__visualization_8h.html" title=" " alt="" coords="3279,763,3481,833"/>
+<area shape="rect" id="node22" href="$d2/d02/visualization_8h.html" title="Visualization Class." alt="" coords="3224,659,3427,715"/>
+<area shape="rect" id="node15" href="$d1/d89/tesseract__environment_2src_2utils_8cpp.html" title="Tesseract Environment Utility Functions." alt="" coords="2892,777,3047,819"/>
+<area shape="rect" id="node27" href="$d4/d83/rep__factory_8h.html" title="Robot with External Positioner Inverse kinematics Factory." alt="" coords="1779,547,1978,603"/>
+<area shape="rect" id="node29" href="$d6/d68/rop__factory_8h.html" title="Robot on Positioner Inverse kinematics factory." alt="" coords="2002,547,2201,603"/>
+<area shape="rect" id="node32" href="$da/d3e/kdl__factories_8h.html" title="Tesseract KDL Factories." alt="" coords="2225,547,2426,603"/>
+<area shape="rect" id="node34" href="$de/dff/opw__factory_8h.html" title="Tesseract OPW Inverse kinematics Factory." alt="" coords="2450,547,2654,603"/>
+<area shape="rect" id="node36" href="$d7/d1d/kinematics__factory__unit_8cpp.html" title="Tesseract kinematics factory test." alt="" coords="1465,659,1626,715"/>
+<area shape="rect" id="node37" href="$d7/dcb/kinematics__test__utils_8h.html" title=" " alt="" coords="1037,547,1184,603"/>
+<area shape="rect" id="node46" href="$d7/dbe/ur__factory_8h.html" title="Tesseract UR Inverse kinematics Factory." alt="" coords="1576,547,1755,603"/>
+<area shape="rect" id="node28" href="$d5/d5b/rep__factory_8cpp.html" title=" " alt="" coords="1821,666,1987,707"/>
+<area shape="rect" id="node30" href="$dc/dd0/rop__factory_8cpp.html" title="Robot on Positioner Inverse kinematics factory." alt="" coords="2011,666,2176,707"/>
+<area shape="rect" id="node33" href="$d7/d99/kdl__factories_8cpp.html" title=" " alt="" coords="2201,666,2367,707"/>
+<area shape="rect" id="node35" href="$d1/de8/opw__factory_8cpp.html" title=" " alt="" coords="2392,666,2563,707"/>
+<area shape="rect" id="node38" href="$d8/db1/ikfast__kinematics__7dof__unit_8cpp.html" title=" " alt="" coords="253,659,408,715"/>
+<area shape="rect" id="node39" href="$d6/dd6/ikfast__kinematics__unit_8cpp.html" title=" " alt="" coords="432,659,587,715"/>
+<area shape="rect" id="node40" href="$da/d94/kdl__kinematics__unit_8cpp.html" title=" " alt="" coords="611,659,757,715"/>
+<area shape="rect" id="node41" href="$d4/d0f/kinematics__core__unit_8cpp.html" title=" " alt="" coords="781,659,928,715"/>
+<area shape="rect" id="node42" href="$d6/d2e/opw__kinematics__unit_8cpp.html" title="Tesseract opw kinematics test." alt="" coords="952,659,1099,715"/>
+<area shape="rect" id="node43" href="$d9/dee/rep__kinematics__unit_8cpp.html" title=" " alt="" coords="1123,659,1269,715"/>
+<area shape="rect" id="node44" href="$d0/dac/rop__kinematics__unit_8cpp.html" title=" " alt="" coords="1293,659,1440,715"/>
+<area shape="rect" id="node45" href="$d3/d31/ur__kinematics__unit_8cpp.html" title=" " alt="" coords="43,666,229,707"/>
+<area shape="rect" id="node47" href="$d7/d79/ur__factory_8cpp.html" title="Tesseract UR Inverse kinematics Factory." alt="" coords="1651,666,1797,707"/>
 </map>

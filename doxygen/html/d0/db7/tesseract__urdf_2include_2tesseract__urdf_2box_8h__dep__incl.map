@@ -1,7 +1,7 @@
 <map id="tesseract_urdf/include/tesseract_urdf/box.h" name="tesseract_urdf/include/tesseract_urdf/box.h">
 <area shape="rect" id="node1" title="Parse box from xml string." alt="" coords="300,5,451,47"/>
 <area shape="rect" id="node2" href="$d1/dce/box_8cpp.html" title="Parse box from xml string." alt="" coords="5,102,132,143"/>
-<area shape="rect" id="node3" href="$d4/d59/geometry_8cpp.html" title="Parse geometry from xml string." alt="" coords="156,102,283,143"/>
+<area shape="rect" id="node3" href="$d4/d59/geometry_8cpp.html" title="Parse geometry from XML string." alt="" coords="156,102,283,143"/>
 <area shape="rect" id="node4" href="$d2/db2/tesseract__urdf__box__unit_8cpp.html" title=" " alt="" coords="307,95,443,151"/>
 <area shape="rect" id="node5" href="$d0/d6c/tesseract__urdf__link__unit_8cpp.html" title=" " alt="" coords="467,95,603,151"/>
 <area shape="rect" id="node6" href="$d1/d04/tesseract__urdf__visual__unit_8cpp.html" title=" " alt="" coords="628,95,779,151"/>

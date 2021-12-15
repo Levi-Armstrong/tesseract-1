@@ -1,6 +1,6 @@
 <map id="tesseract_urdf/include/tesseract_urdf/capsule.h" name="tesseract_urdf/include/tesseract_urdf/capsule.h">
 <area shape="rect" id="node1" title="Parse capsule from xml string." alt="" coords="135,5,303,47"/>
 <area shape="rect" id="node2" href="$d4/d0f/capsule_8cpp.html" title="Parse capsule from xml string." alt="" coords="5,102,132,143"/>
-<area shape="rect" id="node3" href="$d4/d59/geometry_8cpp.html" title="Parse geometry from xml string." alt="" coords="156,102,283,143"/>
+<area shape="rect" id="node3" href="$d4/d59/geometry_8cpp.html" title="Parse geometry from XML string." alt="" coords="156,102,283,143"/>
 <area shape="rect" id="node4" href="$db/db4/tesseract__urdf__capsule__unit_8cpp.html" title=" " alt="" coords="307,95,468,151"/>
 </map>

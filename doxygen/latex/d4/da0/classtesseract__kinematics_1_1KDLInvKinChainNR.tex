@@ -49,9 +49,9 @@ using \mbox{\hyperlink{classtesseract__kinematics_1_1KDLInvKinChainNR_a4e60f0249
 \item 
 \mbox{\hyperlink{classtesseract__kinematics_1_1KDLInvKinChainNR}{KDLInv\+Kin\+Chain\+NR}} \& \mbox{\hyperlink{classtesseract__kinematics_1_1KDLInvKinChainNR_a16d33ed749c4feeb6700db56b522e062}{operator=}} (const \mbox{\hyperlink{classtesseract__kinematics_1_1KDLInvKinChainNR}{KDLInv\+Kin\+Chain\+NR}} \&other)
 \item 
-\mbox{\hyperlink{classtesseract__kinematics_1_1KDLInvKinChainNR_a7c8c621dbcad43b777af3371472f6a8d}{KDLInv\+Kin\+Chain\+NR}} (\mbox{\hyperlink{classtesseract__kinematics_1_1KDLInvKinChainNR}{KDLInv\+Kin\+Chain\+NR}} \&\&)=default
+\mbox{\hyperlink{classtesseract__kinematics_1_1KDLInvKinChainNR_abfb5633e1fbbd9cae18b8cecba13f9df}{KDLInv\+Kin\+Chain\+NR}} (\mbox{\hyperlink{classtesseract__kinematics_1_1KDLInvKinChainNR}{KDLInv\+Kin\+Chain\+NR}} \&\&)=delete
 \item 
-\mbox{\hyperlink{classtesseract__kinematics_1_1KDLInvKinChainNR}{KDLInv\+Kin\+Chain\+NR}} \& \mbox{\hyperlink{classtesseract__kinematics_1_1KDLInvKinChainNR_a14c73c8da1eca58b56ad838ff6bc7f8f}{operator=}} (\mbox{\hyperlink{classtesseract__kinematics_1_1KDLInvKinChainNR}{KDLInv\+Kin\+Chain\+NR}} \&\&)=default
+\mbox{\hyperlink{classtesseract__kinematics_1_1KDLInvKinChainNR}{KDLInv\+Kin\+Chain\+NR}} \& \mbox{\hyperlink{classtesseract__kinematics_1_1KDLInvKinChainNR_af6e3924e87352609b5391492ed880923}{operator=}} (\mbox{\hyperlink{classtesseract__kinematics_1_1KDLInvKinChainNR}{KDLInv\+Kin\+Chain\+NR}} \&\&)=delete
 \item 
 \mbox{\hyperlink{classtesseract__kinematics_1_1KDLInvKinChainNR_a95b024f86b8e9424f047949e088b96b1}{KDLInv\+Kin\+Chain\+NR}} (const \mbox{\hyperlink{classtesseract__scene__graph_1_1SceneGraph}{tesseract\+\_\+scene\+\_\+graph\+::\+Scene\+Graph}} \&scene\+\_\+graph, const std\+::string \&base\+\_\+link, const std\+::string \&tip\+\_\+link, std\+::string solver\+\_\+name=\mbox{\hyperlink{namespacetesseract__kinematics_a243f308445daa312eacb5587eca48a19}{KDL\+\_\+\+INV\+\_\+\+KIN\+\_\+\+CHAIN\+\_\+\+NR\+\_\+\+SOLVER\+\_\+\+NAME}})
 \begin{DoxyCompactList}\small\item\em Construct KDL Forward Kinematics Creates KDL\+::\+Chain from tesseract scene graph. \end{DoxyCompactList}\item 
@@ -90,7 +90,9 @@ std\+::unique\+\_\+ptr$<$ KDL\+::\+Chain\+Ik\+Solver\+Vel\+\_\+pinv $>$ \mbox{\h
 std\+::unique\+\_\+ptr$<$ KDL\+::\+Chain\+Ik\+Solver\+Pos\+\_\+\+NR $>$ \mbox{\hyperlink{classtesseract__kinematics_1_1KDLInvKinChainNR_a2139912bac81dffe3e294b5ff0e0a94a}{ik\+\_\+solver\+\_\+}}
 \begin{DoxyCompactList}\small\item\em KDL Inverse kinematic solver. \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{classtesseract__kinematics_1_1KDLInvKinChainNR_a24421b8ee52f975ab5bacd341e1f5caa}{solver\+\_\+name\+\_\+}} \{ \mbox{\hyperlink{namespacetesseract__kinematics_a243f308445daa312eacb5587eca48a19}{KDL\+\_\+\+INV\+\_\+\+KIN\+\_\+\+CHAIN\+\_\+\+NR\+\_\+\+SOLVER\+\_\+\+NAME}} \}
-\begin{DoxyCompactList}\small\item\em Name of this solver. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Name of this solver. \end{DoxyCompactList}\item 
+std\+::mutex \mbox{\hyperlink{classtesseract__kinematics_1_1KDLInvKinChainNR_a092e409d9c17622725ea30c9d99ee87d}{mutex\+\_\+}}
+\begin{DoxyCompactList}\small\item\em KDL is not thread safe due to mutable variables in Joint Class. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -136,11 +138,11 @@ KDL Inverse kinematic chain implementation.
 \doxysubsubsection{\texorpdfstring{KDLInvKinChainNR()}{KDLInvKinChainNR()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
 {\footnotesize\ttfamily tesseract\+\_\+kinematics\+::\+KDLInv\+Kin\+Chain\+NR\+::\+KDLInv\+Kin\+Chain\+NR (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtesseract__kinematics_1_1KDLInvKinChainNR}{KDLInv\+Kin\+Chain\+NR}} \&}]{other }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{classtesseract__kinematics_1_1KDLInvKinChainNR_a7c8c621dbcad43b777af3371472f6a8d}\label{classtesseract__kinematics_1_1KDLInvKinChainNR_a7c8c621dbcad43b777af3371472f6a8d}} 
+\mbox{\Hypertarget{classtesseract__kinematics_1_1KDLInvKinChainNR_abfb5633e1fbbd9cae18b8cecba13f9df}\label{classtesseract__kinematics_1_1KDLInvKinChainNR_abfb5633e1fbbd9cae18b8cecba13f9df}} 
 \index{tesseract\_kinematics::KDLInvKinChainNR@{tesseract\_kinematics::KDLInvKinChainNR}!KDLInvKinChainNR@{KDLInvKinChainNR}}
 \index{KDLInvKinChainNR@{KDLInvKinChainNR}!tesseract\_kinematics::KDLInvKinChainNR@{tesseract\_kinematics::KDLInvKinChainNR}}
 \doxysubsubsection{\texorpdfstring{KDLInvKinChainNR()}{KDLInvKinChainNR()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
-{\footnotesize\ttfamily tesseract\+\_\+kinematics\+::\+KDLInv\+Kin\+Chain\+NR\+::\+KDLInv\+Kin\+Chain\+NR (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtesseract__kinematics_1_1KDLInvKinChainNR}{KDLInv\+Kin\+Chain\+NR}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+{\footnotesize\ttfamily tesseract\+\_\+kinematics\+::\+KDLInv\+Kin\+Chain\+NR\+::\+KDLInv\+Kin\+Chain\+NR (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtesseract__kinematics_1_1KDLInvKinChainNR}{KDLInv\+Kin\+Chain\+NR}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
 
 \mbox{\Hypertarget{classtesseract__kinematics_1_1KDLInvKinChainNR_a95b024f86b8e9424f047949e088b96b1}\label{classtesseract__kinematics_1_1KDLInvKinChainNR_a95b024f86b8e9424f047949e088b96b1}} 
 \index{tesseract\_kinematics::KDLInvKinChainNR@{tesseract\_kinematics::KDLInvKinChainNR}!KDLInvKinChainNR@{KDLInvKinChainNR}}
@@ -332,11 +334,11 @@ Implements \mbox{\hyperlink{classtesseract__kinematics_1_1InverseKinematics_aa34
 \doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__kinematics_1_1KDLInvKinChainNR}{KDLInv\+Kin\+Chain\+NR}} \& tesseract\+\_\+kinematics\+::\+KDLInv\+Kin\+Chain\+NR\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtesseract__kinematics_1_1KDLInvKinChainNR}{KDLInv\+Kin\+Chain\+NR}} \&}]{other }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{classtesseract__kinematics_1_1KDLInvKinChainNR_a14c73c8da1eca58b56ad838ff6bc7f8f}\label{classtesseract__kinematics_1_1KDLInvKinChainNR_a14c73c8da1eca58b56ad838ff6bc7f8f}} 
+\mbox{\Hypertarget{classtesseract__kinematics_1_1KDLInvKinChainNR_af6e3924e87352609b5391492ed880923}\label{classtesseract__kinematics_1_1KDLInvKinChainNR_af6e3924e87352609b5391492ed880923}} 
 \index{tesseract\_kinematics::KDLInvKinChainNR@{tesseract\_kinematics::KDLInvKinChainNR}!operator=@{operator=}}
 \index{operator=@{operator=}!tesseract\_kinematics::KDLInvKinChainNR@{tesseract\_kinematics::KDLInvKinChainNR}}
 \doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__kinematics_1_1KDLInvKinChainNR}{KDLInv\+Kin\+Chain\+NR}}\& tesseract\+\_\+kinematics\+::\+KDLInv\+Kin\+Chain\+NR\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtesseract__kinematics_1_1KDLInvKinChainNR}{KDLInv\+Kin\+Chain\+NR}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classtesseract__kinematics_1_1KDLInvKinChainNR}{KDLInv\+Kin\+Chain\+NR}}\& tesseract\+\_\+kinematics\+::\+KDLInv\+Kin\+Chain\+NR\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtesseract__kinematics_1_1KDLInvKinChainNR}{KDLInv\+Kin\+Chain\+NR}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
 
 
 
@@ -380,6 +382,16 @@ KDL Inverse kinematic velocity solver.
 
 
 KDL data parsed from Scene Graph. 
+
+\mbox{\Hypertarget{classtesseract__kinematics_1_1KDLInvKinChainNR_a092e409d9c17622725ea30c9d99ee87d}\label{classtesseract__kinematics_1_1KDLInvKinChainNR_a092e409d9c17622725ea30c9d99ee87d}} 
+\index{tesseract\_kinematics::KDLInvKinChainNR@{tesseract\_kinematics::KDLInvKinChainNR}!mutex\_@{mutex\_}}
+\index{mutex\_@{mutex\_}!tesseract\_kinematics::KDLInvKinChainNR@{tesseract\_kinematics::KDLInvKinChainNR}}
+\doxysubsubsection{\texorpdfstring{mutex\_}{mutex\_}}
+{\footnotesize\ttfamily std\+::mutex tesseract\+\_\+kinematics\+::\+KDLInv\+Kin\+Chain\+NR\+::mutex\+\_\+\hspace{0.3cm}{\ttfamily [mutable]}, {\ttfamily [private]}}
+
+
+
+KDL is not thread safe due to mutable variables in Joint Class. 
 
 \mbox{\Hypertarget{classtesseract__kinematics_1_1KDLInvKinChainNR_a24421b8ee52f975ab5bacd341e1f5caa}\label{classtesseract__kinematics_1_1KDLInvKinChainNR_a24421b8ee52f975ab5bacd341e1f5caa}} 
 \index{tesseract\_kinematics::KDLInvKinChainNR@{tesseract\_kinematics::KDLInvKinChainNR}!solver\_name\_@{solver\_name\_}}

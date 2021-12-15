@@ -120,6 +120,9 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dbe/structtesseract__collision_1_1ContactTestData.html">ContactTestData</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This data is intended only to be used internal to the collision checkers as a container and should not be externally used by other libraries or packages.  <a href="../../d6/dbe/structtesseract__collision_1_1ContactTestData.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d64/structtesseract__collision_1_1ContactManagerConfig.html">ContactManagerConfig</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Contains parameters used to configure a contact manager before a series of contact checks.  <a href="../../d1/d64/structtesseract__collision_1_1ContactManagerConfig.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d2c/structtesseract__collision_1_1CollisionCheckConfig.html">CollisionCheckConfig</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is a high level structure containing common information that collision checking utilities need. The goal of this config is to allow all collision checking utilities and planners to use the same datastructure.  <a href="../../d9/d2c/structtesseract__collision_1_1CollisionCheckConfig.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -182,6 +185,13 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:af17e8ee8632a40cf4b6ed1ba1aec41ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">High level descriptor used in planners and utilities to specify what kind of collision check is desired.  <a href="../../d4/d79/namespacetesseract__collision.html#af17e8ee8632a40cf4b6ed1ba1aec41ac">More...</a><br /></td></tr>
 <tr class="separator:af17e8ee8632a40cf4b6ed1ba1aec41ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4aafe369f7930ea6a356f0b578c16af"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d79/namespacetesseract__collision.html#ab4aafe369f7930ea6a356f0b578c16af">ACMOverrideType</a> { <a class="el" href="../../d4/d79/namespacetesseract__collision.html#ab4aafe369f7930ea6a356f0b578c16afab50339a10e1de285ac99d4c3990b8693">NONE</a>
+, <a class="el" href="../../d4/d79/namespacetesseract__collision.html#ab4aafe369f7930ea6a356f0b578c16afaffd6976a2b4f6934eb075d0013316ff1">ASSIGN</a>
+, <a class="el" href="../../d4/d79/namespacetesseract__collision.html#ab4aafe369f7930ea6a356f0b578c16afa558ffc8f5770d8e4f95f51d822685532">AND</a>
+, <a class="el" href="../../d4/d79/namespacetesseract__collision.html#ab4aafe369f7930ea6a356f0b578c16afa1d00e7dce692e8dc3f6877f035e3a616">OR</a>
+ }</td></tr>
+<tr class="memdesc:ab4aafe369f7930ea6a356f0b578c16af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Identifies how the provided AllowedCollisionMatrix should be applied relative to the isAllowedFn in the contact manager.  <a href="../../d4/d79/namespacetesseract__collision.html#ab4aafe369f7930ea6a356f0b578c16af">More...</a><br /></td></tr>
+<tr class="separator:ab4aafe369f7930ea6a356f0b578c16af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
@@ -226,6 +236,17 @@ Functions</h2></td></tr>
 <tr class="separator:a0249bb2994ca5e8258ea55309467ae4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3d63942ad37df10958b434c860782fbb"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d79/namespacetesseract__collision.html#a3d63942ad37df10958b434c860782fbb">flattenResults</a> (<a class="el" href="../../d4/d79/namespacetesseract__collision.html#a1eeace4cc41027dbde8e7dbeb77ca7cf">ContactResultMap</a> &amp;&amp;m, <a class="el" href="../../d4/d79/namespacetesseract__collision.html#a96d77f62b7c26962d1090f0a2f00419b">ContactResultVector</a> &amp;v)</td></tr>
 <tr class="separator:a3d63942ad37df10958b434c860782fbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad4f0e4f914b130332a1de2e10f62f23"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d4/d79/namespacetesseract__collision.html#abe7752ce161fbd1139533ac566fec1cb">IsContactAllowedFn</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d79/namespacetesseract__collision.html#aad4f0e4f914b130332a1de2e10f62f23">combineContactAllowedFn</a> (const <a class="el" href="../../d4/d79/namespacetesseract__collision.html#abe7752ce161fbd1139533ac566fec1cb">IsContactAllowedFn</a> &amp;original, const <a class="el" href="../../d4/d79/namespacetesseract__collision.html#abe7752ce161fbd1139533ac566fec1cb">IsContactAllowedFn</a> &amp;override, <a class="el" href="../../d4/d79/namespacetesseract__collision.html#ab4aafe369f7930ea6a356f0b578c16af">ACMOverrideType</a> type=<a class="el" href="../../d4/d79/namespacetesseract__collision.html#ab4aafe369f7930ea6a356f0b578c16afa1d00e7dce692e8dc3f6877f035e3a616">ACMOverrideType::OR</a>)</td></tr>
+<tr class="memdesc:aad4f0e4f914b130332a1de2e10f62f23"><td class="mdescLeft">&#160;</td><td class="mdescRight">Combines two IsContactAllowedFns using the override type.  <a href="../../d4/d79/namespacetesseract__collision.html#aad4f0e4f914b130332a1de2e10f62f23">More...</a><br /></td></tr>
+<tr class="separator:aad4f0e4f914b130332a1de2e10f62f23"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9ae658359b35f57bc35258fb31d2404"><td class="memTemplParams" colspan="2">template&lt;typename ManagerType &gt; </td></tr>
+<tr class="memitem:aa9ae658359b35f57bc35258fb31d2404"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d4/d79/namespacetesseract__collision.html#aa9ae658359b35f57bc35258fb31d2404">applyIsContactAllowedFnOverride</a> (ManagerType &amp;manager, const <a class="el" href="../../d7/d4e/classtesseract__common_1_1AllowedCollisionMatrix.html">tesseract_common::AllowedCollisionMatrix</a> &amp;acm, <a class="el" href="../../d4/d79/namespacetesseract__collision.html#ab4aafe369f7930ea6a356f0b578c16af">ACMOverrideType</a> type)</td></tr>
+<tr class="memdesc:aa9ae658359b35f57bc35258fb31d2404"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies ACM to contact manager using override type.  <a href="../../d4/d79/namespacetesseract__collision.html#aa9ae658359b35f57bc35258fb31d2404">More...</a><br /></td></tr>
+<tr class="separator:aa9ae658359b35f57bc35258fb31d2404"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3fcf1e185d880f2ac9f1ad911a736ec"><td class="memTemplParams" colspan="2">template&lt;typename ManagerType &gt; </td></tr>
+<tr class="memitem:ab3fcf1e185d880f2ac9f1ad911a736ec"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d4/d79/namespacetesseract__collision.html#ab3fcf1e185d880f2ac9f1ad911a736ec">applyModifyObjectEnabled</a> (ManagerType &amp;manager, const std::unordered_map&lt; std::string, bool &gt; &amp;modify_object_enabled)</td></tr>
+<tr class="memdesc:ab3fcf1e185d880f2ac9f1ad911a736ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loops over the map and for every object string either enables or disables it based on the value (true=enable, false=disable)  <a href="../../d4/d79/namespacetesseract__collision.html#ab3fcf1e185d880f2ac9f1ad911a736ec">More...</a><br /></td></tr>
+<tr class="separator:ab3fcf1e185d880f2ac9f1ad911a736ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
@@ -394,6 +415,40 @@ Variables</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="ab4aafe369f7930ea6a356f0b578c16af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4aafe369f7930ea6a356f0b578c16af">&#9670;&nbsp;</a></span>ACMOverrideType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="../../d4/d79/namespacetesseract__collision.html#ab4aafe369f7930ea6a356f0b578c16af">tesseract_collision::ACMOverrideType</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Identifies how the provided AllowedCollisionMatrix should be applied relative to the isAllowedFn in the contact manager. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ab4aafe369f7930ea6a356f0b578c16afab50339a10e1de285ac99d4c3990b8693"></a>NONE&#160;</td><td class="fielddoc"><p>Do not apply AllowedCollisionMatrix. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ab4aafe369f7930ea6a356f0b578c16afaffd6976a2b4f6934eb075d0013316ff1"></a>ASSIGN&#160;</td><td class="fielddoc"><p>Replace the current IsContactAllowedFn with one generated from the ACM provided. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ab4aafe369f7930ea6a356f0b578c16afa558ffc8f5770d8e4f95f51d822685532"></a>AND&#160;</td><td class="fielddoc"><p>New IsContactAllowedFn combines the contact manager fn and the ACM generated fn with and AND. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ab4aafe369f7930ea6a356f0b578c16afa1d00e7dce692e8dc3f6877f035e3a616"></a>OR&#160;</td><td class="fielddoc"><p>New IsContactAllowedFn combines the contact manager fn and the ACM generated fn with and OR. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
 <a id="af17e8ee8632a40cf4b6ed1ba1aec41ac"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af17e8ee8632a40cf4b6ed1ba1aec41ac">&#9670;&nbsp;</a></span>CollisionEvaluatorType</h2>
 
@@ -492,6 +547,152 @@ Variables</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="aa9ae658359b35f57bc35258fb31d2404"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9ae658359b35f57bc35258fb31d2404">&#9670;&nbsp;</a></span>applyIsContactAllowedFnOverride()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ManagerType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void tesseract_collision::applyIsContactAllowedFnOverride </td>
+          <td>(</td>
+          <td class="paramtype">ManagerType &amp;&#160;</td>
+          <td class="paramname"><em>manager</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d7/d4e/classtesseract__common_1_1AllowedCollisionMatrix.html">tesseract_common::AllowedCollisionMatrix</a> &amp;&#160;</td>
+          <td class="paramname"><em>acm</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d4/d79/namespacetesseract__collision.html#ab4aafe369f7930ea6a356f0b578c16af">ACMOverrideType</a>&#160;</td>
+          <td class="paramname"><em>type</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Applies ACM to contact manager using override type. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">manager</td><td>Manager whose IsContactAllowedFn will be overwritten </td></tr>
+    <tr><td class="paramname">acm</td><td>ACM used to create IsContactAllowedFn </td></tr>
+    <tr><td class="paramname">type</td><td>Determines how the two IsContactAllowedFns are combined </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab3fcf1e185d880f2ac9f1ad911a736ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3fcf1e185d880f2ac9f1ad911a736ec">&#9670;&nbsp;</a></span>applyModifyObjectEnabled()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ManagerType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void tesseract_collision::applyModifyObjectEnabled </td>
+          <td>(</td>
+          <td class="paramtype">ManagerType &amp;&#160;</td>
+          <td class="paramname"><em>manager</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::unordered_map&lt; std::string, bool &gt; &amp;&#160;</td>
+          <td class="paramname"><em>modify_object_enabled</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Loops over the map and for every object string either enables or disables it based on the value (true=enable, false=disable) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">manager</td><td>Manager that will be modified </td></tr>
+    <tr><td class="paramname">modify_object_enabled</td><td>Map of [key]:value = [object name]:disable or enable </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aad4f0e4f914b130332a1de2e10f62f23"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad4f0e4f914b130332a1de2e10f62f23">&#9670;&nbsp;</a></span>combineContactAllowedFn()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d4/d79/namespacetesseract__collision.html#abe7752ce161fbd1139533ac566fec1cb">IsContactAllowedFn</a> tesseract_collision::combineContactAllowedFn </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d4/d79/namespacetesseract__collision.html#abe7752ce161fbd1139533ac566fec1cb">IsContactAllowedFn</a> &amp;&#160;</td>
+          <td class="paramname"><em>original</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d4/d79/namespacetesseract__collision.html#abe7752ce161fbd1139533ac566fec1cb">IsContactAllowedFn</a> &amp;&#160;</td>
+          <td class="paramname"><em>override</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d4/d79/namespacetesseract__collision.html#ab4aafe369f7930ea6a356f0b578c16af">ACMOverrideType</a>&#160;</td>
+          <td class="paramname"><em>type</em> = <code><a class="el" href="../../d4/d79/namespacetesseract__collision.html#ab4aafe369f7930ea6a356f0b578c16afa1d00e7dce692e8dc3f6877f035e3a616">ACMOverrideType::OR</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Combines two IsContactAllowedFns using the override type. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">original</td><td>Original IsContactAllowedFns. This will be returned if ACMOverrideType is None </td></tr>
+    <tr><td class="paramname">override</td><td>Overriding IsContactAllowedFns. This will be returned if ACMOverrideType is ASSIGN </td></tr>
+    <tr><td class="paramname">type</td><td>Override type used to combine the IsContactAllowedFns </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>One IsContactAllowedFn that combines the two </dd></dl>
+
+</div>
+</div>
 <a id="ac97bc1eb96f0aa2e1d3033d7e7758849"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac97bc1eb96f0aa2e1d3033d7e7758849">&#9670;&nbsp;</a></span>createConvexHull()</h2>
 
@@ -1154,7 +1355,7 @@ Variables</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Oct 29 2021 04:27:15 for Tesseract by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Wed Dec 15 2021 17:36:05 for Tesseract by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

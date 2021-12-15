@@ -1,6 +1,6 @@
 <map id="tesseract_urdf/include/tesseract_urdf/cone.h" name="tesseract_urdf/include/tesseract_urdf/cone.h">
 <area shape="rect" id="node1" title="Parse cone from xml string." alt="" coords="144,5,295,47"/>
 <area shape="rect" id="node2" href="$d8/dbf/cone_8cpp.html" title="Parse cone from xml string." alt="" coords="5,102,132,143"/>
-<area shape="rect" id="node3" href="$d4/d59/geometry_8cpp.html" title="Parse geometry from xml string." alt="" coords="156,102,283,143"/>
+<area shape="rect" id="node3" href="$d4/d59/geometry_8cpp.html" title="Parse geometry from XML string." alt="" coords="156,102,283,143"/>
 <area shape="rect" id="node4" href="$d2/db5/tesseract__urdf__cone__unit_8cpp.html" title=" " alt="" coords="307,95,451,151"/>
 </map>

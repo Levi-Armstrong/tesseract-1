@@ -1,6 +1,6 @@
 <map id="tesseract_urdf/include/tesseract_urdf/sphere.h" name="tesseract_urdf/include/tesseract_urdf/sphere.h">
 <area shape="rect" id="node1" title="Parse sphere from xml string." alt="" coords="138,5,301,47"/>
-<area shape="rect" id="node2" href="$d4/d59/geometry_8cpp.html" title="Parse geometry from xml string." alt="" coords="5,102,132,143"/>
+<area shape="rect" id="node2" href="$d4/d59/geometry_8cpp.html" title="Parse geometry from XML string." alt="" coords="5,102,132,143"/>
 <area shape="rect" id="node3" href="$df/d78/sphere_8cpp.html" title="Parse sphere from xml string." alt="" coords="156,102,283,143"/>
 <area shape="rect" id="node4" href="$d3/d3f/tesseract__urdf__sphere__unit_8cpp.html" title=" " alt="" coords="307,95,462,151"/>
 </map>

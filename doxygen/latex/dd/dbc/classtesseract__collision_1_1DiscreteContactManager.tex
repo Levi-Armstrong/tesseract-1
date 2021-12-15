@@ -83,7 +83,9 @@ virtual void \mbox{\hyperlink{classtesseract__collision_1_1DiscreteContactManage
 virtual \mbox{\hyperlink{namespacetesseract__collision_abe7752ce161fbd1139533ac566fec1cb}{Is\+Contact\+Allowed\+Fn}} \mbox{\hyperlink{classtesseract__collision_1_1DiscreteContactManager_ad515c562c2bc0cd98e3559dbd05bd7e4}{get\+Is\+Contact\+Allowed\+Fn}} () const =0
 \begin{DoxyCompactList}\small\item\em Get the active function for determining if two links are allowed to be in collision. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{classtesseract__collision_1_1DiscreteContactManager_a1ddfa181400941e093c76a852df72425}{contact\+Test}} (\mbox{\hyperlink{namespacetesseract__collision_a1eeace4cc41027dbde8e7dbeb77ca7cf}{Contact\+Result\+Map}} \&collisions, const \mbox{\hyperlink{structtesseract__collision_1_1ContactRequest}{Contact\+Request}} \&request)=0
-\begin{DoxyCompactList}\small\item\em Perform a contact test for all objects based. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Perform a contact test for all objects based. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classtesseract__collision_1_1DiscreteContactManager_a2dcf9480a716e14fc0918516d2fa04cf}{apply\+Contact\+Manager\+Config}} (const \mbox{\hyperlink{structtesseract__collision_1_1ContactManagerConfig}{Contact\+Manager\+Config}} \&config)
+\begin{DoxyCompactList}\small\item\em Applies settings in the config. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Member Typedef Documentation}
@@ -169,6 +171,21 @@ true if successfully added, otherwise false.
 
 Implemented in \mbox{\hyperlink{classtesseract__collision_1_1tesseract__collision__fcl_1_1FCLDiscreteBVHManager_ab0b2d615ce49b92846babbc54a5d90fa}{tesseract\+\_\+collision\+::tesseract\+\_\+collision\+\_\+fcl\+::\+FCLDiscrete\+BVHManager}}, \mbox{\hyperlink{classtesseract__collision_1_1tesseract__collision__bullet_1_1BulletDiscreteSimpleManager_aeb812e2d270c6b03ba4001ba119a35b8}{tesseract\+\_\+collision\+::tesseract\+\_\+collision\+\_\+bullet\+::\+Bullet\+Discrete\+Simple\+Manager}}, and \mbox{\hyperlink{classtesseract__collision_1_1tesseract__collision__bullet_1_1BulletDiscreteBVHManager_afe3d61110c6a4f2a1c8bee5a2d39ebc1}{tesseract\+\_\+collision\+::tesseract\+\_\+collision\+\_\+bullet\+::\+Bullet\+Discrete\+BVHManager}}.
 
+\mbox{\Hypertarget{classtesseract__collision_1_1DiscreteContactManager_a2dcf9480a716e14fc0918516d2fa04cf}\label{classtesseract__collision_1_1DiscreteContactManager_a2dcf9480a716e14fc0918516d2fa04cf}} 
+\index{tesseract\_collision::DiscreteContactManager@{tesseract\_collision::DiscreteContactManager}!applyContactManagerConfig@{applyContactManagerConfig}}
+\index{applyContactManagerConfig@{applyContactManagerConfig}!tesseract\_collision::DiscreteContactManager@{tesseract\_collision::DiscreteContactManager}}
+\doxysubsubsection{\texorpdfstring{applyContactManagerConfig()}{applyContactManagerConfig()}}
+{\footnotesize\ttfamily void tesseract\+\_\+collision\+::\+Discrete\+Contact\+Manager\+::apply\+Contact\+Manager\+Config (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structtesseract__collision_1_1ContactManagerConfig}{Contact\+Manager\+Config}} \&}]{config }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Applies settings in the config. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em config} & Settings to be applies \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{classtesseract__collision_1_1DiscreteContactManager_ab491e2f52824b596646e0b86633140a2}\label{classtesseract__collision_1_1DiscreteContactManager_ab491e2f52824b596646e0b86633140a2}} 
 \index{tesseract\_collision::DiscreteContactManager@{tesseract\_collision::DiscreteContactManager}!clone@{clone}}
 \index{clone@{clone}!tesseract\_collision::DiscreteContactManager@{tesseract\_collision::DiscreteContactManager}}
@@ -585,6 +602,7 @@ Implemented in \mbox{\hyperlink{classtesseract__collision_1_1tesseract__collisio
 
 
 
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-tesseract\+\_\+collision/core/include/tesseract\+\_\+collision/core/\mbox{\hyperlink{discrete__contact__manager_8h}{discrete\+\_\+contact\+\_\+manager.\+h}}\end{DoxyCompactItemize}
+tesseract\+\_\+collision/core/include/tesseract\+\_\+collision/core/\mbox{\hyperlink{discrete__contact__manager_8h}{discrete\+\_\+contact\+\_\+manager.\+h}}\item 
+tesseract\+\_\+collision/core/src/\mbox{\hyperlink{discrete__contact__manager_8cpp}{discrete\+\_\+contact\+\_\+manager.\+cpp}}\end{DoxyCompactItemize}

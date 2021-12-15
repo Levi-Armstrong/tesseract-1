@@ -1,11 +1,12 @@
 <map id="tesseract_kinematics::KDLInvKinChainLMA" name="tesseract_kinematics::KDLInvKinChainLMA">
-<area shape="rect" id="node1" title="KDL Inverse kinematic chain implementation." alt="" coords="965,100,1117,141"/>
+<area shape="rect" id="node1" title="KDL Inverse kinematic chain implementation." alt="" coords="965,129,1117,171"/>
 <area shape="rect" id="node2" href="$de/d1c/classtesseract__kinematics_1_1InverseKinematics.html" title="Inverse kinematics functions." alt="" coords="692,5,839,47"/>
 <area shape="rect" id="node3" title=" " alt="" coords="676,71,855,112"/>
-<area shape="rect" id="node4" title=" " alt="" coords="179,287,257,314"/>
-<area shape="rect" id="node6" href="$df/d78/structtesseract__kinematics_1_1KDLChainData.html" title="The KDLChainData struct." alt="" coords="692,247,839,288"/>
-<area shape="rect" id="node7" title=" " alt="" coords="379,383,521,424"/>
-<area shape="rect" id="node8" title=" " alt="" coords="370,254,530,281"/>
-<area shape="rect" id="node5" title=" " alt="" coords="5,280,129,321"/>
-<area shape="rect" id="node9" title=" " alt="" coords="363,188,537,229"/>
+<area shape="rect" id="node4" title=" " alt="" coords="725,137,806,163"/>
+<area shape="rect" id="node5" title=" " alt="" coords="179,338,257,365"/>
+<area shape="rect" id="node7" href="$df/d78/structtesseract__kinematics_1_1KDLChainData.html" title="The KDLChainData struct." alt="" coords="692,297,839,339"/>
+<area shape="rect" id="node8" title=" " alt="" coords="379,433,521,475"/>
+<area shape="rect" id="node9" title=" " alt="" coords="370,305,530,331"/>
+<area shape="rect" id="node6" title=" " alt="" coords="5,331,129,372"/>
+<area shape="rect" id="node10" title=" " alt="" coords="363,239,537,280"/>
 </map>
