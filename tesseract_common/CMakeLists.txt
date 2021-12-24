@@ -46,6 +46,7 @@ add_library(
   ${PROJECT_NAME}
   src/any.cpp
   src/joint_state.cpp
+  src/joint_trajectory_set.cpp
   src/manipulator_info.cpp
   src/kinematic_limits.cpp
   src/serialization.cpp
