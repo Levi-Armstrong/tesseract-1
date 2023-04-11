@@ -95,23 +95,23 @@ inline static void numericalJacobian(Eigen::Ref<Eigen::MatrixXd> jacobian,
  * @param link_point   The point on the link for which to calculate the jacobian
  */
 inline static void numericalJacobian(Eigen::Ref<Eigen::MatrixXd> jacobian,
-                                     const Eigen::Isometry3d& change_base,
+                                     const std::string& base_link_name,
                                      const JointGroup& joint_group,
                                      const Eigen::Ref<const Eigen::VectorXd>& joint_values,
                                      const std::string& link_name,
                                      const Eigen::Ref<const Eigen::Vector3d>& link_point)
 {
   Eigen::VectorXd njvals;
-  double delta = 1e-8;
+  double delta = 1e-6;
   tesseract_common::TransformMap poses = joint_group.calcFwdKin(joint_values);
-  Eigen::Isometry3d pose = change_base * poses[link_name];
+  Eigen::Isometry3d pose = poses[base_link_name].inverse() * poses[link_name];
 
   for (int i = 0; i < static_cast<int>(joint_values.size()); ++i)
   {
     njvals = joint_values;
     njvals[i] += delta;
     tesseract_common::TransformMap updated_poses = joint_group.calcFwdKin(njvals);
-    Eigen::Isometry3d updated_pose = change_base * updated_poses[link_name];
+    Eigen::Isometry3d updated_pose = updated_poses[base_link_name].inverse() * updated_poses[link_name];
 
     Eigen::Vector3d temp = pose * link_point;
     Eigen::Vector3d temp2 = updated_pose * link_point;

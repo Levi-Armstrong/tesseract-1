@@ -303,7 +303,7 @@ inline void runJacobianTest(tesseract_kinematics::KinematicGroup& kin_group,
 
     numerical_jacobian.resize(6, kin_group.numJoints());
     tesseract_kinematics::numericalJacobian(
-        numerical_jacobian, Eigen::Isometry3d::Identity(), kin_group, jvals, link_name, link_point);
+        numerical_jacobian, kin_group.getBaseLinkName(), kin_group, jvals, link_name, link_point);
 
     for (int i = 0; i < 6; ++i)
       for (int j = 0; j < static_cast<int>(kin_group.numJoints()); ++j)
@@ -315,7 +315,7 @@ inline void runJacobianTest(tesseract_kinematics::KinematicGroup& kin_group,
 
     numerical_jacobian.resize(6, kin_group.numJoints());
     tesseract_kinematics::numericalJacobian(
-        numerical_jacobian, Eigen::Isometry3d::Identity(), kin_group, jvals, link_name, Eigen::Vector3d::Zero());
+        numerical_jacobian, kin_group.getBaseLinkName(), kin_group, jvals, link_name, Eigen::Vector3d::Zero());
 
     for (int i = 0; i < 6; ++i)
       for (int j = 0; j < static_cast<int>(kin_group.numJoints()); ++j)
@@ -323,7 +323,6 @@ inline void runJacobianTest(tesseract_kinematics::KinematicGroup& kin_group,
   }
 
   std::vector<std::string> static_link_names = kin_group.getStaticLinkNames();
-  tesseract_common::TransformMap poses = kin_group.calcFwdKin(jvals);
   for (const auto& static_link_name : static_link_names)
   {
     {  // Test with all information
@@ -331,7 +330,7 @@ inline void runJacobianTest(tesseract_kinematics::KinematicGroup& kin_group,
 
       numerical_jacobian.resize(6, kin_group.numJoints());
       tesseract_kinematics::numericalJacobian(
-          numerical_jacobian, poses.at(static_link_name).inverse(), kin_group, jvals, link_name, link_point);
+          numerical_jacobian, static_link_name, kin_group, jvals, link_name, link_point);
 
       for (int i = 0; i < 6; ++i)
         for (int j = 0; j < static_cast<int>(kin_group.numJoints()); ++j)
@@ -343,7 +342,39 @@ inline void runJacobianTest(tesseract_kinematics::KinematicGroup& kin_group,
 
       numerical_jacobian.resize(6, kin_group.numJoints());
       tesseract_kinematics::numericalJacobian(numerical_jacobian,
-                                              poses.at(static_link_name).inverse(),
+                                              static_link_name,
+                                              kin_group,
+                                              jvals,
+                                              link_name,
+                                              Eigen::Vector3d::Zero());
+
+      for (int i = 0; i < 6; ++i)
+        for (int j = 0; j < static_cast<int>(kin_group.numJoints()); ++j)
+          EXPECT_NEAR(numerical_jacobian(i, j), jacobian(i, j), 1e-3);
+    }
+  }
+
+  std::vector<std::string> active_link_names = kin_group.getActiveLinkNames();
+  for (const auto& active_link_name : active_link_names)
+  {
+    {  // Test with all information
+      jacobian = kin_group.calcJacobian(jvals, active_link_name, link_name, link_point);
+
+      numerical_jacobian.resize(6, kin_group.numJoints());
+      tesseract_kinematics::numericalJacobian(
+          numerical_jacobian, active_link_name, kin_group, jvals, link_name, link_point);
+
+      for (int i = 0; i < 6; ++i)
+        for (int j = 0; j < static_cast<int>(kin_group.numJoints()); ++j)
+          EXPECT_NEAR(numerical_jacobian(i, j), jacobian(i, j), 1e-3);
+    }
+
+    {  // Test don't use link_point
+      jacobian = kin_group.calcJacobian(jvals, active_link_name, link_name);
+
+      numerical_jacobian.resize(6, kin_group.numJoints());
+      tesseract_kinematics::numericalJacobian(numerical_jacobian,
+                                              active_link_name,
                                               kin_group,
                                               jvals,
                                               link_name,

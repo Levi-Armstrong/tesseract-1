@@ -208,7 +208,6 @@ Eigen::MatrixXd JointGroup::calcJacobian(const Eigen::Ref<const Eigen::VectorXd>
   if (std::find(active_links.begin(), active_links.end(), base_link_name) != active_links.end())
   {
     Eigen::MatrixXd base_link_jac = state_solver_->getJacobian(joint_names_, joint_angles, base_link_name);
-    Eigen::MatrixXd base_kin_jac(6, numJoints());
     for (Eigen::Index i = 0; i < numJoints(); ++i)
       base_link_jac.col(i) = base_link_jac.col(jacobian_map_[static_cast<std::size_t>(i)]);
 
