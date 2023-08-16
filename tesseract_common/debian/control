@@ -1,0 +1,12 @@
+Source: tesseract-common
+Section: misc
+Priority: optional
+Maintainer: Levi Armstrong <Levi.Armstrong@swri.org>
+Build-Depends: debhelper (>= 9.0.0), cmake, lcov <!nocheck>, libboost-filesystem-dev, libboost-serialization-dev, libboost-system-dev, libclang-dev <!nocheck>, libconsole-bridge-dev, libeigen3-dev, libgtest-dev <!nocheck>, libtinyxml2-dev, libyaml-cpp-dev, ros-noetic-ros-industrial-cmake-boilerplate
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: tesseract-common
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libboost-filesystem-dev, libboost-filesystem1.71.0, libboost-serialization-dev, libboost-serialization1.71.0, libboost-system-dev, libboost-system1.71.0, libconsole-bridge-dev, libeigen3-dev, libtinyxml2-dev, libyaml-cpp-dev
+Description: Contains common macros, utils and types used throughout
