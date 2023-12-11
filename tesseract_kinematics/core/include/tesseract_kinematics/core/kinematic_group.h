@@ -146,8 +146,8 @@ public:
   std::vector<std::string> getAllPossibleTipLinkNames() const;
 
   /**
-   * @brief Get the inverse kinematics sovler name being used
-   * @return The sovler name
+   * @brief Get the inverse kinematics solver name being used
+   * @return The solver name
    */
   std::string getInvKinSolverName() const;
 
