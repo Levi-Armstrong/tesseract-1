@@ -145,6 +145,12 @@ public:
    */
   std::vector<std::string> getAllPossibleTipLinkNames() const;
 
+  /**
+   * @brief Get the inverse kinematics sovler name being used
+   * @return The sovler name
+   */
+  std::string getInvKinSolverName() const;
+
 private:
   std::vector<std::string> joint_names_;
   bool reorder_required_{ false };
