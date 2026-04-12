@@ -1210,7 +1210,7 @@ btScalar CastBroadphaseContactResultCallback::addSingleResult(btManifoldPoint& c
   const auto* cd0 = static_cast<const CollisionObjectWrapper*>(colObj0Wrap->getCollisionObject());    // NOLINT
   const auto* cd1 = static_cast<const CollisionObjectWrapper*>(colObj1Wrap->getCollisionObject());    // NOLINT
   assert(!(cp.m_distance1 > static_cast<btScalar>(
-                                collisions_.collision_margin_data.getCollisionMargin(cd0->getName(), cd1->getName()))));
+                                collisions_.collision_margin_data.getCollisionMargin(cd0->getLinkId(), cd1->getLinkId()))));
 #endif
 
   return addCastSingleResult(cp, colObj0Wrap, index0, colObj1Wrap, index1, collisions_);
@@ -1227,7 +1227,7 @@ TesseractBroadphaseBridgedManifoldResult::TesseractBroadphaseBridgedManifoldResu
   const auto* cd0 = static_cast<const CollisionObjectWrapper*>(m_body0Wrap->getCollisionObject());    // NOLINT
   const auto* cd1 = static_cast<const CollisionObjectWrapper*>(m_body1Wrap->getCollisionObject());    // NOLINT
   m_closestPointDistanceThreshold =
-      result_callback_.collisions_.collision_margin_data.getCollisionMargin(cd0->getName(), cd1->getName());
+      result_callback_.collisions_.collision_margin_data.getCollisionMargin(cd0->getLinkId(), cd1->getLinkId());
 }
 
 void TesseractBroadphaseBridgedManifoldResult::addContactPoint(const btVector3& normalOnBInWorld,
@@ -1309,7 +1309,7 @@ bool TesseractCollisionPairCallback::processOverlap(btBroadphasePair& pair)
     {
       TesseractBroadphaseBridgedManifoldResult contactPointResult(&obj0Wrap, &obj1Wrap, results_callback_);
       contactPointResult.m_closestPointDistanceThreshold =
-          results_callback_.collisions_.collision_margin_data.getCollisionMargin(cow0->getName(), cow1->getName());
+          results_callback_.collisions_.collision_margin_data.getCollisionMargin(cow0->getLinkId(), cow1->getLinkId());
 
       // discrete collision detection query
       pair.m_algorithm->processCollision(&obj0Wrap, &obj1Wrap, dispatch_info_, &contactPointResult);
@@ -1371,7 +1371,7 @@ btScalar DiscreteCollisionCollector::addSingleResult(btManifoldPoint& cp,
 #ifndef NDEBUG
   const auto* cd0 = static_cast<const CollisionObjectWrapper*>(colObj0Wrap->getCollisionObject());  // NOLINT
   const auto* cd1 = static_cast<const CollisionObjectWrapper*>(colObj1Wrap->getCollisionObject());  // NOLINT
-  const double threshold = collisions_.collision_margin_data.getCollisionMargin(cd0->getName(), cd1->getName());
+  const double threshold = collisions_.collision_margin_data.getCollisionMargin(cd0->getLinkId(), cd1->getLinkId());
   assert(!(cp.m_distance1 > static_cast<btScalar>(threshold)));
 #endif
 
@@ -1404,7 +1404,7 @@ btScalar CastCollisionCollector::addSingleResult(btManifoldPoint& cp,
 #ifndef NDEBUG
   const auto* cd0 = static_cast<const CollisionObjectWrapper*>(colObj0Wrap->getCollisionObject());  // NOLINT
   const auto* cd1 = static_cast<const CollisionObjectWrapper*>(colObj1Wrap->getCollisionObject());  // NOLINT
-  const double threshold = collisions_.collision_margin_data.getCollisionMargin(cd0->getName(), cd1->getName());
+  const double threshold = collisions_.collision_margin_data.getCollisionMargin(cd0->getLinkId(), cd1->getLinkId());
   assert(!(cp.m_distance1 > static_cast<btScalar>(threshold)));
 #endif
 
