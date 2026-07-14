@@ -6225,10 +6225,8 @@ public:
   // whether directly or via one of the inline delegating overloads.
   mutable int id_setstate_ns_id_calls = 0;
   mutable int id_setstate_ns_vec_calls = 0;
-  mutable int id_setstate_ns_fj_calls = 0;
   mutable int id_setstate_id_calls = 0;
   mutable int id_setstate_vec_calls = 0;
-  mutable int id_setstate_fj_calls = 0;
 
   // Pure-virtual stubs (not exercised by this test, but required to instantiate).
   bool wait(std::chrono::duration<double> /*duration*/) const override { return true; }
@@ -6294,7 +6292,6 @@ public:
   bool setEnvironmentState(const std::string& /*monitor_namespace*/,
                            const tesseract::common::JointIdTransformMap& /*floating_joints*/) const override
   {
-    ++id_setstate_ns_fj_calls;
     return true;
   }
 
@@ -6316,7 +6313,6 @@ public:
   std::vector<std::string>
   setEnvironmentState(const tesseract::common::JointIdTransformMap& /*floating_joints*/) const override
   {
-    ++id_setstate_fj_calls;
     return {};
   }
 
